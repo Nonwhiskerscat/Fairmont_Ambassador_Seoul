@@ -6,6 +6,13 @@
 
 body {
   color: #333333;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+footer,
+header {
   font-family: "SCoreDream";
   font-weight: 200;
   font-size: 1.125em;
@@ -375,4 +382,4 @@ footer .container .address .copyright h5 {
 }
 footer .container .address p {
   line-height: 24px;
-}
+}/*# sourceMappingURL=index.css.map */

@@ -6,6 +6,13 @@
 
 body {
   color: #333333;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+footer,
+header {
   font-family: "SCoreDream";
   font-weight: 200;
   font-size: 1.125em;
@@ -47,4 +54,4 @@ ul,
 ol,
 li {
   list-style: none;
-}
+}/*# sourceMappingURL=reset.css.map */
