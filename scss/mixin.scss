@@ -18,6 +18,14 @@
     }
 }
 
+@mixin video_matte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 @mixin footer_h4{
     h4{
         font: {

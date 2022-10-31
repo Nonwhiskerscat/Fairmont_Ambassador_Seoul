@@ -4,7 +4,8 @@
 
 .wrapper {
     width: 100%;
-    background-color: rgb(151, 168, 240);
+    // background-color: rgb(151, 168, 240);
+    color: white;
 }
 
 .container {
@@ -17,23 +18,28 @@
         width: 93.75%;
         // background-color: rgb(139, 168, 10);
     }
-
-    
 }
 
 //header
-.firstsection{
-    height: 100vh;
-    background-color: black;
-    
     header {
-        height: 55px;
-        @include responsive(tablet-screens){
-            height: 65px;
+        // background-color: black;
+        height: 100vh;
+
+        .bg-video {
+            @include video_matte;
+            z-index: -1;
+        
+            &__content {
+            height: 100%;
+            width: 100%;
+              object-fit: cover; // background-size: cover 와 비슷함. (HTML 요소 or 비디오와 작동)
+            }
         }
 
-        @include responsive(pc-screens){
-            height: 80px;
+        .colormatte {
+            @include video_matte;
+            background-color: black;
+            opacity: 0.3;
         }
 
         .container{
@@ -68,6 +74,7 @@
                     }
                 }
             }
+
             .menu{
                 width: 70px;
                 display: flex;
@@ -84,8 +91,8 @@
                 @include responsive(pc-screens){
                     margin-top: 35px;
                 }
+
                 
-            
                 .menu_bar {
                     width: 33%;
                     display:block;
@@ -130,10 +137,126 @@
             
                 
             } //.menu
+        } //.container
+
+        .mouse {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+
+            @keyframes move {
+                from{
+                    bottom: 60px;
+                }
+
+                75%{
+                    bottom: 30px;
+                } 
+    
+                to{
+                    bottom: 30px;
+                }
+            }
+
+            img {
+                position: absolute;
+                bottom: 60px;
+                animation: move 2s infinite;
+                transform: translateX(-50%);
+            }
+
+            p{
+                transform: translateX(-50%);
+                font: {
+                    family: $eng_title_font;
+                }
+                letter-spacing: 1px;
+                color: white;
+            }
+
+            .pc_mouse {
+                display: none;
+
+                @include responsive(pc-screens) {
+                    display: block;
+                }
+            }
+
+            .mo_mouse {
+                img {
+                    opacity: 0.5;
+                }
+
+                @include responsive(pc-screens) {
+                    display: none;
+                }
+            }
         }
         
     } // header
+
+.main1{
+
+    background: url(../img/index/photo/Section_2.jpg);
+    background-size: cover;
+    height: 100vh;
+
+    .contents{
+        padding-top: 50px;
+        text-align: center;
+
+        @include responsive(pc-screens) {
+            text-align: left;
+        
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 15px;
+
+            @include responsive(tablet-screens) {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+
+            @include responsive(pc-screens) {
+                font-size: 50px;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                width: 40px;
+                border-bottom: 3px solid #ffef5a;
+                margin: 5px auto;
+
+                @include responsive(pc-screens) {
+                    width: 40px;
+                    margin-left: 20px;
+                }
+
+
+                span {
+                    font-size: 18px;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: 200;
+            letter-spacing: 2px;
+            
+            span {
+                color: #ffef5a;
+            }
+        }
+    } //contents
 }
+ //main1
 
 
 footer {
@@ -158,9 +281,7 @@ footer {
 
             @include responsive(pc-screens) {
                 width: 180px;
-
             }
-
 
             img{
                 width: 100%;
@@ -170,15 +291,21 @@ footer {
         .subscribe{
             @include footer_h4;
             position: relative;
-
             width: 100%;
             order: 3;
+
+            span{
+                display: none;
+
+                @include responsive(tablet-screens) {
+                    display: inline;
+                }
+            }
 
             @include responsive(pc-screens){
                 order: 2;
                 width: 26.04166666666667%;
             }
-
             
             .form_flex {
                 display: flex;
@@ -324,7 +451,7 @@ footer {
             margin: 0;
 
             @include responsive(pc-screens){
-                width: 14.21875%;
+                width: 24%;
             }
 
             span {

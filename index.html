@@ -15,11 +15,21 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="firstsection">
+        <section class="section">
             <header>
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="./img/index/photo/Section_1.mp4" type="video/mp4" />
+                        Your browser is not supported!
+                    </video>
+                </div><!--bg-video-->
+                <div class="colormatte">
+                </div><!--colormatte-->
                 <div class="container">
                     <div class="header_logo">
-                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
+                        <a href="#">
+                            <img src="./img/header/img/Header_logo.png" alt="헤더로고">
+                        </a>
                     </div><!--header_logo-->
         
                     <div class="menu">
@@ -34,11 +44,34 @@
                         </div><!--menu_type-->
     
                     </div><!--menu-->
+
                     
-                </header>
-        </div><!--firstsection-->
-            <main>
-            </main>
+                </div><!--container-->
+                <div class="mouse">
+                    <span class="pc_mouse">
+                        <img src="./img/header/img/Header_mouse.png" alt="pc마우스">
+                        <p>Scroll me!</p>
+                    </span>
+                    <span class="mo_mouse">
+                        <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
+                        <p>Swipe me!</p>
+                    </span>
+                </div>
+            </header>
+        </section>
+        <section class="section">
+            <div class="main1">
+                <div class="container">
+                    <div class="contents">
+                        <h2>호텔<span>의</span> 품격</h2>
+                        <p>오랜 전통, 페어몬트 만의 섬세한 서비스가
+                        <span>잊지 못할 순간들</span>을 만들어 드립니다.</p>
+                    </div>
+                </div><!--contents-->
+            </div><!--main1-->
+        </section>
+
+        <section class="section">
             <footer>
                 <div class="container">
                     <div class="footer_logo">
@@ -47,18 +80,18 @@
                         </a>
                     </div><!--footer_logo-->
                     <div class="subscribe">
-                            <h4>subscribe <span>us</span></h4>
-                            <form action="#">
-                                <label for="amail">Enter Your Email</label>
-                                <input type="email" id="amail" placeholder="ambassador@fairmont.com" required>
-                                <div class="form_flex">
-                                    <div class="form_email">
-                                        <label for="aphone">Enter Your Phonenumber</label>
-                                        <input type="text" id="aphone" placeholder="010-2345-6789" required>
-                                    </div>
-                                    <button type="aphone">구독하기&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="./img/footer/img/Footer_submit.png" alt=""></span></button>
-                                </div><!--form_flex-->   
-                            </form>
+                        <h4>subscribe <span>us</span></h4>
+                        <form action="#">
+                            <label for="amail">Enter Your Email</label>
+                            <input type="email" id="amail" placeholder="ambassador@fairmont.com" required>
+                            <div class="form_flex">
+                                <div class="form_email">
+                                    <label for="aphone">Enter Your Phonenumber</label>
+                                    <input type="text" id="aphone" placeholder="010-2345-6789" required>
+                                </div>
+                                <button type="aphone">구독하기&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="./img/footer/img/Footer_submit.png" alt=""></span></button>
+                            </div><!--form_flex-->   
+                        </form>
                     </div><!--subscribe-->
                     <div class="navigation">
                         <h4>Navigation</h4>
@@ -91,9 +124,8 @@
                         </div>
                     </div><!--address-->
                 </div><!--container-->
-                
             </footer>
-            </div><!--container-->
+        </section>
     </div><!--wrapper-->
     
 </body>
