@@ -74,7 +74,7 @@ li {
 
 .firstsection {
   height: 100vh;
-  background-color: black;
+  background: url(../img/index/photo/s2-3.jpg) no-repeat center;
 }
 .firstsection header {
   height: 55px;
