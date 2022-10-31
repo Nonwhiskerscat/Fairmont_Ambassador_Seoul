@@ -1,0 +1,58 @@
+@import "./style.scss";
+@import "./mixin.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333333;
+
+    font: {
+        family: $common_font;
+        weight: 200;
+        size: 1.125em;
+    }
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+    font: {
+        family: $common_font;
+        weight: 100;
+        size: 1em;
+    }
+}
+
+h1{
+    font-size: 7.5em;
+    font-weight: normal;
+    font-family: $common_font;
+}
+
+h2 {
+    font-size: 5em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 3em;
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+h5 {
+    font-weight: normal;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
