@@ -22,9 +22,11 @@
 }
 
 //header
-.firstsection{
+section{
+    
     height: 100vh;
-    background-color: black;
+    background: url(../img/executive/photo/main.jpg);
+    background-size: cover;
     
     header {
         height: 55px;
@@ -130,6 +132,60 @@
             
                 
             } //.menu
+        }
+
+        .mouse {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+
+            @keyframes move {
+                from{
+                    bottom: 60px;
+                }
+
+                75%{
+                    bottom: 30px;
+                } 
+    
+                to{
+                    bottom: 30px;
+                }
+            }
+
+            img {
+                position: absolute;
+                bottom: 60px;
+                animation: move 2s infinite;
+                transform: translateX(-50%);
+            }
+
+            p{
+                transform: translateX(-50%);
+                font: {
+                    family: $eng_title_font;
+                }
+                letter-spacing: 1px;
+                color: white;
+            }
+
+            .pc_mouse {
+                display: none;
+
+                @include responsive(pc-screens) {
+                    display: block;
+                }
+            }
+
+            .mo_mouse {
+                img {
+                    opacity: 0.5;
+                }
+
+                @include responsive(pc-screens) {
+                    display: none;
+                }
+            }
         }
         
     } // header
