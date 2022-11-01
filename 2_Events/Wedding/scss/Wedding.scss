@@ -1,0 +1,328 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.wrapper {
+  width: 100%;
+  background-color: rgb(151, 168, 240);
+}
+
+.container {
+  width: 89.74358974358974%;
+  margin: 0 auto;
+  // background-color: rgb(255, 161, 161);
+  position: relative;
+
+  @include responsive(tablet-screens) {
+    width: 93.75%;
+    // background-color: rgb(139, 168, 10);
+  }
+}
+
+//header
+.firstsection {
+  height: 100vh;
+  // background-color: black;
+  background: url(../img/Wedding/photo/header-banner-img.png) no-repeat center;
+
+  header {
+    height: 55px;
+    @include responsive(tablet-screens) {
+      height: 65px;
+    }
+
+    @include responsive(pc-screens) {
+      height: 80px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .header_logo {
+        width: 126px;
+
+        @include responsive(tablet-screens) {
+          width: 160px;
+        }
+
+        @include responsive(pc-screens) {
+          width: 200px;
+        }
+
+        img {
+          width: 126px;
+          height: auto;
+          position: absolute;
+          margin-top: 15px;
+
+          @include responsive(tablet-screens) {
+            width: 160px;
+            margin-top: 17.5px;
+          }
+
+          @include responsive(pc-screens) {
+            width: 200px;
+            margin-top: 20px;
+          }
+        }
+      }
+      .menu {
+        width: 70px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-top: 20px;
+        align-items: center;
+        text-align: right;
+
+        @include responsive(tablet-screens) {
+          margin-top: 27px;
+        }
+
+        @include responsive(pc-screens) {
+          margin-top: 35px;
+        }
+
+        .menu_bar {
+          width: 33%;
+          display: block;
+          width: 16px;
+          height: 13px;
+          cursor: pointer;
+          position: relative;
+
+          span {
+            display: block;
+            height: 0.5px;
+            width: 100%;
+            background: white;
+            position: absolute;
+
+            &:nth-child(1) {
+              top: 0;
+              right: 0;
+            }
+
+            &:nth-child(2) {
+              top: 50%;
+              right: 0;
+              transform: translateY(50%);
+              width: 80%;
+            }
+
+            &:nth-child(3) {
+              bottom: 0;
+              right: 0;
+            }
+          } //sapn
+        } //menu_bar
+
+        .menu_type {
+          p {
+            font-family: $eng_title_font, sans-serif;
+            font-size: 1em;
+          }
+        } //.menu_type
+      } //.menu
+    }
+  } // header
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #333333;
+  color: white;
+  align-items: center;
+
+  div {
+    margin-bottom: 40px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footer_logo {
+      width: 135px;
+      order: 1;
+
+      @include responsive(pc-screens) {
+        width: 180px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .subscribe {
+      @include footer_h4;
+      position: relative;
+
+      width: 100%;
+      order: 3;
+
+      @include responsive(pc-screens) {
+        order: 2;
+        width: 26.04166666666667%;
+      }
+
+      .form_flex {
+        display: flex;
+        margin: 0;
+
+        @include responsive(pc-screens) {
+          display: block;
+        }
+
+        .form_email {
+          width: 70%;
+          margin: 0;
+
+          @include responsive(pc-screens) {
+            width: 100%;
+          }
+        }
+      }
+
+      form {
+        label {
+          @include footer_label;
+        }
+
+        input {
+          display: block;
+          border: 0;
+          width: 100%;
+          background-color: transparent;
+          border-bottom: 1px solid white;
+          padding-bottom: 3px;
+          margin: 10px 0 15px;
+          color: white;
+          @include font_setting;
+
+          &:last-child {
+            width: 100%;
+          }
+        }
+
+        button {
+          width: 30%;
+          height: 70px;
+          background-color: transparent;
+          color: white;
+          font-size: 1em;
+          @include font_setting;
+          border: 0;
+          cursor: pointer;
+          text-align: right;
+
+          @include responsive(pc-screens) {
+            width: 100%;
+          }
+
+          span {
+            margin-left: 10px;
+            position: relative;
+
+            img {
+              width: 20px;
+              height: auto;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .navigation {
+      width: 220px;
+      order: 2;
+
+      @include footer_h4;
+
+      @include responsive(tablet-screens) {
+        width: 70%;
+      }
+
+      @include responsive(pc-screens) {
+        order: 3;
+        width: 25.83333333333333%;
+      }
+
+      .flex_nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+          width: 50%;
+          margin-bottom: 5px;
+          align-items: center;
+          position: relative;
+
+          span {
+            display: none;
+            height: auto;
+            margin-right: 10px;
+
+            img {
+              width: 15px;
+              height: auto;
+            }
+
+            @include responsive(tablet-screens) {
+              display: inline;
+            }
+          }
+
+          a {
+            color: white;
+            font-size: 0.75em;
+            padding-bottom: 5px;
+
+            @include responsive(tablet-screens) {
+              font-size: 0.875em;
+            }
+          }
+        }
+      }
+    }
+
+    .address {
+      @include footer_h4;
+
+      width: 100%;
+      order: 4;
+      font-size: 0.75em;
+      margin: 0;
+
+      @include responsive(pc-screens) {
+        width: 24%;
+      }
+
+      span {
+        color: #ffef5a;
+      }
+
+      address {
+        font-style: normal;
+        margin-bottom: 10px;
+        @include font_setting;
+      }
+
+      .copyright {
+        @include footer_h5;
+      }
+
+      p {
+        line-height: 24px;
+      }
+    }
+  }
+}
