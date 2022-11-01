@@ -22,9 +22,10 @@
 }
 
 //header
-.firstsection{
+section{
     height: 100vh;
-    background-color: black;
+    background: url(../img/Info_Modify/background.jpg);
+    background-size: cover;
     
     header {
         height: 55px;
@@ -72,7 +73,7 @@
                 width: 70px;
                 display: flex;
                 justify-content: space-between;
-                color: white;
+                color: #442d13;
                 margin-top: 20px;
                 align-items: center;
                 text-align: right;
@@ -98,7 +99,7 @@
                         display:block;
                         height:0.5px;
                         width:100%;
-                        background: white;
+                        background-color: #442d13;
                         position:absolute;
             
                         &:nth-child(1) {
