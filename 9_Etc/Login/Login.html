@@ -8,36 +8,156 @@
     <meta name="Author" content="1st_grp">
     <title>Fairmont_Ambassador_Hotel</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/Login.css">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <div class="firstsection">
-            <header>
-                <div class="container">
-                    <div class="header_logo">
-                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
-                    </div><!--header_logo-->
+            <section class="section">
+                <header>
+                    <div class="container">
+                        <a href="../../index.html">
+                            <div class="header_logo">
+                                <img src="./img/header/img/Header_logo.png" alt="헤더로고">
+                            </div><!--header_logo-->
+                        </a>
+            
+                        <div class="menu">
+                            <div class="menu_bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!--menu_bar-->
         
-                    <div class="menu">
-                        <div class="menu_bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!--menu_bar-->
-    
-                        <div class="menu_type">
-                            <p>MENU</p>
-                        </div><!--menu_type-->
-    
-                    </div><!--menu-->
-                    
+                            <div class="menu_type">
+                                <p>MENU</p>
+                            </div><!--menu_type-->
+                        </div><!--menu-->
+                    </div><!--container-->
                 </header>
-        </div><!--firstsection-->
-            <main>
-            </main>
+                    <main>
+
+                        <div class="container">
+                            <div class="login_title">
+                                <h3>Membership Promotion</h3>
+                                <h4><img src="./img/Login/icon/icon_1.png" alt="프로모션 아이콘"> 모든 객실 5% 할인 혜택</h4>
+                            </div><!--login_title-->
+    
+                            <div class="login_sec">
+                                <div class="login_logo">
+                                    <a href="../../index.html">
+                                        <img src="./img/Login/icon/icon_2.png" alt="로그인로고">
+                                    </a>
+                                </div>
+                            </div><!--login_sec-->   
+                        </div>
+
+                        <div class="matte_area">
+                        </div>
+                        <div class="contents_area">
+                            <div class="container">
+                                <div class="sign_flex">
+                                    <div class="sign_left">
+                                        <h4>회원가입</h4>
+                                        <ul>
+                                            <li>
+                                                <label for="aid">
+                                                    <img src="./img/Sign_Up/icon/icon_1_1.png" alt="아이디 아이콘">
+                                                    <p><span>ID</span>아이디</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aid" type="text" placeholder="영문, 숫자 조합 9자 이상!" required>
+                                                <button>ID 중복 확인</button>
+                                            </li>
+
+                                            <li>
+                                                <label for="apass">
+                                                    <img src="./img/Sign_Up/icon/icon_1_2.png" alt="비밀번호 아이콘">
+                                                    <p><span>Password</span>패스워드</p><p class="warning"></p>
+                                                </label>
+                                                <input id="apass" type="password" placeholder="영문 숫자 특수문자(@$%^*-) 조합 9자 이상!" required>
+                                            </li>
+
+                                            <li>
+                                                <label for="acon">
+                                                    <img src="./img/Sign_Up/icon/icon_1_3.png" alt="비밀번호 확인 아이콘">
+                                                    <p><span>Confirm Password</span>비밀번호 확인</p><p class="warning"></p>
+                                                </label>
+                                                <input id="acon" type="password" placeholder="입력하신 비밀번호를 다시 입력하세요!" required>
+                                            </li>
+
+                                            <li>
+                                                <label for="aname">
+                                                    <img src="./img/Sign_Up/icon/icon_1_4.png" alt="이름 아이콘">
+                                                    <p><span>Name</span>이름</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aname" type="text" placeholder="이름을 입력하세요!" required>
+                                            </li>
+                                            
+                                            <li>
+                                                <label for="amail">
+                                                    <img src="./img/Sign_Up/icon/icon_1_5.png" alt="이메일">
+                                                    <p><span>E-mail</span>이메일</p><p class="warning"></p>
+                                                </label>
+                                                <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
+                                                <select name="mail" id="mail">
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="hanmail.net">hanmail.net</option>
+                                                    <option value="nate.com">nate.com</option>
+                                                    <option value="">직접입력</option>
+                                                </select>
+                                            </li>
+
+                                            <li>
+                                                <label for="aphone">
+                                                    <img src="./img/Sign_Up/icon/icon_1_6.png" alt="휴대폰 번호 아이콘">
+                                                    <p><span>Phone Number</span>휴대폰 번호</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aphone" type="tel" placeholder="휴대폰 번호를 입력하세요!" required>
+                                                <button>인증번호 받기</button>
+                                            </li>
+
+                                            <li>
+                                                <label for="anum">
+                                                    <img src="./img/Sign_Up/icon/icon_1_7.png" alt="휴대폰 번호 아이콘">
+                                                    <p><span>Certification Number</span>인증 번호</p><p class="warning"></p>
+                                                </label>
+                                                <input id="anum" type="text" placeholder="인증번호를 입력하세요!" required>
+                                                <div class="timer"></div><!--timer-->
+                                            </li>
+                                        </ul>
+                                        <div class="check_box">
+                                            <label for="fake">위에 기재된 내용이 허위사실이 없음을 확인합니다.</label>
+                                            <input type="checkbox" id="fake">
+                                        </div><!--check_box-->
+
+                                        <div class="button">
+                                            <button>돌아가기 <img src="./img/Sign_Up/icon/icon_2_1.png" alt="돌아가기"></button>
+                                            <button>가입완료 <img src="./img/Sign_Up/icon/icon_2_2.png" alt="가입완료"></button>
+                                        </div><!--button-->
+                                    </div><!--sign_left-->
+
+                                    <div class="sign_right">
+                                        <q>
+                                            <em>호텔</em>의 <em>품격</em>은<br>
+                                            화려한 <span>전망</span>, 최적의 <span>접근성</span>,<br>
+                                            편리하고 <span>고급진 시설</span>,<br>
+                                            그리고 <span>친절한 서비스</span>로부터 비롯됩니다.
+
+                                            <p><span>by</span> 페어몬트 앰배서더 서울</p>
+                                        </q>
+                                    </div><!--sign_right-->
+                                </div><!--sign_flex-->
+                            </div><!--container-->
+                            <div class="back_logo">
+                                <img src="./img/Sign_Up/icon/icon_back.png" alt="백로고">
+                            </div>
+                        </div><!--contents_area-->
+                        
+                    </main>
+            </section>
+            
             <footer>
                 <div class="container">
                     <div class="footer_logo">

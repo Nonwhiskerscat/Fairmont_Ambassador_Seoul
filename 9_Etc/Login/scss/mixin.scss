@@ -18,6 +18,16 @@
     }
 }
 
+@mixin back_matte {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 22.91666666666667%;
+    opacity: 0.5;
+}
+
 @mixin footer_h4{
     h4{
         font: {
@@ -29,6 +39,7 @@
         margin-bottom: 20px;
     }
 }
+
 
 @mixin footer_h5{
     h5{
