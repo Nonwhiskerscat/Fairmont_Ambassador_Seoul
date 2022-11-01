@@ -2,16 +2,20 @@
 @import "./reset.scss";
 @import "./mixin.scss";
 
+// $break-mobile: '320px';
+// $break-tablet: '768px';
+// $break-pc: '1024px';
+
 .wrapper {
   width: 100%;
   background-color: rgb(151, 168, 240);
 }
 
 .container {
-  width: 89.74358974358974%;
-  margin: 0 auto;
   // background-color: rgb(255, 161, 161);
   position: relative;
+  width: 89.74358974358974%;
+  margin: 0 auto;
 
   @include responsive(tablet-screens) {
     width: 93.75%;
@@ -21,9 +25,25 @@
 
 //header
 .firstsection {
-  height: 100vh;
-  // background-color: black;
+  position: relative;
+  height: 844px;
+
   background: url(../img/Wedding/photo/header-banner-img.png) no-repeat center;
+  background-size: cover;
+  @include responsive(pc-screens) {
+    height: 970px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+  // 🥵이부분 복사로 사용
 
   header {
     height: 55px;
@@ -51,9 +71,9 @@
         }
 
         img {
+          position: absolute;
           width: 126px;
           height: auto;
-          position: absolute;
           margin-top: 15px;
 
           @include responsive(tablet-screens) {
@@ -68,8 +88,8 @@
         }
       }
       .menu {
-        width: 70px;
         display: flex;
+        width: 70px;
         justify-content: space-between;
         color: white;
         margin-top: 20px;
@@ -85,19 +105,19 @@
         }
 
         .menu_bar {
-          width: 33%;
           display: block;
+          position: relative;
+          width: 33%;
           width: 16px;
           height: 13px;
           cursor: pointer;
-          position: relative;
 
           span {
             display: block;
-            height: 0.5px;
-            width: 100%;
-            background: white;
             position: absolute;
+            width: 100%;
+            height: 0.5px;
+            background: white;
 
             &:nth-child(1) {
               top: 0;
@@ -107,13 +127,13 @@
             &:nth-child(2) {
               top: 50%;
               right: 0;
-              transform: translateY(50%);
               width: 80%;
+              transform: translateY(50%);
             }
 
             &:nth-child(3) {
-              bottom: 0;
               right: 0;
+              bottom: 0;
             }
           } //sapn
         } //menu_bar
@@ -127,6 +147,206 @@
       } //.menu
     }
   } // header
+  // 😡
+  .banner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    h1 {
+      color: #ddddde;
+      font-size: 2.25em;
+
+      @include responsive(pc-screens) {
+        font-size: 7.5em;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        width: 30px;
+        height: 4px;
+        background: #ddddde;
+        transform: translateX(-50%);
+        margin-bottom: 37px;
+
+        @include responsive(pc-screens) {
+          top: -41px;
+          width: 144px;
+          height: 15px;
+        }
+      }
+    }
+    // 🥵이부분 복사로 사용
+  }
+}
+
+.card h2,
+.s1-instruction h2,
+.s2-wedding h2,
+.s3-flower h2,
+.s4-various-venue h2,
+.notice {
+  font-size: 0;
+}
+// .flex {
+//   display: flex;
+// }
+
+// 🤢
+main {
+  section.card {
+    .card-contain {
+      margin: 0 auto;
+      position: relative;
+      top: -40px;
+      height: 280px;
+      min-width: 350px;
+      max-width: 700px;
+
+      overflow: hidden;
+      border-radius: 25px;
+      box-shadow: 0 5px 5px -3px rgba($color: #000000, $alpha: 0.3);
+      background-color: white;
+      @include responsive(pc-screens) {
+        height: 500px;
+        max-width: 880px;
+      }
+
+      i {
+        display: block;
+        position: relative;
+        top: 10px;
+        font-size: 30px;
+        color: #ddddde;
+        text-align: center;
+        @include responsive(pc-screens) {
+          font-size: 50px;
+        }
+      }
+
+      .card-content {
+        margin-top: 55px;
+        margin-left: 10.7%;
+        @include responsive(pc-screens) {
+          margin-top: 80px;
+          margin-left: 60px;
+        }
+        h3 {
+          font-size: 1.375em;
+          font-weight: 700;
+          margin-bottom: 0.637em;
+          line-height: -10px;
+          @include responsive(pc-screens) {
+            font-size: 3em;
+          }
+
+          strong {
+            color: #fb5c6e;
+            position: relative;
+          }
+        }
+
+        p {
+          font-size: 0.875em;
+          margin-bottom: 1.43em;
+          @include responsive(pc-screens) {
+            font-size: 1.375em;
+          }
+        }
+
+        .card-btn {
+          a {
+            width: 110px;
+            height: 35px;
+            border-radius: 5px;
+            font-size: 0.875em;
+            text-align: center;
+            line-height: 35px;
+            background-color: #fb5c6e;
+            color: #fff;
+
+            @include responsive(pc-screens) {
+              width: 170px;
+              height: 55px;
+              line-height: 55px;
+              font-size: 1.375em;
+            }
+          }
+        }
+      } //card-content
+      .card-img {
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 42%;
+
+          // max-width: 100px;
+        }
+      }
+    }
+  } //section.card
+
+  section.s1-instruction {
+    margin-top: 370px;
+    margin-bottom: 220px;
+    .flex {
+      @include responsive(tablet-screens) {
+        display: flex;
+      }
+
+      .left-content {
+        margin-bottom: 150px;
+      }
+
+      .left-content,
+      .right-content {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .ins-img {
+          width: 100%;
+          border-radius: 25px;
+
+          @include responsive(tablet-screens) {
+            width: 400px;
+            height: 400px;
+          }
+
+          overflow: hidden;
+          box-shadow: 0 5px 5px -3px rgba($color: #000000, $alpha: 0.3);
+
+          img {
+            width: 160%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        .ins-text {
+          margin-top: 50px;
+          h3 {
+            font-size: 1.375em;
+            font-weight: 700;
+            color: #fb5c6e;
+          }
+
+          p {
+            margin-top: 28px;
+            font-size: 0.875em;
+            line-height: 1.125em;
+            word-spacing: -0.05em;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -159,15 +379,15 @@ footer {
     }
 
     .subscribe {
-      @include footer_h4;
       position: relative;
 
       width: 100%;
       order: 3;
+      @include footer_h4;
 
       @include responsive(pc-screens) {
-        order: 2;
         width: 26.04166666666667%;
+        order: 2;
       }
 
       .form_flex {
@@ -195,12 +415,12 @@ footer {
 
         input {
           display: block;
-          border: 0;
           width: 100%;
+          margin: 10px 0 15px;
+          border: 0;
           background-color: transparent;
           border-bottom: 1px solid white;
           padding-bottom: 3px;
-          margin: 10px 0 15px;
           color: white;
           @include font_setting;
 
@@ -215,25 +435,25 @@ footer {
           background-color: transparent;
           color: white;
           font-size: 1em;
-          @include font_setting;
           border: 0;
           cursor: pointer;
           text-align: right;
+          @include font_setting;
 
           @include responsive(pc-screens) {
             width: 100%;
           }
 
           span {
-            margin-left: 10px;
             position: relative;
+            margin-left: 10px;
 
             img {
+              position: absolute;
+              right: 0;
+              bottom: 0;
               width: 20px;
               height: auto;
-              position: absolute;
-              bottom: 0;
-              right: 0;
             }
           }
         }
@@ -251,8 +471,8 @@ footer {
       }
 
       @include responsive(pc-screens) {
-        order: 3;
         width: 25.83333333333333%;
+        order: 3;
       }
 
       .flex_nav {
@@ -261,23 +481,23 @@ footer {
         flex-wrap: wrap;
 
         li {
+          position: relative;
           width: 50%;
           margin-bottom: 5px;
           align-items: center;
-          position: relative;
 
           span {
             display: none;
             height: auto;
             margin-right: 10px;
 
+            @include responsive(tablet-screens) {
+              display: inline;
+            }
+
             img {
               width: 15px;
               height: auto;
-            }
-
-            @include responsive(tablet-screens) {
-              display: inline;
             }
           }
 
@@ -295,12 +515,11 @@ footer {
     }
 
     .address {
-      @include footer_h4;
-
       width: 100%;
+      margin: 0;
       order: 4;
       font-size: 0.75em;
-      margin: 0;
+      @include footer_h4;
 
       @include responsive(pc-screens) {
         width: 24%;
