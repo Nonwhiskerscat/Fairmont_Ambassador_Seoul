@@ -63,7 +63,6 @@ li {
 
 .wrapper {
   width: 100%;
-  background-color: rgb(151, 168, 240);
 }
 
 .container {
@@ -237,15 +236,15 @@ li {
 .s2-wedding h2,
 .s3-flower h2,
 .s4-various-venue h2,
-.notice {
+.s5-notice h2 {
   font-size: 0;
 }
 
 main section.card .card-contain {
-  margin: 0 auto;
   position: relative;
   top: -40px;
   height: 280px;
+  margin: 0 auto;
   min-width: 350px;
   max-width: 700px;
   overflow: hidden;
@@ -294,8 +293,8 @@ main section.card .card-contain .card-content h3 {
   }
 }
 main section.card .card-contain .card-content h3 strong {
-  color: #fb5c6e;
   position: relative;
+  color: #fb5c6e;
 }
 main section.card .card-contain .card-content p {
   font-size: 0.875em;
@@ -332,7 +331,6 @@ main section.card .card-contain .card-img img {
 }
 main section.s1-instruction {
   margin-top: 370px;
-  margin-bottom: 220px;
 }
 @media screen and (min-width: 768px) {
   main section.s1-instruction .flex {
@@ -344,18 +342,18 @@ main section.s1-instruction .flex .left-content {
 }
 main section.s1-instruction .flex .left-content,
 main section.s1-instruction .flex .right-content {
-  max-width: 350px;
   margin-left: auto;
   margin-right: auto;
 }
 main section.s1-instruction .flex .left-content .ins-img,
 main section.s1-instruction .flex .right-content .ins-img {
-  width: 100%;
+  width: 350px;
+  height: 350px;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   main section.s1-instruction .flex .left-content .ins-img,
 main section.s1-instruction .flex .right-content .ins-img {
     width: 400px;
@@ -364,9 +362,9 @@ main section.s1-instruction .flex .right-content .ins-img {
 }
 main section.s1-instruction .flex .left-content .ins-img img,
 main section.s1-instruction .flex .right-content .ins-img img {
-  width: 160%;
   position: relative;
   left: 50%;
+  width: 200%;
   transform: translateX(-50%);
 }
 main section.s1-instruction .flex .left-content .ins-text,
@@ -385,6 +383,315 @@ main section.s1-instruction .flex .right-content .ins-text p {
   font-size: 0.875em;
   line-height: 1.125em;
   word-spacing: -0.05em;
+}
+main section.intro {
+  position: relative;
+  height: 60.2917vw;
+  margin: 220px auto;
+  font: 16px;
+}
+main .container {
+  height: 100%;
+}
+main .container .flex-box {
+  width: 100%;
+  height: 100%;
+}
+main .container .flex-box h2 {
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 15vw;
+  white-space: nowrap;
+  position: relative;
+  font-size: min(100px, 6.641vw);
+  font-weight: 700;
+  z-index: 3;
+}
+main .container .flex-box h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60.2917vw;
+  height: 60.2917vw;
+  max-width: 880px;
+  max-height: 880px;
+  background-color: #fb5c6e;
+  border-radius: 50%;
+  z-index: -1;
+  left: min(34%, 395px);
+  top: -100%;
+}
+main .container .flex-box h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2.5641vw;
+  height: 2.5641vw;
+  border-radius: 50%;
+  background-color: #fb5c6e;
+  z-index: -1;
+  left: min(17%, 200px);
+  top: -8%;
+}
+main section.s2-wedding .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  main section.s2-wedding .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+main section.s2-wedding .flex .s2-content h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  main section.s2-wedding .flex .s2-content h3 {
+    text-align: left;
+    font-size: 4em;
+  }
+}
+main section.s2-wedding .flex .s2-content p {
+  line-height: 18px;
+  word-spacing: -0.05em;
+  margin-top: 22px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main section.s2-wedding .flex .s2-content p {
+    font-size: 1.125em;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+main section.s2-wedding .flex .s2-content .s2-btn a {
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  color: #fb5c6e;
+  border: #fb5c6e solid 1px;
+  border-radius: 5px;
+  background-color: #fff;
+  line-height: 54px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  main section.s2-wedding .flex .s2-content .s2-btn a {
+    width: 174px;
+  }
+}
+main section.s2-wedding .flex .s2-img {
+  width: 350px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s2-wedding .flex .s2-img {
+    width: 45.3125vw;
+    max-width: 770px;
+  }
+}
+main section.s2-wedding .flex .s2-img img {
+  width: 100%;
+}
+main section.s3-flower {
+  margin-top: 120px;
+}
+main section.s3-flower .flex {
+  width: 350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  main section.s3-flower .flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+main section.s3-flower .flex .s3-img {
+  width: 350px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s3-flower .flex .s3-img {
+    width: 45.3125vw;
+    max-width: 770px;
+  }
+}
+main section.s3-flower .flex .s3-img img {
+  width: 100%;
+}
+main section.s3-flower .flex .s3-content h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  main section.s3-flower .flex .s3-content h3 {
+    text-align: left;
+    font-size: 4em;
+  }
+}
+main section.s3-flower .flex .s3-content p {
+  line-height: 18px;
+  word-spacing: -0.05em;
+  margin-top: 22px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main section.s3-flower .flex .s3-content p {
+    font-size: 1.125em;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+main section.s3-flower .flex .s3-content .s3-btn a {
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  color: #fb5c6e;
+  border: #fb5c6e solid 1px;
+  border-radius: 5px;
+  background-color: #fff;
+  line-height: 54px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  main section.s3-flower .flex .s3-content .s3-btn a {
+    width: 174px;
+  }
+}
+main section.s4-various-venue {
+  margin-top: 120px;
+}
+main section.s4-various-venue .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  main section.s4-various-venue .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+main section.s4-various-venue .flex .s4-content h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  main section.s4-various-venue .flex .s4-content h3 {
+    text-align: left;
+    font-size: 4em;
+  }
+}
+main section.s4-various-venue .flex .s4-content p {
+  line-height: 18px;
+  word-spacing: -0.05em;
+  margin-top: 22px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  text-align: center;
+  text-align: left;
+  padding-left: 10%;
+}
+@media screen and (min-width: 1024px) {
+  main section.s4-various-venue .flex .s4-content p {
+    padding-left: 0;
+    font-size: 1.125em;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+main section.s4-various-venue .flex .s4-content .s4-btn a {
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  color: #fb5c6e;
+  border: #fb5c6e solid 1px;
+  border-radius: 5px;
+  background-color: #fff;
+  line-height: 54px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  main section.s4-various-venue .flex .s4-content .s4-btn a {
+    width: 174px;
+  }
+}
+main section.s4-various-venue .flex .s4-img {
+  width: 350px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s4-various-venue .flex .s4-img {
+    width: 45.3125vw;
+    max-width: 770px;
+  }
+}
+main section.s4-various-venue .flex .s4-img img {
+  width: 100%;
+}
+main section.s5-notice {
+  margin-top: 120px;
+}
+main section.s5-notice .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 350px;
+  margin: 0 auto;
+}
+main section.s5-notice .flex .notice-content h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+main section.s5-notice .flex .notice-content p {
+  text-align: left;
+  font-weight: 400;
+}
+main section.s5-notice .flex .notice-content p span {
+  font-weight: 900;
+  color: #fb5c6e;
+  font-size: 25px;
+  padding-right: 10px;
+}
+main section.s5-notice .flex .notice-content .notice-btn a {
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  color: #fb5c6e;
+  border: #fb5c6e solid 1px;
+  border-radius: 5px;
+  background-color: #fff;
+  line-height: 54px;
+  font-weight: 400;
+}
+main section.s5-notice .flex img {
+  width: 180px;
+  margin: 0 auto;
+  margin-bottom: 35px;
 }
 
 footer {
