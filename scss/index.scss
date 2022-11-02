@@ -146,6 +146,20 @@
 
             @keyframes move {
                 from{
+                    bottom: 30px;
+                }
+
+                75%{
+                    bottom: 60px;
+                } 
+    
+                to{
+                    bottom: 60px;
+                }
+            }
+
+            @keyframes move_pc {
+                from{
                     bottom: 60px;
                 }
 
@@ -163,6 +177,10 @@
                 bottom: 60px;
                 animation: move 2s infinite;
                 transform: translateX(-50%);
+
+                @include responsive(pc-screens) {
+                    animation: move_pc 2s infinite;
+                }
             }
 
             p{
@@ -205,7 +223,7 @@
         text-align: center;
 
         @include responsive(pc-screens) {
-            text-align: left;
+            // text-align: left;
         
         }
 
@@ -231,10 +249,9 @@
                 margin: 5px auto;
 
                 @include responsive(pc-screens) {
-                    width: 40px;
-                    margin-left: 20px;
+                    // width: 40px;
+                    // margin-left: 20px;
                 }
-
 
                 span {
                     font-size: 18px;

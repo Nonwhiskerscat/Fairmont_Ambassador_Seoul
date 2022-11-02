@@ -184,6 +184,17 @@ header .mouse {
 }
 @keyframes move {
   from {
+    bottom: 30px;
+  }
+  75% {
+    bottom: 60px;
+  }
+  to {
+    bottom: 60px;
+  }
+}
+@keyframes move_pc {
+  from {
     bottom: 60px;
   }
   75% {
@@ -198,6 +209,11 @@ header .mouse img {
   bottom: 60px;
   animation: move 2s infinite;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 1024px) {
+  header .mouse img {
+    animation: move_pc 2s infinite;
+  }
 }
 header .mouse p {
   transform: translateX(-50%);
@@ -231,11 +247,6 @@ header .mouse .mo_mouse img {
   padding-top: 50px;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
-  .main1 .contents {
-    text-align: left;
-  }
-}
 .main1 .contents h2 {
   font-size: 36px;
   font-weight: 400;
@@ -258,12 +269,6 @@ header .mouse .mo_mouse img {
   width: 40px;
   border-bottom: 3px solid #ffef5a;
   margin: 5px auto;
-}
-@media screen and (min-width: 1024px) {
-  .main1 .contents h2:before {
-    width: 40px;
-    margin-left: 20px;
-  }
 }
 .main1 .contents h2:before span {
   font-size: 18px;
