@@ -20,11 +20,133 @@
     }
 }
 
-//header
-    header {
-        // background-color: black;
-        height: 100vh;
+.menu_modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    // display: none;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vw;
+}
 
+section{
+    display: none;
+}
+
+header{
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+    
+        .header_logo {
+            width: 126px;
+    
+            @include responsive(tablet-screens){
+                width: 160px;
+            }
+    
+            @include responsive(pc-screens){
+                width: 200px;
+            }
+    
+            img {
+                width: 126px;
+                height: auto;
+                margin-top: 15px;
+    
+                @include responsive(tablet-screens){
+                    width: 160px;
+                    margin-top: 17.5px;
+                }
+    
+                @include responsive(pc-screens){
+                    width: 200px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    
+        .menu{
+            width: 70px;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            margin-top: 20px;
+            align-items: center;
+            text-align: right;
+    
+            @include responsive(tablet-screens){
+                margin-top: 27px;
+            }
+    
+            @include responsive(pc-screens){
+                margin-top: 35px;
+            }
+    
+            
+            .menu_bar {
+                width: 33%;
+                display:block;
+                width: 16px;
+                height: 13px;
+                cursor:pointer;
+                position:relative;
+        
+                span {
+                    display:block;
+                    height:0.5px;
+                    width:100%;
+                    background: white;
+                    position:absolute;
+        
+                    &:nth-child(1) {
+                        top:0;
+                        right: 0;
+                    }
+        
+                    &:nth-child(2) {
+                        top:50%;
+                        right: 0;
+                        transform:translateY(50%);
+                        width: 80%;
+                    }
+        
+                    &:nth-child(3) {
+                        bottom:0;
+                        right: 0;
+                    }
+                } //sapn
+            } //menu_bar
+        
+            .menu_type{                
+                p{
+                    font-family: $eng_title_font, sans-serif;
+                    font-size: 1em;
+                    
+                }
+            } //.menu_type
+        
+            
+        } //.menu
+    }
+    
+}
+
+
+
+//header
+section {
+        // background-color: black;
+        
+        height: 100vh;
         .bg-video {
             @include video_matte;
             z-index: -1;
@@ -39,110 +161,13 @@
         .colormatte {
             @include video_matte;
             background-color: black;
-            opacity: 0.3;
+            opacity: 0;
         }
-
-        .container{
-            display: flex;
-            justify-content: space-between;
-        
-            .header_logo {
-                width: 126px;
-
-                @include responsive(tablet-screens){
-                    width: 160px;
-                }
-
-                @include responsive(pc-screens){
-                    width: 200px;
-                }
-
-                img {
-                    width: 126px;
-                    height: auto;
-                    position: absolute;
-                    margin-top: 15px;
-
-                    @include responsive(tablet-screens){
-                        width: 160px;
-                        margin-top: 17.5px;
-                    }
-        
-                    @include responsive(pc-screens){
-                        width: 200px;
-                        margin-top: 20px;
-                    }
-                }
-            }
-
-            .menu{
-                width: 70px;
-                display: flex;
-                justify-content: space-between;
-                color: white;
-                margin-top: 20px;
-                align-items: center;
-                text-align: right;
-
-                @include responsive(tablet-screens){
-                    margin-top: 27px;
-                }
-
-                @include responsive(pc-screens){
-                    margin-top: 35px;
-                }
-
-                
-                .menu_bar {
-                    width: 33%;
-                    display:block;
-                    width: 16px;
-                    height: 13px;
-                    cursor:pointer;
-                    position:relative;
-            
-                    span {
-                        display:block;
-                        height:0.5px;
-                        width:100%;
-                        background: white;
-                        position:absolute;
-            
-                        &:nth-child(1) {
-                            top:0;
-                            right: 0;
-                        }
-            
-                        &:nth-child(2) {
-                            top:50%;
-                            right: 0;
-                            transform:translateY(50%);
-                            width: 80%;
-                        }
-            
-                        &:nth-child(3) {
-                            bottom:0;
-                            right: 0;
-                        }
-                    } //sapn
-                } //menu_bar
-            
-                .menu_type{                
-                    p{
-                        font-family: $eng_title_font, sans-serif;
-                        font-size: 1em;
-                        
-                    }
-                } //.menu_type
-            
-                
-            } //.menu
-        } //.container
 
         .mouse {
             position: absolute;
-            bottom: 20px;
             left: 50%;
+            bottom: 20px;
 
             @keyframes move {
                 from{
@@ -210,35 +235,47 @@
                 }
             }
         }
-    } // header
+} // section
+    
 
 .main1{
-
-    background: url(../img/index/photo/Section_2.jpg);
+    
     background-size: cover;
     height: 100vh;
+    position: relative;
+
+    .bg-video {
+        @include video_matte;
+        z-index: -1;
+    
+        &__content {
+        height: 100%;
+        width: 100%;
+          object-fit: cover; // background-size: cover 와 비슷함. (HTML 요소 or 비디오와 작동)
+        }
+    }
 
     .contents{
         padding-top: 50px;
         text-align: center;
 
         @include responsive(pc-screens) {
-            // text-align: left;
+            text-align: left;
         
         }
 
         h2 {
-            font-size: 36px;
+            font-size: 24px;
             font-weight: 400;
             margin-bottom: 15px;
 
             @include responsive(tablet-screens) {
-                font-size: 40px;
+                font-size: 30px;
                 margin-bottom: 20px;
             }
 
             @include responsive(pc-screens) {
-                font-size: 50px;
+                font-size: 36px;
             }
 
             &:before {
@@ -249,8 +286,8 @@
                 margin: 5px auto;
 
                 @include responsive(pc-screens) {
-                    // width: 40px;
-                    // margin-left: 20px;
+                    width: 40px;
+                    margin-left: 20px;
                 }
 
                 span {

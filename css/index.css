@@ -65,30 +65,26 @@ li {
   }
 }
 
+.menu_modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vw;
+}
+
+section {
+  display: none;
+}
+
 header {
-  height: 100vh;
-}
-header .bg-video {
-  position: absolute;
+  display: none;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-header .bg-video__content {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-header .colormatte {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.3;
+  right: 0;
 }
 header .container {
   display: flex;
@@ -110,7 +106,6 @@ header .container .header_logo {
 header .container .header_logo img {
   width: 126px;
   height: auto;
-  position: absolute;
   margin-top: 15px;
 }
 @media screen and (min-width: 768px) {
@@ -177,10 +172,36 @@ header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
 }
-header .mouse {
+
+section {
+  height: 100vh;
+}
+section .bg-video {
   position: absolute;
-  bottom: 20px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+section .bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+section .colormatte {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+}
+section .mouse {
+  position: absolute;
   left: 50%;
+  bottom: 20px;
 }
 @keyframes move {
   from {
@@ -204,63 +225,81 @@ header .mouse {
     bottom: 30px;
   }
 }
-header .mouse img {
+section .mouse img {
   position: absolute;
   bottom: 60px;
   animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1024px) {
-  header .mouse img {
+  section .mouse img {
     animation: move_pc 2s infinite;
   }
 }
-header .mouse p {
+section .mouse p {
   transform: translateX(-50%);
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 1px;
   color: white;
 }
-header .mouse .pc_mouse {
+section .mouse .pc_mouse {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  header .mouse .pc_mouse {
+  section .mouse .pc_mouse {
     display: block;
   }
 }
-header .mouse .mo_mouse img {
+section .mouse .mo_mouse img {
   opacity: 0.5;
 }
 @media screen and (min-width: 1024px) {
-  header .mouse .mo_mouse {
+  section .mouse .mo_mouse {
     display: none;
   }
 }
 
 .main1 {
-  background: url(../img/index/photo/Section_2.jpg);
   background-size: cover;
   height: 100vh;
+  position: relative;
+}
+.main1 .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.main1 .bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .main1 .contents {
   padding-top: 50px;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .main1 .contents {
+    text-align: left;
+  }
+}
 .main1 .contents h2 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
 }
 @media screen and (min-width: 768px) {
   .main1 .contents h2 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
   .main1 .contents h2 {
-    font-size: 50px;
+    font-size: 36px;
   }
 }
 .main1 .contents h2:before {
@@ -269,6 +308,12 @@ header .mouse .mo_mouse img {
   width: 40px;
   border-bottom: 3px solid #ffef5a;
   margin: 5px auto;
+}
+@media screen and (min-width: 1024px) {
+  .main1 .contents h2:before {
+    width: 40px;
+    margin-left: 20px;
+  }
 }
 .main1 .contents h2:before span {
   font-size: 18px;
