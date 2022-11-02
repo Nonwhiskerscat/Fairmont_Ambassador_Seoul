@@ -121,18 +121,18 @@ header .container .menu {
   display: flex;
   justify-content: space-between;
   color: white;
-  margin-top: 20px;
   align-items: center;
   text-align: right;
+  margin-top: 5px;
 }
 @media screen and (min-width: 768px) {
   header .container .menu {
-    margin-top: 27px;
+    width: 75px;
   }
 }
 @media screen and (min-width: 1024px) {
   header .container .menu {
-    margin-top: 35px;
+    width: 80px;
   }
 }
 header .container .menu .menu_bar {
@@ -149,30 +149,38 @@ header .container .menu .menu_bar span {
   width: 100%;
   background: white;
   position: absolute;
+  right: 0;
 }
 header .container .menu .menu_bar span:nth-child(1) {
   top: 0;
-  right: 0;
 }
 header .container .menu .menu_bar span:nth-child(2) {
   top: 50%;
-  right: 0;
   transform: translateY(50%);
   width: 80%;
 }
 header .container .menu .menu_bar span:nth-child(3) {
   bottom: 0;
-  right: 0;
 }
 header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
 }
+@media screen and (min-width: 768px) {
+  header .container .menu .menu_type p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .container .menu .menu_type p {
+    font-size: 1.2em;
+  }
+}
 
-section {
+.main0 {
   height: 100vh;
 }
-section .bg-video {
+.main0 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -180,20 +188,48 @@ section .bg-video {
   width: 100%;
   z-index: -1;
 }
-section .bg-video__content {
+.main0 .bg-video__content {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-section h2.main_title {
+.main0 h2#type {
+  font-family: "KoPubWorldDotum";
   font-weight: 100;
   position: absolute;
-  font-size: 16px1vw;
+  text-align: center;
+  font-size: calc(2em + 1vw);
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-section .colormatte {
+@media screen and (min-width: 1024px) {
+  .main0 h2#type {
+    font-size: 5em;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.main0 h2#type::after {
+  content: "|";
+  font-family: ScoreDream;
+  font-weight: 100;
+  animation: blink 0.5s step-end infinite;
+  color: #fff;
+}
+.main0 .colormatte {
   position: absolute;
   top: 0;
   left: 0;
@@ -202,7 +238,7 @@ section .colormatte {
   background-color: black;
   opacity: 0;
 }
-section .mouse {
+.main0 .mouse {
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -229,36 +265,36 @@ section .mouse {
     bottom: 30px;
   }
 }
-section .mouse img {
+.main0 .mouse img {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1024px) {
-  section .mouse img {
+  .main0 .mouse img {
     animation: move_pc 2s infinite;
   }
 }
-section .mouse p {
+.main0 .mouse p {
   transform: translateX(-50%);
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 1px;
   color: white;
 }
-section .mouse .pc_mouse {
+.main0 .mouse .pc_mouse {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  section .mouse .pc_mouse {
+  .main0 .mouse .pc_mouse {
     display: block;
   }
 }
-section .mouse .mo_mouse img {
+.main0 .mouse .mo_mouse img {
   opacity: 0.5;
 }
 @media screen and (min-width: 1024px) {
-  section .mouse .mo_mouse {
+  .main0 .mouse .mo_mouse {
     display: none;
   }
 }
