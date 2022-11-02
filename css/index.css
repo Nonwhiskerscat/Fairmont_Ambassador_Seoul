@@ -66,6 +66,7 @@ li {
 }
 
 .menu_modal {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -74,12 +75,7 @@ li {
   height: 100vw;
 }
 
-section {
-  display: none;
-}
-
 header {
-  display: none;
   width: 100%;
   position: fixed;
   top: 0;
@@ -188,6 +184,14 @@ section .bg-video__content {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+section h2.main_title {
+  font-weight: 100;
+  position: absolute;
+  font-size: 16px1vw;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 section .colormatte {
   position: absolute;
