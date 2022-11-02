@@ -90,6 +90,27 @@ header .colormatte {
   background-color: black;
   opacity: 0.3;
 }
+header .main-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+header .main-text h1 {
+  color: white;
+}
+header .main-text h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 30px;
+  height: 6px;
+  background: white;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
 header .container {
   display: flex;
   justify-content: space-between;
@@ -222,61 +243,112 @@ header .mouse .mo_mouse img {
 }
 
 @media screen and (min-width: 1024px) {
-  main .sec1 .container {
+  .sec1 .container {
     display: flex;
   }
 }
-main .sec1 .flex-box {
+.sec1 .container .flex-box {
   background-color: #fcf6e1;
-  margin-top: 50px;
-  margin-bottom: 50px;
   padding: 30px;
 }
-main .sec1 .flex-box1 {
+@media screen and (min-width: 1024px) {
+  .sec1 .container .flex-box {
+    width: 100%;
+  }
+}
+.sec1 .container .flex-box .flex-box1 {
   display: flex;
   justify-content: space-around;
 }
-main .sec1 .flex-box1 .info {
+.sec1 .container .flex-box .flex-box1 .info {
   font-family: "Lemon/Milk light", sans-serif;
-}
-main .sec1 .flex-box1 ul li {
   line-height: 50px;
 }
-main .sec1 .detail {
+.sec1 .container .flex-box .flex-box1 .detail {
   margin-left: 50px;
+  line-height: 50px;
 }
-main .sec1 .menu-flex-box {
+.sec1 .container .flex-box .menu-flex-box {
   display: flex;
   justify-content: space-around;
 }
-main .sec1 .menu-flex-box .menu,
-main .sec1 .menu-flex-box .booknow {
+.sec1 .container .flex-box .menu-flex-box .menu,
+.sec1 .container .flex-box .menu-flex-box .booknow {
   width: 170px;
   height: 50px;
   line-height: 50px;
   text-align: center;
 }
-main .sec1 .menu-flex-box .menu {
+.sec1 .container .flex-box .menu-flex-box .menu {
   background-color: white;
 }
-main .sec1 .menu-flex-box .menu a {
+.sec1 .container .flex-box .menu-flex-box .menu a {
   font-family: "Lemon/Milk light", sans-serif;
 }
-main .sec1 .menu-flex-box .booknow {
+.sec1 .container .flex-box .menu-flex-box .booknow {
   background-color: #f1d06a;
 }
-main .sec1 .menu-flex-box .booknow a {
+.sec1 .container .flex-box .menu-flex-box .booknow a {
   font-family: "Lemon/Milk light", sans-serif;
 }
-main .sec1 .m29_1 img {
+.sec1 .container .sec1-img img {
   width: 100%;
 }
-main .sec2 img {
-  width: 100%;
-  margin-bottom: 30px;
+@media screen and (min-width: 1024px) {
+  .sec1 .container .sec1-img img {
+    height: 100%;
+  }
 }
-main .sec3 img {
+
+@media screen and (min-width: 1024px) {
+  .sec2 .sec2-box {
+    display: flex;
+    width: 100%;
+  }
+}
+.sec2 .sec2-box img {
   width: 100%;
+}
+
+.sec3 .sec3-text {
+  text-align: center;
+}
+.sec3 .sec3-text p {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .sec3 .sec3-text p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sec3 .sec3-text p {
+    font-size: 26px;
+  }
+}
+.sec3 .sec3-text .rooftop {
+  font-size: 48px;
+  font-family: "Lemon/Milk light", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .sec3 .sec3-text .rooftop {
+    letter-spacing: 3px;
+    font-size: 68px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sec3 .sec3-text .rooftop {
+    letter-spacing: 6px;
+    font-size: 88px;
+  }
+}
+.sec3 .sec3-img-box img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .sec3 .sec3-img-box {
+    display: flex;
+  }
 }
 
 footer {
