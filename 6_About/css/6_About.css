@@ -11,14 +11,6 @@ body {
   font-size: 1.125em;
 }
 
-a {
-  color: #333333;
-  text-decoration: none;
-  font-family: "SCoreDream";
-  font-weight: 100;
-  font-size: 1em;
-}
-
 h1 {
   font-size: 7.5em;
   font-weight: normal;
@@ -51,7 +43,7 @@ li {
 
 .wrapper {
   width: 100%;
-  background-color: rgb(151, 168, 240);
+  background-color: #9a8c7f;
 }
 
 .container {
@@ -168,29 +160,124 @@ header .container .menu .menu_type p {
 
 main {
   padding-top: 85px;
-  background-color: #9a8c7f;
   color: white;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    text-align: left;
+  }
 }
 main h2 {
   font-size: 55px;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 1024px) {
+  main h2 {
+    font-size: 60px;
+  }
+}
 main section {
   margin-bottom: 135px;
 }
-main .service-icon {
+@media screen and (min-width: 1024px) {
+  main section {
+    margin-bottom: 500px;
+    margin-left: 170px;
+    margin-right: 170px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .section1-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 290px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .section1-flex h2 {
+    margin-right: 175px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .section1-flex p {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .section2-flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+main .section2-flex p {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  main .section2-flex p {
+    font-size: 24px;
+  }
+}
+main .section2-flex .service-icon {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   margin-top: 10px;
 }
-main .service-icon img {
+@media screen and (min-width: 1024px) {
+  main .section2-flex .service-icon {
+    margin-left: 350px;
+  }
+}
+main .section2-flex .service-icon div {
   display: block;
+  width: 17%;
+}
+@media screen and (min-width: 1024px) {
+  main .section2-flex .service-icon div {
+    margin-right: 30px;
+    text-align: center;
+    width: 15%;
+  }
+}
+main .section2-flex .service-icon div a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+}
+main .section2-flex .service-icon div a:hover {
+  font-weight: bold;
+}
+main .section2-flex .service-icon div img {
   width: 100%;
+}
+main .section2-flex .service-icon div p {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 main .map .section3-flex img {
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .map .section3-flex img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .map .location {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }
 main .map .location h3 {
   font-size: 26px;
@@ -199,23 +286,44 @@ main .map .location h3 {
   margin-top: 30px;
   margin-bottom: 12px;
 }
+@media screen and (min-width: 1024px) {
+  main .map .location h3 {
+    font-size: 36px;
+  }
+}
 main .map .location .row {
   display: flex;
   padding-right: 0;
+}
+@media screen and (min-width: 1024px) {
+  main .map .location .row {
+    margin-top: 30px;
+  }
 }
 main .map .location .row img {
   width: 28px;
   height: auto;
   margin-right: 5px;
-  margin-left: 40px;
+}
+@media screen and (min-width: 1024px) {
+  main .map .location .row img {
+    width: 45px;
+  }
 }
 main .map .location .row p {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 5px;
+}
+@media screen and (min-width: 1024px) {
+  main .map .location .row p {
+    font-size: 26px;
+    margin-left: 20px;
+  }
 }
 main .route .section4-flex {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 main .route .section4-flex .accodion {
   background-color: #eee;
