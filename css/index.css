@@ -195,8 +195,7 @@ header .container .menu .menu_type p {
 .main0 .bg-video__content {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main0 h2#type {
   font-family: "KoPubWorldDotum";
@@ -211,20 +210,6 @@ header .container .menu .menu_type p {
 @media screen and (min-width: 1024px) {
   .main0 h2#type {
     font-size: 5em;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  51% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes blink {
@@ -245,8 +230,7 @@ header .container .menu .menu_type p {
   content: "|";
   font-family: ScoreDream;
   font-weight: 100;
-  -webkit-animation: blink 0.5s step-end infinite;
-          animation: blink 0.5s step-end infinite;
+  animation: blink 0.5s step-end infinite;
   color: #fff;
 }
 .main0 .colormatte {
@@ -263,17 +247,6 @@ header .container .menu .menu_type p {
   left: 50%;
   bottom: 20px;
 }
-@-webkit-keyframes move {
-  from {
-    bottom: 30px;
-  }
-  75% {
-    bottom: 60px;
-  }
-  to {
-    bottom: 60px;
-  }
-}
 @keyframes move {
   from {
     bottom: 30px;
@@ -283,17 +256,6 @@ header .container .menu .menu_type p {
   }
   to {
     bottom: 60px;
-  }
-}
-@-webkit-keyframes move_pc {
-  from {
-    bottom: 60px;
-  }
-  75% {
-    bottom: 30px;
-  }
-  to {
-    bottom: 30px;
   }
 }
 @keyframes move_pc {
@@ -310,14 +272,12 @@ header .container .menu .menu_type p {
 .main0 .mouse img {
   position: absolute;
   bottom: 40px;
-  -webkit-animation: move 2s infinite;
-          animation: move 2s infinite;
+  animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1024px) {
   .main0 .mouse img {
-    -webkit-animation: move_pc 2s infinite;
-            animation: move_pc 2s infinite;
+    animation: move_pc 2s infinite;
   }
 }
 .main0 .mouse p {
@@ -359,8 +319,7 @@ header .container .menu .menu_type p {
 .main1 .bg-video__content {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main1 .contents {
   text-align: center;
@@ -549,7 +508,7 @@ header .container .menu .menu_type p {
   .main2 .contents .room_flex .content_slide .room_back .rooms h2 {
     white-space: nowrap;
     right: 100%;
-    transform: rotateZ(-90deg) translateX(10%) translateY(12%);
+    transform: rotateZ(-90deg) translateX(12%) translateY(22%);
     transform-origin: bottom right;
   }
 }
@@ -565,20 +524,26 @@ header .container .menu .menu_type p {
     font-size: 5em;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms h3 {
+@media screen and (min-width: 1440px) {
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container {
+    width: 100%;
+    padding-left: 12.7272727273%;
+    padding-right: 10%;
+  }
+}
+.main2 .contents .room_flex .content_slide .room_back .rooms .container h3 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 1.5em;
   padding-top: 20px;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms h3 {
-    margin-left: 20px;
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container h3 {
     padding-top: 250px;
     letter-spacing: 2px;
     font-size: 2.3em;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms h3::before {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container h3::before {
   content: "";
   display: block;
   width: 30px;
@@ -586,7 +551,7 @@ header .container .menu .menu_type p {
   margin: 0 0 5px 10px;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms h3::before {
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container h3::before {
     content: "";
     display: block;
     width: 45px;
@@ -594,47 +559,47 @@ header .container .menu .menu_type p {
     margin: 0 0 5px 10px;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms h3 span {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container h3 span {
   display: inline;
-  margin-left: 20px;
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms h3 span {
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container h3 span {
     margin-left: calc(13px + 0.1vw);
     font-size: 0.5em;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms .room_type {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container .room_type {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms .room_type {
-    margin-left: 20px;
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container .room_type {
     margin-top: 30px;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms .room_type a {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container .room_type a {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
   color: #666666;
   opacity: 0.3;
   letter-spacing: 1.5px;
   margin-right: 30px;
+  line-height: 30px;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms .room_type a {
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container .room_type a {
     font-size: 18px;
     margin-right: 20px;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms .room_type a:hover {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container .room_type a:hover {
   opacity: 1;
   transition: 0.5s ease-in;
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms p {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container p {
   margin-top: 20px;
   height: 90px;
   font-family: "SCoreDream";
@@ -643,14 +608,14 @@ header .container .menu .menu_type p {
   letter-spacing: 1px;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms p {
-    margin: 50px 20px 0;
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container p {
+    margin-top: 50px;
     font-size: 18px;
     line-height: 2em;
     height: 180px;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms button {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -664,13 +629,13 @@ header .container .menu .menu_type p {
   font-weight: 200;
 }
 @media screen and (min-width: 1440px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms button {
+  .main2 .contents .room_flex .content_slide .room_back .rooms .container button {
     width: 240px;
     height: 50px;
     font-size: 22px;
   }
 }
-.main2 .contents .room_flex .content_slide .room_back .rooms button:hover {
+.main2 .contents .room_flex .content_slide .room_back .rooms .container button:hover {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.5s ease-in;
@@ -749,11 +714,11 @@ header .container .menu .menu_type p {
   overflow: hidden;
 }
 .main3 .contents .faci_flex .faci_back_slide ul li img {
-  transform: translateX(-25%) translateY(-30%);
+  transform: translateX(-25%) translateY(-20%);
 }
 @media screen and (min-width: 768px) {
   .main3 .contents .faci_flex .faci_back_slide ul li img {
-    transform: translateX(-10%) translateY(-30%);
+    transform: translateX(-10%) translateY(-20%);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -784,44 +749,47 @@ header .container .menu .menu_type p {
   }
 }
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h2 {
-  margin-left: 10%;
   display: none;
+  text-align: right;
+}
+@media screen and (min-width: 1440px) {
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h2 {
+    display: none;
+    opacity: 0.8;
+    position: absolute;
+    top: 93%;
+    left: 250%;
+    bottom: 0;
+    display: block;
+    white-space: nowrap;
+    font-family: "Lemon/Milk";
+    font-size: 3em;
+    color: rgba(180, 34, 45, 0.75);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container {
+    width: 100%;
+    margin-left: 12.7272727273%;
+    padding-right: 12.7272727273%;
+  }
+}
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex {
+  display: flex;
+}
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex h3 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 2em;
-}
-@media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h2 {
-    white-space: nowrap;
-    right: 100%;
-    transform: rotateZ(-90deg) translateX(10%) translateY(12%);
-    transform-origin: bottom right;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h2 {
-    font-size: 3em;
-    top: -52px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h2 {
-    font-family: "Lemon/Milk";
-    font-size: 5em;
-  }
-}
-.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h3 {
-  font-family: "Lemon/Milk light", sans-serif;
-  font-size: 1.5em;
   padding-top: 20px;
 }
 @media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h3 {
-    padding-top: 250px;
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex h3 {
+    padding-top: 150px;
     letter-spacing: 2px;
     font-size: 2.3em;
   }
 }
-.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h3::before {
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex h3::before {
   content: "";
   display: block;
   width: 30px;
@@ -829,7 +797,7 @@ header .container .menu .menu_type p {
   margin: 0 0 5px 10px;
 }
 @media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h3::before {
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex h3::before {
     content: "";
     display: block;
     width: 45px;
@@ -837,19 +805,13 @@ header .container .menu .menu_type p {
     margin: 0 0 5px 10px;
   }
 }
-.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h3 span {
-  display: inline;
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex img {
+  width: 72px;
+  height: 67.5px;
+  margin-top: 20px;
   margin-left: 20px;
-  font-family: "Lemon/Milk light", sans-serif;
-  font-size: 16px;
 }
-@media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil h3 span {
-    margin-left: calc(13px + 0.1vw);
-    font-size: 0.5em;
-  }
-}
-.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil p {
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
   margin-top: 20px;
   height: 90px;
   font-family: "SCoreDream";
@@ -858,14 +820,14 @@ header .container .menu .menu_type p {
   letter-spacing: 1px;
 }
 @media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil p {
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
     margin: 50px 20px 0;
     font-size: 18px;
     line-height: 2em;
     height: 180px;
   }
 }
-.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil button {
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -880,18 +842,18 @@ header .container .menu .menu_type p {
   color: white;
 }
 @media screen and (min-width: 1440px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil button {
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container button {
     width: 240px;
     height: 50px;
     font-size: 22px;
   }
 }
-.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil button:hover {
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container button:hover {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.5s ease-in;
 }
-.main3 .contents .faci_flex .faci_contents_slide li:nth-child(1), .main3 .contents .faci_flex .faci_contents_slide li:nth-child(3) {
+.main3 .contents .faci_flex .faci_contents_slide li:nth-child(2), .main3 .contents .faci_flex .faci_contents_slide li:nth-child(3) {
   display: none;
 }
 
