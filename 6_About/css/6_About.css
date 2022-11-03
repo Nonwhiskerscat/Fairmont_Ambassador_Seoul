@@ -185,8 +185,11 @@ main .service-icon {
   width: 100%;
   margin-top: 10px;
 }
-main .service-icon img {
+main .service-icon div {
   display: block;
+  width: 18%;
+}
+main .service-icon div img {
   width: 100%;
 }
 main .map .section3-flex img {
