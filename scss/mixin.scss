@@ -16,6 +16,12 @@
             @content;
         }
     }
+
+    @else if $break == p1440-screens {
+        @media screen and (min-width:$break-p1440) {
+            @content;
+        }
+    }
 }
 
 @mixin video_matte {

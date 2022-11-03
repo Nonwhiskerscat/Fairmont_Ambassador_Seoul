@@ -359,6 +359,7 @@ header{
 }
  //main1
 
+//.main2
 .main2{
 
     background-size: cover;
@@ -371,6 +372,11 @@ header{
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+
+        @include responsive(p1440-screens) {
+            left: 35.67708333333334%;
+            transform: translateX(-50%);
+        }
         
         ul {
             display: flex;
@@ -410,7 +416,6 @@ header{
                 &::after {
                     opacity: 1;
                 }
-                
 
                 span{
                     opacity: 1;
@@ -448,7 +453,7 @@ header{
                                 transform: translateX(-15%);
                             }
     
-                            @include responsive(pc-screens) {
+                            @include responsive(p1440-screens) {
                                 transform: translateX(0);
                             }
                         }
@@ -463,17 +468,29 @@ header{
                     position: absolute;
                     top: 120px;
                     width: 100%;
-                    height: 250px;
+                    height: 270px;
                     background-color: rgba(255,255,255,0.8);
 
 
                     @include responsive(tablet-screens) {
                         top: 150px;
                     }
+
+                    @include responsive(p1440-screens) {
+                        right: 0;
+                        top: 0;
+                        width: 28.64583333333333%;
+                        height: 100%;
+                    }
                 }
 
                 .rooms{
                     color: #666666;
+
+                    @include responsive(p1440-screens) {
+                        width: 93.75%;
+                    }
+
                     h2 {
                         color: white;
                         opacity: 0.8;
@@ -482,6 +499,13 @@ header{
                         right: 0;
                         letter-spacing: 2px;
 
+                        @include responsive(p1440-screens) {
+                            white-space: nowrap;
+                            right: 100%;
+                            transform: rotateZ(-90deg) translateX(10%) translateY(12%);
+                            transform-origin: bottom right;
+                        }
+
                         font: {
                             family: $eng_title_font;
                             size: 2em;
@@ -489,39 +513,67 @@ header{
 
                         @include responsive(tablet-screens) {
                             font-size: 3em;
-                            top: -51px;
+                            top: -52px;
+                        }
+
+                        @include responsive(p1440-screens) {
+                            @include type_custom(5em, 'Lemon/Milk')
+                            
                         }
                     }
 
                     h3 {
-                        font: {
-                            size: 1.5em;
-                            family: $eng_title_font;
-                        }
+                        @include type_custom(1.5em,$eng_title_font);
                         padding-top: 20px;
+
+                        @include responsive(p1440-screens) {
+                            margin-left: 20px;
+                            padding-top: 250px;
+                            letter-spacing: 2px;
+                            font-size: 2.3em;
+                        }
 
                         &::before {
                             @include title_border_2(30px, 3px, #666666, 10px, 5px);
+
+                            @include responsive(p1440-screens) {
+                                @include title_border_2(45px, 6px, #666666, 10px, 5px);
+                            }
                         }
 
                         span {
                             display: inline;
                             margin-left: 20px;
                             @include type_custom(16px, $eng_title_font);
+
+                            @include responsive(p1440-screens) {
+                                margin-left: calc(13px + 0.1vw);
+                                font-size: 0.5em;
+                            }
                         }
                     }
 
                     .room_type {
                         display: flex;
-                        width: 80%;
-                        justify-content: space-between;
                         margin-top: 10px;
+
+                        @include responsive(p1440-screens) {
+                            margin-left: 20px;
+                            margin-top: 30px
+                        }
 
                         a {
                             @include type_custom(16px, $eng_title_font);
                             color: #666666;
                             opacity: 0.3;
                             letter-spacing: 1.5px;
+                            margin-right: 30px;
+
+                            
+                            @include responsive(p1440-screens) {
+                                font-size: 18px;
+                                margin-right: 20px;
+                            }
 
                             &:hover {
                                 opacity: 1;
@@ -529,16 +581,337 @@ header{
                             }
                         }
                     }
+
+                    p {
+                        margin-top: 20px;
+                        height: 90px;
+                        @include type_custom(16px, $common_font);
+                        text-align: justify;
+                        letter-spacing: 1px;
+
+                        @include responsive(p1440-screens) {
+                            margin: 50px 20px 0;
+                            font-size: 18px;
+                            line-height: 2em;
+                            height: 180px;
+                        }
+
+                    }
+
+                    button {
+                        position: absolute;
+                        left: 50%;
+                        // bottom: 0;
+                        transform: translateX(-50%);
+                        background: none;
+                        width: 170px;
+                        height: 40px;
+                        border: 1px solid #666666;
+                        @include type_custom(18px, $common_font);
+                        text-align: center;
+                        font-weight: 200;
+
+                        @include responsive(p1440-screens) {
+                            width: 240px;
+                            height: 50px;
+                            font-size: 22px;
+                        }
+
+                        &:hover {
+                            background-color: rgba(255,255,255,0.8);
+                            border: 1px solid rgba(0,0,0,0);
+                            transition: all 0.5s ease-in;
+                        }
+
+                    }
                 }
 
 
-                li:nth-child(3), li:nth-child(2){
+                li:nth-child(1), li:nth-child(3){
                     display: none;
                 }
             }            
         }   
     }
 }
+//.main2
+
+//.main3
+.main3{
+
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .room_navi {
+        z-index: 2;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include responsive(p1440-screens) {
+            left: 35.67708333333334%;
+            transform: translateX(-50%);
+        }
+        
+        ul {
+            display: flex;
+        }
+
+        li {
+            width: 40px;
+            position: relative;
+            text-align: center;
+            font: {
+                size: 0.875em;
+                family: $eng_title_font;
+            }
+            letter-spacing: 1px;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                display: block;
+                border-bottom: #fff 2px solid;
+                opacity: 0.5;
+                margin-top: 2px;
+            }
+
+            span {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                
+            }
+
+            &:hover {
+                width: 180px;
+                
+                &::after {
+                    opacity: 1;
+                }
+
+                span{
+                    opacity: 1;
+                    transition: all 1s;
+                }
+
+                transition: all 1s;
+            }
+
+        }
+
+    }
+
+    .contents {
+        .room_flex{
+            .back_slide {
+                position: absolute;
+                width: 100%;
+                overflow: hidden;
+    
+                ul {
+                    display: flex;
+                    width: 300%;
+                    height: 100vh;
+                    z-index: -1;
+    
+                    li{
+                        width: 100%;
+                        overflow: hidden;
+    
+                        img {
+                            transform: translateX(-25%);
+    
+                            @include responsive(tablet-screens) {
+                                transform: translateX(-15%);
+                            }
+    
+                            @include responsive(p1440-screens) {
+                                transform: translateX(0);
+                            }
+                        }
+    
+                    }
+                }
+            }
+
+            .content_slide {
+
+                .room_back {
+                    position: absolute;
+                    top: 120px;
+                    width: 100%;
+                    height: 270px;
+                    background-color: rgba(255,255,255,0.8);
+
+
+                    @include responsive(tablet-screens) {
+                        top: 150px;
+                    }
+
+                    @include responsive(p1440-screens) {
+                        right: 0;
+                        top: 0;
+                        width: 28.64583333333333%;
+                        height: 100%;
+                    }
+                }
+
+                .rooms{
+                    color: #666666;
+
+                    @include responsive(p1440-screens) {
+                        width: 93.75%;
+                    }
+
+                    h2 {
+                        color: white;
+                        opacity: 0.8;
+                        position: absolute;
+                        top: -35px;
+                        right: 0;
+                        letter-spacing: 2px;
+
+                        @include responsive(p1440-screens) {
+                            white-space: nowrap;
+                            right: 100%;
+                            transform: rotateZ(-90deg) translateX(10%) translateY(12%);
+                            transform-origin: bottom right;
+                        }
+
+                        font: {
+                            family: $eng_title_font;
+                            size: 2em;
+                        }
+
+                        @include responsive(tablet-screens) {
+                            font-size: 3em;
+                            top: -52px;
+                        }
+
+                        @include responsive(p1440-screens) {
+                            @include type_custom(5em, 'Lemon/Milk')
+                            
+                        }
+                    }
+
+                    h3 {
+                        @include type_custom(1.5em,$eng_title_font);
+                        padding-top: 20px;
+
+                        @include responsive(p1440-screens) {
+                            margin-left: 20px;
+                            padding-top: 250px;
+                            letter-spacing: 2px;
+                            font-size: 2.3em;
+                        }
+
+                        &::before {
+                            @include title_border_2(30px, 3px, #666666, 10px, 5px);
+
+                            @include responsive(p1440-screens) {
+                                @include title_border_2(45px, 6px, #666666, 10px, 5px);
+                            }
+                        }
+
+                        span {
+                            display: inline;
+                            margin-left: 20px;
+                            @include type_custom(16px, $eng_title_font);
+
+                            @include responsive(p1440-screens) {
+                                margin-left: calc(13px + 0.1vw);
+                                font-size: 0.5em;
+                            }
+                        }
+                    }
+
+                    .room_type {
+                        display: flex;
+                        margin-top: 10px;
+
+                        @include responsive(p1440-screens) {
+                            margin-left: 20px;
+                            margin-top: 30px
+                        }
+
+                        a {
+                            @include type_custom(16px, $eng_title_font);
+                            color: #666666;
+                            opacity: 0.3;
+                            letter-spacing: 1.5px;
+                            margin-right: 30px;
+
+                            
+                            @include responsive(p1440-screens) {
+                                font-size: 18px;
+                                margin-right: 20px;
+                            }
+
+                            &:hover {
+                                opacity: 1;
+                                transition: 0.5s ease-in;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-top: 20px;
+                        height: 90px;
+                        @include type_custom(16px, $common_font);
+                        text-align: justify;
+                        letter-spacing: 1px;
+
+                        @include responsive(p1440-screens) {
+                            margin: 50px 20px 0;
+                            font-size: 18px;
+                            line-height: 2em;
+                            height: 180px;
+                        }
+
+                    }
+
+                    button {
+                        position: absolute;
+                        left: 50%;
+                        // bottom: 0;
+                        transform: translateX(-50%);
+                        background: none;
+                        width: 170px;
+                        height: 40px;
+                        border: 1px solid #666666;
+                        @include type_custom(18px, $common_font);
+                        text-align: center;
+                        font-weight: 200;
+
+                        @include responsive(p1440-screens) {
+                            width: 240px;
+                            height: 50px;
+                            font-size: 22px;
+                        }
+
+                        &:hover {
+                            background-color: rgba(255,255,255,0.8);
+                            border: 1px solid rgba(0,0,0,0);
+                            transition: all 0.5s ease-in;
+                        }
+
+                    }
+                }
+
+
+                li:nth-child(1), li:nth-child(3){
+                    display: none;
+                }
+            }            
+        }   
+    }
+}
+//.main3
 
 footer {
     padding-top: 30px;
