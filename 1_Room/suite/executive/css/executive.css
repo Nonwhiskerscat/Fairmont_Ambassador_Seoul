@@ -175,6 +175,17 @@ section header .mouse {
   bottom: 20px;
   left: 50%;
 }
+@-webkit-keyframes move {
+  from {
+    bottom: 60px;
+  }
+  75% {
+    bottom: 30px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 @keyframes move {
   from {
     bottom: 60px;
@@ -189,7 +200,8 @@ section header .mouse {
 section header .mouse img {
   position: absolute;
   bottom: 60px;
-  animation: move 2s infinite;
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
   transform: translateX(-50%);
 }
 section header .mouse p {

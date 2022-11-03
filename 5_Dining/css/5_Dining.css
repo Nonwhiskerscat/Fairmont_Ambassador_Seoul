@@ -56,7 +56,6 @@ li {
 .container {
   width: 89.7435897436%;
   margin: 0 auto;
-  background-color: rgb(255, 161, 161);
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -89,6 +88,27 @@ header .colormatte {
   width: 100%;
   background-color: black;
   opacity: 0.3;
+}
+header .main-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+header .main-text h1 {
+  color: white;
+}
+header .main-text h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 30px;
+  height: 6px;
+  background: white;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
 }
 header .container {
   display: flex;
