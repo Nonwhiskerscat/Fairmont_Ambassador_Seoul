@@ -300,9 +300,50 @@ header {
                 width: 100%;
             }
 
-            img {
+            div img {
                 width: 100%;
-            }                    
+            }
+            
+            .hover-img {
+                position: relative;                
+            }
+
+            .hover-img p {
+                color: #ffffff;
+                font-size: 30px; 
+                text-align: center;
+                line-height: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+
+                @include responsive (tablet-screens) {
+                    font-size: 40px;
+                    line-height: 70px;
+                }
+
+                @include responsive (pc-screens) {
+                    font-size: 40px;
+                    line-height: 80px;
+                }
+
+                strong {
+                    font-family: $eng_title_font;
+                    letter-spacing: 2px;                    
+                }
+
+                a {
+                    color: #333333;
+                }
+
+                a:hover {
+                    text-decoration: underline 2px white;
+                    color: white;
+
+                }
+            }
         }
     }
 
