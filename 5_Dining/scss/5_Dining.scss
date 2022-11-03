@@ -11,7 +11,7 @@
 .container {
     width: 89.74358974358974%;
     margin: 0 auto;
-    background-color: rgb(255, 161, 161);
+    // background-color: rgb(255, 161, 161);
     position: relative;
 
     @include responsive(tablet-screens){
@@ -46,6 +46,30 @@ header {
         width: 100%;
         background-color: black;
         opacity: 0.3;
+    }
+
+    .main-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+
+        h1 {
+            color: white;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                width: 30px;
+                height: 6px;
+                background: white;
+                transform: translateX(-50%);
+                margin-bottom: 37px;
+            }
+        }
     }
 
     .container{
