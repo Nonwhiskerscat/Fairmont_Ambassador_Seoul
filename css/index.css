@@ -418,7 +418,7 @@ header .container .menu .menu_type p {
   opacity: 0;
 }
 .main2 .room_navi li:hover {
-  width: 150px;
+  width: 180px;
   transition: all 1s;
 }
 .main2 .room_navi li:hover::after {
