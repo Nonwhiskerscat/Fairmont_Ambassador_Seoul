@@ -144,7 +144,6 @@ header{
 }
 
 
-
 //header
 .main0 {
         // background-color: black;
@@ -297,12 +296,11 @@ header{
     }
 
     .contents{
-        padding-top: 50px;
         text-align: center;
 
         @include responsive(pc-screens) {
             text-align: left;
-        
+            padding-top: 150px;
         }
 
         h2 {
@@ -339,13 +337,17 @@ header{
         }
 
         p{
-            font-size: 18px;
+            font-size: 0.875em;
             line-height: 40px;
             font-weight: 200;
             letter-spacing: 2px;
             
             span {
                 color: #ffef5a;
+            }
+
+            @include responsive(pc-screens){
+                font-size: 1em;
             }
         }
     } //contents

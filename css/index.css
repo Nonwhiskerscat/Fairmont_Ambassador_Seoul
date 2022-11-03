@@ -318,12 +318,12 @@ header .container .menu .menu_type p {
   object-fit: cover;
 }
 .main1 .contents {
-  padding-top: 50px;
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
   .main1 .contents {
     text-align: left;
+    padding-top: 150px;
   }
 }
 .main1 .contents h2 {
@@ -360,13 +360,18 @@ header .container .menu .menu_type p {
   font-weight: 200;
 }
 .main1 .contents p {
-  font-size: 18px;
+  font-size: 0.875em;
   line-height: 40px;
   font-weight: 200;
   letter-spacing: 2px;
 }
 .main1 .contents p span {
   color: #ffef5a;
+}
+@media screen and (min-width: 1024px) {
+  .main1 .contents p {
+    font-size: 1em;
+  }
 }
 
 footer {
