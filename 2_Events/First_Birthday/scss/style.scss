@@ -1,12 +1,21 @@
-$break-mobile: '320px';
-$break-tablet: '768px';
-$break-pc: '1024px';
+$break-mobile: "320px";
+$break-tablet: "768px";
+$break-pc: "1024px";
 
-$eng_title_font:'Lemon/Milk light', sans-serif;
-$common_font: 'SCoreDream';
+$eng_title_font: "Lemon/Milk light", sans-serif;
+$common_font: "SCoreDream";
 
-$base_color_light: '#fefdf0';
-$base_color_dark: '#442d13';
-$footer_color: '#ffef5a'
+$base_color_light: "#fefdf0";
+$base_color_dark: "#442d13";
+$footer_color: "#ffef5a";
 
-
+//main======================font
+//기준 16
+$em14px: 0.875em;
+$em18px: 1.125em;
+$em20px: 1.25em;
+$em22px: 1.375em;
+$em26px: 1.625em;
+$em28px: 1.75em;
+$em36px: 2.25em;
+$em68px: 3.75em;

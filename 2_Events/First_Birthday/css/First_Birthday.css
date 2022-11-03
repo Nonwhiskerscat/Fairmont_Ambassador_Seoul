@@ -19,11 +19,16 @@ header {
 }
 
 a {
+  display: block;
   color: #333333;
   text-decoration: none;
-  font-family: "SCoreDream";
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 100;
   font-size: 1em;
+}
+
+img {
+  display: block;
 }
 
 h1 {
@@ -58,13 +63,12 @@ li {
 
 .wrapper {
   width: 100%;
-  background-color: rgb(151, 168, 240);
 }
 
 .container {
+  position: relative;
   width: 89.7435897436%;
   margin: 0 auto;
-  position: relative;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -73,8 +77,24 @@ li {
 }
 
 .firstsection {
-  height: 100vh;
+  position: relative;
+  height: 844px;
   background: url(../img/First_Birthday/photo/s2-3.jpg) no-repeat center;
+  background-size: cover;
+}
+@media screen and (min-width: 1024px) {
+  .firstsection {
+    height: 970px;
+  }
+}
+.firstsection::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
 }
 .firstsection header {
   height: 55px;
@@ -107,9 +127,9 @@ li {
   }
 }
 .firstsection header .container .header_logo img {
+  position: absolute;
   width: 126px;
   height: auto;
-  position: absolute;
   margin-top: 15px;
 }
 @media screen and (min-width: 768px) {
@@ -125,8 +145,8 @@ li {
   }
 }
 .firstsection header .container .menu {
-  width: 70px;
   display: flex;
+  width: 70px;
   justify-content: space-between;
   color: white;
   margin-top: 20px;
@@ -144,19 +164,19 @@ li {
   }
 }
 .firstsection header .container .menu .menu_bar {
-  width: 33%;
   display: block;
+  position: relative;
+  width: 33%;
   width: 16px;
   height: 13px;
   cursor: pointer;
-  position: relative;
 }
 .firstsection header .container .menu .menu_bar span {
   display: block;
-  height: 0.5px;
-  width: 100%;
-  background: white;
   position: absolute;
+  width: 100%;
+  height: 0.5px;
+  background: white;
 }
 .firstsection header .container .menu .menu_bar span:nth-child(1) {
   top: 0;
@@ -165,16 +185,203 @@ li {
 .firstsection header .container .menu .menu_bar span:nth-child(2) {
   top: 50%;
   right: 0;
-  transform: translateY(50%);
   width: 80%;
+  transform: translateY(50%);
 }
 .firstsection header .container .menu .menu_bar span:nth-child(3) {
-  bottom: 0;
   right: 0;
+  bottom: 0;
 }
 .firstsection header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
+}
+.firstsection .banner-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.firstsection .banner-box h1 {
+  color: #ddddde;
+  font-size: 2.25em;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .firstsection .banner-box h1 {
+    font-size: 7.5em;
+  }
+}
+.firstsection .banner-box h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 30px;
+  height: 4px;
+  background: #ddddde;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+@media screen and (min-width: 1024px) {
+  .firstsection .banner-box h1::before {
+    top: -41px;
+    width: 144px;
+    height: 15px;
+  }
+}
+
+.s1-intro h2,
+.s3-balloon h2,
+.s4-preview h2,
+.s5-notice h2 {
+  font-size: 0;
+}
+
+main section.s1-intro {
+  margin-top: 165px;
+  margin-bottom: 270px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro {
+    margin-top: 270px;
+  }
+}
+main section.s1-intro .flex {
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro .flex {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.s1-intro .flex .s1-content {
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro .flex .s1-content {
+    text-align: left;
+  }
+}
+main section.s1-intro .flex .s1-content h3 {
+  font-size: 1.125em;
+  padding-bottom: 35px;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro .flex .s1-content h3 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 2.25em;
+    letter-spacing: 0;
+    margin-left: 8.58vw;
+  }
+}
+main section.s1-intro .flex .s1-content h3 strong {
+  position: relative;
+  top: 25px;
+  color: #333333;
+  font-size: 1.22em;
+  line-height: 28px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro .flex .s1-content h3 strong {
+    top: 0px;
+    font-size: 1em;
+    color: #ffb400;
+  }
+}
+main section.s1-intro .flex .s1-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 35px;
+  height: 3px;
+  background-color: #ffb400;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro .flex .s1-content::before {
+    display: none;
+  }
+}
+main section.s1-intro .flex .s1-img {
+  width: 350px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-intro .flex .s1-img {
+    width: 45.3125vw;
+    max-width: 770px;
+    min-width: 500px;
+    margin-left: 50px;
+  }
+}
+main section.s1-intro .flex .s1-img img {
+  width: 100%;
+}
+main section.s2-instruction h2 {
+  text-align: center;
+  font-size: 1.375em;
+  margin-bottom: 50px;
+}
+main section.s2-instruction ul.ins {
+  display: flex;
+}
+main section.s2-instruction ul.ins li {
+  width: 270px;
+  height: 425px;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
+}
+main section.s2-instruction ul.ins li .img-box {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+main section.s2-instruction ul.ins li .img-box img {
+  position: absolute;
+  left: 50%;
+  width: 140%;
+  transform: translateX(-50%);
+}
+main section.s2-instruction ul.ins li .s2-text-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 35px auto;
+}
+main section.s2-instruction ul.ins li .s2-text-box strong {
+  font-size: 1.125em;
+  position: relative;
+}
+main section.s2-instruction ul.ins li .s2-text-box strong::before {
+  content: "";
+  width: 35px;
+  height: 3px;
+  display: block;
+  background: #ffb400;
+}
+main section.s2-instruction ul.ins li .s2-text-box p {
+  margin-top: 25px;
+  font-size: 0.875em;
+  letter-spacing: -0.01em;
+  line-height: 20px;
 }
 
 footer {
@@ -218,8 +425,8 @@ footer .container .subscribe h4 {
 }
 @media screen and (min-width: 1024px) {
   footer .container .subscribe {
-    order: 2;
     width: 26.0416666667%;
+    order: 2;
   }
 }
 footer .container .subscribe .form_flex {
@@ -248,12 +455,12 @@ footer .container .subscribe form label {
 }
 footer .container .subscribe form input {
   display: block;
-  border: 0;
   width: 100%;
+  margin: 10px 0 15px;
+  border: 0;
   background-color: transparent;
   border-bottom: 1px solid white;
   padding-bottom: 3px;
-  margin: 10px 0 15px;
   color: white;
   font-family: "SCoreDream";
   font-weight: 200;
@@ -267,11 +474,11 @@ footer .container .subscribe form button {
   background-color: transparent;
   color: white;
   font-size: 1em;
-  font-family: "SCoreDream";
-  font-weight: 200;
   border: 0;
   cursor: pointer;
   text-align: right;
+  font-family: "SCoreDream";
+  font-weight: 200;
 }
 @media screen and (min-width: 1024px) {
   footer .container .subscribe form button {
@@ -279,15 +486,15 @@ footer .container .subscribe form button {
   }
 }
 footer .container .subscribe form button span {
-  margin-left: 10px;
   position: relative;
+  margin-left: 10px;
 }
 footer .container .subscribe form button span img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 20px;
   height: auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 footer .container .navigation {
   width: 220px;
@@ -307,8 +514,8 @@ footer .container .navigation h4 {
 }
 @media screen and (min-width: 1024px) {
   footer .container .navigation {
-    order: 3;
     width: 25.8333333333%;
+    order: 3;
   }
 }
 footer .container .navigation .flex_nav {
@@ -317,24 +524,24 @@ footer .container .navigation .flex_nav {
   flex-wrap: wrap;
 }
 footer .container .navigation .flex_nav li {
+  position: relative;
   width: 50%;
   margin-bottom: 5px;
   align-items: center;
-  position: relative;
 }
 footer .container .navigation .flex_nav li span {
   display: none;
   height: auto;
   margin-right: 10px;
 }
-footer .container .navigation .flex_nav li span img {
-  width: 15px;
-  height: auto;
-}
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li span {
     display: inline;
   }
+}
+footer .container .navigation .flex_nav li span img {
+  width: 15px;
+  height: auto;
 }
 footer .container .navigation .flex_nav li a {
   color: white;
@@ -348,9 +555,9 @@ footer .container .navigation .flex_nav li a {
 }
 footer .container .address {
   width: 100%;
+  margin: 0;
   order: 4;
   font-size: 0.75em;
-  margin: 0;
 }
 footer .container .address h4 {
   font-family: "Lemon/Milk light", sans-serif;

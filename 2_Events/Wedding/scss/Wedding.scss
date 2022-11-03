@@ -193,12 +193,29 @@
 .s5-notice h2 {
   font-size: 0;
 }
-// .flex {
-//   display: flex;
-// }
-
 // 🤢
 main {
+  div.wave-bg {
+    .style-box {
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 843px;
+      background-color: #ffa7b1;
+
+      @include responsive(pc-screens) {
+        top: 970px;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 1343px;
+
+      @include responsive(pc-screens) {
+        top: 1470px;
+      }
+    }
+  }
   section.card {
     .card-contain {
       position: relative;
@@ -206,11 +223,11 @@ main {
       height: 280px;
       margin: 0 auto;
       min-width: 350px;
-      max-width: 700px;
+      max-width: 580px;
 
       overflow: hidden;
       border-radius: 25px;
-      box-shadow: 0 5px 5px -3px rgba($color: #000000, $alpha: 0.3);
+      box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
       background-color: white;
       @include responsive(pc-screens) {
         height: 500px;
@@ -231,7 +248,8 @@ main {
 
       .card-content {
         margin-top: 55px;
-        margin-left: 10.7%;
+        margin-left: 30px;
+        // margin-left: 10.7%;
         @include responsive(pc-screens) {
           margin-top: 80px;
           margin-left: 60px;
@@ -285,62 +303,94 @@ main {
           top: 0;
           right: 0;
           width: 42%;
-
-          // max-width: 100px;
         }
       }
     }
   } //section.card
 
   section.s1-instruction {
-    margin-top: 370px;
+    margin-top: 120px;
+    @include responsive(pc-screens) {
+      margin-top: 300px;
+    }
+    & .flex {
+      width: 350px;
+      margin: 0 auto;
 
-    .flex {
       @include responsive(tablet-screens) {
-        display: flex;
+        width: 580px;
+      }
+      @include responsive(pc-screens) {
+        width: 880px;
       }
 
       .left-content {
         margin-bottom: 150px;
+
+        .ins-text {
+          @include responsive(tablet-screens) {
+            text-align: end;
+          }
+        }
+      }
+
+      .right-content {
+        @include responsive(tablet-screens) {
+          margin-left: auto;
+        }
       }
 
       .left-content,
       .right-content {
-        margin-left: auto;
-        margin-right: auto;
-
         .ins-img {
           width: 350px;
           height: 350px;
           border-radius: 25px;
           overflow: hidden;
-          box-shadow: 0 5px 5px -3px rgba($color: #000000, $alpha: 0.3);
+          box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
+          @include responsive(tablet-screens) {
+            width: 580px;
+          }
           @include responsive(pc-screens) {
-            width: 400px;
-            height: 400px;
+            width: 880px;
+            height: 350px;
           }
 
           img {
             position: relative;
             left: 50%;
             width: 200%;
+
             transform: translateX(-50%);
+
+            @include responsive(tablet-screens) {
+              width: 100%;
+            }
+
+            @include responsive(pc-screens) {
+              width: 100%;
+            }
           }
         }
 
         .ins-text {
           margin-top: 50px;
           h3 {
-            font-size: 1.375em;
+            font-size: 1.5em;
             font-weight: 700;
             color: #fb5c6e;
+            @include responsive(pc-screens) {
+              font-size: 2rem;
+            }
           }
 
           p {
             margin-top: 28px;
             font-size: 0.875em;
-            line-height: 1.125em;
-            word-spacing: -0.05em;
+            @include responsive(pc-screens) {
+              font-size: 1.125em;
+            }
+            letter-spacing: -0.05em;
           }
         }
       }
@@ -412,6 +462,7 @@ main {
       @include responsive(pc-screens) {
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
       }
@@ -454,6 +505,8 @@ main {
         @include responsive(pc-screens) {
           width: 45.3125vw;
           max-width: 770px;
+          min-width: 450px;
+          margin-left: 50px;
         }
 
         img {
@@ -473,6 +526,7 @@ main {
 
       @include responsive(pc-screens) {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
       }
@@ -484,6 +538,8 @@ main {
         @include responsive(pc-screens) {
           width: 45.3125vw;
           max-width: 770px;
+          min-width: 450px;
+          margin-right: 50px;
         }
 
         img {
@@ -534,6 +590,7 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
       }
 
@@ -578,6 +635,8 @@ main {
         @include responsive(pc-screens) {
           width: 45.3125vw;
           max-width: 770px;
+          min-width: 450px;
+          margin-left: 50px;
         }
 
         img {
@@ -589,32 +648,61 @@ main {
 
   section.s5-notice {
     margin-top: 120px;
+    padding: 55px 0;
+    background-color: #f7f7f7;
 
+    @include responsive(pc-screens) {
+    }
     & .flex {
       display: flex;
       flex-direction: column-reverse;
       width: 350px;
       margin: 0 auto;
 
+      @include responsive(pc-screens) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 880px;
+      }
+
       .notice-content {
         h3 {
+          margin-bottom: 22px;
           @include mb_section_title();
+          @include responsive(pc-screens) {
+            text-align: left;
+            font-size: 4em;
+          }
         }
 
         p {
-          text-align: left;
+          position: relative;
           font-weight: 400;
-          span {
+          font-size: 0.875em;
+          padding-left: 35px;
+
+          &:first-of-type {
+            margin-bottom: 5px;
+          }
+          &::before {
+            content: "+";
+            font-size: 1.625em;
             font-weight: 900;
             color: #fb5c6e;
-            font-size: 25px;
-            padding-right: 10px;
+            position: absolute;
+            top: -9px;
+            left: 15px;
           }
         }
 
         .notice-btn {
+          margin-top: 26px;
           a {
             @include mb_section_btn();
+            @include responsive(pc-screens) {
+              width: 174px;
+            }
           }
         }
       }
@@ -622,7 +710,14 @@ main {
       img {
         width: 180px;
         margin: 0 auto;
-        margin-bottom: 35px;
+        margin-bottom: 22px;
+        padding-left: 40px;
+
+        @include responsive(pc-screens) {
+          width: 290px;
+          margin: 0;
+          padding: 0;
+        }
       }
     }
   }

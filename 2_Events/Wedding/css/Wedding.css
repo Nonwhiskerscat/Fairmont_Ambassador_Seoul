@@ -240,16 +240,37 @@ li {
   font-size: 0;
 }
 
+main div.wave-bg .style-box {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 843px;
+  background-color: #ffa7b1;
+}
+@media screen and (min-width: 1024px) {
+  main div.wave-bg .style-box {
+    top: 970px;
+  }
+}
+main div.wave-bg svg {
+  position: absolute;
+  top: 1343px;
+}
+@media screen and (min-width: 1024px) {
+  main div.wave-bg svg {
+    top: 1470px;
+  }
+}
 main section.card .card-contain {
   position: relative;
   top: -40px;
   height: 280px;
   margin: 0 auto;
   min-width: 350px;
-  max-width: 700px;
+  max-width: 580px;
   overflow: hidden;
   border-radius: 25px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
   background-color: white;
 }
 @media screen and (min-width: 1024px) {
@@ -273,7 +294,7 @@ main section.card .card-contain i {
 }
 main section.card .card-contain .card-content {
   margin-top: 55px;
-  margin-left: 10.7%;
+  margin-left: 30px;
 }
 @media screen and (min-width: 1024px) {
   main section.card .card-contain .card-content {
@@ -330,20 +351,39 @@ main section.card .card-contain .card-img img {
   width: 42%;
 }
 main section.s1-instruction {
-  margin-top: 370px;
+  margin-top: 120px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-instruction {
+    margin-top: 300px;
+  }
+}
+main section.s1-instruction .flex {
+  width: 350px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   main section.s1-instruction .flex {
-    display: flex;
+    width: 580px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-instruction .flex {
+    width: 880px;
   }
 }
 main section.s1-instruction .flex .left-content {
   margin-bottom: 150px;
 }
-main section.s1-instruction .flex .left-content,
-main section.s1-instruction .flex .right-content {
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 768px) {
+  main section.s1-instruction .flex .left-content .ins-text {
+    text-align: end;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.s1-instruction .flex .right-content {
+    margin-left: auto;
+  }
 }
 main section.s1-instruction .flex .left-content .ins-img,
 main section.s1-instruction .flex .right-content .ins-img {
@@ -351,13 +391,19 @@ main section.s1-instruction .flex .right-content .ins-img {
   height: 350px;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
+}
+@media screen and (min-width: 768px) {
+  main section.s1-instruction .flex .left-content .ins-img,
+main section.s1-instruction .flex .right-content .ins-img {
+    width: 580px;
+  }
 }
 @media screen and (min-width: 1024px) {
   main section.s1-instruction .flex .left-content .ins-img,
 main section.s1-instruction .flex .right-content .ins-img {
-    width: 400px;
-    height: 400px;
+    width: 880px;
+    height: 350px;
   }
 }
 main section.s1-instruction .flex .left-content .ins-img img,
@@ -367,22 +413,45 @@ main section.s1-instruction .flex .right-content .ins-img img {
   width: 200%;
   transform: translateX(-50%);
 }
+@media screen and (min-width: 768px) {
+  main section.s1-instruction .flex .left-content .ins-img img,
+main section.s1-instruction .flex .right-content .ins-img img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-instruction .flex .left-content .ins-img img,
+main section.s1-instruction .flex .right-content .ins-img img {
+    width: 100%;
+  }
+}
 main section.s1-instruction .flex .left-content .ins-text,
 main section.s1-instruction .flex .right-content .ins-text {
   margin-top: 50px;
 }
 main section.s1-instruction .flex .left-content .ins-text h3,
 main section.s1-instruction .flex .right-content .ins-text h3 {
-  font-size: 1.375em;
+  font-size: 1.5em;
   font-weight: 700;
   color: #fb5c6e;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-instruction .flex .left-content .ins-text h3,
+main section.s1-instruction .flex .right-content .ins-text h3 {
+    font-size: 2rem;
+  }
 }
 main section.s1-instruction .flex .left-content .ins-text p,
 main section.s1-instruction .flex .right-content .ins-text p {
   margin-top: 28px;
   font-size: 0.875em;
-  line-height: 1.125em;
-  word-spacing: -0.05em;
+  letter-spacing: -0.05em;
+}
+@media screen and (min-width: 1024px) {
+  main section.s1-instruction .flex .left-content .ins-text p,
+main section.s1-instruction .flex .right-content .ins-text p {
+    font-size: 1.125em;
+  }
 }
 main section.intro {
   position: relative;
@@ -443,13 +512,14 @@ main section.s2-wedding .flex {
   main section.s2-wedding .flex {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
   }
 }
 main section.s2-wedding .flex .s2-content h3 {
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -461,7 +531,7 @@ main section.s2-wedding .flex .s2-content h3 {
 }
 main section.s2-wedding .flex .s2-content p {
   line-height: 18px;
-  word-spacing: -0.05em;
+  letter-spacing: -0.05em;
   margin-top: 22px;
   margin-bottom: 32px;
   font-size: 14px;
@@ -499,6 +569,8 @@ main section.s2-wedding .flex .s2-img {
   main section.s2-wedding .flex .s2-img {
     width: 45.3125vw;
     max-width: 770px;
+    min-width: 450px;
+    margin-left: 50px;
   }
 }
 main section.s2-wedding .flex .s2-img img {
@@ -514,6 +586,7 @@ main section.s3-flower .flex {
 @media screen and (min-width: 1024px) {
   main section.s3-flower .flex {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
   }
@@ -526,6 +599,8 @@ main section.s3-flower .flex .s3-img {
   main section.s3-flower .flex .s3-img {
     width: 45.3125vw;
     max-width: 770px;
+    min-width: 450px;
+    margin-right: 50px;
   }
 }
 main section.s3-flower .flex .s3-img img {
@@ -533,7 +608,7 @@ main section.s3-flower .flex .s3-img img {
 }
 main section.s3-flower .flex .s3-content h3 {
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -545,7 +620,7 @@ main section.s3-flower .flex .s3-content h3 {
 }
 main section.s3-flower .flex .s3-content p {
   line-height: 18px;
-  word-spacing: -0.05em;
+  letter-spacing: -0.05em;
   margin-top: 22px;
   margin-bottom: 32px;
   font-size: 14px;
@@ -589,12 +664,13 @@ main section.s4-various-venue .flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
   }
 }
 main section.s4-various-venue .flex .s4-content h3 {
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -606,7 +682,7 @@ main section.s4-various-venue .flex .s4-content h3 {
 }
 main section.s4-various-venue .flex .s4-content p {
   line-height: 18px;
-  word-spacing: -0.05em;
+  letter-spacing: -0.05em;
   margin-top: 22px;
   margin-bottom: 32px;
   font-size: 14px;
@@ -647,6 +723,8 @@ main section.s4-various-venue .flex .s4-img {
   main section.s4-various-venue .flex .s4-img {
     width: 45.3125vw;
     max-width: 770px;
+    min-width: 450px;
+    margin-left: 50px;
   }
 }
 main section.s4-various-venue .flex .s4-img img {
@@ -654,6 +732,8 @@ main section.s4-various-venue .flex .s4-img img {
 }
 main section.s5-notice {
   margin-top: 120px;
+  padding: 55px 0;
+  background-color: #f7f7f7;
 }
 main section.s5-notice .flex {
   display: flex;
@@ -661,21 +741,47 @@ main section.s5-notice .flex {
   width: 350px;
   margin: 0 auto;
 }
+@media screen and (min-width: 1024px) {
+  main section.s5-notice .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 880px;
+  }
+}
 main section.s5-notice .flex .notice-content h3 {
+  margin-bottom: 22px;
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   white-space: nowrap;
 }
-main section.s5-notice .flex .notice-content p {
-  text-align: left;
-  font-weight: 400;
+@media screen and (min-width: 1024px) {
+  main section.s5-notice .flex .notice-content h3 {
+    text-align: left;
+    font-size: 4em;
+  }
 }
-main section.s5-notice .flex .notice-content p span {
+main section.s5-notice .flex .notice-content p {
+  position: relative;
+  font-weight: 400;
+  font-size: 0.875em;
+  padding-left: 35px;
+}
+main section.s5-notice .flex .notice-content p:first-of-type {
+  margin-bottom: 5px;
+}
+main section.s5-notice .flex .notice-content p::before {
+  content: "+";
+  font-size: 1.625em;
   font-weight: 900;
   color: #fb5c6e;
-  font-size: 25px;
-  padding-right: 10px;
+  position: absolute;
+  top: -9px;
+  left: 15px;
+}
+main section.s5-notice .flex .notice-content .notice-btn {
+  margin-top: 26px;
 }
 main section.s5-notice .flex .notice-content .notice-btn a {
   width: 100%;
@@ -688,10 +794,23 @@ main section.s5-notice .flex .notice-content .notice-btn a {
   line-height: 54px;
   font-weight: 400;
 }
+@media screen and (min-width: 1024px) {
+  main section.s5-notice .flex .notice-content .notice-btn a {
+    width: 174px;
+  }
+}
 main section.s5-notice .flex img {
   width: 180px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
+  padding-left: 40px;
+}
+@media screen and (min-width: 1024px) {
+  main section.s5-notice .flex img {
+    width: 290px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 footer {
