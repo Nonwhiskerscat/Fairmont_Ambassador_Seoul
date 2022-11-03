@@ -4,14 +4,14 @@
 
 .wrapper {
   width: 100%;
-  background-color: rgb(151, 168, 240);
+  // background-color: rgb(151, 168, 240);
 }
 
 .container {
-  width: 89.74358974358974%;
-  margin: 0 auto;
   // background-color: rgb(255, 161, 161);
   position: relative;
+  width: 89.74358974358974%;
+  margin: 0 auto;
 
   @include responsive(tablet-screens) {
     width: 93.75%;
@@ -21,8 +21,24 @@
 
 //header
 .firstsection {
-  height: 100vh;
+  position: relative;
+  height: 844px;
   background: url(../img/First_Birthday/photo/s2-3.jpg) no-repeat center;
+  background-size: cover;
+  @include responsive(pc-screens) {
+    height: 970px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+  // 🥵이부분 복사로 사용
 
   header {
     height: 55px;
@@ -50,9 +66,9 @@
         }
 
         img {
+          position: absolute;
           width: 126px;
           height: auto;
-          position: absolute;
           margin-top: 15px;
 
           @include responsive(tablet-screens) {
@@ -67,8 +83,8 @@
         }
       }
       .menu {
-        width: 70px;
         display: flex;
+        width: 70px;
         justify-content: space-between;
         color: white;
         margin-top: 20px;
@@ -84,19 +100,19 @@
         }
 
         .menu_bar {
-          width: 33%;
           display: block;
+          position: relative;
+          width: 33%;
           width: 16px;
           height: 13px;
           cursor: pointer;
-          position: relative;
 
           span {
             display: block;
-            height: 0.5px;
-            width: 100%;
-            background: white;
             position: absolute;
+            width: 100%;
+            height: 0.5px;
+            background: white;
 
             &:nth-child(1) {
               top: 0;
@@ -106,13 +122,13 @@
             &:nth-child(2) {
               top: 50%;
               right: 0;
-              transform: translateY(50%);
               width: 80%;
+              transform: translateY(50%);
             }
 
             &:nth-child(3) {
-              bottom: 0;
               right: 0;
+              bottom: 0;
             }
           } //sapn
         } //menu_bar
@@ -126,8 +142,205 @@
       } //.menu
     }
   } // header
-}
 
+  .banner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      color: #ddddde;
+      font-size: 2.25em;
+      text-align: center;
+
+      @include responsive(pc-screens) {
+        font-size: 7.5em;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        width: 30px;
+        height: 4px;
+        background: #ddddde;
+        transform: translateX(-50%);
+        margin-bottom: 37px;
+
+        @include responsive(pc-screens) {
+          top: -41px;
+          width: 144px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+//===========main=====================================
+
+.s1-intro h2,
+.s3-balloon h2,
+.s4-preview h2,
+.s5-notice h2 {
+  font-size: 0;
+}
+main {
+  section.s1-intro {
+    margin-top: 165px;
+    margin-bottom: 270px;
+
+    @include responsive(pc-screens) {
+      margin-top: 270px;
+    }
+    & .flex {
+      display: flex;
+      width: 350px;
+      margin: 0 auto;
+      flex-direction: column-reverse;
+
+      @include responsive(pc-screens) {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .s1-content {
+        position: relative;
+        text-align: center;
+
+        @include responsive(pc-screens) {
+          text-align: left;
+        }
+
+        h3 {
+          font-size: $em18px;
+          padding-bottom: 35px;
+          white-space: nowrap;
+          color: rgba($color: #000000, $alpha: 0.6);
+
+          @include responsive(pc-screens) {
+            color: rgba($color: #000000, $alpha: 0.6);
+            font-size: $em36px;
+            letter-spacing: 0;
+            margin-left: 8.58vw;
+          }
+          strong {
+            position: relative;
+            top: 25px;
+            color: #333333;
+            font-size: 1.22em;
+            line-height: 28px;
+
+            @include responsive(pc-screens) {
+              top: 0px;
+              font-size: 1em;
+              color: #ffb400;
+            }
+          }
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          width: 35px;
+          height: 3px;
+          background-color: #ffb400;
+          transform: translate(-50%, -50%);
+
+          @include responsive(pc-screens) {
+            display: none;
+          }
+        }
+      } //.s1-conten
+
+      .s1-img {
+        width: 350px;
+        margin-bottom: 35px;
+
+        @include responsive(pc-screens) {
+          width: 45.3125vw;
+          max-width: 770px;
+          min-width: 500px;
+          margin-left: 50px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    } //.flex
+  } //section.s1-intro
+
+  section.s2-instruction {
+    h2 {
+      text-align: center;
+      font-size: $em22px;
+      margin-bottom: 50px;
+    }
+
+    ul.ins {
+      display: flex;
+      li {
+        width: 270px;
+        height: 425px;
+        border-radius: 50px;
+        box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
+
+        .img-box {
+          position: relative;
+          width: 100%;
+          height: 50%;
+          background: red;
+          border-radius: 50px 50px 0 0;
+          overflow: hidden;
+          margin-bottom: 25px;
+
+          img {
+            position: absolute;
+
+            left: 50%;
+            width: 140%;
+            transform: translateX(-50%);
+          }
+        }
+        .s2-text-box {
+          width: fit-content;
+          margin: 35px auto;
+
+          strong {
+            font-size: $em18px;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 35px;
+              height: 3px;
+              display: block;
+              background: #ffb400;
+              position: ;
+            }
+          }
+
+          p {
+            margin-top: 25px;
+            font-size: 0.875em;
+            letter-spacing: -0.01em;
+            line-height: 20px;
+          }
+        }
+      }
+    } //ul.ins
+  }
+} //main
+
+//===========footer=====================================
 footer {
   padding-top: 30px;
   background-color: #333333;
@@ -158,15 +371,15 @@ footer {
     }
 
     .subscribe {
-      @include footer_h4;
       position: relative;
 
       width: 100%;
       order: 3;
+      @include footer_h4;
 
       @include responsive(pc-screens) {
-        order: 2;
         width: 26.04166666666667%;
+        order: 2;
       }
 
       .form_flex {
@@ -194,12 +407,12 @@ footer {
 
         input {
           display: block;
-          border: 0;
           width: 100%;
+          margin: 10px 0 15px;
+          border: 0;
           background-color: transparent;
           border-bottom: 1px solid white;
           padding-bottom: 3px;
-          margin: 10px 0 15px;
           color: white;
           @include font_setting;
 
@@ -214,25 +427,25 @@ footer {
           background-color: transparent;
           color: white;
           font-size: 1em;
-          @include font_setting;
           border: 0;
           cursor: pointer;
           text-align: right;
+          @include font_setting;
 
           @include responsive(pc-screens) {
             width: 100%;
           }
 
           span {
-            margin-left: 10px;
             position: relative;
+            margin-left: 10px;
 
             img {
+              position: absolute;
+              right: 0;
+              bottom: 0;
               width: 20px;
               height: auto;
-              position: absolute;
-              bottom: 0;
-              right: 0;
             }
           }
         }
@@ -250,8 +463,8 @@ footer {
       }
 
       @include responsive(pc-screens) {
-        order: 3;
         width: 25.83333333333333%;
+        order: 3;
       }
 
       .flex_nav {
@@ -260,23 +473,23 @@ footer {
         flex-wrap: wrap;
 
         li {
+          position: relative;
           width: 50%;
           margin-bottom: 5px;
           align-items: center;
-          position: relative;
 
           span {
             display: none;
             height: auto;
             margin-right: 10px;
 
+            @include responsive(tablet-screens) {
+              display: inline;
+            }
+
             img {
               width: 15px;
               height: auto;
-            }
-
-            @include responsive(tablet-screens) {
-              display: inline;
             }
           }
 
@@ -294,12 +507,11 @@ footer {
     }
 
     .address {
-      @include footer_h4;
-
       width: 100%;
+      margin: 0;
       order: 4;
       font-size: 0.75em;
-      margin: 0;
+      @include footer_h4;
 
       @include responsive(pc-screens) {
         width: 24%;

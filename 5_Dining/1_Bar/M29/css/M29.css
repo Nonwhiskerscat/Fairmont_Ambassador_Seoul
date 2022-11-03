@@ -79,7 +79,8 @@ header .main-img {
 header .main-img img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .colormatte {
   position: absolute;
@@ -203,6 +204,17 @@ header .mouse {
   bottom: 20px;
   left: 50%;
 }
+@-webkit-keyframes move {
+  from {
+    bottom: 60px;
+  }
+  75% {
+    bottom: 30px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 @keyframes move {
   from {
     bottom: 60px;
@@ -306,8 +318,45 @@ header .mouse .mo_mouse img {
     width: 100%;
   }
 }
-.sec2 .sec2-box img {
+.sec2 .sec2-box div img {
   width: 100%;
+}
+.sec2 .sec2-box .hover-img {
+  position: relative;
+}
+.sec2 .sec2-box .hover-img p {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .sec2 .sec2-box .hover-img p {
+    font-size: 40px;
+    line-height: 70px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sec2 .sec2-box .hover-img p {
+    font-size: 40px;
+    line-height: 80px;
+  }
+}
+.sec2 .sec2-box .hover-img p strong {
+  font-family: "Lemon/Milk light", sans-serif;
+  letter-spacing: 2px;
+}
+.sec2 .sec2-box .hover-img p a {
+  color: #333333;
+}
+.sec2 .sec2-box .hover-img p a:hover {
+  text-decoration: underline 2px white;
+  color: white;
 }
 
 .sec3 .sec3-text {

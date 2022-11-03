@@ -17,14 +17,14 @@
 //===============s1~3=====================
 @mixin mb_section_title {
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   white-space: nowrap;
 }
 
 @mixin mb_section_text {
   line-height: 18px;
-  word-spacing: -0.05em;
+  letter-spacing: -0.05em;
   margin-top: 22px;
   margin-bottom: 32px;
   font-size: 14px;
