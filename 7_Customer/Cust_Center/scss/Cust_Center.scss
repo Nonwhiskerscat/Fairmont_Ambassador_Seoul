@@ -17,14 +17,15 @@
         width: 93.75%;
         // background-color: rgb(139, 168, 10);
     }
-
-    
 }
 
 //header
-.firstsection{
+section{
     height: 100vh;
-    background-color: black;
+    background: url(../img/Cust_Center/receptionists-gfdc910c80_1920.jpg );
+    background-size: cover;
+    position: relative;
+    z-index: 2;
     
     header {
         height: 55px;
@@ -72,10 +73,11 @@
                 width: 70px;
                 display: flex;
                 justify-content: space-between;
-                color: white;
+                color: #442d13;
                 margin-top: 20px;
                 align-items: center;
                 text-align: right;
+                z-index: 2;
 
                 @include responsive(tablet-screens){
                     margin-top: 27px;
@@ -98,7 +100,7 @@
                         display:block;
                         height:0.5px;
                         width:100%;
-                        background: white;
+                        background-color: #442d13;
                         position:absolute;
             
                         &:nth-child(1) {

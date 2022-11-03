@@ -10,43 +10,201 @@
     <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Shalimar' rel='stylesheet'>
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+    <link href="https://webfontworld.github.io/kopus/KoPubWorldDotum.css" rel="stylesheet">
+    <script src="./js/typing.js"></script>
 </head>
 <body>
     <div class="wrapper">
+        <div class="menu_modal">
+            <div class="container">
+                <div class="menu_header">
+                    <h1>Site Map</h1>
+                    <div class="menu_header_left">
+                        <div class="language">
+                            <label for="alan">Language</label>
+                            <select name="lang" id="alan">
+                                <option value="한국어" selected>한국어</option>
+                                <option value="영어">English</option>
+                                <option value="일본어">日本語</option>
+                                <option value="중국어">中文</option>
+                            </select>
+                        </div><!--language-->
+
+                        <div class="menu_sns">
+                            <ul>
+                                <li>SNS</li>
+                                <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                                <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                                <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                            </ul>
+                        </div><!--menu_sns-->
+                    </div><!--menu_header_left-->
+
+                    <div class="menu_header_right">
+                        <div class="menu_login">
+                            <a href="./9_Etc/Login/Login.html">
+                                <p>Login</p>
+                                <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                            </a>
+                        </div><!--menu_login-->
+
+                        <div class="menu_close">
+                            <span></span>
+                            <span></span>
+                            <p>Close</p>
+                        </div><!--menu_close-->
+                    </div><!--menu_header_right-->
+                </div><!--menu_header-->
+
+                <div class="menu_main">
+                    <div class="menu_main_left">
+                        <div class="img">
+                            <img src="./img/menu/Menu_logo.png" alt="메뉴로고">
+                        </div>
+                        <div class="contents">
+                            <p>호텔의 품격을 걸고 <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
+                            <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
+                                Fairmont Ambassador Hotel
+                            </p><!--cursive-->
+                        </div><!--contents-->
+                    </div><!--menu_main_left-->
+                    <div class="menu_main_right">
+                        <ul>
+                            <li>
+                                <ul>Room
+                                    <li>
+                                        <ul>객실
+                                            <li><a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
+                                            <li><a href="./1_Room/guestroom/fairmont_deluxe/fairmont_deluxe.html">페어몬트 디럭스</a></li>
+                                            <li><a href="./1_Room/guestroom/fairmont_gold/fairmont_gold.html">페어몬트 골드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>스위트 룸
+                                            <li><a href="./1_Room/suite/signiture/signiture.html">시그니처 스위트</a></li>
+                                            <li><a href="./1_Room/suite/premier/premier.html">프리미어 스위트</a></li>
+                                            <li><a href="./1_Room/suite/executive/executive.html">이그제큐티브 스위트</a></li>
+                                            <li><a href="./1_Room/suite/diplomatic/diplomatic.html">디플로매틱 스위트</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./1_Room/penthouse/penthouse.html">펜트하우스</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>Events
+                                    <li><a href="./2_Events/Wedding/Wedding.html">웨딩</a></li>
+                                    <li><a href="./2_Events/Party/Party.html">파티 & 연회</a></li>
+                                    <li><a href="./2_Events/First_Birthday/First_Birthday.html">돌잔치 & 가족모임</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul><a href="./3_Facilities/3_Facilities.html">Facilities</a>
+                                    <li><a href="./3_Facilities/1_Gold_Lounge/1_Gold_Lounge.html">페어몬트 골드 라운지</a></li>
+                                    <li><a href="./3_Facilities/2_Fit/2_Fit.html">페어몬트 피트</a></li>
+                                    <li onclick="alert('준비중입니다.')">페어몬트 스파(준비중)</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>Special Offer
+                                    <li><a href="./4_SpecialOffer/1_Ceremony/1_Ceromony.html">이벤트 서비스</a></li>
+                                    <li><a href="./4_SpecialOffer/2_Gourmet/2_Gourmet.html">푸드 서비스</a></li>
+                                    <li><a href="./4_SpecialOffer/3_Promotion/3_Promotion.html">VIP 프로모션</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul><a href="./5_Dining/5_Dining.html">Dining</a> 
+                                    <li>
+                                        <ul>바
+                                            <li><a href="./5_Dining/1_Bar/M29/M29.html">M29</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>레스토랑
+                                            <li><a href="./5_Dining/2_Restaurant/Mariposa/Mariposa.html">마리포사</a></li>
+                                            <li><a href="./5_Dining/2_Restaurant/Spectrum/Spectrum.html">스펙트럼</a></li>
+                                            <li><a href="./5_Dining/2_Restaurant/PrivateDining/PrivateDining.html">갤러리세븐</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>카페
+                                            <li><a href="./5_Dining/3_Cafe/AtriumLounge/AtriumLounge.html">더 아트리움 라운지</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul><a href="./6_About/6_About.html">About</a> 
+                                    <li><a href="./6_About/6_About.html">개요</a></li>
+                                    <li><a href="./6_About/6_About.html">게스트 서비스</a></li>
+                                    <li><a href="./6_About/6_About.html">오시는 길</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>Customer 
+                                    <li><a href="./7_Customer/Cust_Center/Cust_Center.html">고객센터</a></li>
+                                    <li><a href="./7_Customer/My_Page/My_page.html">마이페이지</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <ul>Reservation
+                                    <li><a href="./8_Reservation/8_Reservation.html">호텔룸 예약</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div><!--menu_main_right-->
+                </div><!--menu_main-->
+            </div><!--container-->
+        </div><!--menu_modal-->
+
+        <header>
+            <div class="colormatte">
+            </div><!--colormatte-->
+            <div class="container">
+                <div class="header_logo">
+                    <a href="#">
+                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
+                    </a>
+                </div><!--header_logo-->
+    
+                <div class="menu">
+                    <div class="menu_bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div><!--menu_bar-->
+
+                    <div class="menu_type">
+                        <p>MENU</p>
+                    </div><!--menu_type-->
+
+                </div><!--menu-->
+            </div><!--container-->
+        </header>
+
+
         <section class="section">
-            <header>
+            <div class="main0">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="./img/index/photo/Section_1.mp4" type="video/mp4" />
                         Your browser is not supported!
                     </video>
                 </div><!--bg-video-->
-                <div class="colormatte">
-                </div><!--colormatte-->
-                <div class="container">
-                    <div class="header_logo">
-                        <a href="#">
-                            <img src="./img/header/img/Header_logo.png" alt="헤더로고">
-                        </a>
-                    </div><!--header_logo-->
-        
-                    <div class="menu">
-                        <div class="menu_bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!--menu_bar-->
     
-                        <div class="menu_type">
-                            <p>MENU</p>
-                        </div><!--menu_type-->
-    
-                    </div><!--menu-->
-
+                <h2 id="type"></h2>
+                <h2 class="typing"></h2>
                     
-                </div><!--container-->
                 <div class="mouse">
                     <span class="pc_mouse">
                         <img src="./img/header/img/Header_mouse.png" alt="pc마우스">
@@ -56,17 +214,28 @@
                         <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
                         <p>Swipe me!</p>
                     </span>
-                </div>
-            </header>
+                </div><!--mouse-->
+            </div><!--main0-->
         </section>
+
         <section class="section">
             <div class="main1">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="./img/index/photo/Section_2.mp4" type="video/mp4" />
+                        Your browser is not supported!
+                    </video>
+                </div><!--bg-video-->
+
+                <div class="colormatte">
+                </div><!--colormatte-->
+
                 <div class="container">
                     <div class="contents">
-                        <h2>호텔<span>의</span> 품격</h2>
+                        <h2>Fairmont Ambasssador Seoul</h2>
                         <p>오랜 전통, 페어몬트 만의 섬세한 서비스가
                         <span>잊지 못할 순간들</span>을 만들어 드립니다.</p>
-                    </div>
+                    </div><!--contents-->
                 </div><!--contents-->
             </div><!--main1-->
         </section>
@@ -76,64 +245,79 @@
 
                 <div class="room_navi">
                     <ul>
-                        <li>Gusetroom</li>
-                        <li>Suite</li>
-                        <li>Penthouse</li>
+                        <li><span>Gusetroom</span></li>
+                        <li><span>Suite</span></li>
+                        <li><span>Penthouse</span></li>
                     </ul>
                 </div>
                 <div class="contents">
-                    <div class="container">
-                        <div class="slide" id="guestroom">
-                            <h2>guestroom</h2>
-                            <div class="room_info">
-                                <h3>guestroom</h3>
-                                <ul>
-                                    <li><a href="#">Fairmont</a></li>
-                                    <li><a href="#">Deluxe</a></li>
-                                    <li><a href="#">Gold</a></li>
-                                </ul>
-                                <p>
-                                    페어몬트룸은 저렴한 가격으로 비즈니스 고객 또는 여행객을  비롯한 폭 넓은 고객층이 만족할 수 있는 맞춤형 공간을 제공합니다.
-                                </p>
-                                <button>예약하러 가기</button>
-                            </div><!--room_info-->
-                        </div><!--slide-->
+                    <div class="room_flex">
+                        <div class="back_slide">
+                            <ul>
+                                <li><img src="./img/index/photo/Section_3_1.jpg" alt="룸1"></li>
+                                <li><img src="./img/index/photo/Section_3_2.jpg" alt="룸2"></li>
+                                <li><img src="./img/index/photo/Section_3_3.jpg" alt="룸3"></li>
+                            </ul>
+                        </div><!--back_slide-->
 
-                        <div class="slide" id="suiteroom">
-                            <h2>suiteroom</h2>
-                            <div class="room_info">
-                                <h3>suiteroom</h3>
-                                <ul>
-                                    <li><a href="#">Signiture</a></li>
-                                    <li><a href="#">Premier</a></li>
-                                    <li><a href="#">Executive</a></li>
-                                    <li><a href="#">Diplomatic</a></li>
-                                </ul>
-                                <p>
-                                    스위트룸은 넓은 거실과 쾌적한 침실, 엄선된 서비스, 그리고 여의도 한강의 파노라믹한 절경을 제공합니다.
-                                </p>
-                                <button>예약하러 가기</button>
-                            </div><!--room_info-->
-                        </div><!--slide-->
+                        <div class="content_slide">
+                            <div class="guestroom">
+                                <div class="container">
+                                    <h2>guestroom</h2>
+                                    <div class="room_info">
+                                        <h3>guestroom</h3>
+                                        <ul>
+                                            <li><a href="#">Fairmont</a></li>
+                                            <li><a href="#">Deluxe</a></li>
+                                            <li><a href="#">Gold</a></li>
+                                        </ul>
+                                        <p>
+                                            페어몬트룸은 저렴한 가격으로 비즈니스 고객 또는 여행객을  비롯한 폭 넓은 고객층이 만족할 수 있는 맞춤형 공간을 제공합니다.
+                                        </p>
+                                        <button>예약하러 가기</button>
+                                    </div><!--room_info-->
+                                </div><!--container-->
+                            </div><!--guestroom-->
 
-                        <div class="slide" id="penthouse">
-                            <h2>penthouse</h2>
-                            <div class="room_info">
-                                <h3>penthouse</h3>
-                                <p>
-                                    펜트하우스는 110평 가량의 넓은 면적과 고급스러운 가구, 우아한 인테리어,여의도 최고의 경치를 자랑합니다.
-                                </p>
-                                <button>예약하러 가기</button>
-                            </div><!--room_info-->
-                        </div><!--slide-->
-                    </div><!--container-->
+                            <div class="suiteroom">
+                                <div class="container">
+                                    <h2>suiteroom</h2>
+                                    <div class="room_info">
+                                        <h3>suiteroom</h3>
+                                        <ul>
+                                            <li><a href="#">Signiture</a></li>
+                                            <li><a href="#">Premier</a></li>
+                                            <li><a href="#">Executive</a></li>
+                                            <li><a href="#">Diplomatic</a></li>
+                                        </ul>
+                                        <p>
+                                            스위트룸은 넓은 거실과 쾌적한 침실, 엄선된 서비스, 그리고 여의도 한강의 파노라믹한 절경을 제공합니다.
+                                        </p>
+                                        <button>예약하러 가기</button>
+                                    </div><!--room_info-->
+                                </div><!--container-->
+                            </div><!--suite_room-->
+
+                            <div class="penthouse">
+                                <div class="container">
+                                    <h2>penthouse</h2>
+                                    <div class="room_info">
+                                        <h3>penthouse</h3>
+                                        <p>
+                                            펜트하우스는 110평 가량의 넓은 면적과 고급스러운 가구, 럭셔리한 인테리어, 여의도 최고의 경치를 자랑합니다.
+                                        </p>
+                                        <button>예약하러 가기</button>
+                                    </div><!--room_info-->
+                                </div><!--container-->
+                            </div><!--penthouse-->
+                        </div><!--content_slide-->       
+                    </div><!--room_flex-->    
                 </div><!--contents-->
             </div><!--main2-->
         </section>
 
         <section class="section">
             <div class="main3">
-
                 <div class="faci_navi">
                     <ul>
                         <li>Gold Lounge</li>

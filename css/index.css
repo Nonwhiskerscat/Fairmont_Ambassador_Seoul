@@ -65,30 +65,23 @@ li {
   }
 }
 
+.menu_modal {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vw;
+}
+
 header {
-  height: 100vh;
-}
-header .bg-video {
-  position: absolute;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-header .bg-video__content {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-header .colormatte {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.3;
+  right: 0;
+  z-index: 999;
 }
 header .container {
   display: flex;
@@ -110,7 +103,6 @@ header .container .header_logo {
 header .container .header_logo img {
   width: 126px;
   height: auto;
-  position: absolute;
   margin-top: 15px;
 }
 @media screen and (min-width: 768px) {
@@ -130,18 +122,18 @@ header .container .menu {
   display: flex;
   justify-content: space-between;
   color: white;
-  margin-top: 20px;
   align-items: center;
   text-align: right;
+  margin-top: 5px;
 }
 @media screen and (min-width: 768px) {
   header .container .menu {
-    margin-top: 27px;
+    width: 75px;
   }
 }
 @media screen and (min-width: 1024px) {
   header .container .menu {
-    margin-top: 35px;
+    width: 80px;
   }
 }
 header .container .menu .menu_bar {
@@ -158,29 +150,102 @@ header .container .menu .menu_bar span {
   width: 100%;
   background: white;
   position: absolute;
+  right: 0;
 }
 header .container .menu .menu_bar span:nth-child(1) {
   top: 0;
-  right: 0;
 }
 header .container .menu .menu_bar span:nth-child(2) {
   top: 50%;
-  right: 0;
   transform: translateY(50%);
   width: 80%;
 }
 header .container .menu .menu_bar span:nth-child(3) {
   bottom: 0;
-  right: 0;
 }
 header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
 }
-header .mouse {
+@media screen and (min-width: 768px) {
+  header .container .menu .menu_type p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .container .menu .menu_type p {
+    font-size: 1.2em;
+  }
+}
+
+.main0 {
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.main0 .bg-video {
   position: absolute;
-  bottom: 20px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.main0 .bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.main0 h2#type {
+  font-family: "KoPubWorldDotum";
+  font-weight: 300;
+  position: absolute;
+  text-align: center;
+  font-size: calc(2em + 1vw);
+  top: 45%;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1024px) {
+  .main0 h2#type {
+    font-size: 5em;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.main0 h2#type::after {
+  content: "|";
+  font-family: ScoreDream;
+  font-weight: 100;
+  animation: blink 0.5s step-end infinite;
+  color: #fff;
+}
+.main0 .colormatte {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+}
+.main0 .mouse {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
 }
 @keyframes move {
   from {
@@ -204,63 +269,82 @@ header .mouse {
     bottom: 30px;
   }
 }
-header .mouse img {
+.main0 .mouse img {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1024px) {
-  header .mouse img {
+  .main0 .mouse img {
     animation: move_pc 2s infinite;
   }
 }
-header .mouse p {
+.main0 .mouse p {
   transform: translateX(-50%);
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 1px;
   color: white;
 }
-header .mouse .pc_mouse {
+.main0 .mouse .pc_mouse {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  header .mouse .pc_mouse {
+  .main0 .mouse .pc_mouse {
     display: block;
   }
 }
-header .mouse .mo_mouse img {
+.main0 .mouse .mo_mouse img {
   opacity: 0.5;
 }
 @media screen and (min-width: 1024px) {
-  header .mouse .mo_mouse {
+  .main0 .mouse .mo_mouse {
     display: none;
   }
 }
 
 .main1 {
-  background: url(../img/index/photo/Section_2.jpg);
   background-size: cover;
   height: 100vh;
+  position: relative;
+}
+.main1 .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.main1 .bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .main1 .contents {
-  padding-top: 50px;
   text-align: center;
+  padding-top: 100px;
+}
+@media screen and (min-width: 1024px) {
+  .main1 .contents {
+    text-align: left;
+    padding-top: 150px;
+  }
 }
 .main1 .contents h2 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
 }
 @media screen and (min-width: 768px) {
   .main1 .contents h2 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
   .main1 .contents h2 {
-    font-size: 50px;
+    font-size: 36px;
   }
 }
 .main1 .contents h2:before {
@@ -270,18 +354,106 @@ header .mouse .mo_mouse img {
   border-bottom: 3px solid #ffef5a;
   margin: 5px auto;
 }
+@media screen and (min-width: 1024px) {
+  .main1 .contents h2:before {
+    width: 40px;
+    margin-left: 10px;
+  }
+}
 .main1 .contents h2:before span {
   font-size: 18px;
   font-weight: 200;
 }
 .main1 .contents p {
-  font-size: 18px;
+  font-size: 0.875em;
   line-height: 40px;
   font-weight: 200;
   letter-spacing: 2px;
 }
 .main1 .contents p span {
   color: #ffef5a;
+}
+@media screen and (min-width: 1024px) {
+  .main1 .contents p {
+    font-size: 1em;
+  }
+}
+
+.main2 {
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.main2 .room_navi {
+  z-index: 2;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main2 .room_navi ul {
+  display: flex;
+}
+.main2 .room_navi li {
+  width: 40px;
+  position: relative;
+  text-align: center;
+  font-size: 0.875em;
+  font-family: "Lemon/Milk light", sans-serif;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+.main2 .room_navi li::after {
+  content: "";
+  display: block;
+  border-bottom: #fff 2px solid;
+  opacity: 0.5;
+  margin-top: 2px;
+}
+.main2 .room_navi li span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.main2 .room_navi li:hover {
+  width: 150px;
+  transition: all 1s;
+}
+.main2 .room_navi li:hover::after {
+  opacity: 1;
+}
+.main2 .room_navi li:hover span {
+  opacity: 1;
+  transition: all 1s;
+}
+.main2 .contents .room_flex .back_slide {
+  width: 100%;
+  overflow: hidden;
+}
+.main2 .contents .room_flex .back_slide ul {
+  display: flex;
+  width: 300%;
+  height: 100vh;
+  z-index: -1;
+}
+.main2 .contents .room_flex .back_slide ul li {
+  width: 100%;
+  overflow: hidden;
+}
+.main2 .contents .room_flex .back_slide ul li img {
+  transform: translateX(-25%);
+}
+@media screen and (min-width: 768px) {
+  .main2 .contents .room_flex .back_slide ul li img {
+    transform: translateX(-15%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main2 .contents .room_flex .back_slide ul li img {
+    transform: translateX(0);
+  }
 }
 
 footer {
