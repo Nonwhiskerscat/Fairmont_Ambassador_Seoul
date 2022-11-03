@@ -388,10 +388,45 @@ header .container .menu .menu_type p {
   z-index: 2;
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main2 .room_navi ul {
   display: flex;
-  justify-content: space-between;
+}
+.main2 .room_navi li {
+  width: 40px;
+  position: relative;
+  text-align: center;
+  font-size: 0.875em;
+  font-family: "Lemon/Milk light", sans-serif;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+.main2 .room_navi li::after {
+  content: "";
+  display: block;
+  border-bottom: #fff 2px solid;
+  opacity: 0.5;
+  margin-top: 2px;
+}
+.main2 .room_navi li span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.main2 .room_navi li:hover {
+  width: 150px;
+  transition: all 1s;
+}
+.main2 .room_navi li:hover::after {
+  opacity: 1;
+}
+.main2 .room_navi li:hover span {
+  opacity: 1;
+  transition: all 1s;
 }
 .main2 .contents .room_flex .back_slide {
   width: 100%;

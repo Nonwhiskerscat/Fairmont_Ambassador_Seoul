@@ -368,10 +368,57 @@ header{
         z-index: 2;
         position: absolute;
         bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         
         ul {
             display: flex;
-            justify-content: space-between;
+        }
+
+        li {
+            width: 40px;
+            position: relative;
+            text-align: center;
+            font: {
+                size: 0.875em;
+                family: $eng_title_font;
+            }
+            letter-spacing: 1px;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                display: block;
+                border-bottom: #fff 2px solid;
+                opacity: 0.5;
+                margin-top: 2px;
+            }
+
+            span {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                
+            }
+
+            &:hover {
+                width: 150px;
+                
+                &::after {
+                    opacity: 1;
+                }
+                
+
+                span{
+                    opacity: 1;
+                    transition: all 1s;
+                }
+
+                transition: all 1s;
+            }
+
         }
 
     }
