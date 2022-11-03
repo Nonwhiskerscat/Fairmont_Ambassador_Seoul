@@ -48,6 +48,30 @@ header {
         opacity: 0.3;
     }
 
+    .main-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%);
+
+        h1 {
+            color: white;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                width: 30px;
+                height: 6px;
+                background: white;
+                transform: translateX(-50%);
+                margin-bottom: 37px;
+            }
+        }
+    }
+
     .container{
         display: flex;
         justify-content: space-between;
@@ -197,95 +221,174 @@ header {
     }
 } // header
 
-main {
+// main
     .sec1 {
 
-        .container {
+        .container {          
             @include responsive(pc-screens) {
-                display: flex;
-            }
-        }
-        
-        .flex-box {
-            background-color: #fcf6e1;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            padding: 30px;
-            
-            
-            
-        }
+                display: flex;              
+            }      
 
-        .flex-box1 {
-            display: flex;
-            justify-content: space-around;
+            .flex-box {
+                background-color: #fcf6e1;
+                padding: 30px;
 
-            .info {
-                font-family: $eng_title_font;
-            }
-    
-            ul li {
-                line-height: 50px;
-            }
-        }
-    
-        .detail {
-            margin-left: 50px;
-        }
-    
-        .menu-flex-box {
-            display: flex;
-            justify-content: space-around;
-
-            .menu,
-            .booknow {
-                width: 170px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-            }
-    
-            .menu {                
-                background-color: white;
-
-                a {
-                    font-family: $eng_title_font;
+                @include responsive(pc-screens) {
+                    width: 100%;
                 }
-                
-            }
+            
+                .flex-box1 {
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    .info {
+                        font-family: $eng_title_font;
+                        line-height: 50px;
+                    }
     
-            .booknow {                
-                background-color: #f1d06a;
+                    .detail {
+                        margin-left: 50px;
+                        line-height: 50px;
+                    }
+                }
+    
+                .menu-flex-box {
+                    display: flex;
+                    justify-content: space-around;
 
-                a {
-                    font-family: $eng_title_font;
-                }            
+                    .menu,
+                    .booknow {
+                        width: 170px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                    }
+    
+                    .menu {                
+                        background-color: white;
+
+                        a {
+                            font-family: $eng_title_font;
+                        }
+                        
+                    }
+    
+                    .booknow {                
+                        background-color: #f1d06a;
+
+                        a {
+                            font-family: $eng_title_font;
+                        }            
+                    }
+                }
             }
-        }
 
-        .m29_1 {
-            img {
+            .sec1-img img {
                 width: 100%;
+
+                @include responsive(pc-screens) {
+                    height: 100%;
+                }
             }
         }
     }
 
     .sec2 {
-        img {
-            width: 100%;
-            margin-bottom: 30px;
-        }
+        .sec2-box {
+            @include responsive(pc-screens) {
+                display: flex;
+                width: 100%;
+            }
 
+            div img {
+                width: 100%;
+            }
+            
+            .hover-img {
+                position: relative;                
+            }
+
+            .hover-img p {
+                color: #ffffff;
+                font-size: 30px; 
+                text-align: center;
+                line-height: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+
+                @include responsive (tablet-screens) {
+                    font-size: 40px;
+                    line-height: 70px;
+                }
+
+                @include responsive (pc-screens) {
+                    font-size: 40px;
+                    line-height: 80px;
+                }
+
+                strong {
+                    font-family: $eng_title_font;
+                    letter-spacing: 2px;                    
+                }
+
+                a {
+                    color: #333333;
+                }
+
+                a:hover {
+                    text-decoration: underline 2px white;
+                    color: white;
+
+                }
+            }
+        }
     }
 
     .sec3 {
-        img {
-            width: 100%;
+        .sec3-text {
+            text-align: center;
+
+            p {
+                font-size: 14px;
+
+                @include responsive(tablet-screens) {
+                    font-size: 20px;
+                }
+
+                @include responsive(pc-screens) {
+                    font-size: 26px;
+                }
+            }
+
+            .rooftop {
+                font-size: 48px;
+                font-family: $eng_title_font;
+
+                @include responsive(tablet-screens) {
+                    letter-spacing: 3px;
+                    font-size: 68px;
+                }
+                
+                @include responsive(pc-screens) {
+                    letter-spacing: 6px;
+                    font-size: 88px;
+                }
+            }
+        }
+
+        .sec3-img-box {
+            img {
+                width: 100%;
+            }
+            
+            @include responsive(pc-screens) {
+                display: flex;
+            }
         }
     }
-
-}
-
 
 footer {
     padding-top: 30px;

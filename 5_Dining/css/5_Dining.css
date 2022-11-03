@@ -56,7 +56,6 @@ li {
 .container {
   width: 89.7435897436%;
   margin: 0 auto;
-  background-color: rgb(255, 161, 161);
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -90,6 +89,27 @@ header .colormatte {
   width: 100%;
   background-color: black;
   opacity: 0.3;
+}
+header .main-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+header .main-text h1 {
+  color: white;
+}
+header .main-text h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 30px;
+  height: 6px;
+  background: white;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
 }
 header .container {
   display: flex;
@@ -234,8 +254,7 @@ header .mouse .mo_mouse img {
 }
 
 main section.maintext p {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 20px;
   line-height: 40px;
   letter-spacing: 1px;
   text-align: center;
@@ -244,12 +263,14 @@ main section.maintext p {
 }
 @media screen and (min-width: 768px) {
   main section.maintext p {
-    font-size: 20px;
+    font-size: 30px;
+    line-height: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
   main section.maintext p {
-    font-size: 24px;
+    font-size: 40px;
+    line-height: 60px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -257,57 +278,102 @@ main section.maintext p {
     display: flex;
   }
 }
-main section.mariposa img {
+main .flex-box .mariposa img,
+main .flex-box .spectrum img,
+main .flex-box .gallery img {
   width: 100%;
-  margin-bottom: 30px;
 }
-main section.spectrum img {
-  width: 100%;
-  margin-bottom: 30px;
-}
-main section.gallery img {
-  width: 100%;
-  margin-bottom: 100px;
-}
-main .mariposa,
-main .spectrum,
-main .gallery {
+main .flex-box .mariposa,
+main .flex-box .spectrum,
+main .flex-box .gallery {
   position: relative;
   width: 100%;
+  margin-bottom: 30px;
   transition: opacity 0.2s;
 }
-main .mariposa:hover .m-img,
-main .spectrum:hover .s-img,
-main .gallery:hover .g-img {
+main .flex-box .mariposa:hover .m-img,
+main .flex-box .spectrum:hover .s-img,
+main .flex-box .gallery:hover .g-img {
   background-color: rgb(0, 0, 0);
 }
-main .m-img,
-main .s-img,
-main .g-img {
+main .flex-box .m-img,
+main .flex-box .s-img,
+main .flex-box .g-img {
   opacity: 1;
   overflow: hidden;
   transition: all 0.3s ease;
 }
-main .mariposa:hover img,
-main .spectrum:hover img,
-main .gallery:hover img {
+main .flex-box .mariposa:hover img,
+main .flex-box .spectrum:hover img,
+main .flex-box .gallery:hover img {
   opacity: 0.2;
   transition: all 0.3s ease;
 }
-main .mariposa p,
-main .spectrum p,
-main .gallery p {
-  color: #ffffff;
+main .flex-box .mariposa .ex-text,
+main .flex-box .spectrum .ex-text,
+main .flex-box .gallery .ex-text {
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  main .flex-box .mariposa .ex-text,
+main .flex-box .spectrum .ex-text,
+main .flex-box .gallery .ex-text {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .flex-box .mariposa .ex-text,
+main .flex-box .spectrum .ex-text,
+main .flex-box .gallery .ex-text {
+    font-size: 20px;
+  }
+}
+main .flex-box .mariposa p,
+main .flex-box .spectrum p,
+main .flex-box .gallery p {
+  color: white;
   font-size: 30px;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.3s ease;
 }
-main .mariposa:hover p,
-main .spectrum:hover p,
-main .gallery:hover p {
+@media screen and (min-width: 768px) {
+  main .flex-box .mariposa p,
+main .flex-box .spectrum p,
+main .flex-box .gallery p {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .flex-box .mariposa p,
+main .flex-box .spectrum p,
+main .flex-box .gallery p {
+    font-size: 50px;
+  }
+}
+main .flex-box .mariposa:hover p,
+main .flex-box .spectrum:hover p,
+main .flex-box .gallery:hover p {
   opacity: 1;
   transition: all 0.3s ease;
+}
+main .flex-box .mariposa:hover p::before,
+main .flex-box .spectrum:hover p::before,
+main .flex-box .gallery:hover p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 5px;
+  background: rgb(255, 0, 0);
+  transform: translateX(-50%);
 }
 
 footer {
