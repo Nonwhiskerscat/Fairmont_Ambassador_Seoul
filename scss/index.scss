@@ -37,6 +37,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
 
     .container{
         display: flex;
@@ -146,23 +147,25 @@ header{
 
 //header
 .main0 {
-        // background-color: black;
-        
-        height: 100vh;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    
         .bg-video {
             @include video_matte;
             z-index: -1;
+            overflow: hidden;
         
             &__content {
             height: 100%;
             width: 100%;
-              object-fit: cover; // background-size: cover 와 비슷함. (HTML 요소 or 비디오와 작동)
+            object-fit: cover; 
             }
         }
 
         h2#type {
             font-family: 'KoPubWorldDotum';
-            font-weight: 100;
+            font-weight: 300;
             position: absolute;
             text-align: center;
             font-size: calc(2em + 1vw);
@@ -297,6 +300,7 @@ header{
 
     .contents{
         text-align: center;
+        padding-top: 100px;
 
         @include responsive(pc-screens) {
             text-align: left;
@@ -326,7 +330,7 @@ header{
 
                 @include responsive(pc-screens) {
                     width: 40px;
-                    margin-left: 20px;
+                    margin-left: 10px;
                 }
 
                 span {
@@ -354,6 +358,58 @@ header{
 }
  //main1
 
+.main2{
+
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .room_navi {
+        z-index: 2;
+        position: absolute;
+        bottom: 20px;
+        
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    .contents {
+        .room_flex{
+            .back_slide {
+                width: 100%;
+                overflow: hidden;
+    
+                ul {
+                    display: flex;
+                    width: 300%;
+                    height: 100vh;
+                    z-index: -1;
+    
+                    li{
+                        width: 100%;
+                        overflow: hidden;
+    
+                        img {
+                            transform: translateX(-25%);
+    
+                            @include responsive(tablet-screens) {
+                                transform: translateX(-15%);
+                            }
+    
+                            @include responsive(pc-screens) {
+                                transform: translateX(0);
+                            }
+                        }
+    
+                    }
+                }
+            }
+        }   
+    }
+}
 
 footer {
     padding-top: 30px;

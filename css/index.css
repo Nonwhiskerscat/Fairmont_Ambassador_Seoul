@@ -81,6 +81,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 header .container {
   display: flex;
@@ -178,7 +179,9 @@ header .container .menu .menu_type p {
 }
 
 .main0 {
+  background-size: cover;
   height: 100vh;
+  position: relative;
 }
 .main0 .bg-video {
   position: absolute;
@@ -187,6 +190,7 @@ header .container .menu .menu_type p {
   height: 100%;
   width: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 .main0 .bg-video__content {
   height: 100%;
@@ -195,7 +199,7 @@ header .container .menu .menu_type p {
 }
 .main0 h2#type {
   font-family: "KoPubWorldDotum";
-  font-weight: 100;
+  font-weight: 300;
   position: absolute;
   text-align: center;
   font-size: calc(2em + 1vw);
@@ -319,6 +323,7 @@ header .container .menu .menu_type p {
 }
 .main1 .contents {
   text-align: center;
+  padding-top: 100px;
 }
 @media screen and (min-width: 1024px) {
   .main1 .contents {
@@ -352,7 +357,7 @@ header .container .menu .menu_type p {
 @media screen and (min-width: 1024px) {
   .main1 .contents h2:before {
     width: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
 .main1 .contents h2:before span {
@@ -371,6 +376,48 @@ header .container .menu .menu_type p {
 @media screen and (min-width: 1024px) {
   .main1 .contents p {
     font-size: 1em;
+  }
+}
+
+.main2 {
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.main2 .room_navi {
+  z-index: 2;
+  position: absolute;
+  bottom: 20px;
+}
+.main2 .room_navi ul {
+  display: flex;
+  justify-content: space-between;
+}
+.main2 .contents .room_flex .back_slide {
+  width: 100%;
+  overflow: hidden;
+}
+.main2 .contents .room_flex .back_slide ul {
+  display: flex;
+  width: 300%;
+  height: 100vh;
+  z-index: -1;
+}
+.main2 .contents .room_flex .back_slide ul li {
+  width: 100%;
+  overflow: hidden;
+}
+.main2 .contents .room_flex .back_slide ul li img {
+  transform: translateX(-25%);
+}
+@media screen and (min-width: 768px) {
+  .main2 .contents .room_flex .back_slide ul li img {
+    transform: translateX(-15%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main2 .contents .room_flex .back_slide ul li img {
+    transform: translateX(0);
   }
 }
 
