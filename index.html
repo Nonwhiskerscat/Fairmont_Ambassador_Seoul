@@ -22,41 +22,44 @@
             <div class="container">
                 <div class="menu_header">
                     <h1>Site Map</h1>
-                    <div class="menu_header_left">
-                        <div class="language">
-                            <label for="alan">Language</label>
-                            <select name="lang" id="alan">
-                                <option value="한국어" selected>한국어</option>
-                                <option value="영어">English</option>
-                                <option value="일본어">日本語</option>
-                                <option value="중국어">中文</option>
-                            </select>
-                        </div><!--language-->
-
-                        <div class="menu_sns">
-                            <ul>
-                                <li>SNS</li>
-                                <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
-                                <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
-                                <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
-                            </ul>
-                        </div><!--menu_sns-->
-                    </div><!--menu_header_left-->
-
-                    <div class="menu_header_right">
-                        <div class="menu_login">
-                            <a href="./9_Etc/Login/Login.html">
-                                <p>Login</p>
-                                <img src="./img/menu/Menu_Profile.png" alt="프로필">
-                            </a>
-                        </div><!--menu_login-->
-
-                        <div class="menu_close">
-                            <span></span>
-                            <span></span>
-                            <p>Close</p>
-                        </div><!--menu_close-->
-                    </div><!--menu_header_right-->
+                    <div class="menu_header_flex">
+                        <div class="menu_header_left">
+                            <div class="language">
+                                <label for="alan">Language</label>
+                                <select name="lang" id="alan">
+                                    <option value="한국어" selected>한국어</option>
+                                    <option value="영어">English</option>
+                                    <option value="일본어">日本語</option>
+                                    <option value="중국어">中文</option>
+                                </select>
+                            </div><!--language-->
+    
+                            <div class="menu_sns">
+                                <ul>
+                                    <li>SNS</li>
+                                    <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                                    <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                                    <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                                </ul>
+                            </div><!--menu_sns-->
+                        </div><!--menu_header_left-->
+    
+                        <div class="menu_header_right">
+                            <div class="menu_login">
+                                <a href="./9_Etc/Login/Login.html">
+                                    <p>Login</p>
+                                    <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                                </a>
+                            </div><!--menu_login-->
+    
+                            <div class="menu_close">
+                                <span></span>
+                                <span></span>
+                                <p>Close</p>
+                            </div><!--menu_close-->
+                        </div><!--menu_header_right-->
+                    </div><!--menu_header_flex-->
+                    
                 </div><!--menu_header-->
 
                 <div class="menu_main">
@@ -368,7 +371,7 @@
                                             </div><!--faci_flex-->
     
                                             <p>
-                                            페어몬트 핏은 고객님들에 <span>충분한 휴식과 재충전의 시간</span>을 제공합니다.
+                                            페어몬트 핏은 고객님들에 <br><span>충분한 휴식</span>과 <span>재충전의 시간</span><br>을 제공합니다.
                                             </p>
                                             <button>자세히 보러가기</button>
                                         </div><!--facil_info-->
@@ -401,51 +404,67 @@
         <section class="section">
             <div class="main4">
 
-                <div class="serv_navi">
-                    <ul>
-                        <li>Event</li>
-                        <li>Dining</li>
-                        <li>Promotion</li>
-                    </ul>
-                </div>
-                <div class="contents">
-                    <div class="container">
-                        <div class="slide" id="event">
-                            <div class="event_sec">
-                                <h3>Event</h3>
-                                <p>
-                                    오직 페어몬트 앰배서더 서울,<br>
-                                    오직 고객님을 위해 준비한<br>
-                                    감동과 행복함이 공존하는 이벤트!
-                                </p>
-                            </div><!--event_sec-->
-                        </div><!--slide-->
+                <div class="serv_list">
+                    <div class="contents" id="event">
+                        <div class="sec event">
+                            <img class="back" src="./img/index/photo/Section_5_1.jpg" alt="이벤트">
+                            <div class="serv_con">
+                                <div class="title">
+                                    <p>Event</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
+                                </div><!--title-->
+                                <span>
+                                    <h3>Event</h3>
+                                    <p>
+                                        오직 페어몬트 앰배서더 서울,<br>
+                                        고객님을 위해 준비한<br>
+                                        감동과 행복함이 공존하는 이벤트!
+                                    </p>
+                                </span>
+                                
+                            </div><!--serv_con-->
+                        </div><!--event_sec-->
+                    </div><!--contents-->
 
-                        <div class="slide" id="dining">
-                            <div class="din_sec">
-                                <h3>Dining</h3>
-                                <p>
-                                    최고의 경치, 최적의 분위기<br>
-                                    최선의 서비스, 최상의 맛이 공존하는<br>
-                                    페어몬트 앰배서더의 DINING & BAR 
-                                </p>
-                            </div><!--dining_sec-->
-                        </div><!--slide-->
+                    <div class="contents" id="dining">
+                        <div class="sec din">
+                            <img class="back" src="./img/index/photo/Section_5_2.jpg" alt="다이닝">
+                            <div class="serv_con">
+                                <div class="title">
+                                    <p>Dining</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
+                                </div><!--title-->
+                                <span>
+                                    <h3>Dining</h3>
+                                    <p>
+                                        최고의 경치, 최적의 분위기<br>
+                                        최선의 서비스, 최상의 맛이 공존하는<br>
+                                        페어몬트 앰배서더의 DINING & BAR 
+                                    </p>
+                                </span>
+                            </div><!--serv_con-->                            
+                        </div><!--dining_sec-->
+                    </div><!--contents-->
 
-                        <div class="slide" id="promotion">
-                            <div class="prom_sec">
-                                <h3>Event</h3>
-                                <p>
-                                    평범한 호텔 루틴에<br>
-                                    특별함과 럭셔리함을 가미시켜 줄<br>
-                                    페이몬트 앰배서더의 프로모션!
-                                </p>
-                            </div><!--prom_sec-->
-                        </div><!--slide-->
+                    <div class="contents" id="promotion">
+                        <div class="sec prom">
+                            <img class="back" src="./img/index/photo/Section_5_3.jpg" alt="프로모션">
+                            <div class="serv_con">
+                                <div class="title">
+                                    <p>Promotion</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
+                                </div><!--title-->
+                                <span>
+                                    <h3>Promotion</h3>
+                                    <p>
+                                        평범한 호텔 루틴에<br>
+                                        특별함과 럭셔리함을 가미시켜 줄<br>
+                                        페이몬트 앰배서더의 프로모션!
+                                    </p>
+                                </span>
+                            </div>   
+                        </div><!--prom_sec-->
+                    </div><!--contents-->
 
-                    </div><!--container-->
-                </div><!--contents-->
-            </div><!--main3-->
+                </div><!--serv_list-->
+            </div><!--main4-->
         </section>
 
         <section class="section">
@@ -453,7 +472,7 @@
                 <div class="container">
                     <div class="footer_logo">
                         <a href="#">
-                            <img src="./img/footer/img/Footer_logo.png" alt="footer_logo">
+                            <img class="back" src="./img/footer/img/Footer_logo.png" alt="footer_logo">
                         </a>
                     </div><!--footer_logo-->
                     <div class="subscribe">
