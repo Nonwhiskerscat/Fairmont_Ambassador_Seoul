@@ -350,8 +350,14 @@ main .sec2 .sec2-box .hover-img p strong {
 main .sec2 .sec2-box .hover-img p a {
   color: #333333;
 }
+<<<<<<< HEAD
 main .sec2 .sec2-box .hover-img p a:hover {
   text-decoration: underline 2px white;
+=======
+.sec2 .sec2-box .hover-img p a:hover {
+  -webkit-text-decoration: underline 2px white;
+          text-decoration: underline 2px white;
+>>>>>>> 0bf2244cc4f91a3e3b088752fd99371a27afb415
   color: white;
 }
 main .sec3 .sec3-text {
