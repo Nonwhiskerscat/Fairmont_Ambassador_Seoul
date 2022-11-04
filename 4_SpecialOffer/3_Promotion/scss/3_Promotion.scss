@@ -136,8 +136,104 @@
 }
 
 main {
-    img {
-        width: 100%;
+    nav {
+        .gnb {
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            background-color: #f7f7f7;
+            // padding-top: 20px;
+            padding-bottom: 20px;
+            li {
+                padding-top: 20px;
+                a {
+                    color: #bdbdbd;
+                    &:hover {
+                        color: black;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        } // gnb
+    }
+
+    section {
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 70px;
+            margin-bottom: 85px;
+        }
+        h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        h4 {
+            font-size: 20px;
+        }
+        p{
+            font-size: 18px;
+            
+            .sub {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .m_title {
+        font-size: 28px;
+
+        @include responsive(pc-screens){
+            display: none;
+        }
+    }
+
+    .p_title {
+        display: none;
+
+        @include responsive(pc-screens){
+            display: block;
+        }
+    }
+
+    .context{
+        .text {
+            padding-top: 40px;
+            padding-bottom: 45px;
+        }
+    }
+
+    .photo {
+        img {
+            width: 100%;
+        }
+    }
+
+    .period {
+        display: flex;
+        margin-bottom: 25px;
+    }
+
+    .price {
+        display: flex;
+    }
+
+    .info {
+        h4{
+            margin-right: 25px;
+        }
+    }
+
+    button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+    .level {
+        display: flex;
     }
 }
 
