@@ -70,9 +70,13 @@ li {
   position: absolute;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 100vh;
+  background-color: #333333;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal {
+    height: 100vh;
+  }
 }
 .menu_modal .menu_header {
   width: 100%;
@@ -81,9 +85,9 @@ li {
   display: none;
   text-align: center;
   font-family: "Lemon/Milk light", sans-serif;
-  font-size: 60px;
+  font-size: 56px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .menu_modal .menu_header h1 {
     display: block;
   }
@@ -96,8 +100,231 @@ li {
   right: 0;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
-
+@media screen and (min-width: 768px) {
+  .menu_modal .menu_header .menu_header_flex {
+    margin-top: 22.5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex {
+    margin-top: 25px;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .not_for_m {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .not_for_m {
+    display: block;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left {
+  display: flex;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan {
+  order: 2;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan {
+    margin-right: calc(10px + 3vw);
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan label {
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan label {
+    order: 1;
+    display: inline;
+    font-size: 1.2em;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan select {
+  margin-left: 10px;
+  color: white;
+  font-family: "SCoreDream";
+  font-size: 0.75em;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  border-collapse: collapse;
+  outline: none;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan select {
+    display: inline;
+    font-size: 0.9em;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan option {
+  background-color: #333333;
+  border: 0;
+  opacity: 0.5;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_lan option:hover {
+  background-color: white;
+  color: #333333;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_sns {
+  width: 70px;
+  order: 1;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_left .menu_sns {
+    display: inline;
+    font-size: 1.2em;
+    order: 2;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_sns ul {
+  display: flex;
+  justify-content: space-between;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_left .menu_sns ul li {
+  margin-left: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_left .menu_sns ul li {
+    margin-left: 10px;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right {
+  display: flex;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login {
+    margin-right: calc(10px + 3vw);
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login a {
+  display: flex;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login a img {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login a img {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login a p {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 1em;
+  color: white;
+  letter-spacing: 1px;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close {
+  display: flex;
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+  display: inline;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal {
+    width: 22px;
+    height: 22px;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal span {
+    margin-left: 0;
+  }
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal span:first-child {
+  transform: rotate(135deg) translateX(0%);
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal span:nth-child(2) {
+  transform: rotate(45deg) translateX(0%);
+}
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close p {
+  margin-left: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_close p {
+    font-family: "Lemon/Milk light", sans-serif;
+    font-size: 1em;
+    color: white;
+    letter-spacing: 1px;
+  }
+}
+.menu_modal .menu_main {
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .menu_modal .menu_main {
+    padding-top: 67.5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_main {
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main {
+    flex-direction: row;
+  }
+}
+.menu_modal .menu_main .menu_main_left {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_left {
+    background-color: #ffef5a;
+    width: 30%;
+    padding: 0 3%;
+    flex-direction: column;
+  }
+}
+.menu_modal .menu_main .menu_main_left .img {
+  padding-right: 30px;
+}
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_left .img img.mm_logo {
+    display: none;
+  }
+}
+.menu_modal .menu_main .menu_main_left .img img.pm_logo {
+  display: none;
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_left .img img.pm_logo {
+    display: block;
+  }
+}
+.menu_modal .menu_main .menu_main_left .contents p {
+  font-family: "SCoreDream";
+  font-size: 0.875em;
+}
 header {
   display: none;
   width: 100%;

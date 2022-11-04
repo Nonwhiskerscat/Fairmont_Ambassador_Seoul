@@ -24,19 +24,19 @@
                     <h1>Site Map</h1>
                     <div class="menu_header_flex">
                         <div class="menu_header_left">
-                            <div class="language">
-                                <label for="alan">Language</label>
+                            <div class="menu_lan">
+                                <label for="alan" class="not_for_m">Lan</label>
                                 <select name="lang" id="alan">
-                                    <option value="한국어" selected>한국어</option>
-                                    <option value="영어">English</option>
+                                    <option value="한국어" selected>언어선택</option>
+                                    <option value="한국어">한국어</option>
+                                    <option value="영어">ENG</option>
                                     <option value="일본어">日本語</option>
                                     <option value="중국어">中文</option>
                                 </select>
                             </div><!--language-->
     
                             <div class="menu_sns">
-                                <ul>
-                                    <li>SNS</li>
+                                <ul><p class="not_for_m">SNS</p>
                                     <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
                                     <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
                                     <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
@@ -47,15 +47,17 @@
                         <div class="menu_header_right">
                             <div class="menu_login">
                                 <a href="./9_Etc/Login/Login.html">
-                                    <p>Login</p>
                                     <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                                    <p>Login</p>
                                 </a>
                             </div><!--menu_login-->
     
                             <div class="menu_close">
-                                <span></span>
-                                <span></span>
-                                <p>Close</p>
+                                <div class="close_modal" href="#">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="not_for_m">Close</p>
                             </div><!--menu_close-->
                         </div><!--menu_header_right-->
                     </div><!--menu_header_flex-->
@@ -65,7 +67,8 @@
                 <div class="menu_main">
                     <div class="menu_main_left">
                         <div class="img">
-                            <img src="./img/menu/Menu_logo.png" alt="메뉴로고">
+                            <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                            <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
                         </div>
                         <div class="contents">
                             <p>호텔의 품격을 걸고 <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
