@@ -209,6 +209,27 @@ main {
         }
     }
 
+    .p_photo {
+        img {
+            width: 100%;
+            display: none;
+
+            @include responsive(pc-screens){
+                display: block;
+            }
+        }
+    }
+
+    .m_photo {
+        img {
+            width: 100%;
+
+            @include responsive(pc-screens){
+                display: none;
+            }
+        }
+    }
+
     .period {
         display: flex;
         margin-bottom: 25px;
@@ -233,7 +254,13 @@ main {
     }
 
     .level {
-        display: flex;
+        
+        .premium,
+        .gold,
+        .black {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 

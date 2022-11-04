@@ -229,6 +229,23 @@ main .context .text {
 main .photo img {
   width: 100%;
 }
+main .p_photo img {
+  width: 100%;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main .p_photo img {
+    display: block;
+  }
+}
+main .m_photo img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .m_photo img {
+    display: none;
+  }
+}
 main .period {
   display: flex;
   margin-bottom: 25px;
@@ -246,8 +263,11 @@ main button {
   margin-top: 50px;
   margin-bottom: 60px;
 }
-main .level {
+main .level .premium,
+main .level .gold,
+main .level .black {
   display: flex;
+  justify-content: space-between;
 }
 
 footer {
