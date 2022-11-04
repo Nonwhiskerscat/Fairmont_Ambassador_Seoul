@@ -175,17 +175,6 @@ section header .mouse {
   bottom: 20px;
   left: 50%;
 }
-@-webkit-keyframes move {
-  from {
-    bottom: 60px;
-  }
-  75% {
-    bottom: 30px;
-  }
-  to {
-    bottom: 30px;
-  }
-}
 @keyframes move {
   from {
     bottom: 60px;

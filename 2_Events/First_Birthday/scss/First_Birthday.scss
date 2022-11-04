@@ -4,6 +4,7 @@
 
 .wrapper {
   width: 100%;
+  overflow: hidden;
   // background-color: rgb(151, 168, 240);
 }
 
@@ -22,12 +23,9 @@
 //header
 .firstsection {
   position: relative;
-  height: 844px;
+  height: 100vh;
   background: url(../img/First_Birthday/photo/s2-3.jpg) no-repeat center;
   background-size: cover;
-  @include responsive(pc-screens) {
-    height: 970px;
-  }
 
   &::before {
     content: "";
@@ -204,6 +202,7 @@ main {
       @include responsive(pc-screens) {
         display: flex;
         width: 100%;
+        max-width: 1550px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -266,8 +265,10 @@ main {
 
         @include responsive(pc-screens) {
           width: 45.3125vw;
-          max-width: 770px;
-          min-width: 500px;
+          height: 600px;
+          max-width: 700px;
+          min-width: 550px;
+          padding-top: 30px;
           margin-left: 50px;
         }
 
@@ -279,19 +280,59 @@ main {
   } //section.s1-intro
 
   section.s2-instruction {
+    position: relative;
+
+    .wave-bg {
+      position: absolute;
+      width: 100vw;
+      top: -150px;
+      left: -370px;
+      z-index: -100;
+    }
     h2 {
       text-align: center;
       font-size: $em22px;
       margin-bottom: 50px;
+
+      @include responsive(pc-screens) {
+        font-size: $em36px;
+        margin-bottom: 85px;
+        margin-left: 80px;
+      }
     }
 
     ul.ins {
       display: flex;
+      width: 100%;
+      flex-flow: row;
+      overflow: hidden;
+      justify-content: center;
+      padding-bottom: 15px;
+
       li {
+        background-color: #fff;
+        position: relative;
         width: 270px;
         height: 425px;
+        overflow: hidden;
+        margin-left: 20px;
+        flex-shrink: 0;
         border-radius: 50px;
         box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
+
+        @include responsive(pc-screens) {
+          width: 310px;
+          height: 480px;
+          margin-left: 80px;
+        }
+
+        &:last-of-type {
+          margin-right: 20px;
+
+          @include responsive(pc-screens) {
+            margin-left: 80px;
+          }
+        }
 
         .img-box {
           position: relative;
@@ -301,10 +342,11 @@ main {
           border-radius: 50px 50px 0 0;
           overflow: hidden;
           margin-bottom: 25px;
-
+          @include responsive(pc-screens) {
+            margin-bottom: 35px;
+          }
           img {
             position: absolute;
-
             left: 50%;
             width: 140%;
             transform: translateX(-50%);
@@ -315,29 +357,387 @@ main {
           margin: 35px auto;
 
           strong {
-            font-size: $em18px;
             position: relative;
+            font-size: $em18px;
+
+            @include responsive(pc-screens) {
+              font-size: $em20px;
+            }
 
             &::before {
               content: "";
+              display: block;
+              position: absolute;
+              top: 27px;
               width: 35px;
               height: 3px;
-              display: block;
               background: #ffb400;
-              position: ;
+
+              @include responsive(pc-screens) {
+                top: 30px;
+              }
             }
           }
 
           p {
             margin-top: 25px;
-            font-size: 0.875em;
+            font-size: $em14px;
             letter-spacing: -0.01em;
             line-height: 20px;
+
+            @include responsive(pc-screens) {
+              font-size: 1em;
+              line-height: 24px;
+              margin-top: 30px;
+            }
           }
         }
+      } //li
+
+      //이벤트 😑
+      li.s2-act::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.3;
       }
     } //ul.ins
   }
+  section.s3-balloon {
+    margin-top: 110px;
+    margin-bottom: 240px;
+
+    @include responsive(tablet-screens) {
+      max-width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include responsive(pc-screens) {
+      max-width: 1880px;
+      min-width: 1180px;
+      margin-top: 160px;
+      margin-left: 8.58vw;
+      // padding-top: 500px;
+    }
+
+    & .flex {
+      width: 350px;
+      margin: 0 auto;
+
+      @include responsive(pc-screens) {
+        width: 100%;
+        margin: 0;
+      }
+      .s3-content {
+        padding-top: 310px;
+
+        @include responsive(pc-screens) {
+          padding-top: 370px;
+        }
+        h3 {
+          font-size: $em20px;
+          line-height: 26px;
+          letter-spacing: 0.01em;
+          @include responsive(pc-screens) {
+            font-size: $em36px;
+            line-height: 46px;
+          }
+        }
+
+        p {
+          margin: 30px 0;
+          line-height: 24px;
+          letter-spacing: 0.01em;
+          font-size: $em14px;
+
+          @include responsive(pc-screens) {
+            font-size: $em18px;
+            line-height: 26px;
+          }
+        }
+
+        .s3-btns {
+          display: flex;
+
+          a {
+            width: 172px;
+            height: 54px;
+            text-align: center;
+            color: #ffb400;
+            border: #ffb400 solid 1px;
+            border-radius: 5px;
+            background-color: #fff;
+            line-height: 50px;
+            font-weight: 400;
+
+            &:first-of-type {
+              margin-right: 8px;
+            }
+          }
+        }
+
+        .s3-img {
+          position: absolute;
+          top: 0; //
+          right: -5.12820512820513%;
+          z-index: -1;
+          width: 300px;
+
+          @include responsive(pc-screens) {
+            width: 500px;
+          }
+
+          img {
+            width: 100%;
+            opacity: 0.4;
+
+            @include responsive(pc-screens) {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    } //flex
+  } //section.s3-balloon
+
+  section.s4-preview {
+    position: relative;
+
+    .bg-line {
+      width: 100%;
+      height: 135px;
+      background-color: #ffc63b;
+      position: absolute;
+      bottom: 0;
+
+      @include responsive(tablet-screens) {
+        height: 170px;
+      }
+      @include responsive(pc-screens) {
+        height: 280px;
+        bottom: 70px;
+      }
+    }
+
+    .flex {
+      display: flex;
+      width: 350px;
+      margin: 0 auto;
+
+      @include responsive(tablet-screens) {
+        width: 100%;
+      }
+
+      .left-content {
+        .img-box {
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          border: #fff solid 20px;
+          border-radius: 50%;
+          box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
+          z-index: -3;
+
+          @include responsive(tablet-screens) {
+            width: 400px;
+            height: 400px;
+            border-width: 22px;
+          }
+          @include responsive(pc-screens) {
+            width: 650px;
+            height: 650px;
+            border-width: 24px;
+          }
+
+          img {
+            width: 150%;
+            // object-fit: contain;
+          }
+        }
+      } //.left-content
+
+      .right-content {
+        position: relative;
+        @include responsive(tablet-screens) {
+          margin-left: 70px;
+        }
+        @include responsive(pc-screens) {
+          margin-left: 15vw;
+        }
+
+        h3 {
+          position: absolute;
+          left: -300px;
+          top: -30px;
+          font-weight: 600;
+          font-size: $em26px;
+          z-index: 2;
+
+          @include responsive(tablet-screens) {
+            left: 0;
+            padding-top: 180px;
+            padding-left: 85px;
+            margin-left: 10px;
+            font-size: $em36px;
+          }
+
+          @include responsive(pc-screens) {
+            padding-left: 0;
+            font-size: 3rem;
+            padding-top: 360px;
+            width: 100%;
+            text-align: center;
+            margin-left: 25px;
+          }
+        }
+
+        .img-list {
+          position: absolute;
+          z-index: 1;
+          bottom: 0;
+
+          @include responsive(tablet-screens) {
+            display: flex;
+            bottom: 25px;
+            width: 330px;
+            overflow: hidden;
+            padding-bottom: 10px;
+
+            //스크롤 이벤트 만들려고 hidden해놓음
+          }
+          @include responsive(pc-screens) {
+            bottom: 120px;
+            width: 100%;
+            overflow: visible;
+          }
+
+          li {
+            flex-shrink: 0;
+            position: absolute;
+            bottom: -10px;
+            left: -70px;
+            width: 100px;
+            height: 100px;
+            border: #fff solid 5px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
+
+            @include responsive(tablet-screens) {
+              position: relative;
+              left: 0px;
+              bottom: 0px;
+              margin-left: 10px;
+            }
+            @include responsive(pc-screens) {
+              margin-left: 20px;
+            }
+
+            // &:not(&:first-of-type){
+            //   display: none;
+            // }
+
+            img {
+              position: relative;
+              left: -40%;
+              width: 160%;
+            }
+          }
+        }
+      } //.right-content
+    } //flex
+  } //.sction.s4-preview
+
+  section.s5-notice {
+    margin-top: 250px;
+    padding: 55px 0;
+    background-color: #f7f7f7;
+
+    @include responsive(pc-screens) {
+    }
+    & .flex {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 350px;
+      margin: 0 auto;
+
+      @include responsive(pc-screens) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 880px;
+      }
+
+      .notice-content {
+        h3 {
+          margin-bottom: 22px;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 700;
+          white-space: nowrap;
+          @include responsive(pc-screens) {
+            text-align: left;
+            font-size: 4em;
+          }
+        }
+
+        p {
+          position: relative;
+          font-weight: 400;
+          font-size: 0.875em;
+          padding-left: 35px;
+
+          &:first-of-type {
+            margin-bottom: 5px;
+          }
+          &::before {
+            content: "+";
+            font-size: 1.625em;
+            font-weight: 900;
+            color: #ffb400;
+            position: absolute;
+            top: -7.8px;
+            left: 15px;
+          }
+        }
+
+        .notice-btn {
+          margin-top: 26px;
+          a {
+            width: 100%;
+            height: 54px;
+            text-align: center;
+            color: #ffb400;
+            border: #ffb400 solid 1px;
+            border-radius: 5px;
+            background-color: #fff;
+            line-height: 50px;
+            font-weight: 400;
+            @include responsive(pc-screens) {
+              width: 174px;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 180px;
+        margin: 0 auto;
+        margin-bottom: 22px;
+        padding-left: 40px;
+
+        @include responsive(pc-screens) {
+          width: 290px;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  } //section.s5-notice
 } //main
 
 //===========footer=====================================
