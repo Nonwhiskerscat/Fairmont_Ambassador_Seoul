@@ -243,76 +243,84 @@ header .mouse .mo_mouse img {
 }
 
 @media screen and (min-width: 1024px) {
-  .sec1 .container {
+  main .sec1 .container {
     display: flex;
   }
 }
-.sec1 .container .flex-box {
+main .sec1 .container .flex-box {
   background-color: #fcf6e1;
   padding: 30px;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .sec1 .container .flex-box {
-    width: 100%;
+  main .sec1 .container .flex-box {
+    width: 50%;
   }
 }
-.sec1 .container .flex-box .flex-box1 {
+main .sec1 .container .flex-box .flex-box1 {
   display: flex;
   justify-content: space-around;
 }
-.sec1 .container .flex-box .flex-box1 .info {
+main .sec1 .container .flex-box .flex-box1 .info {
   font-family: "Lemon/Milk light", sans-serif;
   line-height: 50px;
 }
-.sec1 .container .flex-box .flex-box1 .detail {
+main .sec1 .container .flex-box .flex-box1 .detail {
   margin-left: 50px;
   line-height: 50px;
 }
-.sec1 .container .flex-box .menu-flex-box {
+main .sec1 .container .flex-box .menu-flex-box {
   display: flex;
   justify-content: space-around;
 }
-.sec1 .container .flex-box .menu-flex-box .menu,
-.sec1 .container .flex-box .menu-flex-box .booknow {
+main .sec1 .container .flex-box .menu-flex-box .menu,
+main .sec1 .container .flex-box .menu-flex-box .booknow {
   width: 170px;
   height: 50px;
   line-height: 50px;
   text-align: center;
 }
-.sec1 .container .flex-box .menu-flex-box .menu {
+main .sec1 .container .flex-box .menu-flex-box .menu {
   background-color: white;
 }
-.sec1 .container .flex-box .menu-flex-box .menu a {
+main .sec1 .container .flex-box .menu-flex-box .menu a {
   font-family: "Lemon/Milk light", sans-serif;
 }
-.sec1 .container .flex-box .menu-flex-box .booknow {
+main .sec1 .container .flex-box .menu-flex-box .booknow {
   background-color: #f1d06a;
 }
-.sec1 .container .flex-box .menu-flex-box .booknow a {
+main .sec1 .container .flex-box .menu-flex-box .booknow a {
   font-family: "Lemon/Milk light", sans-serif;
 }
-.sec1 .container .sec1-img img {
+main .sec1 .container .sec-img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .sec1 .container .sec1-img img {
-    height: 100%;
+  main .sec1 .container .sec-img {
+    width: 50%;
   }
 }
-
+main .sec1 .container .sec1-img img {
+  width: 100%;
+}
 @media screen and (min-width: 1024px) {
-  .sec2 .sec2-box {
+  main .sec1 .container .sec1-img img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .sec2 .sec2-box {
     display: flex;
     width: 100%;
   }
 }
-.sec2 .sec2-box div img {
+main .sec2 .sec2-box div img {
   width: 100%;
 }
-.sec2 .sec2-box .hover-img {
+main .sec2 .sec2-box .hover-img {
   position: relative;
 }
-.sec2 .sec2-box .hover-img p {
+main .sec2 .sec2-box .hover-img p {
   color: #ffffff;
   font-size: 30px;
   text-align: center;
@@ -324,66 +332,65 @@ header .mouse .mo_mouse img {
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 768px) {
-  .sec2 .sec2-box .hover-img p {
+  main .sec2 .sec2-box .hover-img p {
     font-size: 40px;
     line-height: 70px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .sec2 .sec2-box .hover-img p {
+  main .sec2 .sec2-box .hover-img p {
     font-size: 40px;
     line-height: 80px;
   }
 }
-.sec2 .sec2-box .hover-img p strong {
+main .sec2 .sec2-box .hover-img p strong {
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 2px;
 }
-.sec2 .sec2-box .hover-img p a {
+main .sec2 .sec2-box .hover-img p a {
   color: #333333;
 }
-.sec2 .sec2-box .hover-img p a:hover {
+main .sec2 .sec2-box .hover-img p a:hover {
   text-decoration: underline 2px white;
   color: white;
 }
-
-.sec3 .sec3-text {
+main .sec3 .sec3-text {
   text-align: center;
 }
-.sec3 .sec3-text p {
+main .sec3 .sec3-text p {
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
-  .sec3 .sec3-text p {
+  main .sec3 .sec3-text p {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .sec3 .sec3-text p {
+  main .sec3 .sec3-text p {
     font-size: 26px;
   }
 }
-.sec3 .sec3-text .rooftop {
+main .sec3 .sec3-text .rooftop {
   font-size: 48px;
   font-family: "Lemon/Milk light", sans-serif;
 }
 @media screen and (min-width: 768px) {
-  .sec3 .sec3-text .rooftop {
+  main .sec3 .sec3-text .rooftop {
     letter-spacing: 3px;
     font-size: 68px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .sec3 .sec3-text .rooftop {
+  main .sec3 .sec3-text .rooftop {
     letter-spacing: 6px;
     font-size: 88px;
   }
 }
-.sec3 .sec3-img-box img {
+main .sec3 .sec3-img-box img {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .sec3 .sec3-img-box {
+  main .sec3 .sec3-img-box {
     display: flex;
   }
 }

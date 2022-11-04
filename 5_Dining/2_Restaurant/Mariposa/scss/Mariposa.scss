@@ -375,10 +375,14 @@ header {
 
     .sec5-text {
         text-align: center;
+        line-height: 30px;
+        // letter-spacing: 1px;
 
         @include responsive (pc-screens) {
             width: 50%;
-            font-size: 40px;
+            font-size: 30px;
+            line-height: 40px;
+            // letter-spacing: 2px;
         }        
     }
 

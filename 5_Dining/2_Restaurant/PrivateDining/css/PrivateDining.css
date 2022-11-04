@@ -245,6 +245,7 @@ header .mouse .mo_mouse img {
 @media screen and (min-width: 1024px) {
   .sec1 .sec1-flex-box {
     display: flex;
+    width: 100%;
   }
 }
 .sec1 .sec1-flex-box ul {
@@ -252,7 +253,7 @@ header .mouse .mo_mouse img {
 }
 @media screen and (min-width: 1024px) {
   .sec1 .sec1-flex-box ul {
-    width: 100%;
+    width: 50%;
   }
 }
 .sec1 .sec1-flex-box .li-flex-box {
@@ -262,12 +263,41 @@ header .mouse .mo_mouse img {
 .sec1 .sec1-flex-box .li-flex-box div {
   font-family: "Lemon/Milk light", sans-serif;
 }
-.sec1 .sec1-flex-box img {
+.sec1 .hover1 img {
   width: 100%;
 }
+.sec1 .hover1 {
+  width: 100%;
+  position: relative;
+}
 @media screen and (min-width: 1024px) {
-  .sec1 .sec1-flex-box img {
+  .sec1 .hover1 {
     width: 50%;
+  }
+}
+.sec1 .hover1 p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lemon/Milk light", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .sec1 .hover1 p {
+    font-size: 70px;
+    letter-spacing: 4px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sec1 .hover1 p {
+    font-size: 100px;
+    letter-spacing: 6px;
   }
 }
 
@@ -275,6 +305,7 @@ header .mouse .mo_mouse img {
   .sec2 .sec2-flex-box {
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
   }
 }
 .sec2 .sec2-flex-box .notice {
@@ -285,18 +316,47 @@ header .mouse .mo_mouse img {
 }
 @media screen and (min-width: 1024px) {
   .sec2 .sec2-flex-box ul {
-    width: 100%;
+    width: 50%;
   }
 }
 .sec2 .sec2-flex-box li {
   list-style: inside;
 }
-.sec2 .sec2-flex-box img {
+.sec2 .hover2 img {
   width: 100%;
 }
+.sec2 .hover2 {
+  width: 100%;
+  position: relative;
+}
 @media screen and (min-width: 1024px) {
-  .sec2 .sec2-flex-box img {
+  .sec2 .hover2 {
     width: 50%;
+  }
+}
+.sec2 .hover2 p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lemon/Milk light", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .sec2 .hover2 p {
+    font-size: 70px;
+    letter-spacing: 4px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sec2 .hover2 p {
+    font-size: 100px;
+    letter-spacing: 6px;
   }
 }
 
@@ -310,18 +370,85 @@ header .mouse .mo_mouse img {
   height: 50px;
   line-height: 50px;
   text-align: center;
-}
-.sec3 .sec3-flex-box .menu {
   border: #bdbdbd solid 1px;
 }
-.sec3 .sec3-flex-box .menu a {
+.sec3 .sec3-flex-box .menu button,
+.sec3 .sec3-flex-box .booknow button {
   font-family: "Lemon/Milk light", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background: none;
+  border: none;
 }
-.sec3 .sec3-flex-box .booknow {
-  border: #bdbdbd solid 1px;
+.sec3 .sec3-flex-box .menu button:hover,
+.sec3 .sec3-flex-box .booknow button:hover {
+  line-height: 0;
+  width: 170px;
+  height: 50px;
+  background-color: #bdbdbd;
 }
-.sec3 .sec3-flex-box .booknow a {
+
+.sec4 .sec4-flex-box {
+  padding: 20px;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1024px) {
+  .sec4 .sec4-flex-box {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sec5 .sec5-flex-box {
+    display: flex;
+  }
+}
+.sec5 .sec5-flex-box img {
+  width: 100%;
+}
+.sec5 .hover-img1,
+.sec5 .hover-img2,
+.sec5 .hover-img3,
+.sec5 .hover-img4 {
+  position: relative;
+}
+.sec5 .hover-img1 p,
+.sec5 .hover-img2 p,
+.sec5 .hover-img3 p,
+.sec5 .hover-img4 p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
   font-family: "Lemon/Milk light", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .sec5 .hover-img1 p,
+.sec5 .hover-img2 p,
+.sec5 .hover-img3 p,
+.sec5 .hover-img4 p {
+    font-size: 70px;
+    letter-spacing: 4px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sec5 .hover-img1 p,
+.sec5 .hover-img2 p,
+.sec5 .hover-img3 p,
+.sec5 .hover-img4 p {
+    font-size: 100px;
+    letter-spacing: 6px;
+  }
 }
 
 footer {

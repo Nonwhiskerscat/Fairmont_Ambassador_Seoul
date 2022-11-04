@@ -222,19 +222,20 @@ header {
 } // header
 
 // main
+main {
     .sec1 {
-
-        .container {          
+        .container {
             @include responsive(pc-screens) {
-                display: flex;              
-            }      
+                display: flex;
+            }
 
             .flex-box {
                 background-color: #fcf6e1;
                 padding: 30px;
+                width: 100%;
 
                 @include responsive(pc-screens) {
-                    width: 100%;
+                    width: 50%;
                 }
             
                 .flex-box1 {
@@ -263,7 +264,7 @@ header {
                         line-height: 50px;
                         text-align: center;
                     }
-    
+
                     .menu {                
                         background-color: white;
 
@@ -272,7 +273,7 @@ header {
                         }
                         
                     }
-    
+
                     .booknow {                
                         background-color: #f1d06a;
 
@@ -283,11 +284,19 @@ header {
                 }
             }
 
+            .sec-img {
+                width: 100%;
+
+                @include responsive(pc-screens) {
+                    width: 50%;
+                }
+            }
+
             .sec1-img img {
                 width: 100%;
 
                 @include responsive(pc-screens) {
-                    height: 100%;
+                    width: 100%;
                 }
             }
         }
@@ -389,6 +398,7 @@ header {
             }
         }
     }
+}
 
 footer {
     padding-top: 30px;

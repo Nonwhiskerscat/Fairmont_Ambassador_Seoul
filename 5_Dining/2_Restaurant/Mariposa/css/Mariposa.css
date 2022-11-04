@@ -373,11 +373,13 @@ header .mouse .mo_mouse img {
 }
 .sec5 .sec5-text {
   text-align: center;
+  line-height: 30px;
 }
 @media screen and (min-width: 1024px) {
   .sec5 .sec5-text {
     width: 50%;
-    font-size: 40px;
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 @media screen and (min-width: 1024px) {
