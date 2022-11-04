@@ -19,11 +19,16 @@ header {
 }
 
 a {
+  display: block;
   color: #333333;
   text-decoration: none;
-  font-family: "SCoreDream";
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 100;
   font-size: 1em;
+}
+
+img {
+  display: block;
 }
 
 h1 {

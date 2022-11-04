@@ -26,15 +26,18 @@ header {
 }
 
 a {
+  display: block;
   color: #333333;
   text-decoration: none;
   font: {
-    family: $common_font;
+    family: "Noto Sans KR", sans-serif;
     weight: 100;
     size: 1em;
   }
 }
-
+img {
+  display: block;
+}
 h1 {
   font-size: 7.5em;
   font-weight: normal;

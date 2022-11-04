@@ -355,7 +355,8 @@ header .mouse .mo_mouse img {
   color: #333333;
 }
 .sec2 .sec2-box .hover-img p a:hover {
-  text-decoration: underline 2px white;
+  -webkit-text-decoration: underline 2px white;
+          text-decoration: underline 2px white;
   color: white;
 }
 
