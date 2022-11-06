@@ -67,7 +67,7 @@ li {
 }
 
 .menu_modal {
-  display: block;
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -546,7 +546,6 @@ li {
 }
 
 header {
-  display: none;
   width: 100%;
   position: fixed;
   top: 0;
@@ -665,10 +664,6 @@ header .container .menu .menu_type p {
   header .container .menu .menu_type p {
     font-size: 1.2em;
   }
-}
-
-section {
-  display: none;
 }
 
 .main0 {
@@ -1007,6 +1002,8 @@ section {
 
 @media screen and (min-width: 1440px) {
   .main2 .contents .room_flex .back_slide ul li img {
+    width: 100vw;
+    height: 100vh;
     transform: translateX(0);
   }
 }
@@ -1059,7 +1056,7 @@ section {
   .main2 .contents .room_flex .content_slide .room_back .rooms h2 {
     white-space: nowrap;
     right: 100%;
-    transform: rotateZ(-90deg) translateX(12%) translateY(22%);
+    transform: rotateZ(-90deg) translateX(12px) translateY(12px);
     transform-origin: bottom right;
   }
 }
@@ -1310,6 +1307,8 @@ section {
 
 @media screen and (min-width: 1440px) {
   .main3 .contents .faci_flex .faci_back_slide ul li img {
+    width: 100vw;
+    height: 100vh;
     transform: translateX(0);
   }
 }

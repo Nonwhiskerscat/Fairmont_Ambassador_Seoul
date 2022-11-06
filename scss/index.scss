@@ -21,7 +21,8 @@
 }
 
 .menu_modal {
-    display: block;
+    // display: block;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -457,7 +458,7 @@
 }
 
 header{
-    display: none;
+    // display: none;
     width: 100%;
     position: fixed;
     top: 0;
@@ -571,7 +572,7 @@ header{
 }
 
 section {
-    display: none;
+    // display: none;
 }
 
 //header
@@ -880,6 +881,7 @@ section {
                         overflow: hidden;
     
                         img {
+                            
                             transform: translateX(-25%);
     
                             @include responsive(tablet-screens) {
@@ -887,6 +889,8 @@ section {
                             }
     
                             @include responsive(p1440-screens) {
+                                width: 100vw;
+                                height: 100vh;
                                 transform: translateX(0);
                             }
                         }
@@ -935,7 +939,7 @@ section {
                             @include responsive(p1440-screens) {
                                 white-space: nowrap;
                                 right: 100%;
-                                transform: rotateZ(-90deg) translateX(12%) translateY(22%);
+                                transform: rotateZ(-90deg) translateX(12px) translateY(12px);
                                 transform-origin: bottom right;
                             }
     
@@ -1178,6 +1182,8 @@ section {
                             }
     
                             @include responsive(p1440-screens) {
+                                width: 100vw;
+                                height: 100vh;
                                 transform: translateX(0);
                             }
                         }

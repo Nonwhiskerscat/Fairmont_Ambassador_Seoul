@@ -16,6 +16,20 @@
             @content;
         }
     }
+
+    @else if $break == p1440-screens {
+        @media screen and (min-width:$break-p1440) {
+            @content;
+        }
+    }
+}
+
+@mixin video_matte {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
 @mixin footer_h4{
@@ -51,6 +65,8 @@
     color: #ffef5a;
 }
 
+//가져갈거
+
 @mixin font_setting {
     font: {
         family: $common_font;
@@ -58,4 +74,29 @@
     }
 } // a나 input 같이 직접적으로 초기화되기 어려운 태그에 사용
 
+@mixin title_border($b_width, $b_height, $b_color, $b_margin){
+    content: "";
+    display: block;
+    width: $b_width;
+    border-bottom: $b_height solid $b_color;
+    margin: $b_margin auto;
+}
 
+@mixin title_border_2($b_width, $b_height, $b_color, $b_margin, $u_margin){
+    content: "";
+    display: block;
+    width: $b_width;
+    border-bottom: $b_height solid $b_color;
+    margin: 0 0 $u_margin $b_margin;
+}
+
+@mixin title_border_pc($b_margin, $u_margin){
+    margin: 0 0 $u_margin $b_margin;
+}
+
+@mixin type_custom($t_size, $t_font){
+    font: {
+        family: $t_font;
+        size: $t_size;
+    }
+}
