@@ -26,6 +26,7 @@
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     background-color: #333333;
 
     @include responsive(pc-screens){
@@ -253,32 +254,41 @@
 
         @include responsive(p1440-screens) {
             flex-direction: row;
+            align-items: center;
         }
 
         .menu_main_left{
-
+            // background-color: cadetblue;
             display: flex;
             flex-direction: row;
+            padding-top: 20px;
+            align-items: center;
 
             @include responsive(p1440-screens){
-                background-color: #ffef5a;
+                // background-color: #ffef5a;
                 width: 30%;
-                padding: 0 3%;
                 flex-direction: column;
             }
 
             .img{
-                padding-right: 30px;
-                img.mm_logo {
+                text-align: center;
+                width: 40%;
+
                 @include responsive(p1440-screens) {
-                    display: none;
+                    width: 80%;
                 }
 
+                img.mm_logo {
+                    width: calc(130px + 10vw);
+                    @include responsive(p1440-screens) {
+                        display: none;
+                    }
                 }
     
                 img.pm_logo{
                     display: none;
-                    width: 60%;
+                    width: 80%;
+                    max-width: 500px;
                     margin: 0 auto;
                     
                     @include responsive(p1440-screens) {
@@ -291,8 +301,49 @@
             }
 
             .contents {
+                width: 60%;
+
+                @include responsive(pc-screens) {
+                    width: 90%;
+                }
                 p{
-                    @include type_custom(0.875em, $common_font);
+                    @include type_custom(calc(1em + 0.5vw), $common_font);
+                    text-align: center;
+                    line-height: 2em;
+
+                    @include responsive(tablet-screens) {
+                        font-size: calc(0.5em + 2vw);
+                    }
+
+                    @include responsive(p1440-screens) {
+                        margin-top: calc(30px + 0.5vh);
+                        font-size: calc(0.8em + 0.7vw);
+                    }
+
+                    br {
+
+                        @include responsive(tablet-screens) {
+                            display: none;
+                        }
+
+                        @include responsive(p1440-screens) {
+                            display: block;
+                        }
+                    }
+
+                    span.pc {
+                        display: none;
+
+                        @include responsive(p1440-screens) {
+                            display: inline;
+                        }
+                    }
+
+                    @include responsive(p1440-screens) {
+                        span.mob {
+                            display: none;
+                        }
+                    }
                 }
             }
             
@@ -300,6 +351,8 @@
         }
 
         .menu_main_right {
+
+            
 
         }
 
