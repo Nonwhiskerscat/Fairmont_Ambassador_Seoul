@@ -443,6 +443,10 @@ li {
   }
 }
 
+.menu_modal .menu_main .menu_main_right {
+  padding-top: 50px;
+}
+
 header {
   display: none;
   width: 100%;

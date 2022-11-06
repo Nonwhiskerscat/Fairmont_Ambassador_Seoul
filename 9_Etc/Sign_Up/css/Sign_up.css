@@ -51,14 +51,15 @@ li {
 
 .wrapper {
   width: 100%;
-  background-color: rgb(151, 168, 240);
+  background-color: #97a8f0;
 }
 
 .container {
-  width: 89.7435897436%;
+  width: 89.74358974358974%;
   margin: 0 auto;
   position: relative;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     width: 93.75%;
@@ -70,54 +71,65 @@ section {
   background: url(../img/Sign_Up/background.png);
   background-size: cover;
 }
+
 section header {
   height: 55px;
 }
+
 @media screen and (min-width: 768px) {
   section header {
     height: 65px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   section header {
     height: 80px;
   }
 }
+
 section header .container {
   display: flex;
   justify-content: space-between;
 }
+
 section header .container .header_logo {
   width: 126px;
 }
+
 @media screen and (min-width: 768px) {
   section header .container .header_logo {
     width: 160px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   section header .container .header_logo {
     width: 200px;
   }
 }
+
 section header .container .header_logo img {
   width: 126px;
   height: auto;
   position: absolute;
   margin-top: 15px;
 }
+
 @media screen and (min-width: 768px) {
   section header .container .header_logo img {
     width: 160px;
     margin-top: 17.5px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   section header .container .header_logo img {
     width: 200px;
     margin-top: 20px;
   }
 }
+
 section header .container .menu {
   width: 70px;
   display: flex;
@@ -127,16 +139,19 @@ section header .container .menu {
   align-items: center;
   text-align: right;
 }
+
 @media screen and (min-width: 768px) {
   section header .container .menu {
     margin-top: 27px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   section header .container .menu {
     margin-top: 35px;
   }
 }
+
 section header .container .menu .menu_bar {
   width: 33%;
   display: block;
@@ -145,6 +160,7 @@ section header .container .menu .menu_bar {
   cursor: pointer;
   position: relative;
 }
+
 section header .container .menu .menu_bar span {
   display: block;
   height: 0.5px;
@@ -152,20 +168,24 @@ section header .container .menu .menu_bar span {
   background-color: #442d13;
   position: absolute;
 }
+
 section header .container .menu .menu_bar span:nth-child(1) {
   top: 0;
   right: 0;
 }
+
 section header .container .menu .menu_bar span:nth-child(2) {
   top: 50%;
   right: 0;
   transform: translateY(50%);
   width: 80%;
 }
+
 section header .container .menu .menu_bar span:nth-child(3) {
   bottom: 0;
   right: 0;
 }
+
 section header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
@@ -177,32 +197,39 @@ footer {
   color: white;
   align-items: center;
 }
+
 footer div {
   margin-bottom: 40px;
 }
+
 footer .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 footer .container .footer_logo {
   width: 135px;
   order: 1;
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .footer_logo {
     width: 180px;
   }
 }
+
 footer .container .footer_logo img {
   width: 100%;
 }
+
 footer .container .subscribe {
   position: relative;
   width: 100%;
   order: 3;
 }
+
 footer .container .subscribe h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -210,36 +237,43 @@ footer .container .subscribe h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .subscribe {
     order: 2;
-    width: 26.0416666667%;
+    width: 26.04166666666667%;
   }
 }
+
 footer .container .subscribe .form_flex {
   display: flex;
   margin: 0;
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .subscribe .form_flex {
     display: block;
   }
 }
+
 footer .container .subscribe .form_flex .form_email {
   width: 70%;
   margin: 0;
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .subscribe .form_flex .form_email {
     width: 100%;
   }
 }
+
 footer .container .subscribe form label {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   color: #ffef5a;
 }
+
 footer .container .subscribe form input {
   display: block;
   border: 0;
@@ -252,9 +286,11 @@ footer .container .subscribe form input {
   font-family: "SCoreDream";
   font-weight: 200;
 }
+
 footer .container .subscribe form input:last-child {
   width: 100%;
 }
+
 footer .container .subscribe form button {
   width: 30%;
   height: 70px;
@@ -267,15 +303,18 @@ footer .container .subscribe form button {
   cursor: pointer;
   text-align: right;
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .subscribe form button {
     width: 100%;
   }
 }
+
 footer .container .subscribe form button span {
   margin-left: 10px;
   position: relative;
 }
+
 footer .container .subscribe form button span img {
   width: 20px;
   height: auto;
@@ -283,10 +322,12 @@ footer .container .subscribe form button span img {
   bottom: 0;
   right: 0;
 }
+
 footer .container .navigation {
   width: 220px;
   order: 2;
 }
+
 footer .container .navigation h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -294,58 +335,69 @@ footer .container .navigation h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
+
 @media screen and (min-width: 768px) {
   footer .container .navigation {
     width: 70%;
   }
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .navigation {
     order: 3;
-    width: 25.8333333333%;
+    width: 25.83333333333333%;
   }
 }
+
 footer .container .navigation .flex_nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 footer .container .navigation .flex_nav li {
   width: 50%;
   margin-bottom: 5px;
   align-items: center;
   position: relative;
 }
+
 footer .container .navigation .flex_nav li span {
   display: none;
   height: auto;
   margin-right: 10px;
 }
+
 footer .container .navigation .flex_nav li span img {
   width: 15px;
   height: auto;
 }
+
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li span {
     display: inline;
   }
 }
+
 footer .container .navigation .flex_nav li a {
   color: white;
   font-size: 0.75em;
   padding-bottom: 5px;
 }
+
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li a {
     font-size: 0.875em;
   }
 }
+
 footer .container .address {
   width: 100%;
   order: 4;
   font-size: 0.75em;
   margin: 0;
 }
+
 footer .container .address h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -353,20 +405,24 @@ footer .container .address h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
+
 @media screen and (min-width: 1024px) {
   footer .container .address {
     width: 14.21875%;
   }
 }
+
 footer .container .address span {
   color: #ffef5a;
 }
+
 footer .container .address address {
   font-style: normal;
   margin-bottom: 10px;
   font-family: "SCoreDream";
   font-weight: 200;
 }
+
 footer .container .address .copyright h5 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 0.875em;
@@ -374,6 +430,7 @@ footer .container .address .copyright h5 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
+
 footer .container .address p {
   line-height: 24px;
 }
