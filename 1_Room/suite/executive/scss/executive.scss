@@ -781,6 +781,15 @@ main {
             z-index: -1;
         }
 
+        img.rbp {
+            display: none;
+            position: absolute;
+            top:-20px;
+            width: 100%;
+            height: 483px;
+            z-index: -1;
+        }
+
         .room_sub {
             padding-top: 50px;
             text-align: center;

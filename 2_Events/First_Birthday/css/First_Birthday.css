@@ -68,10 +68,9 @@ li {
 
 .container {
   position: relative;
-  width: 89.74358974358974%;
+  width: 89.7435897436%;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 768px) {
   .container {
     width: 93.75%;
@@ -84,7 +83,6 @@ li {
   background: url(../img/First_Birthday/photo/s2-3.jpg) no-repeat center;
   background-size: cover;
 }
-
 .firstsection::before {
   content: "";
   display: block;
@@ -94,65 +92,54 @@ li {
   background-color: black;
   opacity: 0.5;
 }
-
 .firstsection header {
   height: 55px;
 }
-
 @media screen and (min-width: 768px) {
   .firstsection header {
     height: 65px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .firstsection header {
     height: 80px;
   }
 }
-
 .firstsection header .container {
   display: flex;
   justify-content: space-between;
 }
-
 .firstsection header .container .header_logo {
   width: 126px;
 }
-
 @media screen and (min-width: 768px) {
   .firstsection header .container .header_logo {
     width: 160px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .firstsection header .container .header_logo {
     width: 200px;
   }
 }
-
 .firstsection header .container .header_logo img {
   position: absolute;
   width: 126px;
   height: auto;
   margin-top: 15px;
 }
-
 @media screen and (min-width: 768px) {
   .firstsection header .container .header_logo img {
     width: 160px;
     margin-top: 17.5px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .firstsection header .container .header_logo img {
     width: 200px;
     margin-top: 20px;
   }
 }
-
 .firstsection header .container .menu {
   display: flex;
   width: 70px;
@@ -162,19 +149,16 @@ li {
   align-items: center;
   text-align: right;
 }
-
 @media screen and (min-width: 768px) {
   .firstsection header .container .menu {
     margin-top: 27px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .firstsection header .container .menu {
     margin-top: 35px;
   }
 }
-
 .firstsection header .container .menu .menu_bar {
   display: block;
   position: relative;
@@ -183,7 +167,6 @@ li {
   height: 13px;
   cursor: pointer;
 }
-
 .firstsection header .container .menu .menu_bar span {
   display: block;
   position: absolute;
@@ -191,48 +174,40 @@ li {
   height: 0.5px;
   background: white;
 }
-
 .firstsection header .container .menu .menu_bar span:nth-child(1) {
   top: 0;
   right: 0;
 }
-
 .firstsection header .container .menu .menu_bar span:nth-child(2) {
   top: 50%;
   right: 0;
   width: 80%;
   transform: translateY(50%);
 }
-
 .firstsection header .container .menu .menu_bar span:nth-child(3) {
   right: 0;
   bottom: 0;
 }
-
 .firstsection header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
 }
-
 .firstsection .banner-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .firstsection .banner-box h1 {
   color: #ddddde;
   font-size: 2.25em;
   text-align: center;
 }
-
 @media screen and (min-width: 1024px) {
   .firstsection .banner-box h1 {
     font-size: 7.5em;
   }
 }
-
 .firstsection .banner-box h1::before {
   content: "";
   display: block;
@@ -245,7 +220,6 @@ li {
   transform: translateX(-50%);
   margin-bottom: 37px;
 }
-
 @media screen and (min-width: 1024px) {
   .firstsection .banner-box h1::before {
     top: -41px;
@@ -265,20 +239,17 @@ main section.s1-intro {
   margin-top: 165px;
   margin-bottom: 270px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro {
     margin-top: 270px;
   }
 }
-
 main section.s1-intro .flex {
   display: flex;
   width: 350px;
   margin: 0 auto;
   flex-direction: column-reverse;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro .flex {
     display: flex;
@@ -289,25 +260,21 @@ main section.s1-intro .flex {
     align-items: center;
   }
 }
-
 main section.s1-intro .flex .s1-content {
   position: relative;
   text-align: center;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro .flex .s1-content {
     text-align: left;
   }
 }
-
 main section.s1-intro .flex .s1-content h3 {
   font-size: 1.125em;
   padding-bottom: 35px;
   white-space: nowrap;
   color: rgba(0, 0, 0, 0.6);
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro .flex .s1-content h3 {
     color: rgba(0, 0, 0, 0.6);
@@ -316,7 +283,6 @@ main section.s1-intro .flex .s1-content h3 {
     margin-left: 8.58vw;
   }
 }
-
 main section.s1-intro .flex .s1-content h3 strong {
   position: relative;
   top: 25px;
@@ -324,7 +290,6 @@ main section.s1-intro .flex .s1-content h3 strong {
   font-size: 1.22em;
   line-height: 28px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro .flex .s1-content h3 strong {
     top: 0px;
@@ -332,7 +297,6 @@ main section.s1-intro .flex .s1-content h3 strong {
     color: #ffb400;
   }
 }
-
 main section.s1-intro .flex .s1-content::before {
   content: "";
   display: block;
@@ -344,18 +308,15 @@ main section.s1-intro .flex .s1-content::before {
   background-color: #ffb400;
   transform: translate(-50%, -50%);
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro .flex .s1-content::before {
     display: none;
   }
 }
-
 main section.s1-intro .flex .s1-img {
   width: 350px;
   margin-bottom: 35px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s1-intro .flex .s1-img {
     width: 45.3125vw;
@@ -366,15 +327,12 @@ main section.s1-intro .flex .s1-img {
     margin-left: 50px;
   }
 }
-
 main section.s1-intro .flex .s1-img img {
   width: 100%;
 }
-
 main section.s2-instruction {
   position: relative;
 }
-
 main section.s2-instruction .wave-bg {
   position: absolute;
   width: 100vw;
@@ -382,13 +340,11 @@ main section.s2-instruction .wave-bg {
   left: -370px;
   z-index: -100;
 }
-
 main section.s2-instruction h2 {
   text-align: center;
   font-size: 1.375em;
   margin-bottom: 50px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction h2 {
     font-size: 2.25em;
@@ -396,7 +352,6 @@ main section.s2-instruction h2 {
     margin-left: 80px;
   }
 }
-
 main section.s2-instruction ul.ins {
   display: flex;
   width: 100%;
@@ -405,7 +360,6 @@ main section.s2-instruction ul.ins {
   justify-content: center;
   padding-bottom: 15px;
 }
-
 main section.s2-instruction ul.ins li {
   background-color: #fff;
   position: relative;
@@ -417,7 +371,6 @@ main section.s2-instruction ul.ins li {
   border-radius: 50px;
   box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction ul.ins li {
     width: 310px;
@@ -425,17 +378,14 @@ main section.s2-instruction ul.ins li {
     margin-left: 80px;
   }
 }
-
 main section.s2-instruction ul.ins li:last-of-type {
   margin-right: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction ul.ins li:last-of-type {
     margin-left: 80px;
   }
 }
-
 main section.s2-instruction ul.ins li .img-box {
   position: relative;
   width: 100%;
@@ -445,36 +395,30 @@ main section.s2-instruction ul.ins li .img-box {
   overflow: hidden;
   margin-bottom: 25px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction ul.ins li .img-box {
     margin-bottom: 35px;
   }
 }
-
 main section.s2-instruction ul.ins li .img-box img {
   position: absolute;
   left: 50%;
   width: 140%;
   transform: translateX(-50%);
 }
-
 main section.s2-instruction ul.ins li .s2-text-box {
   width: fit-content;
   margin: 35px auto;
 }
-
 main section.s2-instruction ul.ins li .s2-text-box strong {
   position: relative;
   font-size: 1.125em;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction ul.ins li .s2-text-box strong {
     font-size: 1.25em;
   }
 }
-
 main section.s2-instruction ul.ins li .s2-text-box strong::before {
   content: "";
   display: block;
@@ -484,20 +428,17 @@ main section.s2-instruction ul.ins li .s2-text-box strong::before {
   height: 3px;
   background: #ffb400;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction ul.ins li .s2-text-box strong::before {
     top: 30px;
   }
 }
-
 main section.s2-instruction ul.ins li .s2-text-box p {
   margin-top: 25px;
   font-size: 0.875em;
   letter-spacing: -0.01em;
   line-height: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s2-instruction ul.ins li .s2-text-box p {
     font-size: 1em;
@@ -505,7 +446,6 @@ main section.s2-instruction ul.ins li .s2-text-box p {
     margin-top: 30px;
   }
 }
-
 main section.s2-instruction ul.ins li.s2-act::before {
   content: "";
   position: absolute;
@@ -515,12 +455,10 @@ main section.s2-instruction ul.ins li.s2-act::before {
   background-color: black;
   opacity: 0.3;
 }
-
 main section.s3-balloon {
   margin-top: 110px;
   margin-bottom: 240px;
 }
-
 @media screen and (min-width: 768px) {
   main section.s3-balloon {
     max-width: 1050px;
@@ -528,7 +466,6 @@ main section.s3-balloon {
     margin-right: auto;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon {
     max-width: 1880px;
@@ -537,60 +474,50 @@ main section.s3-balloon {
     margin-left: 8.58vw;
   }
 }
-
 main section.s3-balloon .flex {
   width: 350px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon .flex {
     width: 100%;
     margin: 0;
   }
 }
-
 main section.s3-balloon .flex .s3-content {
   padding-top: 310px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon .flex .s3-content {
     padding-top: 370px;
   }
 }
-
 main section.s3-balloon .flex .s3-content h3 {
   font-size: 1.25em;
   line-height: 26px;
   letter-spacing: 0.01em;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon .flex .s3-content h3 {
     font-size: 2.25em;
     line-height: 46px;
   }
 }
-
 main section.s3-balloon .flex .s3-content p {
   margin: 30px 0;
   line-height: 24px;
   letter-spacing: 0.01em;
   font-size: 0.875em;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon .flex .s3-content p {
     font-size: 1.125em;
     line-height: 26px;
   }
 }
-
 main section.s3-balloon .flex .s3-content .s3-btns {
   display: flex;
 }
-
 main section.s3-balloon .flex .s3-content .s3-btns a {
   width: 172px;
   height: 54px;
@@ -602,40 +529,33 @@ main section.s3-balloon .flex .s3-content .s3-btns a {
   line-height: 50px;
   font-weight: 400;
 }
-
 main section.s3-balloon .flex .s3-content .s3-btns a:first-of-type {
   margin-right: 8px;
 }
-
 main section.s3-balloon .flex .s3-content .s3-img {
   position: absolute;
   top: 0;
-  right: -5.12820512820513%;
+  right: -5.1282051282%;
   z-index: -1;
   width: 300px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon .flex .s3-content .s3-img {
     width: 500px;
   }
 }
-
 main section.s3-balloon .flex .s3-content .s3-img img {
   width: 100%;
   opacity: 0.4;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s3-balloon .flex .s3-content .s3-img img {
     opacity: 1;
   }
 }
-
 main section.s4-preview {
   position: relative;
 }
-
 main section.s4-preview .bg-line {
   width: 100%;
   height: 135px;
@@ -643,32 +563,27 @@ main section.s4-preview .bg-line {
   position: absolute;
   bottom: 0;
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .bg-line {
     height: 170px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s4-preview .bg-line {
     height: 280px;
     bottom: 70px;
   }
 }
-
 main section.s4-preview .flex {
   display: flex;
   width: 350px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .flex {
     width: 100%;
   }
 }
-
 main section.s4-preview .flex .left-content .img-box {
   width: 300px;
   height: 300px;
@@ -678,7 +593,6 @@ main section.s4-preview .flex .left-content .img-box {
   box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
   z-index: -3;
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .flex .left-content .img-box {
     width: 400px;
@@ -686,7 +600,6 @@ main section.s4-preview .flex .left-content .img-box {
     border-width: 22px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s4-preview .flex .left-content .img-box {
     width: 650px;
@@ -694,27 +607,22 @@ main section.s4-preview .flex .left-content .img-box {
     border-width: 24px;
   }
 }
-
 main section.s4-preview .flex .left-content .img-box img {
   width: 150%;
 }
-
 main section.s4-preview .flex .right-content {
   position: relative;
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .flex .right-content {
     margin-left: 70px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s4-preview .flex .right-content {
     margin-left: 15vw;
   }
 }
-
 main section.s4-preview .flex .right-content h3 {
   position: absolute;
   left: -300px;
@@ -723,7 +631,6 @@ main section.s4-preview .flex .right-content h3 {
   font-size: 1.625em;
   z-index: 2;
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .flex .right-content h3 {
     left: 0;
@@ -733,7 +640,6 @@ main section.s4-preview .flex .right-content h3 {
     font-size: 2.25em;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s4-preview .flex .right-content h3 {
     padding-left: 0;
@@ -744,13 +650,11 @@ main section.s4-preview .flex .right-content h3 {
     margin-left: 25px;
   }
 }
-
 main section.s4-preview .flex .right-content .img-list {
   position: absolute;
   z-index: 1;
   bottom: 0;
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .flex .right-content .img-list {
     display: flex;
@@ -760,7 +664,6 @@ main section.s4-preview .flex .right-content .img-list {
     padding-bottom: 10px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s4-preview .flex .right-content .img-list {
     bottom: 120px;
@@ -768,7 +671,6 @@ main section.s4-preview .flex .right-content .img-list {
     overflow: visible;
   }
 }
-
 main section.s4-preview .flex .right-content .img-list li {
   flex-shrink: 0;
   position: absolute;
@@ -781,7 +683,6 @@ main section.s4-preview .flex .right-content .img-list li {
   border-radius: 50%;
   box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
 }
-
 @media screen and (min-width: 768px) {
   main section.s4-preview .flex .right-content .img-list li {
     position: relative;
@@ -790,32 +691,27 @@ main section.s4-preview .flex .right-content .img-list li {
     margin-left: 10px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main section.s4-preview .flex .right-content .img-list li {
     margin-left: 20px;
   }
 }
-
 main section.s4-preview .flex .right-content .img-list li img {
   position: relative;
   left: -40%;
   width: 160%;
 }
-
 main section.s5-notice {
   margin-top: 250px;
   padding: 55px 0;
   background-color: #f7f7f7;
 }
-
 main section.s5-notice .flex {
   display: flex;
   flex-direction: column-reverse;
   width: 350px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s5-notice .flex {
     display: flex;
@@ -824,7 +720,6 @@ main section.s5-notice .flex {
     width: 880px;
   }
 }
-
 main section.s5-notice .flex .notice-content h3 {
   margin-bottom: 22px;
   text-align: center;
@@ -832,25 +727,21 @@ main section.s5-notice .flex .notice-content h3 {
   font-weight: 700;
   white-space: nowrap;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s5-notice .flex .notice-content h3 {
     text-align: left;
     font-size: 4em;
   }
 }
-
 main section.s5-notice .flex .notice-content p {
   position: relative;
   font-weight: 400;
   font-size: 0.875em;
   padding-left: 35px;
 }
-
 main section.s5-notice .flex .notice-content p:first-of-type {
   margin-bottom: 5px;
 }
-
 main section.s5-notice .flex .notice-content p::before {
   content: "+";
   font-size: 1.625em;
@@ -860,11 +751,9 @@ main section.s5-notice .flex .notice-content p::before {
   top: -7.8px;
   left: 15px;
 }
-
 main section.s5-notice .flex .notice-content .notice-btn {
   margin-top: 26px;
 }
-
 main section.s5-notice .flex .notice-content .notice-btn a {
   width: 100%;
   height: 54px;
@@ -876,20 +765,17 @@ main section.s5-notice .flex .notice-content .notice-btn a {
   line-height: 50px;
   font-weight: 400;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s5-notice .flex .notice-content .notice-btn a {
     width: 174px;
   }
 }
-
 main section.s5-notice .flex img {
   width: 180px;
   margin: 0 auto;
   margin-bottom: 22px;
   padding-left: 40px;
 }
-
 @media screen and (min-width: 1024px) {
   main section.s5-notice .flex img {
     width: 290px;
@@ -904,39 +790,32 @@ footer {
   color: white;
   align-items: center;
 }
-
 footer div {
   margin-bottom: 40px;
 }
-
 footer .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 footer .container .footer_logo {
   width: 135px;
   order: 1;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .footer_logo {
     width: 180px;
   }
 }
-
 footer .container .footer_logo img {
   width: 100%;
 }
-
 footer .container .subscribe {
   position: relative;
   width: 100%;
   order: 3;
 }
-
 footer .container .subscribe h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -944,43 +823,36 @@ footer .container .subscribe h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe {
-    width: 26.04166666666667%;
+    width: 26.0416666667%;
     order: 2;
   }
 }
-
 footer .container .subscribe .form_flex {
   display: flex;
   margin: 0;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe .form_flex {
     display: block;
   }
 }
-
 footer .container .subscribe .form_flex .form_email {
   width: 70%;
   margin: 0;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe .form_flex .form_email {
     width: 100%;
   }
 }
-
 footer .container .subscribe form label {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   color: #ffef5a;
 }
-
 footer .container .subscribe form input {
   display: block;
   width: 100%;
@@ -993,11 +865,9 @@ footer .container .subscribe form input {
   font-family: "SCoreDream";
   font-weight: 200;
 }
-
 footer .container .subscribe form input:last-child {
   width: 100%;
 }
-
 footer .container .subscribe form button {
   width: 30%;
   height: 70px;
@@ -1010,18 +880,15 @@ footer .container .subscribe form button {
   font-family: "SCoreDream";
   font-weight: 200;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe form button {
     width: 100%;
   }
 }
-
 footer .container .subscribe form button span {
   position: relative;
   margin-left: 10px;
 }
-
 footer .container .subscribe form button span img {
   position: absolute;
   right: 0;
@@ -1029,12 +896,10 @@ footer .container .subscribe form button span img {
   width: 20px;
   height: auto;
 }
-
 footer .container .navigation {
   width: 220px;
   order: 2;
 }
-
 footer .container .navigation h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -1042,69 +907,58 @@ footer .container .navigation h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 768px) {
   footer .container .navigation {
     width: 70%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .navigation {
-    width: 25.83333333333333%;
+    width: 25.8333333333%;
     order: 3;
   }
 }
-
 footer .container .navigation .flex_nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 footer .container .navigation .flex_nav li {
   position: relative;
   width: 50%;
   margin-bottom: 5px;
   align-items: center;
 }
-
 footer .container .navigation .flex_nav li span {
   display: none;
   height: auto;
   margin-right: 10px;
 }
-
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li span {
     display: inline;
   }
 }
-
 footer .container .navigation .flex_nav li span img {
   width: 15px;
   height: auto;
 }
-
 footer .container .navigation .flex_nav li a {
   color: white;
   font-size: 0.75em;
   padding-bottom: 5px;
 }
-
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li a {
     font-size: 0.875em;
   }
 }
-
 footer .container .address {
   width: 100%;
   margin: 0;
   order: 4;
   font-size: 0.75em;
 }
-
 footer .container .address h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -1112,24 +966,20 @@ footer .container .address h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .address {
     width: 24%;
   }
 }
-
 footer .container .address span {
   color: #ffef5a;
 }
-
 footer .container .address address {
   font-style: normal;
   margin-bottom: 10px;
   font-family: "SCoreDream";
   font-weight: 200;
 }
-
 footer .container .address .copyright h5 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 0.875em;
@@ -1137,7 +987,6 @@ footer .container .address .copyright h5 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 footer .container .address p {
   line-height: 24px;
 }

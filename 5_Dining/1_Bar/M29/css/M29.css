@@ -54,12 +54,11 @@ li {
 }
 
 .container {
-  width: 89.74358974358974%;
+  width: 89.7435897436%;
   margin: 0 auto;
-  background-color: #ffa1a1;
+  background-color: rgb(255, 161, 161);
   position: relative;
 }
-
 @media screen and (min-width: 768px) {
   .container {
     width: 93.75%;
@@ -69,7 +68,6 @@ li {
 header {
   height: 100vh;
 }
-
 header .main-img {
   position: absolute;
   top: 0;
@@ -78,13 +76,11 @@ header .main-img {
   width: 100%;
   z-index: -1;
 }
-
 header .main-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
 header .colormatte {
   position: absolute;
   top: 0;
@@ -94,18 +90,15 @@ header .colormatte {
   background-color: black;
   opacity: 0.3;
 }
-
 header .main-text {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%);
 }
-
 header .main-text h1 {
   color: white;
 }
-
 header .main-text h1::before {
   content: "";
   display: block;
@@ -118,49 +111,41 @@ header .main-text h1::before {
   transform: translateX(-50%);
   margin-bottom: 37px;
 }
-
 header .container {
   display: flex;
   justify-content: space-between;
 }
-
 header .container .header_logo {
   width: 126px;
 }
-
 @media screen and (min-width: 768px) {
   header .container .header_logo {
     width: 160px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   header .container .header_logo {
     width: 200px;
   }
 }
-
 header .container .header_logo img {
   width: 126px;
   height: auto;
   position: absolute;
   margin-top: 15px;
 }
-
 @media screen and (min-width: 768px) {
   header .container .header_logo img {
     width: 160px;
     margin-top: 17.5px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   header .container .header_logo img {
     width: 200px;
     margin-top: 20px;
   }
 }
-
 header .container .menu {
   width: 70px;
   display: flex;
@@ -170,19 +155,16 @@ header .container .menu {
   align-items: center;
   text-align: right;
 }
-
 @media screen and (min-width: 768px) {
   header .container .menu {
     margin-top: 27px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   header .container .menu {
     margin-top: 35px;
   }
 }
-
 header .container .menu .menu_bar {
   width: 33%;
   display: block;
@@ -191,7 +173,6 @@ header .container .menu .menu_bar {
   cursor: pointer;
   position: relative;
 }
-
 header .container .menu .menu_bar span {
   display: block;
   height: 0.5px;
@@ -199,35 +180,29 @@ header .container .menu .menu_bar span {
   background: white;
   position: absolute;
 }
-
 header .container .menu .menu_bar span:nth-child(1) {
   top: 0;
   right: 0;
 }
-
 header .container .menu .menu_bar span:nth-child(2) {
   top: 50%;
   right: 0;
   transform: translateY(50%);
   width: 80%;
 }
-
 header .container .menu .menu_bar span:nth-child(3) {
   bottom: 0;
   right: 0;
 }
-
 header .container .menu .menu_type p {
   font-family: "Lemon/Milk light", sans-serif, sans-serif;
   font-size: 1em;
 }
-
 header .mouse {
   position: absolute;
   bottom: 20px;
   left: 50%;
 }
-
 @keyframes move {
   from {
     bottom: 60px;
@@ -239,34 +214,28 @@ header .mouse {
     bottom: 30px;
   }
 }
-
 header .mouse img {
   position: absolute;
   bottom: 60px;
   transform: translateX(-50%);
 }
-
 header .mouse p {
   transform: translateX(-50%);
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 1px;
   color: white;
 }
-
 header .mouse .pc_mouse {
   display: none;
 }
-
 @media screen and (min-width: 1024px) {
   header .mouse .pc_mouse {
     display: block;
   }
 }
-
 header .mouse .mo_mouse img {
   opacity: 0.5;
 }
-
 @media screen and (min-width: 1024px) {
   header .mouse .mo_mouse {
     display: none;
@@ -278,39 +247,32 @@ header .mouse .mo_mouse img {
     display: flex;
   }
 }
-
 main .sec1 .container .flex-box {
   background-color: #fcf6e1;
   padding: 30px;
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
   main .sec1 .container .flex-box {
     width: 50%;
   }
 }
-
 main .sec1 .container .flex-box .flex-box1 {
   display: flex;
   justify-content: space-around;
 }
-
 main .sec1 .container .flex-box .flex-box1 .info {
   font-family: "Lemon/Milk light", sans-serif;
   line-height: 50px;
 }
-
 main .sec1 .container .flex-box .flex-box1 .detail {
   margin-left: 50px;
   line-height: 50px;
 }
-
 main .sec1 .container .flex-box .menu-flex-box {
   display: flex;
   justify-content: space-around;
 }
-
 main .sec1 .container .flex-box .menu-flex-box .menu,
 main .sec1 .container .flex-box .menu-flex-box .booknow {
   width: 170px;
@@ -318,58 +280,46 @@ main .sec1 .container .flex-box .menu-flex-box .booknow {
   line-height: 50px;
   text-align: center;
 }
-
 main .sec1 .container .flex-box .menu-flex-box .menu {
   background-color: white;
 }
-
 main .sec1 .container .flex-box .menu-flex-box .menu a {
   font-family: "Lemon/Milk light", sans-serif;
 }
-
 main .sec1 .container .flex-box .menu-flex-box .booknow {
   background-color: #f1d06a;
 }
-
 main .sec1 .container .flex-box .menu-flex-box .booknow a {
   font-family: "Lemon/Milk light", sans-serif;
 }
-
 main .sec1 .container .sec-img {
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
   main .sec1 .container .sec-img {
     width: 50%;
   }
 }
-
 main .sec1 .container .sec1-img img {
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
   main .sec1 .container .sec1-img img {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .sec2 .sec2-box {
     display: flex;
     width: 100%;
   }
 }
-
 main .sec2 .sec2-box div img {
   width: 100%;
 }
-
 main .sec2 .sec2-box .hover-img {
   position: relative;
 }
-
 main .sec2 .sec2-box .hover-img p {
   color: #ffffff;
   font-size: 30px;
@@ -381,78 +331,64 @@ main .sec2 .sec2-box .hover-img p {
   width: 100%;
   transform: translate(-50%, -50%);
 }
-
 @media screen and (min-width: 768px) {
   main .sec2 .sec2-box .hover-img p {
     font-size: 40px;
     line-height: 70px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .sec2 .sec2-box .hover-img p {
     font-size: 40px;
     line-height: 80px;
   }
 }
-
 main .sec2 .sec2-box .hover-img p strong {
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 2px;
 }
-
 main .sec2 .sec2-box .hover-img p a {
   color: #333333;
 }
-
 main .sec2 .sec2-box .hover-img p a:hover {
   text-decoration: underline 2px white;
   color: white;
 }
-
 main .sec3 .sec3-text {
   text-align: center;
 }
-
 main .sec3 .sec3-text p {
   font-size: 14px;
 }
-
 @media screen and (min-width: 768px) {
   main .sec3 .sec3-text p {
     font-size: 20px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .sec3 .sec3-text p {
     font-size: 26px;
   }
 }
-
 main .sec3 .sec3-text .rooftop {
   font-size: 48px;
   font-family: "Lemon/Milk light", sans-serif;
 }
-
 @media screen and (min-width: 768px) {
   main .sec3 .sec3-text .rooftop {
     letter-spacing: 3px;
     font-size: 68px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   main .sec3 .sec3-text .rooftop {
     letter-spacing: 6px;
     font-size: 88px;
   }
 }
-
 main .sec3 .sec3-img-box img {
   width: 100%;
 }
-
 @media screen and (min-width: 1024px) {
   main .sec3 .sec3-img-box {
     display: flex;
@@ -465,39 +401,32 @@ footer {
   color: white;
   align-items: center;
 }
-
 footer div {
   margin-bottom: 40px;
 }
-
 footer .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 footer .container .footer_logo {
   width: 135px;
   order: 1;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .footer_logo {
     width: 180px;
   }
 }
-
 footer .container .footer_logo img {
   width: 100%;
 }
-
 footer .container .subscribe {
   position: relative;
   width: 100%;
   order: 3;
 }
-
 footer .container .subscribe h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -505,43 +434,36 @@ footer .container .subscribe h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe {
     order: 2;
-    width: 26.04166666666667%;
+    width: 26.0416666667%;
   }
 }
-
 footer .container .subscribe .form_flex {
   display: flex;
   margin: 0;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe .form_flex {
     display: block;
   }
 }
-
 footer .container .subscribe .form_flex .form_email {
   width: 70%;
   margin: 0;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe .form_flex .form_email {
     width: 100%;
   }
 }
-
 footer .container .subscribe form label {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   color: #ffef5a;
 }
-
 footer .container .subscribe form input {
   display: block;
   border: 0;
@@ -554,11 +476,9 @@ footer .container .subscribe form input {
   font-family: "SCoreDream";
   font-weight: 200;
 }
-
 footer .container .subscribe form input:last-child {
   width: 100%;
 }
-
 footer .container .subscribe form button {
   width: 30%;
   height: 70px;
@@ -571,18 +491,15 @@ footer .container .subscribe form button {
   cursor: pointer;
   text-align: right;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .subscribe form button {
     width: 100%;
   }
 }
-
 footer .container .subscribe form button span {
   margin-left: 10px;
   position: relative;
 }
-
 footer .container .subscribe form button span img {
   width: 20px;
   height: auto;
@@ -590,12 +507,10 @@ footer .container .subscribe form button span img {
   bottom: 0;
   right: 0;
 }
-
 footer .container .navigation {
   width: 220px;
   order: 2;
 }
-
 footer .container .navigation h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -603,69 +518,58 @@ footer .container .navigation h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 768px) {
   footer .container .navigation {
     width: 70%;
   }
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .navigation {
     order: 3;
-    width: 25.83333333333333%;
+    width: 25.8333333333%;
   }
 }
-
 footer .container .navigation .flex_nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 footer .container .navigation .flex_nav li {
   width: 50%;
   margin-bottom: 5px;
   align-items: center;
   position: relative;
 }
-
 footer .container .navigation .flex_nav li span {
   display: none;
   height: auto;
   margin-right: 10px;
 }
-
 footer .container .navigation .flex_nav li span img {
   width: 15px;
   height: auto;
 }
-
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li span {
     display: inline;
   }
 }
-
 footer .container .navigation .flex_nav li a {
   color: white;
   font-size: 0.75em;
   padding-bottom: 5px;
 }
-
 @media screen and (min-width: 768px) {
   footer .container .navigation .flex_nav li a {
     font-size: 0.875em;
   }
 }
-
 footer .container .address {
   width: 100%;
   order: 4;
   font-size: 0.75em;
   margin: 0;
 }
-
 footer .container .address h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 16px;
@@ -673,24 +577,20 @@ footer .container .address h4 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 @media screen and (min-width: 1024px) {
   footer .container .address {
     width: 24%;
   }
 }
-
 footer .container .address span {
   color: #ffef5a;
 }
-
 footer .container .address address {
   font-style: normal;
   margin-bottom: 10px;
   font-family: "SCoreDream";
   font-weight: 200;
 }
-
 footer .container .address .copyright h5 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 0.875em;
@@ -698,7 +598,6 @@ footer .container .address .copyright h5 {
   color: #ffef5a;
   margin-bottom: 20px;
 }
-
 footer .container .address p {
   line-height: 24px;
 }
