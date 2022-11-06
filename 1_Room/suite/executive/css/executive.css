@@ -859,7 +859,7 @@ main .room_int h3 span {
 }
 
 main .room_info {
-  margin-top: 50px;
+  margin-top: 100px;
   position: relative;
   width: 100vw;
   overflow: hidden;
@@ -871,16 +871,79 @@ main .room_info img {
 }
 
 main .room_cont {
-  transform: translateY(-200px);
+  color: white;
+  transform: translateY(calc(-200px));
   background-size: cover;
 }
 
-main .room_cont img.rb {
+main .room_cont img.rbm {
   position: absolute;
   top: -20px;
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  height: 581px;
   z-index: -1;
+}
+
+main .room_cont .room_sub {
+  padding-top: 50px;
+  text-align: center;
+}
+
+main .room_cont .room_sub h5 {
+  font-family: "SCoreDream";
+  font-size: 2em;
+  font-weight: 300;
+}
+
+main .room_cont .room_sub h6 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 1em;
+  padding-top: 5px;
+  letter-spacing: 2px;
+}
+
+main .room_cont .room_sub p.desc {
+  padding-top: 40px;
+  text-align: justify;
+  line-height: 36px;
+  font-family: "SCoreDream";
+  font-size: 1em;
+  font-weight: 200;
+}
+
+main .room_cont .room_sub ul.r_info {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  main .room_cont .room_sub ul.r_info {
+    width: 80%;
+  }
+}
+
+main .room_cont .room_sub ul.r_info li p {
+  position: relative;
+  text-align: center;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 1em;
+  padding-top: 10px;
+}
+
+main .room_cont .room_sub ul.r_info li p + p {
+  font-family: "SCoreDream";
+  font-size: 1.2em;
+  font-size: 1.2em;
+}
+
+main .room_cont .room_sub ul.r_info li p span {
+  font-size: 0.6em;
+  position: absolute;
+  top: 20%;
 }
 
 footer {

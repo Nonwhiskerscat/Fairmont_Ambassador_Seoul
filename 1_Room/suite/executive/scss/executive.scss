@@ -756,7 +756,7 @@ main {
     }
 
     .room_info{
-        margin-top: 50px;
+        margin-top: 100px;
         position: relative;
         width: 100vw;
         overflow: hidden;
@@ -768,23 +768,86 @@ main {
     }
 
     
-
-    // .room_back {
-        
-
-    // }
-
     .room_cont {
-        transform: translateY(-200px);
+        color: white;
+        transform: translateY(calc(-200px));
         background-size: cover;
 
-        img.rb {
+        img.rbm {
             position: absolute;
             top:-20px;
-            width: 100vw;
-            height: 100%;
+            width: 100%;
+            height: 581px;
             z-index: -1;
         }
+
+        .room_sub {
+            padding-top: 50px;
+            text-align: center;
+
+            h5 {
+                @include type_custom(2em, $common_font);
+                font-weight: 300;
+            }
+    
+            h6 {
+                @include type_custom(1em, $eng_title_font);
+                padding-top: 5px;
+                letter-spacing: 2px;
+            }
+
+            p.desc {
+                padding-top: 40px;
+                text-align: justify;
+                line-height: 36px;
+                @include type_custom(1em, $common_font);
+                font-weight: 200;
+
+            }
+
+            ul.r_info {
+                padding-top: 50px;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                margin: 0 auto;
+                justify-content: space-between;
+
+                @include responsive(tablet-screens) {
+                    width: 80%;
+                }
+
+                li {
+                    p{
+                        position: relative;
+                        text-align: center;
+
+                            @include type_custom(1em, $eng_title_font);
+                            padding-top:10px;
+
+                            &+p {
+                                @include type_custom(1.2em, $common_font);
+                                font-size: 1.2em;
+                            }
+
+                            span {
+                                font-size: 0.6em;
+                                position: absolute;
+                                top: 20%;
+                                
+                            }
+                    }
+                }
+                
+            }
+
+            
+
+
+
+        }
+
+    
 
     }
 }

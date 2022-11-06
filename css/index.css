@@ -1441,14 +1441,14 @@ header .container .menu .menu_type p {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
     font-size: 1.125em;
     letter-spacing: 1px;
-    height: 120px;
+    height: 140px;
   }
 }
 
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p span {
   font-family: "SCoreDream";
   font-size: 2em;
-  line-height: 1.1em;
+  line-height: 1em;
 }
 
 @media screen and (min-width: 768px) {

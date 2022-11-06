@@ -2,6 +2,7 @@
 @import "./reset.scss";
 @import "./mixin.scss";
 
+
 .wrapper {
     width: 100%;
     // background-color: rgb(151, 168, 240);
@@ -1299,12 +1300,12 @@ section {
                                 @include responsive(tablet-screens) {
                                     font-size: 1.125em;
                                     letter-spacing: 1px;
-                                    height: 120px;
+                                    height: 140px;
                                 }
 
                                 span {
                                     @include type_custom(2em, $common_font);
-                                        line-height: 1.1em;
+                                        line-height: 1em;
 
                                     @include responsive(tablet-screens) {
                                         font-size: 1.4em;
