@@ -72,11 +72,10 @@ li {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
   background-color: #333333;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .menu_modal {
     height: 100vh;
   }
@@ -226,10 +225,8 @@ li {
   display: flex;
 }
 
-@media screen and (min-width: 1024px) {
-  .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login {
-    margin-right: calc(10px + 3vw);
-  }
+.menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login {
+  transform: translateX(-20px);
 }
 
 .menu_modal .menu_header .menu_header_flex .menu_header_right .menu_login a {
@@ -333,7 +330,7 @@ li {
 @media screen and (min-width: 1440px) {
   .menu_modal .menu_main {
     flex-direction: row;
-    align-items: center;
+    padding-top: calc(1vw);
   }
 }
 
@@ -375,7 +372,7 @@ li {
 .menu_modal .menu_main .menu_main_left .img img.pm_logo {
   display: none;
   width: 80%;
-  max-width: 500px;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -410,7 +407,7 @@ li {
 
 @media screen and (min-width: 1440px) {
   .menu_modal .menu_main .menu_main_left .contents p {
-    margin-top: calc(30px + 0.5vh);
+    margin-top: calc(50px + 0.5vw);
     font-size: calc(0.8em + 0.7vw);
   }
 }
@@ -444,7 +441,108 @@ li {
 }
 
 .menu_modal .menu_main .menu_main_right {
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
+  font-weight: 100;
+  width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_right {
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.menu_modal .menu_main .menu_main_right a {
+  color: white;
+}
+
+.menu_modal .menu_main .menu_main_right li {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_right .menu_bighead {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.menu_modal .menu_main .menu_main_right .menu_bighead li.big_menu {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu_modal .menu_main .menu_main_right .menu_bighead li.big_menu {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_right .menu_bighead li.big_menu {
+    font-size: calc(1em + 0.7vw);
+    margin-bottom: calc(0em + 1vw);
+    width: 25%;
+  }
+}
+
+.menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+}
+
+.menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu {
+  font-family: "SCoreDream";
+  font-size: 20px;
+  color: white;
+  width: 50%;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu {
+    width: 33.33333333333%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu {
+    width: 100%;
+    font-size: calc(18px + 0.1vw);
+    margin-bottom: 20px;
+    font-weight: 200;
+  }
+}
+
+.menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul {
+  padding-top: 10px;
+  display: none;
+}
+
+.menu_modal .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li {
+  list-style: '- ' inside;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 100;
 }
 
 header {
