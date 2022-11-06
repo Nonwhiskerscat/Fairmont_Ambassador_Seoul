@@ -1430,6 +1430,7 @@ section {
                     z-index: -1;
 
                     width: 120vw;
+                    height:50vh;
                     transform: translateY(-10%);
 
                     @include responsive(p1440-screens) {
