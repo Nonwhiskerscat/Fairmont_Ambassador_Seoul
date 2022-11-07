@@ -1100,25 +1100,39 @@ main .room_types .types_flex .types_right p.subs {
   }
 }
 main .room_types .types_flex .types_right ul {
-  background-color: rgba(0, 0, 102, 0.1);
   display: flex;
+  justify-content: space-around;
   width: 100%;
+  margin-top: 30px;
 }
-@media screen and (min-width: 1024px) {
-  main .room_types .types_flex .types_right ul {
-    justify-content: space-around;
-    padding: 40px;
-    height: 50%;
-  }
+main .room_types .types_flex .types_right ul li {
+  text-align: center;
 }
 @media screen and (min-width: 1024px) {
   main .room_types .types_flex .types_right ul li {
-    width: 23%;
-    align-items: center;
+    width: 20%;
   }
 }
 main .room_types .types_flex .types_right ul li img {
   width: 50%;
+  text-align: center;
+}
+main .room_types .types_flex .types_right ul li p {
+  font-family: "SCoreDream";
+  font-size: 14px;
+  text-align: center;
+}
+main .room_types .types_flex .types_right ul li p span.plus {
+  display: none;
+}
+main .room_types .types_flex .types_right .button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+main .room_types .types_flex .types_right .button button {
+  width: 45%;
+  height: 40px;
 }
 
 footer {
