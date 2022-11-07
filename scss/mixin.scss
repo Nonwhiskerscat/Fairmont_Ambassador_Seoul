@@ -1,3 +1,5 @@
+@import './style.scss';
+
 @mixin responsive($break) {
     @if $break == mobile-screens {
         @media screen and (min-width: $break-mobile) {
@@ -98,5 +100,18 @@
     font: {
         family: $t_font;
         size: $t_size;
+    }
+}
+
+@mixin sub_h3 {
+    @include type_custom(2.5em, $eng_title_font);
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 125px;
+
+    @include responsive(pc-screens) {
+        font-size: 5em;
+        margin-bottom: 75px;
+        margin-top: 200px;
     }
 }

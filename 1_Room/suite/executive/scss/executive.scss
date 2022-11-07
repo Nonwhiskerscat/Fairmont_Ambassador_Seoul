@@ -915,7 +915,6 @@ main {
             line-height: 2em;
             @include type_custom(24px, $common_font);
             font-weight: 200;
-            margin-bottom: 125px;
 
             span {
                 font-weight: 400;
@@ -925,21 +924,13 @@ main {
                 margin-top: 150px;
                 font-size: 48px;
                 line-height: 96px;
-                margin-bottom: 200px;
             }
         }
     } //.room_int
 
     .room_gall {
         h3 {
-            @include type_custom(2.5em, $eng_title_font);
-            margin-bottom: 50px;
-
-            @include responsive(pc-screens) {
-                font-size: 5em;
-                margin-bottom: 75px;
-            }
-            text-align: center;
+            @include sub_h3;
         }
 
         .gall_main {
@@ -1023,6 +1014,12 @@ main {
 
         
     }//.room_gall
+
+    .room_types {
+        h3 {
+            @include sub_h3;
+        }
+    }
 } //.main
 
 footer {
