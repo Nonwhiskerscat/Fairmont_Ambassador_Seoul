@@ -1133,6 +1133,19 @@ main .room_types .types_flex .types_right .button {
 main .room_types .types_flex .types_right .button button {
   width: 45%;
   height: 40px;
+  font-family: "SCoreDream";
+  font-size: 18px;
+  font-weight: 200;
+}
+main .room_types .types_flex .types_right .button button:first-child {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+}
+main .room_types .types_flex .types_right .button button:nth-child(2) {
+  background-color: #000066;
+  border: 1px solid #000066;
+  color: white;
 }
 
 footer {

@@ -1143,6 +1143,8 @@ main {
                             @include type_custom(14px, $common_font);
                             text-align: center;
 
+                            @include responsive(tablet-screens);
+
                             span.plus {
                                 display: none;
                             }
@@ -1158,6 +1160,20 @@ main {
                     button {
                         width: 45%;
                         height: 40px;
+                        @include type_custom(18px, $common_font);
+                        font-weight: 200;
+
+                        &:first-child {
+                            background-color: transparent;
+                            border: 1px solid #333;
+                            color: #333;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #000066;
+                            border: 1px solid #000066;
+                            color: white;
+                        }
                     }
                 }
             } //types_right
