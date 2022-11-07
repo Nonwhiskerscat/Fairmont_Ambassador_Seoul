@@ -589,7 +589,8 @@ header .container .menu .menu_type p {
 .main0 .bg-video__content {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main0 h2#type {
   font-family: "KoPubWorldDotum";
@@ -611,6 +612,20 @@ header .container .menu .menu_type p {
     font-size: 5em;
   }
 }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes blink {
   0% {
     opacity: 1;
@@ -629,7 +644,8 @@ header .container .menu .menu_type p {
   content: "|";
   font-family: ScoreDream;
   font-weight: 100;
-  animation: blink 0.5s step-end infinite;
+  -webkit-animation: blink 0.5s step-end infinite;
+          animation: blink 0.5s step-end infinite;
   color: #fff;
 }
 .main0 .colormatte {
@@ -646,6 +662,17 @@ header .container .menu .menu_type p {
   left: 50%;
   bottom: 20px;
 }
+@-webkit-keyframes move {
+  from {
+    bottom: 30px;
+  }
+  75% {
+    bottom: 60px;
+  }
+  to {
+    bottom: 60px;
+  }
+}
 @keyframes move {
   from {
     bottom: 30px;
@@ -655,6 +682,17 @@ header .container .menu .menu_type p {
   }
   to {
     bottom: 60px;
+  }
+}
+@-webkit-keyframes move_pc {
+  from {
+    bottom: 60px;
+  }
+  75% {
+    bottom: 30px;
+  }
+  to {
+    bottom: 30px;
   }
 }
 @keyframes move_pc {
@@ -671,12 +709,14 @@ header .container .menu .menu_type p {
 .main0 .mouse img {
   position: absolute;
   bottom: 40px;
-  animation: move 2s infinite;
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1024px) {
   .main0 .mouse img {
-    animation: move_pc 2s infinite;
+    -webkit-animation: move_pc 2s infinite;
+            animation: move_pc 2s infinite;
   }
 }
 .main0 .mouse p {
@@ -718,7 +758,8 @@ header .container .menu .menu_type p {
 .main1 .bg-video__content {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main1 .contents {
   text-align: center;
@@ -1669,4 +1710,4 @@ footer .container .address .copyright h5 {
 }
 footer .container .address p {
   line-height: 24px;
-}
+}/*# sourceMappingURL=index.css.map */
