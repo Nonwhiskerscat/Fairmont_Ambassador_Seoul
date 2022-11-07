@@ -752,7 +752,7 @@ main .room_int h3.first span {
 }
 main .room_int .room_info {
   margin-top: 100px;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
@@ -766,7 +766,7 @@ main .room_int .room_info img {
 }
 @media screen and (min-width: 1024px) {
   main .room_int .room_info img {
-    width: 100%;
+    width: 100vw;
     max-height: 100vh;
   }
 }
@@ -864,7 +864,7 @@ main .room_int .room_cont .room_sub ul.r_info {
     width: 80%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   main .room_int .room_cont .room_sub ul.r_info {
     width: 100%;
   }
@@ -903,6 +903,9 @@ main .room_int h3.last span {
     font-size: 48px;
     line-height: 96px;
   }
+}
+main .room_gall {
+  margin-top: 125px;
 }
 main .room_gall h3 {
   font-family: "Lemon/Milk light", sans-serif;
@@ -986,6 +989,9 @@ main .room_gall .gall_navi li:nth-child(2) {
     font-size: 3em;
   }
 }
+main .room_types {
+  margin-top: 125px;
+}
 main .room_types h3 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 2.5em;
@@ -997,6 +1003,122 @@ main .room_types h3 {
     font-size: 5em;
     margin-bottom: 75px;
   }
+}
+main .room_types .types_flex {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex {
+    flex-direction: row;
+  }
+}
+main .room_types .types_flex .types_left {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_left {
+    width: 40%;
+  }
+}
+main .room_types .types_flex .types_left h4 {
+  font-family: "SCoreDream";
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+main .room_types .types_flex .types_left h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 0 0 5px 10px;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_left h4 {
+    display: none;
+  }
+}
+main .room_types .types_flex .types_left .type_img {
+  width: 100%;
+  height: calc(200px + 20vw);
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_left .type_img {
+    width: 100%;
+  }
+}
+main .room_types .types_flex .types_left .type_img img {
+  width: 150%;
+  height: 150%;
+  transform: translateY(-100px) scale(0.9);
+  transform-origin: left top;
+}
+@media screen and (min-width: 768px) {
+  main .room_types .types_flex .types_left .type_img img {
+    width: 150%;
+    height: 150%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_left .type_img img {
+    width: 150%;
+    height: 150%;
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_right {
+    width: 55%;
+  }
+}
+main .room_types .types_flex .types_right h4 {
+  font-family: "SCoreDream";
+  font-size: 3em;
+  margin-bottom: 30px;
+  font-weight: 200;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_right h4 {
+    display: block;
+  }
+}
+main .room_types .types_flex .types_right p.subs {
+  font-family: "SCoreDream";
+  font-size: 1em;
+  line-height: 2em;
+  margin-top: 30px;
+  text-align: justify;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_right p.subs {
+    font-size: 24px;
+    line-height: 48px;
+  }
+}
+main .room_types .types_flex .types_right ul {
+  background-color: rgba(0, 0, 102, 0.1);
+  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_right ul {
+    justify-content: space-around;
+    padding: 40px;
+    height: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .room_types .types_flex .types_right ul li {
+    width: 23%;
+    align-items: center;
+  }
+}
+main .room_types .types_flex .types_right ul li img {
+  width: 50%;
 }
 
 footer {

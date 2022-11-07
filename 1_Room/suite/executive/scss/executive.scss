@@ -767,7 +767,7 @@ main {
 
         .room_info{
             margin-top: 100px;
-            width: 100vw;
+            width: 100%;
             overflow: hidden;
 
             
@@ -781,7 +781,7 @@ main {
                 min-height: 700px;
     
                 @include responsive(pc-screens) {
-                    width: 100%;
+                    width: 100vw;
                     max-height: 100vh;
                 }
             }
@@ -880,7 +880,7 @@ main {
                         width: 80%;
                     }
     
-                    @include responsive(tablet-screens) {
+                    @include responsive(pc-screens) {
                         width: 100%;
                     }
     
@@ -901,7 +901,6 @@ main {
                                 font-size: 0.6em;
                                 position: absolute;
                                 top: 20%;
-                                
                             }
                         }
                     } 
@@ -929,6 +928,7 @@ main {
     } //.room_int
 
     .room_gall {
+        margin-top: 125px;
         h3 {
             @include sub_h3;
         }
@@ -1016,9 +1016,138 @@ main {
     }//.room_gall
 
     .room_types {
+        margin-top: 125px;
+
         h3 {
             @include sub_h3;
         }
+
+        .types_flex {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include responsive(pc-screens) {
+                flex-direction: row;
+            }
+
+            .types_left {
+                width: 100%;
+
+                @include responsive(pc-screens) {
+                    width: 40%
+                }
+
+
+                h4 {
+                    @include type_custom(1.5em, $common_font);
+                    margin-bottom: 30px;
+
+                    &::before {
+                        @include title_border_2(30px, 3px, #333, 10px, 5px);
+                    }
+
+                    @include responsive(pc-screens) {
+                        display: none;
+                    }
+                } 
+
+
+                .type_img {
+                    width: 100%;
+                    height: calc(200px + 20vw);
+                    overflow: hidden;
+
+                    @include responsive(pc-screens) {
+                        width: 100%;
+                        // height: calc(100px + 20vw);
+                    }
+
+                    img{
+                        width:150%;
+                        height:150%;
+                        transform: translateY(-100px) scale(0.9);
+                        transform-origin: left top;
+
+                        @include responsive(tablet-screens) {
+                            width: 150%;
+                            height: 150%;
+                        }
+
+                        @include responsive(pc-screens) {
+                            width:150%;
+                            height:150%;
+                            max-width: 700px;
+                        }
+                    }
+                }
+            } // type_left
+
+            .types_right {
+
+                @include responsive(pc-screens) {
+                    width: 55%;
+                }
+
+                h4 {
+                    @include type_custom(3em, $common_font);
+                    margin-bottom: 30px;
+                    font-weight: 200;
+                    display: none;
+
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+
+                } //h4
+
+                p.subs {
+                    @include type_custom(1em, $common_font);
+                    line-height: 2em;
+                    margin-top: 30px;
+                    text-align: justify;
+
+                    @include responsive(pc-screens) {
+                        font-size: 24px;
+                        line-height: 48px;
+
+                    }
+
+                }
+
+                ul {
+                    background-color: rgba(0,0,102,0.1);
+                    display: flex;
+                    width: 100%;
+
+                    @include responsive(pc-screens) {
+                        justify-content: space-around;
+                        padding: 40px;
+                        height: 50%;
+                    }
+                    
+
+                    li {
+
+                        @include responsive(pc-screens) {
+                            width: 23%;
+                            align-items: center;
+
+
+                        }
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            } //types_right
+        }
+
+        
+
+
     }
 } //.main
 
@@ -1046,7 +1175,6 @@ footer {
                 width: 180px;
 
             }
-
 
             img{
                 width: 100%;
