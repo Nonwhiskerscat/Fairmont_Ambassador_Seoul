@@ -78,7 +78,8 @@ header .main-img {
 header .main-img img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .colormatte {
   position: absolute;
@@ -202,6 +203,17 @@ header .mouse {
   position: absolute;
   bottom: 20px;
   left: 50%;
+}
+@-webkit-keyframes move {
+  from {
+    bottom: 60px;
+  }
+  75% {
+    bottom: 30px;
+  }
+  to {
+    bottom: 30px;
+  }
 }
 @keyframes move {
   from {
@@ -568,4 +580,4 @@ footer .container .address .copyright h5 {
 }
 footer .container .address p {
   line-height: 24px;
-}
+}/*# sourceMappingURL=1_Gold_Lounge.css.map */
