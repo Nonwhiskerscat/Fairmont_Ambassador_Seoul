@@ -407,8 +407,6 @@ main section.s2-instruction ul.ins li .img-box img {
   transform: translateX(-50%);
 }
 main section.s2-instruction ul.ins li .s2-text-box {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 35px auto;
 }
@@ -991,4 +989,4 @@ footer .container .address .copyright h5 {
 }
 footer .container .address p {
   line-height: 24px;
-}/*# sourceMappingURL=First_Birthday.css.map */
+}

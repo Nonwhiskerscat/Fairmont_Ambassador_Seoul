@@ -25,8 +25,8 @@ html::-webkit-scrollbar {
 }
 
 .menu_modal {
-    // display: block;
-    display: none;
+    display: block;
+    // display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -462,7 +462,7 @@ html::-webkit-scrollbar {
 }
 
 header{
-    // display: none;
+    display: none;
     width: 100%;
     position: fixed;
     top: 0;
@@ -576,7 +576,7 @@ header{
 }
 
 section {
-    // display: none;
+    display: none;
 }
 
 //header
