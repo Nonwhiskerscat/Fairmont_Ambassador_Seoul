@@ -743,8 +743,8 @@ main .room_int h3.first {
 }
 @media screen and (min-width: 1024px) {
   main .room_int h3.first {
-    font-size: 56px;
-    line-height: 120px;
+    font-size: 48px;
+    line-height: 96px;
   }
 }
 main .room_int h3.first span {
@@ -893,6 +893,7 @@ main .room_int h3.last {
   font-family: "SCoreDream";
   font-size: 24px;
   font-weight: 200;
+  margin-bottom: 125px;
 }
 main .room_int h3.last span {
   font-weight: 400;
@@ -900,9 +901,91 @@ main .room_int h3.last span {
 @media screen and (min-width: 1024px) {
   main .room_int h3.last {
     margin-top: 150px;
-    font-size: 56px;
-    line-height: 120px;
-    margin-bottom: 150px;
+    font-size: 48px;
+    line-height: 96px;
+    margin-bottom: 200px;
+  }
+}
+main .room_gall h3 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main .room_gall h3 {
+    font-size: 5em;
+    margin-bottom: 75px;
+  }
+}
+main .room_gall .gall_main {
+  width: 100%;
+  overflow: hidden;
+}
+main .room_gall .gall_main ul {
+  display: flex;
+  justify-content: space-between;
+  width: 200%;
+  transform: translateX(-25%);
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  main .room_gall .gall_main ul {
+    width: 150%;
+    transform: translateX(-17.5%);
+  }
+}
+main .room_gall .gall_main ul li {
+  width: 50%;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  main .room_gall .gall_main ul li {
+    width: 50%;
+  }
+}
+main .room_gall .gall_main ul li:nth-child(1), main .room_gall .gall_main ul li:nth-child(3) {
+  transform: scale(0.8);
+  transform-origin: top;
+  opacity: 0.3;
+}
+main .room_gall .gall_main ul li img {
+  width: 100%;
+}
+main .room_gall .gall_navi {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  main .room_gall .gall_navi {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .room_gall .gall_navi {
+    width: 20%;
+  }
+}
+main .room_gall .gall_navi li img {
+  width: 50%;
+}
+@media screen and (min-width: 1024px) {
+  main .room_gall .gall_navi li img {
+    width: 80%;
+  }
+}
+main .room_gall .gall_navi li:nth-child(2) {
+  font-family: "SCoreDream";
+  font-size: 2em;
+  transform: translateX(-35%);
+  color: #bdbdbd;
+}
+@media screen and (min-width: 1024px) {
+  main .room_gall .gall_navi li:nth-child(2) {
+    font-size: 3em;
   }
 }
 

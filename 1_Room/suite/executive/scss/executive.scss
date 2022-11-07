@@ -754,8 +754,8 @@ main {
             font-weight: 200;
 
             @include responsive(pc-screens) {
-                font-size: 56px;
-                line-height: 120px;
+                font-size: 48px;
+                line-height: 96px;
             }
 
             span {
@@ -769,6 +769,8 @@ main {
             margin-top: 100px;
             width: 100vw;
             overflow: hidden;
+
+            
 
             @include responsive(pc-screens) {
                 margin-top: 200px;
@@ -913,6 +915,7 @@ main {
             line-height: 2em;
             @include type_custom(24px, $common_font);
             font-weight: 200;
+            margin-bottom: 125px;
 
             span {
                 font-weight: 400;
@@ -920,12 +923,106 @@ main {
 
             @include responsive(pc-screens) {
                 margin-top: 150px;
-                font-size: 56px;
-                line-height: 120px;
-                margin-bottom: 150px;
+                font-size: 48px;
+                line-height: 96px;
+                margin-bottom: 200px;
             }
         }
     } //.room_int
+
+    .room_gall {
+        h3 {
+            @include type_custom(2.5em, $eng_title_font);
+            margin-bottom: 50px;
+
+            @include responsive(pc-screens) {
+                font-size: 5em;
+                margin-bottom: 75px;
+            }
+            text-align: center;
+        }
+
+        .gall_main {
+            width: 100%;
+            overflow: hidden;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 200%;
+                transform: translateX(-25%);
+                margin-bottom: 30px;
+
+                @include responsive(pc-screens) {
+                    width: 150%;
+                    transform: translateX(-17.5%);
+                }
+    
+                li {
+                    width: 50%;
+                    overflow: hidden;
+
+                    @include responsive(pc-screens) {
+                        width: 50%;
+                    }
+
+                    &:nth-child(1), &:nth-child(3) {
+                        transform: scale(0.8);
+                        transform-origin: top;
+                        opacity: 0.3;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+    
+                }
+            }
+        } //gall_main
+
+        .gall_navi {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+
+            @include responsive(tablet-screens) {
+                width: 30%;
+            }
+            
+            @include responsive(pc-screens) {
+                width: 20%;
+            }
+
+            li {
+                img {
+                    width: 50%;
+
+                    @include responsive(pc-screens) {
+                        width: 80%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    @include type_custom(2em,$common_font);
+                    transform: translateX(-35%);
+                    color: #bdbdbd;
+
+                    @include responsive(pc-screens) {
+                        font-size: 3em;
+                    }
+                }
+
+
+
+                
+            } //li
+            
+        }
+
+        
+    }//.room_gall
 } //.main
 
 footer {
