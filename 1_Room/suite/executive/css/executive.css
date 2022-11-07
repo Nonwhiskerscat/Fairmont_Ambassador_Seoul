@@ -729,62 +729,121 @@ section div.main0 .mouse .mo_mouse img {
 main .room_int {
   margin-top: 50px;
 }
-main .room_int h3 {
+@media screen and (min-width: 1024px) {
+  main .room_int {
+    margin-top: 100px;
+  }
+}
+main .room_int h3.first {
   text-align: center;
   line-height: 2em;
   font-family: "SCoreDream";
   font-size: 24px;
   font-weight: 200;
 }
-main .room_int h3 span {
+@media screen and (min-width: 1024px) {
+  main .room_int h3.first {
+    font-size: 56px;
+    line-height: 120px;
+  }
+}
+main .room_int h3.first span {
   font-weight: 400;
 }
-main .room_info {
+main .room_int .room_info {
   margin-top: 100px;
-  position: relative;
   width: 100vw;
   overflow: hidden;
 }
-main .room_info img {
+@media screen and (min-width: 1024px) {
+  main .room_int .room_info {
+    margin-top: 200px;
+  }
+}
+main .room_int .room_info img {
   width: 100vw;
   min-height: 700px;
 }
-main .room_cont {
+@media screen and (min-width: 1024px) {
+  main .room_int .room_info img {
+    width: 100%;
+    max-height: 100vh;
+  }
+}
+main .room_int .room_cont {
   color: white;
   transform: translateY(-200px);
-  background-size: cover;
+  position: relative;
 }
-main .room_cont img.rbm {
+main .room_int .room_cont img.rbm {
   position: absolute;
   top: -20px;
   width: 100%;
   height: 581px;
   z-index: -1;
 }
-main .room_cont img.rbp {
-  display: none;
-  position: absolute;
-  top: -20px;
-  width: 100%;
-  height: 483px;
-  z-index: -1;
+@media screen and (min-width: 1024px) {
+  main .room_int .room_cont img.rbm {
+    display: none;
+  }
 }
-main .room_cont .room_sub {
+main .room_int .room_cont img.rbp {
+  display: none;
+  height: 40vw;
+}
+@media screen and (min-width: 1024px) {
+  main .room_int .room_cont img.rbp {
+    transform: translateY(200px);
+    display: block;
+    max-width: auto;
+    position: absolute;
+    right: 0;
+    opacity: 0.9;
+    width: 515px;
+    height: 640px;
+    transform: translateY(-445px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .room_int .room_cont img.rbp {
+    width: 563px;
+    height: 700px;
+    transform: translateY(-505px);
+  }
+}
+main .room_int .room_cont .room_sub {
   padding-top: 50px;
   text-align: center;
+  position: absolute;
 }
-main .room_cont .room_sub h5 {
+@media screen and (min-width: 1024px) {
+  main .room_int .room_cont .room_sub {
+    right: 0;
+    top: -385px;
+    width: 465px;
+    padding-left: 3.6458333333%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .room_int .room_cont .room_sub {
+    right: 0;
+    top: -445px;
+    width: 515px;
+    padding-left: 3.6458333333%;
+  }
+}
+main .room_int .room_cont .room_sub h5 {
   font-family: "SCoreDream";
   font-size: 2em;
   font-weight: 300;
 }
-main .room_cont .room_sub h6 {
+main .room_int .room_cont .room_sub h6 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 1em;
   padding-top: 5px;
   letter-spacing: 2px;
 }
-main .room_cont .room_sub p.desc {
+main .room_int .room_cont .room_sub p.desc {
   padding-top: 40px;
   text-align: justify;
   line-height: 36px;
@@ -792,7 +851,7 @@ main .room_cont .room_sub p.desc {
   font-size: 1em;
   font-weight: 200;
 }
-main .room_cont .room_sub ul.r_info {
+main .room_int .room_cont .room_sub ul.r_info {
   padding-top: 50px;
   display: flex;
   flex-direction: row;
@@ -801,26 +860,50 @@ main .room_cont .room_sub ul.r_info {
   justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
-  main .room_cont .room_sub ul.r_info {
+  main .room_int .room_cont .room_sub ul.r_info {
     width: 80%;
   }
 }
-main .room_cont .room_sub ul.r_info li p {
+@media screen and (min-width: 768px) {
+  main .room_int .room_cont .room_sub ul.r_info {
+    width: 100%;
+  }
+}
+main .room_int .room_cont .room_sub ul.r_info li p {
   position: relative;
   text-align: center;
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 1em;
   padding-top: 10px;
 }
-main .room_cont .room_sub ul.r_info li p + p {
+main .room_int .room_cont .room_sub ul.r_info li p + p {
   font-family: "SCoreDream";
   font-size: 1.2em;
   font-size: 1.2em;
 }
-main .room_cont .room_sub ul.r_info li p span {
+main .room_int .room_cont .room_sub ul.r_info li p span {
   font-size: 0.6em;
   position: absolute;
   top: 20%;
+}
+main .room_int h3.last {
+  margin-top: 500px;
+  text-align: center;
+  line-height: 2em;
+  font-family: "SCoreDream";
+  font-size: 24px;
+  font-weight: 200;
+}
+main .room_int h3.last span {
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  main .room_int h3.last {
+    margin-top: 150px;
+    font-size: 56px;
+    line-height: 120px;
+    margin-bottom: 150px;
+  }
 }
 
 footer {
