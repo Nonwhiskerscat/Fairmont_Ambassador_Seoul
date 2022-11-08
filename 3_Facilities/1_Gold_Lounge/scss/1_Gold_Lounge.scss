@@ -699,7 +699,141 @@ section div.main0 {
 
 main {
     color: #333;
-} //.main
+    .sec1 .maintext {
+        p {
+            font-size: calc(14px + 1.5vw);
+            line-height: calc(24px + 2vw);  
+            letter-spacing: 1px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            @include responsive(pc-screens) {
+            font-size: 40px;
+            line-height: 60px;
+            }
+
+            .hidden-text {
+                display: none;
+
+                @include responsive(pc-screens) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .sec2 {
+        img {
+            width: 100%;
+        }
+    }
+
+    .sec3 {
+        margin-top: 50px;
+        margin-bottom: 110px;
+
+        .main-text {
+            font-family: $eng_title_font;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+    
+            P {
+                color: #333333;
+                text-align: center;
+    
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    width: 30px;
+                    height: 2px;
+                    background: #333333;
+                    transform: translateX(-50%);
+                    margin-bottom: 37px;
+                }
+            }
+        }
+    }
+
+    .sec4 { 
+        background-color: #fbe7ec;
+
+        .sec4-flex-box {
+            @include responsive(pc-screens) {
+                display: flex;
+            }
+        }
+    
+        .sec4-flex-box ul {
+            line-height: 50px;
+    
+            @include responsive(pc-screens) {
+                width: 100%;
+            }
+        }
+                
+        .sec4-flex-box .li-flex-box {
+            display: flex;
+            justify-content: space-between;
+            
+            div {
+                font-family: $eng_title_font;
+            }
+        }
+    }
+
+    .sec5 {
+        margin-top: 50px;
+        margin-bottom: 110px;
+
+        .main-text {
+            font-family: $eng_title_font;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+    
+            P {
+                color: #333333;
+                text-align: center;
+    
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    width: 30px;
+                    height: 2px;
+                    background: #333333;
+                    transform: translateX(-50%);
+                    margin-bottom: 37px;
+                }
+            }
+        }
+    }
+
+    .sec6 {
+        .sec6-flex-box .notice {
+            font-family: $eng_title_font;
+        }
+        
+        .sec6-flex-box ul {
+            line-height: 50px;
+    
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+        
+        .sec6-flex-box li {
+            list-style: inside;
+        }
+    }
+} // main
 
 footer {
     padding-top: 30px;
