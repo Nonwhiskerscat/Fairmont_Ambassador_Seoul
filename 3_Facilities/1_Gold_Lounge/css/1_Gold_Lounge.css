@@ -699,6 +699,120 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+main .sec1 .maintext p {
+  font-size: calc(14px + 1.5vw);
+  line-height: calc(24px + 2vw);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .maintext p {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+main .sec1 .maintext p .hidden-text {
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .maintext p .hidden-text {
+    display: block;
+  }
+}
+main .sec2 img {
+  width: 100%;
+}
+main .sec3 {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+main .sec3 .main-text {
+  font-family: "Lemon/Milk light", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .sec3 .main-text P {
+  color: #333333;
+  text-align: center;
+}
+main .sec3 .main-text P::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #333333;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+main .sec4 {
+  background-color: #fbe7ec;
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .sec4-flex-box {
+    display: flex;
+  }
+}
+main .sec4 .sec4-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .sec4-flex-box ul {
+    width: 100%;
+  }
+}
+main .sec4 .sec4-flex-box .li-flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+main .sec4 .sec4-flex-box .li-flex-box div {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec5 {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+main .sec5 .main-text {
+  font-family: "Lemon/Milk light", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .sec5 .main-text P {
+  color: #333333;
+  text-align: center;
+}
+main .sec5 .main-text P::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #333333;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+main .sec6 .sec6-flex-box .notice {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec6 .sec6-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec6 .sec6-flex-box ul {
+    width: 50%;
+  }
+}
+main .sec6 .sec6-flex-box li {
+  list-style: inside;
+}
 
 footer {
   padding-top: 30px;

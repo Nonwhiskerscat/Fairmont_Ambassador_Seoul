@@ -72,7 +72,7 @@
     // margin-top: 125px;
 
     @include responsive(pc-screens) {
-        font-size: 5em;
+        font-size: $bigf_title;
         // margin-bottom: 75px;
         // margin-top: 200px;
     }
