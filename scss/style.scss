@@ -15,20 +15,27 @@ $footer_color: '#ffef5a';
 $dkgray_color: '#333333';
 
 //============마진값============/
-$big_margin: 80px;
-$big_margin_p:200px;
+$big_margin_m:100px;
+$big_margin:200px;
+$mid_margin_m: 65px;
 $mid_margin: 125px;
-$mid_margin_p: 65px;
+$small_margin_m: 25px;
 $small_margin: 50px;
-$small_margin_p: 25px;
+$footer_margin_m: 100px; 
+$footer_margin: 200px;
 
 //============폰트사이즈============/
-$bigf_title_p: 80px;
-$bigf_main_p: 48px;
-$bigf_sub_title_p: 48px;
-$middlef_main_p:28px;
-$mainf_p: 18px;
+$bigf_title_m: 0;
+$bigf_title: 80px;
+$bigf_main_m: 0;
+$bigf_main: 48px;
+$bigf_sub_title_m: 0;
+$bigf_sub_title: 48px;
+$middlef_main_m:0;
+$middlef_main:28px;
+$mainf_m: 0;
+$mainf: 18px;
 
 //============레터스페이싱============/
-$bigs_main_p: 96px;
-$mains_p: 36px;
+$bigs_main: 96px;
+$mains: 36px;
