@@ -698,7 +698,204 @@ section div.main0 {
 } // section
 
 main {
-    color: #333;
+    padding-top: 85px;
+    background-color: #9a8c7f;
+    color: white;
+    text-align: center;
+
+    @include responsive(pc-screens) {
+        text-align: left;
+    }
+
+    h2 {
+        // font-size: 55px;
+        margin-bottom: 40px;
+
+        @include responsive(pc-screens) {
+            font-size: 60px;
+        }
+    }
+
+    section {
+        margin-bottom: 135px;
+
+        @include responsive(pc-screens) {
+            margin-bottom: 500px;
+            margin-left: 170px;
+            margin-right: 170px;
+        }
+    }
+
+    .section1-flex {
+        @include responsive(pc-screens) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 290px;
+        }
+
+        h2 {
+            @include responsive(pc-screens) {
+                margin-right: 175px;
+            }
+        }
+
+        p {
+            @include responsive(pc-screens) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .section2-flex {
+
+        @include responsive(pc-screens) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        p {
+            margin-bottom: 50px;
+
+            @include responsive(pc-screens) {
+                font-size: 24px;
+            }
+        }
+
+        .service-icon {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
+
+            @include responsive(pc-screens) {
+                margin-left: 350px;
+            }
+    
+            div {
+                display: block;
+                width: 17%;
+
+                @include responsive(pc-screens) {
+                    margin-right: 30px;
+                    text-align: center;
+                    width: 13%;
+                }
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    font-weight: normal;
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+    
+                p{
+                    font-size: 14px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .map {
+        .section3-flex {
+            img {
+                width: 100%;
+
+                @include responsive(pc-screens) {
+                    width: 80%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        .location {
+            @include responsive(pc-screens) {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            h3 {
+                font-size: 26px;
+                text-align: left;
+                margin-top: 30px;
+                margin-bottom: 12px;
+
+                @include responsive(pc-screens) {
+                    font-size: 36px;
+                }
+            }
+            .row {
+                display: flex;
+                padding-right: 0;
+
+                @include responsive(pc-screens) {
+                    margin-top: 30px;
+                }
+
+                img {
+                    width: 28px;
+                    height: auto;
+                    // margin-right: 5px;
+
+                    @include responsive(pc-screens) {
+                        width: 45px;
+                    }
+                }
+                p{
+                    font-size: 12px;
+                    margin-top: 5px;
+
+                    @include responsive(pc-screens) {
+                        font-size: 26px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .route {
+        .section4-flex {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            .accodion {
+                background-color: #eee;
+                color : #444;
+                cursor : pointer;
+                padding : 18px;
+                flex : 1;
+                text-align: center;
+                font-size: 15px;
+                transition: 0.4s;
+
+                .active,.accodion:hover {
+                    background-color: #ccc;
+                }
+                .panel {
+                    padding : 0 10px;
+                    background-color: white;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                }
+            }
+        }
+    }
 } //.main
 
 footer {
