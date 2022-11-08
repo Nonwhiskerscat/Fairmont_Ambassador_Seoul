@@ -1382,7 +1382,7 @@ footer .footer_entire {
   }
 }
 footer .footer_entire .footer_logo {
-  width: 20%;
+  width: calc(50px + 10vw);
   order: 1;
 }
 @media screen and (min-width: 1400px) {

@@ -709,30 +709,43 @@ footer {
 footer div {
   margin-bottom: 40px;
 }
-footer .container {
+@media screen and (min-width: 1400px) {
+  footer div {
+    margin-bottom: 30px;
+  }
+}
+footer .footer_entire {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 89.7435897436%;
+  max-width: 1800px;
 }
-footer .container .footer_logo {
-  width: 135px;
+@media screen and (min-width: 1400px) {
+  footer .footer_entire {
+    width: 93.75%;
+  }
+}
+footer .footer_entire .footer_logo {
+  width: calc(50px + 10vw);
   order: 1;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .footer_logo {
+  footer .footer_entire .footer_logo {
     width: 180px;
   }
 }
-footer .container .footer_logo img {
+footer .footer_entire .footer_logo img {
   width: 100%;
 }
-footer .container .subscribe {
+footer .footer_entire .subscribe {
   position: relative;
   width: 100%;
   order: 3;
 }
-footer .container .subscribe h4 {
+footer .footer_entire .subscribe h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(0.8em + 1vw);
   letter-spacing: 3px;
@@ -740,67 +753,74 @@ footer .container .subscribe h4 {
   margin-bottom: 2vw;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .subscribe h4 {
+  footer .footer_entire .subscribe h4 {
     font-size: 1.5em;
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1400px) {
-  footer .container .subscribe {
+  footer .footer_entire .subscribe {
     order: 2;
-    width: 26.0416666667%;
+    width: 20%;
   }
 }
-footer .container .subscribe .form_flex {
+footer .footer_entire .subscribe form .form_flex {
   display: flex;
   margin: 0;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .subscribe .form_flex {
+  footer .footer_entire .subscribe form .form_flex {
     display: block;
   }
 }
-footer .container .subscribe .form_flex .form_email {
+footer .footer_entire .subscribe form .form_flex .form_email {
   width: 70%;
   margin: 0;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .subscribe .form_flex .form_email {
+  footer .footer_entire .subscribe form .form_flex .form_email {
     width: 100%;
   }
 }
-footer .container .subscribe form label {
+footer .footer_entire .subscribe form label {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(0.5em + 0.5vw);
   letter-spacing: 2px;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .subscribe form label {
+  footer .footer_entire .subscribe form label {
     font-size: 14px;
   }
 }
-footer .container .subscribe form input {
+footer .footer_entire .subscribe form input {
   display: block;
   border: 0;
   width: 100%;
   background-color: transparent;
   border-bottom: 1px solid white;
-  padding-bottom: 3px;
-  margin: 10px 0 15px;
+  padding-bottom: 0.2vw;
+  margin: 0.5vw 0 0.75vw;
   color: white;
+  outline: none;
   font-family: "SCoreDream";
   font-weight: 200;
 }
-footer .container .subscribe form input:last-child {
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .subscribe form input {
+    margin: 10px 0 15px;
+    padding-bottom: 3px;
+  }
+}
+footer .footer_entire .subscribe form input:last-child {
   width: 100%;
 }
-footer .container .subscribe form button {
+footer .footer_entire .subscribe form button {
   width: 30%;
   height: 70px;
   background-color: transparent;
   color: white;
-  font-size: 1em;
+  font-size: calc(0.5em + 1vw);
   font-family: "SCoreDream";
   font-weight: 200;
   border: 0;
@@ -808,26 +828,33 @@ footer .container .subscribe form button {
   text-align: right;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .subscribe form button {
+  footer .footer_entire .subscribe form button {
     width: 100%;
+    font-size: 22px;
   }
 }
-footer .container .subscribe form button span {
+footer .footer_entire .subscribe form button span {
   margin-left: 10px;
   position: relative;
+  display: none;
 }
-footer .container .subscribe form button span img {
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .subscribe form button span {
+    display: inline;
+  }
+}
+footer .footer_entire .subscribe form button span img {
   width: 20px;
   height: auto;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-footer .container .navigation {
-  width: 220px;
+footer .footer_entire .navigation {
+  width: 70%;
   order: 2;
 }
-footer .container .navigation h4 {
+footer .footer_entire .navigation h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(0.8em + 1vw);
   letter-spacing: 3px;
@@ -835,49 +862,63 @@ footer .container .navigation h4 {
   margin-bottom: 2vw;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .navigation h4 {
+  footer .footer_entire .navigation h4 {
     font-size: 1.5em;
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1400px) {
-  footer .container .navigation {
+  footer .footer_entire .navigation {
     order: 3;
-    width: 25.8333333333%;
+    width: 25%;
   }
 }
-footer .container .navigation .flex_nav {
+footer .footer_entire .navigation .flex_nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-footer .container .navigation .flex_nav li {
+footer .footer_entire .navigation .flex_nav li {
   width: 50%;
-  margin-bottom: 5px;
+  padding-bottom: 2vw;
   align-items: center;
   position: relative;
 }
-footer .container .navigation .flex_nav li span {
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .navigation .flex_nav li {
+    padding-bottom: 20px;
+  }
+}
+footer .footer_entire .navigation .flex_nav li span {
   display: none;
   height: auto;
   margin-right: 10px;
 }
-footer .container .navigation .flex_nav li span img {
-  width: 15px;
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .navigation .flex_nav li span {
+    display: inline;
+  }
+}
+footer .footer_entire .navigation .flex_nav li span img {
+  width: 22px;
   height: auto;
 }
-footer .container .navigation .flex_nav li a {
+footer .footer_entire .navigation .flex_nav li a {
   color: white;
-  font-size: 0.75em;
-  padding-bottom: 5px;
+  font-size: calc(0.5em + 1vw);
 }
-footer .container .address {
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .navigation .flex_nav li a {
+    font-size: 18px;
+  }
+}
+footer .footer_entire .address {
   width: 100%;
   order: 4;
-  font-size: 0.75em;
-  margin: 0;
+  font-size: calc(0.5em + 1vw);
+  padding-bottom: 2vw;
 }
-footer .container .address h4 {
+footer .footer_entire .address h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(0.8em + 1vw);
   letter-spacing: 3px;
@@ -885,26 +926,37 @@ footer .container .address h4 {
   margin-bottom: 2vw;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .address h4 {
+  footer .footer_entire .address h4 {
     font-size: 1.5em;
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1400px) {
-  footer .container .address {
-    width: 24%;
+  footer .footer_entire .address {
+    font-size: 16px;
   }
 }
-footer .container .address span {
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .address {
+    width: 24%;
+    padding-bottom: 20px;
+  }
+}
+footer .footer_entire .address span {
   color: #ffef5a;
 }
-footer .container .address address {
+footer .footer_entire .address address {
   font-style: normal;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
   font-family: "SCoreDream";
   font-weight: 200;
 }
-footer .container .address .copyright h5 {
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .address address {
+    margin-bottom: 10px;
+  }
+}
+footer .footer_entire .address .copyright h5 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 1em;
   letter-spacing: 3px;
@@ -912,10 +964,15 @@ footer .container .address .copyright h5 {
   margin-bottom: 1.5vw;
 }
 @media screen and (min-width: 1400px) {
-  footer .container .address .copyright h5 {
+  footer .footer_entire .address .copyright h5 {
     margin-bottom: 20px;
   }
 }
-footer .container .address p {
-  line-height: 24px;
+footer .footer_entire .address p {
+  line-height: calc(1em + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  footer .footer_entire .address p {
+    line-height: 24px;
+  }
 }
