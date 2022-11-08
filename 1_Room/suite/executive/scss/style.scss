@@ -25,12 +25,14 @@ $footer_margin_m: 100px;
 $footer_margin: 200px;
 
 //============폰트사이즈============/
-$bigf_title_m: 0;
+$bigf_title_m: calc(1em + 5vw);
 $bigf_title: 80px;
 $bigf_main_m: 0;
 $bigf_main: 48px;
 $bigf_sub_title_m: 0;
-$bigf_sub_title: 48px;
+$bigf_sub_title: 40px;
+$regularf_tite_m:0;
+$regularf_title: 32px;
 $middlef_main_m:0;
 $middlef_main:28px;
 $mainf_m: 0;
