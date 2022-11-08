@@ -1,6 +1,6 @@
 @import './style.scss';
 
-@mixin responsive($break) {
+@mixin responsive($break) { // 지원 최소 크기 320px
     @if $break == mobile-screens {
         @media screen and (min-width: $break-mobile) {
             @content;
@@ -14,14 +14,14 @@
     }
 
 
-    @else if $break == pc-screens {
+    @else if $break == pc-screens { //중단점 1400px
         @media screen and (min-width:$break-pc) {
             @content;
         }
     }
 }
 
-@mixin video_matte {
+@mixin video_matte { //비디오 매트(사진을 어둡게 처리)
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +29,59 @@
     width: 100%;
 }
 
-@mixin footer_h4{
+//====================================서브페이지 통일안====================================//
+
+@mixin font_setting {  // a나 input 같이 직접적으로 초기화되기 어려운 태그에 사용
+    font: {
+        family: $common_font;
+        weight: 200;
+    }
+}
+
+@mixin title_border($b_width, $b_height, $b_color, $b_margin){
+    content: "";
+    display: block;
+    width: $b_width;
+    border-bottom: $b_height solid $b_color;
+    margin: $b_margin auto;
+}
+
+@mixin title_border_2($b_width, $b_height, $b_color, $b_margin, $u_margin){
+    content: "";
+    display: block;
+    width: $b_width;
+    border-bottom: $b_height solid $b_color;
+    margin: 0 0 $u_margin $b_margin;
+}
+
+@mixin title_border_pc($b_margin, $u_margin){
+    margin: 0 0 $u_margin $b_margin;
+}
+
+@mixin type_custom($t_size, $t_font){
+    font: {
+        family: $t_font;
+        size: $t_size;
+    }
+}
+
+@mixin sub_h3 {
+    @include type_custom(2.5em, $eng_title_font);
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 125px;
+
+    @include responsive(pc-screens) {
+        font-size: 5em;
+        margin-bottom: 75px;
+        margin-top: 200px;
+    }
+}
+
+
+//======================footer 부분(조장 허락 외에 손대지 말 것)=====================//
+
+@mixin footer_h4{ 
     h4{
         font: {
             family: $eng_title_font;
@@ -76,51 +128,3 @@
     color: #ffef5a;
 }
 
-//가져갈거
-
-@mixin font_setting {
-    font: {
-        family: $common_font;
-        weight: 200;
-    }
-} // a나 input 같이 직접적으로 초기화되기 어려운 태그에 사용
-
-@mixin title_border($b_width, $b_height, $b_color, $b_margin){
-    content: "";
-    display: block;
-    width: $b_width;
-    border-bottom: $b_height solid $b_color;
-    margin: $b_margin auto;
-}
-
-@mixin title_border_2($b_width, $b_height, $b_color, $b_margin, $u_margin){
-    content: "";
-    display: block;
-    width: $b_width;
-    border-bottom: $b_height solid $b_color;
-    margin: 0 0 $u_margin $b_margin;
-}
-
-@mixin title_border_pc($b_margin, $u_margin){
-    margin: 0 0 $u_margin $b_margin;
-}
-
-@mixin type_custom($t_size, $t_font){
-    font: {
-        family: $t_font;
-        size: $t_size;
-    }
-}
-
-@mixin sub_h3 {
-    @include type_custom(2.5em, $eng_title_font);
-    margin-bottom: 50px;
-    text-align: center;
-    margin-top: 125px;
-
-    @include responsive(pc-screens) {
-        font-size: 5em;
-        margin-bottom: 75px;
-        margin-top: 200px;
-    }
-}

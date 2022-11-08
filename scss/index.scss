@@ -7,7 +7,7 @@ html::-webkit-scrollbar {
 }
 
 .menu_modal {
-    // display: none;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -426,7 +426,7 @@ html::-webkit-scrollbar {
 }
 
 header{
-    display: none;
+    // display: none;
     width: 100%;
     position: fixed;
     top: 0;
@@ -531,7 +531,7 @@ header{
 }
 
 section {
-    display: none;
+    // display: none;
 }
 
 //header
@@ -1466,6 +1466,7 @@ footer {
     }
     
     .footer_entire{
+        // background-color: rebeccapurple;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1538,6 +1539,7 @@ footer {
                     padding-bottom: 0.2vw;
                     margin: 0.5vw 0 0.75vw;
                     color: white;
+                    outline: none;
                     @include font_setting;
 
                     @include responsive(pc-screens) {
@@ -1565,6 +1567,7 @@ footer {
 
                     @include responsive(pc-screens) {
                         width: 100%;
+                        font-size: 22px;
                     }
 
                     span{

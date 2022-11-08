@@ -66,6 +66,7 @@ html::-webkit-scrollbar {
 }
 
 .menu_modal {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -445,7 +446,6 @@ html::-webkit-scrollbar {
 }
 
 header {
-  display: none;
   width: 100%;
   position: fixed;
   top: 0;
@@ -533,10 +533,6 @@ header .header_entire .menu .menu_type p {
   header .header_entire .menu .menu_type p {
     font-size: 1.2em;
   }
-}
-
-section {
-  display: none;
 }
 
 .main0 {
@@ -1459,6 +1455,7 @@ footer .footer_entire .subscribe form input {
   padding-bottom: 0.2vw;
   margin: 0.5vw 0 0.75vw;
   color: white;
+  outline: none;
   font-family: "SCoreDream";
   font-weight: 200;
 }
@@ -1486,6 +1483,7 @@ footer .footer_entire .subscribe form button {
 @media screen and (min-width: 1400px) {
   footer .footer_entire .subscribe form button {
     width: 100%;
+    font-size: 22px;
   }
 }
 footer .footer_entire .subscribe form button span {

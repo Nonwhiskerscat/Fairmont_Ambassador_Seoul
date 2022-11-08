@@ -1,32 +1,27 @@
 @import './style.scss';
 
-@mixin responsive($break) {
+@mixin responsive($break) { // 지원 최소 크기 320px
     @if $break == mobile-screens {
         @media screen and (min-width: $break-mobile) {
             @content;
         }
     }
 
-    @else if $break == tablet-screens {
-        @media screen and (min-width:$break-tablet) {
+    @else if $break == screen-800 {  // 이것은 br을 없애기 위해 사용된 값입니다. 사용 시 조장에 허락을 맡으시길 바랍니다.
+        @media screen and (min-width:$break-middle) {
             @content;
         }
     }
 
-    @else if $break == pc-screens {
+
+    @else if $break == pc-screens { //중단점 1400px
         @media screen and (min-width:$break-pc) {
-            @content;
-        }
-    }
-
-    @else if $break == p1440-screens {
-        @media screen and (min-width:$break-p1440) {
             @content;
         }
     }
 }
 
-@mixin video_matte {
+@mixin video_matte { //비디오 매트(사진을 어둡게 처리)
     position: absolute;
     top: 0;
     left: 0;
@@ -34,47 +29,14 @@
     width: 100%;
 }
 
-@mixin footer_h4{
-    h4{
-        font: {
-            family: $eng_title_font;
-            size: 16px;
-        }
-        letter-spacing: 3px;
-        color: #ffef5a;
-        margin-bottom: 20px;
-    }
-}
+//====================================서브페이지 통일안====================================//
 
-@mixin footer_h5{
-    h5{
-        font: {
-            family: $eng_title_font;
-            size: 0.875em;
-        }
-        letter-spacing: 3px;
-        color: #ffef5a;
-        margin-bottom: 20px;
-    }
-}
-
-@mixin footer_label{
-    font: {
-        family: $eng_title_font;
-        size: 14px;
-    }
-    letter-spacing: 2px;
-    color: #ffef5a;
-}
-
-//가져갈거
-
-@mixin font_setting {
+@mixin font_setting {  // a나 input 같이 직접적으로 초기화되기 어려운 태그에 사용
     font: {
         family: $common_font;
         weight: 200;
     }
-} // a나 input 같이 직접적으로 초기화되기 어려운 태그에 사용
+}
 
 @mixin title_border($b_width, $b_height, $b_color, $b_margin){
     content: "";
@@ -107,9 +69,62 @@
     @include type_custom(2.5em, $eng_title_font);
     margin-bottom: 50px;
     text-align: center;
+    margin-top: 125px;
 
     @include responsive(pc-screens) {
         font-size: 5em;
         margin-bottom: 75px;
+        margin-top: 200px;
     }
 }
+
+
+//======================footer 부분(조장 허락 외에 손대지 말 것)=====================//
+
+@mixin footer_h4{ 
+    h4{
+        font: {
+            family: $eng_title_font;
+            size: calc(0.8em + 1vw);
+        }
+        letter-spacing: 3px;
+        color: #ffef5a;
+        margin-bottom: 2vw;
+
+        @include responsive(pc-screens) {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@mixin footer_h5{
+    h5{
+        font: {
+            family: $eng_title_font;
+            size: 1em;
+        }
+        letter-spacing: 3px;
+        color: #ffef5a;
+        margin-bottom: 1.5vw;
+
+        @include responsive(pc-screens){
+            margin-bottom: 20px;
+
+        }
+    }
+}
+
+@mixin footer_label{
+    font: {
+        family: $eng_title_font;
+        size: calc(0.5em + 0.5vw);
+    }
+    letter-spacing: 2px;
+
+    @include responsive(pc-screens) {
+        font-size: 14px;
+    }
+    color: #ffef5a;
+}
+

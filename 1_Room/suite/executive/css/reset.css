@@ -11,6 +11,18 @@ body {
   font-size: 1.125em;
 }
 
+.wrapper {
+  width: 100%;
+  color: white;
+}
+
+.container {
+  width: 89.7435897436%;
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 a {
   color: #333333;
   text-decoration: none;
