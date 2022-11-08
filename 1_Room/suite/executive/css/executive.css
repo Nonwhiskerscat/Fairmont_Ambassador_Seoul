@@ -566,6 +566,19 @@ section div.main0 .bg_img img {
     height: 100vh;
   }
 }
+section div.main0 .bg_img img.main_pc {
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  section div.main0 .bg_img img.main_pc {
+    display: block;
+  }
+}
+@media screen and (min-width: 1400px) {
+  section div.main0 .bg_img img.main_phone {
+    display: none;
+  }
+}
 section div.main0 .main0_contents {
   position: absolute;
   text-align: center;

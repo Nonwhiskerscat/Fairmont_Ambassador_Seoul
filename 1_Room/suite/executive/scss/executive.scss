@@ -560,6 +560,20 @@ section div.main0 {
                     width: 100vw;
                     height:100vh;
                 }
+
+                &.main_pc {
+                    display: none;
+
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+                }
+
+                &.main_phone {
+                    @include responsive(pc-screens) {
+                        display: none;
+                    }
+                }
             }
         }
 
