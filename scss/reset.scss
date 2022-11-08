@@ -17,6 +17,20 @@ body {
     }
 }
 
+.wrapper {
+    width: 100%;
+    // background-color: rgb(151, 168, 240);
+    color: white;
+}
+
+.container {
+    width: 89.74358974358974%;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
 a {
     color: #333333;
     text-decoration: none;

@@ -7,20 +7,15 @@
         }
     }
 
-    @else if $break == tablet-screens {
-        @media screen and (min-width:$break-tablet) {
+    @else if $break == screen-800 {  // 이것은 br을 없애기 위해 사용된 값입니다. 사용 시 조장에 허락을 맡으시길 바랍니다.
+        @media screen and (min-width:$break-middle) {
             @content;
         }
     }
+
 
     @else if $break == pc-screens {
         @media screen and (min-width:$break-pc) {
-            @content;
-        }
-    }
-
-    @else if $break == p1440-screens {
-        @media screen and (min-width:$break-p1440) {
             @content;
         }
     }
@@ -38,11 +33,16 @@
     h4{
         font: {
             family: $eng_title_font;
-            size: 16px;
+            size: calc(0.8em + 1vw);
         }
         letter-spacing: 3px;
         color: #ffef5a;
-        margin-bottom: 20px;
+        margin-bottom: 2vw;
+
+        @include responsive(pc-screens) {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -50,20 +50,29 @@
     h5{
         font: {
             family: $eng_title_font;
-            size: 0.875em;
+            size: 1em;
         }
         letter-spacing: 3px;
         color: #ffef5a;
-        margin-bottom: 20px;
+        margin-bottom: 1.5vw;
+
+        @include responsive(pc-screens){
+            margin-bottom: 20px;
+
+        }
     }
 }
 
 @mixin footer_label{
     font: {
         family: $eng_title_font;
-        size: 14px;
+        size: calc(0.5em + 0.5vw);
     }
     letter-spacing: 2px;
+
+    @include responsive(pc-screens) {
+        font-size: 14px;
+    }
     color: #ffef5a;
 }
 

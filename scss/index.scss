@@ -6,26 +6,7 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-.wrapper {
-    width: 100%;
-    // background-color: rgb(151, 168, 240);
-    color: white;
-}
-
-.container {
-    width: 89.74358974358974%;
-    margin: 0 auto;
-    // background-color: rgb(255, 161, 161);
-    position: relative;
-
-    @include responsive(tablet-screens){
-        width: 93.75%;
-        // background-color: rgb(139, 168, 10);
-    }
-}
-
 .menu_modal {
-    display: block;
     // display: none;
     position: absolute;
     left: 0;
@@ -33,432 +14,409 @@ html::-webkit-scrollbar {
     width: 100%;
     background-color: #333333;
 
-    @include responsive(p1440-screens){
+    @include responsive(pc-screens){
         height: 100vh;
     }
-    
 
-    .menu_header {
-        width: 100%;
-
-        h1 {
-            display: none;
-            text-align: center;
-            @include type_custom(56px, $eng_title_font);
-            
-            @include responsive(pc-screens) {
-                display: block;
-            }
+    .menu_entire{
+        width: 89.74358974358974%;
+        margin: 0 auto;
+        
+        @include responsive(pc-screens) {
+            width: 93.75%;
         }
 
-        .menu_header_flex{
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-
-            @include responsive(tablet-screens) {
-                margin-top: 22.5px;
-            }
-
-            @include responsive(pc-screens) {
-                margin-top: 25px;
-            }
-
-            .not_for_m{
+        .menu_header {
+    
+            h1 {
                 display: none;
-
-                @include responsive(pc-screens) {
-                    display: block;
-                }
             }
-
-            .menu_header_left {
+    
+            .menu_header_flex{
                 display: flex;
-
+                justify-content: space-between;
+                margin-top: 20px;
+    
                 @include responsive(pc-screens) {
+                    margin-top: 25px;
                 }
-
-                .menu_lan {
-                    order: 2;
-
+    
+                .not_for_m{
+                    display: none;
+    
                     @include responsive(pc-screens) {
-                        margin-right: calc(10px + 3vw);
-                    }
-
-                    label {
-                        color: white;
-                        letter-spacing: 1px;
-                        @include type_custom(1em,$eng_title_font);
-
-                        @include responsive(pc-screens) {
-                            order: 1;
-                            display: inline;
-                            font-size: 1.2em;
-                        }
-                        
-                    }
-
-                    select {
-                        margin-left: 10px;
-                        color: white;
-                        @include type_custom(0.75em,$common_font);
-                        background: transparent;
-                        border: 0;
-                        border-bottom: 1px solid white;
-                        border-collapse: collapse;
-                        outline: none;
-
-                        @include responsive(pc-screens) {
-                            display: inline;
-                            font-size: 0.9em;
-                        }
-                    }
-
-                    option {
-                        background-color: #333333;
-                        border: 0;
-                        opacity: 0.5;
-
-                        &:hover{
-                            background-color: white;
-                            color: #333333;
-                        }
+                        display: block;
                     }
                 }
-
-                .menu_sns {
-                    width: 70px;
-                    order: 1;
-                    @include type_custom(1em,$eng_title_font);
-                    letter-spacing: 1px;
-
+    
+                .menu_header_left {
+                    display: flex;
+    
                     @include responsive(pc-screens) {
-                        display: inline;
-                        font-size: 1.2em;
+                    }
+    
+                    .menu_lan {
                         order: 2;
-                    }
-
-                    ul{
-                        display: flex;
-                        justify-content: space-between;
-
-                        li{
-                            margin-left: 5px;
+    
+                        @include responsive(pc-screens) {
+                            margin-right: 50px;
+                        }
+    
+                        label {
+                            color: white;
+                            letter-spacing: 1px;
+                            @include type_custom(1em,$eng_title_font);
+    
                             @include responsive(pc-screens) {
-                                margin-left: 10px;
+                                order: 1;
+                                display: inline;
+                                font-size: 1.2em;
                             }
                             
                         }
+    
+                        select {
+                            margin-left: 2.5641vw;
+                            color: white;
+                            @include type_custom(0.75em,$common_font);
+                            background: transparent;
+                            border: 0;
+                            border-bottom: 1px solid white;
+                            border-collapse: collapse;
+                            outline: none;
+                            transform: translateY(-5px);
+    
+                            @include responsive(pc-screens) {
+                                display: inline;
+                                font-size: 0.9em;
+                                margin-left: 10px;
+                            }
+                        }
+    
+                        option {
+                            background-color: #333333;
+                            border: 0;
+                            opacity: 0.5;
+    
+                            &:hover{
+                                background-color: white;
+                                color: #333333;
+                            }
+                        }
+                    }
+    
+                    .menu_sns {
+                        width: 70px;
+                        order: 1;
+                        @include type_custom(1em,$eng_title_font);
+                        letter-spacing: 1px;
+    
+                        @include responsive(pc-screens) {
+                            display: inline;
+                            font-size: 1.2em;
+                            order: 2;
+                        }
+    
+                        ul{
+                            display: flex;
+                            justify-content: space-between;
+    
+                            li{
+                                margin-left: 5px;
+                                @include responsive(pc-screens) {
+                                    margin-left: 10px;
+                                }
+                                
+                            }
+                        }
                     }
                 }
-            }
-
-            .menu_header_right {
-                display: flex;
-                
-                .menu_login {
-                    transform: translateX(-20px);
+    
+                .menu_header_right {
+                    display: flex;
                     
-                    @include responsive(pc-screens){
-                        // margin-right: calc(10px + 3vw);
+                    .menu_login {
+                        transform: translateX(-20px);
+                        
+                        @include responsive(pc-screens){
+                            // margin-right: calc(10px + 3vw);
+                        }
+    
+                        a{
+                            display: flex;
+    
+                            img{
+                                margin-right: 5px;
+                                width: 18px;
+                                height: 18px;
+    
+                                @include responsive(pc-screens) {
+                                    margin-right: 10px;
+                                    width: 22px;
+                                    height: 22px;
+                                }
+    
+                            }
+    
+                            p {
+                                @include type_custom(1em,$eng_title_font);
+                                color: white;
+                                letter-spacing: 1px;
+                            }
+                        }
+    
+                        
                     }
-
-                    a{
+    
+                    .menu_close {
                         display: flex;
-
-                        img{
-                            margin-right: 5px;
-                            width: 18px;
+    
+                        .close_modal{
+                            position: relative;
+                            width: 18px; 
                             height: 18px;
-
+                            margin: 0 auto;
+                            display: inline;
+    
                             @include responsive(pc-screens) {
-                                margin-right: 10px;
                                 width: 22px;
                                 height: 22px;
                             }
-
-                        }
-
-                        p {
-                            @include type_custom(1em,$eng_title_font);
-                            color: white;
-                            letter-spacing: 1px;
-                        }
-                    }
-
-                    
-                }
-
-                .menu_close {
-                    display: flex;
-
-                    .close_modal{
-                        position: relative;
-                        width: 18px; 
-                        height: 18px;
-                        margin: 0 auto;
-                        display: inline;
-
-                        @include responsive(pc-screens) {
-                            width: 22px;
-                            height: 22px;
-                        }
-
-                        span{
-                            position: absolute;
-                            top: 50%;
-                            right: 0;
-                            width: 100%;
-                            height: 2px;
-                            background-color: #fff;
-                            @include responsive(pc-screens){
-                                margin-left: 0;
-                            }
-
-                            &:first-child{
-                                transform: rotate(135deg) translateX(0%);
-                            }
-
-                            &:nth-child(2) {
-                                transform: rotate(45deg) translateX(0%);
-                            }
-
-                        }
-                    }
-
-                    p{
-                        margin-left: 10px;
-                        @include responsive(pc-screens) {
-                            @include type_custom(1em, $eng_title_font);
-                            color: white;
-                            letter-spacing: 1px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .menu_main {
-        padding-top: 65px;
-        display: flex;
-        flex-direction: column;
-
-        @include responsive(tablet-screens) {
-            padding-top: 67.5px;
-        }
-
-        @include responsive(pc-screens) {
-            padding-top: 0;
-        }
-
-        @include responsive(p1440-screens) {
-            flex-direction: row;
-            // align-items: center;
-            padding-top: calc(1vw);
-        }
-
-        .menu_main_left{
-            // background-color: cadetblue;
-            display: flex;
-            flex-direction: row;
-            padding-top: 20px;
-            align-items: center;
-
-            @include responsive(p1440-screens){
-                // background-color: #ffef5a;
-                width: 30%;
-                flex-direction: column;
-            }
-
-            .img{
-                text-align: center;
-                width: 40%;
-
-                @include responsive(p1440-screens) {
-                    width: 80%;
-                }
-
-                img.mm_logo {
-                    width: calc(130px + 10vw);
-                    @include responsive(p1440-screens) {
-                        display: none;
-                    }
-                }
     
-                img.pm_logo{
-                    display: none;
-                    width: 80%;
-                    max-width: 300px;
-                    margin: 0 auto;
-                    
-                    @include responsive(p1440-screens) {
-                        display: block;
-                        
-                    }
-
-                }
-
-            }
-
-            .contents {
-                width: 60%;
-
-                @include responsive(pc-screens) {
-                    width: 90%;
-                }
-                p{
-                    @include type_custom(calc(1em + 0.5vw), $common_font);
-                    text-align: center;
-                    line-height: 2em;
-
-                    @include responsive(tablet-screens) {
-                        font-size: calc(0.5em + 2vw);
-                    }
-
-                    @include responsive(p1440-screens) {
-                        margin-top: calc(50px + 0.5vw);
-                        font-size: calc(0.8em + 0.7vw);
-                    }
-
-                    br {
-
-                        @include responsive(tablet-screens) {
-                            display: none;
+                            span{
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: #fff;
+                                @include responsive(pc-screens){
+                                    margin-left: 0;
+                                }
+    
+                                &:first-child{
+                                    transform: rotate(135deg) translateX(0%);
+                                }
+    
+                                &:nth-child(2) {
+                                    transform: rotate(45deg) translateX(0%);
+                                }
+    
+                            }
                         }
-
-                        @include responsive(p1440-screens) {
-                            display: block;
-                        }
-                    }
-
-                    span.pc {
-                        display: none;
-
-                        @include responsive(p1440-screens) {
-                            display: inline;
-                        }
-                    }
-
-                    @include responsive(p1440-screens) {
-                        span.mob {
-                            display: none;
+    
+                        p{
+                            margin-left: 10px;
+                            @include responsive(pc-screens) {
+                                @include type_custom(1em, $eng_title_font);
+                                color: white;
+                                letter-spacing: 1px;
+                            }
                         }
                     }
                 }
             }
-            
-
-        } //menu_main_left
-
-        .menu_main_right {
-            // background-color: darkblue;
+        }
+    
+        .menu_main {
+            padding-top: 6.4103vw;
             display: flex;
             flex-direction: column;
-            padding-top: 50px;
-            font-weight: 100;
-            width: 100%;
-            
-            @include responsive(p1440-screens) {
-                width: 70%;
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-
-            a{
-                color: white;
-            }
-
-            li{
-                cursor: pointer;
-            }
-
-            .menu_bighead {
-                // background-color: rebeccapurple;
-
-                @include responsive(p1440-screens) {
-                    // background-color: rebeccapurple;
-                    display: flex;
-                    flex-wrap: wrap;
-                    margin: 0 auto;
-                    width: 100%;
-                    justify-content: space-between;
-                    
-                }
-        
-                li.big_menu {
-                    @include type_custom(28px, $eng_title_font);
-                    letter-spacing: 2px;
-                    margin-bottom: 50px;
-
-                    @include responsive(pc-screens) {
-                        font-size: 32px;
-                    }
-
-                    @include responsive(p1440-screens) {
-                        // background-color: deeppink;
-                        font-size: calc(1em + 0.7vw);
-                        margin-bottom: calc(0em + 1vw);
-                        width: 25%;
-                    }
-                }
-
-
-
-                .menu_semi_head {
-                    padding-top: 20px;
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-
-                    @include responsive(p1440-screens) {
-                        flex-direction: column;
-                        padding-top: 30px;
-                    }
-                    
+            justify-content: space-between;
     
-                    li.mid_menu {
-                        @include type_custom(20px, $common_font);
-                        color: white;
-                        width: 50%;
-                        font-weight: 300;
-                        margin-bottom: 15px;
+            @include responsive(pc-screens) {
+                flex-direction: row;
+                // align-items: center;
+                padding-top: 100px ;
+                max-width: 1800px;
 
-                        @include responsive(tablet-screens) {
-                            width: 33.33333333333%;
-                        }
+            }
+    
+            .menu_main_left{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+    
+                @include responsive(pc-screens){
+                    width: 30%;
+                    flex-direction: column;
+                }
+    
+                .img{
+                    text-align: center;
+                    width: 40%;
+    
+                    @include responsive(pc-screens) {
+                        width: 80%;
+                        max-width: 800px;
+                    }
+    
+                    img.mm_logo {
+                        width: calc(20vw);
 
-
-                        @include responsive(p1440-screens) {
-                            width: 100%;
-                            font-size: calc(18px + 0.1vw);
-                            margin-bottom: 20px;
-                            font-weight: 200;
-                        }
-
-                        ul{
-                            padding-top: 10px;
+                        @include responsive(pc-screens) {
                             display: none;
+                        }
+                    }
+        
+                    img.pm_logo{
+                        display: none;
+                        max-width: 300px;
+                        margin: 0 auto;
+                        
+                        @include responsive(pc-screens) {
+                            display: block;
+                            width: 200px;
+                            margin-top: 50px;
+                        }
+    
+                    }
+    
+                }
+    
+                .contents {
+                    width: 60%;
+    
+                    @include responsive(pc-screens) {
+                        width: 90%;
+                    }
+                    p{
+                        @include type_custom(0, $common_font);
+                        font-size: calc(0.5em + 1.5vw);
+                        text-align: center;
+                        line-height: 2em;
+    
+                        @include responsive(pc-screens) {
+                            margin-top: 40px;
+                            font-size: 21px;
+                        }
+    
+                        br {
 
-                            li{
-                                list-style: '- ' inside;
-                                font-size: 16px;
-                                margin-bottom: 10px;
-                                font-weight: 100;
+                            @include responsive(screen-800) {
+                                display: none;
+                            }
+    
+                            @include responsive(pc-screens) {
+                                display: block;
+                            }
+                        }
+    
+                        span.pc {
+                            display: none;
+    
+                            @include responsive(pc-screens) {
+                                display: inline;
+                            }
+                        }
+    
+                        @include responsive(pc-screens) {
+                            span.mob {
+                                display: none;
                             }
                         }
                     }
                 }
+                
+    
+            } //menu_main_left
+    
+            .menu_main_right {
+                // background-color: darkblue;
+                display: flex;
+                flex-direction: column;
+                padding-top: 50px;
+                font-weight: 100;
+                width: 100%;
+                
+                @include responsive(pc-screens) {
+                    width: 70%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+    
+                a{
+                    color: white;
+                }
+    
+                li{
+                    cursor: pointer;
+                }
+    
+                .menu_bighead {
+                    // background-color: rebeccapurple;
+    
+                    @include responsive(pc-screens) {
+                        // background-color: rebeccapurple;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 0 auto;
+                        width: 100%;
+                        justify-content: space-between;
+                        
+                    }
+            
+                    li.big_menu {
+                        @include type_custom(28px, $eng_title_font);
+                        letter-spacing: 2px;
+                        margin-bottom: 50px;
+    
+                        @include responsive(pc-screens) {
+                            // background-color: deeppink;
+                            font-size: calc(1em + 0.7vw);
+                            margin-bottom: calc(0em + 1vw);
+                            width: 25%;
+                        }
+                    }
+    
+    
+    
+                    .menu_semi_head {
+                        padding-top: 20px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+    
+                        @include responsive(pc-screens) {
+                            flex-direction: column;
+                            padding-top: 30px;
+                        }
+                        
+        
+                        li.mid_menu {
+                            @include type_custom(20px, $common_font);
+                            color: white;
+                            width: 50%;
+                            font-weight: 300;
+                            margin-bottom: 15px;
+    
+                            @include responsive(pc-screens) {
+                                width: 100%;
+                                font-size: calc(18px + 0.1vw);
+                                margin-bottom: 20px;
+                                font-weight: 200;
+                            }
+    
+                            ul{
+                                padding-top: 10px;
+                                display: none;
+    
+                                li{
+                                    list-style: '- ' inside;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                    font-weight: 100;
+                                }
+                            }
+                        }
+                    }
+        
+                }
     
             }
-
         }
     }
+    
 }
 
 header{
@@ -470,16 +428,19 @@ header{
     right: 0;
     z-index: 999;
 
-    .container{
+    .header_entire{
         display: flex;
         justify-content: space-between;
+        width: 89.74358974358974%;
+        margin: 0 auto;
+        
+        @include responsive(pc-screens) {
+            width: 93.75%;
+        }
     
         .header_logo {
             width: 126px;
     
-            @include responsive(tablet-screens){
-                width: 160px;
-            }
     
             @include responsive(pc-screens){
                 width: 200px;
@@ -489,11 +450,6 @@ header{
                 width: 126px;
                 height: auto;
                 margin-top: 15px;
-    
-                @include responsive(tablet-screens){
-                    width: 160px;
-                    margin-top: 17.5px;
-                }
     
                 @include responsive(pc-screens){
                     width: 200px;
@@ -510,10 +466,6 @@ header{
             align-items: center;
             text-align: right;
             margin-top: 5px;
-    
-            @include responsive(tablet-screens){
-                width: 75px;
-            }
     
             @include responsive(pc-screens){
                 width: 80px;
@@ -557,10 +509,6 @@ header{
                 p{
                     font-family: $eng_title_font, sans-serif;
                     font-size: 1em;
-
-                    @include responsive(tablet-screens){
-                        font-size: 1em;
-                    }
             
                     @include responsive(pc-screens){
                         font-size: 1.2em;
@@ -750,10 +698,6 @@ section {
             font-weight: 400;
             margin-bottom: 15px;
 
-            @include responsive(tablet-screens) {
-                font-size: 30px;
-                margin-bottom: 20px;
-            }
 
             @include responsive(pc-screens) {
                 font-size: 36px;
@@ -811,7 +755,7 @@ section {
         left: 50%;
         transform: translateX(-50%);
 
-        @include responsive(p1440-screens) {
+        @include responsive(pc-screens) {
             left: 35.67708333333334%;
             transform: translateX(-50%);
         }
@@ -888,11 +832,7 @@ section {
                             
                             transform: translateX(-25%);
     
-                            @include responsive(tablet-screens) {
-                                transform: translateX(-15%);
-                            }
-    
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 width: 100vw;
                                 height: 100vh;
                                 transform: translateX(0);
@@ -912,12 +852,7 @@ section {
                     height: 270px;
                     background-color: rgba(255,255,255,0.8);
 
-
-                    @include responsive(tablet-screens) {
-                        top: 150px;
-                    }
-
-                    @include responsive(p1440-screens) {
+                    @include responsive(pc-screens) {
                         right: 0;
                         top: 0;
                         width: 28.64583333333333%;
@@ -928,7 +863,7 @@ section {
                     .rooms{
                         color: #666666;
     
-                        @include responsive(p1440-screens) {
+                        @include responsive(pc-screens) {
                             width: 93.75%;
                         }
 
@@ -940,7 +875,7 @@ section {
                             right: 0;
                             letter-spacing: 2px;
     
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 white-space: nowrap;
                                 right: 100%;
                                 transform: rotateZ(-90deg) translateX(12px) translateY(12px);
@@ -952,19 +887,15 @@ section {
                                 size: 2em;
                             }
     
-                            @include responsive(tablet-screens) {
-                                font-size: 3em;
-                                top: -52px;
-                            }
     
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 @include type_custom(5em, 'Lemon/Milk')
                                 
                             }
                         }
 
                         .container{
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 width: 100%;
                                 padding-left: 12.72727272727273%;
                                 padding-right: 10%;
@@ -976,7 +907,7 @@ section {
                                 @include type_custom(1.5em,$eng_title_font);
                                 padding-top: 20px;
         
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     padding-top: 250px;
                                     letter-spacing: 2px;
                                     font-size: 2.3em;
@@ -985,7 +916,7 @@ section {
                                 &::before {
                                     @include title_border_2(30px, 3px, #666666, 10px, 5px);
         
-                                    @include responsive(p1440-screens) {
+                                    @include responsive(pc-screens) {
                                         @include title_border_2(45px, 6px, #666666, 10px, 5px);
                                     }
                                 }
@@ -994,7 +925,7 @@ section {
                                     display: inline;
                                     @include type_custom(16px, $eng_title_font);
         
-                                    @include responsive(p1440-screens) {
+                                    @include responsive(pc-screens) {
                                         margin-left: calc(13px + 0.1vw);
                                         font-size: 0.5em;
                                     }
@@ -1006,7 +937,7 @@ section {
                                 flex-wrap: wrap;
                                 margin-top: 10px;
         
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     margin-top: 30px
                                 }
         
@@ -1019,7 +950,7 @@ section {
                                     line-height: 30px;
         
                                     
-                                    @include responsive(p1440-screens) {
+                                    @include responsive(pc-screens) {
                                         font-size: 18px;
                                         margin-right: 20px;
                                     }
@@ -1038,7 +969,7 @@ section {
                                 text-align: justify;
                                 letter-spacing: 1px;
         
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     margin-top: 50px;
                                     font-size: 18px;
                                     line-height: 2em;
@@ -1060,7 +991,7 @@ section {
                                 text-align: center;
                                 font-weight: 200;
         
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     width: 240px;
                                     height: 50px;
                                     font-size: 22px;
@@ -1104,7 +1035,7 @@ section {
         left: 50%;
         transform: translateX(-50%);
 
-        @include responsive(p1440-screens) {
+        @include responsive(pc-screens) {
             left: 64.32291666666666%;
             transform: translateX(-50%);
         }
@@ -1181,11 +1112,7 @@ section {
                             
                             transform: translateX(-25%) translateY(-20%);
     
-                            @include responsive(tablet-screens) {
-                                transform: translateX(-10%) translateY(-20%);
-                            }
-    
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 width: 100vw;
                                 height: 100vh;
                                 transform: translateX(0);
@@ -1206,7 +1133,7 @@ section {
                     height: 100%;
                     background-color: rgba(0,0,0,0.2);
 
-                    @include responsive(p1440-screens) {
+                    @include responsive(pc-screens) {
                         width: 28.64583333333333%;
                         background-color: rgba(180,34,45,0.75);
                     }
@@ -1216,7 +1143,7 @@ section {
                     .facil{
                         color: #fff;
     
-                        @include responsive(p1440-screens) {
+                        @include responsive(pc-screens) {
                             width: 93.75%;
                             
                         }
@@ -1225,7 +1152,7 @@ section {
                             display: none;
                             text-align: right;
     
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 display: none;
                                 opacity: 0.8;
                                 position: absolute;
@@ -1242,7 +1169,7 @@ section {
                         .container{
 
 
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 width: 100%;
                                 margin-left: 12.72727272727273%;
                                 padding-right: 12.72727272727273%;
@@ -1253,7 +1180,7 @@ section {
                                 flex-direction: row;
                                 margin-top: 140px;
 
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     flex-direction: column;
                                     margin-top: 0;
                                 }
@@ -1262,7 +1189,7 @@ section {
                                     @include type_custom(2em,$eng_title_font);
                                     
             
-                                    @include responsive(p1440-screens) {
+                                    @include responsive(pc-screens) {
                                         padding-top: 150px;
                                         letter-spacing: 2px;
                                         font-size: 2.3em;
@@ -1271,7 +1198,7 @@ section {
                                     &::before {
                                         @include title_border_2(30px, 3px, #fff, 10px, 5px);
             
-                                        @include responsive(p1440-screens) {
+                                        @include responsive(pc-screens) {
                                             @include title_border_2(45px, 6px, #fff, 10px, 5px);
                                         }
                                     }
@@ -1283,7 +1210,7 @@ section {
                                     margin-top: -5px;
                                     margin-left: 20px;
 
-                                    @include responsive(p1440-screens) {
+                                    @include responsive(pc-screens) {
                                         width: 60%;
                                         height: 60%;
                                         margin-top: 40px;
@@ -1310,26 +1237,15 @@ section {
                                     @include type_custom(2em, $common_font);
                                         line-height: 1em;
 
-                                    @include responsive(tablet-screens) {
-                                        font-size: 1.4em;
-                                    }
 
-                                    @include responsive(p1440-screens) {
+
+                                    @include responsive(pc-screens) {
                                         font-size: 1.6em;
                                     }
                                 }
 
-                                br {
-                                    @include responsive(tablet-screens) {
-                                        display: none;
-                                    }
-
-                                    @include responsive(p1440-screens) {
-                                        display: block;
-                                    }
-                                }
         
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     margin: 50px 20px 0 0;
                                     font-size: 18px;
                                     line-height: 2em;
@@ -1352,13 +1268,8 @@ section {
                                 font-weight: 200;
                                 color: white;
 
-                                @include responsive(tablet-screens) {
-                                    width: 200px;
-                                    height: 45px;
-                                    font-size: 18px;
-                                }
         
-                                @include responsive(p1440-screens) {
+                                @include responsive(pc-screens) {
                                     width: 240px;
                                     height: 50px;
                                     transform: translateX(-75%);
@@ -1392,7 +1303,7 @@ section {
         display: flex;
         flex-direction: column;
 
-        @include responsive(p1440-screens){
+        @include responsive(pc-screens){
             flex-direction: row;
         }
 
@@ -1405,7 +1316,7 @@ section {
             height: 33.3333333333333333333vh;
             
 
-            @include responsive(p1440-screens) {
+            @include responsive(pc-screens) {
             width: 33.33333333333333333333vw;
             height: 100vh;
             }
@@ -1437,7 +1348,7 @@ section {
                     height:50vh;
                     transform: translateY(-10%);
 
-                    @include responsive(p1440-screens) {
+                    @include responsive(pc-screens) {
                         height: 100vh;
                         width: auto;
                         transform: translateX(-25%);
@@ -1459,7 +1370,7 @@ section {
                             position: relative;
                             @include type_custom(3em,$eng_title_font);
 
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 font-size: 3.5em;
                             }
                         }
@@ -1468,7 +1379,7 @@ section {
                             transform: translate(-50%, -20%);
                             width: 60px;
 
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 width: 90px;
                                 transform: translate(-50%, -10%);
                             }
@@ -1485,7 +1396,7 @@ section {
                                 @include title_border(30px, 4px, #fff, 0px);
                             }
     
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                                 font-size: 2.5em;
                                 &::before{
                                     @include title_border(44px, 6px, #fff, 0px);
@@ -1497,12 +1408,9 @@ section {
                             @include type_custom(0.75em,$common_font);
                             line-height: 1.6em;
                             margin-top: 20px;
+
     
-                            @include responsive(tablet-screens) {
-                                font-size: 1em;
-                            }
-    
-                            @include responsive(p1440-screens) {
+                            @include responsive(pc-screens) {
                             font-size: 1.2em;
                             line-height: 2em;
                             margin-top: 30px;
@@ -1544,16 +1452,29 @@ footer {
 
     div{
         margin-bottom: 40px;
+
+        @include responsive(pc-screens) {
+            margin-bottom: 30px;
+        }
     }
     
-    .container{
+    .footer_entire{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0 auto;
+        width: 89.74358974358974%;
+        max-width: 1800px;
+
+        @include responsive(pc-screens) {
+            width: 93.75%;
+        }
+
+        
 
         .footer_logo{
-            width: 135px;
+            width: 20%;
             order: 1;
 
             @include responsive(pc-screens) {
@@ -1571,39 +1492,31 @@ footer {
             width: 100%;
             order: 3;
 
-            span{
-                display: none;
-
-                @include responsive(tablet-screens) {
-                    display: inline;
-                }
-            }
-
             @include responsive(pc-screens){
                 order: 2;
-                width: 26.04166666666667%;
-            }
-            
-            .form_flex {
-                display: flex;
-                margin: 0;
-
-                @include responsive(pc-screens) {
-                    display: block;
-                }
-                
-
-                .form_email {
-                    width: 70%;
-                    margin: 0;
-
-                    @include responsive(pc-screens) {
-                        width: 100%;
-                    }
-                }
+                width: 20%;
             }
 
             form {
+                
+                .form_flex {
+                    display: flex;
+                    margin: 0;
+    
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+                    
+    
+                    .form_email {
+                        width: 70%;
+                        margin: 0;
+    
+                        @include responsive(pc-screens) {
+                            width: 100%;
+                        }
+                    }
+                }
 
                 label{
                     @include footer_label
@@ -1615,10 +1528,15 @@ footer {
                     width: 100%;
                     background-color: transparent;
                     border-bottom: 1px solid white;
-                    padding-bottom: 3px;
-                    margin: 10px 0 15px;
+                    padding-bottom: 0.2vw;
+                    margin: 0.5vw 0 0.75vw;
                     color: white;
                     @include font_setting;
+
+                    @include responsive(pc-screens) {
+                        margin: 10px 0 15px;
+                        padding-bottom: 3px;
+                    }
 
                     &:last-child{
                         width: 100%;
@@ -1641,10 +1559,15 @@ footer {
                     @include responsive(pc-screens) {
                         width: 100%;
                     }
-                
-                    span {
+
+                    span{
                         margin-left: 10px;
                         position: relative;
+                        display: none;
+
+                        @include responsive(pc-screens) {
+                            display: inline;
+                        }
 
                         img {
                             width: 20px;
@@ -1653,6 +1576,8 @@ footer {
                             bottom: 0;
                             right: 0;
                         }
+    
+
                     }
                 
                 }
@@ -1661,19 +1586,13 @@ footer {
         }
 
         .navigation {
-            width: 220px;
+            width: 70%;
             order: 2;
-            
-
             @include footer_h4;
-
-            @include responsive(tablet-screens){
-                width: 70%;
-            }
 
             @include responsive(pc-screens){
                 order: 3;
-                width: 25.83333333333333%;
+                width: 25%;
             }
 
             .flex_nav {
@@ -1683,34 +1602,37 @@ footer {
 
                 li{
                     width: 50%;
-                    margin-bottom: 5px;
+                    padding-bottom: 2vw;
                     align-items: center;
                     position: relative;
+
+                    @include responsive(pc-screens) {
+                        padding-bottom: 20px;
+                    }
+                    
 
                     span {
                         display: none;
                         height: auto;
                         margin-right: 10px;
 
+                        @include responsive(pc-screens) {
+                            display: inline;
+                        }
+
                         img {
-                            width: 15px;
+                            width: 22px;
                             height: auto;
                         }
 
-                        @include responsive(tablet-screens)
-                        {
-                            display: inline;
-                        }
                     }
 
                     a{
                         color: white;
-                        font-size: 0.75em;
-                        padding-bottom: 5px;
+                        font-size: calc(0.5em + 1vw);
 
-                        @include responsive(tablet-screens)
-                        {
-                            font-size: 0.875em;
+                        @include responsive(pc-screens) {
+                            font-size: 18px;
                         }
                     }
                 }
@@ -1724,11 +1646,18 @@ footer {
 
             width: 100%;
             order: 4;
-            font-size: 0.75em;
-            margin: 0;
+            font-size: calc(0.5em + 1vw);
+            padding-bottom: 2vw;
+
+            @include responsive(pc-screens) {
+                font-size: 16px;
+
+            }
+
 
             @include responsive(pc-screens){
                 width: 24%;
+                padding-bottom: 20px;
             }
 
             span {
@@ -1737,8 +1666,12 @@ footer {
 
             address{
                 font-style: normal;
-                margin-bottom: 10px;
+                margin-bottom: 1vw;
                 @include font_setting;
+
+                @include responsive(pc-screens){
+                    margin-bottom: 10px;
+                }
             }
 
             .copyright {
@@ -1746,7 +1679,11 @@ footer {
             }
 
             p{
-                line-height: 24px;
+                line-height: calc(1em + 1vw);
+
+                @include responsive(pc-screens) {
+                    line-height: 24px;
+                }
             }
 
         }
