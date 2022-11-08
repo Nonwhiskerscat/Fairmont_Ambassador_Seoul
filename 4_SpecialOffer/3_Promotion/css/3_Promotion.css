@@ -699,6 +699,105 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+main nav .gnb {
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  background-color: #f7f7f7;
+  padding-bottom: 20px;
+}
+main nav .gnb li {
+  padding-top: 20px;
+}
+main nav .gnb li a {
+  color: #bdbdbd;
+}
+main nav .gnb li a:hover {
+  color: black;
+  font-weight: bolder;
+}
+main section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 85px;
+}
+main section h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+main section h4 {
+  font-size: 20px;
+}
+main section p {
+  font-size: 18px;
+}
+main section p .sub {
+  font-size: 12px;
+}
+main .m_title {
+  font-size: 28px;
+}
+@media screen and (min-width: 1400px) {
+  main .m_title {
+    display: none;
+  }
+}
+main .p_title {
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  main .p_title {
+    display: block;
+  }
+}
+main .context .text {
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+main .photo img {
+  width: 100%;
+}
+main .p_photo img {
+  width: 100%;
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  main .p_photo img {
+    display: block;
+  }
+}
+main .m_photo img {
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main .m_photo img {
+    display: none;
+  }
+}
+main .period {
+  display: flex;
+  margin-bottom: 25px;
+}
+main .price {
+  display: flex;
+}
+main .info h4 {
+  margin-right: 25px;
+}
+main button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+main .level .premium,
+main .level .gold,
+main .level .black {
+  display: flex;
+  justify-content: space-between;
+}
 
 footer {
   padding-top: 30px;
