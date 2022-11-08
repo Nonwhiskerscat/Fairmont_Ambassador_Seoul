@@ -1033,6 +1033,7 @@ main {
             }
 
             .types_left {
+                background-color: rebeccapurple;
                 width: 100%;
 
                 @include responsive(pc-screens) {
@@ -1061,12 +1062,13 @@ main {
 
                     @include responsive(pc-screens){
                         width: 100%;
+                        height: 450px;
                         // height: calc(100px + 20vw);
                     }
 
                     img{
                         width: 100%;
-                        // max-height: calc(200px + 20vw);
+                        // height: calc(200px + 20vw);
                         
 
                         @include responsive(pc-screens) {
@@ -1080,6 +1082,7 @@ main {
 
                 @include responsive(pc-screens) {
                     width: 680px;
+                    background-color: violet
                 }
 
                 h4 {
@@ -1099,7 +1102,7 @@ main {
                 } //h4
 
                 p.subs {
-                    @include type_custom(calc(0.5em + 1.2vw), $common_font);
+                    @include type_custom(calc(0.5em + 1vw), $common_font);
                     line-height: 2em;
                     margin-top: 30px;
                     text-align: justify;
@@ -1136,7 +1139,8 @@ main {
                         }
 
                         p {
-                            @include type_custom(14px, $common_font);
+                            @include type_custom(calc(0.5em + 1vw), $common_font);
+                            margin-top: calc(0.2em + 1vw);
                             text-align: center;
 
                             @include responsive(tablet-screens);
@@ -1151,24 +1155,46 @@ main {
                 .button {
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 30px;
+                    margin-top: calc(1em + 2vw);
+
+                    @include responsive(pc-screens){
+                        margin-top: 30px;
+                    }
 
                     button {
                         width: 45%;
                         height: 40px;
-                        @include type_custom(18px, $common_font);
+                        @include type_custom(calc(0.5em + 1vw), $common_font);
                         font-weight: 200;
+
+                        @include responsive(pc-screens) {
+                            height: 60px;
+                        }
 
                         &:first-child {
                             background-color: transparent;
                             border: 1px solid #333;
                             color: #333;
+
+                            &:hover {
+                                transition: all 0.5s;
+                                background-color: #333;
+                                color: white;
+                            }
                         }
 
                         &:nth-child(2) {
                             background-color: #000066;
                             border: 1px solid #000066;
                             color: white;
+
+                            &:hover {
+                                transition: all 0.5s;
+                                border: 1px solid #333;
+                                background-color: #333;
+
+                                color: white;
+                            }
                         }
                     }
                 }

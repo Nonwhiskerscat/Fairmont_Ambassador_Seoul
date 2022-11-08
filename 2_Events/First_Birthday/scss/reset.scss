@@ -24,9 +24,15 @@ body {
 
 .container {
   width: 89.74358974358974%;
+
+  @include responsive(pc-screens) {
+      width: 100%;
+  }
+
   position: relative;
-  max-width: 1400px;
+  max-width: 1380px;
   margin: 0 auto;
+
 }
 
 a {
