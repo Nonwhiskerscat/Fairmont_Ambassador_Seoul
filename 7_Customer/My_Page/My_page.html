@@ -9,123 +9,229 @@
     <title>Fairmont_Ambassador_Hotel</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/My_Page.css">
+    <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <section class="section">
-            <header>
-                <div class="container">
-                    <div class="header_logo">
-                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
-                    </div><!--header_logo-->
-        
-                    <div class="menu">
-                        <div class="menu_bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!--menu_bar-->
+        <div class="menu_modal">
+            <div class="menu_entire">
+                <div class="menu_header">
+                    <h1>Site Map</h1>
+                    <div class="menu_header_flex">
+                        <div class="menu_header_left">
+                            <div class="menu_lan">
+                                <label for="alan" class="not_for_m">Lan</label>
+                                <select name="lang" id="alan">
+                                    <option value="한국어" selected>언어선택</option>
+                                    <option value="한국어">한국어</option>
+                                    <option value="영어">ENG</option>
+                                    <option value="일본어">日本語</option>
+                                    <option value="중국어">中文</option>
+                                </select>
+                            </div><!--language-->
     
-                        <div class="menu_type">
-                            <p>MENU</p>
-                        </div><!--menu_type-->
-                    </div><!--menu-->
-
+                            <div class="menu_sns">
+                                <ul><p class="not_for_m">SNS</p>
+                                    <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                                    <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                                    <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                                </ul>
+                            </div><!--menu_sns-->
+                        </div><!--menu_header_left-->
+    
+                        <div class="menu_header_right">
+                            <div class="menu_login">
+                                <a href="./9_Etc/Login/Login.html">
+                                    <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                                    <p>Login</p>
+                                </a>
+                            </div><!--menu_login-->
+    
+                            <div class="menu_close">
+                                <div class="close_modal" href="#">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="not_for_m">Close</p>
+                            </div><!--menu_close-->
+                        </div><!--menu_header_right-->
+                    </div><!--menu_header_flex-->
                     
-                </div><!--container-->
-            </header>
-                <main>
-                    <div class="contents_title">
-                        <h1>My Page</h1>
-                    </div>
-                    <div class="contents_area">
-                        <div class="container">
-                            <div class="my_flex">
+                </div><!--menu_header-->
 
-                                <div class="my_left">
-                                    <div class="profile">
-                                        <h4>Profile</h4>
-                                        <p><img src="./img/My_Page/icon/icon_1.png" alt="프로필 수정">프로필 수정</p>
-                                        <div class="profile_flex">
-
-                                            <div class="profile_photo">
-                                                <img src="./img/My_Page/profile.JPG" alt="프로필">
-                                            </div><!--profile_photo-->
-
-                                            <div class="profile_info">
-                                                <ul>
-                                                    <li>
-                                                        <em>Full Name</em>
-                                                        <p>노와 유키가미</p>
-                                                    </li>
-            
-                                                    <li>
-                                                        <em>Phone Number</em>
-                                                        <p>010-2345-6789</p>
-                                                    </li>
-            
-                                                    <li>
-                                                        <em>Email Address</em>
-                                                        <p>nonwhiskerscat@gmail.com</p>
-                                                    </li>
-                                                </ul>
-                                            </div><!--profile_info-->
-
-                                        </div><!--profile_flex-->
-                                    </div><!--profile-->
-
-                                    <div class="my_book">
-                                        <h4>예약 내역</h4>
-                                        <div class="book_res">
-                                            <p>예약 내역이 없습니다.</p>
-                                        </div><!--book_res-->
-                                    </div><!--my_book-->
-
-                                    <div class="my_manage">
-                                        <ul>
-                                            <li>
-                                                <img src="./img/My_Page/icon/icon_2_1.png" alt="비밀번호 변경">
-                                                <p>비밀번호 변경</p>
-                                            </li>
-
-                                            <li>
-                                                <img src="./img/My_Page/icon/icon_2_2.png" alt="정보 수정">
-                                                <p>정보 수정</p>
-                                            </li>
-
-                                            <li>
-                                                <img src="./img/My_Page/icon/icon_2_3.png" alt="회원 탈퇴">
-                                                <p>회원 탈퇴</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    
-
-                            
-                                </div><!--"my_left"-->
-
-                                <div class="my_right">
-                                    <q>
-                                        <em>호텔</em>의 <em>품격</em>은<br>
-                                        화려한 <span>전망</span>, 최적의 <span>접근성</span>,<br>
-                                        편리하고 <span>고급진 시설</span>,<br>
-                                        그리고 <span>친절한 서비스</span>로부터 비롯됩니다.
-
-                                        <p><span>by</span> 페어몬트 앰배서더 서울</p>
-                                    </q>
-                                </div><!--my_right-->
-                            </div><!--my_flex-->
-                        </div><!--container-->
-                        <div class="back_logo">
-                            <img src="./img/My_Page/icon/icon_back.png" alt="백로고">
+                <div class="menu_main">
+                    <div class="menu_main_left">
+                        <div class="img">
+                            <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                            <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
                         </div>
-                    </div><!--contents_area-->
-                    
-                </main>
+                        <div class="contents">
+                            <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
+                            <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
+                                Fairmont Ambassador Hotel
+                            </p><!--cursive-->
+                        </div><!--contents-->
+                    </div><!--menu_main_left-->
+                    <div class="menu_main_right">
+                        <ul class="menu_bighead">
+                            <li class="big_menu">Room
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">객실
+                                        <ul>
+                                            <li>페어몬트 룸</li>
+                                            <li>페어몬트 디럭스</li>
+                                            <li>페어몬트 골드</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mid_menu">스위트 룸
+                                        <ul>
+                                            <li>시그니처 스위트</li>
+                                            <li>프리미어 스위트</li>
+                                            <li>이그제큐티브 스위트</li>
+                                            <li>디플로매틱 스위트</li>
+                                        </ul>
+                                    </li>
+
+                                    
+                                    <li class="mid_menu">펜트하우스
+                                        <ul>
+                                            <li>펜트하우스</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Events
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">웨딩</li>
+                                    <li class="mid_menu">연회</li>
+                                    <li class="mid_menu">돌잔치 & 가족모임</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Facilities
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">페어몬트 골드 라운지</li>
+                                    <li class="mid_menu">페어몬트 피트</li>
+                                    <li class="mid_menu" onclick="alert('준비중입니다.')">페어몬트 스파(준비중)</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Special Offer
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">이벤트 서비스</li>
+                                    <li class="mid_menu">푸드 서비스</li>
+                                    <li class="mid_menu">VIP 프로모션</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Dining
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">바
+                                        <ul>
+                                            <li>M29</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mid_menu">레스토랑
+                                        <ul>
+                                            <li>마리포사</li>
+                                            <li>스펙트럼</li>
+                                            <li>갤러리세븐</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mid_menu">카페
+                                        <ul>
+                                            <li>더 아트리움 라운지</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">About
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">개요</li>
+                                    <li class="mid_menu">게스트 서비스</li>
+                                    <li class="mid_menu">오시는 길</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Customer 
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">고객센터</li>
+                                    <li class="mid_menu">마이페이지</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Reservation
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">호텔룸 예약</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div><!--menu_main_right-->
+                </div><!--menu_main-->
+            </div><!--menu_entire-->
+        </div><!--menu_modal-->
+
+        <header>
+            <div class="colormatte">
+            </div><!--colormatte-->
+            <div class="header_entire">
+                <div class="header_logo">
+                    <a href="#">
+                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
+                    </a>
+                </div><!--header_logo-->
+    
+                <div class="menu">
+                    <div class="menu_bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div><!--menu_bar-->
+
+                    <div class="menu_type">
+                        <p>MENU</p>
+                    </div><!--menu_type-->
+
+                </div><!--menu-->
+            </div><!--container-->
+        </header>
+
+
+        <section class="section">
+            <div class="main0">
+                <div class="bg_img">
+                    <img src="./img/executive/photo/main.jpg" alt="메인이미지를 삽입"">
+                </div><!--bg_img-->
+                <div class="colormatte"></div>
+
+                <div class="main0_contents">
+                    <h2>Executive Suite</h2>
+                    <button>예약하러 가기</button>
+                </div><!--main0_contents-->
+
+
+    
+                <div class="mouse">
+                    <span class="pc_mouse">
+                        <img src="./img/header/img/Header_mouse.png" alt="pc마우스">
+                        <p>Scroll me!</p>
+                    </span>
+                    <span class="mo_mouse">
+                        <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
+                        <p>Swipe me!</p>
+                    </span>
+                </div><!--mouse-->
+            </div><!--main0-->
         </section>
-        
+
+        <main>
+            
+        </main>
         <footer>
             <div class="container">
                 <div class="footer_logo">
@@ -180,8 +286,7 @@
             </div><!--container-->
             
         </footer>
-        </div><!--container-->
     </div><!--wrapper-->
-    
+
 </body>
 </html>

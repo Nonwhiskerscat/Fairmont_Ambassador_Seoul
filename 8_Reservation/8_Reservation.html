@@ -9,218 +9,229 @@
     <title>Fairmont_Ambassador_Hotel</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/8_Reservation.css">
+    <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <section class="section">
-            <header>
-                <div class="container">
-                    <div class="header_logo">
-                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
-                    </div><!--header_logo-->
-        
-                    <div class="menu">
-                        <div class="menu_bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!--menu_bar-->
+        <div class="menu_modal">
+            <div class="menu_entire">
+                <div class="menu_header">
+                    <h1>Site Map</h1>
+                    <div class="menu_header_flex">
+                        <div class="menu_header_left">
+                            <div class="menu_lan">
+                                <label for="alan" class="not_for_m">Lan</label>
+                                <select name="lang" id="alan">
+                                    <option value="한국어" selected>언어선택</option>
+                                    <option value="한국어">한국어</option>
+                                    <option value="영어">ENG</option>
+                                    <option value="일본어">日本語</option>
+                                    <option value="중국어">中文</option>
+                                </select>
+                            </div><!--language-->
     
-                        <div class="menu_type">
-                            <p>MENU</p>
-                        </div><!--menu_type-->
-                    </div><!--menu-->
-
+                            <div class="menu_sns">
+                                <ul><p class="not_for_m">SNS</p>
+                                    <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                                    <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                                    <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                                </ul>
+                            </div><!--menu_sns-->
+                        </div><!--menu_header_left-->
+    
+                        <div class="menu_header_right">
+                            <div class="menu_login">
+                                <a href="./9_Etc/Login/Login.html">
+                                    <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                                    <p>Login</p>
+                                </a>
+                            </div><!--menu_login-->
+    
+                            <div class="menu_close">
+                                <div class="close_modal" href="#">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p class="not_for_m">Close</p>
+                            </div><!--menu_close-->
+                        </div><!--menu_header_right-->
+                    </div><!--menu_header_flex-->
                     
-                </div><!--container-->
-            </header>
-                <main>
-                    <div class="contentsarea">
-                        <h1>Reservation</h1>
-                    </div>
-                    <div class="contents_area">
-                        <div class="container">
-                            <form action="#">
-                                <div class="book_flex">
-                                    <div class="book_left">
-                                        <h4>Period</h4>
-                                        <ul>
-                                            <li>
-                                                <label for="chein">
-                                                    <img src="./img/8_Reservation/icon/icon_1_1.png" alt="체크인 아이콘">
-                                                    <p><span>Check In</span>체크인</p><p class="warning"></p>
-                                                </label>
-                                                <input type="datetime-local" required placeholder="YYYY:MM:DD TT:MM" id="chein">
-                                            </li>
+                </div><!--menu_header-->
 
-                                            <li>
-                                                <label for="cheout">
-                                                    <img src="./img/8_Reservation/icon/icon_1_2.png" alt="체크아웃 아이콘">
-                                                    <p><span>Check In</span>체크아웃</p><p class="warning"></p>
-                                                </label>
-                                                <input type="datetime-local" required placeholder="YYYY:MM:DD TT:MM" id="cheout">
-                                            </li>
-                                        </ul>
-
-                                        <div class="room_guest">
-                                            <ul>
-                                                <li>
-                                                    <label for="rg_room">
-                                                        <img src="./img/8_Reservation/icon/icon_2_1.png" alt="객실 수">
-                                                        <p>객실 수</p>
-                                                    </label>
-                                                    <input type="number" id="rg_room" placeholder="0">
-                                                </li>
-
-                                                <li>
-                                                    <label for="rg_adult">
-                                                        <img src="./img/8_Reservation/icon/icon_2_2.png" alt="대인">
-                                                        <p>대인</p>
-                                                    </label>
-                                                    <input type="number" id="rg_adult" placeholder="0">
-                                                </li>
-
-                                                <li>
-                                                    <label for="rg_infant">
-                                                        <img src="./img/8_Reservation/icon/icon_2_3.png" alt="소인">
-                                                        <p>소인</p>
-                                                    </label>
-                                                    <input type="number" id="rg_infant"placeholder="0">
-                                                </li>
-                                            </ul>
-                                        </div><!--room_guest-->
-
-                                        <div class="room_types">
-                                            <ul>
-                                                <li>
-                                                    <img src="./img/8_Reservation/icon/icon_3_1.png" alt="객실">
-                                                    <em>Fairmont Room</em>
-                                                    <p>페어몬트 룸</p>
-                                                </li>
-
-                                                <li>
-                                                    <img src="./img/8_Reservation/icon/icon_3_2.png" alt="스위트룸">
-                                                    <em>Suite Room</em>
-                                                    <p>스위트 룸</p>
-                                                </li>
-
-                                                <li>
-                                                    <img src="./img/8_Reservation/icon/icon_3_3.png" alt="펜트하우스">
-                                                    <em>Pent House</em>
-                                                    <p>펜트하우스</p>
-                                                </li>
-                                            </ul>
-                                        </div><!--room_types-->
-
-                                    </div><!--book_left-->
-
-                                    <div class="book_right">
-                                        <div class="paymont">
-                                            <h4>Payment</h4>
-                                            <div class="paytype">
-                                                <ul>
-                                                    <li>
-                                                        <img src="./img/8_Reservation/icon/icon_4_1.png" alt="신용카드">
-                                                        <em>Credit Card</em>
-                                                        <p>신용카드</p>
-                                                    </li>
-    
-                                                    <li>
-                                                        <img src="./img/8_Reservation/icon/icon_4_2.png" alt="계좌이체">
-                                                        <em>Transfer</em>
-                                                        <p>실시간 계좌이체</p>
-                                                    </li>
-    
-                                                    <li>
-                                                        <img src="./img/8_Reservation/icon/icon_4_3.png" alt="카카오 페이">
-                                                        <em>Kakao Pay</em>
-                                                        <p>카카오페이</p>
-                                                    </li>
-                                                </ul>
-                                            </div><!--paytype-->
-
-                                            <div class="payinfo">
-                                                <ul>
-                                                    <li>
-                                                        <label for="c_num">
-                                                            <p>카드번호</p>
-                                                        </label>
-                                                        <input type="password" placeholder="카드번호 16자리를 입력하세요('-' 제외)"  id="c_num" required maxlength="16">
-                                                    </li>
-
-                                                    <li>
-                                                        <label for="c_pass">
-                                                            <p>비밀번호</p>
-                                                        </label>
-                                                        <input type="password" placeholder="••••" id="c_pass" required maxlength="4">
-                                                    </li>
-
-                                                    <li>
-                                                        <label for="c_per">
-                                                            <p>유효기간</p>
-                                                        </label>
-                                                        <input type="password" placeholder="ex) 2022년 10월 -> 1022"  id="per" required maxlength="4">
-                                                    </li>
-
-                                                    <li>
-                                                        <label for="c_num">
-                                                            <p>CVC</p>
-                                                        </label>
-                                                        <p class="c_num_in">****</p>
-                                                        <input type="password" placeholder="•••"  id="c_num" required maxlength="3">
-                                                        <p>
-                                                            <h6>CVC란?</h6>
-                                                            <p>카드 뒷면의 <span>서명란에 인쇄된 숫자 끝 3자리가 CVC 번호</span>입니다.</p>
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </div><!--payinfo-->
-
-                                            <div class="book_tos">
-                                                <div class="tos_box">
-                                                    <p>
-                                                        <span>[개인정보의 수집 및 이용에 대한 동의]</span><br>
-                                                        페어몬트 앰배서더 서울은 이용자의 개인정보를 소중히 생각하며 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」과 「개인정보보호법」 등 개인정보 보호 법령을 준수하고자 노력하고 있습니다. 회사는 개인정보처리방침을 통해 이용자의 개인정보 처리를 포함한 회사의 개인정보 보호를 위한 조치 내용을 이용자에게 알리고, 회사와 이용자 간의 권리 및 의무 관계를 규정하여 이용자의 개인정보 자기결정권을 보장합니다.<br>
-                                                        
-                                                        제1조 개인정보의 수집 및 이용 목적<br>
-                                                        
-                                                        1. 수집하는 개인정보는 서비스 개발, 제공 및 향상에 필요한 최소한의 정보만으로 한정되며, 회사는 적법하고 공정한 수단으로 이용자의 개인정보를 수집하고 있습니다.<br>
-                                                        2. 회사는 이용자의 기본적 인권을 침해할 우려가 있는 민감한 개인정보(인종, 종교, 사상, 출신지, 본적지, 정치적 성향 및 범죄기록, 건강상태 및 성생활 등)는 수집하지 않으며, 부득이하게 수집해야 할 경우 이용자들의 사전 동의를 반드시 구할 것입니다.<br>
-                                                        3. 회사는 수집한 정보를 목적 외로 이용하거나. 이용자의 동의 없이 외부에 공개하지 않습니다.<br>
-                                                        ① 회원관리: 회원제 서비스 제공에 따른 개인 식별, 가입의사 확인, 이용자 및 법정대리인의 본인 확인, 이용약관 위반 회원에 대한 이용제한 조치, 가입 및 가입횟수 제한, 고충 처리 및 분쟁 조정을 위한 기록 보존, 고지사항 전달, 회원탈퇴 의사의 확인<br>
-                                                        ② 부정이용방지, 비인가 사용 방지, 안전한 결제 서비스 제공, 계좌/카드 간편결제 서비스 가입을 통한 전자금융서비스 제공, 분쟁조정 해결을 휘나 기록보존, 현금영수증 발급 등<br>
-                                                        ③ 콘텐츠 등 기존 서비스 제공(광고 포함)에 더하여, 인구통계학적 분석, 서비스 방문 및 이용 기록과 접속 빈도 분석, 개인정보 및 관심에 기반한 이용자간 관계의 형성, 지인 및 관심사 등에 기반한 맞춤형 서비스 제공 등 신규 서비스 요소의 발굴 및 기존 서비스 개선 등<br>
-                                                        ④ 신규서비스 개발 및 마케팅 광고에의 활용: 신규서비스 개발 및 맞춤 서비스 제공, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스의 유효성 확인, 이벤트ㆍ광고성 정보 및 참여 기회 제공<br>
-                                                        ⑤ 보안, 프라이버시, 안전 측면에서 이용자가 안심하고 이용할 수 있는 서비스 이용환경 구축<br>
-                                                    </p>
-                                                </div><!--tos_box-->
-                                                <div class="check_box">
-                                                    <label for="all_agg">전문을 확인했으며 이에 동의합니다.</label>
-                                                    <input type="checkbox" id="all+agg">
-                                                </div><!--check_box-->
-
-                                                <div class="btn">
-                                                    <button type="reset">뒤로가기<img src="./img/8_Reservation/icon/icon_5_1.png" alt="뒤로가기"></button>
-                                                    <button type="submit">결제하기<img src="./img/8_Reservation/icon/icon_5_2.png" alt="결제하기"></button>
-                                                </div>
-
-                                            </div><!--book_tos-->
-                                        </div><!--paymont-->
-                                    </div><!--book_right-->
-                                </div><!--book_flex-->
-                            </form>
-                            
-                        </div><!--container-->
-                        <div class="back_logo">
-                            <img src="./img/8_Reservation/icon/icon_back.png" alt="백로고">
+                <div class="menu_main">
+                    <div class="menu_main_left">
+                        <div class="img">
+                            <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                            <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
                         </div>
-                    </div><!--contents_area-->
-                    
-                </main>
+                        <div class="contents">
+                            <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
+                            <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
+                                Fairmont Ambassador Hotel
+                            </p><!--cursive-->
+                        </div><!--contents-->
+                    </div><!--menu_main_left-->
+                    <div class="menu_main_right">
+                        <ul class="menu_bighead">
+                            <li class="big_menu">Room
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">객실
+                                        <ul>
+                                            <li>페어몬트 룸</li>
+                                            <li>페어몬트 디럭스</li>
+                                            <li>페어몬트 골드</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mid_menu">스위트 룸
+                                        <ul>
+                                            <li>시그니처 스위트</li>
+                                            <li>프리미어 스위트</li>
+                                            <li>이그제큐티브 스위트</li>
+                                            <li>디플로매틱 스위트</li>
+                                        </ul>
+                                    </li>
+
+                                    
+                                    <li class="mid_menu">펜트하우스
+                                        <ul>
+                                            <li>펜트하우스</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Events
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">웨딩</li>
+                                    <li class="mid_menu">연회</li>
+                                    <li class="mid_menu">돌잔치 & 가족모임</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Facilities
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">페어몬트 골드 라운지</li>
+                                    <li class="mid_menu">페어몬트 피트</li>
+                                    <li class="mid_menu" onclick="alert('준비중입니다.')">페어몬트 스파(준비중)</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Special Offer
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">이벤트 서비스</li>
+                                    <li class="mid_menu">푸드 서비스</li>
+                                    <li class="mid_menu">VIP 프로모션</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Dining
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">바
+                                        <ul>
+                                            <li>M29</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mid_menu">레스토랑
+                                        <ul>
+                                            <li>마리포사</li>
+                                            <li>스펙트럼</li>
+                                            <li>갤러리세븐</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mid_menu">카페
+                                        <ul>
+                                            <li>더 아트리움 라운지</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">About
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">개요</li>
+                                    <li class="mid_menu">게스트 서비스</li>
+                                    <li class="mid_menu">오시는 길</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Customer 
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">고객센터</li>
+                                    <li class="mid_menu">마이페이지</li>
+                                </ul>
+                            </li>
+
+                            <li class="big_menu">Reservation
+                                <ul class="menu_semi_head">
+                                    <li class="mid_menu">호텔룸 예약</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div><!--menu_main_right-->
+                </div><!--menu_main-->
+            </div><!--menu_entire-->
+        </div><!--menu_modal-->
+
+        <header>
+            <div class="colormatte">
+            </div><!--colormatte-->
+            <div class="header_entire">
+                <div class="header_logo">
+                    <a href="#">
+                        <img src="./img/header/img/Header_logo.png" alt="헤더로고">
+                    </a>
+                </div><!--header_logo-->
+    
+                <div class="menu">
+                    <div class="menu_bar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div><!--menu_bar-->
+
+                    <div class="menu_type">
+                        <p>MENU</p>
+                    </div><!--menu_type-->
+
+                </div><!--menu-->
+            </div><!--container-->
+        </header>
+
+
+        <section class="section">
+            <div class="main0">
+                <div class="bg_img">
+                    <img src="./img/executive/photo/main.jpg" alt="메인이미지를 삽입"">
+                </div><!--bg_img-->
+                <div class="colormatte"></div>
+
+                <div class="main0_contents">
+                    <h2>Executive Suite</h2>
+                    <button>예약하러 가기</button>
+                </div><!--main0_contents-->
+
+
+    
+                <div class="mouse">
+                    <span class="pc_mouse">
+                        <img src="./img/header/img/Header_mouse.png" alt="pc마우스">
+                        <p>Scroll me!</p>
+                    </span>
+                    <span class="mo_mouse">
+                        <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
+                        <p>Swipe me!</p>
+                    </span>
+                </div><!--mouse-->
+            </div><!--main0-->
         </section>
-        
+
+        <main>
+            
+        </main>
         <footer>
             <div class="container">
                 <div class="footer_logo">
@@ -275,8 +286,7 @@
             </div><!--container-->
             
         </footer>
-        </div><!--container-->
     </div><!--wrapper-->
-    
+
 </body>
 </html>
