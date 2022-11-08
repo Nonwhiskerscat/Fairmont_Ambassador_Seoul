@@ -15,7 +15,7 @@ html::-webkit-scrollbar {
     background-color: #333333;
 
     @include responsive(pc-screens){
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .menu_entire{
@@ -24,6 +24,7 @@ html::-webkit-scrollbar {
         
         @include responsive(pc-screens) {
             width: 93.75%;
+            max-width: 1800px;
         }
 
         .menu_header {
@@ -53,6 +54,7 @@ html::-webkit-scrollbar {
                     display: flex;
     
                     @include responsive(pc-screens) {
+                        //
                     }
     
                     .menu_lan {
@@ -106,7 +108,6 @@ html::-webkit-scrollbar {
                     }
     
                     .menu_sns {
-                        width: 70px;
                         order: 1;
                         @include type_custom(1em,$eng_title_font);
                         letter-spacing: 1px;
@@ -229,7 +230,7 @@ html::-webkit-scrollbar {
                 // align-items: center;
                 padding-top: 100px ;
                 max-width: 1800px;
-
+                margin: 0 auto;
             }
     
             .menu_main_left{
@@ -357,14 +358,15 @@ html::-webkit-scrollbar {
                     }
             
                     li.big_menu {
-                        @include type_custom(28px, $eng_title_font);
-                        letter-spacing: 2px;
+                        @include type_custom(calc(1em + 2vw), $eng_title_font);
+                        letter-spacing: 0.5vw;
                         margin-bottom: 50px;
     
                         @include responsive(pc-screens) {
                             // background-color: deeppink;
-                            font-size: calc(1em + 0.7vw);
-                            margin-bottom: calc(0em + 1vw);
+                            font-size: 28px;
+                            letter-spacing: 2px;
+                            margin-bottom: 100px;
                             width: 25%;
                         }
                     }
@@ -384,15 +386,15 @@ html::-webkit-scrollbar {
                         
         
                         li.mid_menu {
-                            @include type_custom(20px, $common_font);
+                            @include type_custom(calc(0.5em + 0.5vw), $common_font);
                             color: white;
                             width: 50%;
                             font-weight: 300;
-                            margin-bottom: 15px;
+                            margin-bottom: calc(0.5em + 0.5vw);
     
                             @include responsive(pc-screens) {
                                 width: 100%;
-                                font-size: calc(18px + 0.1vw);
+                                font-size: 18px;
                                 margin-bottom: 20px;
                                 font-weight: 200;
                             }
@@ -403,9 +405,13 @@ html::-webkit-scrollbar {
     
                                 li{
                                     list-style: '- ' inside;
-                                    font-size: 16px;
+                                    margin-bottom: calc(0.2em + 0.3vw);
                                     margin-bottom: 10px;
                                     font-weight: 100;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: 16px;
+                                    }
                                 }
                             }
                         }
@@ -436,6 +442,7 @@ header{
         
         @include responsive(pc-screens) {
             width: 93.75%;
+            max-width: 1800px;
         }
     
         .header_logo {
@@ -1549,7 +1556,7 @@ footer {
                     height: 70px;
                     background-color: transparent;
                     color: white;
-                    font-size: 1em;
+                    font-size: calc(0.5em + 1vw);
                     @include font_setting;
                     border: 0;
                     cursor: pointer; 

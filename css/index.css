@@ -74,7 +74,7 @@ html::-webkit-scrollbar {
 }
 @media screen and (min-width: 1400px) {
   .menu_modal {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 .menu_modal .menu_entire {
@@ -84,6 +84,7 @@ html::-webkit-scrollbar {
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire {
     width: 93.75%;
+    max-width: 1800px;
   }
 }
 .menu_modal .menu_entire .menu_header h1 {
@@ -160,7 +161,6 @@ html::-webkit-scrollbar {
   color: #333333;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_sns {
-  width: 70px;
   order: 1;
   font-family: "Lemon/Milk light", sans-serif;
   font-size: 1em;
@@ -269,6 +269,7 @@ html::-webkit-scrollbar {
     flex-direction: row;
     padding-top: 100px;
     max-width: 1800px;
+    margin: 0 auto;
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_left {
@@ -387,14 +388,15 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu {
   font-family: "Lemon/Milk light", sans-serif;
-  font-size: 28px;
-  letter-spacing: 2px;
+  font-size: calc(1em + 2vw);
+  letter-spacing: 0.5vw;
   margin-bottom: 50px;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu {
-    font-size: calc(1em + 0.7vw);
-    margin-bottom: calc(0em + 1vw);
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 100px;
     width: 25%;
   }
 }
@@ -412,16 +414,16 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu {
   font-family: "SCoreDream";
-  font-size: 20px;
+  font-size: calc(0.5em + 0.5vw);
   color: white;
   width: 50%;
   font-weight: 300;
-  margin-bottom: 15px;
+  margin-bottom: calc(0.5em + 0.5vw);
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu {
     width: 100%;
-    font-size: calc(18px + 0.1vw);
+    font-size: 18px;
     margin-bottom: 20px;
     font-weight: 200;
   }
@@ -432,9 +434,14 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li {
   list-style: "- " inside;
-  font-size: 16px;
+  margin-bottom: calc(0.2em + 0.3vw);
   margin-bottom: 10px;
   font-weight: 100;
+}
+@media screen and (min-width: 1400px) {
+  .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li {
+    font-size: 16px;
+  }
 }
 
 header {
@@ -455,6 +462,7 @@ header .header_entire {
 @media screen and (min-width: 1400px) {
   header .header_entire {
     width: 93.75%;
+    max-width: 1800px;
   }
 }
 header .header_entire .header_logo {
@@ -1468,7 +1476,7 @@ footer .footer_entire .subscribe form button {
   height: 70px;
   background-color: transparent;
   color: white;
-  font-size: 1em;
+  font-size: calc(0.5em + 1vw);
   font-family: "SCoreDream";
   font-weight: 200;
   border: 0;
