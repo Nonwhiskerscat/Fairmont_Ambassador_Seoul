@@ -788,6 +788,7 @@ main .room_int .room_cont img.rbp {
   }
 }
 main .room_int .room_cont .room_sub {
+  position: absolute;
   transform: translateY(-560px);
   padding-top: 50px;
   text-align: center;
@@ -890,28 +891,38 @@ main .room_int .room_cont .room_sub ul.r_info li p span {
   }
 }
 main .room_int h3.last {
+  transform: translateY(-150px);
   text-align: center;
-  line-height: 2em;
   font-family: "SCoreDream";
-  font-size: 24px;
+  font-size: calc(8px + 3vw);
+  line-height: calc(1em + 3vw);
   font-weight: 200;
+}
+@media screen and (min-width: 1400px) {
+  main .room_int h3.last {
+    font-size: 48px;
+    line-height: 96px;
+    margin-top: 50px;
+    transform: translateY(0);
+  }
 }
 main .room_int h3.last span {
   font-weight: 400;
 }
-@media screen and (min-width: 1400px) {
-  main .room_int h3.last {
-    margin-top: 150px;
-    font-size: 48px;
-    line-height: 96px;
-  }
-}
 main .room_gall {
-  margin-top: 125px;
+  margin: 0 auto;
+  max-height: 100vh;
+  margin-top: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall {
+    margin-top: 200px;
+  }
 }
 main .room_gall h3 {
   font-family: "Lemon/Milk light", sans-serif;
-  font-size: 2.5em;
+  font-size: calc(1em + 5vw);
+  margin-bottom: calc(0.5em + 3vw);
   text-align: center;
 }
 @media screen and (min-width: 1400px) {
@@ -951,17 +962,20 @@ main .room_gall .gall_main ul li:nth-child(1), main .room_gall .gall_main ul li:
 }
 main .room_gall .gall_main ul li img {
   width: 100%;
+  display: block;
 }
 main .room_gall .gall_navi {
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
+  margin-top: 25px;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_navi {
-    width: 20%;
+    width: 300px;
+    margin-top: 50px;
   }
 }
 main .room_gall .gall_navi li img {
@@ -973,8 +987,9 @@ main .room_gall .gall_navi li img {
   }
 }
 main .room_gall .gall_navi li:nth-child(2) {
+  display: none;
   font-family: "SCoreDream";
-  font-size: 2em;
+  font-size: calc(1em + 1vw);
   transform: translateX(-35%);
   color: #bdbdbd;
 }
@@ -984,11 +999,17 @@ main .room_gall .gall_navi li:nth-child(2) {
   }
 }
 main .room_types {
-  margin-top: 125px;
+  margin-top: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_types {
+    margin-top: 200px;
+  }
 }
 main .room_types h3 {
   font-family: "Lemon/Milk light", sans-serif;
-  font-size: 2.5em;
+  font-size: calc(1em + 5vw);
+  margin-bottom: calc(0.5em + 3vw);
   text-align: center;
 }
 @media screen and (min-width: 1400px) {
@@ -997,13 +1018,14 @@ main .room_types h3 {
   }
 }
 main .room_types .types_flex {
-  margin-top: 50px;
+  margin-top: 65px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex {
+    margin-top: 125px;
     flex-direction: row;
   }
 }
@@ -1012,12 +1034,12 @@ main .room_types .types_flex .types_left {
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_left {
-    width: 40%;
+    width: 580px;
   }
 }
 main .room_types .types_flex .types_left h4 {
   font-family: "SCoreDream";
-  font-size: 1.5em;
+  font-size: calc(1em + 1.5vw);
   margin-bottom: 30px;
 }
 main .room_types .types_flex .types_left h4::before {
@@ -1043,34 +1065,31 @@ main .room_types .types_flex .types_left .type_img {
   }
 }
 main .room_types .types_flex .types_left .type_img img {
-  width: 150%;
-  height: 150%;
-  transform: translateY(-100px) scale(0.9);
-  transform-origin: left top;
-}
-@media screen and (min-width: 1400px) {
-  main .room_types .types_flex .types_left .type_img img {
-    width: 150%;
-    height: 150%;
-    max-width: 700px;
-  }
+  width: 100%;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right {
-    width: 55%;
+    width: 680px;
   }
 }
 main .room_types .types_flex .types_right h4 {
   font-family: "SCoreDream";
-  font-size: 3em;
+  font-size: 32px;
   margin-bottom: 30px;
-  font-weight: 200;
+  font-weight: 400;
   display: none;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right h4 {
     display: block;
   }
+}
+main .room_types .types_flex .types_right h4::before {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #333;
+  margin: 0 0 10px 10px;
 }
 main .room_types .types_flex .types_right p.subs {
   font-family: "SCoreDream";

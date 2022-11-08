@@ -66,15 +66,13 @@
 }
 
 @mixin sub_h3 {
-    @include type_custom(2.5em, $eng_title_font);
-    // margin-bottom: 50px;
+    @include type_custom($bigf_title_m, $eng_title_font);
+    margin-bottom: calc(0.5em + 3vw);
     text-align: center;
     // margin-top: 125px;
 
     @include responsive(pc-screens) {
         font-size: $bigf_title;
-        // margin-bottom: 75px;
-        // margin-top: 200px;
     }
 }
 
