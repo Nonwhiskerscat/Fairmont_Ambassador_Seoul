@@ -1713,39 +1713,57 @@ main {
         margin-top: $big_margin_m;
         margin-bottom: $footer_margin_m;
         width: 100%;
-        // overflow: hidden;
+        overflow: hidden;
     
             @include responsive(pc-screens) {
                 margin: 0 auto;
                 margin-top: $big_margin;
                 margin-bottom: $footer_margin_m;
-                width: 1380px;
             }
     
             h3 {
                 @include sub_h3;
             } 
 
-            div.other_ent {
+            .other_ent {
                 display: flex;
-                position: relative;
                 justify-content: space-between;
-                width: 200%;
+                flex-direction: column;
 
                 @include responsive(pc-screens) {
-                    width: 100%;
+                    flex-direction: row;
                 }
 
                 div {
-                    display: block;
-                    background-color: greenyellow;
-                    width: 60%;
-                    height: 450px;
-                    //작아지는 개체에 대해서 scale_80 적용
+                    width: 100%;
+                    height: calc(200px + 20vw);
+                    margin: 0 auto $small_margin_m;
 
                     @include responsive(pc-screens) {
                         width: 450px;
                         height: 700px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit:cover;
+
+                        &.other_m {
+                            @include responsive(pc-screens) {
+                                display: none;
+                            }
+                        }
+
+                        &.other {
+                            display: none;
+
+                            @include responsive(pc-screens) {
+                                display: block;
+                            }
+                        }
+
+                        
                     }
                 }
 
