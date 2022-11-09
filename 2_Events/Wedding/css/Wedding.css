@@ -551,7 +551,17 @@ section div.main0 .bg_img {
 section div.main0 .bg_img__content {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@-webkit-keyframes img_size {
+  from {
+    transform: scale(1.2);
+    transform-origin: center center;
+  }
+  to {
+    transform: scale(1);
+  }
 }
 @keyframes img_size {
   from {
@@ -563,7 +573,8 @@ section div.main0 .bg_img__content {
   }
 }
 section div.main0 .bg_img img {
-  animation: img_size 10s;
+  -webkit-animation: img_size 10s;
+          animation: img_size 10s;
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img img {
@@ -645,6 +656,17 @@ section div.main0 .mouse {
   left: 50%;
   bottom: 20px;
 }
+@-webkit-keyframes move {
+  from {
+    bottom: 30px;
+  }
+  75% {
+    bottom: 60px;
+  }
+  to {
+    bottom: 60px;
+  }
+}
 @keyframes move {
   from {
     bottom: 30px;
@@ -654,6 +676,17 @@ section div.main0 .mouse {
   }
   to {
     bottom: 60px;
+  }
+}
+@-webkit-keyframes move_pc {
+  from {
+    bottom: 60px;
+  }
+  75% {
+    bottom: 30px;
+  }
+  to {
+    bottom: 30px;
   }
 }
 @keyframes move_pc {
@@ -670,12 +703,14 @@ section div.main0 .mouse {
 section div.main0 .mouse img {
   position: absolute;
   bottom: 40px;
-  animation: move 2s infinite;
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .mouse img {
-    animation: move_pc 2s infinite;
+    -webkit-animation: move_pc 2s infinite;
+            animation: move_pc 2s infinite;
   }
 }
 section div.main0 .mouse p {
