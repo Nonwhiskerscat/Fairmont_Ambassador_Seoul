@@ -934,10 +934,12 @@ main .room_gall h3 {
   font-size: calc(1em + 5vw);
   margin-bottom: calc(0.5em + 3vw);
   text-align: center;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall h3 {
     font-size: 80px;
+    margin-bottom: 125px;
   }
 }
 main .room_gall .gall_main {
@@ -1021,10 +1023,12 @@ main .room_types h3 {
   font-size: calc(1em + 5vw);
   margin-bottom: calc(0.5em + 3vw);
   text-align: center;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 1400px) {
   main .room_types h3 {
     font-size: 80px;
+    margin-bottom: 125px;
   }
 }
 main .room_types .types_flex {
@@ -1148,6 +1152,7 @@ main .room_types .types_flex .types_right ul li p {
   font-size: calc(0.5em + 1vw);
   margin-top: calc(0.2em + 1vw);
   text-align: center;
+  position: relative;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right ul li p {
@@ -1165,6 +1170,15 @@ main .room_types .types_flex .types_right ul li p span.plus {
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right ul li p span.plus {
     display: inline;
+  }
+}
+main .room_types .types_flex .types_right ul li p span.small {
+  font-size: calc(0em + 0.1vw);
+  position: absolute;
+}
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_right ul li p span.small {
+    font-size: 8px;
   }
 }
 main .room_types .types_flex .types_right .button {
@@ -1210,6 +1224,271 @@ main .room_types .types_flex .types_right .button button:last-child:hover {
 }
 main .room_types .types_flex .types_right .button .no_button {
   display: none;
+}
+main .room_modal {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal {
+    margin-top: 125px;
+  }
+}
+main .room_modal .closer p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 0.5vw);
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .closer p {
+    font-size: 28px;
+  }
+}
+main .room_modal .overview {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .overview {
+    margin-top: 125px;
+  }
+}
+main .room_modal .overview h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .overview h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .room_modal .overview h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .overview h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
+}
+main .room_modal .overview p {
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 1vw);
+  margin-top: 25px;
+  line-height: calc(2em + 1vw);
+  text-align: justify;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .overview p {
+    margin-top: 50px;
+    line-height: 48px;
+    font-size: 24px;
+  }
+}
+main .room_modal .overview p span {
+  font-weight: 400;
+  color: #000066;
+}
+main .room_modal .room_in {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in {
+    margin-top: 125px;
+  }
+}
+main .room_modal .room_in h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .room_modal .room_in h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
+}
+main .room_modal .room_in ul.icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons {
+    margin-top: 50px;
+  }
+}
+main .room_modal .room_in ul.icons li {
+  width: 30%;
+  text-align: center;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li {
+    width: 200px;
+  }
+}
+main .room_modal .room_in ul.icons li:nth-child(4), main .room_modal .room_in ul.icons li:nth-child(5), main .room_modal .room_in ul.icons li:nth-child(6) {
+  margin-top: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li:nth-child(4), main .room_modal .room_in ul.icons li:nth-child(5), main .room_modal .room_in ul.icons li:nth-child(6) {
+    margin-top: 0;
+  }
+}
+main .room_modal .room_in ul.icons li img {
+  width: 40%;
+  max-width: 80px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li img {
+    widwth: 150px;
+  }
+}
+main .room_modal .room_in ul.icons li em {
+  display: block;
+  font-style: normal;
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 0.8vw);
+  font-weight: 400;
+  margin-top: calc(0.2em + 0.2vw);
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li em {
+    margin-top: 50px;
+    font-size: 18px;
+  }
+}
+main .room_modal .room_in ul.icons li p {
+  position: relative;
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 0.8vw);
+  margin-top: calc(0.2em + 0.2vw);
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li p {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+}
+main .room_modal .room_in ul.icons li p span.big {
+  color: #000066;
+  font-family: "SCoreDream";
+  font-size: calc(1.5em + 1vw);
+  margin-right: 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li p span.big {
+    font-size: 2em;
+  }
+}
+main .room_modal .room_in ul.icons li p span.small {
+  position: absolute;
+  font-size: calc(0.4em + 0.4vw);
+  top: 35%;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_in ul.icons li p span.small {
+    top: 40%;
+    font-size: 8px;
+  }
+}
+main .room_modal .room_amenity {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity {
+    margin-top: 125px;
+  }
+}
+main .room_modal .room_amenity h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .room_modal .room_amenity h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
+}
+main .room_modal .room_amenity .ame_grp {
+  background-color: rgba(0, 0, 102, 0.05);
+  padding: 50px 0;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp {
+    padding: 100px 0;
+  }
+}
+main .room_modal .room_amenity .ame_grp .ame_flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .room_modal .room_amenity .ame_grp .ame_flex div {
+  width: 45%;
+}
+main .room_modal .room_amenity .ame_grp .ame_flex div.ame_secu {
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp .ame_flex div {
+    width: 380px;
+    height: 330px;
+  }
+}
+main .room_modal .room_amenity .ame_grp .ame_flex div ul img {
+  width: 15%;
+}
+main .room_modal .room_amenity .ame_grp .ame_flex div ul p {
+  display: inline;
 }
 
 footer {
