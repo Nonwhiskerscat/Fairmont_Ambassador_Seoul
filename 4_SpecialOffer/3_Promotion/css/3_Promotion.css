@@ -731,6 +731,22 @@ main section h3 {
   font-size: 28px;
   margin-bottom: 30px;
 }
+main section h3::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 2px solid black;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main section h3::before {
+    content: "";
+    display: block;
+    width: 80px;
+    border-bottom: 8px solid black;
+    margin: 10px auto;
+  }
+}
 main section h4 {
   font-size: 20px;
 }

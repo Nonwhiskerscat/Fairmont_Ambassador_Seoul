@@ -718,6 +718,7 @@ main h2 {
 @media screen and (min-width: 1400px) {
   main h2 {
     font-size: 60px;
+    width: 100%;
   }
 }
 main section {
@@ -726,8 +727,6 @@ main section {
 @media screen and (min-width: 1400px) {
   main section {
     margin-bottom: 500px;
-    margin-left: 170px;
-    margin-right: 170px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -748,21 +747,30 @@ main section {
     font-size: 24px;
   }
 }
+main .section2-flex {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1400px) {
   main .section2-flex {
-    display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
-main .section2-flex p {
+@media screen and (min-width: 1400px) {
+  main .section2-flex div.section-text {
+    width: 420px;
+  }
+}
+main .section2-flex div.section-text p {
   margin-bottom: 50px;
 }
 @media screen and (min-width: 1400px) {
-  main .section2-flex p {
+  main .section2-flex div.section-text p {
     font-size: 24px;
   }
 }
-main .section2-flex .service-icon {
+main .section2-flex div.service-icon {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -771,34 +779,37 @@ main .section2-flex .service-icon {
   margin-top: 10px;
 }
 @media screen and (min-width: 1400px) {
-  main .section2-flex .service-icon {
-    margin-left: 350px;
+  main .section2-flex div.service-icon {
+    width: 880px;
   }
 }
-main .section2-flex .service-icon div {
-  display: block;
+main .section2-flex div.service-icon div {
   width: 17%;
 }
 @media screen and (min-width: 1400px) {
-  main .section2-flex .service-icon div {
-    margin-right: 30px;
+  main .section2-flex div.service-icon div {
     text-align: center;
-    width: 13%;
+    width: 170px;
   }
 }
-main .section2-flex .service-icon div a {
+main .section2-flex div.service-icon div a {
   display: block;
   text-decoration: none;
   color: white;
   font-weight: normal;
 }
-main .section2-flex .service-icon div a:hover {
+main .section2-flex div.service-icon div a:hover {
   font-weight: bold;
 }
-main .section2-flex .service-icon div img {
-  width: 100%;
+main .section2-flex div.service-icon div img {
+  width: 70%;
 }
-main .section2-flex .service-icon div p {
+@media screen and (min-width: 1400px) {
+  main .section2-flex div.service-icon div img {
+    width: 86px;
+  }
+}
+main .section2-flex div.service-icon div p {
   font-size: 14px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -818,8 +829,8 @@ main .map .section3-flex img {
   main .map .location {
     display: flex;
     justify-content: space-between;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 140px;
+    margin-right: 140px;
   }
 }
 main .map .location h3 {
@@ -858,7 +869,6 @@ main .map .location .row p {
 @media screen and (min-width: 1400px) {
   main .map .location .row p {
     font-size: 26px;
-    margin-left: 20px;
   }
 }
 main .route .section4-flex {
