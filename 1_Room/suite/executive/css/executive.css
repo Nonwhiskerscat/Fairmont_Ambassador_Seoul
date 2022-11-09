@@ -1780,34 +1780,191 @@ main .other_room .other_ent {
     flex-direction: row;
   }
 }
-main .other_room .other_ent div {
+main .other_room .other_ent div .img_box {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: calc(200px + 20vw);
   margin: 0 auto 25px;
 }
 @media screen and (min-width: 1400px) {
-  main .other_room .other_ent div {
+  main .other_room .other_ent div .img_box {
     width: 450px;
     height: 700px;
   }
 }
-main .other_room .other_ent div img {
+main .other_room .other_ent div .img_box::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  display: block;
+  background-color: #000;
+  opacity: 0;
+}
+main .other_room .other_ent div .img_box:hover::after {
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+main .other_room .other_ent div .img_box:hover img {
+  transform: scale(1.2);
+  transform-origin: center center;
+  transition: all 0.5s;
+}
+main .other_room .other_ent div .img_box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 @media screen and (min-width: 1400px) {
-  main .other_room .other_ent div img.other_m {
+  main .other_room .other_ent div .img_box img.other_m {
     display: none;
   }
 }
-main .other_room .other_ent div img.other {
+main .other_room .other_ent div .img_box img.other {
   display: none;
 }
 @media screen and (min-width: 1400px) {
-  main .other_room .other_ent div img.other {
+  main .other_room .other_ent div .img_box img.other {
     display: block;
   }
+}
+main .other_room .other_ent div .matte {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 3;
+}
+main .other_room .other_ent div .matte:hover {
+  opacity: 1;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 1400px) {
+  main .other_room .other_ent div .matte {
+    transform: translate(-50%, 0);
+    top: 250px;
+  }
+}
+main .other_room .other_ent div .matte h5 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(1em + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .other_room .other_ent div .matte h5 {
+    font-size: 2em;
+  }
+}
+main .other_room .other_ent div .matte h5.red::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #b80000;
+  margin: 5px auto;
+}
+main .other_room .other_ent div .matte h5.navy::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #2a52be;
+  margin: 5px auto;
+}
+main .other_room .other_ent div .matte h5.gold::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #bd8400;
+  margin: 5px auto;
+}
+main .other_room .other_ent div .matte ul {
+  margin-top: 25px;
+}
+main .other_room .other_ent div .matte ul li {
+  margin-bottom: calc(0.5em + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .other_room .other_ent div .matte ul li {
+    margin-bottom: 10px;
+  }
+}
+main .other_room .other_ent div .matte ul li a {
+  color: white;
+  font-family: "SCoreDream";
+  font-size: calc(0.8em + 0.5vw);
+  font-weight: 200;
+}
+@media screen and (min-width: 1400px) {
+  main .other_room .other_ent div .matte ul li a {
+    font-size: 24px;
+  }
+}
+main .other_room .other_ent div .matte ul li a:hover {
+  animation: color_rep 1s infinite;
+}
+@keyframes color_rep_red {
+  0% {
+    color: #a40000;
+  }
+  25% {
+    color: #ff0000;
+  }
+  50% {
+    color: #ff5f5f;
+  }
+  75% {
+    color: #ff0000;
+  }
+  100% {
+    color: #a40000;
+  }
+}
+@keyframes color_rep_gold {
+  0% {
+    color: #bd8400;
+  }
+  25% {
+    color: #cdb200;
+  }
+  50% {
+    color: #ffef5a;
+  }
+  75% {
+    color: #cdb200;
+  }
+  100% {
+    color: #bd8400;
+  }
+}
+@keyframes color_rep_navy {
+  0% {
+    color: #2a52be;
+  }
+  25% {
+    color: #0044ff;
+  }
+  50% {
+    color: #5d88ff;
+  }
+  75% {
+    color: #0044ff;
+  }
+  100% {
+    color: #2a52be;
+  }
+}
+main .other_room .other_ent div .matte ul.red > li > a:hover {
+  animation: color_rep_red 1s infinite;
+}
+main .other_room .other_ent div .matte ul.navy > li > a:hover {
+  animation: color_rep_navy 1s infinite;
+}
+main .other_room .other_ent div .matte ul.gold > li > a:hover {
+  animation: color_rep_gold 1s infinite;
 }
 
 footer {

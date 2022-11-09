@@ -1735,36 +1735,164 @@ main {
                 }
 
                 div {
-                    width: 100%;
-                    height: calc(200px + 20vw);
-                    margin: 0 auto $small_margin_m;
 
-                    @include responsive(pc-screens) {
-                        width: 450px;
-                        height: 700px;
-                    }
-
-                    img {
+                    .img_box {
+                        position: relative;
+                        overflow: hidden;
                         width: 100%;
-                        height: 100%;
-                        object-fit:cover;
+                        height: calc(200px + 20vw);
+                        margin: 0 auto $small_margin_m;
 
-                        &.other_m {
-                            @include responsive(pc-screens) {
-                                display: none;
+                        @include responsive(pc-screens) {
+                            width: 450px;
+                            height: 700px;
+                        }
+
+                        &::after {
+                            @include video_matte;
+                            content: '';
+                            display: block;
+                            background-color: #000;
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            &::after {
+                                opacity: 0.5;
+                                transition: all 0.5s;
                             }
                         }
 
-                        &.other {
-                            display: none;
-
-                            @include responsive(pc-screens) {
-                                display: block;
+                        &:hover {
+                            img {
+                                transform: scale(1.2);
+                                transform-origin: center center;
+                                transition: all 0.5s;
                             }
                         }
-
                         
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit:cover;
+    
+                            &.other_m {
+                                @include responsive(pc-screens) {
+                                    display: none;
+                                }
+                            }
+    
+                            &.other {
+                                display: none;
+    
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                }
+                            }
+
+                            
+                        }
+                    }  //.img_box
+
+                    .matte {
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                        text-align: center;
+                        z-index: 3;
+
+                        &:hover {
+                            opacity: 1;
+                            transition: all 0.5s;
+                        }
+
+                        @include responsive(pc-screens) {
+                            transform: translate(-50%,0);
+                            top: 250px;
+                        }
+
+                        h5 {
+                            @include type_custom(calc(1em + 1vw),$eng_title_font);
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 2em;
+                            }
+
+                            &.red {
+                                &::before {
+                                    @include title_border(30px,3px,#b80000,5px);
+                                }
+                            }
+
+                            &.navy {
+                                &::before {
+                                    @include title_border(30px,3px,#2a52be,5px);
+                                }
+                            }
+
+                            &.gold {
+                                &::before {
+                                    @include title_border(30px,3px,#bd8400,5px);
+                                }
+                            }
+
+                        }
+
+                
+
+                        ul {
+                            margin-top:$small_margin_m;
+
+                            
+
+                            li {
+                                margin-bottom: calc(0.5em + 0.5vw);
+
+                                @include responsive(pc-screens) {
+                                    margin-bottom: 10px;
+                                }
+
+                                a {
+                                    color: white;
+                                    @include type_custom(calc(0.8em + 0.5vw),$common_font);
+                                    font-weight: 200;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: $semif;
+                                    }
+
+                                    
+
+                                    &:hover {
+                                        animation: color_rep 1s infinite;
+                                    }
+
+                                }
+                            }
+
+                            @include color_rep_red;
+                            @include color_rep_navy;
+                            @include color_rep_gold;
+
+
+                            &.red>li>a:hover {
+                                animation: color_rep_red 1s infinite;
+                            }
+
+                            &.navy>li>a:hover {
+                                animation: color_rep_navy 1s infinite;
+                            }
+
+                            &.gold>li>a:hover {
+                                animation: color_rep_gold 1s infinite;
+                            }
+                        }
                     }
+
+                    
                 }
 
             }
