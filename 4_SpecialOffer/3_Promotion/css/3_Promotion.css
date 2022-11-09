@@ -742,9 +742,9 @@ main section h3::before {
   main section h3::before {
     content: "";
     display: block;
-    width: 80px;
-    border-bottom: 8px solid black;
-    margin: 10px auto;
+    width: 30px;
+    border-bottom: 2px solid black;
+    margin: 0 0 5px 5px;
   }
 }
 main section h4 {
@@ -755,6 +755,17 @@ main section p {
 }
 main section p .sub {
   font-size: 12px;
+}
+@media screen and (min-width: 1400px) {
+  main .flex-box section {
+    padding-bottom: 320px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .flex-content {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 main .m_title {
   font-size: 28px;
@@ -772,12 +783,22 @@ main .p_title {
     display: block;
   }
 }
+@media screen and (min-width: 1400px) {
+  main .context {
+    width: 580px;
+  }
+}
 main .context .text {
   padding-top: 40px;
   padding-bottom: 45px;
 }
 main .photo img {
   width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main .photo img {
+    width: 680px;
+  }
 }
 main .p_photo img {
   width: 100%;
@@ -786,6 +807,7 @@ main .p_photo img {
 @media screen and (min-width: 1400px) {
   main .p_photo img {
     display: block;
+    width: 680px;
   }
 }
 main .m_photo img {
@@ -812,6 +834,24 @@ main button {
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 60px;
+  width: 170px;
+  background-color: #422d13;
+  height: 40px;
+}
+main button a {
+  color: white;
+  font-size: 1.3em;
+}
+@media screen and (min-width: 1400px) {
+  main button {
+    width: 275px;
+    height: 65px;
+    font-size: 1.5em;
+    margin-right: 0px;
+  }
+}
+main #romantic div.price h4 {
+  margin-right: 40px;
 }
 main .level .premium,
 main .level .gold,

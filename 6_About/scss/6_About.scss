@@ -698,8 +698,23 @@ section div.main0 {
 } // section
 
 main {
+    background-size: cover;
+    position: relative;
+    
+    .bg-video {
+        @include video_matte;
+        z-index: -1;
+        overflow: hidden;
+    
+        &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+        }
+    }
+
     padding-top: 85px;
-    background-color: #9a8c7f;
+    // background-color: #9a8c7f;
     color: white;
     text-align: center;
 
@@ -710,6 +725,13 @@ main {
     h2 {
         // font-size: 55px;
         margin-bottom: 40px;
+        &::before {
+            @include title_border(30px, 2px, white, 5px);
+
+            @include responsive(pc-screens) {
+                @include title_border_2(30px, 2px, white, 5px, 5px)
+            }
+        }
 
         @include responsive(pc-screens) {
             font-size: 60px;
@@ -718,10 +740,10 @@ main {
     }
 
     section {
-        margin-bottom: 135px;
+        padding-bottom: 135px;
 
         @include responsive(pc-screens) {
-            margin-bottom: 500px;
+            padding-bottom: 500px;
         }
     }
 

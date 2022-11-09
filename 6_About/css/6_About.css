@@ -702,10 +702,25 @@ section div.main0 .mouse .mo_mouse img {
 }
 
 main {
+  background-size: cover;
+  position: relative;
   padding-top: 85px;
-  background-color: #9a8c7f;
   color: white;
   text-align: center;
+}
+main .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+main .bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 1400px) {
   main {
@@ -715,6 +730,22 @@ main {
 main h2 {
   margin-bottom: 40px;
 }
+main h2::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 2px solid white;
+  margin: 5px auto;
+}
+@media screen and (min-width: 1400px) {
+  main h2::before {
+    content: "";
+    display: block;
+    width: 30px;
+    border-bottom: 2px solid white;
+    margin: 0 0 5px 5px;
+  }
+}
 @media screen and (min-width: 1400px) {
   main h2 {
     font-size: 60px;
@@ -722,11 +753,11 @@ main h2 {
   }
 }
 main section {
-  margin-bottom: 135px;
+  padding-bottom: 135px;
 }
 @media screen and (min-width: 1400px) {
   main section {
-    margin-bottom: 500px;
+    padding-bottom: 500px;
   }
 }
 @media screen and (min-width: 1400px) {
