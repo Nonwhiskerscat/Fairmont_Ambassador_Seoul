@@ -29,13 +29,20 @@ $bigf_title_m: calc(1em + 5vw);
 $bigf_title: 80px;
 $bigf_main_m: 0;
 $bigf_main: 48px;
-$bigf_sub_title_m: 0;
-$bigf_sub_title: 48px;
+$bigf_sub_title_m: calc(0.5em + 3vw);
+$bigf_sub_title: 40px;
+$regularf_tite_m:0;
+$regularf_title: 32px;
+$semif_m:0;
+$semif: 24px;
 $middlef_main_m:0;
 $middlef_main:28px;
 $mainf_m: 0;
 $mainf: 18px;
 
+
 //============레터스페이싱============/
 $bigs_main: 96px;
+$middles_main: 48px;
 $mains: 36px;
+$semis: 48px;

@@ -66,17 +66,107 @@
 }
 
 @mixin sub_h3 {
-    @include type_custom(2.5em, $eng_title_font);
-    margin-bottom: 50px;
+    @include type_custom($bigf_title_m, $eng_title_font);
+    margin-bottom: calc(0.5em + 3vw);
     text-align: center;
-    margin-top: 125px;
+    letter-spacing: 2px;
+    // margin-top: 125px;
 
     @include responsive(pc-screens) {
-        font-size: 5em;
-        margin-bottom: 75px;
-        margin-top: 200px;
+        font-size: $bigf_title;
+        margin-bottom: $mid_margin;
     }
 }
+
+@mixin sub_h4 {
+    @include type_custom($bigf_sub_title_m, $eng_title_font);
+    margin-bottom: calc(0.5em + 2vw);
+    text-align: center;
+    letter-spacing: 2px;
+    // margin-top: 125px;
+
+    @include responsive(pc-screens) {
+        font-size: $bigf_sub_title;
+        margin-bottom: $small_margin;
+    }
+}
+
+//======================칼라 애니메이션=====================//
+
+@mixin color_rep_red {
+    @keyframes color_rep_red {
+        0% {
+            color: #a40000;
+        }
+    
+        25% {
+            color: #ff0000;
+        }
+    
+        50% {
+            color: #ff5f5f;
+        }
+    
+        75% {
+            color: #ff0000;
+        }
+    
+        100% {
+            color: #a40000;
+        }
+    }
+}
+
+
+@mixin color_rep_gold {
+    @keyframes color_rep_navy {
+        0% {
+            color: #2a52be;
+        }
+    
+        25% {
+            color: #0044ff;
+        }
+    
+        50% {
+            color: #5d88ff;
+        }
+    
+        75% {
+            color: #0044ff;
+        }
+    
+        100% {
+            color: #2a52be;
+        }
+    }
+}
+
+@mixin color_rep_navy {
+    @keyframes color_rep_gold {
+        0% {
+            color: #bd8400;
+        }
+    
+        25% {
+            color: #cdb200;
+        }
+    
+        50% {
+            color: #ffef5a;
+        }
+    
+        75% {
+            color: #cdb200;
+        }
+    
+        100% {
+            color: #bd8400;
+        }
+    }
+}
+
+
 
 
 //======================footer 부분(조장 허락 외에 손대지 말 것)=====================//

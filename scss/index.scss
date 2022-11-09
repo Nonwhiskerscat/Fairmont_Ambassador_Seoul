@@ -2,9 +2,9 @@
 @import "./reset.scss";
 @import "./mixin.scss";
 
-html::-webkit-scrollbar {
-    display: none;
-}
+// html::-webkit-scrollbar {
+//     display: none;
+// }
 
 .menu_modal {
     display: none;
@@ -557,14 +557,10 @@ section {
             font-weight: 300;
             position: absolute;
             text-align: center;
-            font-size: calc(24px + 1vw);
+            font-size: calc(1em + 4vw);
             top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
-
-            @include responsive(tablet-screens) {
-                font-size: 2.5em;
-            }
 
             @include responsive(pc-screens) {
                 font-size: 5em;
@@ -693,58 +689,73 @@ section {
 
     .contents{
         text-align: center;
-        padding-top: 100px;
+        padding-top: $big_margin_m;
+
 
         @include responsive(pc-screens) {
             text-align: left;
-            padding-top: 150px;
+            padding-top: $mid_margin;
         }
 
-        h2 {
-            font-size: 24px;
-            font-weight: 400;
-            margin-bottom: 15px;
+        .semi_container {
 
-
-            @include responsive(pc-screens) {
-                font-size: 36px;
-            }
-
-            &::before {
-                content: "";
-                display: block;
-                width: 40px;
-                border-bottom: 3px solid #ffef5a;
-                margin: 5px auto;
-
-                @include title_border(40px, 3px, #ffef5a, 10px);
-
-                @include responsive(pc-screens) {
-                    @include title_border_pc(10px, 15px);
-                }
-
-                span {
-                    font-size: 18px;
-                    font-weight: 200;
-                }
-            }
-        }
-
-        p{
-            font-size: 0.875em;
-            line-height: 40px;
-            font-weight: 200;
-            letter-spacing: 2px;
+            width: 89.74358974358974%;
+            margin: 0 auto;
             
-            span {
-                color: #ffef5a;
+            @include responsive(pc-screens) {
+                width: 93.75%;
+                max-width: 1800px;
             }
 
-            @include responsive(pc-screens){
-                font-size: 1em;
+            h2 {
+                font-size: calc(0.5em + 3vw);
+                font-weight: 400;
+                margin-bottom: calc(0.5em + 0.5vw);
+    
+    
+                @include responsive(pc-screens) {
+                    font-size: 2em;
+                    margin-bottom: 20px;
+                }
+    
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    border-bottom: 3px solid #ffef5a;
+                    margin: 5px auto;
+    
+                    @include title_border(40px, 3px, #ffef5a, 10px);
+    
+                    @include responsive(pc-screens) {
+                        @include title_border_pc(10px, 15px);
+                    }
+    
+                    span {
+                        font-size: 18px;
+                        font-weight: 200;
+                    }
+                }
             }
-        }
-    } //contents
+    
+            p{
+                font-size: calc(0.8em + 0.5vw);
+                line-height: calc(1em + 1.5vw);
+                font-weight: 200;
+                letter-spacing: 2px;
+                
+                span {
+                    color: #ffef5a;
+                }
+    
+                @include responsive(pc-screens){
+                    font-size: 1.2em;
+                }
+            }
+        } //semi_container
+    } // contents
+
+    
 }
  //main1
 
@@ -772,22 +783,32 @@ section {
         }
 
         li {
-            width: 40px;
+            width: 30px;
             position: relative;
             text-align: center;
             font: {
-                size: 0.875em;
+                size: 0.8em;
                 family: $eng_title_font;
             }
             letter-spacing: 1px;
             margin-right: 10px;
 
+            @include responsive(pc-screens) {
+                font-size: 0.875em;
+                width: 40px;
+            }
+
             &::after {
+                margin: 0 auto;
                 content: "";
                 display: block;
                 border-bottom: #fff 2px solid;
                 opacity: 0.5;
                 margin-top: 2px;
+
+                @include responsive(pc-screens) {
+                    //
+                }
             }
 
             span {
@@ -796,11 +817,19 @@ section {
                 left: 50%;
                 transform: translateX(-50%);
                 opacity: 0;
+
+                @include responsive(pc-screens) {
+                    //
+                }
                 
             }
 
             &:hover {
-                width: 180px;
+                width: 120px;
+
+                @include responsive(pc-screens) {
+                    width: 160px;
+                }
                 
                 &::after {
                     opacity: 1;
@@ -821,9 +850,8 @@ section {
     .contents {
         .room_flex{
             .back_slide {
-                position: absolute;
                 width: 100%;
-                overflow: hidden;
+                // overflow: hidden;
     
                 ul {
                     display: flex;
@@ -869,10 +897,7 @@ section {
 
                     .rooms{
                         color: #666666;
-    
-                        @include responsive(pc-screens) {
-                            width: 93.75%;
-                        }
+
 
                         h2 {
                             color: white;
@@ -881,24 +906,21 @@ section {
                             top: -35px;
                             right: 0;
                             letter-spacing: 2px;
-    
-                            @include responsive(pc-screens) {
-                                white-space: nowrap;
-                                right: 100%;
-                                transform: rotateZ(-90deg) translateX(12px) translateY(12px);
-                                transform-origin: bottom right;
-                            }
-    
+
                             font: {
                                 family: $eng_title_font;
                                 size: 2em;
                             }
     
-    
                             @include responsive(pc-screens) {
-                                @include type_custom(5em, 'Lemon/Milk')
-                                
+                                @include type_custom(5em, $eng_title_font);
+                                white-space: nowrap;
+                                right: 100%;
+                                transform: rotateZ(-90deg) translateX(75px) translateY(24px);
+                                transform-origin: bottom right;
                             }
+    
+                        
                         }
 
                         .container{
@@ -911,7 +933,7 @@ section {
                             
         
                             h3 {
-                                @include type_custom(1.5em,$eng_title_font);
+                                @include type_custom(calc($bigf_sub_title_m),$eng_title_font);
                                 padding-top: 20px;
         
                                 @include responsive(pc-screens) {

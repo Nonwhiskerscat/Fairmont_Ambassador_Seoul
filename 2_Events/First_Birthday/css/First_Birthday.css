@@ -553,15 +553,6 @@ section div.main0 .bg_img {
   width: 100%;
   height: 100%;
 }
-@-webkit-keyframes img_size {
-  from {
-    transform: scale(1.2);
-    transform-origin: center center;
-  }
-  to {
-    transform: scale(1);
-  }
-}
 @keyframes img_size {
   from {
     transform: scale(1.2);
@@ -574,12 +565,10 @@ section div.main0 .bg_img {
 section div.main0 .bg_img__content {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section div.main0 .bg_img img {
-  -webkit-animation: img_size 10s;
-          animation: img_size 10s;
+  animation: img_size 10s;
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img img {
@@ -661,17 +650,6 @@ section div.main0 .mouse {
   bottom: 20px;
   left: 50%;
 }
-@-webkit-keyframes move {
-  from {
-    bottom: 30px;
-  }
-  75% {
-    bottom: 60px;
-  }
-  to {
-    bottom: 60px;
-  }
-}
 @keyframes move {
   from {
     bottom: 30px;
@@ -681,17 +659,6 @@ section div.main0 .mouse {
   }
   to {
     bottom: 60px;
-  }
-}
-@-webkit-keyframes move_pc {
-  from {
-    bottom: 60px;
-  }
-  75% {
-    bottom: 30px;
-  }
-  to {
-    bottom: 30px;
   }
 }
 @keyframes move_pc {
@@ -708,14 +675,12 @@ section div.main0 .mouse {
 section div.main0 .mouse img {
   position: absolute;
   bottom: 40px;
-  -webkit-animation: move 2s infinite;
-          animation: move 2s infinite;
+  animation: move 2s infinite;
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .mouse img {
-    -webkit-animation: move_pc 2s infinite;
-            animation: move_pc 2s infinite;
+    animation: move_pc 2s infinite;
   }
 }
 section div.main0 .mouse p {
@@ -918,8 +883,6 @@ main section.s2-instruction ul.ins li .img-box img {
   transform: translateX(-50%);
 }
 main section.s2-instruction ul.ins li .s2-text-box {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: min(6.21000276vw, 35px) auto;
 }
@@ -978,8 +941,6 @@ main section.s3-balloon {
   }
 }
 main section.s3-balloon .flex {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
@@ -1077,8 +1038,6 @@ main section.s4-preview .bg-line {
 }
 main section.s4-preview .flex {
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
@@ -1178,8 +1137,6 @@ main section.s5-notice {
 main section.s5-notice .flex {
   display: flex;
   margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   flex-direction: column-reverse;
 }

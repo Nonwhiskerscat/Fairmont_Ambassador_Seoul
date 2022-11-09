@@ -66,10 +66,6 @@ li {
   list-style: none;
 }
 
-html::-webkit-scrollbar {
-  display: none;
-}
-
 .menu_modal {
   display: none;
   position: absolute;
@@ -564,7 +560,7 @@ header .header_entire .menu .menu_type p {
   font-weight: 300;
   position: absolute;
   text-align: center;
-  font-size: calc(24px + 1vw);
+  font-size: calc(1em + 4vw);
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -690,20 +686,31 @@ header .header_entire .menu .menu_type p {
 @media screen and (min-width: 1400px) {
   .main1 .contents {
     text-align: left;
-    padding-top: 150px;
+    padding-top: 125px;
   }
 }
-.main1 .contents h2 {
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 15px;
+.main1 .contents .semi_container {
+  width: 89.7435897436%;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
-  .main1 .contents h2 {
-    font-size: 36px;
+  .main1 .contents .semi_container {
+    width: 93.75%;
+    max-width: 1800px;
   }
 }
-.main1 .contents h2::before {
+.main1 .contents .semi_container h2 {
+  font-size: calc(0.5em + 3vw);
+  font-weight: 400;
+  margin-bottom: calc(0.5em + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  .main1 .contents .semi_container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+.main1 .contents .semi_container h2::before {
   content: "";
   display: block;
   width: 40px;
@@ -716,26 +723,26 @@ header .header_entire .menu .menu_type p {
   margin: 10px auto;
 }
 @media screen and (min-width: 1400px) {
-  .main1 .contents h2::before {
+  .main1 .contents .semi_container h2::before {
     margin: 0 0 15px 10px;
   }
 }
-.main1 .contents h2::before span {
+.main1 .contents .semi_container h2::before span {
   font-size: 18px;
   font-weight: 200;
 }
-.main1 .contents p {
-  font-size: 0.875em;
-  line-height: 40px;
+.main1 .contents .semi_container p {
+  font-size: calc(0.8em + 0.5vw);
+  line-height: calc(1em + 1.5vw);
   font-weight: 200;
   letter-spacing: 2px;
 }
-.main1 .contents p span {
+.main1 .contents .semi_container p span {
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
-  .main1 .contents p {
-    font-size: 1em;
+  .main1 .contents .semi_container p {
+    font-size: 1.2em;
   }
 }
 
@@ -761,15 +768,22 @@ header .header_entire .menu .menu_type p {
   display: flex;
 }
 .main2 .room_navi li {
-  width: 40px;
+  width: 30px;
   position: relative;
   text-align: center;
-  font-size: 0.875em;
+  font-size: 0.8em;
   font-family: "Lemon/Milk light", sans-serif;
   letter-spacing: 1px;
   margin-right: 10px;
 }
+@media screen and (min-width: 1400px) {
+  .main2 .room_navi li {
+    font-size: 0.875em;
+    width: 40px;
+  }
+}
 .main2 .room_navi li::after {
+  margin: 0 auto;
   content: "";
   display: block;
   border-bottom: #fff 2px solid;
@@ -784,8 +798,13 @@ header .header_entire .menu .menu_type p {
   opacity: 0;
 }
 .main2 .room_navi li:hover {
-  width: 180px;
+  width: 120px;
   transition: all 1s;
+}
+@media screen and (min-width: 1400px) {
+  .main2 .room_navi li:hover {
+    width: 160px;
+  }
 }
 .main2 .room_navi li:hover::after {
   opacity: 1;
@@ -795,9 +814,7 @@ header .header_entire .menu .menu_type p {
   transition: all 1s;
 }
 .main2 .contents .room_flex .back_slide {
-  position: absolute;
   width: 100%;
-  overflow: hidden;
 }
 .main2 .contents .room_flex .back_slide ul {
   display: flex;
@@ -837,11 +854,6 @@ header .header_entire .menu .menu_type p {
 .main2 .contents .room_flex .content_slide .room_back .rooms {
   color: #666666;
 }
-@media screen and (min-width: 1400px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms {
-    width: 93.75%;
-  }
-}
 .main2 .contents .room_flex .content_slide .room_back .rooms h2 {
   color: white;
   opacity: 0.8;
@@ -854,16 +866,12 @@ header .header_entire .menu .menu_type p {
 }
 @media screen and (min-width: 1400px) {
   .main2 .contents .room_flex .content_slide .room_back .rooms h2 {
+    font-family: "Lemon/Milk light", sans-serif;
+    font-size: 5em;
     white-space: nowrap;
     right: 100%;
-    transform: rotateZ(-90deg) translateX(12px) translateY(12px);
+    transform: rotateZ(-90deg) translateX(75px) translateY(24px);
     transform-origin: bottom right;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main2 .contents .room_flex .content_slide .room_back .rooms h2 {
-    font-family: "Lemon/Milk";
-    font-size: 5em;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -875,7 +883,7 @@ header .header_entire .menu .menu_type p {
 }
 .main2 .contents .room_flex .content_slide .room_back .rooms .container h3 {
   font-family: "Lemon/Milk light", sans-serif;
-  font-size: 1.5em;
+  font-size: calc(0.5em + 3vw);
   padding-top: 20px;
 }
 @media screen and (min-width: 1400px) {
