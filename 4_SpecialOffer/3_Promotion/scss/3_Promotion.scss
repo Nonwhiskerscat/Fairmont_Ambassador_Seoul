@@ -734,7 +734,7 @@ main {
                 @include title_border_2(30px, 2px, black, 5px, 5px);
 
                 @include responsive(pc-screens) {
-                    @include title_border(80px, 8px, black, 10px)
+                    @include title_border_2(30px, 2px, black, 5px, 5px)
                 }
             }
         }
@@ -747,6 +747,21 @@ main {
             .sub {
                 font-size: 12px;
             }
+        }
+    }
+
+    .flex-box {
+        section {
+            @include responsive(pc-screens) {
+                padding-bottom: 320px;
+            }
+        }
+    }
+
+    .flex-content {
+        @include responsive(pc-screens) {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
@@ -767,6 +782,11 @@ main {
     }
 
     .context{
+
+        @include responsive(pc-screens){
+            width: 580px;
+        }
+
         .text {
             padding-top: 40px;
             padding-bottom: 45px;
@@ -776,6 +796,10 @@ main {
     .photo {
         img {
             width: 100%;
+
+            @include responsive(pc-screens){
+                width: 680px;
+            }
         }
     }
 
@@ -786,6 +810,7 @@ main {
 
             @include responsive(pc-screens){
                 display: block;
+                width: 680px;
             }
         }
     }
@@ -821,6 +846,29 @@ main {
         margin-right: auto;
         margin-top: 50px;
         margin-bottom: 60px;
+
+        width: 170px;
+        background-color: #422d13;
+        height: 40px;
+        a {
+            color: white;
+            font-size: 1.3em;
+        }
+
+        @include responsive(pc-screens) {
+            width: 275px;
+            height: 65px;
+            font-size: 1.5em;
+            margin-right: 0px;
+        }
+    }
+
+    #romantic {
+        div.price {
+            h4 {
+                margin-right: 40px;
+            }
+        }
     }
 
     .level {
