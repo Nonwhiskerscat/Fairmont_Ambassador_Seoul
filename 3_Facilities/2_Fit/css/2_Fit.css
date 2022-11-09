@@ -801,6 +801,200 @@ main .sec6 .sec6-flex-box ul {
 main .sec6 .sec6-flex-box li {
   list-style: inside;
 }
+main .sec7 .maintext p {
+  font-size: calc(12px + 1.5vw);
+  line-height: calc(24px + 2vw);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+main .sec8 {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+main .sec8 .main-text {
+  font-family: "Lemon/Milk light", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .sec8 .main-text P {
+  color: #333333;
+  text-align: center;
+}
+main .sec8 .main-text P::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #333333;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+main .sec9 {
+  background-color: #dfe5f5;
+}
+@media screen and (min-width: 1400px) {
+  main .sec9 .sec9-flex-box {
+    display: flex;
+  }
+}
+main .sec9 .sec9-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec9 .sec9-flex-box ul {
+    width: 100%;
+  }
+}
+main .sec9 .sec9-flex-box .li-flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+main .sec9 .sec9-flex-box .li-flex-box div {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec10 {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+main .sec10 .main-text {
+  font-family: "Lemon/Milk light", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .sec10 .main-text P {
+  color: #333333;
+  text-align: center;
+}
+main .sec10 .main-text P::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #333333;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+main .sec11 .sec11-flex-box .notice {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec11 .sec11-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec11 .sec11-flex-box ul {
+    width: 50%;
+  }
+}
+main .sec11 .sec11-flex-box li {
+  list-style: inside;
+}
+main .sec12 .maintext p {
+  font-size: calc(12px + 1.5vw);
+  line-height: calc(24px + 2vw);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+main .sec13 {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+main .sec13 .main-text {
+  font-family: "Lemon/Milk light", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .sec13 .main-text P {
+  color: #333333;
+  text-align: center;
+}
+main .sec13 .main-text P::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #333333;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+main .sec14 {
+  background-color: #eeeeee;
+}
+@media screen and (min-width: 1400px) {
+  main .sec14 .sec14-flex-box {
+    display: flex;
+  }
+}
+main .sec14 .sec14-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec14 .sec14-flex-box ul {
+    width: 100%;
+  }
+}
+main .sec14 .sec14-flex-box .li-flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+main .sec14 .sec14-flex-box .li-flex-box div {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec15 {
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+main .sec15 .main-text {
+  font-family: "Lemon/Milk light", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+main .sec15 .main-text P {
+  color: #333333;
+  text-align: center;
+}
+main .sec15 .main-text P::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background: #333333;
+  transform: translateX(-50%);
+  margin-bottom: 37px;
+}
+main .sec16 .sec16-flex-box .notice {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec16 .sec16-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec16 .sec16-flex-box ul {
+    width: 50%;
+  }
+}
+main .sec16 .sec16-flex-box li {
+  list-style: inside;
+}
 
 footer {
   padding-top: 30px;
