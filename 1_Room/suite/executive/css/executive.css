@@ -1238,18 +1238,25 @@ main .room_modal .closer p {
   font-size: calc(1em + 0.5vw);
   font-weight: 400;
   text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
 }
 @media screen and (min-width: 1400px) {
   main .room_modal .closer p {
     font-size: 28px;
   }
 }
+main .room_modal .closer p:hover {
+  background-color: rgba(0, 0, 102, 0.05);
+  transition: all 0.5s;
+}
 main .room_modal .overview {
-  margin-top: 65px;
+  margin-top: 25px;
 }
 @media screen and (min-width: 1400px) {
   main .room_modal .overview {
-    margin-top: 125px;
+    margin-top: 50px;
   }
 }
 main .room_modal .overview h4 {
@@ -1460,35 +1467,132 @@ main .room_modal .room_amenity h4::before {
 }
 main .room_modal .room_amenity .ame_grp {
   background-color: rgba(0, 0, 102, 0.05);
-  padding: 50px 0;
-}
-@media screen and (min-width: 1400px) {
-  main .room_modal .room_amenity .ame_grp {
-    padding: 100px 0;
-  }
-}
-main .room_modal .room_amenity .ame_grp .ame_flex {
+  padding: 0 20px;
+  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-main .room_modal .room_amenity .ame_grp .ame_flex div {
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp {
+    padding: 0 50px;
+    padding-top: 50px;
+  }
+}
+main .room_modal .room_amenity .ame_grp div {
   width: 45%;
 }
-main .room_modal .room_amenity .ame_grp .ame_flex div.ame_secu {
-  width: 100%;
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp div {
+    widows: 30%;
+  }
 }
 @media screen and (min-width: 1400px) {
-  main .room_modal .room_amenity .ame_grp .ame_flex div {
+  main .room_modal .room_amenity .ame_grp div {
     width: 380px;
     height: 330px;
   }
 }
-main .room_modal .room_amenity .ame_grp .ame_flex div ul img {
-  width: 15%;
+main .room_modal .room_amenity .ame_grp div ul {
+  margin-bottom: 50px;
 }
-main .room_modal .room_amenity .ame_grp .ame_flex div ul p {
+main .room_modal .room_amenity .ame_grp div ul img {
+  position: relative;
+  margin-right: 10px;
+  height: calc(1.2em + 0.8vw);
+  margin-bottom: calc(0.5em + 0.3vw);
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp div ul img {
+    height: 30px;
+    margin-bottom: 24px;
+    margin-right: 15px;
+  }
+}
+main .room_modal .room_amenity .ame_grp div ul p {
+  position: absolute;
+  font-family: "SCoreDream";
+  font-size: calc(0.8em + 0.8vw);
   display: inline;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp div ul p {
+    font-size: 24px;
+  }
+}
+main .room_modal .room_amenity .ame_grp div ul li {
+  list-style: "- " inside;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
+  margin-bottom: calc(0.3em + 0.3vw);
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_amenity .ame_grp div ul li {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+}
+main .room_modal .room_smoke {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_smoke {
+    margin-top: 125px;
+  }
+}
+main .room_modal .room_smoke h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_smoke h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .room_modal .room_smoke h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_smoke h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
+}
+main .room_modal .room_smoke .img {
+  text-align: center;
+}
+main .room_modal .room_smoke .img img {
+  width: 20%;
+  max-width: 120px;
+}
+main .room_modal .room_smoke p {
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 1vw);
+  margin-top: 25px;
+  line-height: calc(2em + 1vw);
+  text-align: justify;
+}
+@media screen and (min-width: 1400px) {
+  main .room_modal .room_smoke p {
+    margin-top: 50px;
+    line-height: 48px;
+    font-size: 24px;
+  }
+}
+main .room_modal .room_smoke p span {
+  font-weight: 400;
+  color: #000066;
 }
 
 footer {
