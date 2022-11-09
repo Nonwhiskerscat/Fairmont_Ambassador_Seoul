@@ -884,7 +884,7 @@ section {
                     position: absolute;
                     top: 120px;
                     width: 100%;
-                    height: 270px;
+                    height: calc(200px + 10vw);
                     background-color: rgba(255,255,255,0.8);
 
                     @include responsive(pc-screens) {
@@ -900,6 +900,7 @@ section {
 
 
                         h2 {
+                            @include type_custom(2em, $eng_title_font);
                             color: white;
                             opacity: 0.8;
                             position: absolute;
@@ -907,13 +908,9 @@ section {
                             right: 0;
                             letter-spacing: 2px;
 
-                            font: {
-                                family: $eng_title_font;
-                                size: 2em;
-                            }
     
                             @include responsive(pc-screens) {
-                                @include type_custom(5em, $eng_title_font);
+                                font-size: 5em;
                                 white-space: nowrap;
                                 right: 100%;
                                 transform: rotateZ(-90deg) translateX(75px) translateY(24px);
@@ -923,17 +920,18 @@ section {
                         
                         }
 
-                        .container{
+                        .room_container{
+                            width: 93.75%;
+                            margin: 0 auto;
+                            
                             @include responsive(pc-screens) {
                                 width: 100%;
                                 padding-left: 12.72727272727273%;
-                                padding-right: 10%;
+                                padding-right: 10.6%;
                             }
 
-                            
-        
                             h3 {
-                                @include type_custom(calc($bigf_sub_title_m),$eng_title_font);
+                                @include type_custom(calc(1em + 1vw),$eng_title_font);
                                 padding-top: 20px;
         
                                 @include responsive(pc-screens) {
@@ -964,20 +962,19 @@ section {
                             .room_type {
                                 display: flex;
                                 flex-wrap: wrap;
-                                margin-top: 10px;
+                                margin-top: calc(0.3em + 0.6vw);
         
                                 @include responsive(pc-screens) {
-                                    margin-top: 30px
+                                    margin-top: 20px
                                 }
         
                                 a {
-                                    @include type_custom(16px, $eng_title_font);
+                                    @include type_custom(calc(0.6em + 0.6vw), $eng_title_font);
                                     color: #666666;
                                     opacity: 0.3;
                                     letter-spacing: 1.5px;
                                     margin-right: 30px;
                                     line-height: 30px;
-        
                                     
                                     @include responsive(pc-screens) {
                                         font-size: 18px;
@@ -993,15 +990,16 @@ section {
         
                             p {
                                 margin-top: 20px;
-                                height: 90px;
-                                @include type_custom(16px, $common_font);
+                                height: 75px;
+                                @include type_custom(calc(0.5em + 0.8vw), $common_font);
+                                line-height: calc(1.4em + 0.9vw);
                                 text-align: justify;
                                 letter-spacing: 1px;
         
                                 @include responsive(pc-screens) {
                                     margin-top: 50px;
-                                    font-size: 18px;
-                                    line-height: 2em;
+                                    font-size: $mainf;
+                                    line-height: $mains;
                                     height: 180px;
                                 }
         
@@ -1013,10 +1011,10 @@ section {
                                 // bottom: 0;
                                 transform: translateX(-50%);
                                 background: none;
-                                width: 170px;
-                                height: 40px;
+                                width: 30%;
+                                height: calc(20px + 2vw);
                                 border: 1px solid #666666;
-                                @include type_custom(18px, $common_font);
+                                @include type_custom(calc(0.5em + 0.8vw), $common_font);
                                 text-align: center;
                                 font-weight: 200;
         
@@ -1036,11 +1034,7 @@ section {
                         }
 
                     }
-                }
-
-                
-
-
+                }              
                 li:nth-child(2), li:nth-child(3){
                     display: none;
                 }
