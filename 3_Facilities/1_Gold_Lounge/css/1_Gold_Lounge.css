@@ -726,8 +726,93 @@ main .sec1 .maintext p .hidden-text {
     display: block;
   }
 }
-main .sec2 img {
+main .room_gall {
+  margin: 0 auto;
+  max-height: 100vh;
+  margin-top: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall {
+    margin-top: 80px;
+  }
+}
+main .room_gall h3 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall h3 {
+    font-size: 5em;
+  }
+}
+main .room_gall .gall_main {
   width: 100%;
+  overflow: hidden;
+}
+main .room_gall .gall_main ul {
+  display: flex;
+  justify-content: space-between;
+  width: 200%;
+  transform: translateX(-25%);
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall .gall_main ul {
+    width: 150%;
+    transform: translateX(-17.5%);
+  }
+}
+main .room_gall .gall_main ul li {
+  width: 50%;
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall .gall_main ul li {
+    width: 50%;
+  }
+}
+main .room_gall .gall_main ul li:nth-child(1), main .room_gall .gall_main ul li:nth-child(3) {
+  transform: scale(0.8);
+  transform-origin: top;
+  opacity: 0.3;
+}
+main .room_gall .gall_main ul li img {
+  width: 100%;
+  display: block;
+}
+main .room_gall .gall_navi {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall .gall_navi {
+    width: 300px;
+    margin-top: 50px;
+  }
+}
+main .room_gall .gall_navi li img {
+  width: 50%;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall .gall_navi li img {
+    width: 80%;
+  }
+}
+main .room_gall .gall_navi li:nth-child(2) {
+  display: none;
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  transform: translateX(-35%);
+  color: #bdbdbd;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall .gall_navi li:nth-child(2) {
+    font-size: 3em;
+  }
 }
 main .sec3 {
   margin-top: 50px;
