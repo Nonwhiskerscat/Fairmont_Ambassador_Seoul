@@ -713,6 +713,7 @@ main {
 
         @include responsive(pc-screens) {
             font-size: 60px;
+            width: 100%;
         }
     }
 
@@ -721,8 +722,6 @@ main {
 
         @include responsive(pc-screens) {
             margin-bottom: 500px;
-            margin-left: 170px;
-            margin-right: 170px;
         }
     }
 
@@ -749,20 +748,34 @@ main {
 
     .section2-flex {
 
+        display: flex;
+        flex-direction: column;
+
         @include responsive(pc-screens) {
-            display: flex;
+            // display: flex;
             flex-direction: row;
+            justify-content: space-between;
         }
 
-        p {
-            margin-bottom: 50px;
+        div.section-text {
 
             @include responsive(pc-screens) {
-                font-size: 24px;
+                width: 420px;
             }
+
+            p {
+                margin-bottom: 50px;
+    
+                @include responsive(pc-screens) {
+                    font-size: 24px;
+                }
+            }
+
         }
 
-        .service-icon {
+        
+
+        div.service-icon {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -771,17 +784,17 @@ main {
             margin-top: 10px;
 
             @include responsive(pc-screens) {
-                margin-left: 350px;
+                width: 880px;
             }
     
             div {
-                display: block;
+                // display: block;
                 width: 17%;
 
                 @include responsive(pc-screens) {
-                    margin-right: 30px;
+                    // margin-right: 30px;
                     text-align: center;
-                    width: 13%;
+                    width: 170px;
                 }
 
                 a {
@@ -795,7 +808,11 @@ main {
                 }
 
                 img {
-                    width: 100%;
+                        width: 70%;
+
+                    @include responsive(pc-screens) {
+                        width: 86px;
+                    }
                 }
     
                 p{
@@ -824,8 +841,8 @@ main {
             @include responsive(pc-screens) {
                 display: flex;
                 justify-content: space-between;
-                margin-left: 150px;
-                margin-right: 150px;
+                margin-left: 140px;
+                margin-right: 140px;
             }
 
             h3 {
@@ -861,7 +878,7 @@ main {
 
                     @include responsive(pc-screens) {
                         font-size: 26px;
-                        margin-left: 20px;
+                        // margin-left: 20px;
                     }
                 }
             }
