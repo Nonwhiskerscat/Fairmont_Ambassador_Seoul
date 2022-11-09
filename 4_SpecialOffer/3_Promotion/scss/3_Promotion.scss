@@ -730,6 +730,13 @@ main {
         h3 {
             font-size: 28px;
             margin-bottom: 30px;
+            &::before {
+                @include title_border_2(30px, 2px, black, 5px, 5px);
+
+                @include responsive(pc-screens) {
+                    @include title_border(80px, 8px, black, 10px)
+                }
+            }
         }
         h4 {
             font-size: 20px;

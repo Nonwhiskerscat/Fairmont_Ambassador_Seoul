@@ -19,8 +19,13 @@ body {
 .container {
   width: 89.7435897436%;
   position: relative;
-  max-width: 1400px;
+  max-width: 1380px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 100%;
+  }
 }
 
 a {
@@ -725,6 +730,22 @@ main section h2 {
 main section h3 {
   font-size: 28px;
   margin-bottom: 30px;
+}
+main section h3::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 2px solid black;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main section h3::before {
+    content: "";
+    display: block;
+    width: 80px;
+    border-bottom: 8px solid black;
+    margin: 10px auto;
+  }
 }
 main section h4 {
   font-size: 20px;
