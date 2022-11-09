@@ -876,6 +876,11 @@ main .room_int .room_cont .room_sub ul.r_info li p {
   font-size: calc(0.5em + 1.2vw);
   padding-top: 10px;
 }
+@media screen and (min-width: 1400px) {
+  main .room_int .room_cont .room_sub ul.r_info li p {
+    font-size: 1em;
+  }
+}
 main .room_int .room_cont .room_sub ul.r_info li p + p {
   font-family: "SCoreDream";
   font-size: calc(0.8em + 1.2vw);
@@ -1035,7 +1040,6 @@ main .room_types .types_flex {
   }
 }
 main .room_types .types_flex .types_left {
-  background-color: rebeccapurple;
   width: 100%;
 }
 @media screen and (min-width: 1400px) {
@@ -1062,7 +1066,7 @@ main .room_types .types_flex .types_left h4::before {
 }
 main .room_types .types_flex .types_left .type_img {
   width: 100%;
-  height: calc(200px + 20vw);
+  height: 100%;
   overflow: hidden;
 }
 @media screen and (min-width: 1400px) {
@@ -1077,7 +1081,6 @@ main .room_types .types_flex .types_left .type_img img {
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right {
     width: 680px;
-    background-color: violet;
   }
 }
 main .room_types .types_flex .types_right h4 {
@@ -1108,8 +1111,8 @@ main .room_types .types_flex .types_right p.subs {
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right p.subs {
-    font-size: 24px;
-    line-height: 48px;
+    font-size: 18px;
+    line-height: 36px;
   }
 }
 main .room_types .types_flex .types_right ul {
@@ -1120,7 +1123,7 @@ main .room_types .types_flex .types_right ul {
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right ul {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 main .room_types .types_flex .types_right ul li {
@@ -1128,12 +1131,17 @@ main .room_types .types_flex .types_right ul li {
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right ul li {
-    width: 20%;
+    width: 150px;
   }
 }
 main .room_types .types_flex .types_right ul li img {
   width: 50%;
   text-align: center;
+}
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_right ul li img {
+    width: 80px;
+  }
 }
 main .room_types .types_flex .types_right ul li p {
   font-family: "SCoreDream";
@@ -1141,8 +1149,23 @@ main .room_types .types_flex .types_right ul li p {
   margin-top: calc(0.2em + 1vw);
   text-align: center;
 }
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_right ul li p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_right ul li p br {
+    display: none;
+  }
+}
 main .room_types .types_flex .types_right ul li p span.plus {
   display: none;
+}
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_right ul li p span.plus {
+    display: inline;
+  }
 }
 main .room_types .types_flex .types_right .button {
   display: flex;
@@ -1151,7 +1174,7 @@ main .room_types .types_flex .types_right .button {
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right .button {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 main .room_types .types_flex .types_right .button button {
@@ -1160,32 +1183,33 @@ main .room_types .types_flex .types_right .button button {
   font-family: "SCoreDream";
   font-size: calc(0.5em + 1vw);
   font-weight: 200;
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right .button button {
     height: 60px;
   }
 }
-main .room_types .types_flex .types_right .button button:first-child {
-  background-color: transparent;
-  border: 1px solid #333;
-  color: #333;
-}
-main .room_types .types_flex .types_right .button button:first-child:hover {
+main .room_types .types_flex .types_right .button button:hover {
   transition: all 0.5s;
   background-color: #333;
   color: white;
 }
-main .room_types .types_flex .types_right .button button:nth-child(2) {
+main .room_types .types_flex .types_right .button button:last-child {
   background-color: #000066;
   border: 1px solid #000066;
   color: white;
 }
-main .room_types .types_flex .types_right .button button:nth-child(2):hover {
+main .room_types .types_flex .types_right .button button:last-child:hover {
   transition: all 0.5s;
   border: 1px solid #333;
   background-color: #333;
   color: white;
+}
+main .room_types .types_flex .types_right .button .no_button {
+  display: none;
 }
 
 footer {
