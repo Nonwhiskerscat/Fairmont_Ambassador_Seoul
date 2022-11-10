@@ -840,49 +840,54 @@ main {
                         } //li
                     } //ul.form_form
 
-                } //login_basic
-
-                .etc_btn {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-
-                    .inner_btn {
-                        cursor: pointer;
-                        
-                        .flex2 {
-                            display: flex;
-                            align-items: center;
-
-                            img {
-                                margin-right: 10px;
-                                width: calc(20px + 0.5vw);
-
-                                @include responsive(pc-screens) {
-                                    width: 20px;
+                    .etc_btn {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+    
+                        .inner_btn {
+                            cursor: pointer;
+                            
+                            .flex2 {
+                                display: flex;
+                                align-items: center;
+    
+                                img {
+                                    margin-right: 10px;
+                                    width: calc(20px + 0.5vw);
+    
+                                    @include responsive(pc-screens) {
+                                        width: 20px;
+                                    }
                                 }
-                            }
-
-                            p {
-                                font-size: calc(0.8em + 0.8vw);
-
-                                @include responsive(pc-screens) {
-                                    font-size: $mainf;
+    
+                                p {
+                                    font-size: calc(0.8em + 0.8vw);
+    
+                                    @include responsive(pc-screens) {
+                                        font-size: $mainf;
+                                    }
                                 }
                             }
                         }
+    
                     }
+    
+                    .btn_grp {
+                    @include login_btngrp_margin;
+    
+                        button {
+                            @include login_login_button;
+                        }
+                    }
+                } //login_basic
+
+                .login_idpwfind {
+                    @include login_h4;
 
                 }
 
-                .btn_grp {
-                @include login_btngrp_margin;
-
-                    button {
-                        @include login_login_button;
                 
-                    }
-                }
             }
         } //login_sec
 
