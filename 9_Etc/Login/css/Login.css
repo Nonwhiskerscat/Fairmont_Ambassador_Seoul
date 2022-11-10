@@ -1,3 +1,17 @@
+html {
+  overflow: overlay;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(138, 113, 75, 0.8);
+  border-radius: 8px;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1626,6 +1640,229 @@ main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button .btn_flex
 }
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button {
+    margin-top: 0;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: calc(1em + 1vw);
+  text-align: left;
+  margin-bottom: 0;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up h4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  border-bottom: 3px solid #422d13;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up h4::before {
+    content: "";
+    display: block;
+    width: 20px;
+    border-bottom: 3px solid #422d13;
+    margin: 0 0 5px 5px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box {
+  margin-top: calc(5px + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .check_box {
+    margin-top: 14px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex label {
+  display: block;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.3vw);
+  font-weight: 400;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex label {
+    font-size: 14px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex label#all_check {
+  font-size: calc(0.8em + 0.3vw);
+  margin-top: 6px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex label#all_check {
+    font-size: 16px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex input {
+  display: none;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex input + label {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #422d13;
+  border-radius: 20%;
+  cursor: pointer;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex input:checked + label {
+  background-color: #422d13;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box {
+  margin-top: 5px;
+  background-color: rgba(66, 45, 19, 0.17);
+  padding: calc(10px + 1vw);
+  height: 100px;
+  overflow: overlay;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box::-webkit-scrollbar {
+  width: 8px;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box::-webkit-scrollbar-thumb {
+  background-color: rgba(66, 45, 19, 0.8);
+  border-radius: 8px;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box {
+    padding: 15px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box p {
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.4vw);
+  line-height: calc(1.5em + 0.3vw);
+  text-align: justify;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .sign_up_box p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp {
+  margin-top: 65px;
+  padding-bottom: 100px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp {
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button {
+  background-color: #422d13;
+  width: 100%;
+  border: none;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button:hover {
+  background-color: rgb(101, 27, 0);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button .btn_flex {
+  align-items: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button .btn_flex {
+    width: 17.5%;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button .btn_flex p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.sign button {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #422d13;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button:hover {
+  background-color: #422d13;
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button:hover .btn_flex p {
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button .btn_flex {
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button .btn_flex {
+    width: 20%;
+  }
+}
+main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button .btn_flex p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .semi_sign_up .btn_grp.back button {
     margin-top: 0;
   }
 }

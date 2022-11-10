@@ -1073,8 +1073,145 @@ main {
                         }
 
                     }
-                } //pw_find
-            }
+                } //pw_find 
+
+                .semi_sign_up {
+                    @include login_h4;
+
+                    .check_box {
+                        margin-top: calc(5px + 1vw);
+                        @include responsive(pc-screens) {
+                            margin-top: 14px;
+                        }
+
+                        .check_flex {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            label {
+                                display: block;
+                                @include type_custom(calc(0.6em + 0.3vw), $common_font);
+                                font-weight: 400;
+
+                                @include responsive(pc-screens) {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            label#all_check {
+                                font-size: calc(0.8em + 0.3vw);
+                                margin-top: calc(6px);
+
+                                @include responsive(pc-screens) {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            input {
+                                display: none;
+
+                                & + label {
+                                    display: inline-block;
+                                    width: 14px;
+                                    height: 14px;
+                                    border: 1px solid $base_color_dark;
+                                    border-radius: 20%;
+                                    cursor: pointer;
+
+                                    @include responsive(pc-screens) {
+                                        //
+                                    }
+                                }
+
+                                &:checked + label {
+                                    background-color: $base_color_dark;
+
+                                    @include responsive(pc-screens) {
+                                        //
+                                    }
+                                }
+                            } //input
+
+                        } //.check_flex
+
+                        .sign_up_box {
+                            margin-top: 5px;
+                            background-color: rgba(66,45,19,0.17);
+                            padding: calc(10px + 1vw);
+                            height: 100px;
+                            overflow: overlay;
+
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                            }
+                        
+                            &::-webkit-scrollbar-thumb {
+                                background-color: rgba($color: $base_color_dark, $alpha: 0.8);
+                                border-radius: 8px;
+                            }
+                        
+                            &::-webkit-scrollbar-track {
+                                border-radius: 8px;
+                            }
+                        
+
+                            @include responsive(pc-screens) {
+                                padding: 15px;
+                            }
+
+                            p {
+                                @include type_custom(calc(0.6em + 0.4vw), $common_font);
+                                line-height: calc(1.5em + 0.3vw);
+                                text-align: justify;
+
+                                @include responsive(pc-screens) {
+                                    font-size: 14px;
+                                    line-height: 28px;
+                                }
+                            }
+                        }
+
+                        
+                        
+                    } //.check_box
+
+                    .btn_grp {
+                        @include login_btngrp_margin;
+                        padding-bottom: 0;
+                        margin-top: 0;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 20px;
+                        }
+
+
+        
+                        &.sign button {
+                            @include login_dark_button;
+                            margin-top: $small_margin_m;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 20px;
+                            }
+
+                        }
+
+                        &.back button {
+                            @include login_light_button;
+                            margin-top: $small_margin_m;
+                            margin-bottom: 100px;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 0;
+                            }
+                            
+                        }
+
+                    }
+
+                } //.semi_sign_up
+            } //.dive_sec
         } //login_sec
 
         
