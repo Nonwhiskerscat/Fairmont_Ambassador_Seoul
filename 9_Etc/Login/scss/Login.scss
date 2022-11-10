@@ -835,96 +835,8 @@ main {
                     @include login_h4;
 
                     ul.form_form {
-                        
                         li {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            margin-bottom: calc(20px + 2vw);
-
-                            @include responsive(pc-screens) {
-                                margin-bottom: 40px;
-
-                            }
-
-                            &:first-child {
-                                margin-top: calc(16px + 1vw);
-
-                                @include responsive(pc-screens) {
-                                    margin-top: 30px;
-                                }
-                            }
-                            
-                            .label_img {
-                                width:10%;
-                                max-width: 50px;
-                                margin-right: calc(10px + 1vw);
-
-                                @include responsive(pc-screens) {
-                                    width: 50px;
-                                    margin-right: 20px;
-                                }
-
-                                img {
-                                    display: block;
-                                    width: 100%;
-                                }
-                            }
-
-                            .label_input {
-                                width:85%;
-
-                                @include responsive(pc-screens) {
-                                    width: 360px;
-                                }
-                                label {
-                                    p {
-                                        @include type_custom(calc(0.5em + 0.5vw), $common_font);
-
-                                        @include responsive(pc-screens) {
-                                            font-size: 14px;
-                                            font-weight: 200;
-                                        }
-
-
-                                        span {
-                                            @include type_custom(calc(12px + 0.8vw), $eng_title_font);
-                                            letter-spacing: 2px;
-                                            margin-right: 5px;
-
-                                            @include responsive(pc-screens) {
-                                                font-size: $mainf;
-                                            }
-                                        }
-
-                                    }
-                                }
-
-                                input {
-                                    width: 100%;
-                                    background-color: transparent;
-                                    border: 0;
-                                    outline: none;
-                                    border-bottom: 2px solid rgba(66,45,19,0.8);
-                                    padding-bottom: 5px;
-                                    padding-top: 15px;
-                                    color: $base_color_dark;
-                                    font-family: $common_font;
-
-                                    @include responsive(pc-screens) {
-                                        //
-                                    }
-
-                                    &::placeholder {
-                                        font-family: $common_font;
-                                        color: rgba(66,45,19,0.8);
-
-                                        @include responsive(pc-screens) {
-                                            //
-                                        }
-                                    }
-                                }
-                            } //.label_input
+                            @include login_li;
                         } //li
                     } //ul.form_form
 
@@ -964,56 +876,11 @@ main {
                 }
 
                 .btn_grp {
-                    margin-top: $mid_margin_m;
-                    padding-bottom: $big_margin_m;
-
-                    @include responsive(pc-screens) {
-                        margin-top: 30px;
-                    }
+                @include login_btngrp_margin;
 
                     button {
-                        background-color: $base_color_dark;
-                        width: 100%;
-                        border: none;
-                        padding: calc(0.5em + 0.5vw) 0;
-
-                        @include responsive(pc-screens) {
-                            padding: 10px 0px;
-                        }
-
-                        .btn_flex {
-                            width: 25%;
-                            display: flex;
-                            align-items: center;
-                            margin: 0 auto;
-
-                            @include responsive(pc-screens) {
-                                width: 20%;
-                            }
-
-                            p {
-                                @include type_custom(calc(1em + 1vw),$common_font);
-                                font-weight: 300;
-                                color: $base_color_light;
-
-                                @include responsive(pc-screens) {
-                                    font-size: $mainf;
-                                }
-                            }
-
-                            img {
-                                margin-left: calc(0.5em + 0.5vw);
-                                
-                                @include responsive(pc-screens) {
-                                    width: 22px;
-                                    margin-left: 10px;
-                                }
-                            }
-                        
-                        }
-                        
-                        
-                        
+                        @include login_login_button;
+                
                     }
                 }
             }
