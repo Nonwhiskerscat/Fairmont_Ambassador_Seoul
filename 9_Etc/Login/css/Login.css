@@ -960,8 +960,69 @@ main .contents_area .login_sec .dive_sec .etc_btn .inner_btn .flex2 img {
   margin-right: 10px;
   width: calc(20px + 0.5vw);
 }
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .etc_btn .inner_btn .flex2 img {
+    width: 20px;
+  }
+}
 main .contents_area .login_sec .dive_sec .etc_btn .inner_btn .flex2 p {
   font-size: calc(0.8em + 0.8vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .etc_btn .inner_btn .flex2 p {
+    font-size: 18px;
+  }
+}
+main .contents_area .login_sec .dive_sec .btn_grp {
+  margin-top: 65px;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .btn_grp {
+    margin-top: 30px;
+  }
+}
+main .contents_area .login_sec .dive_sec .btn_grp button {
+  background-color: #422d13;
+  width: 100%;
+  border: none;
+  padding: calc(0.5em + 0.5vw) 0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .btn_grp button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .btn_grp button .btn_flex {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .btn_grp button .btn_flex {
+    width: 20%;
+  }
+}
+main .contents_area .login_sec .dive_sec .btn_grp button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .btn_grp button .btn_flex p {
+    font-size: 18px;
+  }
+}
+main .contents_area .login_sec .dive_sec .btn_grp button .btn_flex img {
+  margin-left: calc(0.5em + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .btn_grp button .btn_flex img {
+    width: 22px;
+    margin-left: 10px;
+  }
 }
 
 footer {

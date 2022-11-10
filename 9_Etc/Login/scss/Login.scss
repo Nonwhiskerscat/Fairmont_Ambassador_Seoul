@@ -829,11 +829,7 @@ main {
             }
 
             .dive_sec {
-                margin-top: 35px;
-
-                @include responsive(pc-screens) {
-                    margin-top: 20px;
-                }
+                @include login_margin;
 
                 .login_basic {
                     h4 {
@@ -969,14 +965,76 @@ main {
                             img {
                                 margin-right: 10px;
                                 width: calc(20px + 0.5vw);
+
+                                @include responsive(pc-screens) {
+                                    width: 20px;
+                                }
                             }
 
                             p {
                                 font-size: calc(0.8em + 0.8vw);
+
+                                @include responsive(pc-screens) {
+                                    font-size: $mainf;
+                                }
                             }
                         }
                     }
 
+                }
+
+                .btn_grp {
+                    margin-top: $mid_margin_m;
+                    padding-bottom: $big_margin_m;
+
+                    @include responsive(pc-screens) {
+                        margin-top: 30px;
+                    }
+
+                    button {
+                        background-color: $base_color_dark;
+                        width: 100%;
+                        border: none;
+                        padding: calc(0.5em + 0.5vw) 0;
+
+                        @include responsive(pc-screens) {
+                            padding: 10px 0px;
+                        }
+
+                        .btn_flex {
+                            width: 25%;
+                            display: flex;
+                            align-items: center;
+                            margin: 0 auto;
+
+                            @include responsive(pc-screens) {
+                                width: 20%;
+                            }
+
+                            p {
+                                @include type_custom(calc(1em + 1vw),$common_font);
+                                font-weight: 300;
+                                color: $base_color_light;
+
+                                @include responsive(pc-screens) {
+                                    font-size: $mainf;
+                                }
+                            }
+
+                            img {
+                                margin-left: calc(0.5em + 0.5vw);
+                                
+                                @include responsive(pc-screens) {
+                                    width: 22px;
+                                    margin-left: 10px;
+                                }
+                            }
+                        
+                        }
+                        
+                        
+                        
+                    }
                 }
             }
         } //login_sec
