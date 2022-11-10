@@ -699,6 +699,198 @@ section div.main0 {
 
 main {
     color: #333;
+
+    .sec1 { 
+        .sec1-flex-box {
+            @include responsive(pc-screens) {
+                display: flex;
+            }
+        }
+    
+        .sec1-flex-box ul {
+            line-height: 50px;
+    
+            @include responsive(pc-screens) {
+                width: 100%;
+            }
+        }
+                
+        .sec1-flex-box .li-flex-box {
+            display: flex;
+            justify-content: space-between;
+            
+            div {
+                font-family: $eng_title_font;
+            }
+        }              
+    
+        .sec1-flex-box img {
+            width: 100%;
+            display: block;
+        
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+    }
+    
+    .sec2 {    
+        .sec2-flex-box {
+            @include responsive(pc-screens) {
+                display: flex;
+                flex-direction: row-reverse;
+                width: 100%;
+            }
+        }
+    
+        .sec2-flex-box .notice {
+            font-family: $eng_title_font;
+        }
+        
+        .sec2-flex-box ul {
+            line-height: 50px;
+    
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+        
+        .sec2-flex-box li {
+            list-style: inside;
+        }
+    
+        .hover-img img {
+            width: 100%;
+            display: block;
+        }
+        
+        .hover-img {
+            position: relative;
+            width: 100%;
+            display: block;
+    
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+    
+        .hover-img p {
+            color: #333333;
+            font-size: 30px; 
+            text-align: center;
+            line-height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+    
+            @include responsive (tablet-screens) {
+                font-size: 40px;
+                line-height: 70px;
+            }
+    
+            @include responsive (pc-screens) {
+                font-size: 40px;
+                line-height: 80px;
+            }
+    
+            strong {
+                font-family: $eng_title_font;
+                letter-spacing: 2px;                    
+            }
+    
+            a {
+                color: #333333;
+            }
+    
+            a:hover {
+                text-decoration: underline 1px #333333;
+            }
+        }
+    }
+    
+    .sec3 {
+        .sec3-flex-box {
+            display: flex;
+            justify-content: center;
+            
+    
+            .menu,
+            .booknow {
+                width: 170px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border: #bdbdbd solid 1px;            
+            }
+    
+            .menu,
+            .booknow {            
+                button {
+                    font-family: $eng_title_font;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    background: none;
+                    border: none;
+                }
+    
+                button:hover {
+                    line-height: 0;
+                    width: 170px;
+                    height: 50px;
+                    background-color: #bdbdbd;
+                }            
+            }
+        }
+    }
+    
+    .sec4 {
+        @include responsive(pc-screens) {
+            display: flex;
+        }
+    
+        .hover1 img,
+        .hover2 img {
+            width: 100%;
+            display: block;
+        }
+        
+        .hover1,
+        .hover2 {
+            width: 100%;
+            position: relative; 
+    
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+    
+        .hover1 p,
+        .hover2 p {
+            color: #333333;
+            font-size: 18px;      
+            text-align: left;
+            letter-spacing: 2px;
+            line-height: 30px;
+            margin-left: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+    
+            @include responsive(tablet-screens) {
+                font-size: 28px; 
+                line-height: 40px;           
+            }
+    
+            @include responsive(pc-screens) {
+                font-size: 38px;  
+                line-height: 50px;          
+            }
+        }
+    }
 } //.main
 
 footer {

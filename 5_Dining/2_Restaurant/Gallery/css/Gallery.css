@@ -704,6 +704,192 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+@media screen and (min-width: 1400px) {
+  main .sec1 .sec1-flex-box {
+    display: flex;
+    width: 100%;
+  }
+}
+main .sec1 .sec1-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .sec1-flex-box ul {
+    width: 50%;
+  }
+}
+main .sec1 .sec1-flex-box .li-flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+main .sec1 .sec1-flex-box .li-flex-box div {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec1 .hover1 img {
+  width: 100%;
+  display: block;
+}
+main .sec1 .hover1 {
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .hover1 {
+    width: 50%;
+  }
+}
+main .sec1 .hover1 p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lemon/Milk light", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .hover1 p {
+    font-size: 100px;
+    letter-spacing: 6px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-flex-box {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+}
+main .sec2 .sec2-flex-box .notice {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec2 .sec2-flex-box ul {
+  line-height: 50px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-flex-box ul {
+    width: 50%;
+  }
+}
+main .sec2 .sec2-flex-box li {
+  list-style: inside;
+}
+main .sec2 .hover2 img {
+  width: 100%;
+  display: block;
+}
+main .sec2 .hover2 {
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .hover2 {
+    width: 50%;
+  }
+}
+main .sec2 .hover2 p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lemon/Milk light", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .hover2 p {
+    font-size: 100px;
+    letter-spacing: 6px;
+  }
+}
+main .sec3 .sec3-flex-box {
+  display: flex;
+  justify-content: center;
+}
+main .sec3 .sec3-flex-box .menu,
+main .sec3 .sec3-flex-box .booknow {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: #bdbdbd solid 1px;
+}
+main .sec3 .sec3-flex-box .menu button,
+main .sec3 .sec3-flex-box .booknow button {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background: none;
+  border: none;
+}
+main .sec3 .sec3-flex-box .menu button:hover,
+main .sec3 .sec3-flex-box .booknow button:hover {
+  line-height: 0;
+  width: 170px;
+  height: 50px;
+  background-color: #bdbdbd;
+}
+main .sec4 .sec4-flex-box {
+  padding: 20px;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .sec4-flex-box {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .sec5 .sec5-flex-box {
+    display: flex;
+  }
+}
+main .sec5 .sec5-flex-box img {
+  width: 100%;
+  display: block;
+}
+main .sec5 .hover-img1,
+main .sec5 .hover-img2,
+main .sec5 .hover-img3,
+main .sec5 .hover-img4 {
+  position: relative;
+}
+main .sec5 .hover-img1 p,
+main .sec5 .hover-img2 p,
+main .sec5 .hover-img3 p,
+main .sec5 .hover-img4 p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Lemon/Milk light", sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main .sec5 .hover-img1 p,
+main .sec5 .hover-img2 p,
+main .sec5 .hover-img3 p,
+main .sec5 .hover-img4 p {
+    font-size: 100px;
+    letter-spacing: 6px;
+  }
+}
 
 footer {
   padding-top: 30px;

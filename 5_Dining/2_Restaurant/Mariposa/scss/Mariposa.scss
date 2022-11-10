@@ -699,7 +699,197 @@ section div.main0 {
 
 main {
     color: #333;
+    .sec1 { 
+        .sec1-flex-box {
+            @include responsive(pc-screens) {
+                display: flex;
+            }
+        }
+    
+        .sec1-flex-box ul {
+            line-height: 50px;
+    
+            @include responsive(pc-screens) {
+                width: 100%;
+            }
+        }
+                
+        .sec1-flex-box .li-flex-box {
+            display: flex;
+            justify-content: space-between;
+            
+            div {
+                font-family: $eng_title_font;
+            }
+        }              
+    
+        .sec1-flex-box img {
+            width: 100%;
+            display: block;
+        
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+    }
+    
+    .sec2 {    
+        .sec2-flex-box {
+            @include responsive(pc-screens) {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+    
+        .sec2-flex-box .notice {
+            font-family: $eng_title_font;
+        }
+        
+        .sec2-flex-box ul {
+            line-height: 50px;
+    
+            @include responsive(pc-screens) {
+                width: 100%;
+            }
+        }
+        
+        .sec2-flex-box li {
+            list-style: inside;
+        }
+        
+        .sec2-flex-box img {
+            width: 100%;
+            display: block;
+            
+            @include responsive(pc-screens) {
+                width: 50%;
+            }
+        }
+    }
+    
+    .sec3 {
+        .sec3-flex-box {
+            display: flex;
+            justify-content: center;
+            
+    
+            .menu,
+            .booknow {
+                width: 170px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+    
+            .menu { 
+                border: #bdbdbd solid 1px;            
+                
+                a {
+                    font-family: $eng_title_font;
+                }
+                
+            }
+    
+            .booknow {               
+                border: #bdbdbd solid 1px;            
+    
+                a {
+                    font-family: $eng_title_font;
+                }            
+            }
+        }
+    }
+    
+    .sec4 {
+        img {
+            width: 100%;
+            display: block;
+    
+            @include responsive (pc-screens) {
+                width: 100%;
+            }
+        }
+    
+        .hover-img {
+            position: relative;
+            display: block;                
+        }
+    
+        .hover-img p {
+            color: #000000;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: $eng_title_font;
+            text-align: center;
+            line-height: 60px;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+    
+            @include responsive(tablet-screens) {
+                font-size: 70px;
+                letter-spacing: 4px;
+            }
+    
+            @include responsive(pc-screens) {
+                font-size: 100px;
+                letter-spacing: 6px;
+            }
+        }
+    }
+    
+    .sec5 {
+        img {
+            width: 100%;
+            display: block;
+        }
+        
+        .sec5-flex-box {
+            @include responsive (pc-screens) {
+                display: flex;
+                width: 100%;
+            }
+        }
+    
+        .sec5-text {
+            text-align: center;
+            line-height: 30px;
+            // letter-spacing: 1px;
+    
+            @include responsive (pc-screens) {
+                width: 50%;
+                font-size: 30px;
+                line-height: 40px;
+                // letter-spacing: 2px;
+            }        
+        }
+    
+        .sec5-flex-box img {
+            @include responsive (pc-screens) {
+                width: 50%;
+                display: block;
+            }
+        }
+    
+        .sec5-flex-box2 {
+            @include responsive (pc-screens) {
+                display: flex;
+                width: 100%;
+            }
+        }
+    
+        .sec5-flex-box2 img {
+            @include responsive (pc-screens) {
+                width: 50%;
+                display: block;
+            }
+        }
+    }
 } //.main
+
 
 footer {
     padding-top: 30px;

@@ -704,6 +704,144 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+@media screen and (min-width: 1400px) {
+  main .sec1 .container {
+    display: flex;
+  }
+}
+main .sec1 .container .flex-box {
+  background-color: #fcf6e1;
+  padding: 30px;
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box {
+    width: 50%;
+  }
+}
+main .sec1 .container .flex-box .flex-box1 {
+  display: flex;
+  justify-content: space-around;
+}
+main .sec1 .container .flex-box .flex-box1 .info {
+  font-family: "Lemon/Milk light", sans-serif;
+  line-height: 50px;
+}
+main .sec1 .container .flex-box .flex-box1 .detail {
+  margin-left: 50px;
+  line-height: 50px;
+}
+main .sec1 .container .flex-box .menu-flex-box {
+  display: flex;
+  justify-content: right;
+}
+main .sec1 .container .flex-box .menu-flex-box .menu,
+main .sec1 .container .flex-box .menu-flex-box .booknow {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+main .sec1 .container .flex-box .menu-flex-box .menu {
+  background-color: white;
+}
+main .sec1 .container .flex-box .menu-flex-box .menu a {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec1 .container .flex-box .menu-flex-box .booknow {
+  background-color: #f1d06a;
+}
+main .sec1 .container .flex-box .menu-flex-box .booknow a {
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .sec1 .container .sec1-img {
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .sec1-img {
+    width: 50%;
+  }
+}
+main .sec1 .container .sec1-img img {
+  width: 100%;
+  display: block;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .sec1-img img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-box {
+    display: flex;
+    width: 100%;
+  }
+}
+main .sec2 .sec2-box div img {
+  width: 100%;
+  display: block;
+}
+main .sec2 .sec2-box .hover-img {
+  position: relative;
+}
+main .sec2 .sec2-box .hover-img p {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-box .hover-img p {
+    font-size: 40px;
+    line-height: 80px;
+  }
+}
+main .sec2 .sec2-box .hover-img p strong {
+  font-family: "Lemon/Milk light", sans-serif;
+  letter-spacing: 2px;
+}
+main .sec2 .sec2-box .hover-img p a {
+  color: #333333;
+}
+main .sec2 .sec2-box .hover-img p a:hover {
+  text-decoration: underline 2px white;
+  color: white;
+}
+main .sec3 .sec3-text {
+  text-align: center;
+}
+main .sec3 .sec3-text p {
+  font-size: 14px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 .sec3-text p {
+    font-size: 26px;
+  }
+}
+main .sec3 .sec3-text .rooftop {
+  font-size: 48px;
+  font-family: "Lemon/Milk light", sans-serif;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 .sec3-text .rooftop {
+    letter-spacing: 6px;
+    font-size: 88px;
+  }
+}
+main .sec3 .sec3-img-box img {
+  width: 100%;
+  display: block;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 .sec3-img-box {
+    display: flex;
+  }
+}
 
 footer {
   padding-top: 30px;
