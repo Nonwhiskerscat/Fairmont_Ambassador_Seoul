@@ -166,6 +166,16 @@
     }
 }
 
+//======================Login 부분=====================//
+
+@mixin login_margin {
+    margin-top: 35px;
+
+    @include responsive(pc-screens) {
+        margin-top: 20px;
+    }
+}
+
 
 
 
