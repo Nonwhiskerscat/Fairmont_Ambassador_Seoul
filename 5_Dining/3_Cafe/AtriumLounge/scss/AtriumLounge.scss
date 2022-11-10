@@ -699,6 +699,156 @@ section div.main0 {
 
 main {
     color: #333;
+    .sec1 {
+
+        .container {          
+            @include responsive(pc-screens) {
+                display: flex;
+            }      
+    
+            .flex-box {
+                background-color: #f6d7d7;
+                padding: 30px;
+                width: 100%;
+    
+                @include responsive(pc-screens) {
+                    width: 50%;
+                }
+            
+                .flex-box1 {
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    .info {
+                        font-family: $eng_title_font;
+                        line-height: 50px;
+                    }
+    
+                    .detail {
+                        margin-left: 50px;
+                        line-height: 50px;
+                    }
+                }
+    
+                .menu-flex-box {
+                    display: flex;
+                    justify-content: space-around;
+    
+                    .menu,
+                    .booknow {
+                        width: 170px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                    }
+    
+                    .menu {                
+                        background-color: white;
+    
+                        a {
+                            font-family: $eng_title_font;
+                        }
+                        
+                    }
+    
+                    .booknow {                
+                        background-color: #f6a0a0;
+    
+                        a {
+                            font-family: $eng_title_font;
+                        }            
+                    }
+                }
+            }
+
+            .sec1-img-box {
+                width: 100%;
+
+                @include responsive(pc-screens) {
+                    width: 50%;
+                }
+            }
+
+            .sec1-img-box img{
+                width: 100%;
+                display: block;  
+            }
+        }
+    }
+    
+    .sec2 {
+        .sec2-text {
+            text-align: center;
+    
+            p {
+                font-size: 14px;
+    
+                @include responsive(tablet-screens) {
+                    font-size: 20px;
+                }
+    
+                @include responsive(pc-screens) {
+                    font-size: 26px;
+                }
+            }
+    
+            .tea {
+                font-size: 58px;
+                font-family: $eng_title_font;
+    
+                @include responsive(tablet-screens) {
+                    letter-spacing: 3px;
+                    font-size: 68px;
+                }
+                
+                @include responsive(pc-screens) {
+                    letter-spacing: 6px;
+                    font-size: 88px;
+                }
+            }
+        }
+    
+        .sec2-img-box {
+            img {
+                width: 100%;
+                display: block;
+            }
+            
+            @include responsive(pc-screens) {
+                display: flex;
+            }
+        }
+    }
+    
+    .sec3 {
+        .sec3-text {
+            p {
+                font-size: 58px;
+                font-family: $eng_title_font;
+    
+                @include responsive(tablet-screens) {
+                    letter-spacing: 3px;
+                    font-size: 68px;
+                }
+                
+                @include responsive(pc-screens) {
+                    letter-spacing: 6px;
+                    font-size: 88px;
+                }
+            }
+        }
+    
+        .sec3-img-box {
+            img {
+                width: 100%;
+                display: block;
+            }
+            
+            @include responsive(pc-screens) {
+                display: flex;
+            }
+        }
+    }
 } //.main
 
 footer {
