@@ -369,9 +369,7 @@
     }
 
     .btn_flex {
-        width: 25%;
-        display: flex;
-        align-items: center;
+        text-align: center;
         margin: 0 auto;
 
         @include responsive(pc-screens) {

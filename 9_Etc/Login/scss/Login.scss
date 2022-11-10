@@ -890,21 +890,36 @@ main {
                         justify-content: space-around;
                         text-align: center;
                         @include login_margin;
+                        padding-top: 20px;
                         @include responsive(pc-screens) {
                             //
                         }
 
                         li {
-                            
-                            img {
+
+                            &:hover {
+
+                                &>img {
+                                    transform: scale(1.2);
+                                }
 
                             }
 
-                            p {
-                                @include type_custom(calc(1em + 1vw), $common_font);
+                            cursor: pointer;
+                            img {
+                                transition: all 0.5s;
+                                width: 90%;
+
                                 @include responsive(pc-screens) {
-                                    font-size: 14px;
-                                    font-weight: 200;
+                                    width: 100%
+                                }
+                            }
+
+                            p {
+                                @include type_custom(calc(0.8em + 0.5vw), $common_font);
+                                font-weight: 400;
+                                @include responsive(pc-screens) {
+                                    font-size: $mainf;
                                 }
 
                             }
@@ -919,6 +934,10 @@ main {
 
                         button {
                             @include login_light_button;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 30px;
+                            }
                         }
                     }
                 } //login_basic
