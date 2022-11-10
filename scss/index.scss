@@ -851,7 +851,7 @@ section {
         .room_flex{
             .back_slide {
                 width: 100%;
-                // overflow: hidden;
+                overflow: hidden;
     
                 ul {
                     display: flex;
@@ -862,15 +862,19 @@ section {
                     li{
                         width: 100%;
                         overflow: hidden;
+                        margin: 0 auto;
+
+                        @include responsive(pc-screens) {
+                            //
+                        }
     
                         img {
-                            
-                            transform: translateX(-25%);
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
     
                             @include responsive(pc-screens) {
-                                width: 100vw;
-                                height: 100vh;
-                                transform: translateX(0);
+                                //
                             }
                         }
     
@@ -882,7 +886,7 @@ section {
 
                 .room_back {
                     position: absolute;
-                    top: 120px;
+                    top: calc(80px + 5vw);
                     width: 100%;
                     height: calc(200px + 10vw);
                     background-color: rgba(255,255,255,0.8);
@@ -937,14 +941,14 @@ section {
                                 @include responsive(pc-screens) {
                                     padding-top: 250px;
                                     letter-spacing: 2px;
-                                    font-size: 2.3em;
+                                    font-size: 2em;
                                 }
         
                                 &::before {
                                     @include title_border_2(30px, 3px, #666666, 10px, 5px);
         
                                     @include responsive(pc-screens) {
-                                        @include title_border_2(45px, 6px, #666666, 10px, 5px);
+                                        @include title_border_2(40px, 4px, #666666, 10px, 5px);
                                     }
                                 }
         
@@ -1068,22 +1072,32 @@ section {
         }
 
         li {
-            width: 40px;
+            width: 30px;
             position: relative;
             text-align: center;
             font: {
-                size: 0.875em;
+                size: 0.8em;
                 family: $eng_title_font;
             }
             letter-spacing: 1px;
             margin-right: 10px;
 
+            @include responsive(pc-screens) {
+                font-size: 0.875em;
+                width: 40px;
+            }
+
             &::after {
+                margin: 0 auto;
                 content: "";
                 display: block;
                 border-bottom: #fff 2px solid;
                 opacity: 0.5;
                 margin-top: 2px;
+
+                @include responsive(pc-screens) {
+                    //
+                }
             }
 
             span {
@@ -1092,11 +1106,19 @@ section {
                 left: 50%;
                 transform: translateX(-50%);
                 opacity: 0;
+
+                @include responsive(pc-screens) {
+                    //
+                }
                 
             }
 
             &:hover {
-                width: 180px;
+                width: 120px;
+
+                @include responsive(pc-screens) {
+                    width: 160px;
+                }
                 
                 &::after {
                     opacity: 1;
@@ -1120,25 +1142,37 @@ section {
                 position: absolute;
                 width: 100%;
                 overflow: hidden;
+
+                @include responsive(pc-screens) {
+                    //
+                }
     
                 ul {
                     display: flex;
                     width: 300%;
                     height: 100vh;
                     z-index: -1;
+
+                    @include responsive(pc-screens) {
+                        //
+                    }
     
                     li{
                         width: 100%;
                         overflow: hidden;
+                        margin: 0 auto;
+
+                        @include responsive(pc-screens) {
+                            //
+                        }
     
                         img {
-                            
-                            transform: translateX(-25%) translateY(-20%);
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
     
                             @include responsive(pc-screens) {
-                                width: 100vw;
-                                height: 100vh;
-                                transform: translateX(0);
+                                //
                             }
                         }
     
@@ -1168,25 +1202,6 @@ section {
     
                         @include responsive(pc-screens) {
                             width: 93.75%;
-                            
-                        }
-
-                        h2 {
-                            display: none;
-                            text-align: right;
-    
-                            @include responsive(pc-screens) {
-                                display: none;
-                                opacity: 0.8;
-                                position: absolute;
-                                top: 93%;
-                                left: 250%;
-                                bottom: 0;
-                                display: block;
-                                white-space: nowrap;
-                                @include type_custom(3em, 'Lemon/Milk');
-                                color: rgba(180,34,45,0.75);
-                            }
                         }
 
                         .container{
@@ -1201,19 +1216,18 @@ section {
                             .faci_flex {
                                 display: flex;
                                 flex-direction: row;
-                                margin-top: 140px;
+                                padding-top: 100px;
+
 
                                 @include responsive(pc-screens) {
                                     flex-direction: column;
-                                    margin-top: 0;
+                                    padding-top: 150px;
                                 }
 
                                 h3 {
-                                    @include type_custom(2em,$eng_title_font);
-                                    
+                                    @include type_custom(calc(1em + 2vw),$eng_title_font);
             
                                     @include responsive(pc-screens) {
-                                        padding-top: 150px;
                                         letter-spacing: 2px;
                                         font-size: 2.3em;
                                     }
@@ -1222,20 +1236,21 @@ section {
                                         @include title_border_2(30px, 3px, #fff, 10px, 5px);
             
                                         @include responsive(pc-screens) {
-                                            @include title_border_2(45px, 6px, #fff, 10px, 5px);
+                                            @include title_border_2(40px, 4px, #fff, 10px, 5px);
                                         }
                                     }
                                 }
 
                                 img {
-                                    width: 72px;
-                                    height: 67.5px;
+                                    width: calc(40px + 5vw);
+                                    max-width: 80px;
+                                    
                                     margin-top: -5px;
                                     margin-left: 20px;
 
                                     @include responsive(pc-screens) {
-                                        width: 60%;
-                                        height: 60%;
+                                        width: 250px;
+                                        max-width: none;
                                         margin-top: 40px;
                                     }
                                 }
@@ -1243,27 +1258,35 @@ section {
                             }
         
                             p {
-                                margin-top: 40px;
                                 height: 120px;
-                                @include type_custom(16px, $common_font);
+                                @include type_custom(calc(0.6em + 0.6vw), $common_font);
+                                margin-top: 20px;
                                 text-align: justify;
                                 letter-spacing: 1px;
-                                line-height: 2em;
+                                line-height: calc(2em + 1vw);
 
-                                @include responsive(tablet-screens) {
-                                    font-size: 1.125em;
-                                    letter-spacing: 1px;
-                                    height: 140px;
+                                br {
+                                    @include responsive(screen-800) {
+                                        display: none;
+                                    }
+
+                                    @include responsive(pc-screens) {
+                                        display: block;
+                                    }
+
                                 }
 
+                                
+
                                 span {
-                                    @include type_custom(2em, $common_font);
-                                        line-height: 1em;
+                                    @include type_custom(calc(1em + 1.6vw), $common_font);
+                                    line-height: calc(2em + 1vw);
 
 
 
                                     @include responsive(pc-screens) {
                                         font-size: 1.6em;
+                                        line-height: 2.4em;
                                     }
                                 }
 
@@ -1283,32 +1306,32 @@ section {
                                 // bottom: 0;
                                 transform: translateX(-50%);
                                 background: none;
-                                width: 170px;
-                                height: 40px;
+                                width: 30%;
+                                height: calc(20px + 2vw);
                                 border: 1px solid #fff;
-                                @include type_custom(18px, $common_font);
+                                color: #fff;
+                                @include type_custom(calc(0.5em + 0.8vw), $common_font);
                                 text-align: center;
                                 font-weight: 200;
-                                color: white;
-
         
                                 @include responsive(pc-screens) {
+                                    position: relative;
                                     width: 240px;
                                     height: 50px;
-                                    transform: translateX(-75%);
                                     font-size: 22px;
                                 }
         
                                 &:hover {
-                                    background-color: rgba(255,255,255,0.8);
+                                    background-color: rgba(180,34,45,1);
                                     border: 1px solid rgba(0,0,0,0);
                                     transition: all 0.5s ease-in;
                                 }
+        
                             }
                         }
                     }
                 }
-                li:nth-child(1), li:nth-child(3){
+                li:nth-child(2), li:nth-child(3){
                     display: none;
                 }
             }            
@@ -1331,6 +1354,7 @@ section {
         }
 
         .contents {
+
             text-align: center;
             overflow: hidden;
             box-sizing: content-box;
@@ -1342,6 +1366,10 @@ section {
             @include responsive(pc-screens) {
             width: 33.33333333333333333333vw;
             height: 100vh;
+            }
+
+            &:hover img {
+                animation: image_scale 0.5s reverse;
             }
 
             .sec {
@@ -1359,23 +1387,43 @@ section {
 
                 &:hover::after {
                     opacity: 0.5;
+                    transition: all 0.5s;
                 }
 
                 img.back {
+
+                    
+                    
                     position: absolute;
                     top: 0;
                     left: 0;
                     z-index: -1;
 
-                    width: 120vw;
-                    height:50vh;
-                    transform: translateY(-10%);
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
 
                     @include responsive(pc-screens) {
-                        height: 100vh;
                         width: auto;
                         transform: translateX(-25%);
                     }
+
+                    // &:hover {
+                    //     @keyframes image_scale {
+
+                    //         from {
+                    //             width: 100%;
+                    //         }
+            
+                    //         to {
+                    //             width: 120%;
+                    //         }
+                    //     }
+
+                    //     animation: image_scale 0.5s;
+
+                    // }
                 }
 
                 .serv_con {
@@ -1391,20 +1439,22 @@ section {
                         p{
                             display: inline-block;
                             position: relative;
-                            @include type_custom(3em,$eng_title_font);
+                            @include type_custom(calc(1.5em + 1vw),$eng_title_font);
+                            letter-spacing: 2px;
+                            
 
                             @include responsive(pc-screens) {
-                                font-size: 3.5em;
+                                font-size: 3em;
                             }
                         }
 
                         img {
-                            transform: translate(-50%, -20%);
-                            width: 60px;
+                            transform: translateX(-25px);
+                            width: calc(50px + 1vw);
 
                             @include responsive(pc-screens) {
-                                width: 90px;
-                                transform: translate(-50%, -10%);
+                                transform: translateX(-40px);
+                                width: 80px;
                             }
 
                         }
@@ -1414,22 +1464,24 @@ section {
                         display: none;
 
                         h3 {
-                            @include type_custom(2em,$eng_title_font);
+                            @include type_custom(calc(1em + 1vw),$eng_title_font);
+                            letter-spacing: 2px;
                             &::before{
-                                @include title_border(30px, 4px, #fff, 0px);
+                                @include title_border(30px, 4px, #fff, 5px);
                             }
     
                             @include responsive(pc-screens) {
                                 font-size: 2.5em;
                                 &::before{
-                                    @include title_border(44px, 6px, #fff, 0px);
+                                    @include title_border(44px, 6px, #fff, 5px);
                                 }
                             }
                         }
+
     
                         p {
-                            @include type_custom(0.75em,$common_font);
-                            line-height: 1.6em;
+                            @include type_custom(calc(0.6em + 0.8vw),$common_font);
+                            line-height: calc(1.2em + 0.8vw);
                             margin-top: 20px;
 
     
@@ -1455,11 +1507,6 @@ section {
 
                 
                 }
-
-                    
-
-
-                
             }
         }
     }
