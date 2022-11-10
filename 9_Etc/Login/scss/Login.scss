@@ -797,6 +797,7 @@ main {
         }
 
         .login_sec {
+            color: $base_color_dark;
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
@@ -805,7 +806,7 @@ main {
                 width: 480px;
                 height: 758px;
                 background: url(../img/Login/icon/login_back.png) no-repeat;
-                margin-top: 70px;
+                margin-top: 50px;
                 padding: 0 30px;
             }
 
@@ -838,7 +839,6 @@ main {
                     h4 {
                         @include sub_h4;
                         font-size: calc(1em + 1vw);
-                        color: $base_color_dark;
                         text-align: left;
                         margin-bottom: 0;
 
@@ -863,6 +863,7 @@ main {
                         li {
                             display: flex;
                             align-items: center;
+                            justify-content: space-between;
                             margin-bottom: calc(20px + 2vw);
 
                             @include responsive(pc-screens) {
@@ -871,7 +872,7 @@ main {
                             }
 
                             &:first-child {
-                                margin-top: calc(10px + 1vw);
+                                margin-top: calc(16px + 1vw);
 
                                 @include responsive(pc-screens) {
                                     margin-top: 30px;
@@ -887,10 +888,91 @@ main {
                                     width: 50px;
                                     margin-right: 20px;
                                 }
+
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                }
                             }
 
                             .label_input {
-                                
+                                width:85%;
+
+                                @include responsive(pc-screens) {
+                                    width: 360px;
+                                }
+                                label {
+                                    p {
+                                        @include type_custom(calc(0.5em + 0.5vw), $common_font);
+
+                                        @include responsive(pc-screens) {
+                                            font-size: 14px;
+                                            font-weight: 200;
+                                        }
+
+
+                                        span {
+                                            @include type_custom(calc(12px + 0.8vw), $eng_title_font);
+                                            letter-spacing: 2px;
+                                            margin-right: 5px;
+
+                                            @include responsive(pc-screens) {
+                                                font-size: $mainf;
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                input {
+                                    width: 100%;
+                                    background-color: transparent;
+                                    border: 0;
+                                    outline: none;
+                                    border-bottom: 2px solid rgba(66,45,19,0.8);
+                                    padding-bottom: 5px;
+                                    padding-top: 15px;
+                                    color: $base_color_dark;
+                                    font-family: $common_font;
+
+                                    @include responsive(pc-screens) {
+                                        //
+                                    }
+
+                                    &::placeholder {
+                                        font-family: $common_font;
+                                        color: rgba(66,45,19,0.8);
+
+                                        @include responsive(pc-screens) {
+                                            //
+                                        }
+                                    }
+                                }
+                            } //.label_input
+                        } //li
+                    } //ul.form_form
+
+                } //login_basic
+
+                .etc_btn {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .inner_btn {
+                        cursor: pointer;
+                        
+                        .flex2 {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                margin-right: 10px;
+                                width: calc(20px + 0.5vw);
+                            }
+
+                            p {
+                                font-size: calc(0.8em + 0.8vw);
                             }
                         }
                     }
