@@ -253,7 +253,7 @@
                             </a>
                         </div><!--login_logo-->
                         <div class="dive_sec">
-                            <div class="login_basic">
+                            <div class="login_main no">
                                 <h4>login</h4>
                                 <form action="#">
                                     <ul class="form_form">
@@ -304,12 +304,12 @@
                                                 <p>로그인</p><img src="./img/Login/icon/icon_login.png" alt="로그인아이콘">
                                             </div><!--btn_flex--> 
                                         </button>
-                                        <div class="btn_grp">
                                     </div><!--btn_grp-->
                                 </form>  
-                            </div><!--login_basic-->
+                            </div><!--login_main-->
 
                             <div class="login_idpwfind">
+                                <h4>Find ID/PW</h4>
                                 <ul>
                                     <li>
                                         <img src="./img/Login/icon/icon_4_1.png" alt="아이디 찾기">
@@ -322,11 +322,13 @@
                                     </li>
                                 </ul>
 
-                                <button type="reset">
-                                    <div class="btn_flex">
-                                        <p>뒤로가기</p><img src="./img/Login/icon/icon_back.png" alt="뒤로가기 아이콘">
-                                    </div>
-                                </button>
+                                <div class="btn_grp">
+                                    <button type="reset">
+                                        <div class="btn_flex">
+                                            <p>뒤로가기</p>
+                                        </div>
+                                    </button>
+                                </div><!--btn_grp-->                    
                             </div><!--login_idpwfind-->
 
                             <div class="id_find no">
@@ -367,7 +369,7 @@
                                 </form>  
                             </div><!--id_find-->
 
-                            <div class="pw_find ">
+                            <div class="pw_find no">
                                 <h4>PW 찾기</h4>
                                 <form action="#">
                                     <ul>
@@ -405,7 +407,7 @@
                                 </form>  
                             </div><!--pw_find-->
 
-                            <div class="semi_sign_up ">
+                            <div class="semi_sign_up no">
                                 <div class="check_box">
                                     <label for="tos">이용약관(필수)</label>
                                     <input type="checkbox" id="tos">

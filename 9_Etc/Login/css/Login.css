@@ -828,7 +828,7 @@ main .contents_area .login_sec .dive_sec {
     margin-top: 20px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic h4 {
+main .contents_area .login_sec .dive_sec .login_main h4 {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(0.5em + 3vw);
   margin-bottom: calc(0.5em + 2vw);
@@ -837,20 +837,21 @@ main .contents_area .login_sec .dive_sec .login_basic h4 {
   font-size: calc(1em + 1vw);
   text-align: left;
   margin-bottom: 0;
+  color: #422d13;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic h4 {
+  main .contents_area .login_sec .dive_sec .login_main h4 {
     font-size: 40px;
     margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic h4 {
+  main .contents_area .login_sec .dive_sec .login_main h4 {
     font-size: 24px;
     margin-bottom: 0;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic h4::before {
+main .contents_area .login_sec .dive_sec .login_main h4::before {
   content: "";
   display: block;
   width: 20px;
@@ -858,7 +859,7 @@ main .contents_area .login_sec .dive_sec .login_basic h4::before {
   margin: 0 0 5px 5px;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic h4::before {
+  main .contents_area .login_sec .dive_sec .login_main h4::before {
     content: "";
     display: block;
     width: 20px;
@@ -866,70 +867,70 @@ main .contents_area .login_sec .dive_sec .login_basic h4::before {
     margin: 0 0 5px 5px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: calc(20px + 2vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic ul.form_form li {
+  main .contents_area .login_sec .dive_sec .login_main ul.form_form li {
     margin-bottom: 40px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li:first-child {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li:first-child {
   margin-top: calc(16px + 1vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic ul.form_form li:first-child {
+  main .contents_area .login_sec .dive_sec .login_main ul.form_form li:first-child {
     margin-top: 30px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_img {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_img {
   width: 10%;
   max-width: 50px;
   margin-right: calc(10px + 1vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_img {
+  main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_img {
     width: 50px;
     margin-right: 20px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_img img {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_img img {
   display: block;
   width: 100%;
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input {
   width: 85%;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input {
+  main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input {
     width: 360px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input label p {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p {
   font-family: "SCoreDream";
   font-size: calc(0.5em + 0.5vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input label p {
+  main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p {
     font-size: 14px;
     font-weight: 200;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input label p span {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p span {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(12px + 0.8vw);
   letter-spacing: 2px;
   margin-right: 5px;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input label p span {
+  main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p span {
     font-size: 18px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input input {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input input {
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -940,86 +941,91 @@ main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_inp
   color: #422d13;
   font-family: "SCoreDream";
 }
-main .contents_area .login_sec .dive_sec .login_basic ul.form_form li .label_input input::placeholder {
+main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input input::placeholder {
   font-family: "SCoreDream";
   color: rgba(66, 45, 19, 0.8);
 }
-main .contents_area .login_sec .dive_sec .login_basic .etc_btn {
+main .contents_area .login_sec .dive_sec .login_main .etc_btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-main .contents_area .login_sec .dive_sec .login_basic .etc_btn .inner_btn {
+main .contents_area .login_sec .dive_sec .login_main .etc_btn .inner_btn {
   cursor: pointer;
 }
-main .contents_area .login_sec .dive_sec .login_basic .etc_btn .inner_btn .flex2 {
+main .contents_area .login_sec .dive_sec .login_main .etc_btn .inner_btn .flex2 {
   display: flex;
   align-items: center;
 }
-main .contents_area .login_sec .dive_sec .login_basic .etc_btn .inner_btn .flex2 img {
+main .contents_area .login_sec .dive_sec .login_main .etc_btn .inner_btn .flex2 img {
   margin-right: 10px;
   width: calc(20px + 0.5vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .etc_btn .inner_btn .flex2 img {
+  main .contents_area .login_sec .dive_sec .login_main .etc_btn .inner_btn .flex2 img {
     width: 20px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic .etc_btn .inner_btn .flex2 p {
+main .contents_area .login_sec .dive_sec .login_main .etc_btn .inner_btn .flex2 p {
   font-size: calc(0.8em + 0.8vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .etc_btn .inner_btn .flex2 p {
+  main .contents_area .login_sec .dive_sec .login_main .etc_btn .inner_btn .flex2 p {
     font-size: 18px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic .btn_grp {
+main .contents_area .login_sec .dive_sec .login_main .btn_grp {
   margin-top: 65px;
   padding-bottom: 100px;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .btn_grp {
+  main .contents_area .login_sec .dive_sec .login_main .btn_grp {
     margin-top: 30px;
+    padding-bottom: 0;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic .btn_grp button {
+main .contents_area .login_sec .dive_sec .login_main .btn_grp button {
   background-color: #422d13;
   width: 100%;
   border: none;
   padding: calc(0.5em + 0.5vw) 0;
+  transition: all 0.5s;
+}
+main .contents_area .login_sec .dive_sec .login_main .btn_grp button:hover {
+  background-color: rgb(102, 56, 0);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .btn_grp button {
+  main .contents_area .login_sec .dive_sec .login_main .btn_grp button {
     padding: 10px 0px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic .btn_grp button .btn_flex {
+main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex {
   width: 25%;
   display: flex;
   align-items: center;
   margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .btn_grp button .btn_flex {
+  main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex {
     width: 20%;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic .btn_grp button .btn_flex p {
+main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex p {
   font-family: "SCoreDream";
   font-size: calc(1em + 1vw);
   font-weight: 300;
   color: #fefdf0;
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .btn_grp button .btn_flex p {
+  main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex p {
     font-size: 18px;
   }
 }
-main .contents_area .login_sec .dive_sec .login_basic .btn_grp button .btn_flex img {
+main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex img {
   margin-left: calc(0.5em + 0.5vw);
 }
 @media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_basic .btn_grp button .btn_flex img {
+  main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex img {
     width: 22px;
     margin-left: 10px;
   }
@@ -1033,6 +1039,7 @@ main .contents_area .login_sec .dive_sec .login_idpwfind h4 {
   font-size: calc(1em + 1vw);
   text-align: left;
   margin-bottom: 0;
+  color: #422d13;
 }
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .login_idpwfind h4 {
@@ -1060,6 +1067,77 @@ main .contents_area .login_sec .dive_sec .login_idpwfind h4::before {
     width: 20px;
     border-bottom: 3px solid #422d13;
     margin: 0 0 5px 5px;
+  }
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 35px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .login_idpwfind ul {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind ul li p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .login_idpwfind ul li p {
+    font-size: 14px;
+    font-weight: 200;
+  }
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp {
+  margin-top: 65px;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp {
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #422d13;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: all 0.5s;
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button:hover {
+  background-color: #422d13;
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button:hover .btn_flex p {
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button .btn_flex {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button .btn_flex {
+    width: 20%;
+  }
+}
+main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button .btn_flex p {
+    font-size: 18px;
   }
 }
 

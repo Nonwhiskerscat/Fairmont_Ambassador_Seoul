@@ -831,7 +831,7 @@ main {
             .dive_sec {
                 @include login_margin;
 
-                .login_basic {
+                .login_main {
                     @include login_h4;
 
                     ul.form_form {
@@ -877,17 +877,51 @@ main {
                     @include login_btngrp_margin;
     
                         button {
-                            @include login_login_button;
+                            @include login_dark_button;
                         }
                     }
-                } //login_basic
+                } //login_main
 
                 .login_idpwfind {
                     @include login_h4;
 
-                }
+                    ul {
+                        display: flex;
+                        justify-content: space-around;
+                        text-align: center;
+                        @include login_margin;
+                        @include responsive(pc-screens) {
+                            //
+                        }
 
-                
+                        li {
+                            
+                            img {
+
+                            }
+
+                            p {
+                                @include type_custom(calc(1em + 1vw), $common_font);
+                                @include responsive(pc-screens) {
+                                    font-size: 14px;
+                                    font-weight: 200;
+                                }
+
+                            }
+
+
+                        } //li
+                    } //ul.form_form
+
+    
+                    .btn_grp {
+                    @include login_btngrp_margin;
+
+                        button {
+                            @include login_light_button;
+                        }
+                    }
+                } //login_basic
             }
         } //login_sec
 
