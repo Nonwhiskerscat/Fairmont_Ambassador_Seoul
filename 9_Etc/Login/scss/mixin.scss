@@ -242,13 +242,14 @@
         @include responsive(pc-screens) {
             width: 360px;
         }
+
         label {
             p {
                 @include type_custom(calc(0.5em + 0.5vw), $common_font);
+                font-weight: 300;
 
                 @include responsive(pc-screens) {
                     font-size: 14px;
-                    font-weight: 200;
                 }
 
 
@@ -259,6 +260,97 @@
 
                     @include responsive(pc-screens) {
                         font-size: $mainf;
+                    }
+                }
+
+            }
+        }
+
+        input {
+            width: 100%;
+            background-color: transparent;
+            border: 0;
+            outline: none;
+            border-bottom: 2px solid rgba(66,45,19,0.8);
+            padding-bottom: 5px;
+            padding-top: 15px;
+            color: $base_color_dark;
+            font-family: $common_font;
+
+            @include responsive(pc-screens) {
+                //
+            }
+
+            &::placeholder {
+                font-family: $common_font;
+                color: rgba(66,45,19,0.8);
+
+                @include responsive(pc-screens) {
+                    //
+                }
+            }
+        }
+    } //.label_input
+}
+
+@mixin login_finding_li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: calc(10px + 2vw);
+
+    @include responsive(pc-screens) {
+        margin-bottom: 20px;
+
+    }
+
+    &:first-child {
+        margin-top: calc(8px + 1vw);
+
+        @include responsive(pc-screens) {
+            margin-top: 20px;
+        }
+    }
+    
+    .label_img {
+        width:10%;
+        max-width: 40px;
+        margin-right: calc(10px + 1vw);
+
+        @include responsive(pc-screens) {
+            width: 50px;
+            margin-right: 20px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .label_input {
+        width:85%;
+
+        @include responsive(pc-screens) {
+            width: 360px;
+        }
+        label {
+            p {
+                @include type_custom(calc(0.5em + 0.5vw), $common_font);
+                font-weight: 300;
+
+                @include responsive(pc-screens) {
+                    font-size: 12px;
+                }
+
+
+                span {
+                    @include type_custom(calc(10px + 0.8vw), $eng_title_font);
+                    letter-spacing: 2px;
+                    margin-right: 5px;
+
+                    @include responsive(pc-screens) {
+                        font-size: 14px;
                     }
                 }
 
@@ -307,10 +399,10 @@
     width: 100%;
     border: none;
     padding: calc(0.5em + 0.5vw) 0;
-    transition: all 0.5s;
+    transition: background-color 0.5s;
 
     &:hover {
-        background-color: rgb(102, 56, 0);
+        background-color: rgb(101, 27, 0);
     }
 
     @include responsive(pc-screens) {
@@ -318,13 +410,11 @@
     }
 
     .btn_flex {
-        width: 25%;
-        display: flex;
         align-items: center;
         margin: 0 auto;
 
         @include responsive(pc-screens) {
-            width: 20%;
+            width: 17.5%;
         }
 
         p {
@@ -337,14 +427,6 @@
             }
         }
 
-        img {
-            margin-left: calc(0.5em + 0.5vw);
-            
-            @include responsive(pc-screens) {
-                width: 22px;
-                margin-left: 10px;
-            }
-        }
     
     }
 }
@@ -354,7 +436,7 @@
     width: 100%;
     border: 1px solid $base_color_dark;
     padding: calc(0.5em + 0.5vw) 0;
-    transition: all 0.5s;
+    transition: background-color 0.5s;
 
     &:hover {
         background-color: $base_color_dark;

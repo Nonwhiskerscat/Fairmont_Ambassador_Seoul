@@ -806,7 +806,6 @@ main {
                 width: 480px;
                 height: 758px;
                 background: url(../img/Login/icon/login_back.png) no-repeat;
-                margin-top: 50px;
                 padding: 0 30px;
             }
 
@@ -941,6 +940,140 @@ main {
                         }
                     }
                 } //login_basic
+
+                .id_find {
+                    @include login_h4;
+
+                    ul.finding_id {
+                        li {
+                            @include login_finding_li;
+
+                            &.phone_phone {
+                                position: relative;
+                                input {
+                                }
+
+                                div.aconf_btn {
+                                    cursor: pointer;
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: 8px;
+                                    width: 80px;
+                                    height: 16px;
+                                    line-height: 16px;
+                                    text-align: center;
+                                    background-color: #e6e2d3;
+                                    @include type_custom(12px, $common_font);
+                                    @include responsive(pc-screens) {
+                                        font-size: 12px;
+                                    }
+
+                                }
+                            }
+                        } //li
+                    } //ul.form_form
+
+    
+                    .btn_grp {
+                        @include login_btngrp_margin;
+                        padding-bottom: 0;
+                        margin-top: 0;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 20px;
+                        }
+
+
+        
+                        &.find button {
+                            @include login_dark_button;
+                            margin-top: $small_margin_m;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 20px;
+                            }
+
+                        }
+
+                        &.back button {
+                            @include login_light_button;
+                            margin-top: $small_margin_m;
+                            margin-bottom: 100px;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 0;
+                            }
+                            
+                        }
+
+                    }
+                } //id_find
+
+                .pw_find {
+                    @include login_h4;
+
+                    ul.finding_pw {
+                        li {
+                            @include login_finding_li;
+
+                            &.phone_phone {
+                                position: relative;
+
+                                div.aconf_btn {
+                                    cursor: pointer;
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: 8px;
+                                    width: 80px;
+                                    height: 16px;
+                                    line-height: 16px;
+                                    text-align: center;
+                                    background-color: #e6e2d3;
+                                    @include type_custom(12px, $common_font);
+                                    @include responsive(pc-screens) {
+                                        font-size: 12px;
+                                    }
+
+                                }
+                            }
+                        } //li
+                    } //ul.form_form
+
+    
+                    .btn_grp {
+                        @include login_btngrp_margin;
+                        padding-bottom: 0;
+                        margin-top: 0;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 20px;
+                        }
+
+
+        
+                        &.find button {
+                            @include login_dark_button;
+                            margin-top: $small_margin_m;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 20px;
+                            }
+
+                        }
+
+                        &.back button {
+                            @include login_light_button;
+                            margin-top: $small_margin_m;
+                            margin-bottom: 100px;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 0;
+                            }
+                            
+                        }
+
+                    }
+                } //pw_find
             }
         } //login_sec
 

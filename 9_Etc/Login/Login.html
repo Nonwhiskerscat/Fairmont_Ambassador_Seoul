@@ -308,7 +308,7 @@
                                 </form>  
                             </div><!--login_main-->
 
-                            <div class="login_idpwfind">
+                            <div class="login_idpwfind no">
                                 <h4>Find ID/PW</h4>
                                 <ul>
                                     <li>
@@ -334,38 +334,122 @@
                             <div class="id_find no">
                                 <h4>ID 찾기</h4>
                                 <form action="#">
-                                    <ul>
-                                        <li>
-                                            <label for="aname">
+                                    <ul class="finding_id">
+                                        <li class="name_name">
+                                            <label for="aname" class="label_img">
                                                 <img src="./img/Login/icon/icon_5_1.png" alt="이름 아이콘">
-                                                <p><span>Name</span></p>
                                             </label>
-                                            <input id="aname" type="text" placeholder="회원분의 이름을 입력하세요!" required>
+                                            <div class="label_input">
+                                                <label for="aname">
+                                                    <p><span>Name</span>이름</p>
+                                                </label>
+                                                <input id="aname" type="text" placeholder="회원분의 이름을 입력하세요!" required>
+                                            </div> 
                                         </li>
-
-                                        <li>
-                                            <label for="aphone">
+                                        
+                                        <li class="phone_phone">
+                                            <label for="aphone" class="label_img">
                                                 <img src="./img/Login/icon/icon_5_2.png" alt="휴대폰 아이콘">
-                                                <p><span>Phone Number</span></p>
                                             </label>
-                                            <input id="apass" type="password" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
-                                            <button>인증번호 받기</button>
+                                            <div class="label_input">
+                                                <label for="aphone">
+                                                    <p><span>Phone Number</span>휴대폰 번호</p>
+                                                </label>
+                                                <input id="aphone" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <div class="aconf_btn" onclick="alert('인증번호가 전송 되었습니다!')">인증번호 받기</div>
+                                            </div> 
                                         </li>
 
-                                        <li>
-                                            <label for="aconf">
+                                        <li class="aconf_aconf">
+                                            <label for="aconf" class="label_img">
                                                 <img src="./img/Login/icon/icon_5_3.png" alt="인증번호 아이콘">
-                                                <p><span>Certification Number</span></p>
                                             </label>
-                                            <input id="aconf" type="password" placeholder="SMS로 발송된 인증번호를 입력하세요!" required>
-                                            <div class="time"></div>
+                                            <div class="label_input">
+                                                <label for="aconf">
+                                                    <p><span>Confrim Number</span>인증 번호</p>
+                                                </label>
+                                                <input id="aconf" type="text" placeholder="SMS로 발송된 인증번호를 입력하세요!" required>
+                                            </div> 
                                         </li>
+
                                     </ul>
 
-                                    <div class="btn_grp">
-                                        <button>찾기 <img src="./img/Login/icon/icon_find.png" alt="찾기 아이콘"></button>
-                                        <button>뒤로가기 <img src="./img/Login/icon/icon_back.png" alt="뒤로가기 아이콘"></button>
+                                    <div class="btn_grp find">
+                                        <button type="submit">
+                                            <div class="btn_flex">
+                                                <p>찾기</p>
+                                            </div><!--btn_flex--> 
+                                        </button>
                                     </div><!--btn_grp-->
+                                    <div class="btn_grp back">
+                                        <button type="reset">
+                                            <div class="btn_flex">
+                                                <p>뒤로가기</p>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    
+                                </form>  
+                            </div><!--id_find-->
+
+                            <div class="pw_find">
+                                <h4>패스워드 찾기</h4>
+                                <form action="#">
+                                    <ul class="finding_pw">
+                                        <li class="id_id">
+                                            <label for="aid2" class="label_img">
+                                                <img src="./img/Login/icon/icon_6_1.png" alt="아이디 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aid2">
+                                                    <p><span>ID</span>아이디</p>
+                                                </label>
+                                                <input id="aid2" type="text" placeholder="회원분의 아이디를 입력하세요!" required>
+                                            </div> 
+                                        </li>
+                                        
+                                        <li class="phone_phone">
+                                            <label for="aphone2" class="label_img">
+                                                <img src="./img/Login/icon/icon_6_2.png" alt="휴대폰 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aphone2">
+                                                    <p><span>Phone Number</span>휴대폰 번호</p>
+                                                </label>
+                                                <input id="aphone2" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <div class="aconf_btn" onclick="alert('인증번호가 전송 되었습니다!')">인증번호 받기</div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="aconf_aconf">
+                                            <label for="aconf2" class="label_img">
+                                                <img src="./img/Login/icon/icon_6_3.png" alt="인증번호 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aconf2">
+                                                    <p><span>Confrim Number</span>인증 번호</p>
+                                                </label>
+                                                <input id="aconf2" type="text" placeholder="SMS로 발송된 인증번호를 입력하세요!" required>
+                                            </div> 
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="btn_grp find">
+                                        <button type="submit">
+                                            <div class="btn_flex">
+                                                <p>찾기</p>
+                                            </div><!--btn_flex--> 
+                                        </button>
+                                    </div><!--btn_grp-->
+                                    <div class="btn_grp back">
+                                        <button type="reset">
+                                            <div class="btn_flex">
+                                                <p>뒤로가기</p>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    
                                 </form>  
                             </div><!--id_find-->
 

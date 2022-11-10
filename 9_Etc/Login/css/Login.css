@@ -798,7 +798,6 @@ main .contents_area .login_sec {
     width: 480px;
     height: 758px;
     background: url(../img/Login/icon/login_back.png) no-repeat;
-    margin-top: 50px;
     padding: 0 30px;
   }
 }
@@ -912,11 +911,11 @@ main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_inpu
 main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p {
   font-family: "SCoreDream";
   font-size: calc(0.5em + 0.5vw);
+  font-weight: 300;
 }
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p {
     font-size: 14px;
-    font-weight: 200;
   }
 }
 main .contents_area .login_sec .dive_sec .login_main ul.form_form li .label_input label p span {
@@ -989,10 +988,10 @@ main .contents_area .login_sec .dive_sec .login_main .btn_grp button {
   width: 100%;
   border: none;
   padding: calc(0.5em + 0.5vw) 0;
-  transition: all 0.5s;
+  transition: background-color 0.5s;
 }
 main .contents_area .login_sec .dive_sec .login_main .btn_grp button:hover {
-  background-color: rgb(102, 56, 0);
+  background-color: rgb(101, 27, 0);
 }
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .login_main .btn_grp button {
@@ -1000,14 +999,12 @@ main .contents_area .login_sec .dive_sec .login_main .btn_grp button:hover {
   }
 }
 main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex {
-  width: 25%;
-  display: flex;
   align-items: center;
   margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex {
-    width: 20%;
+    width: 17.5%;
   }
 }
 main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex p {
@@ -1019,15 +1016,6 @@ main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex p
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex p {
     font-size: 18px;
-  }
-}
-main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex img {
-  margin-left: calc(0.5em + 0.5vw);
-}
-@media screen and (min-width: 1400px) {
-  main .contents_area .login_sec .dive_sec .login_main .btn_grp button .btn_flex img {
-    width: 22px;
-    margin-left: 10px;
   }
 }
 main .contents_area .login_sec .dive_sec .login_idpwfind h4 {
@@ -1121,7 +1109,7 @@ main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button {
   width: 100%;
   border: 1px solid #422d13;
   padding: calc(0.5em + 0.5vw) 0;
-  transition: all 0.5s;
+  transition: background-color 0.5s;
 }
 main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button:hover {
   background-color: #422d13;
@@ -1157,6 +1145,488 @@ main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button .btn_fl
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .login_idpwfind .btn_grp button {
     margin-top: 30px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: calc(1em + 1vw);
+  text-align: left;
+  margin-bottom: 0;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find h4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  border-bottom: 3px solid #422d13;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find h4::before {
+    content: "";
+    display: block;
+    width: 20px;
+    border-bottom: 3px solid #422d13;
+    margin: 0 0 5px 5px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(10px + 2vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li {
+    margin-bottom: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li:first-child {
+  margin-top: calc(8px + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li:first-child {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_img {
+  width: 10%;
+  max-width: 40px;
+  margin-right: calc(10px + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_img {
+    width: 50px;
+    margin-right: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_img img {
+  display: block;
+  width: 100%;
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input {
+  width: 85%;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input {
+    width: 360px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input label p {
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 0.5vw);
+  font-weight: 300;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input label p {
+    font-size: 12px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input label p span {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(10px + 0.8vw);
+  letter-spacing: 2px;
+  margin-right: 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input label p span {
+    font-size: 14px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgba(66, 45, 19, 0.8);
+  padding-bottom: 5px;
+  padding-top: 15px;
+  color: #422d13;
+  font-family: "SCoreDream";
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li .label_input input::placeholder {
+  font-family: "SCoreDream";
+  color: rgba(66, 45, 19, 0.8);
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li.phone_phone {
+  position: relative;
+}
+main .contents_area .login_sec .dive_sec .id_find ul.finding_id li.phone_phone div.aconf_btn {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  bottom: 8px;
+  width: 80px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  background-color: #e6e2d3;
+  font-family: "SCoreDream";
+  font-size: 12px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find ul.finding_id li.phone_phone div.aconf_btn {
+    font-size: 12px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp {
+  margin-top: 65px;
+  padding-bottom: 100px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp {
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button {
+  background-color: #422d13;
+  width: 100%;
+  border: none;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button:hover {
+  background-color: rgb(101, 27, 0);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button .btn_flex {
+  align-items: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button .btn_flex {
+    width: 17.5%;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button .btn_flex p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.find button {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #422d13;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button:hover {
+  background-color: #422d13;
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button:hover .btn_flex p {
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button .btn_flex {
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button .btn_flex {
+    width: 20%;
+  }
+}
+main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button .btn_flex p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .id_find .btn_grp.back button {
+    margin-top: 0;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: calc(1em + 1vw);
+  text-align: left;
+  margin-bottom: 0;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find h4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  border-bottom: 3px solid #422d13;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find h4::before {
+    content: "";
+    display: block;
+    width: 20px;
+    border-bottom: 3px solid #422d13;
+    margin: 0 0 5px 5px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(10px + 2vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li {
+    margin-bottom: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li:first-child {
+  margin-top: calc(8px + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li:first-child {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_img {
+  width: 10%;
+  max-width: 40px;
+  margin-right: calc(10px + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_img {
+    width: 50px;
+    margin-right: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_img img {
+  display: block;
+  width: 100%;
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input {
+  width: 85%;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input {
+    width: 360px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input label p {
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 0.5vw);
+  font-weight: 300;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input label p {
+    font-size: 12px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input label p span {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(10px + 0.8vw);
+  letter-spacing: 2px;
+  margin-right: 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input label p span {
+    font-size: 14px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgba(66, 45, 19, 0.8);
+  padding-bottom: 5px;
+  padding-top: 15px;
+  color: #422d13;
+  font-family: "SCoreDream";
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li .label_input input::placeholder {
+  font-family: "SCoreDream";
+  color: rgba(66, 45, 19, 0.8);
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li.phone_phone {
+  position: relative;
+}
+main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li.phone_phone div.aconf_btn {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  bottom: 8px;
+  width: 80px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  background-color: #e6e2d3;
+  font-family: "SCoreDream";
+  font-size: 12px;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find ul.finding_pw li.phone_phone div.aconf_btn {
+    font-size: 12px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp {
+  margin-top: 65px;
+  padding-bottom: 100px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp {
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button {
+  background-color: #422d13;
+  width: 100%;
+  border: none;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button:hover {
+  background-color: rgb(101, 27, 0);
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button .btn_flex {
+  align-items: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button .btn_flex {
+    width: 17.5%;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button .btn_flex p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.find button {
+    margin-top: 20px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #422d13;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button:hover {
+  background-color: #422d13;
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button:hover .btn_flex p {
+  color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button {
+    padding: 10px 0px;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button .btn_flex {
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button .btn_flex {
+    width: 20%;
+  }
+}
+main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button .btn_flex p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .contents_area .login_sec .dive_sec .pw_find .btn_grp.back button {
+    margin-top: 0;
   }
 }
 
