@@ -230,113 +230,162 @@
         </section> -->
 
         <main>
-            <div class="back_img">
-                <img src="./img/Sign_Up/background.png" alt="백그라운드 이미지">
-            </div>
+            
+            <div class="bighead"> 
+                <div class="image_area">
+                    <img src="./img/Sign_Up/background.png" alt="백그라운드 이미지">
+                </div><!--image_area-->
+                
+                <div class="contents_area">
+                    <div class="container">
+                        <div class="sign_flex">
+                            <div class="sign_left">
+                                <h4>Sign Up</h4>
+                                <form action="#">
+                                    <ul class="sign_up_form">
+                                        <li class="id_id">
+                                            <label for="aid" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_1.png" alt="아이디 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aid">
+                                                    <p><span>ID</span>아이디</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aid" type="text" placeholder="영문, 숫자 조합 9자 이상!" required>
+                                                <div class="over_btn" onclick="alert('멋진 아이디네요!')">ID 중복확인</div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="pw_pw">
+                                            <label for="apass" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_2.png" alt="패스워드 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="apass">
+                                                    <p><span>Password</span>패스워드</p><p class="warning"></p>
+                                                </label>
+                                                <input id="apass" type="password" placeholder="영문 숫자 특수문자(@$%^*-) 조합 9자 이상!" required>
+                                            </div> 
+                                        </li>
+
+                                        <li class="cpw_cpw">
+                                            <label for="acon" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_3.png" alt="패스워드 확인 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="acon">
+                                                    <p><span>Confirm Password</span>비밀번호 확인</p><p class="warning"></p>
+                                                </label>
+                                                <input id="acon" type="password" placeholder="입력하신 비밀번호를 다시 입력하세요!" required>
+                                            </div> 
+                                        </li>
+
+                                        <li class="name_name">
+                                            <label for="aname" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_4.png" alt="이름 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aname">
+                                                    <p><span>Name</span>이름</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aname" type="text" placeholder="이름을 입력하세요!" required>
+                                            </div> 
+                                        </li>
+
+                                        <li class="email_email">
+                                            <label for="amail" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_5.png" alt="이메일">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="amail">
+                                                    <p><span>E-mail</span>이메일</p><p class="warning"></p>
+                                                </label>
+                                                <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
+                                                <select name="mail" id="mail">
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="hanmail.net">hanmail.net</option>
+                                                    <option value="nate.com">nate.com</option>
+                                                    <option value="">직접입력</option>
+                                                </select>
+                                            </div> 
+                                        </li>
+
+                                        <li class="phone_phone">
+                                            <label for="aphone" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_6.png" alt="휴대폰 번호 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aphone">
+                                                    <p><span>Phone Number</span>휴대폰 번호</p>
+                                                </label>
+                                                <input id="aphone" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <div class="aconf_btn" onclick="alert('인증번호가 전송 되었습니다!')">인증번호 받기</div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="aconf_aconf">
+                                            <label for="aconf" class="label_img">
+                                                <img src="./img/Sign_Up/icon/icon_1_7.png" alt="휴대폰 인증 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aconf">
+                                                    <p><span>Certification Number</span>인증 번호</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aconf" type="text" placeholder="SMS로 발송된 인증번호를 입력하세요!" required>
+                                            </div> 
+                                        </li>
+                                    </ul>
+                                    <div class="check_box" id="check_all">
+                                        <div class="check_flex">
+                                            <label for="all" id="all_check">위 약관에 전체 동의합니다.</label>
+                                            <input type="checkbox" id="all">
+                                            <label></label>
+                                        </div><!--check_flex-->
+                                    </div><!--check_box-->
+
+                                    <div class="btn_grp sign">
+                                        <button type="submit">
+                                            <div class="btn_flex">
+                                                <p>가입완료</p>
+                                            </div><!--btn_flex--> 
+                                        </button>
+                                    </div><!--btn_grp-->
+    
+                                    <div class="btn_grp back">
+                                        <button type="reset">
+                                            <div class="btn_flex">
+                                                <p>뒤로가기</p>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div><!--sign_left-->
+    
+                            <div class="sign_right">
+                                <q>
+                                    <em>호텔</em>의 <em>품격</em>은<br>
+                                    화려한 <span>전망</span>, 최적의 <span>접근성</span>,<br>
+                                    편리하고 <span>고급진 시설</span>,<br>
+                                    그리고 <span>친절한 서비스</span>로부터 비롯됩니다.
+    
+                                    <p><span>by</span> 페어몬트 앰배서더 서울</p>
+                                </q>
+                            </div><!--sign_right-->
+                        </div><!--sign_flex-->
+                    </div><!--container-->
+                </div><!--contents_area-->
+            </div><!--bighead-->
+
             <div class="titlearea">
                 <div class="back_logo"></div>
-                <div class="back_matte"></div>
                 <h1>SIGN-UP</h1>
             </div><!--titlearea-->
-            <div class="contents_area">
-                <div class="container">
-                    <div class="sign_flex">
-                        <div class="sign_left">
-                            <h4>회원가입</h4>
-                            <ul>
-                                <li>
-                                    <label for="aid">
-                                        <img src="./img/Sign_Up/icon/icon_1_1.png" alt="아이디 아이콘">
-                                        <p><span>ID</span>아이디</p><p class="warning"></p>
-                                    </label>
-                                    <input id="aid" type="text" placeholder="영문, 숫자 조합 9자 이상!" required>
-                                    <button>ID 중복 확인</button>
-                                </li>
 
-                                <li>
-                                    <label for="apass">
-                                        <img src="./img/Sign_Up/icon/icon_1_2.png" alt="비밀번호 아이콘">
-                                        <p><span>Password</span>패스워드</p><p class="warning"></p>
-                                    </label>
-                                    <input id="apass" type="password" placeholder="영문 숫자 특수문자(@$%^*-) 조합 9자 이상!" required>
-                                </li>
+            <div class="back_logo">
+                <img src="./img/Sign_Up/icon/icon_back.png" alt="백로고">
+            </div>
 
-                                <li>
-                                    <label for="acon">
-                                        <img src="./img/Sign_Up/icon/icon_1_3.png" alt="비밀번호 확인 아이콘">
-                                        <p><span>Confirm Password</span>비밀번호 확인</p><p class="warning"></p>
-                                    </label>
-                                    <input id="acon" type="password" placeholder="입력하신 비밀번호를 다시 입력하세요!" required>
-                                </li>
-
-                                <li>
-                                    <label for="aname">
-                                        <img src="./img/Sign_Up/icon/icon_1_4.png" alt="이름 아이콘">
-                                        <p><span>Name</span>이름</p><p class="warning"></p>
-                                    </label>
-                                    <input id="aname" type="text" placeholder="이름을 입력하세요!" required>
-                                </li>
-                                
-                                <li>
-                                    <label for="amail">
-                                        <img src="./img/Sign_Up/icon/icon_1_5.png" alt="이메일">
-                                        <p><span>E-mail</span>이메일</p><p class="warning"></p>
-                                    </label>
-                                    <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
-                                    <select name="mail" id="mail">
-                                        <option value="gmail.com">gmail.com</option>
-                                        <option value="naver.com">naver.com</option>
-                                        <option value="hanmail.net">hanmail.net</option>
-                                        <option value="nate.com">nate.com</option>
-                                        <option value="">직접입력</option>
-                                    </select>
-                                </li>
-
-                                <li>
-                                    <label for="aphone">
-                                        <img src="./img/Sign_Up/icon/icon_1_6.png" alt="휴대폰 번호 아이콘">
-                                        <p><span>Phone Number</span>휴대폰 번호</p><p class="warning"></p>
-                                    </label>
-                                    <input id="aphone" type="tel" placeholder="휴대폰 번호를 입력하세요!" required>
-                                    <button>인증번호 받기</button>
-                                </li>
-
-                                <li>
-                                    <label for="anum">
-                                        <img src="./img/Sign_Up/icon/icon_1_7.png" alt="휴대폰 번호 아이콘">
-                                        <p><span>Certification Number</span>인증 번호</p><p class="warning"></p>
-                                    </label>
-                                    <input id="anum" type="text" placeholder="인증번호를 입력하세요!" required>
-                                    <div class="timer"></div><!--timer-->
-                                </li>
-                            </ul>
-                            <div class="check_box">
-                                <label for="fake">위에 기재된 내용이 허위사실이 없음을 확인합니다.</label>
-                                <input type="checkbox" id="fake">
-                            </div><!--check_box-->
-
-                            <div class="button">
-                                <button>돌아가기 <img src="./img/Sign_Up/icon/icon_2_1.png" alt="돌아가기"></button>
-                                <button>가입완료 <img src="./img/Sign_Up/icon/icon_2_2.png" alt="가입완료"></button>
-                            </div><!--button-->
-                        </div><!--sign_left-->
-
-                        <div class="sign_right">
-                            <q>
-                                <em>호텔</em>의 <em>품격</em>은<br>
-                                화려한 <span>전망</span>, 최적의 <span>접근성</span>,<br>
-                                편리하고 <span>고급진 시설</span>,<br>
-                                그리고 <span>친절한 서비스</span>로부터 비롯됩니다.
-
-                                <p><span>by</span> 페어몬트 앰배서더 서울</p>
-                            </q>
-                        </div><!--sign_right-->
-                    </div><!--sign_flex-->
-                </div><!--container-->
-                <div class="back_logo">
-                    <img src="./img/Sign_Up/icon/icon_back.png" alt="백로고">
-                </div>
-            </div><!--contents_area-->
             
         </main>
         <footer>

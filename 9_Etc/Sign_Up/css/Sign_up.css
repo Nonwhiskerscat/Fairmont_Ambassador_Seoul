@@ -507,7 +507,7 @@ header .header_entire .menu {
   width: 70px;
   display: flex;
   justify-content: space-between;
-  color: "#422d13";
+  color: #fff;
   align-items: center;
   text-align: right;
   margin-top: 5px;
@@ -515,6 +515,7 @@ header .header_entire .menu {
 @media screen and (min-width: 1400px) {
   header .header_entire .menu {
     width: 80px;
+    color: #422d13;
   }
 }
 header .header_entire .menu .menu_bar {
@@ -529,9 +530,14 @@ header .header_entire .menu .menu_bar span {
   display: block;
   height: 0.5px;
   width: 100%;
-  background: "#422d13";
+  background: #fff;
   position: absolute;
   right: 0;
+}
+@media screen and (min-width: 1400px) {
+  header .header_entire .menu .menu_bar span {
+    background: #422d13;
+  }
 }
 header .header_entire .menu .menu_bar span:nth-child(1) {
   top: 0;
@@ -554,6 +560,47 @@ header .header_entire .menu .menu_type p {
   }
 }
 
+main {
+  background-color: #fefdf0;
+}
+@media screen and (min-width: 1400px) {
+  main {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+main .bighead {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead {
+    flex-direction: row;
+  }
+}
+main .bighead .image_area {
+  width: 100%;
+  height: calc(200px + 20vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area {
+    width: 34.8958333333%;
+    height: 100vh;
+  }
+}
+main .bighead .image_area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area {
+    width: 65.1041666667%;
+  }
+}
 footer {
   display: none;
   padding-top: 30px;
