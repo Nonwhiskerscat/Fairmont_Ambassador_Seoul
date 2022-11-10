@@ -700,7 +700,9 @@ header .header_entire .menu .menu_type p {
   }
 }
 .main1 .contents .semi_container h2 {
+  font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(0.5em + 3vw);
+  letter-spacing: 2px;
   font-weight: 400;
   margin-bottom: calc(0.5em + 0.5vw);
 }
@@ -734,7 +736,7 @@ header .header_entire .menu .menu_type p {
 .main1 .contents .semi_container p {
   font-size: calc(0.8em + 0.5vw);
   line-height: calc(1em + 1.5vw);
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 .main1 .contents .semi_container p span {

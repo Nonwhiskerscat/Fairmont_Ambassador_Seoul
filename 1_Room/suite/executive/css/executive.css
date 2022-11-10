@@ -547,6 +547,7 @@ header .header_entire .menu .menu_type p {
 }
 
 section div.main0 {
+  width: 100%;
   height: 100vh;
 }
 section div.main0 .bg_img {
@@ -577,8 +578,9 @@ section div.main0 .bg_img img {
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img img {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 section div.main0 .bg_img img.main_pc {
@@ -754,7 +756,9 @@ main .room_int h3.first span {
 main .room_int .room_info {
   margin-top: 65px;
   width: 100%;
+  height: 700px;
   overflow: hidden;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
   main .room_int .room_info {
@@ -762,8 +766,9 @@ main .room_int .room_info {
   }
 }
 main .room_int .room_info img {
-  width: 100vw;
-  min-height: 700px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 1400px) {
   main .room_int .room_info img {
@@ -971,20 +976,22 @@ main .room_gall .gall_main ul {
 main .room_gall .gall_main ul li {
   width: 50%;
   overflow: hidden;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_main ul li {
     width: 50%;
   }
 }
-main .room_gall .gall_main ul li:nth-child(1), main .room_gall .gall_main ul li:nth-child(3) {
+main .room_gall .gall_main ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .room_gall .gall_main ul li img.small_img {
   transform: scale(0.8);
   transform-origin: top;
   opacity: 0.3;
-}
-main .room_gall .gall_main ul li img {
-  width: 100%;
-  display: block;
 }
 main .room_gall .gall_navi {
   width: 30%;
@@ -1082,15 +1089,12 @@ main .room_types .types_flex .types_left .type_img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-@media screen and (min-width: 1400px) {
-  main .room_types .types_flex .types_left .type_img {
-    width: 100%;
-    height: 450px;
-  }
+  margin: 0 auto;
 }
 main .room_types .types_flex .types_left .type_img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right {
