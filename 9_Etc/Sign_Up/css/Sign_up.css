@@ -582,6 +582,7 @@ main .bighead {
   }
 }
 main .bighead .image_area {
+  position: relative;
   width: 100%;
   height: calc(200px + 20vw);
 }
@@ -595,6 +596,34 @@ main .bighead .image_area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+main .bighead .image_area .titlearea {
+  position: absolute;
+  bottom: -5%;
+  right: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area .titlearea {
+    top: -50px;
+    right: 32px;
+    bottom: 0;
+  }
+}
+main .bighead .image_area .titlearea h1 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(2em + 3vw);
+  color: #fefdf0;
+  letter-spacing: 2px;
+  margin-right: 20px;
+  opacity: 0.8;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area .titlearea h1 {
+    font-size: 5em;
+    transform-origin: center right;
+    transform: rotateZ(-90deg);
+    margin: 0;
+  }
 }
 @media screen and (min-width: 1400px) {
   main .bighead .contents_area {

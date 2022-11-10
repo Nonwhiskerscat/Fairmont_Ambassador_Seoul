@@ -730,6 +730,7 @@ main {
         }
 
         .image_area {
+            position: relative;
             width: 100%;
             height: calc(200px + 20vw);
 
@@ -743,6 +744,35 @@ main {
                 height: 100%;
                 object-fit: cover;
             }
+
+            .titlearea {
+                position: absolute;
+                bottom: -5%;
+                right: 0;
+
+                @include responsive(pc-screens) {
+                    top: -50px;
+                    right: 32px;
+                    bottom: 0;
+                    
+                }
+
+                h1 {
+                    @include type_custom(calc(2em + 3vw), $eng_title_font);
+                    color: $base_color_light;
+                    letter-spacing: 2px;
+                    margin-right: 20px;
+                    opacity: 0.8;
+
+                    @include responsive(pc-screens) {
+                        font-size: 5em;
+                        transform-origin: center right;
+                        transform: rotateZ(-90deg);
+                        margin: 0;
+                    
+                    }
+                }
+            }
         }
 
         .contents_area {
@@ -751,6 +781,7 @@ main {
                 width: 65.10416666666667%;
     
             }
+
         }
 
         
