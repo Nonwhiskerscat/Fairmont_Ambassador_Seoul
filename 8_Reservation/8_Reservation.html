@@ -242,9 +242,9 @@
                 
                 <div class="contents_area">
                     <div class="container">
-                        <div class="book_flex">
-                            <div class="book_left">
-                                <form action="#">
+                        <form action="#">
+                            <div class="book_flex">
+                                <div class="book_left">
                                     <div class="check">
                                         <h4>Period</h4>
                                         <ul>
@@ -309,8 +309,8 @@
                                         <ul>
                                             <li>
                                                 <img src="./img/8_Reservation/icon/icon_3_1.png" alt="객실">
-                                                <em>Fairmont Room</em>
-                                                <p>페어몬트 룸</p>
+                                                <em>Suite Room</em>
+                                                <p>객실</p>
                                             </li>
 
                                             <li>
@@ -331,14 +331,104 @@
 
 
                                     
-                                </form>
-                            </div><!--book_left-->
-    
-                            <div class="book_right">
-
+                                </div><!--book_left-->
                                 
-                            </div><!--book_right-->
-                        </div><!--book_flex-->
+                                <div class="book_right">
+                                    <div class="paymont">
+                                        <h4>Payment</h4>
+                                        <div class="paytype">
+                                            <ul>
+                                                <li>
+                                                    <img src="./img/8_Reservation/icon/icon_4_1.png" alt="신용카드">
+                                                    <em>Credit Card</em>
+                                                    <p>신용카드</p>
+                                                </li>
+
+                                                <li>
+                                                    <img src="./img/8_Reservation/icon/icon_4_2.png" alt="계좌이체">
+                                                    <em>Transfer</em>
+                                                    <p>실시간 계좌이체</p>
+                                                </li>
+
+                                                <li>
+                                                    <img src="./img/8_Reservation/icon/icon_4_3.png" alt="카카오 페이">
+                                                    <em>Kakao Pay</em>
+                                                    <p>카카오페이</p>
+                                                </li>
+                                            </ul>
+                                        </div><!--paytype-->
+
+                                        <div class="payinfo">
+                                            <ul>
+                                                <li>
+                                                    <label for="c_num">
+                                                        <p>카드번호</p>
+                                                    </label>
+                                                    <input type="password" placeholder="카드번호 16자리를 입력하세요('-' 제외)"  id="c_num" required maxlength="16">
+                                                </li>
+
+                                                <li>
+                                                    <label for="c_pass">
+                                                        <p>비밀번호</p>
+                                                    </label>
+                                                    <input type="password" placeholder="••••" id="c_pass" required maxlength="4">
+                                                </li>
+
+                                                <li>
+                                                    <label for="c_per">
+                                                        <p>유효기간</p>
+                                                    </label>
+                                                    <input type="text" placeholder="ex) 2022년 10월 -> 1022"  id="c_per" required maxlength="4">
+                                                </li>
+
+                                                <li>
+                                                    <label for="c_cvc">
+                                                        <p>CVC</p>
+                                                    </label>
+                                                    <input type="text" placeholder="•••"  id="c_cvc" required maxlength="3">   
+                                                </li>
+
+                                                <li>
+                                                    <h6>CVC란?</h6>
+                                                    <p>카드 뒷면의 <span>서명란에 인쇄된 숫자 끝 3자리가 CVC 번호</span>입니다.</p>
+                                                </li>
+                                            </ul>
+                                        </div><!--payinfo-->
+
+                                        <div class="book_tos">
+                                            <div class="tos_box">
+                                                <p>
+                                                    <span>[개인정보의 수집 및 이용에 대한 동의]</span><br>
+                                                    페어몬트 앰배서더 서울은 이용자의 개인정보를 소중히 생각하며 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」과 「개인정보보호법」 등 개인정보 보호 법령을 준수하고자 노력하고 있습니다. 회사는 개인정보처리방침을 통해 이용자의 개인정보 처리를 포함한 회사의 개인정보 보호를 위한 조치 내용을 이용자에게 알리고, 회사와 이용자 간의 권리 및 의무 관계를 규정하여 이용자의 개인정보 자기결정권을 보장합니다.<br>
+                                                    
+                                                    제1조 개인정보의 수집 및 이용 목적<br>
+                                                    
+                                                    1. 수집하는 개인정보는 서비스 개발, 제공 및 향상에 필요한 최소한의 정보만으로 한정되며, 회사는 적법하고 공정한 수단으로 이용자의 개인정보를 수집하고 있습니다.<br>
+                                                    2. 회사는 이용자의 기본적 인권을 침해할 우려가 있는 민감한 개인정보(인종, 종교, 사상, 출신지, 본적지, 정치적 성향 및 범죄기록, 건강상태 및 성생활 등)는 수집하지 않으며, 부득이하게 수집해야 할 경우 이용자들의 사전 동의를 반드시 구할 것입니다.<br>
+                                                    3. 회사는 수집한 정보를 목적 외로 이용하거나. 이용자의 동의 없이 외부에 공개하지 않습니다.<br>
+                                                    ① 회원관리: 회원제 서비스 제공에 따른 개인 식별, 가입의사 확인, 이용자 및 법정대리인의 본인 확인, 이용약관 위반 회원에 대한 이용제한 조치, 가입 및 가입횟수 제한, 고충 처리 및 분쟁 조정을 위한 기록 보존, 고지사항 전달, 회원탈퇴 의사의 확인<br>
+                                                    ② 부정이용방지, 비인가 사용 방지, 안전한 결제 서비스 제공, 계좌/카드 간편결제 서비스 가입을 통한 전자금융서비스 제공, 분쟁조정 해결을 휘나 기록보존, 현금영수증 발급 등<br>
+                                                    ③ 콘텐츠 등 기존 서비스 제공(광고 포함)에 더하여, 인구통계학적 분석, 서비스 방문 및 이용 기록과 접속 빈도 분석, 개인정보 및 관심에 기반한 이용자간 관계의 형성, 지인 및 관심사 등에 기반한 맞춤형 서비스 제공 등 신규 서비스 요소의 발굴 및 기존 서비스 개선 등<br>
+                                                    ④ 신규서비스 개발 및 마케팅 광고에의 활용: 신규서비스 개발 및 맞춤 서비스 제공, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스의 유효성 확인, 이벤트ㆍ광고성 정보 및 참여 기회 제공<br>
+                                                    ⑤ 보안, 프라이버시, 안전 측면에서 이용자가 안심하고 이용할 수 있는 서비스 이용환경 구축<br>
+                                                </p>
+                                            </div><!--tos_box-->
+                                            <div class="check_box">
+                                                <label for="all_agg">전문을 확인했으며 이에 동의합니다.</label>
+                                                <input type="checkbox" id="all+agg">
+                                            </div><!--check_box-->
+
+                                            <div class="btn">
+                                                <button type="reset">뒤로가기<img src="./img/8_Reservation/icon/icon_5_1.png" alt="뒤로가기"></button>
+                                                <button type="submit">결제하기<img src="./img/8_Reservation/icon/icon_5_2.png" alt="결제하기"></button>
+                                            </div>
+
+                                        </div><!--book_tos-->
+                                    </div><!--paymont-->
+                                    
+                                </div><!--book_right-->
+                            </div><!--book_flex-->
+                        </form>
                     </div><!--container-->
                 </div><!--contents_area-->
             </div><!--bighead-->

@@ -166,7 +166,7 @@
     }
 }
 
-//======================Login 부분=====================//
+//======================Book 부분=====================//
 
 @mixin book_margin {
     margin-top: 35px;
@@ -176,7 +176,7 @@
     }
 }
 
-@mixin signup_h4 {
+@mixin book_h4 {
     h4 {
         @include sub_h4;
         font-size: calc(1.2em + 1vw);
@@ -202,7 +202,7 @@
 }
 
 
-@mixin signup_li {
+@mixin book_li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -309,6 +309,83 @@
             }
         }
     } //.label_input
+}
+
+@mixin book_li_noimg {
+    position: relative;
+    margin-bottom: calc(10px + 2vw);
+
+    @include responsive(pc-screens) {
+        margin-bottom: 20px;
+    } 
+
+    &:first-child {
+        margin-top: calc(16px + 1vw);
+
+        @include responsive(pc-screens) {
+            margin-top: 30px;
+        }
+    }
+
+    // &::before {
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     display: block;
+    //     content: '';
+    //     background-color: $base_color_dark;
+    //     width: 4px;
+    //     height: calc(16px + 0.5vw);
+    //     margin-right: 10px;
+
+    //     @include responsive(pc-screens) {
+    //         width: 4px;
+    //         height: 20px;
+    //         margin-right: 15px;
+
+    //     }
+
+    // }
+
+    label {
+        p {
+            @include type_custom(calc(10px + 1vw), $common_font);
+            font-weight: 400;
+
+            @include responsive(pc-screens) {
+                font-size: $mainf;
+            }
+        }
+    }
+
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        border-bottom: 2px solid rgba(66,45,19,0.8);
+        padding-bottom: 5px;
+        padding-top: 15px;
+        color: $base_color_dark;
+        font-family: $common_font;
+
+        @include responsive(pc-screens) {
+            //
+        }
+
+        &::placeholder {
+            font-family: $common_font;
+            color: rgba(66,45,19,0.8);
+
+            @include responsive(pc-screens) {
+                //
+            }
+        }
+    }
+
+
+
+
 }
 
 

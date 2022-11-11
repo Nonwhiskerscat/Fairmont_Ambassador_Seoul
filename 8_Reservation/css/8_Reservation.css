@@ -826,10 +826,10 @@ main .bighead .contents_area .book_flex {
 }
 @media screen and (min-width: 1400px) {
   main .bighead .contents_area .book_flex {
-    width: 90%;
+    width: 100%;
     max-width: 1300px;
     flex-direction: row;
-    margin-left: 50px;
+    margin-right: 0;
     margin-top: 50px;
   }
 }
@@ -880,26 +880,26 @@ main .bighead .contents_area .book_flex .book_left h4::before {
     width: 400px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li {
+main .bighead .contents_area .book_flex .book_left .check ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: calc(20px + 2vw);
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li {
+  main .bighead .contents_area .book_flex .book_left .check ul li {
     margin-bottom: 40px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li:first-child {
+main .bighead .contents_area .book_flex .book_left .check ul li:first-child {
   margin-top: calc(16px + 1vw);
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li:first-child {
+  main .bighead .contents_area .book_flex .book_left .check ul li:first-child {
     margin-top: 30px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li::before {
+main .bighead .contents_area .book_flex .book_left .check ul li::before {
   display: block;
   content: "";
   background-color: #422d13;
@@ -908,57 +908,57 @@ main .bighead .contents_area .book_flex .book_left form .check ul li::before {
   margin-right: 10px;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li::before {
+  main .bighead .contents_area .book_flex .book_left .check ul li::before {
     width: 4px;
     height: 20px;
     margin-right: 15px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_img {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_img {
   width: 10%;
   max-width: 40px;
   margin-right: calc(10px + 1vw);
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li .label_img {
+  main .bighead .contents_area .book_flex .book_left .check ul li .label_img {
     width: 50px;
     margin-right: 20px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_img img {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_img img {
   display: block;
   width: 100%;
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_input {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_input {
   width: 85%;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li .label_input {
+  main .bighead .contents_area .book_flex .book_left .check ul li .label_input {
     width: 360px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_input label p {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_input label p {
   font-family: "SCoreDream";
   font-size: calc(0.5em + 0.5vw);
   font-weight: 300;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li .label_input label p {
+  main .bighead .contents_area .book_flex .book_left .check ul li .label_input label p {
     font-size: 12px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_input label p span {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_input label p span {
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(10px + 0.8vw);
   letter-spacing: 2px;
   margin-right: 5px;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .check ul li .label_input label p span {
+  main .bighead .contents_area .book_flex .book_left .check ul li .label_input label p span {
     font-size: 14px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_input input {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_input input {
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -969,19 +969,19 @@ main .bighead .contents_area .book_flex .book_left form .check ul li .label_inpu
   color: #422d13;
   font-family: "SCoreDream";
 }
-main .bighead .contents_area .book_flex .book_left form .check ul li .label_input input::placeholder {
+main .bighead .contents_area .book_flex .book_left .check ul li .label_input input::placeholder {
   font-family: "SCoreDream";
   color: rgba(66, 45, 19, 0.8);
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest {
+main .bighead .contents_area .book_flex .book_left .room_guest {
   margin-top: 65px;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_guest {
+  main .bighead .contents_area .book_flex .book_left .room_guest {
     margin-top: 100px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest ul {
+main .bighead .contents_area .book_flex .book_left .room_guest ul {
   margin-top: 35px;
   width: 100%;
   display: flex;
@@ -989,146 +989,94 @@ main .bighead .contents_area .book_flex .book_left form .room_guest ul {
   justify-content: space-between;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_guest ul {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul {
     margin-top: 20px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest ul li {
+main .bighead .contents_area .book_flex .book_left .room_guest ul li {
   width: 30%;
   height: auto;
   display: block;
   background-color: #f3f2e7;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_guest ul li {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li {
     width: 120px;
     height: 120px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest ul li img {
+main .bighead .contents_area .book_flex .book_left .room_guest ul li img {
   width: 40%;
   margin-top: 10%;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_guest ul li img {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li img {
     margin-top: 12px;
     width: 45px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest ul li p {
+main .bighead .contents_area .book_flex .book_left .room_guest ul li p {
   font-family: "SCoreDream";
   font-size: calc(10px + 0.5vw);
   font-weight: 400;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_guest ul li p {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li p {
     font-size: 14px;
     margin-top: 5px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest ul li input {
+main .bighead .contents_area .book_flex .book_left .room_guest ul li input {
   width: 80%;
   background: transparent;
   border: none;
+  outline: none;
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(12px + 0.5vw);
   text-align: center;
   margin-bottom: 10%;
 }
-main .bighead .contents_area .book_flex .book_left form .room_guest ul li input::-webkit-outer-spin-button, main .bighead .contents_area .book_flex .book_left form .room_guest ul li input::-webkit-inner-spin-button {
+main .bighead .contents_area .book_flex .book_left .room_guest ul li input::-webkit-outer-spin-button, main .bighead .contents_area .book_flex .book_left .room_guest ul li input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_guest ul li input {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li input {
     font-size: 16px;
     margin-bottom: 0%;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .room_type {
-  margin-top: 65px;
-}
-@media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_type {
-    margin-top: 100px;
-  }
-}
-main .bighead .contents_area .book_flex .book_left form .room_type ul {
-  margin-top: 35px;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-}
-@media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_type ul {
-    margin-top: 20px;
-  }
-}
-main .bighead .contents_area .book_flex .book_left form .room_type ul li {
-  width: 30%;
-  height: auto;
-  display: block;
-  background-color: #f3f2e7;
-}
-@media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_type ul li {
-    width: 120px;
-    height: 120px;
-  }
-}
-main .bighead .contents_area .book_flex .book_left form .room_type ul li img {
-  width: 40%;
-  margin-top: 10%;
-}
-@media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_type ul li img {
-    margin-top: 12px;
-    width: 45px;
-  }
-}
-main .bighead .contents_area .book_flex .book_left form .room_type ul li p {
-  font-family: "SCoreDream";
-  font-size: calc(10px + 0.5vw);
-  font-weight: 400;
-}
-@media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .room_type ul li p {
-    font-size: 14px;
-    margin-top: 5px;
-  }
-}
-main .bighead .contents_area .book_flex .book_left form .btn_entire {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp {
   margin-top: 65px;
   padding-bottom: 100px;
   padding-bottom: 0;
   margin-top: 0;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp {
     margin-top: 30px;
     padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button {
   background-color: #422d13;
   width: 100%;
   border: none;
@@ -1136,36 +1084,36 @@ main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sig
   transition: background-color 0.5s;
   margin-top: 25px;
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button:hover {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button:hover {
   background-color: rgb(101, 27, 0);
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button {
     padding: 10px 0px;
     width: 190px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button .btn_flex {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button .btn_flex {
   align-items: center;
   margin: 0 auto;
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button .btn_flex p {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button .btn_flex p {
   font-family: "SCoreDream";
   font-size: calc(1em + 1vw);
   font-weight: 300;
   color: #fefdf0;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button .btn_flex p {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button .btn_flex p {
     font-size: 18px;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.sign button {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.sign button {
     margin-top: 0;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button {
   background-color: transparent;
   width: 100%;
   border: 1px solid #422d13;
@@ -1173,90 +1121,298 @@ main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.bac
   transition: background-color 0.5s;
   margin-top: 25px;
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button:hover {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button:hover {
   background-color: #422d13;
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button:hover .btn_flex p {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button:hover .btn_flex p {
   color: #fefdf0;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button {
     padding: 10px 0px;
     width: 190px;
   }
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button .btn_flex {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button .btn_flex {
   text-align: center;
   margin: 0 auto;
 }
-main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button .btn_flex p {
+main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button .btn_flex p {
   font-family: "SCoreDream";
   font-size: calc(1em + 1vw);
   font-weight: 300;
   color: #422d13;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button .btn_flex p {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button .btn_flex p {
     font-size: 18px;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left form .btn_entire .btn_grp.back button {
+  main .bighead .contents_area .book_flex .book_left .room_guest .btn_entire .btn_grp.back button {
     margin-top: 0;
   }
 }
+main .bighead .contents_area .book_flex .book_left .room_type {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_type {
+    margin-top: 100px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_type ul {
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_type ul {
+    margin-top: 20px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_type ul li {
+  width: 30%;
+  height: auto;
+  display: block;
+  background-color: #f3f2e7;
+  cursor: pointer;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_type ul li {
+    width: 120px;
+    height: 120px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_type ul li img {
+  width: 40%;
+  margin-top: 10%;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_type ul li img {
+    margin-top: 12px;
+    width: 45px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_type ul li em {
+  font-style: normal;
+  display: block;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_type ul li em {
+    font-size: 14px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_type ul li p {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  margin-bottom: 10%;
+  margin-top: 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_type ul li p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
 main .bighead .contents_area .book_flex .book_right {
-  display: none;
-  margin-left: 100px;
-  margin-top: 50px;
-  width: 480px;
+  width: 100%;
+}
+main .bighead .contents_area .book_flex .book_right h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: calc(1.2em + 1vw);
+  text-align: left;
+  margin-bottom: 0;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+main .bighead .contents_area .book_flex .book_right h4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  border-bottom: 3px solid #422d13;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right h4::before {
+    content: "";
+    display: block;
+    width: 20px;
+    border-bottom: 3px solid #422d13;
+    margin: 0 0 5px 5px;
+  }
 }
 @media screen and (min-width: 1400px) {
   main .bighead .contents_area .book_flex .book_right {
-    display: block;
+    width: 400px;
   }
 }
-main .bighead .contents_area .book_flex .book_right p.quote {
-  font-family: "SCoreDream";
-  font-size: 16px;
-  line-height: 3em;
-}
-main .bighead .contents_area .book_flex .book_right p.quote em {
-  font-style: normal;
-  font-size: 2em;
-  font-weight: 400;
-}
-main .bighead .contents_area .book_flex .book_right p.quote span {
-  font-style: normal;
-  font-size: 1.4em;
-  font-weight: 300;
-}
-main .bighead .contents_area .book_flex .book_right p.quote q {
-  display: block;
-  text-align: right;
-  letter-spacing: 1px;
-  font-size: 1em;
-  font-style: normal;
-  font-family: "Lemon/Milk light", sans-serif;
-}
-main .bighead .contents_area .back_logo {
-  display: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 40%;
+main .bighead .contents_area .book_flex .book_right .paymont {
+  margin-top: 65px;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .back_logo {
-    display: block;
-    opacity: 0.2;
-  }
-  main .bighead .contents_area .back_logo img {
-    width: 100%;
-    display: block;
+  main .bighead .contents_area .book_flex .book_right .paymont {
+    margin-top: 0;
   }
 }
-
+main .bighead .contents_area .book_flex .book_right .paymont .paytype ul {
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .paytype ul {
+    margin-top: 20px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li {
+  width: 30%;
+  display: block;
+  background-color: #f3f2e7;
+  cursor: pointer;
+  height: 50%;
+  padding-bottom: calc(10px + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li {
+    width: 120px;
+    height: 120px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li img {
+  height: 40%;
+  margin-top: 10%;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li img {
+    margin-top: 12px;
+    height: 40px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li em {
+  font-style: normal;
+  display: block;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li em {
+    font-size: 14px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li p {
+  font-family: "SCoreDream";
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  margin-top: 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .paytype ul li p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li {
+  width: 45%;
+  position: relative;
+  margin-bottom: calc(10px + 2vw);
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:first-child {
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li {
+    margin-bottom: 20px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:first-child {
+  margin-top: calc(16px + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:first-child {
+    margin-top: 30px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li label p {
+  font-family: "SCoreDream";
+  font-size: calc(10px + 1vw);
+  font-weight: 400;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li label p {
+    font-size: 18px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgba(66, 45, 19, 0.8);
+  padding-bottom: 5px;
+  padding-top: 15px;
+  color: #422d13;
+  font-family: "SCoreDream";
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li input::placeholder {
+  font-family: "SCoreDream";
+  color: rgba(66, 45, 19, 0.8);
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:last-child h6 {
+  color: #ff0000;
+  font-size: calc(12px + 0.1vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:last-child h6 {
+    font-size: 14px;
+  }
+}
+main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:last-child p {
+  font-size: calc(10px + 0.5vw);
+  margin-top: calc(3px + 0.3vw);
+  line-height: calc(20px + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_right .paymont .payinfo ul li:last-child p {
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 24px;
+  }
+}
 footer {
   padding-top: 30px;
   background-color: #333333;

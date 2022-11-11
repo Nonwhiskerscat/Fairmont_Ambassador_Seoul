@@ -81,6 +81,7 @@ li {
 }
 
 .menu_modal {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -460,7 +461,6 @@ li {
 }
 
 header {
-  display: none;
   width: 100%;
   position: fixed;
   top: 0;
@@ -548,10 +548,6 @@ header .header_entire .menu .menu_type p {
   header .header_entire .menu .menu_type p {
     font-size: 1.2em;
   }
-}
-
-section {
-  display: none;
 }
 
 .main0 {

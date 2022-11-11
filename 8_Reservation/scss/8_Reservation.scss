@@ -809,173 +809,112 @@ main {
                 justify-content: space-around;
 
                 @include responsive(pc-screens) {
-                    width: 90%;
+                    width: 100%;
                     max-width: 1300px;
                     flex-direction: row;
-                    margin-left: 50px;
+                    margin-right: 0;
+                    // margin-left: 50px;
                     margin-top: $small_margin;
                 }
 
                 .book_left {
+                    @include book_h4;
                     width: 100%;
-                    @include signup_h4;
 
                     @include responsive(pc-screens) {
                         width: 400px;
                     }
 
-                    form {
 
-                        .check {
-                            ul {
-                                li {
-                                    @include signup_li;
-                                } //li
-                            } //ul
+                    .check {
+                        ul {
+                            li {
+                                @include book_li;
+                            } //li
+                        } //ul
+                    }
+
+                    .room_guest {
+
+                        margin-top: $mid_margin_m;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 100px;
                         }
 
-                        .room_guest {
+                        ul {
+                            @include book_margin;
+                            width: 100%;
+                            display: flex;
+                            text-align: center;
+                            justify-content: space-between;
 
-                            margin-top: $mid_margin_m;
+                            li {
+                                width: 30%;
+                                height: auto;
+                                display: block;
+                                background-color: #f3f2e7;
 
-                            @include responsive(pc-screens) {
-                                margin-top: 100px;
-                            }
+                                @include responsive(pc-screens) {
+                                    width: 120px;
+                                    height: 120px;
+                                }
 
-                            ul {
-                                @include book_margin;
-                                width: 100%;
-                                display: flex;
-                                text-align: center;
-                                justify-content: space-between;
+                                img {
 
-                                li {
-                                    width: 30%;
-                                    height: auto;
-                                    display: block;
-                                    background-color: #f3f2e7;
+                                    width: 40%;
+                                    margin-top: 10%;
 
                                     @include responsive(pc-screens) {
-                                        width: 120px;
-                                        height: 120px;
+                                        margin-top: 12px;
+                                        width: 45px;
                                     }
 
-                                    img {
+                                }
 
-                                        width: 40%;
-                                        margin-top: 10%;
+                                p {
+                                    @include type_custom(calc(10px + 0.5vw), $common_font);
+                                    font-weight: 400;
 
-                                        @include responsive(pc-screens) {
-                                            margin-top: 12px;
-                                            width: 45px;
-                                        }
+                                    @include responsive(pc-screens) {
+                                        font-size: 14px;
+                                        margin-top: 5px;
+                                    }
+                                }
+                                
+                                input {
+                                    width: 80%;
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    @include type_custom(calc(12px + 0.5vw), $eng_title_font);
+                                    text-align: center;
+                                    margin-bottom: 10%;
+
+                                    &::-webkit-outer-spin-button,
+
+                                    &::-webkit-inner-spin-button {
+
+                                        -webkit-appearance: none;
+
+                                        margin: 0;
 
                                     }
 
-                                    p {
-                                        @include type_custom(calc(10px + 0.5vw), $common_font);
-                                        font-weight: 400;
-
-                                        @include responsive(pc-screens) {
-                                            font-size: 14px;
-                                            margin-top: 5px;
-                                        }
+                                    @include responsive(pc-screens) {
+                                        font-size: 16px;
+                                        margin-bottom: 0%;
                                     }
-                                    
-                                    input {
-                                        width: 80%;
-                                        background: transparent;
-                                        border: none;
-                                        @include type_custom(calc(12px + 0.5vw), $eng_title_font);
-                                        text-align: center;
-                                        margin-bottom: 10%;
 
-                                        &::-webkit-outer-spin-button,
-
-                                        &::-webkit-inner-spin-button {
-
-                                            -webkit-appearance: none;
-
-                                            margin: 0;
-
-                                        }
-
-                                        @include responsive(pc-screens) {
-                                            font-size: 16px;
-                                            margin-bottom: 0%;
-                                        }
-
-                                    }
-                                    
                                 }
                                 
                             }
-
-                        }
-
-                        .room_type {
-
-                            margin-top: $mid_margin_m;
-
-                            @include responsive(pc-screens) {
-                                margin-top: 100px;
-                            }
-
-                            ul {
-                                @include book_margin;
-                                width: 100%;
-                                display: flex;
-                                text-align: center;
-                                justify-content: space-between;
-
-                                li {
-                                    width: 30%;
-                                    height: auto;
-                                    display: block;
-                                    background-color: #f3f2e7;
-
-                                    @include responsive(pc-screens) {
-                                        width: 120px;
-                                        height: 120px;
-                                    }
-
-                                    img {
-
-                                        width: 40%;
-                                        margin-top: 10%;
-
-                                        @include responsive(pc-screens) {
-                                            margin-top: 12px;
-                                            width: 45px;
-                                        }
-
-                                    }
-
-                                    p {
-                                        @include type_custom(calc(10px + 0.5vw), $common_font);
-                                        font-weight: 400;
-
-                                        @include responsive(pc-screens) {
-                                            font-size: 14px;
-                                            margin-top: 5px;
-                                        }
-                                    }
-                                    
-                                    
-                                }
-                                
-                            }
-
+                            
                         }
 
                         
 
-                        
-
-
-
-
-
+                    
 
                         .btn_entire {
                             display: flex;
@@ -1031,72 +970,223 @@ main {
 
                     } //form
 
-                }
+                    .room_type {
+
+                        margin-top: $mid_margin_m;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 100px;
+                        }
+
+                        ul {
+                            @include book_margin;
+                            width: 100%;
+                            display: flex;
+                            text-align: center;
+                            justify-content: space-between;
+
+                            li {
+                                width: 30%;
+                                height: auto;
+                                display: block;
+                                background-color: #f3f2e7;
+                                cursor: pointer;
+                                
+
+                                @include responsive(pc-screens) {
+                                    width: 120px;
+                                    height: 120px;
+                                }
+
+                                img {
+
+                                    width: 40%;
+                                    margin-top: 10%;
+
+                                    @include responsive(pc-screens) {
+                                        margin-top: 12px;
+                                        width: 45px;
+                                    }
+
+                                }
+
+                                em {
+                                    font-style: normal;
+                                    display: block;
+                                    @include type_custom(calc(10px + 0.5vw), $eng_title_font);
+                                    font-weight: 400;
+                                    margin-top: 10px;
+                                    letter-spacing: 1px;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                p {
+                                    @include type_custom(calc(10px + 0.5vw), $eng_title_font);
+                                    font-weight: 400;
+                                    margin-bottom: 10%;
+                                    margin-top: 5px;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: 14px;
+                                        margin-bottom: 0;
+                                    }
+                                }  
+                            } //li
+                            
+                        } //ul
+
+                    } //.room_type
+
+                } //.book_left
 
                 .book_right {
-                    display: none;
-                    margin-left: 100px;
-                    margin-top: 50px;
-                    width: 480px;
+                    width: 100%;
+                    @include book_h4;
 
                     @include responsive(pc-screens) {
-                        display: block;
+                        width: 400px;
                     }
 
-                    p.quote {
-                        // background-color: red;
-                        @include type_custom(16px, $common_font);
-                        line-height: 3em;
+                    .paymont {
+                        margin-top: $mid_margin_m;
 
-                        em {
-                            font: {
-                                style: normal;
-                                size: 2em;
-                                weight: 400;
+                        @include responsive(pc-screens) {
+                            margin-top: 0;
+                        }
+
+                        .paytype {
+                        
+                            ul {
+                                @include book_margin;
+                                width: 100%;
+                                display: flex;
+                                text-align: center;
+                                justify-content: space-between;
+    
+                                li {
+                                    width: 30%;
+                                    display: block;
+                                    background-color: #f3f2e7;
+                                    cursor: pointer;
+                                    height: 50%;
+                                    padding-bottom: calc(10px + 0.5vw);
+    
+                                    @include responsive(pc-screens) {
+                                        width: 120px;
+                                        height: 120px;
+                                    }
+    
+                                    img {
+    
+                                        height: 40%;
+                                        margin-top: 10%;
+    
+                                        @include responsive(pc-screens) {
+                                            margin-top: 12px;
+                                            height: 40px;
+                                        }
+    
+                                    }
+    
+                                    em {
+                                        font-style: normal;
+                                        display: block;
+                                        @include type_custom(calc(10px + 0.5vw), $eng_title_font);
+                                        font-weight: 400;
+                                        margin-top: 10px;
+                                        letter-spacing: 1px;
+    
+                                        @include responsive(pc-screens) {
+                                            font-size: 14px;
+                                        }
+                                    }
+    
+                                    p {
+                                        @include type_custom(calc(10px + 0.5vw), $common_font);
+                                        font-weight: 400;
+                                        margin-top: 5px;
+    
+                                        @include responsive(pc-screens) {
+                                            font-size: 14px;
+                                            margin-bottom: 0;
+                                        }
+                                    }  
+                                }
+                                
+                            }
+    
+                        }
+
+                        .payinfo {
+                            
+
+                            ul {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+
+                                li {
+                                    width: 45%;
+
+                                    &:first-child {
+                                        width: 100%
+                                    }
+                                    
+                                    @include book_li_noimg;
+
+                                    &:last-child {
+
+                                        h6 {
+                                            color: #ff0000;
+                                            font-size: calc(12px + 0.1vw);
+
+                                            @include responsive(pc-screens) {
+                                                font-size: 14px;
+                                            }
+                                        }
+
+                                        p {
+                                            font-size: calc(10px + 0.5vw);
+                                            margin-top: calc(3px + 0.3vw);
+                                            line-height: calc(20px + 0.5vw);
+
+
+                                            @include responsive(pc-screens) {
+                                                font-size: 12px;
+                                                margin-top: 5px;
+                                                line-height: 24px;
+                                            }
+                                        }
+                                    } 
+                                } //li
+
+                                
+                            } //ul
+                        } //payinfo
+
+                        .book_tos {
+                            
+                            .tos_box {
+                                
                             }
                         }
 
-                        span {
-                            font: {
-                                style: normal;
-                                size: 1.4em;
-                                weight: 300;
-                            }
-                        }
 
-                        q {
-                            display: block;
-                            text-align: right;
-                            letter-spacing: 1px;
-                            font: {
-                                size: 1em;
-                                style: normal;
-                                family: $eng_title_font;
-                            }
-                        }
-                    } //p.quote
+                    } //paymont
+
+
+
+
+
+                
                 } //.book_right
 
             } //.book_flex
-            .back_logo {
-                display: none;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 40%;
-                
-    
-                @include responsive(pc-screens) {
-                    display: block;
-                    opacity: 0.2;
-
-                    img {
-                        width: 100%;
-                        display: block;
-                    }
-                    
-                }
-            }
+            
         } //.contents_area
 
         
