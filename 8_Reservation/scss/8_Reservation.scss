@@ -1269,7 +1269,7 @@ main {
                                 }
     
                                 .btn_grp {
-                                    @include signup_btngrp_margin;
+                                    @include book_btngrp_margin;
                                     padding-bottom: 0;
                                     margin-top: 0;
                                     
@@ -1283,7 +1283,7 @@ main {
             
                     
                                     &.pay button {
-                                        @include signup_dark_button;
+                                        @include book_dark_button;
                                         margin-top: $small_margin_m;
             
                                         @include responsive(pc-screens) {
@@ -1293,7 +1293,7 @@ main {
                                     }
             
                                     &.back button {
-                                        @include signup_light_button;
+                                        @include book_light_button;
                                         margin-top: $small_margin_m;
             
                                         @include responsive(pc-screens) {

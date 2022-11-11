@@ -1,3 +1,18 @@
+@charset "UTF-8";
+html {
+  overflow: overlay;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(138, 113, 75, 0.8);
+  border-radius: 8px;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +79,10 @@ ul,
 ol,
 li {
   list-style: none;
+}
+
+.no {
+  display: none;
 }
 
 .menu_modal {
@@ -489,7 +508,7 @@ header .header_entire .menu {
   width: 70px;
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: #fff;
   align-items: center;
   text-align: right;
   margin-top: 5px;
@@ -497,6 +516,7 @@ header .header_entire .menu {
 @media screen and (min-width: 1400px) {
   header .header_entire .menu {
     width: 80px;
+    color: #422d13;
   }
 }
 header .header_entire .menu .menu_bar {
@@ -511,9 +531,14 @@ header .header_entire .menu .menu_bar span {
   display: block;
   height: 0.5px;
   width: 100%;
-  background: white;
+  background: #fff;
   position: absolute;
   right: 0;
+}
+@media screen and (min-width: 1400px) {
+  header .header_entire .menu .menu_bar span {
+    background: #422d13;
+  }
 }
 header .header_entire .menu .menu_bar span:nth-child(1) {
   top: 0;
@@ -567,8 +592,9 @@ section div.main0 .bg_img img {
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img img {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 section div.main0 .main0_contents {
@@ -702,7 +728,421 @@ section div.main0 .mouse .mo_mouse img {
 }
 
 main {
-  color: #333;
+  position: relative;
+  background-color: #fefdf0;
+  height: 100%;
+}
+@media screen and (min-width: 1400px) {
+  main {
+    min-width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+  }
+}
+main .bighead {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead {
+    flex-direction: row;
+  }
+}
+main .bighead .image_area {
+  position: relative;
+  width: 100%;
+  height: calc(200px + 20vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area {
+    width: 34.8958333333%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: red;
+  }
+}
+main .bighead .image_area img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area img {
+    min-height: 100vh;
+  }
+}
+main .bighead .image_area .titlearea {
+  position: absolute;
+  bottom: -5%;
+  right: 3%;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area .titlearea {
+    top: -50px;
+    right: 32px;
+    bottom: 0;
+  }
+}
+main .bighead .image_area .titlearea h1 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(2em + 3vw);
+  color: #fefdf0;
+  letter-spacing: 2px;
+  margin-right: 20px;
+  opacity: 0.8;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .image_area .titlearea h1 {
+    font-size: 5em;
+    transform-origin: center right;
+    transform: rotateZ(-90deg);
+    margin: 0;
+  }
+}
+main .bighead .contents_area {
+  width: 100%;
+  color: #422d13;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area {
+    width: 65.1041666667%;
+    max-width: none;
+  }
+}
+main .bighead .contents_area .my_flex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 25px;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex {
+    width: 100%;
+    max-width: 1300px;
+    flex-direction: row;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left {
+  width: 100%;
+}
+main .bighead .contents_area .my_flex .my_left h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: calc(1.2em + 1vw);
+  text-align: left;
+  margin-bottom: 0;
+  color: #422d13;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}
+main .bighead .contents_area .my_flex .my_left h4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  border-bottom: 3px solid #422d13;
+  margin: 0 0 5px 5px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left h4::before {
+    content: "";
+    display: block;
+    width: 20px;
+    border-bottom: 3px solid #422d13;
+    margin: 0 0 5px 5px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left {
+    width: 400px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex {
+    flex-direction: row;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_photo {
+  position: relative;
+  width: calc(120px + 20vw);
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_photo {
+    margin: 0 0;
+    width: 180px;
+    height: 180px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_photo::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "프로필 수정";
+  font-family: "SCoreDream";
+  font-size: calc(14px + 2vw);
+  background-color: rgba(51, 51, 51, 0.5);
+  width: 100%;
+  height: 100%;
+  line-height: calc(120px + 20vw);
+  text-align: center;
+  color: white;
+  opacity: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_photo::after {
+    font-family: "SCoreDream";
+    font-size: 18px;
+    line-height: 180px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_photo:hover::after {
+  opacity: 1;
+  transition: all 0.5s;
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: calc(10px + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li {
+  width: 50%;
+  margin-bottom: calc(5px + 2vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li:last-child {
+  margin-bottom: 0;
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li em {
+  font-style: normal;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(14px + 0.5vw);
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li em {
+    font-size: 16px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li p {
+  font-family: "SCoreDream";
+  font-size: calc(12px + 0.5vw);
+  margin-top: calc(2px + 0.2vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .profile .profile_flex .profile_info ul li p {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_book {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_book {
+    margin-top: 100px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_book .book_res {
+  margin-top: 25px;
+  width: 100%;
+  height: calc(180px + 10vw);
+  background-color: rgba(66, 45, 19, 0.17);
+  text-align: center;
+  padding: 15px;
+}
+main .bighead .contents_area .my_flex .my_left .my_book .book_res::-webkit-scrollbar {
+  width: 8px;
+}
+main .bighead .contents_area .my_flex .my_left .my_book .book_res::-webkit-scrollbar-thumb {
+  background-color: rgba(66, 45, 19, 0.8);
+  border-radius: 8px;
+}
+main .bighead .contents_area .my_flex .my_left .my_book .book_res::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_book .book_res {
+    margin-top: 25px;
+    height: 200px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_book .book_res p {
+  font-family: "SCoreDream";
+  font-size: calc(12px + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_book .book_res p {
+    font-size: 14px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_manage {
+  margin-top: 65px;
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_manage {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_manage ul {
+  margin-top: 35px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_manage ul {
+    margin-top: 20px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_manage ul li {
+  width: 30%;
+  height: auto;
+  display: block;
+  background-color: #f3f2e7;
+  cursor: pointer;
+}
+main .bighead .contents_area .my_flex .my_left .my_manage ul li:last-child {
+  background-color: #ebd4ca;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_manage ul li {
+    width: 120px;
+    height: 120px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_manage ul li img {
+  width: 40%;
+  margin-top: 10%;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_manage ul li img {
+    margin-top: 15px;
+    width: 45px;
+  }
+}
+main .bighead .contents_area .my_flex .my_left .my_manage ul li p {
+  font-family: "SCoreDream";
+  font-size: calc(10px + 0.5vw);
+  font-weight: 400;
+  margin-bottom: 10%;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_left .my_manage ul li p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+main .bighead .contents_area .my_flex .my_right {
+  display: none;
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 480px;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .my_flex .my_right {
+    display: block;
+  }
+}
+main .bighead .contents_area .my_flex .my_right p.quote {
+  font-family: "SCoreDream";
+  font-size: 16px;
+  line-height: 3em;
+}
+main .bighead .contents_area .my_flex .my_right p.quote em {
+  font-style: normal;
+  font-size: 2em;
+  font-weight: 400;
+}
+main .bighead .contents_area .my_flex .my_right p.quote span {
+  font-style: normal;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+main .bighead .contents_area .my_flex .my_right p.quote q {
+  display: block;
+  text-align: right;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-style: normal;
+  font-family: "Lemon/Milk light", sans-serif;
+}
+main .bighead .contents_area .back_logo {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .back_logo {
+    display: block;
+    opacity: 0.2;
+  }
+  main .bighead .contents_area .back_logo img {
+    width: 100%;
+    display: block;
+  }
 }
 
 footer {

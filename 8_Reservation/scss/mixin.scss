@@ -390,7 +390,7 @@
 
 
 
-@mixin signup_btngrp_margin {
+@mixin book_btngrp_margin {
     margin-top: $mid_margin_m;
     padding-bottom: $big_margin_m;
 
@@ -400,7 +400,7 @@
     }
 }
 
-@mixin signup_dark_button {
+@mixin book_dark_button {
     background-color: $base_color_dark;
     width: 100%;
     border: none;
@@ -438,7 +438,7 @@
     }
 }
 
-@mixin signup_light_button {
+@mixin book_light_button {
     background-color: transparent;
     width: 100%;
     border: 1px solid $base_color_dark;
