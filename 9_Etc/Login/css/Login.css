@@ -1708,7 +1708,6 @@ main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex la
 }
 main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex label#all_check {
   font-size: calc(0.8em + 0.3vw);
-  margin-top: 6px;
 }
 @media screen and (min-width: 1400px) {
   main .contents_area .login_sec .dive_sec .semi_sign_up .check_box .check_flex label#all_check {

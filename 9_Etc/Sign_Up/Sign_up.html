@@ -256,7 +256,7 @@
                                                     <p><span>ID</span>아이디</p><p class="warning"></p>
                                                 </label>
                                                 <input id="aid" type="text" placeholder="영문, 숫자 조합 9자 이상!" required>
-                                                <div class="over_btn" onclick="alert('멋진 아이디네요!')">ID 중복확인</div>
+                                                <div class="aconf_btn" onclick="alert('멋진 아이디네요!')">ID 중복확인</div>
                                             </div> 
                                         </li>
 
@@ -304,14 +304,18 @@
                                                 <label for="amail">
                                                     <p><span>E-mail</span>이메일</p><p class="warning"></p>
                                                 </label>
-                                                <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
-                                                <select name="mail" id="mail">
-                                                    <option value="gmail.com">gmail.com</option>
-                                                    <option value="naver.com">naver.com</option>
-                                                    <option value="hanmail.net">hanmail.net</option>
-                                                    <option value="nate.com">nate.com</option>
-                                                    <option value="">직접입력</option>
-                                                </select>
+                                                <div class="email_flex">
+                                                    <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
+                                                    <p>@</p>
+                                                    <select name="mail" id="mail">
+                                                        <option value="gmail.com">gmail.com</option>
+                                                        <option value="naver.com">naver.com</option>
+                                                        <option value="hanmail.net">hanmail.net</option>
+                                                        <option value="nate.com">nate.com</option>
+                                                        <option value="">직접입력</option>
+                                                    </select>
+                                                </div>
+                                                
                                             </div> 
                                         </li>
 
@@ -342,7 +346,7 @@
                                     </ul>
                                     <div class="check_box" id="check_all">
                                         <div class="check_flex">
-                                            <label for="all" id="all_check">위 약관에 전체 동의합니다.</label>
+                                            <label for="all" id="all_check">위에 기재된 내용에 허위사실이 없음을 확신합니다.</label>
                                             <input type="checkbox" id="all">
                                             <label></label>
                                         </div><!--check_flex-->
@@ -383,7 +387,7 @@
 
 
 
-            <div class="back_logo">
+            <div class="back_logo no">
                 <img src="./img/Sign_Up/icon/icon_back.png" alt="백로고">
             </div>
 

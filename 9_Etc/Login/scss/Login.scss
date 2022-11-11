@@ -950,8 +950,6 @@ main {
 
                             &.phone_phone {
                                 position: relative;
-                                input {
-                                }
 
                                 div.aconf_btn {
                                     cursor: pointer;
@@ -967,7 +965,6 @@ main {
                                     @include responsive(pc-screens) {
                                         font-size: 12px;
                                     }
-
                                 }
                             }
                         } //li
@@ -1101,7 +1098,6 @@ main {
 
                             label#all_check {
                                 font-size: calc(0.8em + 0.3vw);
-                                margin-top: calc(6px);
 
                                 @include responsive(pc-screens) {
                                     font-size: 16px;

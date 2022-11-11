@@ -712,8 +712,9 @@ main {
     background-color: $base_color_light;
 
     @include responsive(pc-screens) {
-        max-height: 100vh;
         overflow: hidden;
+        min-height: 100vh;
+        height: fit-content;
     }
 
 
@@ -736,7 +737,10 @@ main {
 
             @include responsive(pc-screens) {
                 width: 34.89583333333333%;
-                height: 100vh;
+                min-height: 100vh;
+                margin: 0 auto;
+                background-color: red;
+
             }
 
             img {
@@ -748,7 +752,7 @@ main {
             .titlearea {
                 position: absolute;
                 bottom: -5%;
-                right: 0;
+                right: 3%;
 
                 @include responsive(pc-screens) {
                     top: -50px;
@@ -776,20 +780,237 @@ main {
         }
 
         .contents_area {
+            width: 100%;
+            color: $base_color_dark;
+            max-width: 600px;
+            margin: 0 auto;
+
     
             @include responsive(pc-screens) {
                 width: 65.10416666666667%;
+
+                max-width: none;
     
             }
 
-        }
+            .sign_flex {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin: 0 auto;
+                margin-top: $small_margin_m;
 
-        
+                @include responsive(pc-screens) {
+                    width: 100%;
+                    max-width: 880px;
+                    flex-direction: row;
+                    margin-left: 50px;
+                    margin-top: $small_margin;
+                }
+
+                .sign_left {
+                    width: 100%;
+                    @include signup_h4;
+
+                    @include responsive(pc-screens) {
+                        width: 400px;
+                    }
+
+                    form {
+
+                        ul.sign_up_form {
+                            li {
+                                @include signup_li;
+
+                                &.id_id, &.phone_phone {
+                                    position: relative; 
+
+                                    div.aconf_btn {
+                                        cursor: pointer;
+                                        position: absolute;
+                                        right: 0px;
+                                        bottom: 8px;
+                                        width: 80px;
+                                        height: 16px;
+                                        line-height: 16px;
+                                        text-align: center;
+                                        background-color: #e6e2d3;
+                                        @include type_custom(12px, $common_font);
+                                        @include responsive(pc-screens) {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+
+                                &.email_email {
+                                    
+
+                                    .email_flex {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: baseline;
+                                        input {
+                                            width: 60%;
+
+                                            @include responsive(pc-screens) {
+                                                width: 180px;
+                                            }
+                                        }
     
+                                        p {    
+                                            @include type_custom(calc(0.8em + 0.5vw), $common_font);
 
+                                            @include responsive(pc-screens) {
+                                                font-size: $mainf;
+                                            }
+                                        }
+    
+                                        select {
+                                            width: 30%;
+                                            @include type_custom(calc(0.5em + 0.5vw), $common_font);
+                                            background-color: transparent;
+                                            border: none;
+                                            outline: none;
 
+                                            @include responsive(pc-screens) {
+                                                font-size: 14px;
+                                                width: 120px;
+                                            }
 
+                                            option {
+                                                @include type_custom(calc(0.8em + 0.5vw), $common_font);
+                                                background-color: $base_color_light;
+                                                color: $base_color_dark;
+                                                border-style: none;
 
+                                                @include responsive(pc-screens) {
+                                                    font-size: 14px;
+                                                }
+
+                                            }
+                                            
+                                        }
+                                    }
+                                    
+                                }
+
+                            } //li
+                        } //ul
+
+                        .check_box {
+                            margin-top: calc(5px + 1vw);
+                            @include responsive(pc-screens) {
+                                margin-top: 14px;
+                            }
+    
+                            .check_flex {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+    
+                                label {
+                                    display: block;
+                                    @include type_custom(calc(0.6em + 0.3vw), $common_font);
+                                    font-weight: 400;
+    
+                                    @include responsive(pc-screens) {
+                                        font-size: 14px;
+                                    }
+                                }
+    
+                                label#all_check {
+                                    font-size: calc(0.8em + 0.3vw);
+    
+                                    @include responsive(pc-screens) {
+                                        font-size: 16px;
+                                    }
+                                }
+    
+                                input {
+                                    display: none;
+    
+                                    & + label {
+                                        display: inline-block;
+                                        width: 14px;
+                                        height: 14px;
+                                        border: 1px solid $base_color_dark;
+                                        border-radius: 20%;
+                                        cursor: pointer;
+    
+                                        @include responsive(pc-screens) {
+                                            //
+                                        }
+                                    }
+    
+                                    &:checked + label {
+                                        background-color: $base_color_dark;
+    
+                                        @include responsive(pc-screens) {
+                                            //
+                                        }
+                                    }
+                                } //input
+    
+                            } //.check_flex
+    
+                            .sign_up_box {
+                                margin-top: 5px;
+                                background-color: rgba(66,45,19,0.17);
+                                padding: calc(10px + 1vw);
+                                height: 100px;
+                                overflow: overlay;
+    
+                                &::-webkit-scrollbar {
+                                    width: 8px;
+                                }
+                            
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: rgba($color: $base_color_dark, $alpha: 0.8);
+                                    border-radius: 8px;
+                                }
+                            
+                                &::-webkit-scrollbar-track {
+                                    border-radius: 8px;
+                                }
+                            
+    
+                                @include responsive(pc-screens) {
+                                    padding: 15px;
+                                }
+    
+                                p {
+                                    @include type_custom(calc(0.6em + 0.4vw), $common_font);
+                                    line-height: calc(1.5em + 0.3vw);
+                                    text-align: justify;
+    
+                                    @include responsive(pc-screens) {
+                                        font-size: 14px;
+                                        line-height: 28px;
+                                    }
+                                }
+                            }
+    
+                            
+                            
+                        } //.check_box
+
+                    } //form
+
+                }
+
+                .sign_right {
+                    display: none;
+
+                    @include responsive(pc-screens) {
+                        display: block;
+                        width: 380px;
+                    }
+                }
+
+            }
+
+        }
     }
 
 .titlearea {
