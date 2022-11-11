@@ -6,14 +6,14 @@
 
 body {
   color: #333333;
-  font-family: "SCoreDream";
-  font-weight: 200;
-  font-size: 1.125em;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 .wrapper {
   width: 100%;
-  color: white;
+  color: #333333;
 }
 
 .container {
@@ -29,35 +29,40 @@ body {
 }
 
 a {
+  display: block;
   color: #333333;
   text-decoration: none;
-  font-family: "SCoreDream";
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 100;
   font-size: 1em;
 }
 
+img {
+  display: block;
+}
+
 h1 {
   font-size: 7.5em;
-  font-weight: 200;
+  font-weight: 300;
   font-family: "SCoreDream";
 }
 
 h2 {
   font-size: 5em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h3 {
   font-size: 3em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h4 {
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h5 {
-  font-weight: 200;
+  font-weight: 300;
 }
 
 ul,
@@ -601,11 +606,9 @@ section div.main0 .main0_contents h2::before {
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .main0_contents h2::before {
-    content: "";
-    display: block;
-    width: 80px;
-    border-bottom: 8px solid white;
-    margin: 10px auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 section div.main0 .main0_contents button {
@@ -703,6 +706,785 @@ section div.main0 .mouse .mo_mouse img {
 
 main {
   color: #333;
+}
+
+.infomation h2,
+.s1-hall h2,
+.s2-hall h2,
+.s3-hall h2,
+.s5-notice h2 {
+  font-size: 0;
+}
+
+main section.intro h2 {
+  padding: 350px 0;
+  text-align: center;
+  font-size: min(6.6667vw, 68px);
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+  color: #2a52be;
+  font-weight: 700;
+}
+@media screen and (min-width: 1400px) {
+  main section.intro h2 {
+    padding: 390px 0;
+    font-size: 3.75em;
+    white-space: nowrap;
+  }
+}
+main section.infomation h3 {
+  font-size: min(6.6667vw, 28px);
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation h3 {
+    font-size: 3em;
+  }
+}
+main section.infomation .info-content-box {
+  display: flex;
+  flex-direction: column-reverse;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box {
+    flex-direction: row;
+    width: 1200px;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #efefef;
+  }
+}
+main section.infomation .info-content-box .info-content {
+  flex-shrink: 0;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box .info-content {
+    padding: 0 45px;
+    width: 50%;
+  }
+}
+main section.infomation .info-content-box .info-content h3 {
+  text-align: center;
+  font-size: min(5.641vw, 26px);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  margin: 30px 0;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box .info-content h3 {
+    font-size: 2.25em;
+    text-align: left;
+  }
+}
+main section.infomation .info-content-box .info-content p {
+  line-height: min(6.1538vw, 24px);
+  letter-spacing: -0.05em;
+  font-size: clamp(14px, 4.1026vw, 16px);
+  text-align: center;
+  white-space: wrap;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box .info-content p {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+main section.infomation .info-content-box .info-content .info-btn {
+  margin: 35px 0;
+}
+main section.infomation .info-content-box .info-content .info-btn a {
+  width: 89.7436vw;
+  max-width: 350px;
+  height: 13.84408872vw;
+  line-height: min(12.81973077vw, 50px);
+  font-weight: 400;
+  font-size: min(4.1026vw, 16px);
+  text-align: center;
+  background-color: #fff;
+  color: #2a52be;
+  border: #2a52be solid 1px;
+  max-height: 54px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box .info-content .info-btn {
+    width: 172px;
+  }
+}
+main section.infomation .info-content-box .info-img {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  background: red;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box .info-img {
+    width: 50%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+  }
+}
+main section.infomation .info-content-box .info-img img {
+  height: 115.3846153846vw;
+  max-height: 650px;
+  transform: translateX(-25%);
+  max-width: 1200px;
+}
+@media screen and (min-width: 1400px) {
+  main section.infomation .info-content-box .info-img img {
+    position: absolute;
+    width: 1200px;
+    transform: translateX(0);
+    left: -50%;
+    top: -110px;
+  }
+}
+main section.s1-hall {
+  margin-top: 160px;
+  background-color: #efefef;
+}
+main section.s1-hall .flex {
+  position: relative;
+  padding: 120px 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex {
+    display: flex;
+  }
+  main section.s1-hall .flex::before {
+    top: -110px;
+    left: 30px;
+    position: absolute;
+    content: "COVENTION";
+    font-size: 100px;
+    color: #efefef;
+    z-index: -1;
+    font-weight: 700;
+  }
+  main section.s1-hall .flex::after {
+    bottom: -95px;
+    right: 30px;
+    position: absolute;
+    content: "BANQUE";
+    font-size: 100px;
+    color: #efefef;
+    z-index: -1;
+    font-weight: 700;
+  }
+}
+main section.s1-hall .flex .s1-img {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-img {
+    margin: 0;
+    width: 50%;
+    height: 420px;
+    max-width: none;
+    min-width: none;
+  }
+}
+main section.s1-hall .flex .s1-img img {
+  width: 100%;
+}
+main section.s1-hall .flex .s1-content {
+  text-align: center;
+  padding: 0 5.1282051282%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content {
+    text-align: left;
+    width: 50%;
+    padding: 0 0 0 120px;
+    margin-top: 17.75px;
+  }
+}
+main section.s1-hall .flex .s1-content h3 {
+  margin-left: 14px;
+  font-size: min(6.6667vw, 30px);
+  margin-top: 45px;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: 600;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content h3 {
+    font-size: 2.25em;
+    margin: 0 0 0 14px;
+  }
+}
+main section.s1-hall .flex .s1-content h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: calc(0% - 17.5px);
+  left: 50%;
+  width: 35px;
+  height: 3px;
+  background-color: #2a52be;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content h3::after {
+    top: 27px;
+    height: 35px;
+    width: 4px;
+    left: -10px;
+  }
+}
+main section.s1-hall .flex .s1-content p {
+  font-size: clamp(14px, 4.1026vw, 16px);
+  line-height: 24px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content p {
+    font-size: 1.125em;
+    line-height: 26px;
+  }
+}
+main section.s1-hall .flex .s1-content .btns {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content .btns {
+    margin: 60px 0 0 0;
+  }
+}
+main section.s1-hall .flex .s1-content .btns a {
+  width: 43.5897vw;
+  max-width: 170px;
+  height: 13.84408872vw;
+  line-height: min(12.81973077vw, 50px);
+  font-weight: 400;
+  font-size: min(4.1026vw, 16px);
+  text-align: center;
+  background-color: #fff;
+  color: #2a52be;
+  border: #2a52be solid 1px;
+  max-height: 54px;
+}
+main section.s1-hall .flex .s1-content .btns a:first-of-type {
+  margin-right: min(2.5641vw, 10px);
+}
+main section.s1-hall .flex .s1-content ul.room-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 60px auto 0 auto;
+  width: 100%;
+  max-width: 350px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content ul.room-info {
+    order: 2;
+    margin: 60px 0 0 0;
+    max-width: none;
+  }
+}
+main section.s1-hall .flex .s1-content ul.room-info li {
+  width: 50%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content ul.room-info li {
+    width: 25%;
+    text-align: center;
+    border-right: 2px solid lightgray;
+  }
+}
+main section.s1-hall .flex .s1-content ul.room-info li:last-of-type {
+  border-right: none;
+}
+main section.s1-hall .flex .s1-content ul.room-info li img {
+  width: 25px;
+  display: none;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s1-hall .flex .s1-content ul.room-info li img {
+    display: block;
+  }
+}
+main section.s1-hall .flex .s1-content ul.room-info li p {
+  font-size: 0.875em;
+}
+main section.s1-hall .flex .s1-content ul.room-info li strong {
+  font-size: 2.25em;
+  line-height: 30px;
+}
+main section.s2-hall {
+  margin-top: 160px;
+}
+main section.s2-hall .flex {
+  width: 390px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex {
+    flex-direction: row;
+    width: 1400px;
+  }
+}
+main section.s2-hall .flex .s2-img {
+  width: 390px;
+  height: 250px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-img {
+    width: 50%;
+    height: 420px;
+  }
+}
+main section.s2-hall .flex .s2-img img {
+  width: 100%;
+}
+main section.s2-hall .flex .s2-content {
+  text-align: center;
+  padding: 0 5.1282051282%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content {
+    text-align: left;
+    width: 50%;
+    padding: 0 120px 0 30px;
+    margin-top: 17.75px;
+  }
+}
+main section.s2-hall .flex .s2-content h3 {
+  margin-left: 14px;
+  font-size: 1.5em;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: 600;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content h3 {
+    font-size: 2.25em;
+    margin: 0 0 0 14px;
+  }
+}
+main section.s2-hall .flex .s2-content h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: calc(0% - 17.5px);
+  left: 50%;
+  width: 35px;
+  height: 3px;
+  background-color: #2a52be;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content h3::after {
+    top: 27px;
+    height: 35px;
+    width: 4px;
+    left: -10px;
+  }
+}
+main section.s2-hall .flex .s2-content p {
+  font-size: 1em;
+  line-height: 24px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content p {
+    font-size: 1.125em;
+    line-height: 26px;
+  }
+}
+main section.s2-hall .flex .s2-content .btns {
+  display: flex;
+  margin-top: 35px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content .btns {
+    margin-top: 60px;
+  }
+}
+main section.s2-hall .flex .s2-content .btns a {
+  width: 172px;
+  height: 54px;
+  text-align: center;
+  color: #2a52be;
+  border: #2a52be solid 1px;
+  background-color: #fff;
+  line-height: 50px;
+  font-weight: 400;
+}
+main section.s2-hall .flex .s2-content .btns a:first-of-type {
+  margin-right: 8px;
+}
+main section.s2-hall .flex .s2-content ul.room-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content ul.room-info {
+    order: 2;
+  }
+}
+main section.s2-hall .flex .s2-content ul.room-info li {
+  width: 50%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content ul.room-info li {
+    width: 25%;
+    text-align: center;
+    border-right: 2px solid lightgray;
+  }
+}
+main section.s2-hall .flex .s2-content ul.room-info li:last-of-type {
+  border-right: none;
+}
+main section.s2-hall .flex .s2-content ul.room-info li img {
+  width: 25px;
+  display: none;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s2-hall .flex .s2-content ul.room-info li img {
+    display: block;
+  }
+}
+main section.s2-hall .flex .s2-content ul.room-info li p {
+  font-size: 0.875em;
+}
+main section.s2-hall .flex .s2-content ul.room-info li strong {
+  font-size: 2.25em;
+  line-height: 30px;
+}
+main section.s3-hall {
+  margin-top: 160px;
+  background-color: #efefef;
+}
+main section.s3-hall .flex {
+  position: relative;
+  padding: 120px 0;
+  width: 390px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex {
+    display: flex;
+    width: 1400px;
+  }
+  main section.s3-hall .flex::before {
+    top: -110px;
+    left: 30px;
+    position: absolute;
+    content: "MEETING";
+    font-size: 100px;
+    color: #efefef;
+    z-index: -1;
+    font-weight: 700;
+  }
+}
+main section.s3-hall .flex .s3-img {
+  width: 390px;
+  height: 250px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-img {
+    width: 50%;
+    height: 420px;
+  }
+}
+main section.s3-hall .flex .s3-img img {
+  width: 100%;
+}
+main section.s3-hall .flex .s3-content {
+  text-align: center;
+  padding: 0 5.1282051282%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content {
+    text-align: left;
+    width: 50%;
+    padding: 0 0 0 120px;
+    margin-top: 17.75px;
+  }
+}
+main section.s3-hall .flex .s3-content h3 {
+  margin-left: 14px;
+  font-size: 1.5em;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: 600;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content h3 {
+    font-size: 2.25em;
+    margin: 0 0 0 14px;
+  }
+}
+main section.s3-hall .flex .s3-content h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: calc(0% - 17.5px);
+  left: 50%;
+  width: 35px;
+  height: 3px;
+  background-color: #2a52be;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content h3::after {
+    top: 27px;
+    height: 35px;
+    width: 4px;
+    left: -10px;
+  }
+}
+main section.s3-hall .flex .s3-content p {
+  font-size: 1em;
+  line-height: 24px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content p {
+    font-size: 1.125em;
+    line-height: 26px;
+  }
+}
+main section.s3-hall .flex .s3-content .btns {
+  display: flex;
+  margin-top: 35px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content .btns {
+    margin-top: 60px;
+  }
+}
+main section.s3-hall .flex .s3-content .btns a {
+  width: 172px;
+  height: 54px;
+  text-align: center;
+  color: #2a52be;
+  border: #2a52be solid 1px;
+  background-color: #fff;
+  line-height: 50px;
+  font-weight: 400;
+}
+main section.s3-hall .flex .s3-content .btns a:first-of-type {
+  margin-right: 8px;
+}
+main section.s3-hall .flex .s3-content ul.room-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content ul.room-info {
+    order: 2;
+  }
+}
+main section.s3-hall .flex .s3-content ul.room-info li {
+  width: 50%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content ul.room-info li {
+    width: 25%;
+    text-align: center;
+    border-right: 2px solid lightgray;
+  }
+}
+main section.s3-hall .flex .s3-content ul.room-info li:last-of-type {
+  border-right: none;
+}
+main section.s3-hall .flex .s3-content ul.room-info li img {
+  width: 25px;
+  display: none;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-hall .flex .s3-content ul.room-info li img {
+    display: block;
+  }
+}
+main section.s3-hall .flex .s3-content ul.room-info li p {
+  font-size: 0.875em;
+}
+main section.s3-hall .flex .s3-content ul.room-info li strong {
+  font-size: 2.25em;
+  line-height: 30px;
+}
+main section.s4-preview {
+  margin-top: 120px;
+}
+main section.s4-preview h2 {
+  font-size: 1.75em;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s4-preview h2 {
+    font-size: 3em;
+  }
+}
+main section.s4-preview .hidden-box .preview-img {
+  display: flex;
+  max-width: 500px;
+  min-width: 390px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s4-preview .hidden-box .preview-img {
+    max-width: 1400px;
+    height: 450px;
+    overflow: hidden;
+  }
+}
+main section.s4-preview .hidden-box .preview-img li {
+  transition: 500ms all ease;
+  flex: 1;
+  margin: 0 5px;
+  height: 450px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main section.s4-preview .hidden-box .preview-img li {
+    height: auto;
+    margin: 0 10px;
+  }
+}
+main section.s4-preview .hidden-box .preview-img li:hover {
+  flex: 9;
+}
+main section.s4-preview .hidden-box .preview-img li img {
+  height: 100%;
+  position: relative;
+  left: -100px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s4-preview .hidden-box .preview-img li img {
+    height: auto;
+    width: 100%;
+    left: 0px;
+  }
+}
+main section.s4-preview .preview-logo {
+  margin-top: 30px;
+}
+main section.s4-preview .preview-logo img {
+  margin: 0 auto;
+  width: 300px;
+}
+main section.s5-notice {
+  margin-top: 120px;
+  padding: 55px 0;
+  background-color: #efefef;
+}
+main section.s5-notice .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main section.s5-notice .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 880px;
+  }
+}
+main section.s5-notice .flex .notice-content h3 {
+  margin-bottom: 22px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1400px) {
+  main section.s5-notice .flex .notice-content h3 {
+    text-align: left;
+    font-size: 4em;
+  }
+}
+main section.s5-notice .flex .notice-content p {
+  position: relative;
+  font-weight: 400;
+  font-size: 0.875em;
+  padding-left: 35px;
+}
+main section.s5-notice .flex .notice-content p:first-of-type {
+  margin-bottom: 5px;
+}
+main section.s5-notice .flex .notice-content p::before {
+  content: "+";
+  font-size: 1.625em;
+  font-weight: 900;
+  color: #2a52be;
+  position: absolute;
+  top: -7.8px;
+  left: 15px;
+}
+main section.s5-notice .flex .notice-content .notice-btn {
+  margin-top: 26px;
+}
+main section.s5-notice .flex .notice-content .notice-btn a {
+  width: 100%;
+  height: 54px;
+  text-align: center;
+  color: #2a52be;
+  border: #2a52be solid 1px;
+  border-radius: 5px;
+  background-color: #fff;
+  line-height: 50px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1400px) {
+  main section.s5-notice .flex .notice-content .notice-btn a {
+    width: 174px;
+  }
+}
+main section.s5-notice .flex img {
+  width: 180px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  padding-left: 40px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s5-notice .flex img {
+    width: 290px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 footer {
