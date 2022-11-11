@@ -873,12 +873,24 @@ main {
 
     .level {
         
+        @include responsive(pc-screens) {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .premium,
         .gold,
         .black {
             display: flex;
             justify-content: space-between;
+
+            @include responsive(pc-screens) {
+                display: flex;
+                flex-direction: column;
+                // justify-content: space-between;
+            }
         }
+
     }
 }
 

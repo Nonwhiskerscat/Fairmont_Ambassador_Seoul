@@ -853,11 +853,25 @@ main button a {
 main #romantic div.price h4 {
   margin-right: 40px;
 }
+@media screen and (min-width: 1400px) {
+  main .level {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 main .level .premium,
 main .level .gold,
 main .level .black {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 1400px) {
+  main .level .premium,
+main .level .gold,
+main .level .black {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 footer {
