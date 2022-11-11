@@ -711,11 +711,36 @@ main nav .gnb {
   background-color: #f7f7f7;
   padding-bottom: 20px;
 }
+@media screen and (min-width: 1400px) {
+  main nav .gnb {
+    display: flex;
+    background-color: transparent;
+    text-align: center;
+    padding-left: 310px;
+  }
+}
 main nav .gnb li {
   padding-top: 20px;
 }
+@media screen and (min-width: 1400px) {
+  main nav .gnb li {
+    padding: 60px 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main nav .gnb li:last-child a {
+    border-right: 0;
+  }
+}
 main nav .gnb li a {
   color: #bdbdbd;
+}
+@media screen and (min-width: 1400px) {
+  main nav .gnb li a {
+    border-right: 2px solid black;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
 }
 main nav .gnb li a:hover {
   color: black;

@@ -705,18 +705,46 @@ main {
             width: 100%;
             z-index: 1;
             background-color: #f7f7f7;
-            // padding-top: 20px;
             padding-bottom: 20px;
+
+            @include responsive(pc-screens) {
+                display: flex;
+                background-color: transparent;
+                text-align: center;
+                padding-left: 310px;
+            }
+
             li {
                 padding-top: 20px;
+
+                @include responsive(pc-screens) {
+                    padding: 60px 0;
+                }
+
+                &:last-child {
+                    a {
+                        @include responsive(pc-screens) {
+                            border-right: 0;
+                        }
+                    }
+                }
+
                 a {
                     color: #bdbdbd;
+
+                    @include responsive(pc-screens) {
+                        border-right: 2px solid black;
+                        padding-right: 100px;
+                        padding-left: 100px;
+                    }
+
                     &:hover {
                         color: black;
                         font-weight: bolder;
                     }
                 }
             }
+
         } // gnb
     }
 

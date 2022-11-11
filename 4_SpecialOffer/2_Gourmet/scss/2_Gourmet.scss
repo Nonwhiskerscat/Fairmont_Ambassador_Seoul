@@ -699,7 +699,213 @@ section div.main0 {
 
 main {
     color: #333;
-} //.main
+    nav {
+        .gnb {
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            background-color: #f7f7f7;
+            padding-bottom: 20px;
+
+            @include responsive(pc-screens) {
+                display: flex;
+                background-color: transparent;
+                text-align: center;
+                padding-left: 310px;
+            }
+
+            li {
+                padding-top: 20px;
+
+                @include responsive(pc-screens) {
+                    padding: 60px 0;
+                }
+
+                &:last-child {
+                    a {
+                        @include responsive(pc-screens) {
+                            border-right: 0;
+                        }
+                    }
+                }
+
+                a {
+                    color: #bdbdbd;
+
+                    @include responsive(pc-screens) {
+                        border-right: 2px solid black;
+                        padding-right: 100px;
+                        padding-left: 100px;
+                    }
+
+                    &:hover {
+                        color: black;
+                        font-weight: bolder;
+                    }
+                }
+            }
+
+        } // gnb
+    }
+
+    section {
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-top: 70px;
+            margin-bottom: 85px;
+        }
+        h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            &::before {
+                @include title_border_2(30px, 2px, black, 5px, 5px);
+
+                @include responsive(pc-screens) {
+                    @include title_border_2(30px, 2px, black, 5px, 5px)
+                }
+            }
+        }
+        h4 {
+            font-size: 20px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+
+    .flex-box {
+        section {
+            @include responsive(pc-screens) {
+                padding-bottom: 320px;
+            }
+        }
+    }
+
+    .flex-content {
+        @include responsive(pc-screens) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .m_title {
+        font-size: 28px;
+
+        @include responsive(pc-screens){
+            display: none;
+        }
+    }
+
+    .p_title {
+        display: none;
+
+        @include responsive(pc-screens){
+            display: block;
+        }
+    }
+
+    .context{
+
+        @include responsive(pc-screens){
+            width: 580px;
+        }
+
+        .text {
+            padding-top: 40px;
+            padding-bottom: 45px;
+        }
+    }
+
+    .photo {
+        img {
+            width: 100%;
+
+            @include responsive(pc-screens){
+                width: 680px;
+            }
+        }
+    }
+
+    .p_photo {
+        img {
+            width: 100%;
+            display: none;
+
+            @include responsive(pc-screens){
+                display: block;
+                width: 680px;
+            }
+        }
+    }
+
+    .m_photo {
+        img {
+            width: 100%;
+
+            @include responsive(pc-screens){
+                display: none;
+            }
+        }
+    }
+
+    .period {
+        display: flex;
+        margin-bottom: 25px;
+    }
+
+    .price {
+        display: flex;
+    }
+
+    .info {
+        h4{
+            margin-right: 25px;
+        }
+    }
+
+    button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 60px;
+
+        width: 170px;
+        background-color: #422d13;
+        height: 40px;
+        a {
+            color: white;
+            font-size: 1.3em;
+        }
+
+        @include responsive(pc-screens) {
+            width: 275px;
+            height: 65px;
+            font-size: 1.5em;
+            margin-right: 0px;
+        }
+    }
+
+    #high_tea {
+        div.price {
+            h4 {
+                margin-right: 40px;
+            }
+        }
+    }
+
+    #spectrum {
+        div.info {
+            .price {
+                h4 {
+                    padding-right: 90px;
+                }
+            }
+        }
+    }
+}
+
 
 footer {
     padding-top: 30px;
