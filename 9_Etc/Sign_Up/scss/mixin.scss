@@ -336,6 +336,7 @@
 
     @include responsive(pc-screens) {
         padding: 10px 0px;
+        width: 190px;
     }
 
     .btn_flex {
@@ -343,7 +344,7 @@
         margin: 0 auto;
 
         @include responsive(pc-screens) {
-            width: 17.5%;
+
         }
 
         p {
@@ -377,6 +378,7 @@
 
     @include responsive(pc-screens) {
         padding: 10px 0px;
+        width: 190px;
     }
 
     .btn_flex {
@@ -384,7 +386,6 @@
         margin: 0 auto;
 
         @include responsive(pc-screens) {
-            width: 20%;
         }
 
         p {
