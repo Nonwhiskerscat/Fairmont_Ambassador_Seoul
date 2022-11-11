@@ -202,17 +202,17 @@
         </header>
 
 
-        <section class="section">
+        <!-- <section class="section">
             <div class="main0">
                 <div class="bg_img">
                     <img src="./img/executive/photo/main.jpg" alt="메인이미지를 삽입"">
-                </div><!--bg_img-->
+                </div>
                 <div class="colormatte"></div>
 
                 <div class="main0_contents">
                     <h2>Executive Suite</h2>
                     <button>예약하러 가기</button>
-                </div><!--main0_contents-->
+                </div>
 
 
     
@@ -225,13 +225,156 @@
                         <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
                         <p>Swipe me!</p>
                     </span>
-                </div><!--mouse-->
-            </div><!--main0-->
-        </section>
+                </div>
+            </div>
+        </section> -->
 
         <main>
             
+            <div class="bighead"> 
+                <div class="image_area">
+                    <img src="./img/Info_Modify/background.jpg" alt="백그라운드 이미지">
+                    <div class="titlearea">
+                        <div class="back_logo"></div>
+                        <h1>info modify</h1>
+                    </div><!--titlearea-->
+                </div><!--image_area-->
+                
+                <div class="contents_area">
+                    <div class="container">
+                        <div class="info_flex">
+                            <div class="info_left">
+                                <h4>Info Modify</h4>
+                                <form action="#">
+                                    <ul class="info_up_form">
+                                        <li class="id_id">
+                                            <label for="aid" class="label_img">
+                                                <img src="./img/Info_Modify/icon/icon_1_1.png" alt="아이디 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aid">
+                                                    <p><span>ID</span>아이디</p><p class="warning"></p>
+                                                </label>
+                                                <p>nonwhiskerscat</p>
+                                            </div> 
+                                        </li>
+
+                                        <li class="name_name">
+                                            <label for="aname" class="label_img">
+                                                <img src="./img/Info_Modify/icon/icon_1_2.png" alt="패스워드 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aname">
+                                                    <p><span>Name</span>이름</p><p class="warning"></p>
+                                                </label>
+                                                <p>김미나</p>
+                                            </div> 
+                                        </li>
+
+                                        <li class="email_email">
+                                            <label for="amail" class="label_img">
+                                                <img src="./img/Info_Modify/icon/icon_1_3.png" alt="이메일">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="amail">
+                                                    <p><span>E-mail</span>이메일</p><p class="warning"></p>
+                                                </label>
+                                                <div class="email_flex">
+                                                    <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
+                                                    <p>@</p>
+                                                    <select name="mail" id="mail">
+                                                        <option value="gmail.com">gmail.com</option>
+                                                        <option value="naver.com">naver.com</option>
+                                                        <option value="hanmail.net">hanmail.net</option>
+                                                        <option value="nate.com">nate.com</option>
+                                                        <option value="">직접입력</option>
+                                                    </select>
+                                                </div>
+                                                
+                                            </div> 
+                                        </li>
+
+                                        <li class="phone_phone">
+                                            <label for="aphone" class="label_img">
+                                                <img src="./img/Info_Modify/icon/icon_1_4.png" alt="휴대폰 번호 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aphone">
+                                                    <p><span>Phone Number</span>휴대폰 번호</p>
+                                                </label>
+                                                <input id="aphone" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <div class="aconf_btn" onclick="alert('인증번호가 전송 되었습니다!')">인증번호 받기</div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="aconf_aconf">
+                                            <label for="aconf" class="label_img">
+                                                <img src="./img/Info_Modify/icon/icon_1_5.png" alt="휴대폰 인증 아이콘">
+                                            </label>
+                                            <div class="label_input">
+                                                <label for="aconf">
+                                                    <p><span>Certification Number</span>인증 번호</p><p class="warning"></p>
+                                                </label>
+                                                <input id="aconf" type="text" placeholder="SMS로 발송된 인증번호를 입력하세요!" required>
+                                            </div> 
+                                        </li>
+                                    </ul>
+                                    <div class="check_box" id="check_all">
+                                        <div class="check_flex">
+                                            <label for="all" id="all_check">위에 기재된 내용에 허위사실이 없음을 확신합니다.</label>
+                                            <input type="checkbox" id="all">
+                                            <label for="all"></label>
+                                        </div><!--check_flex-->
+                                    </div><!--check_box-->
+
+                                    <div class="btn_entire">
+                
+                                        <div class="btn_grp back">
+                                            <button type="reset">
+                                                <div class="btn_flex">
+                                                    <p>뒤로가기</p>
+                                                </div>
+                                            </button>
+                                        </div>
+
+                                        <div class="btn_grp modify">
+                                            <button type="submit">
+                                                <div class="btn_flex">
+                                                    <p>수정완료</p>
+                                                </div><!--btn_flex--> 
+                                            </button>
+                                        </div><!--btn_grp-->
+                                    </div><!--btn_entire-->
+
+                                    
+                                </form>
+                            </div><!--info_left-->
+    
+                            <div class="info_right">
+                                <p class="quote">
+                                    <em>호텔</em>의 <em>품격</em>은<br>
+                                    화려한 <span>전망</span>, 최적의 <span>접근성</span><br>
+                                    편리하고 <span>고급진 시설</span>,<br>
+                                    그리고 <span>친절한 서비스</span>로부터 비롯됩니다.
+
+                                    <q class="copy">by Fairmont Ambassador Seoul</q>
+                                </p>
+
+                                
+                            </div><!--info_right-->
+                        </div><!--info_flex-->
+                    </div><!--container-->
+                    <div class="back_logo">
+                        <img src="./img/Info_Modify/icon/icon_back.png" alt="백로고">
+                    </div>
+                </div><!--contents_area-->
+            </div><!--bighead-->
+
+
+
+            
         </main>
+
         <footer>
             <div class="footer_entire">
                 <div class="footer_logo">
@@ -285,6 +428,7 @@
                 </div><!--address-->
             </div><!--footer_entire-->
         </footer>
+        
     </div><!--wrapper-->
 
 </body>
