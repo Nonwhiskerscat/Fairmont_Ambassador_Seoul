@@ -742,7 +742,6 @@ main {
                 height: auto;
                 min-height: 100vh;
                 margin: 0 auto;
-                background-color: red;
 
             }
 
@@ -805,15 +804,14 @@ main {
                 display: flex;
                 flex-direction: column;
                 margin: 0 auto;
-                margin-top: 25px;
+                margin-top: $small_margin_m;
                 justify-content: space-around;
 
                 @include responsive(pc-screens) {
-                    width: 100%;
+                    width: 90%;
                     max-width: 1300px;
                     flex-direction: row;
-                    margin-right: 0;
-                    // margin-left: 50px;
+                    margin-left: 50px;
                     margin-top: $small_margin;
                 }
 
@@ -951,7 +949,7 @@ main {
                         margin-top: $mid_margin_m;
 
                         @include responsive(pc-screens) {
-                            margin-top: 100px;
+                            margin-top: 50px;
                         }
 
                         .book_res {
@@ -998,8 +996,8 @@ main {
                         margin-bottom: 100px;
 
                         @include responsive(pc-screens) {
-                            margin-top: 100px;
-                            margin-bottom: 0;
+                            margin-top: 50px;
+                            margin-bottom: 100px;
                         }
 
                         ul {
@@ -1032,7 +1030,7 @@ main {
                                     margin-top: 10%;
 
                                     @include responsive(pc-screens) {
-                                        margin-top: 15px;
+                                        margin-top: 20px;
                                         width: 45px;
                                     }
 
@@ -1047,6 +1045,7 @@ main {
                                     @include responsive(pc-screens) {
                                         font-size: 16px;
                                         margin-bottom: 0;
+                                        margin-top: 15px;
                                     }
                                 }  
                             } //li
@@ -1065,7 +1064,7 @@ main {
                     display: none;
                     margin-left: 100px;
                     margin-top: 50px;
-                    width: 480px;
+                    width: 400px;
 
                     @include responsive(pc-screens) {
                         display: block;
