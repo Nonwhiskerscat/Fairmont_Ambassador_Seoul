@@ -100,7 +100,6 @@ li {
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire {
     width: 93.75%;
-    max-width: 1800px;
   }
 }
 
@@ -116,7 +115,7 @@ li {
 
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_header .menu_header_flex {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 
@@ -320,7 +319,6 @@ li {
   .menu_modal .menu_entire .menu_main {
     flex-direction: row;
     padding-top: 100px;
-    max-width: 1800px;
     margin: 0 auto;
   }
 }
@@ -546,7 +544,6 @@ header .header_entire {
 @media screen and (min-width: 1400px) {
   header .header_entire {
     width: 93.75%;
-    max-width: 1800px;
   }
 }
 
@@ -2326,7 +2323,6 @@ footer .footer_entire {
   justify-content: space-between;
   margin: 0 auto;
   width: 89.74358974358974%;
-  max-width: 1800px;
 }
 
 @media screen and (min-width: 1400px) {

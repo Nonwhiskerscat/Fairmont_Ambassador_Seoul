@@ -24,7 +24,7 @@
         
         @include responsive(pc-screens) {
             width: 93.75%;
-            max-width: 1800px;
+            
         }
 
         .menu_header {
@@ -39,7 +39,7 @@
                 margin-top: 20px;
     
                 @include responsive(pc-screens) {
-                    margin-top: 25px;
+                    margin-top: 30px;
                 }
     
                 .not_for_m{
@@ -229,7 +229,7 @@
                 flex-direction: row;
                 // align-items: center;
                 padding-top: 100px ;
-                max-width: 1800px;
+                
                 margin: 0 auto;
             }
     
@@ -442,7 +442,7 @@ header{
         
         @include responsive(pc-screens) {
             width: 93.75%;
-            max-width: 1800px;
+            
         }
     
         .header_logo {
@@ -704,7 +704,7 @@ section {
             
             @include responsive(pc-screens) {
                 width: 93.75%;
-                max-width: 1800px;
+                
             }
 
             h2 {
@@ -1537,7 +1537,7 @@ footer {
         justify-content: space-between;
         margin: 0 auto;
         width: 89.74358974358974%;
-        max-width: 1800px;
+        
 
         @include responsive(pc-screens) {
             width: 93.75%;

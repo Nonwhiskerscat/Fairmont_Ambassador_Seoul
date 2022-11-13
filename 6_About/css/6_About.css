@@ -90,7 +90,6 @@ li {
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire {
     width: 93.75%;
-    max-width: 1800px;
   }
 }
 
@@ -106,7 +105,7 @@ li {
 
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_header .menu_header_flex {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 
@@ -310,7 +309,6 @@ li {
   .menu_modal .menu_entire .menu_main {
     flex-direction: row;
     padding-top: 100px;
-    max-width: 1800px;
     margin: 0 auto;
   }
 }
@@ -536,7 +534,6 @@ header .header_entire {
 @media screen and (min-width: 1400px) {
   header .header_entire {
     width: 93.75%;
-    max-width: 1800px;
   }
 }
 
@@ -816,7 +813,7 @@ main {
   position: relative;
   padding-top: 85px;
   color: white;
-  text-align: center;
+  text-align: justify;
 }
 
 main .bg-video {
@@ -837,19 +834,30 @@ main .bg-video__content {
 
 @media screen and (min-width: 1400px) {
   main {
-    text-align: left;
+    text-align: justify;
   }
 }
 
 main h2 {
+  text-align: center;
   margin-bottom: 40px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+}
+
+@media screen and (min-width: 1400px) {
+  main h2 {
+    font-size: 40px;
+    width: 100%;
+    text-align: justify;
+  }
 }
 
 main h2::before {
   content: "";
   display: block;
   width: 30px;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid white;
   margin: 5px auto;
 }
 
@@ -857,16 +865,9 @@ main h2::before {
   main h2::before {
     content: "";
     display: block;
-    width: 30px;
-    border-bottom: 2px solid white;
+    width: 40px;
+    border-bottom: 4px solid white;
     margin: 0 0 5px 5px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  main h2 {
-    font-size: 60px;
-    width: 100%;
   }
 }
 
@@ -892,12 +893,20 @@ main section {
 @media screen and (min-width: 1400px) {
   main .section1-flex h2 {
     margin-right: 175px;
+    width: 420px;
   }
+}
+
+main .section1-flex p {
+  font-size: calc(16px + 0.5vw);
+  line-height: calc(32px + 0.5vw);
 }
 
 @media screen and (min-width: 1400px) {
   main .section1-flex p {
     font-size: 24px;
+    line-height: 48px;
+    width: 880px;
   }
 }
 
@@ -977,9 +986,15 @@ main .section2-flex div.service-icon div img {
 }
 
 main .section2-flex div.service-icon div p {
-  font-size: 14px;
+  font-size: calc(14px + 0.5vw);
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1400px) {
+  main .section2-flex div.service-icon div p {
+    font-size: 18px;
+  }
 }
 
 main .map .section3-flex img {
@@ -1103,7 +1118,6 @@ footer .footer_entire {
   justify-content: space-between;
   margin: 0 auto;
   width: 89.74358974358974%;
-  max-width: 1800px;
 }
 
 @media screen and (min-width: 1400px) {
