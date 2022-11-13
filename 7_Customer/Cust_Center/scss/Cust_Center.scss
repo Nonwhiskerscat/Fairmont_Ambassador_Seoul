@@ -788,7 +788,6 @@ main {
         }
 
         .contents_area {
-            z-index: 34;
             width: 100%;
             color: $base_color_dark;
             max-width: 600px;
@@ -801,6 +800,7 @@ main {
             }
 
             .cust_flex {
+                z-index: 34;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -966,17 +966,156 @@ main {
                 } //.cust_left
 
                 .cust_right {
-
+                    margin-top: $small_margin_m;    
                     @include cust_h4;
-                    width: 400px;
 
                     @include responsive(pc-screens) {
-                        display: block;
+                        width: 400px;
+                        margin-top: 0;
                     }
 
                     .faq_entire {
+
                         @include cust_margin;
-                    }
+
+                        form {
+                            .faq_title {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                background-color: #e2decf;
+                                padding: 5px;
+                            
+
+                                .faq_select  {
+                                    margin-right: 10px;        
+                                    width: 30%;
+
+                                    select {
+                                        display: block;
+                                        @include type_custom(calc(14px + 0.5vw), $common_font);
+                                        font-weight: 300;
+                                        text-align: justify;
+                                        background-color: transparent;
+                                        border: 0;
+                                        outline: none;
+    
+                                        @include responsive(pc-screens) {
+                                            font-size: 16px;
+                                        }
+                                    }
+
+                                }
+
+                                .faq_input {
+                                    width: 70%;
+
+                                    input {
+                                        width: 100%;
+                                        display: block;
+                                        background-color: transparent;
+                                        border: 0;
+                                        outline: none;
+    
+                                        @include type_custom(calc(12px + 0.5vw), $common_font);
+                                        font-weight: 300;
+                                        text-align: justify;
+    
+                                        @include responsive(pc-screens) {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                } //.faq_input
+                            } //.faq_title
+
+                            .faq_contents {
+                                background-color: #e2decf;
+                                padding: 10px;
+                                margin-top: 10px;
+
+                                @include responsive(pc-screens) {
+                                    margin-top: 15px;
+                                    padding: 15px;
+                                }
+
+                                textarea {
+                                    width: 100%;
+                                    display: block;
+                                    background-color: transparent;
+                                    border: 0;
+                                    outline: none;
+                                    padding-right: 5px;
+                                    @include type_custom(calc(12px + 0.5vw), $common_font);
+                                    line-height: calc(24px + 0.5vw);
+                                    font-weight: 300;
+                                    text-align: justify;
+                                    height: calc(200px + 10vw);
+                                    overflow: scroll;
+                                    
+        
+                                    @include responsive(pc-screens) {
+                                        font-size: 14px;
+                                        height: 200px;
+                                        line-height: calc(28px);
+                                    }
+                                } //.textarea
+                                
+
+    
+                            } //.faq_contents
+
+                            .btn_entire {
+                                display: flex;
+                                flex-direction: column;
+                                margin-bottom: 100px;
+    
+                                @include responsive(pc-screens) {
+                                    flex-direction: row;
+                                    justify-content: space-between;
+    
+                                }
+    
+                                .btn_grp {
+                                    @include cust_btngrp_margin;
+                                    padding-bottom: 0;
+                                    margin-top: 0;
+                                    
+            
+                                    @include responsive(pc-screens) {
+                                        margin-top: 25px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                    }
+            
+            
+                    
+                                    &.submit button {
+                                        @include cust_dark_button;
+                                        margin-top: $small_margin_m;
+            
+                                        @include responsive(pc-screens) {
+                                            margin-top: 0;
+                                        }
+            
+                                    }
+            
+                                    &.reset button {
+                                        @include cust_light_button;
+                                        margin-top: $small_margin_m;
+            
+                                        @include responsive(pc-screens) {
+                                            margin-top: 0;
+                                        }
+                                        
+                                    }
+            
+                                }
+                            }
+                        
+                        }//.form
+
+                        
+                    } //faq_entire
 
                     
                 } //.cust_right
@@ -988,7 +1127,7 @@ main {
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                width: 40%;
+                width: 30%;
                 
                 
     

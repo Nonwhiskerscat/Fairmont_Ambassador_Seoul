@@ -176,7 +176,7 @@
     }
 }
 
-@mixin signup_h4 {
+@mixin info_h4 {
     h4 {
         @include sub_h4;
         font-size: calc(1.2em + 1vw);
@@ -202,7 +202,7 @@
 }
 
 
-@mixin signup_li {
+@mixin info_li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -313,7 +313,7 @@
 
 
 
-@mixin signup_btngrp_margin {
+@mixin info_btngrp_margin {
     margin-top: $mid_margin_m;
     padding-bottom: $big_margin_m;
 
@@ -323,7 +323,7 @@
     }
 }
 
-@mixin signup_dark_button {
+@mixin info_dark_button {
     background-color: $base_color_dark;
     width: 100%;
     border: none;
@@ -361,7 +361,7 @@
     }
 }
 
-@mixin signup_light_button {
+@mixin info_light_button {
     background-color: transparent;
     width: 100%;
     border: 1px solid $base_color_dark;

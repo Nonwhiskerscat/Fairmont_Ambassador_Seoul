@@ -930,7 +930,6 @@ main .bighead .image_area .titlearea h1 {
 }
 
 main .bighead .contents_area {
-  z-index: 34;
   width: 100%;
   color: #422d13;
   max-width: 600px;
@@ -945,6 +944,7 @@ main .bighead .contents_area {
 }
 
 main .bighead .contents_area .cust_flex {
+  z-index: 34;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1159,7 +1159,7 @@ main .bighead .contents_area .cust_flex .cust_left .qna div ul li .qna_acc p a {
 }
 
 main .bighead .contents_area .cust_flex .cust_right {
-  width: 400px;
+  margin-top: 25px;
 }
 
 main .bighead .contents_area .cust_flex .cust_right h4 {
@@ -1208,7 +1208,8 @@ main .bighead .contents_area .cust_flex .cust_right h4::before {
 
 @media screen and (min-width: 1400px) {
   main .bighead .contents_area .cust_flex .cust_right {
-    display: block;
+    width: 400px;
+    margin-top: 0;
   }
 }
 
@@ -1222,12 +1223,228 @@ main .bighead .contents_area .cust_flex .cust_right .faq_entire {
   }
 }
 
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #e2decf;
+  padding: 5px;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_select {
+  margin-right: 10px;
+  width: 30%;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_select select {
+  display: block;
+  font-family: "SCoreDream";
+  font-size: calc(14px + 0.5vw);
+  font-weight: 300;
+  text-align: justify;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_select select {
+    font-size: 16px;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_input {
+  width: 70%;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_input input {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-family: "SCoreDream";
+  font-size: calc(12px + 0.5vw);
+  font-weight: 300;
+  text-align: justify;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_input input {
+    font-size: 14px;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_contents {
+  background-color: #e2decf;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_contents {
+    margin-top: 15px;
+    padding: 15px;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_contents textarea {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  padding-right: 5px;
+  font-family: "SCoreDream";
+  font-size: calc(12px + 0.5vw);
+  line-height: calc(24px + 0.5vw);
+  font-weight: 300;
+  text-align: justify;
+  height: calc(200px + 10vw);
+  overflow: scroll;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_contents textarea {
+    font-size: 14px;
+    height: 200px;
+    line-height: calc(28px);
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp {
+  margin-top: 65px;
+  padding-bottom: 100px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp {
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button {
+  background-color: #422d13;
+  width: 100%;
+  border: none;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button:hover {
+  background-color: #651b00;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button {
+    padding: 10px 0px;
+    width: 190px;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button .btn_flex {
+  align-items: center;
+  margin: 0 auto;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #fefdf0;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button .btn_flex p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button {
+    margin-top: 0;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #422d13;
+  padding: calc(0.5em + 0.5vw) 0;
+  transition: background-color 0.5s;
+  margin-top: 25px;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button:hover {
+  background-color: #422d13;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button:hover .btn_flex p {
+  color: #fefdf0;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button {
+    padding: 10px 0px;
+    width: 190px;
+  }
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button .btn_flex {
+  text-align: center;
+  margin: 0 auto;
+}
+
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button .btn_flex p {
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
+  font-weight: 300;
+  color: #422d13;
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button .btn_flex p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button {
+    margin-top: 0;
+  }
+}
+
 main .bighead .contents_area .back_logo {
   display: none;
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 40%;
+  width: 30%;
 }
 
 @media screen and (min-width: 1400px) {

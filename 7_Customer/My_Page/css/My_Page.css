@@ -1315,7 +1315,7 @@ main .bighead .contents_area .back_logo {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 40%;
+  width: 30%;
 }
 
 @media screen and (min-width: 1400px) {

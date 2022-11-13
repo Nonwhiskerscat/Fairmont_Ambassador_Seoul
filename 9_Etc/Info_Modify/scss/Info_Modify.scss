@@ -817,7 +817,7 @@ main {
 
                 .info_left {
                     width: 100%;
-                    @include signup_h4;
+                    @include info_h4;
 
                     @include responsive(pc-screens) {
                         width: 400px;
@@ -827,7 +827,7 @@ main {
 
                         ul.info_up_form {
                             li {
-                                @include signup_li;
+                                @include info_li;
 
                                 p {
                                     @include type_custom(calc(12px + 0.5vw), $common_font);
@@ -1023,7 +1023,7 @@ main {
                             }
 
                             .btn_grp {
-                                @include signup_btngrp_margin;
+                                @include info_btngrp_margin;
                                 padding-bottom: 0;
                                 margin-top: 0;
                                 
@@ -1037,7 +1037,7 @@ main {
         
                 
                                 &.modify button {
-                                    @include signup_dark_button;
+                                    @include info_dark_button;
                                     margin-top: $small_margin_m;
         
                                     @include responsive(pc-screens) {
@@ -1047,7 +1047,7 @@ main {
                                 }
         
                                 &.back button {
-                                    @include signup_light_button;
+                                    @include info_light_button;
                                     margin-top: $small_margin_m;
         
                                     @include responsive(pc-screens) {
@@ -1117,7 +1117,7 @@ main {
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                width: 40%;
+                width: 30%;
                 
     
                 @include responsive(pc-screens) {
