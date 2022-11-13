@@ -1771,6 +1771,11 @@ main {
                                 opacity: 0.5;
                                 transition: all 0.5s;
                             }
+
+                            .matte {
+                                opacity: 1;
+                                transition: all 0.5s;
+                            }
                         }
 
                         &:hover {
@@ -1813,11 +1818,6 @@ main {
                         color: white;
                         text-align: center;
                         z-index: 3;
-
-                        &:hover {
-                            opacity: 1;
-                            transition: all 0.5s;
-                        }
 
                         @include responsive(pc-screens) {
                             transform: translate(-50%,0);
