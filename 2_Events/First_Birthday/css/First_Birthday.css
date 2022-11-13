@@ -1417,6 +1417,7 @@ footer .footer_entire .navigation .flex_nav li span {
 footer .footer_entire .navigation .flex_nav li span img {
   width: 22px;
   height: auto;
+  display: inline;
 }
 footer .footer_entire .navigation .flex_nav li a {
   color: white;

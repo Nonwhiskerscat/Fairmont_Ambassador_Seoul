@@ -5,16 +5,16 @@ html {
   overflow: overlay;
 
   &::-webkit-scrollbar {
-      width: 8px;
+    width: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-      background-color: rgba($color: #8a714b, $alpha: 0.8);
-      border-radius: 8px;
+    background-color: rgba($color: #2a52be, $alpha: 0.8);
+    border-radius: 8px;
   }
 
   &::-webkit-scrollbar-track {
-      border-radius: 8px;
+    border-radius: 8px;
   }
 }
 
