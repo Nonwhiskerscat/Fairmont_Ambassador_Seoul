@@ -1065,16 +1065,18 @@ main {
 
 
                 h4 {
-                    @include type_custom(calc(1em + 1.5vw), $common_font);
+                    @include type_custom(calc(18px + 0.5vw), $common_font);
                     margin-bottom: 30px;
-
-                    &::before {
-                        @include title_border_2(30px, 3px, #333, 10px, 5px);
-                    }
+                    font-weight: 400;
 
                     @include responsive(pc-screens) {
                         display: none;
                     }
+
+                    &::before {
+                        @include title_border_2(30px, 3px, #333, 5px, 5px)
+                    }
+
                 } 
 
 

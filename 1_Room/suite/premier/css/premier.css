@@ -1083,20 +1083,21 @@ main .room_types .types_flex .types_left {
 }
 main .room_types .types_flex .types_left h4 {
   font-family: "SCoreDream";
-  font-size: calc(1em + 1.5vw);
+  font-size: calc(18px + 0.5vw);
   margin-bottom: 30px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_left h4 {
+    display: none;
+  }
 }
 main .room_types .types_flex .types_left h4::before {
   content: "";
   display: block;
   width: 30px;
   border-bottom: 3px solid #333;
-  margin: 0 0 5px 10px;
-}
-@media screen and (min-width: 1400px) {
-  main .room_types .types_flex .types_left h4 {
-    display: none;
-  }
+  margin: 0 0 5px 5px;
 }
 main .room_types .types_flex .types_left .type_img {
   width: 100%;
