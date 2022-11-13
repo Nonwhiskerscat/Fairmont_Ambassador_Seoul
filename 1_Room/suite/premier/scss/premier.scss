@@ -727,6 +727,7 @@ main {
     color: #333;
     .room_int {
         margin-top: $mid_margin_m;
+        
 
         @include responsive(pc-screens) {
             margin-top: $mid_margin;
@@ -737,10 +738,12 @@ main {
             @include type_custom(calc(8px + 3vw), $common_font);
             line-height: calc(1em + 3vw);
             font-weight: 200;
+            margin-bottom: $mid_margin_m;
 
             @include responsive(pc-screens) {
                 font-size: 48px;
                 line-height: 96px;
+                margin-bottom: $mid_margin;
             }
 
             span {

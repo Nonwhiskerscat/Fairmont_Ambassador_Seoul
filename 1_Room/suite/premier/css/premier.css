@@ -873,12 +873,14 @@ main .room_int h3.first {
   font-size: calc(8px + 3vw);
   line-height: calc(1em + 3vw);
   font-weight: 200;
+  margin-bottom: 65px;
 }
 
 @media screen and (min-width: 1400px) {
   main .room_int h3.first {
     font-size: 48px;
     line-height: 96px;
+    margin-bottom: 125px;
   }
 }
 
