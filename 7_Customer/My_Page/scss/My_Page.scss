@@ -812,7 +812,6 @@ main {
                     max-width: 1300px;
                     flex-direction: row;
                     margin-left: 50px;
-                    margin-top: $small_margin;
                 }
 
                 .my_left {
@@ -833,6 +832,8 @@ main {
 
                             @include responsive(pc-screens) {
                                 flex-direction: row;
+                                justify-content:start;
+
                             }
 
 
@@ -845,6 +846,7 @@ main {
                                     margin: 0 0;
                                     width: 180px;
                                     height: 180px;
+                                    margin-right: 20px;
                                 }
 
                                 img {
@@ -991,7 +993,6 @@ main {
                     }
 
                     .my_manage {
-
                         margin-top: $mid_margin_m;
                         margin-bottom: 100px;
 
@@ -1016,6 +1017,7 @@ main {
 
                                 &:last-child {
                                     background-color: #ebd4ca;
+                                    z-index: 30;
                                 }
                                 
 
@@ -1113,6 +1115,7 @@ main {
                 bottom: 0;
                 width: 40%;
                 
+                
     
                 @include responsive(pc-screens) {
                     display: block;
@@ -1130,6 +1133,125 @@ main {
 
         
     } //big.head
+
+    .mypage_modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // transform: translate(-50%, -50%);
+        background-color: rgba(0,0,0,0.5);
+
+        .login_sec {
+            transform: translateY(100px);
+            color: $base_color_dark;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: $base_color_light;
+            padding: 0 20px;
+            
+
+            @include responsive(pc-screens) {
+                transform: translateY(50px);
+                width: 480px;
+                height: 758px;
+                background: url(../img/My_Page/icon/modal_back.png) no-repeat;
+                padding: 0 30px;
+            }
+
+            .login_logo {
+                text-align: center;
+                padding-top: 30px;
+
+                @include responsive(pc-screens) {
+                    padding-top: 70px;
+                }
+
+                img {
+                    width: 30%;
+                    max-width: 210px;
+
+                    @include responsive(pc-screens) {
+                        width: 180px;
+                    }
+                }
+            }
+
+            .dive_sec {
+                @include mypage_margin;
+
+
+                .pw_modify {
+                    @include mypage_h4;
+
+                    ul.modifying_pw {
+                        li {
+                            @include mypage_modal_li;
+
+                            &.phone_phone {
+                                position: relative;
+
+                                div.aconf_btn {
+                                    cursor: pointer;
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: 8px;
+                                    width: 80px;
+                                    height: 16px;
+                                    line-height: 16px;
+                                    text-align: center;
+                                    background-color: #e6e2d3;
+                                    @include type_custom(12px, $common_font);
+                                    @include responsive(pc-screens) {
+                                        font-size: 12px;
+                                    }
+
+                                }
+                            }
+                        } //li
+                    } //ul.form_form
+
+    
+                    .btn_grp {
+                        @include modal_btngrp_margin;
+                        padding-bottom: 0;
+                        margin-top: 0;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 20px;
+                        }
+
+
+        
+                        &.find button {
+                            @include modal_dark_button;
+                            margin-top: $small_margin_m;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 20px;
+                            }
+
+                        }
+
+                        &.back button {
+                            @include modal_light_button;
+                            margin-top: $small_margin_m;
+                            margin-bottom: 100px;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 0;
+                            }
+                            
+                        }
+
+                    }
+                } //pw_find 
+
+            } //.dive_sec
+        } //login_sec
+    }
 
 
     
