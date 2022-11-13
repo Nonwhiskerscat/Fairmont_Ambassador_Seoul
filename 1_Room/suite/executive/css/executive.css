@@ -1,4 +1,21 @@
 @charset "UTF-8";
+html {
+  overflow: overlay;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 102, 0.8);
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -928,7 +945,7 @@ main .room_int .room_cont img.rbp {
     opacity: 0.9;
     width: 515px;
     height: 640px;
-    transform: translateY(-445px);
+    transform: translateY(-440px);
   }
 }
 
@@ -1417,6 +1434,7 @@ main .room_types .types_flex .types_right .button button {
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right .button button {
     height: 60px;
+    font-size: 24px;
   }
 }
 

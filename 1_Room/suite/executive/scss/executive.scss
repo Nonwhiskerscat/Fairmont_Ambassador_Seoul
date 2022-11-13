@@ -803,7 +803,7 @@ main {
                     opacity: 0.9;
                     width: 515px;
                     height: 640px;
-                    transform: translateY(-445px);
+                    transform: translateY(-440px);
                 }
             }
     
@@ -1219,6 +1219,7 @@ main {
 
                         @include responsive(pc-screens) {
                             height: 60px;
+                            font-size: $semif;
                         }
                         
                         &:hover {

@@ -15,6 +15,23 @@ html::-webkit-scrollbar-track {
   border-radius: 8px;
 }
 
+html {
+  overflow: overlay;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(138, 113, 75, 0.8);
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
