@@ -561,6 +561,27 @@ section div.main0 {
                     height:100vh;
                 }
             }
+            .p_bg {
+                img {
+                    width: 100%;
+                    display: none;
+        
+                    @include responsive(pc-screens){
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .m_bg {
+                img {
+                    width: 100%;
+        
+                    @include responsive(pc-screens){
+                        display: none;
+                    }
+                }
+            }
         }
 
         .main0_contents {
@@ -700,18 +721,26 @@ section div.main0 {
 main {
     color: #333;
     nav {
+        @include responsive(pc-screens) {
+            width: 100%;
+        }
+
         .gnb {
+            display: flex;
+            flex-direction: column;
             text-align: center;
             width: 100%;
             z-index: 1;
             background-color: #f7f7f7;
             padding-bottom: 20px;
+            margin: 0 auto;
 
             @include responsive(pc-screens) {
-                display: flex;
+                // justify-content: space-between;
+                width: 50%;
+                flex-direction: row;
                 background-color: transparent;
                 text-align: center;
-                padding-left: 310px;
             }
 
             li {
