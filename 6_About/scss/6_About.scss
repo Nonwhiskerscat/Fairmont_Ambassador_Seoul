@@ -561,6 +561,27 @@ section div.main0 {
                     height:100vh;
                 }
             }
+            .p_bg {
+                img {
+                    width: 100%;
+                    display: none;
+        
+                    @include responsive(pc-screens){
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .m_bg {
+                img {
+                    width: 100%;
+        
+                    @include responsive(pc-screens){
+                        display: none;
+                    }
+                }
+            }
         }
 
         .main0_contents {
@@ -843,19 +864,25 @@ main {
 
                 img {
                         width: 70%;
+                        margin-left: 10px;
 
                     @include responsive(pc-screens) {
                         width: 86px;
+                        margin-left: 0;
                     }
                 }
     
                 p{
-                    font-size: calc(14px + 0.5vw);
+                    font-size: calc(12px + 0.5vw);
                     margin-top: 10px;
                     margin-bottom: 20px;
+                    width: 90%;
+                    text-align: center;
 
                     @include responsive(pc-screens) {
-                        font-size: $mainf
+                        font-size: $mainf;
+                        text-align: center;
+                        width: 100%;
                     }
                 }
             }
@@ -895,7 +922,7 @@ main {
             }
             .row {
                 display: flex;
-                padding-right: 0;
+                float: right;
 
                 @include responsive(pc-screens) {
                     margin-top: 30px;
@@ -904,7 +931,6 @@ main {
                 img {
                     width: 28px;
                     height: auto;
-                    // margin-right: 5px;
 
                     @include responsive(pc-screens) {
                         width: 45px;
@@ -916,37 +942,59 @@ main {
 
                     @include responsive(pc-screens) {
                         font-size: 26px;
-                        // margin-left: 20px;
                     }
                 }
             }
         }
     }
+
     .route {
+        margin: 0;
+
         .section4-flex {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
+            
+            @include responsive(pc-screens) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .acordian-menu {
+            width: 100%;
+            background-color: #222;
 
-            .accodion {
-                background-color: #eee;
-                color : #444;
-                cursor : pointer;
-                padding : 18px;
-                flex : 1;
-                text-align: center;
-                font-size: 15px;
-                transition: 0.4s;
+            @include responsive(pc-screens) {
+                width: 1200px;
+            }
 
-                .active,.accodion:hover {
-                    background-color: #ccc;
+            li {
+                list-style: none;
+                
+                &:last-child{
+                    border-bottom: 1px solid #fff;
                 }
-                .panel {
-                    padding : 0 10px;
-                    background-color: white;
-                    max-height: 0;
-                    overflow: hidden;
-                    transition: max-height 0.2s ease-out;
+
+                a {
+                    display: flex;
+                    text-decoration: none;
+                    line-height: 40px;
+                    padding: 10px 0;
+                    background-color: #666;
+                    color: #fff;
+                    font-weight: bold;
+                    border-top: 1px solid #fff;
+
+                    img {
+                        width: 30px;
+                        margin-right: 10px;
+                    }
+                }
+                .method {
+                    padding: 40px;
+                    background-color: #ddd;
+                    color: #333;
+                    text-align: justify;
+                    display: none;
                 }
             }
         }

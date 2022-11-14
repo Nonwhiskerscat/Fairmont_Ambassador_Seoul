@@ -582,6 +582,24 @@ section div.main0 .bg_img img {
     height: 100vh;
   }
 }
+section div.main0 .bg_img .p_bg img {
+  width: 100%;
+  display: none;
+}
+@media screen and (min-width: 1400px) {
+  section div.main0 .bg_img .p_bg img {
+    display: block;
+    width: 100%;
+  }
+}
+section div.main0 .bg_img .m_bg img {
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  section div.main0 .bg_img .m_bg img {
+    display: none;
+  }
+}
 section div.main0 .main0_contents {
   position: absolute;
   text-align: center;
@@ -856,20 +874,26 @@ main .section2-flex div.service-icon div a:hover {
 }
 main .section2-flex div.service-icon div img {
   width: 70%;
+  margin-left: 10px;
 }
 @media screen and (min-width: 1400px) {
   main .section2-flex div.service-icon div img {
     width: 86px;
+    margin-left: 0;
   }
 }
 main .section2-flex div.service-icon div p {
-  font-size: calc(14px + 0.5vw);
+  font-size: calc(12px + 0.5vw);
   margin-top: 10px;
   margin-bottom: 20px;
+  width: 90%;
+  text-align: center;
 }
 @media screen and (min-width: 1400px) {
   main .section2-flex div.service-icon div p {
     font-size: 18px;
+    text-align: center;
+    width: 100%;
   }
 }
 main .map .section3-flex img {
@@ -904,7 +928,7 @@ main .map .location h3 {
 }
 main .map .location .row {
   display: flex;
-  padding-right: 0;
+  float: right;
 }
 @media screen and (min-width: 1400px) {
   main .map .location .row {
@@ -929,30 +953,51 @@ main .map .location .row p {
     font-size: 26px;
   }
 }
-main .route .section4-flex {
+main .route {
+  margin: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .route .section4-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+main .route .acordian-menu {
+  width: 100%;
+  background-color: #222;
+}
+@media screen and (min-width: 1400px) {
+  main .route .acordian-menu {
+    width: 1200px;
+  }
+}
+main .route .acordian-menu li {
+  list-style: none;
+}
+main .route .acordian-menu li:last-child {
+  border-bottom: 1px solid #fff;
+}
+main .route .acordian-menu li a {
   display: flex;
-  flex-direction: column;
-  text-align: left;
+  text-decoration: none;
+  line-height: 40px;
+  padding: 10px 0;
+  background-color: #666;
+  color: #fff;
+  font-weight: bold;
+  border-top: 1px solid #fff;
 }
-main .route .section4-flex .accodion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  flex: 1;
-  text-align: center;
-  font-size: 15px;
-  transition: 0.4s;
+main .route .acordian-menu li a img {
+  width: 30px;
+  margin-right: 10px;
 }
-main .route .section4-flex .accodion .active, main .route .section4-flex .accodion .accodion:hover {
-  background-color: #ccc;
-}
-main .route .section4-flex .accodion .panel {
-  padding: 0 10px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+main .route .acordian-menu li .method {
+  padding: 40px;
+  background-color: #ddd;
+  color: #333;
+  text-align: justify;
+  display: none;
 }
 
 footer {
