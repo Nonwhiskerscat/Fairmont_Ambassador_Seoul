@@ -80,6 +80,10 @@ li {
   list-style: none;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 .menu_modal {
   display: none;
   position: absolute;
