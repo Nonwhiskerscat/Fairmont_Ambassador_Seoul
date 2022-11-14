@@ -1074,11 +1074,17 @@ main {
 
                     }
 
+                    &:hover {
+                        font-weight: 400;
+                        color: #333;
+                    }
+
                     &.bold {
                         font-weight: 400;
                         color: #333;
                     }
 
+                    
                     
                 }
             }
@@ -1273,8 +1279,8 @@ main {
                         }
 
                         &:last-child {
-                            background-color: #000066;
-                            border: 1px solid #000066;
+                            background-color: #b80000;
+                            border: 1px solid #b80000;
                             color: white;
     
                             &:hover {
@@ -1319,7 +1325,7 @@ main {
                 }
 
                 &:hover {
-                    background-color: rgba(0,0,102,0.05);
+                    background-color: rgba($color: #b80000, $alpha: 0.1);
                     transition: all 0.5s;
                 }
             }            
@@ -1359,7 +1365,7 @@ main {
 
                 span{
                     font-weight: 400;
-                    color: #000066;
+                    color: #b80000;
                 }
             }
         } //.overview
@@ -1447,7 +1453,7 @@ main {
                         }
 
                         span.semi_big {
-                            color: #000066;
+                            color: #b80000;
                             @include type_custom(calc(1.2em + 1vw), $common_font);
                             margin-right: 5px;
 
@@ -1457,7 +1463,7 @@ main {
                         }
 
                         span.big {
-                            color: #000066;
+                            color: #b80000;
                             @include type_custom(calc(1.5em + 1vw), $common_font);
                             margin-right: 5px;
 
@@ -1502,7 +1508,7 @@ main {
 
 
                 .ame_grp {
-                    background-color: rgba(0,0,102,0.05);
+                    background-color: rgba($color: #b80000, $alpha: 0.1);
                     padding: 0 20px;
                     padding-top: 30px;
                     display: flex;
@@ -1623,7 +1629,7 @@ main {
 
                 span{
                     font-weight: 400;
-                    color: #000066;
+                    color: #b80000;
                 }
             }
         } //.room_smoke 
@@ -1648,7 +1654,7 @@ main {
                 }
 
                 &:hover {
-                    background-color: rgba(0,0,102,0.05);
+                    background-color: rgba($color: #b80000, $alpha: 0.1);
                     transition: all 0.5s;
                 }
             }            
@@ -1723,7 +1729,7 @@ main {
 
                     .accord {
                         padding: 20px;
-                        background-color: rgba(0,0,102,0.05);
+                        background-color: rgba($color: #b80000, $alpha: 0.1);
 
                         @include responsive(pc-screens) {
                             padding: 30px;
