@@ -89,7 +89,7 @@ html::-webkit-scrollbar {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #442d13;
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 700;
 }
 @media screen and (min-width: 1400px) {
@@ -428,6 +428,7 @@ html::-webkit-scrollbar {
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu:hover {
   transition: all 0.5s;
   color: #fefdf0;
+  color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu:hover {
@@ -436,6 +437,7 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu:hover > a {
   color: #fefdf0;
+  color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu:hover > a {
@@ -446,7 +448,7 @@ html::-webkit-scrollbar {
   content: "";
   display: block;
   width: 30px;
-  border-bottom: 3px solid #fefdf0;
+  border-bottom: 3px solid #ffef5a;
   margin: 0 0 5px 5px;
   position: absolute;
   top: -5px;
@@ -467,6 +469,7 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu > a:hover {
   color: #fefdf0;
+  color: #ffef5a;
   transition: all 0.5s;
 }
 @media screen and (min-width: 1400px) {
@@ -512,6 +515,7 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu:hover {
   color: #fefdf0;
+  color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu:hover {
@@ -536,6 +540,7 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu > a:hover {
   color: #fefdf0;
+  color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu > a:hover {
@@ -561,6 +566,7 @@ html::-webkit-scrollbar {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li a:hover {
   color: #fefdf0;
+  color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li a:hover {
