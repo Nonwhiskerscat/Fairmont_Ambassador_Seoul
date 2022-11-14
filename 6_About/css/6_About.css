@@ -734,7 +734,7 @@ main {
   background-size: cover;
   position: relative;
   padding-top: 85px;
-  color: white;
+  color: #fff;
   text-align: justify;
 }
 main .bg-video {

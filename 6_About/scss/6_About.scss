@@ -736,7 +736,7 @@ main {
 
     padding-top: 85px;
     // background-color: #9a8c7f;
-    color: white;
+    color: #fff;
     text-align: justify;
 
     @include responsive(pc-screens) {
@@ -969,7 +969,7 @@ main {
 
             li {
                 list-style: none;
-                
+
                 &:last-child{
                     border-bottom: 1px solid #fff;
                 }
