@@ -2,6 +2,16 @@
 @import "./reset.scss";
 @import "./mixin.scss";
 
+
+.no {
+    display: none;
+}   
+
+.scale_80 {
+    transform: scale(0.8);
+    transform-origin: top center;
+}
+
 //header
 .menu_modal {
     display: none;
@@ -21,7 +31,7 @@
         
         @include responsive(pc-screens) {
             width: 93.75%;
-            max-width: 1800px;
+            
         }
 
         .menu_header {
@@ -36,7 +46,7 @@
                 margin-top: 20px;
     
                 @include responsive(pc-screens) {
-                    margin-top: 25px;
+                    margin-top: 30px;
                 }
     
                 .not_for_m{
@@ -226,7 +236,7 @@
                 flex-direction: row;
                 // align-items: center;
                 padding-top: 100px ;
-                max-width: 1800px;
+                
                 margin: 0 auto;
             }
     
@@ -439,7 +449,7 @@ header{
         
         @include responsive(pc-screens) {
             width: 93.75%;
-            max-width: 1800px;
+            
         }
     
         .header_logo {
@@ -529,6 +539,7 @@ header{
 
 section div.main0 {
     // background-size: cover;
+    width: 100%;
     height: 100vh;
 
         .bg_img {
@@ -557,8 +568,23 @@ section div.main0 {
                 animation: img_size 10s;
 
                 @include responsive(pc-screens) {
-                    width: 100vw;
-                    height:100vh;
+                    width: 100%;
+                    height:100%;
+                    object-fit: cover;
+                }
+
+                &.main_pc {
+                    display: none;
+
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+                }
+
+                &.main_phone {
+                    @include responsive(pc-screens) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -699,448 +725,1195 @@ section div.main0 {
 
 main {
     color: #333;
-//     .room_int {
-//         margin-top: 50px;
-
-//         @include responsive(pc-screens) {
-//             margin-top: 100px;
-//         }
-
-//         h3.first {
-//             text-align: center;
-//             line-height: 2em;
-//             @include type_custom(24px, $common_font);
-//             font-weight: 200;
-
-//             @include responsive(pc-screens) {
-//                 font-size: 48px;
-//                 line-height: 96px;
-//             }
-
-//             span {
-//                 font-weight: 400;
-//             }
-
-            
-//         }
-
-//         .room_info{
-//             margin-top: 100px;
-//             width: 100%;
-//             overflow: hidden;
-
-            
-
-//             @include responsive(pc-screens) {
-//                 margin-top: 200px;
-//             }
-    
-//             img{
-//                 width: 100vw;
-//                 min-height: 700px;
-    
-//                 @include responsive(pc-screens) {
-//                     width: 100vw;
-//                     max-height: 100vh;
-//                 }
-//             }
-//         }
-
-//         .room_cont {
-//             color: white;
-//             transform: translateY(calc(-200px));
-//             // background-size: cover;
-//             position: relative;
-    
-    
-//             img.rbm {
-//                 position: absolute;
-//                 top:-20px;
-//                 width: 100%;
-//                 height: 581px;
-//                 z-index: -1;
-    
-//                 @include responsive(pc-screens) {
-//                     display: none;
-//                 }
-//             }
-    
-//             img.rbp {
-//                 display: none;
-//                 height: 40vw;
-    
-//                 @include responsive(pc-screens) {
-//                     transform: translateY(200px);
-//                     display: block;
-//                     max-width: auto;
-//                     position: absolute;
-//                     right: 0;
-//                     opacity: 0.9;
-//                     width: 515px;
-//                     height: 640px;
-//                     transform: translateY(-445px);
-//                 }
-    
-//                 @include responsive(p1440-screens) {
-//                     width: 563px;
-//                     height: 700px;
-//                     transform: translateY(-505px);                
-//                 }
-//             }
-    
-//             .room_sub {
-//                 padding-top: 50px;
-//                 text-align: center;
-//                 position: absolute;
-    
-//                 @include responsive(pc-screens) {
-//                     right: 0;
-//                     top: -385px;
-//                     width: 465px;
-//                     padding-left: 3.645833333333333%;
-//                 }
-    
-//                 @include responsive(p1440-screens) {
-//                     right: 0;
-//                     top: -445px;
-//                     width: 515px;
-//                     padding-left: 3.645833333333333%;
-//                 }
-    
-//                 h5 {
-//                     @include type_custom(2em, $common_font);
-//                     font-weight: 300;
-//                 }
+    .room_int {
+        margin-top: $mid_margin_m;
         
-//                 h6 {
-//                     @include type_custom(1em, $eng_title_font);
-//                     padding-top: 5px;
-//                     letter-spacing: 2px;
-//                 }
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+        }
+
+        h3.first {
+            text-align: center;
+            @include type_custom(calc(8px + 3vw), $common_font);
+            line-height: calc(1em + 3vw);
+            font-weight: 200;
+            margin-bottom: $mid_margin_m;
+
+            @include responsive(pc-screens) {
+                font-size: 48px;
+                line-height: 96px;
+                margin-bottom: $mid_margin;
+            }
+
+            span {
+                font-weight: 400;
+                @include responsive(pc-screens) {
+                    //
+                }
+            }
+        }
+
+        .room_info{
+            margin-top: $mid_margin_m;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+            margin: 0 auto;
+
+            @include responsive(pc-screens) {
+                margin-top: $mid_margin;
+            }
     
-//                 p.desc {
-//                     padding-top: 40px;
-//                     text-align: justify;
-//                     line-height: 36px;
-//                     @include type_custom(1em, $common_font);
-//                     font-weight: 200;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
     
-//                 }
+                @include responsive(pc-screens) {
+                    width: 100vw;
+                    max-height: 100vh;
+                }
+            }
+        }
+
+        .room_cont {
+            color: white;
+            transform: translateY(-200px);
+            // background-size: cover;
+            position: relative;
     
-//                 ul.r_info {
-//                     padding-top: 50px;
-//                     display: flex;
-//                     flex-direction: row;
-//                     width: 100%;
-//                     margin: 0 auto;
-//                     justify-content: space-between;
     
-//                     @include responsive(tablet-screens) {
-//                         width: 80%;
-//                     }
+            img.rbm {
+                width: 100%;
+                height: 581px;
+                z-index: -1;
     
-//                     @include responsive(pc-screens) {
-//                         width: 100%;
-//                     }
+                @include responsive(pc-screens) {
+                    display: none;
+                }
+            }
     
-//                     li {
-//                         p{
-//                             position: relative;
-//                             text-align: center;
+            img.rbp {
+                display: none;
+                height: 40vw;
     
-//                             @include type_custom(1em, $eng_title_font);
-//                             padding-top:10px;
-
-//                             &+p {
-//                                 @include type_custom(1.2em, $common_font);
-//                                 font-size: 1.2em;
-//                             }
-
-//                             span {
-//                                 font-size: 0.6em;
-//                                 position: absolute;
-//                                 top: 20%;
-//                             }
-//                         }
-//                     } 
-//                 } //.room_info
-//             } //.room_sub
-//         } //.room_cont
-
-//         h3.last {
-//             margin-top: 500px;
-//             text-align: center;
-//             line-height: 2em;
-//             @include type_custom(24px, $common_font);
-//             font-weight: 200;
-
-//             span {
-//                 font-weight: 400;
-//             }
-
-//             @include responsive(pc-screens) {
-//                 margin-top: 150px;
-//                 font-size: 48px;
-//                 line-height: 96px;
-//             }
-//         }
-//     } //.room_int
-
-//     .room_gall {
-//         margin-top: 125px;
-//         h3 {
-//             @include sub_h3;
-//         }
-
-//         .gall_main {
-//             width: 100%;
-//             overflow: hidden;
-
-//             ul {
-//                 display: flex;
-//                 justify-content: space-between;
-//                 width: 200%;
-//                 transform: translateX(-25%);
-
-//                 @include responsive(pc-screens) {
-//                     width: 150%;
-//                     transform: translateX(-17.5%);
-//                 }
+                @include responsive(pc-screens) {
+                    display: block;
+                    max-width: auto;
+                    position: absolute;
+                    right: 0;
+                    opacity: 0.9;
+                    width: 515px;
+                    height: 640px;
+                    transform: translateY(-440px);
+                }
+            }
     
-//                 li {
-//                     width: 50%;
-//                     overflow: hidden;
-
-//                     @include responsive(pc-screens) {
-//                         width: 50%;
-//                     }
-
-//                     &:nth-child(1), &:nth-child(3) {
-//                         transform: scale(0.8);
-//                         transform-origin: top;
-//                         opacity: 0.3;
-//                     }
-
-//                     img {
-//                         width: 100%;
-//                     }
+            .room_sub {
+                position: absolute;
+                transform: translateY(-560px);
+                padding-top: 50px;
+                text-align: center;
     
-//                 }
-//             }
-//         } //gall_main
+                @include responsive(pc-screens) {
+                    position: absolute;
+                    right: 25px;
+                    top: 150px;
+                    width: 465px;
+                }
 
-//         .gall_navi {
-//             width: 40%;
-//             display: flex;
-//             justify-content: space-between;
-//             margin: 0 auto;
-//             align-items: center;
+    
+                h5 {
+                    @include type_custom(calc(16px + 3vw), $common_font);
+                    font-weight: 300;
 
-//             @include responsive(tablet-screens) {
-//                 width: 30%;
-//             }
+                    @include responsive(pc-screens) {
+                        font-size: 2em;
+                    }
+                }
+        
+                h6 {
+                    @include type_custom(calc(8px + 1.5vw), $eng_title_font);
+                    padding-top: calc(3px + 0.5vw);
+                    letter-spacing: 2px;
+
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                        padding-top: 20px;
+                    }
+
+                }
+    
+                p.desc {
+                    padding-top: $small_margin_m;
+                    text-align: justify;
+                    @include type_custom(calc(0.8em + 1vw), $common_font);
+                    line-height: calc(2em + 1vw);
+                    font-weight: 200;
+
+                    @include responsive(pc-screens) {
+                        padding-top: $small_margin;
+                        font-size: 21px;
+                        line-height: 42px;
+                    }
+    
+                }
+    
+                ul.r_info {
+                    position: absolute;
+                    top: 360px;                    
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    margin: 0 auto;
+                    justify-content: space-between;
+    
+                    @include responsive(pc-screens) {
+                        width: 100%;
+                        top: 400px;
+                    }
+    
+                    li {
+                        width: 30%;
+                        img {
+                            width: calc(30px + 5vw);
+
+                            @include responsive(pc-screens) {
+                                width: 80px;
+                            }
+                        }
+
+                        p{
+                            position: relative;
+                            text-align: center;
+    
+                            @include type_custom(calc(0.5em + 1.2vw), $eng_title_font);
+                            padding-top:10px;
+
+                            @include responsive(pc-screens) {
+                                font-size: 1em;
+                            }
+
+                            &+p {
+                                @include type_custom(calc(0.8em + 1.2vw), $common_font);
+
+                                @include responsive(pc-screens) {
+                                    font-size: 1em;
+                                }
+
+                            }
+
+                            span {
+                                font-size: 0.6em;
+                                position: absolute;
+                                top: 25%;
+
+                                @include responsive(pc-screens) {
+                                    top: 20%;
+                                }
+                            }
+                        }
+                    } 
+                } //.room_info
+            } //.room_sub
+        } //.room_cont
+
+        h3.last {
+            transform: translateY(-150px);
+            text-align: center;
+            @include type_custom(calc(8px + 3vw), $common_font);
+            line-height: calc(1em + 3vw);
+            font-weight: 200;
+
+            @include responsive(pc-screens) {
+                font-size: 48px;
+                line-height: 96px;
+                margin-top: $small_margin;
+                transform: translateY(+0);
+            }
+
+            span {
+                font-weight: 400;
+                @include responsive(pc-screens) {
+                    //
+                }
+            }
+        }
+    } //.room_int
+
+    .room_gall {
+        margin: 0 auto;
+        max-height: 100vh;
+        margin-top: $small_margin_m;
+
+        @include responsive(pc-screens){
+            margin-top: $big_margin;
+        }
+
+        h3 {
+            @include sub_h3;
+        }
+
+        .gall_main {
+            width: 100%;
+            overflow: hidden;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 200%;
+                transform: translateX(-25%);
+
+                @include responsive(pc-screens) {
+                    width: 150%;
+                    transform: translateX(-17.5%);
+                }
+    
+                li {
+                    width: 50%;
+                    overflow: hidden;
+                    margin: 0 auto;
+
+                    @include responsive(pc-screens) {
+                        width: 50%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                        &.small_img {
+                            transform: scale(0.8);
+                            transform-origin: top;
+                            opacity: 0.3;
+                        }
+                    }
+    
+                }
+            }
+        } //gall_main
+
+        .gall_navi {
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+            margin-top: $small_margin_m;
+
             
-//             @include responsive(pc-screens) {
-//                 width: 20%;
-//             }
+            @include responsive(pc-screens) {
+                width: 300px;
+                margin-top: $small_margin;
+            }
 
-//             li {
-//                 img {
-//                     width: 50%;
+            li {
+                img {
+                    width: 50%;
 
-//                     @include responsive(pc-screens) {
-//                         width: 80%;
-//                     }
-//                 }
+                    @include responsive(pc-screens) {
+                        width: 80%;
+                    }
+                }
 
-//                 &:nth-child(2) {
-//                     @include type_custom(2em,$common_font);
-//                     transform: translateX(-35%);
-//                     color: #bdbdbd;
+                &:nth-child(2) {
+                    display: none;
+                    @include type_custom(calc(1em + 1vw),$common_font);
+                    transform: translateX(-35%);
+                    color: #bdbdbd;
 
-//                     @include responsive(pc-screens) {
-//                         font-size: 3em;
-//                     }
-//                 }
+                    @include responsive(pc-screens) {
+                        font-size: 3em;
+                    }
+                }
+            } //li
+            
+        }
+        
+    }//.room_gall
+
+    .room_types {
+        margin-top: $big_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-top: $big_margin;
+        }
+
+        h3 {
+            @include sub_h3;
+        }
+
+        .types_flex {
+            margin-top: $mid_margin_m;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include responsive(pc-screens) {
+                margin-top: $mid_margin;
+                flex-direction: row;
+            }
+
+            .types_left {
+                width: 100%;
+
+                @include responsive(pc-screens) {
+                    width: 580px;
+                }
 
 
+                h4 {
+                    @include type_custom(calc(18px + 0.5vw), $common_font);
+                    margin-bottom: 30px;
+                    font-weight: 400;
+
+                    @include responsive(pc-screens) {
+                        display: none;
+                    }
+
+                    &::before {
+                        @include title_border_2(30px, 3px, #333, 5px, 5px)
+                    }
+
+                } 
+
+
+                .type_img {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    margin: 0 auto;
+
+                    @include responsive(pc-screens){
+                        
+                        // height: calc(100px + 20vw);
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        // height: calc(200px + 20vw);
+                        
+
+                        @include responsive(pc-screens) {
+                            //
+                        }
+                    }
+                }
+            } // type_left
+
+            .types_right {
+
+                @include responsive(pc-screens) {
+                    width: 680px;
+                }
+
+                h4 {
+                    @include type_custom($regularf_title, $common_font);
+                    margin-bottom: 30px;
+                    font-weight: 400;
+                    display: none;
+
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+
+                    &::before {
+                        @include title_border_2(40px, 3px, #333, 10px, 10px)
+                    }
+
+                } //h4
+
+                p.subs {
+                    @include type_custom(calc(0.5em + 1vw), $common_font);
+                    line-height: 2em;
+                    margin-top: 30px;
+                    text-align: justify;
+
+                    @include responsive(pc-screens) {
+                        font-size: $mainf;
+                        line-height: $mains;
+                    }
+
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    margin-top: calc(1em + 2vw);
+                    
+
+                    @include responsive(pc-screens) {
+                        margin-top: 40px;
+                    }
+                    
+
+                    li {
+                        text-align: center;
+
+                        @include responsive(pc-screens) {
+                            width: 150px;
+                        }
+
+                        img {
+                            width: 50%;
+                            text-align: center;
+
+                            @include responsive(pc-screens) {
+                                width: 80px;
+                            }
+                        }
+
+                        p {
+                            @include type_custom(calc(0.5em + 1vw), $common_font);
+                            margin-top: calc(0.2em + 1vw);
+                            text-align: center;
+                            position: relative;
+
+                            @include responsive(pc-screens) {
+                                font-size: $mainf;
+                            }
+
+                            br {
+                                @include responsive(pc-screens) {
+                                    display: none;
+                                }
+                            }
+
+                            span.plus {
+                                display: none;
+
+                                @include responsive(pc-screens) {
+                                    display: inline;
+                                }
+                            }
+
+                            span.small {
+                                font-size: calc(0em + 0.1vw);
+                                position: absolute;
+
+                                @include responsive(pc-screens) {
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: calc(1em + 2vw);
+
+                    @include responsive(pc-screens){
+                        margin-top: 40px;
+                    }
+
+                    button {
+                        width: 45%;
+                        height: 40px;
+                        @include type_custom(calc(0.5em + 1vw), $common_font);
+                        font-weight: 200;
+                        background-color: transparent;
+                        border: 1px solid #333;
+                        color: #333;
+
+                        @include responsive(pc-screens) {
+                            height: 60px;
+                            font-size: $semif;
+                        }
+                        
+                        &:hover {
+                            transition: all 0.5s;
+                            background-color: #333;
+                            color: white;
+                        }
+
+                        &:last-child {
+                            background-color: #000066;
+                            border: 1px solid #000066;
+                            color: white;
+    
+                            &:hover {
+                                transition: all 0.5s;
+                                border: 1px solid #333;
+                                background-color: #333;
+    
+                                color: white;
+                            }
+                        
+                        }
+                    }     
+                }
+            } //types_right
+        } //types_flex
+
+        
+
+
+    } //room_types
+
+    .room_modal {
+
+        margin-top: $mid_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+        }
+
+        .closer {
+
+            p{
+                @include type_custom(calc(1em + 0.5vw),$common_font);
+                font-weight: 400;
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                border-radius: 5px;
+
+                @include responsive(pc-screens) {
+                    font-size: $middlef_main;
+                }
+
+                &:hover {
+                    background-color: rgba(0,0,102,0.05);
+                    transition: all 0.5s;
+                }
+            }            
+        }
+        
+        .overview {
+
+            margin-top: $small_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-top: $small_margin;
+            }
+            
+            h4 {
+                @include sub_h4;
+
+                &::before {
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
+                }
+            }
+
+            p {
+                @include type_custom(calc(0.5em + 1vw),$common_font);
+                margin-top: $small_margin_m;
+                line-height: calc(2em + 1vw);
+                text-align: justify;
+
+                @include responsive(pc-screens) {
+                    margin-top: $small_margin;
+                    line-height: $semis;
+                    font-size: $semif;
+                }
+
+                span{
+                    font-weight: 400;
+                    color: #000066;
+                }
+            }
+        } //.overview
+
+        .room_in {
+            margin-top: $mid_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-top: $mid_margin;
+            }
+
+            h4 {
+                @include sub_h4;
+
+                &::before {
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
+                }
+            }
+
+            ul.icons {
+                margin-top: $small_margin_m;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                @include responsive(pc-screens) {
+                    margin-top: $small_margin;
+                }
+                
+                li {
+                    width: 30%;
+                    text-align: center;
+                    @include responsive(pc-screens) {
+                        width: 200px;
+                    }
+
+
+                    &:nth-child(4), &:nth-child(5), &:nth-child(6){
+                        margin-top: $small_margin_m;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 0;
+                        }
+                    }
+
+                    img {
+                        width: 40%;
+                        max-width: 80px;
+
+                        @include responsive(pc-screens) {
+                            widwth: 150px;
+                        }
+
+                    }
+
+                    em {
+                        display: block;
+                        font-style: normal;
+                        @include type_custom(calc(0.5em + 0.8vw), $common_font);
+                        font-weight: 400;
+                        margin-top: calc(0.2em + 0.2vw);
+
+
+                        @include responsive(pc-screens) {
+                            margin-top: 50px;
+                            font-size: $mainf;
+
+                        }
+                    }
+
+                    p {
+                        position: relative;
+                        @include type_custom(calc(0.5em + 0.8vw), $common_font);
+                        margin-top: calc(0.2em + 0.2vw);
+
+
+
+                        @include responsive(pc-screens) {
+                            margin-top: 10px;
+                            font-size: $mainf;
+                        }
+
+                        span.big {
+                            color: #000066;
+                            @include type_custom(calc(1.5em + 1vw), $common_font);
+                            margin-right: 5px;
+
+                            @include responsive(pc-screens) {
+                                font-size: 2em;
+                            }
+                        }
+
+                        span.small {
+                            position: absolute;
+                            font-size: calc(0.4em + 0.4vw);
+                            top: 35%;
+
+                            @include responsive(pc-screens) {
+                                top: 40%;
+                                font-size: 8px;
+                            }
+                        } 
+                    } //ul
+                } //li
+            } //.ui_icons
+        } //.room_in
+
+        .room_amenity {
+            margin-top: $mid_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-top: $mid_margin;
+            }
+
+            h4 {
+                @include sub_h4;
+
+                &::before {
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
+                }
+            }
+
+
+                .ame_grp {
+                    background-color: rgba(0,0,102,0.05);
+                    padding: 0 20px;
+                    padding-top: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    @include responsive(pc-screens) {
+                        padding: 0 50px;
+                        padding-top: 50px;
+                    }
+
+                    div {
+                        width: 45%;
+
+                        @include responsive(pc-screens) {
+                            widows: 30%;
+                        }
+
+                        @include responsive(pc-screens) {
+                            width: 380px;
+                            height: 330px;
+                        }
+
+                        ul {
+                            margin-bottom: 50px;
+
+                            img {
+                                position: relative;
+                                margin-right: 10px;
+                                height: calc(1.2em + 0.8vw);
+                                margin-bottom: calc(0.5em + 0.3vw);
+
+                                @include responsive(pc-screens) {
+                                    height: 30px;
+                                    margin-bottom: 24px;
+                                    margin-right: 15px;
+                                }
+                            }
+
+                            p{
+                                position: absolute;
+                                @include type_custom(calc(0.8em + 0.8vw), $common_font);
+                                display: inline;
+                                font-weight: 300;
+
+                                @include responsive(pc-screens) {
+                                    font-size: $semif;
+                                }
+                            }
+
+                            li {
+                                list-style:'- ' inside;
+                                // background-color: red;
+                                @include type_custom(calc(0.6em + 0.6vw), $common_font);
+                                margin-bottom: calc(0.3em + 0.3vw);
+
+                                @include responsive(pc-screens) {
+                                    font-size: $mainf;
+                                    margin-bottom: 18px;
+                                }
+                                
+                            } //li
+                        } //ul
+                    } //div
+                
+                } //.ame_grp
 
                 
-//             } //li
-            
-//         }
+        } //room_amenity
 
+        .room_smoke {
+            margin-top: $mid_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-top: $mid_margin;
+            }
+
+            h4 {
+                @include sub_h4;
+
+                &::before {
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
+                }
+            }
+
+            .img {
+                text-align: center;
+                @include responsive(pc-screens) {
+                        // width: 200px
+                }
+
+                img{
+                    width: 20%;
+                    max-width: 120px;
+
+                    @include responsive(pc-screens) {
+                        width: 200px;
+                    }
+                }
+            }
+
+
+            p {
+                @include type_custom(calc(0.5em + 1vw),$common_font);
+                margin-top: $small_margin_m;
+                line-height: calc(2em + 1vw);
+                text-align: justify;
+
+                @include responsive(pc-screens) {
+                    margin-top: $small_margin;
+                    line-height: $semis;
+                    font-size: $semif;
+                }
+
+                span{
+                    font-weight: 400;
+                    color: #000066;
+                }
+            }
+        } //.room_smoke 
         
-//     }//.room_gall
+        .closer {
+            margin-top: $small_margin_m;
 
-//     .room_types {
-//         margin-top: 125px;
+            @include responsive(pc-screens) {
+                margin-top: $small_margin;
+            } 
 
-//         h3 {
-//             @include sub_h3;
-//         }
+            p{
+                @include type_custom(calc(1em + 0.5vw),$common_font);
+                font-weight: 400;
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                border-radius: 5px;
 
-//         .types_flex {
-//             margin-top: 50px;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: space-between;
+                @include responsive(pc-screens) {
+                    font-size: $middlef_main;
+                }
 
-//             @include responsive(pc-screens) {
-//                 flex-direction: row;
-//             }
+                &:hover {
+                    background-color: rgba(0,0,102,0.05);
+                    transition: all 0.5s;
+                }
+            }            
+        } //.closer
+    }//.room_modal
 
-//             .types_left {
-//                 width: 100%;
+    .notice {
+            margin-top: $big_margin_m;
+    
+            @include responsive(pc-screens) {
+                margin-top: $big_margin;
+            }
+    
+            h3 {
+                @include sub_h3;
+            } 
 
-//                 @include responsive(pc-screens) {
-//                     width: 40%
-//                 }
+            .notice_flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
+                @include responsive(pc-screens) {
+                    flex-direction: row;
+                }
 
-//                 h4 {
-//                     @include type_custom(1.5em, $common_font);
-//                     margin-bottom: 30px;
+                &>div {
+                    width: 100%;
+                    margin-top: $mid_margin_m;
 
-//                     &::before {
-//                         @include title_border_2(30px, 3px, #333, 10px, 5px);
-//                     }
-
-//                     @include responsive(pc-screens) {
-//                         display: none;
-//                     }
-//                 } 
-
-
-//                 .type_img {
-//                     width: 100%;
-//                     height: calc(200px + 20vw);
-//                     overflow: hidden;
-
-//                     @include responsive(pc-screens) {
-//                         width: 100%;
-//                         // height: calc(100px + 20vw);
-//                     }
-
-//                     img{
-//                         width:150%;
-//                         height:150%;
-//                         transform: translateY(-100px) scale(0.9);
-//                         transform-origin: left top;
-
-//                         @include responsive(tablet-screens) {
-//                             width: 150%;
-//                             height: 150%;
-//                         }
-
-//                         @include responsive(pc-screens) {
-//                             width:150%;
-//                             height:150%;
-//                             max-width: 700px;
-//                         }
-//                     }
-//                 }
-//             } // type_left
-
-//             .types_right {
-
-//                 @include responsive(pc-screens) {
-//                     width: 55%;
-//                 }
-
-//                 h4 {
-//                     @include type_custom(3em, $common_font);
-//                     margin-bottom: 30px;
-//                     font-weight: 200;
-//                     display: none;
-
-//                     @include responsive(pc-screens) {
-//                         display: block;
-//                     }
-
-//                 } //h4
-
-//                 p.subs {
-//                     @include type_custom(1em, $common_font);
-//                     line-height: 2em;
-//                     margin-top: 30px;
-//                     text-align: justify;
-
-//                     @include responsive(pc-screens) {
-//                         font-size: 24px;
-//                         line-height: 48px;
-
-//                     }
-
-//                 }
-
-//                 ul {
-//                     display: flex;
-//                     justify-content: space-around;
-//                     width: 100%;
-//                     margin-top: 30px;
+                    &:first-child {
+                        margin-top: 0;
+                    }
                     
+                    @include responsive(pc-screens) {
+                        width: 640px;
+                        margin-top: 0;
+                    }
 
-//                     @include responsive(pc-screens) {
-//                     }
+                    .title {
+                        em {
+                            position: relative;
+                            @include type_custom(calc(0.8em + 0.8vw), $common_font);
+                            font-style: normal;
+                            font-weight: 400;
+                            margin-left: 10px;
+
+                            &::after {
+                                @include title_border_2(100%, 1px, #333, 0, 0);
+                                padding-top: 5px;
+
+                            }
+                            
+
+                            @include responsive(pc-screens) {
+                                font-size: $semif;
+                            }
+
+                        }
+
+                        img {
+                            position: absolute;
+                            right: 0;
+                            top: 10px;
+                            width: 20px;
+
+                            @include responsive(pc-screens) {
+
+                            }
+                        }
+                    }
+
+                    .accord {
+                        padding: 20px;
+                        background-color: rgba(0,0,102,0.05);
+
+                        @include responsive(pc-screens) {
+                            padding: 30px;
+                        }
+
+                        ul {
+
+                            p{
+                                @include type_custom(calc(0.5em + 1vw),$common_font);
+                                margin-bottom: calc(0.5em + 0.5vw);
+                                font-weight: 400;
+
+                                @include responsive(pc-screens) {
+                                    font-size: $mainf;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                            
+
+
+                            li {
+                                @include type_custom(calc(0.5em + 1vw),$common_font);
+                                list-style: 'ㆍ' inside;
+                                text-indent: -15px;
+                                margin-bottom: calc(0.5em + 0.5vw);
+                                line-height: calc(1em + 1vw);
+                                text-align: justify;
+
+                                @include responsive(pc-screens) {
+                                    text-indent: -20px;
+                                    font-size: $mainf;
+                                    margin-bottom: 10px;
+                                }
+    
+                                
+                            }
+                        }
                     
+                    }
 
-//                     li {
-//                         text-align: center;
+                    &:nth-child(2) {
+                        li:first-child {
+                            margin-top: calc(0.5em + 0.5vw);
+                        }
+                    }
+                }
+            }
+    } // notice
 
-//                         @include responsive(pc-screens) {
-//                             width: 20%;
-//                         }
+    .other_room {
+        margin-top: $big_margin_m;
+        margin-bottom: $footer_margin_m;
+        width: 100%;
+        overflow: hidden;
+    
+            @include responsive(pc-screens) {
+                margin: 0 auto;
+                margin-top: $big_margin;
+                margin-bottom: $footer_margin_m;
+            }
+    
+            h3 {
+                @include sub_h3;
+            } 
 
-//                         img {
-//                             width: 50%;
-//                             text-align: center;
-//                         }
+            .other_ent {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
 
-//                         p {
-//                             @include type_custom(14px, $common_font);
-//                             text-align: center;
+                @include responsive(pc-screens) {
+                    flex-direction: row;
+                }
 
-//                             @include responsive(tablet-screens);
+                div {
 
-//                             span.plus {
-//                                 display: none;
-//                             }
-//                         }
-//                     }
-//                 }
+                    .img_box {
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: calc(200px + 20vw);
+                        margin: 0 auto $small_margin_m;
 
-//                 .button {
-//                     display: flex;
-//                     justify-content: space-between;
-//                     margin-top: 30px;
+                        @include responsive(pc-screens) {
+                            width: 450px;
+                            height: 700px;
+                        }
 
-//                     button {
-//                         width: 45%;
-//                         height: 40px;
-//                         @include type_custom(18px, $common_font);
-//                         font-weight: 200;
+                        &::after {
+                            @include video_matte;
+                            content: '';
+                            display: block;
+                            background-color: #000;
+                            opacity: 0;
+                        }
 
-//                         &:first-child {
-//                             background-color: transparent;
-//                             border: 1px solid #333;
-//                             color: #333;
-//                         }
+                        &:hover {
+                            &::after {
+                                opacity: 0.5;
+                                transition: all 0.5s;
+                            }
 
-//                         &:nth-child(2) {
-//                             background-color: #000066;
-//                             border: 1px solid #000066;
-//                             color: white;
-//                         }
-//                     }
-//                 }
-//             } //types_right
-//         }
+                            .matte {
+                                opacity: 1;
+                                transition: all 0.5s;
+                            }
+                        }
 
+                        &:hover {
+                            img {
+                                transform: scale(1.2);
+                                transform-origin: center center;
+                                transition: all 0.5s;
+                            }
+                        }
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit:cover;
+    
+                            &.other_m {
+                                @include responsive(pc-screens) {
+                                    display: none;
+                                }
+                            }
+    
+                            &.other {
+                                display: none;
+    
+                                @include responsive(pc-screens) {
+                                    display: block;
+                                }
+                            }
+
+                            
+                        }
+                    }  //.img_box
+
+                    .matte {
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: white;
+                        text-align: center;
+                        z-index: 3;
+
+                        @include responsive(pc-screens) {
+                            transform: translate(-50%,0);
+                            top: 250px;
+                        }
+
+                        h5 {
+                            @include type_custom(calc(1em + 1vw),$eng_title_font);
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 2em;
+                            }
+
+                            &.red {
+                                &::before {
+                                    @include title_border(30px,3px,#b80000,5px);
+                                }
+                            }
+
+                            &.navy {
+                                &::before {
+                                    @include title_border(30px,3px,#2a52be,5px);
+                                }
+                            }
+
+                            &.gold {
+                                &::before {
+                                    @include title_border(30px,3px,#bd8400,5px);
+                                }
+                            }
+
+                        }
+
+                
+
+                        ul {
+                            margin-top:$small_margin_m;
+
+                            
+
+                            li {
+                                margin-bottom: calc(0.5em + 0.5vw);
+
+                                @include responsive(pc-screens) {
+                                    margin-bottom: 10px;
+                                }
+
+                                a {
+                                    color: white;
+                                    @include type_custom(calc(0.8em + 0.5vw),$common_font);
+                                    font-weight: 200;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: $semif;
+                                    }
+
+                                    
+
+                                    &:hover {
+                                        animation: color_rep 1s infinite;
+                                    }
+
+                                }
+                            }
+
+                            @include color_rep_red;
+                            @include color_rep_navy;
+                            @include color_rep_gold;
+
+
+                            &.red>li>a:hover {
+                                animation: color_rep_red 1s infinite;
+                            }
+
+                            &.navy>li>a:hover {
+                                animation: color_rep_navy 1s infinite;
+                            }
+
+                            &.gold>li>a:hover {
+                                animation: color_rep_gold 1s infinite;
+                            }
+                        }
+                    }
+
+                    
+                }
+
+            }
         
+    }
 
-
-//     }
 } //.main
 
 footer {
@@ -1165,7 +1938,7 @@ footer {
         justify-content: space-between;
         margin: 0 auto;
         width: 89.74358974358974%;
-        max-width: 1800px;
+        
 
         @include responsive(pc-screens) {
             width: 93.75%;

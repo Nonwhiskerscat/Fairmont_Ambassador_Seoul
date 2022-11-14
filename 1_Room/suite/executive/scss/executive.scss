@@ -31,7 +31,7 @@
         
         @include responsive(pc-screens) {
             width: 93.75%;
-            max-width: 1800px;
+            
         }
 
         .menu_header {
@@ -46,7 +46,7 @@
                 margin-top: 20px;
     
                 @include responsive(pc-screens) {
-                    margin-top: 25px;
+                    margin-top: 30px;
                 }
     
                 .not_for_m{
@@ -236,7 +236,7 @@
                 flex-direction: row;
                 // align-items: center;
                 padding-top: 100px ;
-                max-width: 1800px;
+                
                 margin: 0 auto;
             }
     
@@ -449,7 +449,7 @@ header{
         
         @include responsive(pc-screens) {
             width: 93.75%;
-            max-width: 1800px;
+            
         }
     
         .header_logo {
@@ -737,10 +737,13 @@ main {
             @include type_custom(calc(8px + 3vw), $common_font);
             line-height: calc(1em + 3vw);
             font-weight: 200;
+            margin-bottom: $mid_margin_m;
+            
 
             @include responsive(pc-screens) {
                 font-size: 48px;
                 line-height: 96px;
+                margin-bottom: $mid_margin;
             }
 
             span {
@@ -803,7 +806,7 @@ main {
                     opacity: 0.9;
                     width: 515px;
                     height: 640px;
-                    transform: translateY(-445px);
+                    transform: translateY(-440px);
                 }
             }
     
@@ -1062,16 +1065,18 @@ main {
 
 
                 h4 {
-                    @include type_custom(calc(1em + 1.5vw), $common_font);
+                    @include type_custom(calc(18px + 0.5vw), $common_font);
                     margin-bottom: 30px;
-
-                    &::before {
-                        @include title_border_2(30px, 3px, #333, 10px, 5px);
-                    }
+                    font-weight: 400;
 
                     @include responsive(pc-screens) {
                         display: none;
                     }
+
+                    &::before {
+                        @include title_border_2(30px, 3px, #333, 5px, 5px)
+                    }
+
                 } 
 
 
@@ -1219,6 +1224,7 @@ main {
 
                         @include responsive(pc-screens) {
                             height: 60px;
+                            font-size: $semif;
                         }
                         
                         &:hover {
@@ -1770,6 +1776,11 @@ main {
                                 opacity: 0.5;
                                 transition: all 0.5s;
                             }
+
+                            .matte {
+                                opacity: 1;
+                                transition: all 0.5s;
+                            }
                         }
 
                         &:hover {
@@ -1812,11 +1823,6 @@ main {
                         color: white;
                         text-align: center;
                         z-index: 3;
-
-                        &:hover {
-                            opacity: 1;
-                            transition: all 0.5s;
-                        }
 
                         @include responsive(pc-screens) {
                             transform: translate(-50%,0);
@@ -1932,7 +1938,7 @@ footer {
         justify-content: space-between;
         margin: 0 auto;
         width: 89.74358974358974%;
-        max-width: 1800px;
+        
 
         @include responsive(pc-screens) {
             width: 93.75%;
