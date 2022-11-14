@@ -8,12 +8,18 @@
     <meta name="Author" content="1st_grp">
     <title>Fairmont_Ambassador_Hotel</title>
     <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
+    
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
     <link href='https://fonts.googleapis.com/css?family=Shalimar' rel='stylesheet'>
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <link href="https://webfontworld.github.io/kopus/KoPubWorldDotum.css" rel="stylesheet">
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/button.js"></script>
+    <script src="./js/jquery.fullPage.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/typing.js"></script>
 </head>
 <body>
@@ -204,328 +210,331 @@
             </div><!--container-->
         </header>
 
-
-        <section class="section">
-            <div class="main0">
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="./img/index/photo/Section_1.mp4" type="video/mp4" />
-                        Your browser is not supported!
-                    </video>
-                </div><!--bg-video-->
-    
-                <h2 id="type"></h2>
-                <h2 class="typing"></h2>
-                    
-                <div class="mouse">
-                    <span class="pc_mouse">
-                        <img src="./img/header/img/Header_mouse.png" alt="pc마우스">
-                        <p>Scroll me!</p>
-                    </span>
-                    <span class="mo_mouse">
-                        <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
-                        <p>Swipe me!</p>
-                    </span>
-                </div><!--mouse-->
-            </div><!--main0-->
-        </section>
-
-        <section class="section">
-            <div class="main1">
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="./img/index/photo/Section_2.mp4" type="video/mp4" />
-                        Your browser is not supported!
-                    </video>
-                </div><!--bg-video-->
-
-                <div class="colormatte">
-                </div><!--colormatte-->
-
-                <div class="contents">
-                        <div class="semi_container">
-                        <h2>Fairmont Ambasssador Seoul</h2>
-                        <p>오랜 전통, 페어몬트 만의 섬세한 서비스가
-                        <span>잊지 못할 순간들</span>을 만들어 드립니다.</p>
-                    </div><!--semi_container-->
-                </div><!--contents-->
-            </div><!--main1-->
-        </section>
-
-        <section class="section">
-            <div class="main2">
-
-                <div class="room_navi">
-                    <ul>
-                        <li><span>GuestRoom</span></li>
-                        <li><span>SuiteRoom</span></li>
-                        <li><span>Penthouse</span></li>
-                    </ul>
-                </div>
-                <div class="contents">
-                    <div class="room_flex">
-                        <div class="back_slide">
-                            <ul>
-                                <li><img src="./img/index/photo/Section_3_1.jpg" alt="룸1"></li>
-                                <li><img src="./img/index/photo/Section_3_2.jpg" alt="룸2"></li>
-                                <li><img src="./img/index/photo/Section_3_3.jpg" alt="룸3"></li>
-                            </ul>
-                        </div><!--back_slide-->
-
-                        <div class="content_slide">
-                            <ul class="room_back">
-                                <li class="rooms guestroom">
-                                    <h2>guest room</h2>
-                                    <div class="room_container">
-                                        <h3>guest room</h3>
-                                        <div class="room_type">
-                                            <a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">Fairmont</a>
-                                            <a href="./1_Room/guestroom/fairmont_deluxe/fairmont_deluxe.html">Deluxe</a>
-                                            <a href="./1_Room/guestroom/fairmont_gold/fairmont_gold.html">Gold</a>
-                                        </div><!--room_type-->
-                                        <p>
-                                            페어몬트룸은 저렴한 가격으로 비즈니스 고객 또는 여행객을  비롯한 폭 넓은 고객층이 만족할 수 있는 맞춤형 공간을 제공합니다.
-                                        </p>
-                                        <button>예약하러 가기</button>
-                                    </div><!--container-->
-                                </li><!--guestroom-->
-    
-                                <li class="rooms suiteroom">
-                                    <h2>suite room</h2>
-                                    <div class="room_container">
-                                        <h3>suite room</h3>
-                                        <div class="room_type">
-                                            <a href="./1_Room/suite/signiture/signiture.html">Signiture</a>
-                                            <a href="./1_Room/suite/premier/premier.html">Premier</a>
-                                            <a href="./1_Room/suite/executive/executive.html">Executive</a>
-                                            <a href="./1_Room/suite/diplomatic/diplomatic.html">Diplomatic</a>
-                                        </div>
-                                        <p>
-                                            스위트룸은 넓은 거실과 쾌적한 침실, 엄선된 서비스, 그리고 여의도 한강의 파노라믹한 절경을 제공합니다.
-                                        </p>
-                                        <button>예약하러 가기</button>
-                                    </div><!--container-->
-                                </li><!--suite_room-->
-    
-                                <li class="rooms penthouse">
-                                    <h2>penthouse</h2>
-                                        <div class="room_container">
-                                        <h3>penthouse</h3>
-
-                                        <div class="room_type">
-                                            <a href="./1_Room/penthouse/penthouse.html">Penthouse</a>
-                                        </div>
-                                        <p>
-                                            펜트하우스는 110평 가량의 넓은 면적과 고급스러운 가구, 럭셔리한 인테리어, 여의도 최고의 경치를 자랑합니다.
-                                        </p>
-                                        <button>예약하러 가기</button>
-                                    </div><!--container-->
-                                </li><!--penthouse-->
-                            </ul>
+        <div id="fullpage">
+            <div class="section sec1">
+                <div class="main0">
+                    <div class="bg-video">
+                        <video class="bg-video__content" data-autoplay muted loop>
+                            <source src="./img/index/photo/Section_1.mp4" type="video/mp4" />
+                            Your browser is not supported!
+                        </video>
+                    </div><!--bg-video-->
+        
+                    <h2 id="type"></h2>
+                    <h2 class="typing"></h2>
                         
-                        </div><!--content_slide-->       
-                    </div><!--room_flex-->    
-                </div><!--contents-->
-            </div><!--main2-->
-        </section>
-
-        <section class="section">
-            <div class="main3">      
-                <div class="faci_navi">
-                    <ul>
-                        <li><span>Lounge</span></li>
-                        <li><span>Fit</span></li>
-                        <li><span>Spa</span></li>
-                    </ul>
-                </div>
-                <div class="contents">
-                    <div class="faci_flex">
-                        <div class="faci_back_slide">
-                            <ul>
-                                <li><img src="./img/index/photo/Section_4_1.jpg" alt="시설1"></li>
-                                <li><img src="./img/index/photo/Section_4_2.jpg" alt="시설2"></li>
-                                <li><img src="./img/index/photo/Section_4_3.jpg" alt="시설3"></li>
-                            </ul>
-                        </div><!--faci_back_slide-->
-
-                        <div class="faci_contents_slide">
-                            <ul class="faci_back">
-                                <li class="facil lounge">
-                                    <div class="container">
-                                        <div class="facil_info">
-                                            <div class="faci_flex">
-                                                <h3>Gold Lounge</h3>
-                                                <img src="./img/index/icon/Icon_Dining.png" alt="">
-                                            </div><!--faci_flex-->
-                                            
-                                            <p>
-                                                <span>호스피탈리티의 전통</span>을<br>
-                                                바탕으로 최고의 맞춤 서비스를 제공합니다.
-                                            </p>
-                                            <button>자세히 보러가기</button>
-                                        </div><!--facil_info-->
-                                    </div><!--container-->
-                                </li>
-
-                                <li class="facil fit">
-                                    <div class="container">
-                                        <div class="facil_info">
-                                            <div class="faci_flex">
-                                                <h3>Fairmont Fit</h3>
-                                                <img src="./img/index/icon/Icon_fit.png" alt="페어몬트 핏">
-                                            </div><!--faci_flex-->
+                    <div class="mouse">
+                        <span class="pc_mouse">
+                            <img src="./img/header/img/Header_mouse.png" alt="pc마우스">
+                            <p>Scroll me!</p>
+                        </span>
+                        <span class="mo_mouse">
+                            <img src="./img/header/img/Header_mouse_mobile.png" alt="모바일">
+                            <p>Swipe me!</p>
+                        </span>
+                    </div><!--mouse-->
+                </div><!--main0-->
+            </div>
     
+            <div class="section sec2">
+                <div class="main1">
+                    <div class="bg-video">
+                        <video class="bg-video__content" data-autoplay muted loop>
+                            <source src="./img/index/photo/Section_2.mp4" type="video/mp4" />
+                            Your browser is not supported!
+                        </video>
+                    </div><!--bg-video-->
+    
+                    <div class="colormatte">
+                    </div><!--colormatte-->
+    
+                    <div class="contents">
+                            <div class="semi_container">
+                            <h2>Fairmont Ambasssador Seoul</h2>
+                            <p>오랜 전통, 페어몬트 만의 섬세한 서비스가
+                            <span>잊지 못할 순간들</span>을 만들어 드립니다.</p>
+                        </div><!--semi_container-->
+                    </div><!--contents-->
+                </div><!--main1-->
+            </div>
+    
+            <div class="section sec3">
+                <div class="main2">
+    
+                    <div class="room_navi">
+                        <ul>
+                            <li><span>GuestRoom</span></li>
+                            <li><span>SuiteRoom</span></li>
+                            <li><span>Penthouse</span></li>
+                        </ul>
+                    </div>
+                    <div class="contents">
+                        <div class="room_flex">
+                            <div class="back_slide">
+                                <ul>
+                                    <li><img src="./img/index/photo/Section_3_1.jpg" alt="룸1"></li>
+                                    <li><img src="./img/index/photo/Section_3_2.jpg" alt="룸2"></li>
+                                    <li><img src="./img/index/photo/Section_3_3.jpg" alt="룸3"></li>
+                                </ul>
+                            </div><!--back_slide-->
+    
+                            <div class="content_slide">
+                                <ul class="room_back">
+                                    <li class="rooms guestroom">
+                                        <h2>guest room</h2>
+                                        <div class="room_container">
+                                            <h3>guest room</h3>
+                                            <div class="room_type">
+                                                <a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">Fairmont</a>
+                                                <a href="./1_Room/guestroom/fairmont_deluxe/fairmont_deluxe.html">Deluxe</a>
+                                                <a href="./1_Room/guestroom/fairmont_gold/fairmont_gold.html">Gold</a>
+                                            </div><!--room_type-->
                                             <p>
-                                            페어몬트 핏은 고객님들에 <br><span>충분한 휴식</span>과 <span>재충전의 시간</span>을 제공합니다.
+                                                페어몬트룸은 저렴한 가격으로 비즈니스 고객 또는 여행객을  비롯한 폭 넓은 고객층이 만족할 수 있는 맞춤형 공간을 제공합니다.
                                             </p>
-                                            <button>자세히 보러가기</button>
-                                        </div><!--facil_info-->
-                                    </div><!--container--> 
-                                </li>
-
-                                <li class="facil spa">
-                                    <div class="container">
-                                        <div class="facil_info">
-                                            <div class="faci_flex">
-                                                <h3>Fairmont Fit</h3>
-                                                <img src="./img/index/icon/Icon_fit.png" alt="페어몬트 핏">
-                                            </div><!--faci_flex-->
+                                            <button onclick="go_Book()">예약하러 가기</button>
+                                        </div><!--container-->
+                                    </li><!--guestroom-->
+        
+                                    <li class="rooms suiteroom">
+                                        <h2>suite room</h2>
+                                        <div class="room_container">
+                                            <h3>suite room</h3>
+                                            <div class="room_type">
+                                                <a href="./1_Room/suite/signiture/signiture.html">Signiture</a>
+                                                <a href="./1_Room/suite/premier/premier.html">Premier</a>
+                                                <a href="./1_Room/suite/executive/executive.html">Executive</a>
+                                                <a href="./1_Room/suite/diplomatic/diplomatic.html">Diplomatic</a>
+                                            </div>
                                             <p>
-                                                <span>준비중입니다.</span>을 
+                                                스위트룸은 넓은 거실과 쾌적한 침실, 엄선된 서비스, 그리고 여의도 한강의 파노라믹한 절경을 제공합니다.
                                             </p>
-                                            <button>자세히 보러가기</button>
-                                        </div><!--facil_info-->
-                                    </div><!--container-->
-                                </li>
-                            </ul><!--faci_back-->
-                        </div><!--faci_contents_slide-->
+                                            <button onclick="go_Book()">예약하러 가기</button>
+                                        </div><!--container-->
+                                    </li><!--suite_room-->
+        
+                                    <li class="rooms penthouse">
+                                        <h2>penthouse</h2>
+                                            <div class="room_container">
+                                            <h3>penthouse</h3>
+    
+                                            <div class="room_type">
+                                                <a href="./1_Room/penthouse/penthouse.html">Penthouse</a>
+                                            </div>
+                                            <p>
+                                                펜트하우스는 110평 가량의 넓은 면적과 고급스러운 가구, 럭셔리한 인테리어, 여의도 최고의 경치를 자랑합니다.
+                                            </p>
+                                            <button onclick="go_Book()">예약하러 가기</button>
+                                        </div><!--container-->
+                                    </li><!--penthouse-->
+                                </ul>
                             
-                    </div><!--faci_flex-->
-                </div><!--contents-->
-            </div><!--main3-->
-        </section>
-
-        <section class="section">
-            <div class="main4">
-
-                <div class="serv_list">
-                    <div class="contents" id="event">
-                        <div class="sec event">
-                            <img class="back" src="./img/index/photo/Section_5_1.jpg" alt="이벤트">
-                            <div class="serv_con">
-                                <div class="title">
-                                    <p>Event</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
-                                </div><!--title-->
-                                <span>
-                                    <h3>Event</h3>
-                                    <p>
-                                        오직 페어몬트 앰배서더 서울,<br>
-                                        고객님을 위해 준비한<br>
-                                        감동과 행복함이 공존하는 이벤트!
-                                    </p>
-                                </span>
+                            </div><!--content_slide-->       
+                        </div><!--room_flex-->    
+                    </div><!--contents-->
+                </div><!--main2-->
+            </div>
+    
+            <div class="section sec4">
+                <div class="main3">      
+                    <div class="faci_navi">
+                        <ul>
+                            <li><span>Lounge</span></li>
+                            <li><span>Fit</span></li>
+                            <li><span>Spa</span></li>
+                        </ul>
+                    </div>
+                    <div class="contents">
+                        <div class="faci_flex">
+                            <div class="faci_back_slide">
+                                <ul>
+                                    <li><img src="./img/index/photo/Section_4_1.jpg" alt="시설1"></li>
+                                    <li><img src="./img/index/photo/Section_4_2.jpg" alt="시설2"></li>
+                                    <li><img src="./img/index/photo/Section_4_3.jpg" alt="시설3"></li>
+                                </ul>
+                            </div><!--faci_back_slide-->
+    
+                            <div class="faci_contents_slide">
+                                <ul class="faci_back">
+                                    <li class="facil lounge">
+                                        <div class="container">
+                                            <div class="facil_info">
+                                                <div class="faci_flex">
+                                                    <h3>Gold Lounge</h3>
+                                                    <img src="./img/index/icon/Icon_Dining.png" alt="">
+                                                </div><!--faci_flex-->
+                                                
+                                                <p>
+                                                    <span>호스피탈리티의 전통</span>을<br>
+                                                    바탕으로 최고의 맞춤 서비스를 제공합니다.
+                                                </p>
+                                                <button onclick="go_Lounge()">자세히 보러가기</button>
+                                            </div><!--facil_info-->
+                                        </div><!--container-->
+                                    </li>
+    
+                                    <li class="facil fit">
+                                        <div class="container">
+                                            <div class="facil_info">
+                                                <div class="faci_flex">
+                                                    <h3>Fairmont Fit</h3>
+                                                    <img src="./img/index/icon/Icon_fit.png" alt="페어몬트 핏">
+                                                </div><!--faci_flex-->
+        
+                                                <p>
+                                                페어몬트 핏은 고객님들에 <br><span>충분한 휴식</span>과 <span>재충전의 시간</span>을 제공합니다.
+                                                </p>
+                                                <button onclick="go_Fit()">자세히 보러가기</button>
+                                            </div><!--facil_info-->
+                                        </div><!--container--> 
+                                    </li>
+    
+                                    <li class="facil spa">
+                                        <div class="container">
+                                            <div class="facil_info">
+                                                <div class="faci_flex">
+                                                    <h3>Fairmont Fit</h3>
+                                                    <img src="./img/index/icon/Icon_fit.png" alt="페어몬트 핏">
+                                                </div><!--faci_flex-->
+                                                <p>
+                                                    <span>준비중입니다.</span>을 
+                                                </p>
+                                                <button onclick="alert('준비중입니다.')">자세히 보러가기</button>
+                                            </div><!--facil_info-->
+                                        </div><!--container-->
+                                    </li>
+                                </ul><!--faci_back-->
+                            </div><!--faci_contents_slide-->
                                 
-                            </div><!--serv_con-->
-                        </div><!--event_sec-->
+                        </div><!--faci_flex-->
                     </div><!--contents-->
+                </div><!--main3-->
+            </div>
+    
+            <div class="section sec5">
+                <div class="main4">
+    
+                    <div class="serv_list">
+                        <div class="contents" id="event">
+                            <div class="sec event">
+                                <img class="back" src="./img/index/photo/Section_5_1.jpg" alt="이벤트">
+                                <div class="serv_con">
+                                    <div class="title">
+                                        <p>Event</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
+                                    </div><!--title-->
+                                    <span>
+                                        <h3>Event</h3>
+                                        <p>
+                                            오직 페어몬트 앰배서더 서울,<br>
+                                            고객님을 위해 준비한<br>
+                                            감동과 행복함이 공존하는 이벤트!
+                                        </p>
+                                    </span>
+                                    
+                                </div><!--serv_con-->
+                            </div><!--event_sec-->
+                        </div><!--contents-->
+    
+                        <div class="contents" id="dining">
+                            <div class="sec din">
+                                <img class="back" src="./img/index/photo/Section_5_2.jpg" alt="다이닝">
+                                <div class="serv_con">
+                                    <div class="title">
+                                        <p>Dining</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
+                                    </div><!--title-->
+                                    <span>
+                                        <h3>Dining</h3>
+                                        <p>
+                                            최고의 경치, 최적의 분위기<br>
+                                            최선의 서비스, 최상의 맛이 공존하는<br>
+                                            페어몬트 앰배서더의 DINING & BAR 
+                                        </p>
+                                    </span>
+                                </div><!--serv_con-->                            
+                            </div><!--dining_sec-->
+                        </div><!--contents-->
+    
+                        <div class="contents" id="promotion">
+                            <div class="sec prom">
+                                <img class="back" src="./img/index/photo/Section_5_3.jpg" alt="프로모션">
+                                <div class="serv_con">
+                                    <div class="title">
+                                        <p>Promotion</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
+                                    </div><!--title-->
+                                    <span>
+                                        <h3>Promotion</h3>
+                                        <p>
+                                            평범한 호텔 루틴에<br>
+                                            특별함과 럭셔리함을 가미시켜 줄<br>
+                                            페이몬트 앰배서더의 프로모션!
+                                        </p>
+                                    </span>
+                                </div>   
+                            </div><!--prom_sec-->
+                        </div><!--contents-->
+    
+                    </div><!--serv_list-->
+                </div><!--main4-->
+            </div>
+    
+            <div class="section fp-auto-height">
+                <footer>
+                    <div class="footer_entire">
+                        <div class="footer_logo">
+                            <a href="#">
+                                <img class="back" src="./img/footer/img/Footer_logo.png" alt="footer_logo">
+                            </a>
+                        </div><!--footer_logo-->
+                        <div class="subscribe">
+                            <h4>subscribe <span>us</span></h4>
+                            <form action="#">
+                                <label for="amail">Enter Your Email</label>
+                                <input type="email" id="amail" placeholder="ambassador@fairmont.com" required>
+                                <div class="form_flex">
+                                    <div class="form_email">
+                                        <label for="aphone">Enter Your Phonenumber</label>
+                                        <input type="text" id="aphone" placeholder="010-2345-6789" required>
+                                    </div>
+                                    <button type="aphone">구독하기&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="./img/footer/img/Footer_submit.png" alt=""></span></button>
+                                </div><!--form_flex-->   
+                            </form>
+                        </div><!--subscribe-->
+                        <div class="navigation">
+                            <h4>Navigation</h4>
+                                <ul class= "flex_nav">
+                                    <li><a target="_blank" href="https://all.accor.com/loyalty-program/reasonstojoin/index.ko.shtml?otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi1.png" alt="네비게이션1"></span>로열티 프로그램</a></li>
+                                    <li><a target="_blank" href="https://careers.accor.com/global/"><span><img src="./img/footer/img/Footer_navi2.png" alt="네비게이션2"></span>채용</a></li>
+                                    <li><a target="_blank" href="#"><span><img src="./img/footer/img/Footer_navi3.png" alt="네비게이션3"></span>문의하기</a></li>
+                                    <li><a target="_blank" href="https://www.fairmont.co.kr/affiliate-program/"><span><img src="./img/footer/img/Footer_navi4.png" alt="네비게이션4"></span>제휴 프로그램</a></li>
+                                    <li><a target="_blank" href="https://all.accor.com/best-price-guarantee/index.ko.shtml?otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi5.png" alt="네비게이션5"></span>최저가 보장</a></li>
+                                    <li><a target="_blank" href="https://famousagents.frhi.com/"><span><img src="./img/footer/img/Footer_navi6.png" alt="네비게이션6"></span>여행사</a></li>
+                                    <li><a target="_blank" href="https://press.accor.com/press-releases/?lang=en&otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi7.png" alt="네비게이션7"></span>프레스룸</a></li>
+                                    <li><a target="_blank" href="https://www.fairmont.co.kr/web-accessibility/"><span><img src="./img/footer/img/Footer_navi8.png" alt="네비게이션8"></span>웹 접근성</a></li>
+                                </ul><!--flex_nav-->
+                        </div><!--navigation-->
+                        <div class="address">
+                            <div class="info">
+                                <h4>Information</h4>
+                                <address>
+                                    <span>LOC</span> 서울시 중구 동호로 287
+                                </address>
+                                <p>
+                                    <span>TEL</span> 02-2275-1101
+                                    사업자 등록번호 203-81-43458
+                                    통신 판매 신고 번호 서울 중구 0755호 대표 조정욱
+                                </p>
+                            </div><!--info-->
+                            <div class="copyright">
+                                <h5>Copyright <span>ⓒ2022</span></h5>
+                                <p>Ambassador Hotel Group. All Rights </p>
+                            </div>
+                        </div><!--address-->
+                    </div><!--footer_entire-->
+                </footer>
+            </div>
+        </div><!--#fullpage-->
 
-                    <div class="contents" id="dining">
-                        <div class="sec din">
-                            <img class="back" src="./img/index/photo/Section_5_2.jpg" alt="다이닝">
-                            <div class="serv_con">
-                                <div class="title">
-                                    <p>Dining</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
-                                </div><!--title-->
-                                <span>
-                                    <h3>Dining</h3>
-                                    <p>
-                                        최고의 경치, 최적의 분위기<br>
-                                        최선의 서비스, 최상의 맛이 공존하는<br>
-                                        페어몬트 앰배서더의 DINING & BAR 
-                                    </p>
-                                </span>
-                            </div><!--serv_con-->                            
-                        </div><!--dining_sec-->
-                    </div><!--contents-->
-
-                    <div class="contents" id="promotion">
-                        <div class="sec prom">
-                            <img class="back" src="./img/index/photo/Section_5_3.jpg" alt="프로모션">
-                            <div class="serv_con">
-                                <div class="title">
-                                    <p>Promotion</p><img src="./img/index/icon/Mainruby.png" alt="메인루비">
-                                </div><!--title-->
-                                <span>
-                                    <h3>Promotion</h3>
-                                    <p>
-                                        평범한 호텔 루틴에<br>
-                                        특별함과 럭셔리함을 가미시켜 줄<br>
-                                        페이몬트 앰배서더의 프로모션!
-                                    </p>
-                                </span>
-                            </div>   
-                        </div><!--prom_sec-->
-                    </div><!--contents-->
-
-                </div><!--serv_list-->
-            </div><!--main4-->
-        </section>
-
-        <section class="section">
-            <footer>
-                <div class="footer_entire">
-                    <div class="footer_logo">
-                        <a href="#">
-                            <img class="back" src="./img/footer/img/Footer_logo.png" alt="footer_logo">
-                        </a>
-                    </div><!--footer_logo-->
-                    <div class="subscribe">
-                        <h4>subscribe <span>us</span></h4>
-                        <form action="#">
-                            <label for="amail">Enter Your Email</label>
-                            <input type="email" id="amail" placeholder="ambassador@fairmont.com" required>
-                            <div class="form_flex">
-                                <div class="form_email">
-                                    <label for="aphone">Enter Your Phonenumber</label>
-                                    <input type="text" id="aphone" placeholder="010-2345-6789" required>
-                                </div>
-                                <button type="aphone">구독하기&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="./img/footer/img/Footer_submit.png" alt=""></span></button>
-                            </div><!--form_flex-->   
-                        </form>
-                    </div><!--subscribe-->
-                    <div class="navigation">
-                        <h4>Navigation</h4>
-                            <ul class= "flex_nav">
-                                <li><a target="_blank" href="https://all.accor.com/loyalty-program/reasonstojoin/index.ko.shtml?otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi1.png" alt="네비게이션1"></span>로열티 프로그램</a></li>
-                                <li><a target="_blank" href="https://careers.accor.com/global/"><span><img src="./img/footer/img/Footer_navi2.png" alt="네비게이션2"></span>채용</a></li>
-                                <li><a target="_blank" href="#"><span><img src="./img/footer/img/Footer_navi3.png" alt="네비게이션3"></span>문의하기</a></li>
-                                <li><a target="_blank" href="https://www.fairmont.co.kr/affiliate-program/"><span><img src="./img/footer/img/Footer_navi4.png" alt="네비게이션4"></span>제휴 프로그램</a></li>
-                                <li><a target="_blank" href="https://all.accor.com/best-price-guarantee/index.ko.shtml?otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi5.png" alt="네비게이션5"></span>최저가 보장</a></li>
-                                <li><a target="_blank" href="https://famousagents.frhi.com/"><span><img src="./img/footer/img/Footer_navi6.png" alt="네비게이션6"></span>여행사</a></li>
-                                <li><a target="_blank" href="https://press.accor.com/press-releases/?lang=en&otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi7.png" alt="네비게이션7"></span>프레스룸</a></li>
-                                <li><a target="_blank" href="https://www.fairmont.co.kr/web-accessibility/"><span><img src="./img/footer/img/Footer_navi8.png" alt="네비게이션8"></span>웹 접근성</a></li>
-                            </ul><!--flex_nav-->
-                    </div><!--navigation-->
-                    <div class="address">
-                        <div class="info">
-                            <h4>Information</h4>
-                            <address>
-                                <span>LOC</span> 서울시 중구 동호로 287
-                            </address>
-                            <p>
-                                <span>TEL</span> 02-2275-1101
-                                사업자 등록번호 203-81-43458
-                                통신 판매 신고 번호 서울 중구 0755호 대표 조정욱
-                            </p>
-                        </div><!--info-->
-                        <div class="copyright">
-                            <h5>Copyright <span>ⓒ2022</span></h5>
-                            <p>Ambassador Hotel Group. All Rights </p>
-                        </div>
-                    </div><!--address-->
-                </div><!--footer_entire-->
-            </footer>
-        </section>
+        
     </div><!--wrapper-->
     
 </body>
