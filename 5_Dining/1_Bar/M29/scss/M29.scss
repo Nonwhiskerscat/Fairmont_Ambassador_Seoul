@@ -701,14 +701,18 @@ main {
     color: #333;
     .sec1 {
         .container {
+            margin-top: $mid_margin_m;
+
             @include responsive(pc-screens) {
                 display: flex;
+                margin-top: $mid_margin;
             }
 
             .flex-box {
                 background-color: #fcf6e1;
                 padding: 30px;
                 width: 100%;
+                margin-bottom: $small_margin_m;
 
                 @include responsive(pc-screens) {
                     width: 50%;
@@ -717,15 +721,31 @@ main {
                 .flex-box1 {
                     display: flex;
                     justify-content: space-around;
-                    
+
+                    @include type_custom(calc(0.6em + 0.6vw),$common_font);
+                        // margin-bottom: calc(0.3em + 0.3vw);
+
+                    @include responsive(pc-screens) {
+                        font-size: $mainf;
+                    }
+
                     .info {
                         font-family: $eng_title_font;
                         line-height: 50px;
+                        letter-spacing: 1px;
+
+                        @include responsive (pc-screens) {
+                            line-height: 100px;
+                        }
                     }
     
                     .detail {
                         margin-left: 50px;
                         line-height: 50px;
+
+                        @include responsive (pc-screens) {
+                            line-height: 100px;
+                        }
                     }
                 }
     
@@ -733,35 +753,33 @@ main {
                     display: flex;
                     justify-content: right;
 
-                    .menu,
-                    .booknow {
+                    .menu {
                         width: 170px;
                         height: 50px;
                         line-height: 50px;
                         text-align: center;
-                    }
-
-                    .menu {                
+                        letter-spacing: 1px;
                         background-color: white;
 
-                        a {
-                            font-family: $eng_title_font;
+                        @include responsive (pc-screens) {
+                            margin-top: 60px;
                         }
-                        
-                    }
-
-                    .booknow {                
-                        background-color: #f1d06a;
 
                         a {
-                            font-family: $eng_title_font;
-                        }            
+                            @include type_custom(calc(0.6em + 0.6vw), $eng_title_font);
+                                // margin-bottom: calc(0.3em + 0.3vw);
+
+                            @include responsive(pc-screens) {
+                                font-size: $mainf;
+                            }
+                        }
                     }
                 }
             }
 
             .sec1-img {
                 width: 100%;
+                margin-bottom: $small_margin_m;
 
                 @include responsive(pc-screens) {
                     width: 50%;
@@ -797,7 +815,6 @@ main {
 
             .hover-img p {
                 color: #ffffff;
-                font-size: 30px; 
                 text-align: center;
                 line-height: 60px;
                 position: absolute;
@@ -805,15 +822,10 @@ main {
                 left: 50%;
                 width: 100%;
                 transform: translate(-50%, -50%);
+                @include type_custom(calc(1.5em + 1vw),$common_font); 
 
-                @include responsive (tablet-screens) {
-                    font-size: 40px;
-                    line-height: 70px;
-                }
-
-                @include responsive (pc-screens) {
-                    font-size: 40px;
-                    line-height: 80px;
+                @include responsive(pc-screens) {
+                    font-size: 2em;
                 }
 
                 strong {
@@ -822,6 +834,7 @@ main {
                 }
 
                 a {
+                    font-family: $eng_title_font;
                     color: #333333;
                 }
 
@@ -835,33 +848,32 @@ main {
     }
 
     .sec3 {
+        margin-top: $mid_margin_m;
+        margin-bottom: $footer_margin_m;
+
+        @include responsive (pc-screens) {
+            margin-top: $mid_margin;
+            margin-bottom: $footer_margin;
+        }
+
         .sec3-text {
             text-align: center;
 
             p {
-                font-size: 14px;
-
-                @include responsive(tablet-screens) {
-                    font-size: 20px;
-                }
+                @include type_custom(calc(0.6em + 0.6vw),$common_font);
+                    // margin-bottom: calc(0.3em + 0.3vw);
 
                 @include responsive(pc-screens) {
-                    font-size: 26px;
+                    font-size: $mainf;
                 }
             }
 
             .rooftop {
-                font-size: 48px;
-                font-family: $eng_title_font;
+                letter-spacing: 2px;
+                @include type_custom(calc(1.5em + 3vw), $eng_title_font);
 
-                @include responsive(tablet-screens) {
-                    letter-spacing: 3px;
-                    font-size: 68px;
-                }
-                
                 @include responsive(pc-screens) {
-                    letter-spacing: 6px;
-                    font-size: 88px;
+                    font-size: 5em;
                 }
             }
         }

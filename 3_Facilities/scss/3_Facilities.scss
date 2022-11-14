@@ -700,17 +700,23 @@ section div.main0 {
 main {
     color: #333;
     section.maintext {
+        margin-top: $mid_margin_m;        
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+        }
+
         p {
-            font-size: calc(14px + 1.5vw);
-            line-height: calc(24px + 2vw); 
-            letter-spacing: 1px;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            @include type_custom(calc(8px + 3vw), $common_font);
+            line-height: calc(1em + 3vw);
+            font-weight: 200;
+            margin-bottom: $mid_margin_m;
 
             @include responsive(pc-screens) {
-            font-size: 40px;
-            line-height: 60px;
+                font-size: 48px;
+                line-height: 96px;
+                margin-bottom: $mid_margin;
             }
         }
     }
@@ -728,13 +734,28 @@ main {
             }
         }
 
-        .goldlounge,
-        .fairmont-fit { 
+        .goldlounge { 
             position: relative; 
             width: 100%;
             margin-bottom: 30px;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
+            }
             
             transition: opacity 0.2s; 
+        }
+
+        .fairmont-fit {
+            position: relative; 
+            width: 100%;
+            margin-bottom: $footer_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
+            }
+            
+            transition: opacity 0.2s;
         }
 
         .goldlounge:hover .gl-img,
@@ -774,6 +795,12 @@ main {
 
             @include responsive(pc-screens) {
                 font-size: 50px;
+            }
+
+            a {
+                color: #ffffff;
+                display: block;
+                font-weight: 200;
             }
         }
 

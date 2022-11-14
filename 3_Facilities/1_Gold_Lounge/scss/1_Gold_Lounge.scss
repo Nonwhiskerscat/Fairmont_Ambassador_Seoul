@@ -699,18 +699,25 @@ section div.main0 {
 
 main {
     color: #333;
+
     .sec1 .maintext {
+        margin-top: $mid_margin_m;        
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+        }
+
         p {
-            font-size: calc(14px + 1.5vw);
-            line-height: calc(24px + 2vw);  
-            letter-spacing: 1px;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
+            @include type_custom(calc(8px + 3vw), $common_font);
+            line-height: calc(1em + 3vw);
+            font-weight: 200;
+            margin-bottom: $mid_margin_m;
 
             @include responsive(pc-screens) {
-            font-size: 40px;
-            line-height: 60px;
+                font-size: 48px;
+                line-height: 96px;
+                margin-bottom: $mid_margin;
             }
 
             .hidden-text {
@@ -726,10 +733,10 @@ main {
     .room_gall {
         margin: 0 auto;
         max-height: 100vh;
-        margin-top: $small_margin_p;
+        // margin-top: $small_margin_m;
 
         @include responsive(pc-screens){
-            margin-top: $big_margin;
+            // margin-top: $big_margin;
         }
 
         h3 {
@@ -754,6 +761,7 @@ main {
                 li {
                     width: 50%;
                     overflow: hidden;
+                    margin: 0 auto;
 
                     @include responsive(pc-screens) {
                         width: 50%;
@@ -767,7 +775,8 @@ main {
 
                     img {
                         width: 100%;
-                        display: block;
+                        height: 100%;
+                        object-fit: cover;
                     }
     
                 }
@@ -780,7 +789,7 @@ main {
             justify-content: space-between;
             margin: 0 auto;
             align-items: center;
-            margin-top: $small_margin_p;
+            margin-top: $small_margin_m;
 
             
             @include responsive(pc-screens) {
@@ -814,30 +823,24 @@ main {
     }//.room_gall
 
     .sec3 {
-        margin-top: 50px;
-        margin-bottom: 110px;
+        margin-top: $mid_margin_m;
+        margin-bottom: $small_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+            margin-bottom: $small_margin;
+        }
 
         .main-text {
-            font-family: $eng_title_font;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-    
-            P {
-                color: #333333;
-                text-align: center;
-    
+            h4 {
+                @include sub_h4;
+
                 &::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: -10px;
-                    left: 50%;
-                    width: 30px;
-                    height: 2px;
-                    background: #333333;
-                    transform: translateX(-50%);
-                    margin-bottom: 37px;
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
                 }
             }
         }
@@ -864,57 +867,72 @@ main {
             display: flex;
             justify-content: space-between;
             
+            @include type_custom(calc(0.6em + 0.6vw), $common_font);
+                // margin-bottom: calc(0.3em + 0.3vw);
+
+            @include responsive(pc-screens) {
+                font-size: $mainf;
+
+
+                // margin-bottom: 18px;
+            }
+            
             div {
                 font-family: $eng_title_font;
+                letter-spacing: 1px;
             }
         }
     }
 
     .sec5 {
-        margin-top: 50px;
-        margin-bottom: 110px;
+        margin-top: $mid_margin_m;
+        margin-bottom: $small_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+            margin-bottom: $small_margin;
+        }
 
         .main-text {
-            font-family: $eng_title_font;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-    
-            P {
-                color: #333333;
-                text-align: center;
-    
+            h4 {
+                @include sub_h4;
+
                 &::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: -10px;
-                    left: 50%;
-                    width: 30px;
-                    height: 2px;
-                    background: #333333;
-                    transform: translateX(-50%);
-                    margin-bottom: 37px;
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
                 }
             }
         }
     }
 
     .sec6 {
-        .sec6-flex-box .notice {
-            font-family: $eng_title_font;
+        margin-bottom: $footer_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-bottom: $footer_margin;
         }
         
         .sec6-flex-box ul {
             line-height: 50px;
     
             @include responsive(pc-screens) {
-                width: 50%;
+                width: 100%;
             }
         }
         
         .sec6-flex-box li {
             list-style: inside;
+
+            @include type_custom(calc(0.6em + 0.6vw), $common_font);
+                // margin-bottom: calc(0.3em + 0.3vw);
+
+            @include responsive(pc-screens) {
+                font-size: $mainf;
+                // margin-bottom: 18px;
+            }
         }
     }
 } // main

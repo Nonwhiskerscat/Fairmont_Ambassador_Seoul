@@ -715,33 +715,110 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+main .sec1 .container {
+  margin-top: 65px;
+}
 @media screen and (min-width: 1400px) {
-  main .sec1 .sec1-flex-box {
+  main .sec1 .container {
     display: flex;
+    margin-top: 125px;
   }
 }
-main .sec1 .sec1-flex-box ul {
-  line-height: 50px;
+main .sec1 .container .flex-box {
+  width: 100%;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 1400px) {
-  main .sec1 .sec1-flex-box ul {
-    width: 100%;
+  main .sec1 .container .flex-box {
+    width: 50%;
+    margin-bottom: 0;
   }
 }
-main .sec1 .sec1-flex-box .li-flex-box {
+main .sec1 .container .flex-box .flex-box1 {
   display: flex;
   justify-content: space-between;
 }
-main .sec1 .sec1-flex-box .li-flex-box div {
-  font-family: "Lemon/Milk light", sans-serif;
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .flex-box1 {
+    justify-content: space-around;
+  }
 }
-main .sec1 .sec1-flex-box img {
+main .sec1 .container .flex-box .flex-box1 .info {
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .flex-box1 .info {
+    font-size: 18px;
+    line-height: 60px;
+  }
+}
+main .sec1 .container .flex-box .flex-box1 .detail {
+  margin-left: 50px;
+  line-height: 50px;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .flex-box1 .detail {
+    font-size: 18px;
+    line-height: 60px;
+  }
+}
+main .sec1 .container .flex-box .menu-flex-box {
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+}
+main .sec1 .container .flex-box .menu-flex-box .menu {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #bdbdbd;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .menu-flex-box .menu {
+    margin-top: 10px;
+  }
+}
+main .sec1 .container .flex-box .menu-flex-box .menu a {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .menu-flex-box .menu a {
+    font-size: 18px;
+  }
+}
+main .sec1 .container .sec1-img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .sec1-img {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+main .sec1 .container .sec1-img img {
   width: 100%;
   display: block;
 }
 @media screen and (min-width: 1400px) {
-  main .sec1 .sec1-flex-box img {
-    width: 50%;
+  main .sec1 .container .sec1-img img {
+    width: 100%;
+  }
+}
+main .sec2 {
+  margin-bottom: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 {
+    margin-bottom: 125px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -750,19 +827,41 @@ main .sec1 .sec1-flex-box img {
     flex-direction: row-reverse;
   }
 }
-main .sec2 .sec2-flex-box .notice {
-  font-family: "Lemon/Milk light", sans-serif;
-}
 main .sec2 .sec2-flex-box ul {
-  line-height: 50px;
+  width: 100%;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 1400px) {
   main .sec2 .sec2-flex-box ul {
-    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+}
+main .sec2 .sec2-flex-box .notice {
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-flex-box .notice {
+    font-size: 18px;
+    line-height: 60px;
+    margin-right: 370px;
   }
 }
 main .sec2 .sec2-flex-box li {
   list-style: inside;
+  line-height: 50px;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-flex-box li {
+    font-size: 18px;
+    line-height: 60px;
+  }
 }
 main .sec2 .sec2-flex-box img {
   width: 100%;
@@ -772,29 +871,6 @@ main .sec2 .sec2-flex-box img {
   main .sec2 .sec2-flex-box img {
     width: 50%;
   }
-}
-main .sec3 .sec3-flex-box {
-  display: flex;
-  justify-content: center;
-}
-main .sec3 .sec3-flex-box .menu,
-main .sec3 .sec3-flex-box .booknow {
-  width: 170px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-}
-main .sec3 .sec3-flex-box .menu {
-  border: #bdbdbd solid 1px;
-}
-main .sec3 .sec3-flex-box .menu a {
-  font-family: "Lemon/Milk light", sans-serif;
-}
-main .sec3 .sec3-flex-box .booknow {
-  border: #bdbdbd solid 1px;
-}
-main .sec3 .sec3-flex-box .booknow a {
-  font-family: "Lemon/Milk light", sans-serif;
 }
 main .sec4 img {
   width: 100%;
@@ -810,10 +886,10 @@ main .sec4 .hover-img {
   display: block;
 }
 main .sec4 .hover-img p {
-  color: #000000;
-  font-size: 40px;
-  font-weight: bold;
   font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(1.5em + 3vw);
+  color: #000000;
+  font-weight: bold;
   text-align: center;
   line-height: 60px;
   letter-spacing: 2px;
@@ -825,7 +901,7 @@ main .sec4 .hover-img p {
 }
 @media screen and (min-width: 1400px) {
   main .sec4 .hover-img p {
-    font-size: 100px;
+    font-size: 5em;
     letter-spacing: 6px;
   }
 }
@@ -833,27 +909,40 @@ main .sec5 img {
   width: 100%;
   display: block;
 }
+main .sec5 .sec5-flex-box {
+  margin-top: 65px;
+}
 @media screen and (min-width: 1400px) {
   main .sec5 .sec5-flex-box {
     display: flex;
     width: 100%;
+    margin-top: 125px;
   }
 }
 main .sec5 .sec5-text {
   text-align: center;
-  line-height: 30px;
+  font-family: "SCoreDream";
+  font-size: calc(8px + 3vw);
+  line-height: calc(1em + 3vw);
+  font-weight: 200;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 1400px) {
   main .sec5 .sec5-text {
-    width: 50%;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 38px;
+    line-height: 56px;
+    margin-top: 80px;
+    width: 100%;
   }
+}
+main .sec5 .sec5-flex-box img {
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 1400px) {
   main .sec5 .sec5-flex-box img {
     width: 50%;
     display: block;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -866,6 +955,22 @@ main .sec5 .sec5-text {
   main .sec5 .sec5-flex-box2 img {
     width: 50%;
     display: block;
+  }
+}
+main .sec5 .sec5-flex-box2 .wine2 {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec5 .sec5-flex-box2 .wine2 {
+    margin-bottom: 200px;
+  }
+}
+main .sec5 .sec5-flex-box2 .wine3 {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec5 .sec5-flex-box2 .wine3 {
+    margin-bottom: 200px;
   }
 }
 

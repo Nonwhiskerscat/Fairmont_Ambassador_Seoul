@@ -715,18 +715,27 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+main .sec1 .maintext {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .maintext {
+    margin-top: 125px;
+  }
+}
 main .sec1 .maintext p {
-  font-size: calc(14px + 1.5vw);
-  line-height: calc(24px + 2vw);
-  letter-spacing: 1px;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  font-family: "SCoreDream";
+  font-size: calc(8px + 3vw);
+  line-height: calc(1em + 3vw);
+  font-weight: 200;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 1400px) {
   main .sec1 .maintext p {
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 48px;
+    line-height: 96px;
+    margin-bottom: 125px;
   }
 }
 main .sec1 .maintext p .hidden-text {
@@ -740,21 +749,18 @@ main .sec1 .maintext p .hidden-text {
 main .room_gall {
   margin: 0 auto;
   max-height: 100vh;
-  margin-top: 25px;
-}
-@media screen and (min-width: 1400px) {
-  main .room_gall {
-    margin-top: 80px;
-  }
 }
 main .room_gall h3 {
   font-family: "Lemon/Milk light", sans-serif;
-  font-size: 2.5em;
+  font-size: calc(1em + 5vw);
+  margin-bottom: calc(0.5em + 3vw);
   text-align: center;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall h3 {
-    font-size: 5em;
+    font-size: 80px;
+    margin-bottom: 125px;
   }
 }
 main .room_gall .gall_main {
@@ -776,6 +782,7 @@ main .room_gall .gall_main ul {
 main .room_gall .gall_main ul li {
   width: 50%;
   overflow: hidden;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_main ul li {
@@ -789,7 +796,8 @@ main .room_gall .gall_main ul li:nth-child(1), main .room_gall .gall_main ul li:
 }
 main .room_gall .gall_main ul li img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 main .room_gall .gall_navi {
   width: 30%;
@@ -826,30 +834,43 @@ main .room_gall .gall_navi li:nth-child(2) {
   }
 }
 main .sec3 {
-  margin-top: 50px;
-  margin-bottom: 110px;
+  margin-top: 65px;
+  margin-bottom: 25px;
 }
-main .sec3 .main-text {
+@media screen and (min-width: 1400px) {
+  main .sec3 {
+    margin-top: 125px;
+    margin-bottom: 50px;
+  }
+}
+main .sec3 .main-text h4 {
   font-family: "Lemon/Milk light", sans-serif;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-}
-main .sec3 .main-text P {
-  color: #333333;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
   text-align: center;
+  letter-spacing: 2px;
 }
-main .sec3 .main-text P::before {
+@media screen and (min-width: 1400px) {
+  main .sec3 .main-text h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .sec3 .main-text h4::before {
   content: "";
   display: block;
-  position: absolute;
-  top: -10px;
-  left: 50%;
   width: 30px;
-  height: 2px;
-  background: #333333;
-  transform: translateX(-50%);
-  margin-bottom: 37px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 .main-text h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
 }
 main .sec4 {
   background-color: #fbe7ec;
@@ -870,49 +891,82 @@ main .sec4 .sec4-flex-box ul {
 main .sec4 .sec4-flex-box .li-flex-box {
   display: flex;
   justify-content: space-between;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .sec4-flex-box .li-flex-box {
+    font-size: 18px;
+  }
 }
 main .sec4 .sec4-flex-box .li-flex-box div {
   font-family: "Lemon/Milk light", sans-serif;
+  letter-spacing: 1px;
 }
 main .sec5 {
-  margin-top: 50px;
-  margin-bottom: 110px;
+  margin-top: 65px;
+  margin-bottom: 25px;
 }
-main .sec5 .main-text {
+@media screen and (min-width: 1400px) {
+  main .sec5 {
+    margin-top: 125px;
+    margin-bottom: 50px;
+  }
+}
+main .sec5 .main-text h4 {
   font-family: "Lemon/Milk light", sans-serif;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-}
-main .sec5 .main-text P {
-  color: #333333;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
   text-align: center;
+  letter-spacing: 2px;
 }
-main .sec5 .main-text P::before {
+@media screen and (min-width: 1400px) {
+  main .sec5 .main-text h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .sec5 .main-text h4::before {
   content: "";
   display: block;
-  position: absolute;
-  top: -10px;
-  left: 50%;
   width: 30px;
-  height: 2px;
-  background: #333333;
-  transform: translateX(-50%);
-  margin-bottom: 37px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
 }
-main .sec6 .sec6-flex-box .notice {
-  font-family: "Lemon/Milk light", sans-serif;
+@media screen and (min-width: 1400px) {
+  main .sec5 .main-text h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
+}
+main .sec6 {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec6 {
+    margin-bottom: 200px;
+  }
 }
 main .sec6 .sec6-flex-box ul {
   line-height: 50px;
 }
 @media screen and (min-width: 1400px) {
   main .sec6 .sec6-flex-box ul {
-    width: 50%;
+    width: 100%;
   }
 }
 main .sec6 .sec6-flex-box li {
   list-style: inside;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec6 .sec6-flex-box li {
+    font-size: 18px;
+  }
 }
 
 footer {
