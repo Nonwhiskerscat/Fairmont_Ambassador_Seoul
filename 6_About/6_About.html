@@ -12,6 +12,8 @@
     <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/a_tab.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -205,7 +207,12 @@
         <section class="section">
             <div class="main0">
                 <div class="bg_img">
-                    <img src="./img/About/photo/main.jpg" alt="메인이미지를 삽입"">
+                    <div class="p_bg">
+                        <img src="./img/About/photo/main.jpg" alt="메인이미지를 삽입">
+                    </div>
+                    <div class="m_bg">
+                        <img src="./img/About/photo/main_mo.jpg" alt="메인이미지를 삽입">
+                    </div>
                 </div><!--bg_img-->
                 <div class="colormatte"></div>
 
@@ -348,38 +355,40 @@
 
             <section class="route">
                 <div class="container">
-                    <h2>ROUTE</h2>
                     <div class="section4-flex">
-                        <button class="accodion">지하철</button>
-                        <div class="panel">
-                            <p>
-                                - 5호선<br>
-                                여의나루역 1번출구에서 여의도 방면으로 도보 6분<br>
-                                - 9호선<br>
-                                여의도역 4번출구에서 여의나루 방면으로 도보 9분
-                            </p>
-                        </div>
-                        <button class="accodion">버스</button>
-                        <div class="panel">
-                            <p>
-                                - 호텔 맞은편에 버스 정류장 "삼부아파트"에서 하차<br>
-                                → 262, 753, 700번 버스 이용<br>
-                                - 여의도 환승센터에서 도보 10분<br>
-                                → 160, 162, 260, 261, 301, 320, 360, 600, 662, 871번 버스 이용
-                            </p>
-                        </div>
-                        <button class="accodion">택시</button>
-                        <div class="panel">
-                            <p>
-                                - 인천국제공항(ICN)에서 오실 때<br>
-                                거리 : 55.5km<br>
-                                소요 시간 : 약 55분 소요<br>
-                                <br>
-                                - 김포국제공항(GMP)에서 오실 때<br>
-                                거리 : 18.6km<br>
-                                소요 시간 : 약 30분 소요 
-                            </p>
-                        </div>
+                        <h2>ROUTE</h2>
+                        <ul class="acordian-menu">
+                            <li>
+                                <a href="#"><img src="./img/About/icon/subway(white).png" alt="subway">지하철</a>
+                                <p class="method">
+                                    - 5호선<br>
+                                    여의나루역 1번출구에서 여의도 방면으로 도보 6분<br><br>
+                                    - 9호선<br>
+                                    여의도역 4번출구에서 여의나루 방면으로 도보 9분
+                                </p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./img/About/icon/bus(white).png" alt="subway">버스</a>
+                                <p class="method">
+                                    - 호텔 맞은편에 버스 정류장 "삼부아파트"에서 하차<br>
+                                    → 262, 753, 700번 버스 이용<br><br>
+                                    - 여의도 환승센터에서 도보 10분<br>
+                                    → 160, 162, 260, 261, 301, 320, 360, 600, 662, 871번 버스 이용
+                                </p>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./img/About/icon/car(white).png" alt="subway">택시</a>
+                                <p class="method">
+                                    - 인천국제공항(ICN)에서 오실 때<br>
+                                    거리 : 55.5km<br>
+                                    소요 시간 : 약 55분 소요<br>
+                                    <br>
+                                    - 김포국제공항(GMP)에서 오실 때<br>
+                                    거리 : 18.6km<br>
+                                    소요 시간 : 약 30분 소요 
+                                </p>
+                            </li>
+                        </ul>
                     </div> <!-- section4-flex -->
                 </div> <!-- container -->
             </section> <!-- route -->
