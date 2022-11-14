@@ -1074,11 +1074,17 @@ main {
 
                     }
 
+                    &:hover {
+                        font-weight: 400;
+                        color: #333;
+                    }
+
                     &.bold {
                         font-weight: 400;
                         color: #333;
                     }
 
+                    
                     
                 }
             }

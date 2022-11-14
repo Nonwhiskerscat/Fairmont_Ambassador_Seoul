@@ -1091,6 +1091,10 @@ main .room_types .room_gnb ul li {
     font-size: 24px;
   }
 }
+main .room_types .room_gnb ul li:hover {
+  font-weight: 400;
+  color: #333;
+}
 main .room_types .room_gnb ul li.bold {
   font-weight: 400;
   color: #333;
