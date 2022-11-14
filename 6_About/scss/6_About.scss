@@ -864,19 +864,25 @@ main {
 
                 img {
                         width: 70%;
+                        margin-left: 10px;
 
                     @include responsive(pc-screens) {
                         width: 86px;
+                        margin-left: 0;
                     }
                 }
     
                 p{
-                    font-size: calc(14px + 0.5vw);
+                    font-size: calc(12px + 0.5vw);
                     margin-top: 10px;
                     margin-bottom: 20px;
+                    width: 90%;
+                    text-align: center;
 
                     @include responsive(pc-screens) {
-                        font-size: $mainf
+                        font-size: $mainf;
+                        text-align: center;
+                        width: 100%;
                     }
                 }
             }
@@ -916,7 +922,7 @@ main {
             }
             .row {
                 display: flex;
-                padding-right: 0;
+                float: right;
 
                 @include responsive(pc-screens) {
                     margin-top: 30px;
@@ -925,7 +931,6 @@ main {
                 img {
                     width: 28px;
                     height: auto;
-                    // margin-right: 5px;
 
                     @include responsive(pc-screens) {
                         width: 45px;
@@ -937,7 +942,6 @@ main {
 
                     @include responsive(pc-screens) {
                         font-size: 26px;
-                        // margin-left: 20px;
                     }
                 }
             }
@@ -960,11 +964,15 @@ main {
             background-color: #222;
 
             @include responsive(pc-screens) {
-                width: 1000px;
+                width: 1200px;
             }
 
             li {
                 list-style: none;
+                
+                &:last-child{
+                    border-bottom: 1px solid #fff;
+                }
 
                 a {
                     display: flex;
@@ -974,11 +982,7 @@ main {
                     background-color: #666;
                     color: #fff;
                     font-weight: bold;
-                    border-bottom: 1px solid #fff;
-
-                    &:first-child{
-                        border-top: 1px solid #fff;
-                    }
+                    border-top: 1px solid #fff;
 
                     img {
                         width: 30px;
