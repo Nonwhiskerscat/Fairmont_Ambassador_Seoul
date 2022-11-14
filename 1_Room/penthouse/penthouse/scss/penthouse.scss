@@ -2,6 +2,22 @@
 @import "./reset.scss";
 @import "./mixin.scss";
 
+html {
+    overflow: overlay;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #996600, $alpha: 0.8);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
+    }
+}
 
 .no {
     display: none;
