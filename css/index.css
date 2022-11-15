@@ -890,12 +890,13 @@ header .header_entire .menu .menu_type p {
   }
 }
 .main1 .info {
+  opacity: 0;
   width: 100%;
   height: calc(280px + 10vw);
   min-height: 300px;
   position: absolute;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 2%;
 }
 @media screen and (min-width: 1400px) {

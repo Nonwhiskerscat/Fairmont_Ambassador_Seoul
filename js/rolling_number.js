@@ -1,36 +1,76 @@
-$(document).ready(function() {
-    var isVisible = false;
+function rollingNumber() {
+    
+    let open = new Date();
+    open.setFullYear(2021);
+    open.setMonth(1);
+    open.setDate(24);
 
-    $(window).on('scroll',function() {
-        if (rolling($('.main1'))&&!isVisible) {
-            isVisible=true;
-        }
+    let today = new Date();
+    let gap=(today.getTime()-open.getTime());
+    let $days=Math.ceil(gap/(1000*60*60*24));
+    console.log(today);
 
-        if(isVisible) rolling();
+    var $employees= 936;
+    var $rooms = 324;
+    var $ratings = 9.0;
 
-        function rolling() {
-            var num= 222;
+    $({val : 0 }).animate({ val : $employees}, {
+    duration: 2500,
+    step: function() {
+    var num = numberWithCommas(Math.floor(this.val));
+    $('.empl').text(num);
+    },
+
+    complete: function() {
+        var num = numberWithCommas(Math.floor(this.val));
+        $('.empl').text(num);
+    }
+    });
+
+    $({val : 0 }).animate({ val : $rooms}, {
+        duration: 2500,
+        step: function() {
+        var num = numberWithCommas(Math.floor(this.val));
+        $('.rooom').text(num);
         
-            $({ val : 0 }).animate({ val : num }, {
-            duration: 4000,
-            step: function() {
+        },
+        
+        complete: function() {
             var num = numberWithCommas(Math.floor(this.val));
-                $(".rolling").text(num);
-            },
-            
-            complete: function() {
-                var num = numberWithCommas(Math.floor(this.val));
-                $(".rollong").text(num);
-            }
-            });
+            $('.rooom').text(num);
+        }
+    });			
+
+    $({val : 0 }).animate({ val : $ratings}, {
+        duration: 2500,
+        step: function() {
+        var num = numberWithCommas(this.val.toFixed(1));
+        $('.grade').text(num);
         
-            function numberWithCommas(x) {
-                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
+        },
+        
+        complete: function() {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $('.grade').text(num);
         }
     });
 
-    
-    
-});
+    $({val : 0 }).animate({ val : $days}, {
+        duration: 2500,
+        step: function() {
+        var num = Math.floor(this.val);
+        $('.day').text(num);
+        
+        },
+        
+        complete: function() {
+            var num = Math.floor(this.val);
+            $('.day').text(num);
+        }
+    });	
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+}
 

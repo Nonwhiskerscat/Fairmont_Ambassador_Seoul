@@ -896,12 +896,13 @@ header{
 
 
         .info {
+            opacity: 0;
             width: 100%;
             height: calc(280px + 10vw);
             min-height: 300px;
             position: absolute;
             bottom: 0;
-            background-color: rgba($color: #000000, $alpha: 0.2);
+            background-color: rgba($color: #000000, $alpha: 0.3);
             padding: 2%;
 
             @include responsive(pc-screens) {
@@ -922,6 +923,8 @@ header{
                 .info_flex {
                     display: flex;
                     flex-wrap: wrap;
+
+                    
     
                     div {
                         width: 50%;
