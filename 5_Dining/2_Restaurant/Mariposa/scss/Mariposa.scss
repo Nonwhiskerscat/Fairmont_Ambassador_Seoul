@@ -699,63 +699,157 @@ section div.main0 {
 
 main {
     color: #333;
-    .sec1 { 
-        .sec1-flex-box {
+    .sec1 {
+        .container {
+            margin-top: $mid_margin_m;
+
             @include responsive(pc-screens) {
                 display: flex;
+                margin-top: $mid_margin;
             }
-        }
-    
-        .sec1-flex-box ul {
-            line-height: 50px;
-    
-            @include responsive(pc-screens) {
+
+            .flex-box {
                 width: 100%;
-            }
-        }
-                
-        .sec1-flex-box .li-flex-box {
-            display: flex;
-            justify-content: space-between;
+                margin-bottom: $small_margin_m;
+
+                @include responsive(pc-screens) {
+                    width: 50%;
+                    margin-bottom: 0;
+                }
             
-            div {
-                font-family: $eng_title_font;
-            }
-        }              
+                .flex-box1 {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include responsive(pc-screens) {
+                        justify-content: space-around;
+                    }
+
+                    .info {
+                        line-height: 50px;
+                        letter-spacing: 1px;
+
+                        @include type_custom(calc(0.6em + 0.6vw),$eng_title_font);
+
+                        @include responsive(pc-screens) {
+                            font-size: $mainf;
+                            line-height: 60px;
+                        }
+                    }
     
-        .sec1-flex-box img {
-            width: 100%;
-            display: block;
-        
-            @include responsive(pc-screens) {
-                width: 50%;
+                    .detail {
+                        margin-left: 50px;
+                        line-height: 50px;
+
+                        @include type_custom(calc(0.6em + 0.6vw),$common_font);
+
+                        @include responsive(pc-screens) {
+                            font-size: $mainf;
+                            line-height: 60px;
+                        }
+                    }
+                }
+    
+                .menu-flex-box {
+                    display: flex;
+                    justify-content: center;
+                    margin-left: 200px;
+
+                    .menu {
+                        width: 170px;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        background-color: #bdbdbd;
+
+                        @include responsive (pc-screens) {
+                            margin-top: 10px;
+                        }
+
+                        a {
+                            @include type_custom(calc(0.6em + 0.6vw), $eng_title_font);
+
+                            @include responsive(pc-screens) {
+                                font-size: $mainf;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sec1-img {
+                width: 100%;
+                margin-bottom: $small_margin_m;
+
+                @include responsive(pc-screens) {
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+            }
+
+            .sec1-img img {
+                width: 100%;
+                display: block;
+
+                @include responsive(pc-screens) {
+                    width: 100%;
+                }
             }
         }
     }
     
-    .sec2 {    
+    .sec2 {
+        margin-bottom: $mid_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-bottom: $mid_margin;
+        }
+
         .sec2-flex-box {
             @include responsive(pc-screens) {
                 display: flex;
                 flex-direction: row-reverse;
             }
         }
+
+        .sec2-flex-box ul {
+            width: 100%;
+            margin-bottom: $small_margin_m;
+
+            @include responsive(pc-screens) {
+                text-align: center;
+                margin-top: 100px;
+                margin-bottom: 0;
+            }
+        }
     
         .sec2-flex-box .notice {
-            font-family: $eng_title_font;
-        }
-        
-        .sec2-flex-box ul {
             line-height: 50px;
-    
+            letter-spacing: 1px;
+
+            @include type_custom(calc(0.6em + 0.6vw), $eng_title_font);
+
             @include responsive(pc-screens) {
-                width: 100%;
+                font-size: $mainf;
+                // width: 100%;
+                line-height: 60px;
+                margin-right: 370px;
             }
         }
         
         .sec2-flex-box li {
             list-style: inside;
-        }
+            line-height: 50px;
+
+            @include type_custom(calc(0.6em + 0.6vw), $common_font);
+
+            @include responsive(pc-screens) {
+                font-size: $mainf;
+                // width: 100%;
+                line-height: 60px;
+            }
+        }       
         
         .sec2-flex-box img {
             width: 100%;
@@ -765,40 +859,7 @@ main {
                 width: 50%;
             }
         }
-    }
-    
-    .sec3 {
-        .sec3-flex-box {
-            display: flex;
-            justify-content: center;
-            
-    
-            .menu,
-            .booknow {
-                width: 170px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-            }
-    
-            .menu { 
-                border: #bdbdbd solid 1px;            
-                
-                a {
-                    font-family: $eng_title_font;
-                }
-                
-            }
-    
-            .booknow {               
-                border: #bdbdbd solid 1px;            
-    
-                a {
-                    font-family: $eng_title_font;
-                }            
-            }
-        }
-    }
+    }  
     
     .sec4 {
         img {
@@ -816,10 +877,9 @@ main {
         }
     
         .hover-img p {
+            @include type_custom(calc(1.5em + 3vw), $eng_title_font);
             color: #000000;
-            font-size: 40px;
             font-weight: bold;
-            font-family: $eng_title_font;
             text-align: center;
             line-height: 60px;
             letter-spacing: 2px;
@@ -828,14 +888,9 @@ main {
             left: 50%;
             width: 100%;
             transform: translate(-50%, -50%);
-    
-            @include responsive(tablet-screens) {
-                font-size: 70px;
-                letter-spacing: 4px;
-            }
-    
+
             @include responsive(pc-screens) {
-                font-size: 100px;
+                font-size: 5em;
                 letter-spacing: 6px;
             }
         }
@@ -848,29 +903,37 @@ main {
         }
         
         .sec5-flex-box {
+            margin-top: $mid_margin_m;
+
             @include responsive (pc-screens) {
                 display: flex;
                 width: 100%;
+                margin-top: $mid_margin;
             }
         }
     
         .sec5-text {
             text-align: center;
-            line-height: 30px;
-            // letter-spacing: 1px;
-    
-            @include responsive (pc-screens) {
-                width: 50%;
-                font-size: 30px;
-                line-height: 40px;
-                // letter-spacing: 2px;
-            }        
+            @include type_custom(calc(8px + 3vw), $common_font);
+            line-height: calc(1em + 3vw);
+            font-weight: 200;
+            margin-bottom: $mid_margin_m;
+
+            @include responsive(pc-screens) {
+                font-size: 38px;
+                line-height: 56px;
+                margin-top: 80px;
+                width: 100%;
+            }
         }
     
         .sec5-flex-box img {
+            margin-bottom: $small_margin_m;
+
             @include responsive (pc-screens) {
                 width: 50%;
                 display: block;
+                margin-bottom: 0;
             }
         }
     
@@ -885,6 +948,22 @@ main {
             @include responsive (pc-screens) {
                 width: 50%;
                 display: block;
+            }            
+        }
+
+        .sec5-flex-box2 .wine2 {
+            margin-bottom: $small_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
+            }
+        }
+
+        .sec5-flex-box2 .wine3 {
+            margin-bottom: $footer_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
             }
         }
     }

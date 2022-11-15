@@ -701,6 +701,7 @@ main {
   color: #333;
 }
 main nav .gnb {
+  font-family: "Lemon/Milk light", sans-serif;
   text-align: center;
   width: 100%;
   z-index: 1;
@@ -717,18 +718,27 @@ main nav .gnb li a:hover {
   color: black;
   font-weight: bolder;
 }
+main section.maintext {
+  margin-top: 65px;
+}
+@media screen and (min-width: 1400px) {
+  main section.maintext {
+    margin-top: 125px;
+  }
+}
 main section.maintext p {
-  font-size: 20px;
-  line-height: 40px;
-  letter-spacing: 1px;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  font-family: "SCoreDream";
+  font-size: calc(8px + 3vw);
+  line-height: calc(1em + 3vw);
+  font-weight: 200;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 1400px) {
   main section.maintext p {
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 48px;
+    line-height: 96px;
+    margin-bottom: 125px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -746,7 +756,6 @@ main .flex-box .atrium img {
 }
 main .flex-box .mariposa,
 main .flex-box .spectrum,
-main .flex-box .gallery,
 main .flex-box .m29,
 main .flex-box .atrium {
   position: relative;
@@ -754,12 +763,40 @@ main .flex-box .atrium {
   margin-bottom: 30px;
   transition: opacity 0.2s;
 }
+@media screen and (min-width: 1400px) {
+  main .flex-box .mariposa,
+main .flex-box .spectrum,
+main .flex-box .m29,
+main .flex-box .atrium {
+    margin-bottom: 200px;
+  }
+}
+main .flex-box .gallery {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+  transition: opacity 0.2s;
+}
+@media screen and (min-width: 1400px) {
+  main .flex-box .gallery {
+    margin-bottom: 200px;
+  }
+}
 main .flex-box .mariposa:hover .m-img,
 main .flex-box .spectrum:hover .s-img,
 main .flex-box .gallery:hover .g-img,
 main .flex-box .m29:hover .m29-img,
 main .flex-box .atrium:hover .atrium-img {
   background-color: rgb(0, 0, 0);
+}
+main .flex-box .mariposa:hover .m-img a,
+main .flex-box .spectrum:hover .s-img a,
+main .flex-box .gallery:hover .g-img a,
+main .flex-box .m29:hover .m29-img a,
+main .flex-box .atrium:hover .atrium-img a {
+  color: #ffffff;
+  display: block;
+  font-weight: 200;
 }
 main .flex-box .m-img,
 main .flex-box .s-img,

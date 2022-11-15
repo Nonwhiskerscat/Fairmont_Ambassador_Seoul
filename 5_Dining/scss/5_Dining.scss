@@ -705,6 +705,7 @@ main {
     color: #333;
     nav {
         .gnb {
+            font-family: $eng_title_font;
             text-align: center;
             width: 100%;
             z-index: 1;
@@ -725,22 +726,23 @@ main {
     }
 
     section.maintext {
+        margin-top: $mid_margin_m;        
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+        }
+
         p {
-            font-size: 20px;
-            line-height: 40px; 
-            letter-spacing: 1px;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        
-            @include responsive(tablet-screens) {
-            font-size: 30px;
-            line-height: 50px;
-            }
+            @include type_custom(calc(8px + 3vw), $common_font);
+            line-height: calc(1em + 3vw);
+            font-weight: 200;
+            margin-bottom: $mid_margin_m;
 
             @include responsive(pc-screens) {
-            font-size: 40px;
-            line-height: 60px;
+                font-size: 48px;
+                line-height: 96px;
+                margin-bottom: $mid_margin;
             }
         }
     }
@@ -763,14 +765,29 @@ main {
 
         .mariposa,
         .spectrum,
-        .gallery,
         .m29,
         .atrium { 
             position: relative; 
             width: 100%;
             margin-bottom: 30px;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
+            }
             
             transition: opacity 0.2s;            
+        }
+
+        .gallery {
+            position: relative; 
+            width: 100%;
+            margin-bottom: $footer_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
+            }
+            
+            transition: opacity 0.2s;
         }
 
         .mariposa:hover .m-img,
@@ -778,7 +795,13 @@ main {
         .gallery:hover .g-img,
         .m29:hover .m29-img,
         .atrium:hover .atrium-img {        
-            background-color: rgb(0, 0, 0);          
+            background-color: rgb(0, 0, 0);
+            
+            a {
+                color: #ffffff;
+                display: block;
+                font-weight: 200;
+            }
         }
 
         .m-img,
@@ -792,8 +815,6 @@ main {
             
             transition: all 0.3s ease;
         }
-
-
 
         .mariposa:hover img,
         .spectrum:hover img,
