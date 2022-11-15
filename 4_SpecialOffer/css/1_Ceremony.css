@@ -733,12 +733,7 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
-@media screen and (min-width: 1400px) {
-  main nav {
-    width: 100%;
-  }
-}
-main nav .gnb {
+main .gnb {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -749,37 +744,37 @@ main nav .gnb {
   margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
-  main nav .gnb {
+  main .gnb {
     width: 50%;
     flex-direction: row;
     background-color: transparent;
     text-align: center;
   }
 }
-main nav .gnb li {
+main .gnb li {
   padding-top: 20px;
 }
 @media screen and (min-width: 1400px) {
-  main nav .gnb li {
+  main .gnb li {
     padding: 60px 0;
   }
 }
 @media screen and (min-width: 1400px) {
-  main nav .gnb li:last-child a {
+  main .gnb li:last-child a {
     border-right: 0;
   }
 }
-main nav .gnb li a {
+main .gnb li a {
   color: #bdbdbd;
 }
 @media screen and (min-width: 1400px) {
-  main nav .gnb li a {
+  main .gnb li a {
     border-right: 2px solid black;
     padding-right: 100px;
     padding-left: 100px;
   }
 }
-main nav .gnb li a:hover {
+main .gnb li a:hover {
   color: black;
   font-weight: bolder;
 }
@@ -819,14 +814,10 @@ main section p .sub {
   font-size: 12px;
 }
 @media screen and (min-width: 1400px) {
-  main .flex-box section {
-    padding-bottom: 320px;
-  }
-}
-@media screen and (min-width: 1400px) {
   main .flex-content {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 320px;
   }
 }
 main .m_title {
@@ -919,6 +910,35 @@ main #first div.price {
   main #first div.price {
     display: block;
     display: flex;
+  }
+}
+main #high_tea div.price h4 {
+  margin-right: 40px;
+}
+main #spectrum div.info .price h4 {
+  padding-right: 90px;
+}
+main #romantic div.price h4 {
+  margin-right: 40px;
+}
+@media screen and (min-width: 1400px) {
+  main .level {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main .level .premium,
+main .level .gold,
+main .level .black {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1400px) {
+  main .level .premium,
+main .level .gold,
+main .level .black {
+    display: flex;
+    flex-direction: column;
   }
 }
 

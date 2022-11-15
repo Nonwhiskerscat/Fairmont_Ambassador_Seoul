@@ -561,7 +561,6 @@ section div.main0 {
                     height:100vh;
                 }
             }
-
             .p_bg {
                 img {
                     width: 100%;
@@ -721,62 +720,57 @@ section div.main0 {
 
 main {
     color: #333;
-    nav {
+    
+    .gnb {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        background-color: #f7f7f7;
+        padding-bottom: 20px;
+        margin: 0 auto;
+
         @include responsive(pc-screens) {
-            width: 100%;
+            // justify-content: space-between;
+            width: 50%;
+            flex-direction: row;
+            background-color: transparent;
+            text-align: center;
         }
 
-        .gnb {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            width: 100%;
-            z-index: 1;
-            background-color: #f7f7f7;
-            padding-bottom: 20px;
-            margin: 0 auto;
+        li {
+            padding-top: 20px;
 
             @include responsive(pc-screens) {
-                // justify-content: space-between;
-                width: 50%;
-                flex-direction: row;
-                background-color: transparent;
-                text-align: center;
+                padding: 60px 0;
             }
 
-            li {
-                padding-top: 20px;
+            &:last-child {
+                a {
+                    @include responsive(pc-screens) {
+                        border-right: 0;
+                    }
+                }
+            }
+
+            a {
+                color: #bdbdbd;
 
                 @include responsive(pc-screens) {
-                    padding: 60px 0;
+                    border-right: 2px solid black;
+                    padding-right: 100px;
+                    padding-left: 100px;
                 }
 
-                &:last-child {
-                    a {
-                        @include responsive(pc-screens) {
-                            border-right: 0;
-                        }
-                    }
-                }
-
-                a {
-                    color: #bdbdbd;
-
-                    @include responsive(pc-screens) {
-                        border-right: 2px solid black;
-                        padding-right: 100px;
-                        padding-left: 100px;
-                    }
-
-                    &:hover {
-                        color: black;
-                        font-weight: bolder;
-                    }
+                &:hover {
+                    color: black;
+                    font-weight: bolder;
                 }
             }
+        }
 
-        } // gnb
-    }
+    } // gnb
 
     section {
         h2 {
@@ -808,18 +802,11 @@ main {
         }
     }
 
-    .flex-box {
-        section {
-            @include responsive(pc-screens) {
-                padding-bottom: 320px;
-            }
-        }
-    }
-
     .flex-content {
         @include responsive(pc-screens) {
             display: flex;
             justify-content: space-between;
+            padding-bottom: 320px;
         }
     }
 
@@ -921,6 +908,35 @@ main {
         }
     }
 
+    #first {
+        div.price {
+            display: none;
+
+            @include responsive(pc-screens) {
+                display: block;
+                display: flex;
+            }
+        }
+    }
+
+    #high_tea {
+        div.price {
+            h4 {
+                margin-right: 40px;
+            }
+        }
+    }
+
+    #spectrum {
+        div.info {
+            .price {
+                h4 {
+                    padding-right: 90px;
+                }
+            }
+        }
+    }
+
     #romantic {
         div.price {
             h4 {
@@ -948,7 +964,6 @@ main {
                 // justify-content: space-between;
             }
         }
-
     }
 }
 
