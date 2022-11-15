@@ -87,6 +87,23 @@ li {
   width: 100%;
   height: 100%;
   z-index: 700;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+@media screen and (min-width: 1400px) {
+  .menu_modal {
+    background-color: transparent;
+  }
+}
+.menu_modal::-webkit-scrollbar {
+  width: 8px;
+}
+.menu_modal::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+.menu_modal::-webkit-scrollbar-track {
+  border-radius: 8px;
 }
 .menu_modal .menu_entire {
   width: 89.7435897436%;
@@ -414,7 +431,6 @@ li {
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu:hover {
   transition: all 0.5s;
-  color: #fefdf0;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
@@ -423,7 +439,6 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu:hover > a {
-  color: #fefdf0;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
@@ -455,7 +470,6 @@ li {
   margin-bottom: 50px;
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu > a:hover {
-  color: #fefdf0;
   color: #ffef5a;
   transition: all 0.5s;
 }
@@ -501,7 +515,7 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu:hover {
-  color: #fefdf0;
+  transition: all 0.5s;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
@@ -542,7 +556,7 @@ li {
   list-style: "- " inside;
   margin-bottom: calc(0.2em + 0.3vw);
   margin-bottom: 10px;
-  font-weight: 100;
+  font-weight: 300;
   font-family: "SCoreDream";
   font-size: calc(12px + 0.5vw);
 }
@@ -552,7 +566,7 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li a:hover {
-  color: #fefdf0;
+  transition: all 0.5s;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
@@ -566,12 +580,13 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  overflow: auto;
   z-index: -1;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_matte {
     min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
   }
 }
 

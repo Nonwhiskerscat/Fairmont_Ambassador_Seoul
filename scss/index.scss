@@ -3,9 +3,6 @@
 @import "./mixin.scss";
 // @import url(https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage/min.css);
 
-// html::-webkit-scrollbar {
-//     display: none;
-// }
 
 
 .menu_modal {
@@ -16,9 +13,25 @@
     width: 100%;
     height: 100%;
     z-index: 700;
+    overflow: auto;
+    background-color: rgba($color: #000, $alpha: 0.75);
 
     @include responsive(pc-screens){
         // min-height: 100vh;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
     }
 
     .menu_entire{
@@ -378,7 +391,6 @@
 
                         &:hover {
                             transition: all 0.5s;
-                            color: $base_color_light;
                             color: #ffef5a;
 
                             @include responsive(pc-screens) {
@@ -386,7 +398,6 @@
                             }
 
                             &>a {
-                                color: $base_color_light;
                                 color: #ffef5a;
 
                                 @include responsive(pc-screens) {
@@ -414,7 +425,6 @@
 
                             
                             &:hover {
-                                color: $base_color_light;
                                 color: #ffef5a;
                                 transition: all 0.5s;
 
@@ -465,7 +475,7 @@
                             }
 
                             &:hover {
-                                color: $base_color_light;
+                                transition: all 0.5s;
                                 color: #ffef5a;
 
 
@@ -510,7 +520,7 @@
                                     list-style: '- ' inside;
                                     margin-bottom: calc(0.2em + 0.3vw);
                                     margin-bottom: 10px;
-                                    font-weight: 100;
+                                    font-weight: 300;
                                     @include type_custom(calc(12px + 0.5vw), $common_font);
 
                                     @include responsive(pc-screens) {
@@ -520,7 +530,7 @@
                                     
 
                                     a:hover {
-                                        color: $base_color_light;
+                                        transition: all 0.5s;
                                         color: #ffef5a;
 
 
@@ -545,11 +555,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000, $alpha: 0.75);
+        overflow: auto;
         z-index: -1;
 
         @include responsive(pc-screens) {
             min-height: 100vh;
+            background-color: rgba($color: #000, $alpha: 0.75);
         }
     }
     
