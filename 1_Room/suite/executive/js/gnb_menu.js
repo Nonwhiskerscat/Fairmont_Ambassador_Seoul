@@ -3,6 +3,14 @@ $(document).ready(function() {
     $('.menu').click(function() {
         $('.menu_modal').stop().slideDown(1000);
         $('header').stop().fadeOut(1000);
+
+        const openModal = (e) => {
+            document.body.style.overflow = "hidden";
+        };
+
+        const closeModal = (e) => {
+            document.body.style.overflow = "unset";
+         };
         
         $('body').on('scroll touchmove mousewheel', function(e) {
                 e.preventDefault();

@@ -1,3 +1,4 @@
+
 $(function() {
 
     $('#fullpage').fullpage({
@@ -7,9 +8,21 @@ $(function() {
         navigation: true,
         navigationPosition: 'right',
 		afterLoad: function(anchorLink, index) {
-			console.log("현재 섹션 번호는" + index);
+			if(index==1) {
+				//
+			}
+			
+			if(index==2) {
+				fadein();
+				fadeup();
+				rollingNumber();
+			}
+
 			if(index==3) {
-				$('#fp-nav ul li a span').css('background', '#333');
+				$('#fp-nav ul li a span').css( {
+					'background': '#333',
+					'transition': 'all 0.5s'
+				});
 			}
 
 			else {
