@@ -709,8 +709,8 @@ main {
 
         p {
             text-align: center;
-            @include type_custom(calc(8px + 3vw), $common_font);
-            line-height: calc(1em + 3vw);
+            @include type_custom(calc(8px + 2.5vw), $common_font);
+            line-height: calc(2em + 2vw);
             font-weight: 200;
             margin-bottom: $mid_margin_m;
 
@@ -874,8 +874,8 @@ main {
 
         p {
             text-align: center;
-            @include type_custom(calc(8px + 3vw), $common_font);
-            line-height: calc(1em + 3vw);
+            @include type_custom(calc(8px + 2.5vw), $common_font);
+            line-height: calc(2em + 2vw);
             font-weight: 200;
             margin-bottom: $mid_margin_m;
 
@@ -1018,8 +1018,8 @@ main {
 
         p {
             text-align: center;
-            @include type_custom(calc(8px + 3vw), $common_font);
-            line-height: calc(1em + 3vw);
+            @include type_custom(calc(8px + 2.5vw), $common_font);
+            line-height: calc(2em + 2vw);
             font-weight: 200;
             margin-bottom: $mid_margin_m;
 

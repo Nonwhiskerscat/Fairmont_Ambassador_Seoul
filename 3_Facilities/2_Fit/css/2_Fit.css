@@ -727,8 +727,8 @@ main .sec1 .maintext {
 main .sec1 .maintext p {
   text-align: center;
   font-family: "SCoreDream";
-  font-size: calc(8px + 3vw);
-  line-height: calc(1em + 3vw);
+  font-size: calc(8px + 2.5vw);
+  line-height: calc(2em + 2vw);
   font-weight: 200;
   margin-bottom: 65px;
 }
@@ -888,8 +888,8 @@ main .sec7 .maintext {
 main .sec7 .maintext p {
   text-align: center;
   font-family: "SCoreDream";
-  font-size: calc(8px + 3vw);
-  line-height: calc(1em + 3vw);
+  font-size: calc(8px + 2.5vw);
+  line-height: calc(2em + 2vw);
   font-weight: 200;
   margin-bottom: 65px;
 }
@@ -1049,8 +1049,8 @@ main .sec12 .maintext {
 main .sec12 .maintext p {
   text-align: center;
   font-family: "SCoreDream";
-  font-size: calc(8px + 3vw);
-  line-height: calc(1em + 3vw);
+  font-size: calc(8px + 2.5vw);
+  line-height: calc(2em + 2vw);
   font-weight: 200;
   margin-bottom: 65px;
 }

@@ -830,15 +830,14 @@ main .sec2 {
 main .sec2 .sec2-flex-box ul {
   width: 100%;
   margin-bottom: 25px;
-  background-color: antiquewhite;
 }
 @media screen and (min-width: 1400px) {
   main .sec2 .sec2-flex-box ul {
     width: 50%;
     text-align: left;
-    margin-top: 100px;
+    margin-top: 110px;
     margin-bottom: 0;
-    padding-left: 100px;
+    padding-left: 80px;
   }
 }
 main .sec2 .sec2-flex-box .notice {
@@ -914,6 +913,45 @@ main .sec2 .hover-img p a:hover {
   text-decoration: underline 2px black;
   color: black;
 }
+main .sec3 {
+  margin-top: 65px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 {
+    margin-top: 125px;
+    margin-bottom: 50px;
+  }
+}
+main .sec3 .main-text h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.5em + 3vw);
+  margin-bottom: calc(0.5em + 2vw);
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 .main-text h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+}
+main .sec3 .main-text h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 8px auto;
+}
+@media screen and (min-width: 1400px) {
+  main .sec3 .main-text h4::before {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 4px solid #333;
+    margin: 10px auto;
+  }
+}
 @media screen and (min-width: 1400px) {
   main .sec4 {
     display: flex;
@@ -938,22 +976,39 @@ main .sec4 .hover2 {
 main .sec4 .hover1 p,
 main .sec4 .hover2 p {
   color: #333333;
-  font-size: 18px;
-  text-align: left;
-  letter-spacing: 2px;
-  line-height: 30px;
-  margin-left: 50px;
+  font-weight: 300;
+  padding-left: 20px;
+  line-height: 50px;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
+  font-family: "SCoreDream";
+  font-size: calc(1em + 1vw);
 }
 @media screen and (min-width: 1400px) {
   main .sec4 .hover1 p,
 main .sec4 .hover2 p {
-    font-size: 38px;
-    line-height: 50px;
+    font-size: 2em;
+    padding-left: 100px;
+    line-height: 70px;
+  }
+}
+main .sec4 .hover1 {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .hover1 {
+    margin-bottom: 200px;
+  }
+}
+main .sec4 .hover2 {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .hover2 {
+    margin-bottom: 200px;
   }
 }
 

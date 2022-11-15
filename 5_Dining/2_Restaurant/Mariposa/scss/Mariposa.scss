@@ -814,6 +814,9 @@ main {
         }
 
         .sec2-flex-box ul {
+            background-image: url(../img/Mariposa/na1111.png);
+            background-repeat: no-repeat;
+            background-position: right;
             width: 100%;
             margin-bottom: $small_margin_m;
 
@@ -913,6 +916,9 @@ main {
         }
     
         .sec5-text {
+            background-image: url(../img/Mariposa/navi222.png);
+            background-repeat: no-repeat;
+            background-position: left;
             text-align: center;
             @include type_custom(calc(8px + 3vw), $common_font);
             line-height: calc(1em + 3vw);

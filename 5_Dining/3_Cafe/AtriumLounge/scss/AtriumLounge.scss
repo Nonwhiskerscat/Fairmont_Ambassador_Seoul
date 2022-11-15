@@ -700,68 +700,86 @@ section div.main0 {
 main {
     color: #333;
     .sec1 {
+        .container {
+            margin-top: $mid_margin_m;
 
-        .container {          
             @include responsive(pc-screens) {
                 display: flex;
-            }      
-    
+                margin-top: $mid_margin;
+            }
+
             .flex-box {
                 background-color: #f6d7d7;
                 padding: 30px;
                 width: 100%;
-    
+                margin-bottom: $small_margin_m;
+
                 @include responsive(pc-screens) {
                     width: 50%;
+                    margin-bottom: 0;
                 }
             
                 .flex-box1 {
                     display: flex;
                     justify-content: space-around;
-                    
+
+                    @include type_custom(calc(0.6em + 0.6vw),$common_font);
+                        // margin-bottom: calc(0.3em + 0.3vw);
+
+                    @include responsive(pc-screens) {
+                        font-size: $mainf;
+                    }
+
                     .info {
                         font-family: $eng_title_font;
                         line-height: 50px;
+                        letter-spacing: 1px;
+
+                        @include responsive (pc-screens) {
+                            line-height: 70px;
+                        }
                     }
     
                     .detail {
                         margin-left: 50px;
                         line-height: 50px;
+
+                        @include responsive (pc-screens) {
+                            line-height: 70px;
+                        }
                     }
                 }
     
                 .menu-flex-box {
                     display: flex;
-                    justify-content: space-around;
-    
-                    .menu,
-                    .booknow {
+                    justify-content: right;
+
+                    .menu {
                         width: 170px;
                         height: 50px;
                         line-height: 50px;
                         text-align: center;
-                    }
-    
-                    .menu {                
+                        letter-spacing: 1px;
                         background-color: white;
-    
-                        a {
-                            font-family: $eng_title_font;
+
+                        @include responsive (pc-screens) {
+                            margin-top: 30px;
+                            margin-bottom: 29px;
                         }
-                        
-                    }
-    
-                    .booknow {                
-                        background-color: #f6a0a0;
-    
+
                         a {
-                            font-family: $eng_title_font;
-                        }            
+                            @include type_custom(calc(0.6em + 0.6vw), $eng_title_font);
+                                // margin-bottom: calc(0.3em + 0.3vw);
+
+                            @include responsive(pc-screens) {
+                                font-size: $mainf;
+                            }
+                        }
                     }
                 }
             }
 
-            .sec1-img-box {
+            .sec1-img {
                 width: 100%;
 
                 @include responsive(pc-screens) {
@@ -769,45 +787,46 @@ main {
                 }
             }
 
-            .sec1-img-box img{
+            .sec1-img img {
                 width: 100%;
-                display: block;  
+                display: block;
+
+                @include responsive(pc-screens) {
+                    width: 100%;
+                }
             }
         }
     }
     
     .sec2 {
+        margin-top: $mid_margin_m;
+        
+        @include responsive (pc-screens) {
+            margin-top: $mid_margin;
+        }
+
         .sec2-text {
             text-align: center;
-    
+
             p {
-                font-size: 14px;
-    
-                @include responsive(tablet-screens) {
-                    font-size: 20px;
-                }
-    
+                @include type_custom(calc(0.6em + 0.6vw),$common_font);
+                    // margin-bottom: calc(0.3em + 0.3vw);
+
                 @include responsive(pc-screens) {
-                    font-size: 26px;
+                    font-size: $mainf;
                 }
             }
-    
+
             .tea {
-                font-size: 58px;
-                font-family: $eng_title_font;
-    
-                @include responsive(tablet-screens) {
-                    letter-spacing: 3px;
-                    font-size: 68px;
-                }
-                
+                letter-spacing: 2px;
+                @include type_custom(calc(1.5em + 3vw), $eng_title_font);
+
                 @include responsive(pc-screens) {
-                    letter-spacing: 6px;
-                    font-size: 88px;
+                    font-size: 5em;
                 }
             }
         }
-    
+
         .sec2-img-box {
             img {
                 width: 100%;
@@ -821,23 +840,27 @@ main {
     }
     
     .sec3 {
+        margin-top: $mid_margin_m;
+        margin-bottom: $footer_margin_m;
+
+        @include responsive (pc-screens) {
+            margin-top: $mid_margin;
+            margin-bottom: $footer_margin;
+        }
+
         .sec3-text {
-            p {
-                font-size: 58px;
-                font-family: $eng_title_font;
-    
-                @include responsive(tablet-screens) {
-                    letter-spacing: 3px;
-                    font-size: 68px;
-                }
-                
+            text-align: center;
+
+            h2 {
+                letter-spacing: 2px;
+                @include type_custom(calc(1.5em + 3vw), $eng_title_font);
+
                 @include responsive(pc-screens) {
-                    letter-spacing: 6px;
-                    font-size: 88px;
+                    font-size: 5em;
                 }
             }
         }
-    
+
         .sec3-img-box {
             img {
                 width: 100%;
