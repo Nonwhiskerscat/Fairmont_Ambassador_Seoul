@@ -17,6 +17,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0c997df9c9.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.smoothwheel.js"></script>
+    <script>
+        $().ready(() => {
+            // doc - scroll fadein/out
+            $('html').smoothWheel()
+            const $s0 = document.querySelector(".infomation")
+
+            let cb = (e) => {
+                if (e[0].isIntersecting) {
+                    $('.info-content-box')
+                        .fadeIn(1500)
+                        .css('display', 'flex');
+                } else {
+                    $('.info-content-box').hide()
+                }
+            }
+            let io = new IntersectionObserver(cb, {})
+            io.observe($s0)
+
+            //modal - close event
+            $('.close-btn').click(() => $('#modal-wrap').hide())
+
+            //modal - slide images
+            let slideModal = () => {
+                $('.slide-img').animate({ "left": "-100%" }, () => {
+                    $('.slide-img').append($('.slide-img li:first')).css('left', "0")
+                })
+            }
+            let slideInterval = setInterval(slideModal, 3000)
+
+
+
+            //modal - prev , next button
+            $('.left-btn').click(() => {
+                clearInterval(slideInterval)
+                slideModal()
+                setTimeout(() => {
+                    clearInterval(slideInterval)
+                    slideInterval = setInterval(slideModal, 3000)
+                }, 3000)
+            })
+
+            $('.right-btn').click(() => {
+                clearInterval(slideInterval)
+
+                $('.slide-img').prepend($('.slide-img li:last'))
+                    .css('left', '-100%')
+                    .animate({ "left": 0 })
+
+                setTimeout(() => {
+
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(slideModal, 3000)
+
+                }, 3000)
+
+
+            })
+
+        })
+
+
+
+
+    </script>
 </head>
 
 <body>
@@ -548,6 +614,28 @@
             </div>
             <!--footer_entire-->
         </footer>
+
+        <div id="modal-wrap">
+            <div class="container">
+                <div class="close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="modal">
+                    <div class="left-btn"><i class="fa-sharp fa-solid fa-less-than"></i></div>
+                    <div class="right-btn"><i class="fa-sharp fa-solid fa-greater-than"></i></div>
+                    <ul class="slide-img">
+                        <li><img src="./img/Party/photo/s2_modal1.png" alt="슬라이드 이미지1"></li>
+                        <li><img src="./img/Party/photo/s2_modal2.png" alt="슬라이드 이미지2"></li>
+                        <li><img src="./img/Party/photo/s2_modal3.png" alt="슬라이드 이미지3"></li>
+                    </ul>
+                    <ul class="img-list-box">
+                        <li><img src="./img/Party/photo/s2_modal1.png" alt=" 이미지 미리보기1"></li>
+                        <li><img src="./img/Party/photo/s2_modal2.png" alt=" 이미지 미리보기2"></li>
+                        <li><img src="./img/Party/photo/s2_modal3.png" alt=" 이미지 미리보기3"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <!--wrapper-->
 </body>

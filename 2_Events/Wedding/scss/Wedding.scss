@@ -21,7 +21,6 @@
 
     @include responsive(pc-screens) {
       width: 93.75%;
-      
     }
 
     .menu_header {
@@ -220,7 +219,6 @@
         flex-direction: row;
         // align-items: center;
         padding-top: 100px;
-        
       }
 
       .menu_main_left {
@@ -420,7 +418,6 @@ header {
 
     @include responsive(pc-screens) {
       width: 93.75%;
-      
     }
 
     .header_logo {
@@ -1299,7 +1296,6 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 
     @include responsive(pc-screens) {
       width: 93.75%;
