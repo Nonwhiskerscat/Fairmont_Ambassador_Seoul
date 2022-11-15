@@ -786,7 +786,7 @@ main {
                 @include title_border_2(30px, 2px, black, 5px, 5px);
 
                 @include responsive(pc-screens) {
-                    @include title_border_2(30px, 2px, black, 5px, 5px)
+                    @include title_border_2(30px, 2px, black, 5px, 5px);
                 }
             }
         }
@@ -803,6 +803,8 @@ main {
     }
 
     .flex-content {
+        padding-bottom: 150px;
+        
         @include responsive(pc-screens) {
             display: flex;
             justify-content: space-between;
