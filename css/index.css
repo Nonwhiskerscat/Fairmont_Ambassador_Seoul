@@ -1032,18 +1032,34 @@ header .header_entire .menu .menu_type p {
   opacity: 0;
 }
 .main2 .room_navi li:hover {
-  width: 120px;
+  width: 80px;
   transition: all 1s;
 }
 @media screen and (min-width: 1400px) {
   .main2 .room_navi li:hover {
-    width: 160px;
+    width: 120px;
   }
 }
 .main2 .room_navi li:hover::after {
-  opacity: 1;
+  opacity: 0.5;
 }
 .main2 .room_navi li:hover span {
+  opacity: 0.5;
+  transition: all 1s;
+}
+.main2 .room_navi li.locate {
+  width: 120px;
+  transition: all 1s;
+}
+@media screen and (min-width: 1400px) {
+  .main2 .room_navi li.locate {
+    width: 160px;
+  }
+}
+.main2 .room_navi li.locate::after {
+  opacity: 1;
+}
+.main2 .room_navi li.locate span {
   opacity: 1;
   transition: all 1s;
 }
@@ -1056,6 +1072,7 @@ header .header_entire .menu .menu_type p {
   width: 300%;
   height: 100vh;
   z-index: -1;
+  position: relative;
 }
 .main2 .contents .room_flex .back_slide ul li {
   width: 100%;
@@ -1250,7 +1267,7 @@ header .header_entire .menu .menu_type p {
 .main3 .faci_navi ul {
   display: flex;
 }
-.main3 .faci_navi li {
+.main3 .faci_navi ul li {
   width: 30px;
   position: relative;
   text-align: center;
@@ -1260,12 +1277,12 @@ header .header_entire .menu .menu_type p {
   margin-right: 10px;
 }
 @media screen and (min-width: 1400px) {
-  .main3 .faci_navi li {
+  .main3 .faci_navi ul li {
     font-size: 0.875em;
     width: 40px;
   }
 }
-.main3 .faci_navi li::after {
+.main3 .faci_navi ul li::after {
   margin: 0 auto;
   content: "";
   display: block;
@@ -1273,31 +1290,46 @@ header .header_entire .menu .menu_type p {
   opacity: 0.5;
   margin-top: 2px;
 }
-.main3 .faci_navi li span {
+.main3 .faci_navi ul li span {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
 }
-.main3 .faci_navi li:hover {
+.main3 .faci_navi ul li:hover {
+  width: 80px;
+  transition: all 1s;
+}
+@media screen and (min-width: 1400px) {
+  .main3 .faci_navi ul li:hover {
+    width: 120px;
+  }
+}
+.main3 .faci_navi ul li:hover::after {
+  opacity: 0.5;
+}
+.main3 .faci_navi ul li:hover span {
+  opacity: 0.5;
+  transition: all 1s;
+}
+.main3 .faci_navi ul li.locate {
   width: 120px;
   transition: all 1s;
 }
 @media screen and (min-width: 1400px) {
-  .main3 .faci_navi li:hover {
+  .main3 .faci_navi ul li.locate {
     width: 160px;
   }
 }
-.main3 .faci_navi li:hover::after {
+.main3 .faci_navi ul li.locate::after {
   opacity: 1;
 }
-.main3 .faci_navi li:hover span {
+.main3 .faci_navi ul li.locate span {
   opacity: 1;
   transition: all 1s;
 }
 .main3 .contents .faci_flex .faci_back_slide {
-  position: absolute;
   width: 100%;
   overflow: hidden;
 }
@@ -1306,6 +1338,7 @@ header .header_entire .menu .menu_type p {
   width: 300%;
   height: 100vh;
   z-index: -1;
+  position: relative;
 }
 .main3 .contents .faci_flex .faci_back_slide ul li {
   width: 100%;
@@ -1323,7 +1356,7 @@ header .header_entire .menu .menu_type p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
 }
 @media screen and (min-width: 1400px) {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back {
@@ -1398,12 +1431,24 @@ header .header_entire .menu .menu_type p {
 }
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
   height: 120px;
+  width: 100%;
   font-family: "SCoreDream";
   font-size: calc(0.6em + 0.6vw);
   margin-top: 20px;
   text-align: justify;
   letter-spacing: 1px;
   line-height: calc(2em + 1vw);
+}
+@media screen and (min-width: 1400px) {
+  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
+    margin: 50px 20px 0 0;
+    font-size: 18px;
+    line-height: 2em;
+    height: 180px;
+  }
+}
+.main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p:last-child span {
+  text-align: center;
 }
 @media screen and (min-width: 800px) {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p br {
@@ -1424,14 +1469,6 @@ header .header_entire .menu .menu_type p {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p span {
     font-size: 1.6em;
     line-height: 2.4em;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
-    margin: 50px 20px 0 0;
-    font-size: 18px;
-    line-height: 2em;
-    height: 180px;
   }
 }
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container button {

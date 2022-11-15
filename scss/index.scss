@@ -1062,6 +1062,25 @@ header{
             }
 
             &:hover {
+                width: 80px;
+
+                @include responsive(pc-screens) {
+                    width: 120px;
+                }
+                
+                &::after {
+                    opacity: 0.5;
+                }
+
+                span{
+                    opacity: 0.5;
+                    transition: all 1s;
+                }
+
+                transition: all 1s;
+            }
+
+            &.locate {
                 width: 120px;
 
                 @include responsive(pc-screens) {
@@ -1095,6 +1114,7 @@ header{
                     width: 300%;
                     height: 100vh;
                     z-index: -1;
+                    position: relative;
     
                     li{
                         width: 100%;
@@ -1306,77 +1326,97 @@ header{
         
         ul {
             display: flex;
-        }
 
-        li {
-            width: 30px;
-            position: relative;
-            text-align: center;
-            font: {
-                size: 0.8em;
-                family: $eng_title_font;
-            }
-            letter-spacing: 1px;
-            margin-right: 10px;
-
-            @include responsive(pc-screens) {
-                font-size: 0.875em;
-                width: 40px;
-            }
-
-            &::after {
-                margin: 0 auto;
-                content: "";
-                display: block;
-                border-bottom: #fff 2px solid;
-                opacity: 0.5;
-                margin-top: 2px;
-
-                @include responsive(pc-screens) {
-                    //
+            li {
+                width: 30px;
+                position: relative;
+                text-align: center;
+                font: {
+                    size: 0.8em;
+                    family: $eng_title_font;
                 }
-            }
-
-            span {
-                position: absolute;
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-                opacity: 0;
-
+                letter-spacing: 1px;
+                margin-right: 10px;
+    
                 @include responsive(pc-screens) {
-                    //
+                    font-size: 0.875em;
+                    width: 40px;
                 }
-                
-            }
-
-            &:hover {
-                width: 120px;
-
-                @include responsive(pc-screens) {
-                    width: 160px;
-                }
-                
+    
                 &::after {
-                    opacity: 1;
+                    margin: 0 auto;
+                    content: "";
+                    display: block;
+                    border-bottom: #fff 2px solid;
+                    opacity: 0.5;
+                    margin-top: 2px;
+    
+                    @include responsive(pc-screens) {
+                        //
+                    }
                 }
-
-                span{
-                    opacity: 1;
+    
+                span {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+    
+                    @include responsive(pc-screens) {
+                        //
+                    }
+                    
+                }
+    
+                &:hover {
+                    width: 80px;
+    
+                    @include responsive(pc-screens) {
+                        width: 120px;
+                    }
+                    
+                    &::after {
+                        opacity: 0.5;
+                    }
+    
+                    span{
+                        opacity: 0.5;
+                        transition: all 1s;
+                    }
+    
                     transition: all 1s;
                 }
-
-                transition: all 1s;
+    
+                &.locate {
+                    width: 120px;
+    
+                    @include responsive(pc-screens) {
+                        width: 160px;
+                    }
+                    
+                    &::after {
+                        opacity: 1;
+                    }
+    
+                    span{
+                        opacity: 1;
+                        transition: all 1s;
+                    }
+    
+                    transition: all 1s;
+                }
+    
             }
-
         }
+
+
 
     } //faci_navi
 
     .contents {
         .faci_flex{
             .faci_back_slide {
-                position: absolute;
                 width: 100%;
                 overflow: hidden;
 
@@ -1389,6 +1429,7 @@ header{
                     width: 300%;
                     height: 100vh;
                     z-index: -1;
+                    position: relative;
 
                     @include responsive(pc-screens) {
                         //
@@ -1425,12 +1466,13 @@ header{
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0,0,0,0.2);
+                    background-color: transparent;
 
                     @include responsive(pc-screens) {
                         width: 28.64583333333333%;
                         background-color: rgba(180,34,45,0.75);
                     }
+                    
 
 
 
@@ -1496,11 +1538,28 @@ header{
         
                             p {
                                 height: 120px;
+                                width: 100%;
                                 @include type_custom(calc(0.6em + 0.6vw), $common_font);
                                 margin-top: 20px;
                                 text-align: justify;
                                 letter-spacing: 1px;
                                 line-height: calc(2em + 1vw);
+
+                                @include responsive(pc-screens) {
+                                    margin: 50px 20px 0 0;
+                                    font-size: 18px;
+                                    line-height: 2em;
+                                    height: 180px;
+                                }
+
+                                &:last-child {
+
+                                    span {
+                                        text-align: center;
+
+                                    }
+                                }
+
 
                                 br {
                                     @include responsive(screen-800) {
@@ -1528,12 +1587,7 @@ header{
                                 }
 
         
-                                @include responsive(pc-screens) {
-                                    margin: 50px 20px 0 0;
-                                    font-size: 18px;
-                                    line-height: 2em;
-                                    height: 180px;
-                                }
+                                
         
                             }
         

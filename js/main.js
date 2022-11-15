@@ -19,15 +19,21 @@ $(function() {
 			}
 
 			if(index==3) {
-				$('#fp-nav ul li a span').css( {
+				$('#fp-nav ul li a span').css({
 					'background': '#333',
 					'transition': 'all 0.5s'
-				});
-			}
+				});				
 
+			}
 			else {
 				$('#fp-nav ul li a span').css('background', '#fff');
 			}
+
+			if(index!=3) {
+				// !roomSlide();
+			}
+
+			
 		}
 	});
 
