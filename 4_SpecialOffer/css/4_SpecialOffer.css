@@ -745,7 +745,7 @@ main .gnb {
 }
 @media screen and (min-width: 1400px) {
   main .gnb {
-    width: 50%;
+    width: 48%;
     flex-direction: row;
     background-color: transparent;
     text-align: center;
