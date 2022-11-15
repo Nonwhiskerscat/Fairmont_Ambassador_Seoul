@@ -85,22 +85,12 @@ li {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
   z-index: 700;
-}
-@media screen and (min-width: 1400px) {
-  .menu_modal {
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-}
-@media screen and (min-width: 1400px) {
-  .menu_modal {
-    min-height: 100vh;
-  }
 }
 .menu_modal .menu_entire {
   width: 89.7435897436%;
   margin: 0 auto;
+  z-index: 800;
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire {
@@ -567,6 +557,20 @@ li {
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu ul li a:hover {
     color: #ffef5a;
+  }
+}
+.menu_modal .menu_matte {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+@media screen and (min-width: 1400px) {
+  .menu_modal .menu_matte {
+    min-height: 100vh;
   }
 }
 

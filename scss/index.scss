@@ -14,20 +14,16 @@
     left: 0;
     top: 0;
     width: 100%;
-    background-color: rgba($color: #000, $alpha: 0.75);
     z-index: 700;
 
-    @include responsive(pc-screens) {
-        background-color: rgba($color: #000, $alpha: 0.75);
-    }
-
     @include responsive(pc-screens){
-        min-height: 100vh;
+        // min-height: 100vh;
     }
 
     .menu_entire{
         width: 89.74358974358974%;
         margin: 0 auto;
+        z-index: 800;
         
         @include responsive(pc-screens) {
             width: 93.75%;
@@ -539,6 +535,20 @@
                 }
     
             }
+        }
+    }
+
+    .menu_matte {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000, $alpha: 0.75);
+        z-index: -1;
+
+        @include responsive(pc-screens) {
+            min-height: 100vh;
         }
     }
     
