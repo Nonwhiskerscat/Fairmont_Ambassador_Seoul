@@ -1461,18 +1461,19 @@ header{
             .faci_contents_slide {
 
                 .faci_back {
+
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: calc(80px + 5vw);
                     width: 100%;
-                    height: 100%;
-                    background-color: transparent;
+                    height: calc(200px + 10vw);
+                    background-color: rgba(180,34,45,0.75);
 
                     @include responsive(pc-screens) {
                         width: 28.64583333333333%;
+                        height: 100%;
+                        top: 0;
                         background-color: rgba(180,34,45,0.75);
                     }
-                    
 
 
 
@@ -1495,7 +1496,7 @@ header{
                             .faci_flex {
                                 display: flex;
                                 flex-direction: row;
-                                padding-top: 100px;
+                                padding-top: 20px;
 
 
                                 @include responsive(pc-screens) {
@@ -1537,7 +1538,7 @@ header{
                             }
         
                             p {
-                                height: 120px;
+                                height: 100px;
                                 width: 100%;
                                 @include type_custom(calc(0.6em + 0.6vw), $common_font);
                                 margin-top: 20px;
@@ -1613,8 +1614,9 @@ header{
                                 }
         
                                 &:hover {
-                                    background-color: rgba(180,34,45,1);
-                                    border: 1px solid rgba(0,0,0,0);
+                                    background-color: rgb(255, 255, 255);
+                                    border: 1px solid rgb(255, 255, 255);
+                                    color: #333;
                                     transition: all 0.5s ease-in;
                                 }
         

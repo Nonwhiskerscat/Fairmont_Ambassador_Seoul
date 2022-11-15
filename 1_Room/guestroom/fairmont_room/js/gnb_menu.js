@@ -3,16 +3,8 @@ $(document).ready(function() {
     $('.menu').click(function() {
         $('.menu_modal').stop().slideDown(1000);
         $('header').stop().fadeOut(1000);
-
-        const openModal = (e) => {
-            document.body.style.overflow = "hidden";
-        };
-
-        const closeModal = (e) => {
-            document.body.style.overflow = "unset";
-        };
         
-        $('html').on('scroll touchmove mousewheel', function(e) {
+        $('body').on('scroll touchmove mousewheel', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 return false;
@@ -23,7 +15,7 @@ $(document).ready(function() {
         function close_menu() {
             $('.menu_modal').stop().slideUp(1000);
             $('header').stop().fadeIn(1000);
-            $('html').off('scroll touchmove mousewheel');
+            $('body').off('scroll touchmove mousewheel');
         }
 
         $('.menu_close').click(close_menu);

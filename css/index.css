@@ -1352,15 +1352,16 @@ header .header_entire .menu .menu_type p {
 }
 .main3 .contents .faci_flex .faci_contents_slide .faci_back {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: calc(80px + 5vw);
   width: 100%;
-  height: 100%;
-  background-color: transparent;
+  height: calc(200px + 10vw);
+  background-color: rgba(180, 34, 45, 0.75);
 }
 @media screen and (min-width: 1400px) {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back {
     width: 28.6458333333%;
+    height: 100%;
+    top: 0;
     background-color: rgba(180, 34, 45, 0.75);
   }
 }
@@ -1382,7 +1383,7 @@ header .header_entire .menu .menu_type p {
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex {
   display: flex;
   flex-direction: row;
-  padding-top: 100px;
+  padding-top: 20px;
 }
 @media screen and (min-width: 1400px) {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex {
@@ -1430,7 +1431,7 @@ header .header_entire .menu .menu_type p {
   }
 }
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container p {
-  height: 120px;
+  height: 100px;
   width: 100%;
   font-family: "SCoreDream";
   font-size: calc(0.6em + 0.6vw);
@@ -1494,8 +1495,9 @@ header .header_entire .menu .menu_type p {
   }
 }
 .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container button:hover {
-  background-color: rgb(180, 34, 45);
-  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  color: #333;
   transition: all 0.5s ease-in;
 }
 .main3 .contents .faci_flex .faci_contents_slide li:nth-child(2), .main3 .contents .faci_flex .faci_contents_slide li:nth-child(3) {
