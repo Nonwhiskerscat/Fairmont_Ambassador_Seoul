@@ -705,24 +705,55 @@ main {
     color: #333;
     nav {
         .gnb {
-            font-family: $eng_title_font;
+            display: flex;
+            flex-direction: column;
             text-align: center;
             width: 100%;
             z-index: 1;
             background-color: #f7f7f7;
-            // padding-top: 20px;
             padding-bottom: 20px;
+            margin: 0 auto;
+
+            @include responsive(pc-screens) {
+                justify-content: center;
+                width: 50%;
+                flex-direction: row;
+                background-color: transparent;
+            }
+
             li {
                 padding-top: 20px;
+
+                @include responsive(pc-screens) {
+                    padding: 20px 0;
+                }
+
+                &:last-child {
+                    a {
+                        @include responsive(pc-screens) {
+                            border-right: 0;
+                        }
+                    }
+                }
+
                 a {
+                    font-family: $eng_title_font;
+                    letter-spacing: 1px;
                     color: #bdbdbd;
+
+                    @include responsive(pc-screens) {
+                        border-right: 2px solid black;
+                        padding-right: 100px;
+                        padding-left: 100px;
+                    }
+
                     &:hover {
                         color: black;
                         font-weight: bolder;
                     }
                 }
             }
-        } // gnb
+        }
     }
 
     section.maintext {

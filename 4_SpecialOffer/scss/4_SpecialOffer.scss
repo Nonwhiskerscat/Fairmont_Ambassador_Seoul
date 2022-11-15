@@ -613,7 +613,6 @@ section div.main0 {
             }
     
             button {
-                // display: none; //버튼이 없는 경우 제거
                 width: 200px;
                 background-color: transparent;
                 border: 1px solid white;
@@ -732,8 +731,7 @@ main {
         margin: 0 auto;
 
         @include responsive(pc-screens) {
-            // justify-content: space-between;
-            width: 50%;
+            width: 48%;
             flex-direction: row;
             background-color: transparent;
             text-align: center;
@@ -804,7 +802,7 @@ main {
 
     .flex-content {
         padding-bottom: 150px;
-        
+
         @include responsive(pc-screens) {
             display: flex;
             justify-content: space-between;
@@ -963,7 +961,6 @@ main {
             @include responsive(pc-screens) {
                 display: flex;
                 flex-direction: column;
-                // justify-content: space-between;
             }
         }
     }
@@ -985,7 +982,6 @@ footer {
     }
     
     .footer_entire{
-        // background-color: rebeccapurple;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

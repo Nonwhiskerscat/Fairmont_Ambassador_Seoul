@@ -701,18 +701,47 @@ main {
   color: #333;
 }
 main nav .gnb {
-  font-family: "Lemon/Milk light", sans-serif;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   width: 100%;
   z-index: 1;
   background-color: #f7f7f7;
   padding-bottom: 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  main nav .gnb {
+    justify-content: center;
+    width: 50%;
+    flex-direction: row;
+    background-color: transparent;
+  }
 }
 main nav .gnb li {
   padding-top: 20px;
 }
+@media screen and (min-width: 1400px) {
+  main nav .gnb li {
+    padding: 20px 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main nav .gnb li:last-child a {
+    border-right: 0;
+  }
+}
 main nav .gnb li a {
+  font-family: "Lemon/Milk light", sans-serif;
+  letter-spacing: 1px;
   color: #bdbdbd;
+}
+@media screen and (min-width: 1400px) {
+  main nav .gnb li a {
+    border-right: 2px solid black;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
 }
 main nav .gnb li a:hover {
   color: black;

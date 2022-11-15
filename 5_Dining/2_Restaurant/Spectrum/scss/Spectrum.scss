@@ -817,14 +817,14 @@ main {
         .sec2-flex-box ul {
             width: 100%;
             margin-bottom: $small_margin_m;
-            background-color: antiquewhite;
+            // background-color: antiquewhite;
 
             @include responsive(pc-screens) {
                 width: 50%;
                 text-align: left;
-                margin-top: 100px;
+                margin-top: 110px;
                 margin-bottom: 0;
-                padding-left: 100px;
+                padding-left: 80px;
             }
         }
     
@@ -906,6 +906,30 @@ main {
             }
         }
     }
+
+    .sec3 {
+        margin-top: $mid_margin_m;
+        margin-bottom: $small_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-top: $mid_margin;
+            margin-bottom: $small_margin;
+        }
+
+        .main-text {
+            h4 {
+                @include sub_h4;
+
+                &::before {
+                    @include title_border(30px, 3px, #333, 8px);
+
+                    @include responsive(pc-screens) {
+                        @include title_border(40px, 4px, #333, 10px);
+                    }
+                }
+            }
+        }
+    }
     
     .sec4 {
         @include responsive(pc-screens) {
@@ -931,25 +955,37 @@ main {
         .hover1 p,
         .hover2 p {
             color: #333333;
-            font-size: 18px;      
-            text-align: left;
-            letter-spacing: 2px;
-            line-height: 30px;
-            margin-left: 50px;
+            font-weight: 300;
+            padding-left: 20px;
+            line-height: 50px;            
             position: absolute;
             top: 50%;
             left: 50%;
             width: 100%;
             transform: translate(-50%, -50%);
-    
-            @include responsive(tablet-screens) {
-                font-size: 28px; 
-                line-height: 40px;           
-            }
+
+            @include type_custom(calc(1em + 1vw),$common_font);
     
             @include responsive(pc-screens) {
-                font-size: 38px;  
-                line-height: 50px;          
+                font-size: 2em;
+                padding-left: 100px;
+                line-height: 70px;          
+            }
+        }
+
+        .hover1 {
+            margin-bottom: 0;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
+            }
+        }
+
+        .hover2 {
+            margin-bottom: $footer_margin_m;
+
+            @include responsive(pc-screens) {
+                margin-bottom: $footer_margin;
             }
         }
     }

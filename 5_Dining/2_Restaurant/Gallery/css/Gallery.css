@@ -715,45 +715,108 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
+main .sec1 .container {
+  margin-top: 65px;
+}
 @media screen and (min-width: 1400px) {
-  main .sec1 .sec1-flex-box {
+  main .sec1 .container {
     display: flex;
-    width: 100%;
+    margin-top: 125px;
   }
 }
-main .sec1 .sec1-flex-box ul {
-  line-height: 50px;
+main .sec1 .container .flex-box {
+  width: 100%;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 1400px) {
-  main .sec1 .sec1-flex-box ul {
+  main .sec1 .container .flex-box {
     width: 50%;
+    margin-bottom: 0;
   }
 }
-main .sec1 .sec1-flex-box .li-flex-box {
+main .sec1 .container .flex-box .flex-box1 {
   display: flex;
   justify-content: space-between;
 }
-main .sec1 .sec1-flex-box .li-flex-box div {
-  font-family: "Lemon/Milk light", sans-serif;
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .flex-box1 {
+    justify-content: space-around;
+  }
 }
-main .sec1 .hover1 img {
+main .sec1 .container .flex-box .flex-box1 .info {
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .flex-box1 .info {
+    font-size: 18px;
+    line-height: 60px;
+  }
+}
+main .sec1 .container .flex-box .flex-box1 .detail {
+  margin-left: 50px;
+  line-height: 50px;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .flex-box1 .detail {
+    font-size: 18px;
+    line-height: 60px;
+  }
+}
+main .sec1 .container .flex-box .menu-flex-box {
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+}
+main .sec1 .container .flex-box .menu-flex-box .menu {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #bdbdbd;
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .menu-flex-box .menu {
+    margin-top: 10px;
+  }
+}
+main .sec1 .container .flex-box .menu-flex-box .menu a {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.6em + 0.6vw);
+}
+@media screen and (min-width: 1400px) {
+  main .sec1 .container .flex-box .menu-flex-box .menu a {
+    font-size: 18px;
+  }
+}
+main .sec1 .sec1-img img {
   width: 100%;
   display: block;
 }
-main .sec1 .hover1 {
+@media screen and (min-width: 1400px) {
+  main .sec1 .sec1-img img {
+    width: 100%;
+  }
+}
+main .sec1 .sec1-img {
   width: 100%;
   position: relative;
 }
 @media screen and (min-width: 1400px) {
-  main .sec1 .hover1 {
+  main .sec1 .sec1-img {
     width: 50%;
   }
 }
-main .sec1 .hover1 p {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
+main .sec1 .sec1-img p {
   font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(1.5em + 3vw);
+  color: white;
+  font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
   position: absolute;
@@ -763,50 +826,85 @@ main .sec1 .hover1 p {
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1400px) {
-  main .sec1 .hover1 p {
-    font-size: 100px;
+  main .sec1 .sec1-img p {
+    font-size: 5em;
     letter-spacing: 6px;
   }
 }
+main .sec2 {
+  margin-top: 25px;
+}
 @media screen and (min-width: 1400px) {
-  main .sec2 .sec2-flex-box {
+  main .sec2 {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .container {
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
+  }
+}
+main .sec2 .sec2-flex-box {
+  width: 100%;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-flex-box {
+    width: 50%;
+    margin-bottom: 0;
+    text-align: left;
+    margin-top: 180px;
+    padding-left: 80px;
   }
 }
 main .sec2 .sec2-flex-box .notice {
-  font-family: "Lemon/Milk light", sans-serif;
-}
-main .sec2 .sec2-flex-box ul {
   line-height: 50px;
+  letter-spacing: 1px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(0.6em + 0.6vw);
 }
 @media screen and (min-width: 1400px) {
-  main .sec2 .sec2-flex-box ul {
-    width: 50%;
+  main .sec2 .sec2-flex-box .notice {
+    font-size: 18px;
+    line-height: 60px;
   }
 }
 main .sec2 .sec2-flex-box li {
   list-style: inside;
+  line-height: 50px;
+  font-family: "SCoreDream";
+  font-size: calc(0.6em + 0.6vw);
 }
-main .sec2 .hover2 img {
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-flex-box li {
+    font-size: 18px;
+    line-height: 60px;
+  }
+}
+main .sec2 .sec2-img img {
   width: 100%;
   display: block;
 }
-main .sec2 .hover2 {
+@media screen and (min-width: 1400px) {
+  main .sec2 .sec2-img img {
+    width: 100%;
+  }
+}
+main .sec2 .sec2-img {
   width: 100%;
   position: relative;
 }
 @media screen and (min-width: 1400px) {
-  main .sec2 .hover2 {
+  main .sec2 .sec2-img {
     width: 50%;
   }
 }
-main .sec2 .hover2 p {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
+main .sec2 .sec2-img p {
   font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(1.5em + 3vw);
+  color: white;
+  font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
   position: absolute;
@@ -816,54 +914,41 @@ main .sec2 .hover2 p {
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 1400px) {
-  main .sec2 .hover2 p {
-    font-size: 100px;
+  main .sec2 .sec2-img p {
+    font-size: 5em;
     letter-spacing: 6px;
   }
 }
-main .sec3 .sec3-flex-box {
-  display: flex;
-  justify-content: center;
-}
-main .sec3 .sec3-flex-box .menu,
-main .sec3 .sec3-flex-box .booknow {
-  width: 170px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border: #bdbdbd solid 1px;
-}
-main .sec3 .sec3-flex-box .menu button,
-main .sec3 .sec3-flex-box .booknow button {
-  font-family: "Lemon/Milk light", sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-  background: none;
-  border: none;
-}
-main .sec3 .sec3-flex-box .menu button:hover,
-main .sec3 .sec3-flex-box .booknow button:hover {
-  line-height: 0;
-  width: 170px;
-  height: 50px;
-  background-color: #bdbdbd;
-}
-main .sec4 .sec4-flex-box {
-  padding: 20px;
-  text-align: center;
-  line-height: 30px;
-  letter-spacing: 1px;
+main .sec4 .maintext {
+  margin-top: 65px;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 1400px) {
-  main .sec4 .sec4-flex-box {
-    font-size: 30px;
-    line-height: 40px;
-    letter-spacing: 2px;
+  main .sec4 .maintext {
+    margin-top: 125px;
+    margin-bottom: 125px;
   }
+}
+main .sec4 .maintext p {
+  text-align: center;
+  font-family: "SCoreDream";
+  font-size: calc(7px + 2vw);
+  line-height: calc(2em + 3vw);
+  font-weight: 200;
+}
+@media screen and (min-width: 1400px) {
+  main .sec4 .maintext p {
+    font-size: 38px;
+    line-height: 96px;
+  }
+}
+main .sec5 .sec5-flex-box {
+  margin-bottom: 100px;
 }
 @media screen and (min-width: 1400px) {
   main .sec5 .sec5-flex-box {
     display: flex;
+    margin-bottom: 200px;
   }
 }
 main .sec5 .sec5-flex-box img {
@@ -880,10 +965,10 @@ main .sec5 .hover-img1 p,
 main .sec5 .hover-img2 p,
 main .sec5 .hover-img3 p,
 main .sec5 .hover-img4 p {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
   font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(1.5em + 3vw);
+  color: white;
+  font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
   position: absolute;
@@ -897,7 +982,7 @@ main .sec5 .hover-img4 p {
 main .sec5 .hover-img2 p,
 main .sec5 .hover-img3 p,
 main .sec5 .hover-img4 p {
-    font-size: 100px;
+    font-size: 5em;
     letter-spacing: 6px;
   }
 }
