@@ -874,6 +874,95 @@ header .header_entire .menu .menu_type p {
     font-size: 1.2em;
   }
 }
+.main1 .info {
+  width: 100%;
+  height: calc(280px + 10vw);
+  min-height: 300px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2%;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info {
+    height: 320px;
+    padding: 30px;
+  }
+}
+.main1 .info .semi_container {
+  width: 89.7435897436%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container {
+    width: 93.75%;
+  }
+}
+.main1 .info .semi_container .info_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main1 .info .semi_container .info_flex div {
+  width: 50%;
+  justify-content: space-between;
+  text-align: center;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container .info_flex div {
+    width: 25%;
+  }
+}
+.main1 .info .semi_container .info_flex div:nth-child(3), .main1 .info .semi_container .info_flex div:nth-child(4) {
+  margin-top: 25px;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container .info_flex div:nth-child(3), .main1 .info .semi_container .info_flex div:nth-child(4) {
+    margin-top: 0;
+  }
+}
+.main1 .info .semi_container .info_flex div h4 {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(10px + 0.5em);
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container .info_flex div h4 {
+    font-size: 24px;
+  }
+}
+.main1 .info .semi_container .info_flex div img {
+  width: calc(50px + 5vw);
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container .info_flex div img {
+    width: 120px;
+  }
+}
+.main1 .info .semi_container .info_flex div span.rolling {
+  display: block;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(16px + 0.5em);
+  color: #f4d823;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container .info_flex div span.rolling {
+    font-size: 48px;
+    margin-top: 20px;
+  }
+}
+.main1 .info .semi_container .info_flex div p {
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(4px + 0.5em);
+  margin-top: 2px;
+}
+@media screen and (min-width: 1400px) {
+  .main1 .info .semi_container .info_flex div p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+}
 
 .main2 {
   background-size: cover;

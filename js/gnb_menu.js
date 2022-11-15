@@ -4,13 +4,11 @@ $(document).ready(function() {
         $('.menu_modal').stop().slideDown(1000);
         $('header').stop().fadeOut(1000);
         
-        $('body').on('scroll touchmove mousewheel', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            return false;
+        $('body').on('scroll touchmove mousewheel', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
             });
-
-            
         });
 
 
