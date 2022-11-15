@@ -814,7 +814,7 @@ main section p .sub {
   font-size: 12px;
 }
 main .flex-content {
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 @media screen and (min-width: 1400px) {
   main .flex-content {
