@@ -202,6 +202,13 @@
   color: #2a52be;
   border: #2a52be solid 1px;
   max-height: 54px;
+  transition-property: background-color, color;
+  transition: 300ms ease;
+
+  &:hover {
+    background-color: #2a52be;
+    color: #fff;
+  }
 
   &:first-of-type {
     margin-right: min(2.5641vw, 10px);
@@ -221,4 +228,12 @@
   color: #2a52be;
   border: #2a52be solid 1px;
   max-height: 54px;
+
+  transition-property: background-color, color;
+  transition: 300ms ease;
+
+  &:hover {
+    background-color: #2a52be;
+    color: #fff;
+  }
 }
