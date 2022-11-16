@@ -13,8 +13,21 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <script src="js/jquery.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
     <script src="./js/tabmenu.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
 </head>
+<script>
+    $(function() {
+        $('.slide_gallery').bxSlider({
+			auto: true,  // 슬라이드 자동 전환
+			autoControls: false,  // 재생/멈춤 버튼 노출
+			stopAutoOnClick: true,  // stop버튼 누르면 정지
+			pager: false,  // 블릿 버튼 노출
+			speed: 500
+		});
+	});
+</script>
 <body>
     <div class="wrapper">
         <div class="menu_modal">
@@ -252,7 +265,12 @@
                                 <div class="flex-content">
                                     <h3 class="m_title">돌잔치 프로모션</h3>
                                     <div class="photo">
-                                        <img src="./img/SpecialOffer/photo/First_Birth_Promotion/FirstBirth1.jpg" alt="FirstBirth1">
+                                        <ul class="slide_gallery">
+                                            <li><img src="./img/SpecialOffer/photo/First_Birth_Promotion/FirstBirth1.jpg" alt="FirstBirth1"></li>
+                                            <li><img src="./img/SpecialOffer/photo/First_Birth_Promotion/FirstBirth2.jpg" alt="FirstBirth2"></li>
+                                            <li><img src="./img/SpecialOffer/photo/First_Birth_Promotion/FirstBirth3.jpg" alt="FirstBirth3"></li>
+                                            <li><img src="./img/SpecialOffer/photo/First_Birth_Promotion/FirstBirth4.jpg" alt="FirstBirth4"></li>
+                                        </ul>
                                     </div>
                                     <div class="context">
                                         <h3 class="p_title">돌잔치 프로모션</h3>
@@ -280,7 +298,10 @@
                                     <div class="context">
                                         <h3>더 초이스 이즈 유어스</h3>
                                         <div class="m_photo">
-                                            <img src="./img/SpecialOffer/photo/Choice_isYours/Choice3.jpg" alt="Choice3">
+                                            <ul class="slide_gallery">
+                                                <li><img src="./img/SpecialOffer/photo/Choice_isYours/Choice3.jpg" alt="Choice3"></li>
+                                                <li><img src="./img/SpecialOffer/photo/Choice_isYours/Choice4.jpg" alt="Choice4"></li>
+                                            </ul>
                                         </div>
                                         <p class="text">ALL 미팅 플래너 – 더 초이스 이즈 유어스(The Choice is Yours) 프로그램으로 웨딩, 돌잔치와 같은 가족 모임 및 행사, 비즈니스 모임 및 브랜드 이벤트 등 다양한 미팅 및 행사 시 최대 30% 할인 및 호텔 추가 혜택으로 다음 행사를 진행하세요. All 미팅 플래너로 2022년 12월 31일까지 진행되는 모든 행사에 2배 리워드 포인트가 적립됩니다!</p>
                                         <div class="info">
@@ -296,7 +317,10 @@
                                         <button><a href="tel:02-3395-6000">문의하기</a></button>
                                     </div>
                                     <div class="p_photo">
-                                        <img src="./img/SpecialOffer/photo/Choice_isYours/Choice3.jpg" alt="Choice3">
+                                        <ul class="slide_gallery">
+                                            <li><img src="./img/SpecialOffer/photo/Choice_isYours/Choice3.jpg" alt="Choice3"></li>
+                                            <li><img src="./img/SpecialOffer/photo/Choice_isYours/Choice4.jpg" alt="Choice4"></li>
+                                        </ul>
                                     </div>
                                 </div> <!-- flex-content -->
                             </div> <!-- choice -->
@@ -304,7 +328,7 @@
                                 <div class="flex-content">
                                     <h3 class="m_title">프로포즈 앳 마리포사</h3>
                                     <div class="photo">
-                                        <img src="./img/SpecialOffer/photo/Propose_At_Mariposa/Propose1.png" alt="FirstBirth1">
+                                        <img src="./img/SpecialOffer/photo/Propose_At_Mariposa/Propose1.png" alt="Propose1">
                                     </div>
                                     <div class="context">
                                         <h3 class="p_title">프로포즈 앳 마리포사</h3>
@@ -404,7 +428,10 @@
                                     <div class="context">
                                         <h3>스펙트럼 무제한 음료 패키지</h3>
                                         <div class="m_photo">
-                                            <img src="./img/SpecialOffer/photo/Spectrum_Infinite_Drink/Spectrum_Infinite1.png" alt="Spectrum_Infinite1">
+                                            <ul class="slide_gallery2">
+                                                <li><img src="./img/SpecialOffer/photo/Spectrum_Infinite_Drink/Spectrum_Infinite1.png" alt="Spectrum_Infinite1"></li>
+                                                <li><img src="./img/SpecialOffer/photo/Spectrum_Infinite_Drink/Spectrum_Infinite2.png" alt="Spectrum_Infinite2"></li>
+                                            </ul>
                                         </div>
                                         <p class="text">다채로운 맛의 향연이 가득한 스펙트럼 뷔페를 무제한 음료 패키지와 함께 즐겨보세요. *해당 음료/주류 패키지는 뷔페 예약 후, 업장 내에서 주문하실 수 있습니다.</p>
                                         <div class="info">
@@ -420,7 +447,10 @@
                                         <button><a href="https://www.tablecheck.com/shops/fairmont-ambassador-seoul-spectrum/reserve" target="_blank">예약하기</a></button>
                                     </div>
                                     <div class="p_photo">
-                                        <img src="./img/SpecialOffer/photo/Spectrum_Infinite_Drink/Spectrum_Infinite1.png" alt="Spectrum_Infinite1">
+                                        <ul class="slide_gallery2">
+                                            <li><img src="./img/SpecialOffer/photo/Spectrum_Infinite_Drink/Spectrum_Infinite1.png" alt="Spectrum_Infinite1"></li>
+                                            <li><img src="./img/SpecialOffer/photo/Spectrum_Infinite_Drink/Spectrum_Infinite2.png" alt="Spectrum_Infinite2"></li>
+                                        </ul>
                                     </div>
                                 </div> <!-- flex-content -->
                             </div> <!-- spectrum -->
@@ -432,7 +462,12 @@
                                 <div class="flex-content">
                                     <h3 class="m_title">어텀 로맨틱 이스케이프</h3>
                                     <div class="photo">
-                                        <img src="./img/SpecialOffer/photo/Autumn_Romantic_Escape/Autumn_Romantic_Escape1.jpg" alt="romantic1">
+                                        <ul class="slide_gallery3">
+                                            <li><img src="./img/SpecialOffer/photo/Autumn_Romantic_Escape/Autumn_Romantic_Escape1.jpg" alt="romantic1"></li>
+                                            <li><img src="./img/SpecialOffer/photo/Autumn_Romantic_Escape/Autumn_Romantic_Escape2.jpg" alt="romantic2"></li>
+                                            <li><img src="./img/SpecialOffer/photo/Autumn_Romantic_Escape/Autumn_Romantic_Escape3.jpg" alt="romantic3"></li>
+                                            <li><img src="./img/SpecialOffer/photo/Autumn_Romantic_Escape/Autumn_Romantic_Escape4.png" alt="romantic4"></li>
+                                        </ul>
                                     </div>
                                     <div class="context">
                                         <h3 class="p_title">어텀 로맨틱 이스케이프</h3>
@@ -457,7 +492,11 @@
                                     <div class="context">
                                         <h3>ALL 아시아 프로모션</h3>
                                         <div class="m_photo">
-                                            <img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion1.jpg" alt="asia1">
+                                            <ul class="slide_gallery3">
+                                                <li><img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion1.jpg" alt="asia1"></li>
+                                                <li><img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion2.jpg" alt="asia2"></li>
+                                                <li><img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion3.jpg" alt="asia3"></li>
+                                            </ul>
                                         </div>
                                         <p class="text">도심 속에서 즐기는 여유! "아코르 아시아 프로모션 (Asia Like Never Before)" 스펙트럼 조식 뷔페 포함한 객실 10% 할인 혜택을 즐기세요.</p>
                                         <div class="info">
@@ -473,7 +512,11 @@
                                         <button><a href="https://all.accor.com/ssr/app/accor/rates/B200/index.ko.shtml?token=iKJBGdYIG43JG8WyG0bwAheZWwACYW69Xp06dlcWs3FA3fKBnWeRHZpM7-Z29Aoapmtcp9R5nbYovvMO4fPmJN3YkyGnUljv9T2bazySY_tisXN5bQNfwK9fupMH4qg7ucivYTSQAVmPmB0rcj5dwYaXgSOrAILW9SWHgO4d7wzHhA3TYjPw13OJrj8ieoQ_HeRhy27YvIxzYca5cdBWrRuaHNonCksiyY6fXFPnVDh42uY-5VMGyUZNCqck98ZF-2NP6ufyDzsTrAPwUs4eDr_7d3BO6PkqJY_INc57y9GDt7hFq2h9eksC81iHaCHNGZksPalo-cTTz4cEu51OSVIm_bgqRxv_9huFbBpfnVoXHBuqCB427JWdeQS052KHoy0Qk_rE5CB2Nyb_BYT1nV254RttsWp7bCPo3LShtUBp_H2zRi_Cj5kJMAogmMuUewRK8bP84U0VDlyDB8XIYAjHbP2JiPf0Zy-FC3LZ2lgCtB-_KxaYrHA7eKB0sM2X_C_GttloNZZ6Su-fq7Pl9f8W13mgolmFGQpW0qZLYn2pClNgPxkfwSg51VZJmVLlC2EB3rTaXGugXAfHT7lnZUGwAgN_5Q4VmiZn2-eNiOZ2O6NQZyf4jnIYE8G5XEnTvmT0suk4LExUWCZlWLUrFgd0tq8hYcqExdICfAW77TtgnDFhHZX3xcJhqiZ9gkTLaWPhAr9WbH0SF6Dh38hkrwtJ3gkPH-lL4FqfCSrNsi0H7TbBn5FuGvscL9UF7pVaicC3gO-fxIqesiAV4shhNc8Tg6NIBf1uJJsIHzb6ouzpmnkX6Mo-6EBKr2J4101sKg-d6sQpzX2K9Rl6Sb8B7oCSlsUHkC-D7H6EKkY7CiXYoUDFzY9aE0ZqDAvvY7RFZqKbWsP2kIcy5g3kHyO4nA9t-IMvWcVTMESbexcLJzceugZsfmqukwISGhKzjnNbg40hPIOADjBNmno9m82NPkzTfT5ErJ-J-NuBZHsMIH8cukyAnTFZhzohaQ5MaThcIEdcGUDaE6p2BhKFZBZm-h5hsv3NlovmuXpPsH1H2ufgmt33tb6xqG_gRR1RHGUADGLS86HfX2yO-9JP0O2LXpB6AmLHJATrXWnoP7T3lSiJeRX-6LIFqmxwCEdxkLn3ikqRHkh0__r9c8sKYHgvIo6jNkLNkjys95wMQC1tkt3sgM47ZW2FDWNhMExjeLIf-pIN1zwoR-YQJxnGodo4w-3n9bw&compositions=1&stayplus=false&snu=false&accessibleRooms=false&utm_campaign=hotel_website_search&utm_medium=accor_regional_websites&_ga=2.137650357.488141237.1667527677-711840723.1665988605&utm_source=hotelwebsite_B200" target="_blank">예약하기</a></button>
                                     </div>
                                     <div class="p_photo">
-                                        <img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion1.jpg" alt="asia1">
+                                        <ul class="slide_gallery3">
+                                            <li><img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion1.jpg" alt="asia1"></li>
+                                            <li><img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion2.jpg" alt="asia2"></li>
+                                            <li><img src="./img/SpecialOffer/photo/All_Aisa_Promotion/All_Aisa_Promotion3.jpg" alt="asia3"></li>
+                                        </ul>
                                     </div>
                                 </div> <!-- flex-content -->
                             </div> <!-- asia -->
@@ -481,7 +524,18 @@
                                 <div class="flex-content">
                                     <h3 class="m_title">VIP 프리빌리지 멤버십</h3>
                                     <div class="photo">
-                                        <img src="./img/SpecialOffer/photo/VIP_Membership/vip1.jpg" alt="menbership 1">
+                                        <ul class="slide_gallery3">
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip1.jpg" alt="menbership 1"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip2.jpg" alt="menbership 2"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip3.jpg" alt="menbership 3"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip4.jpg" alt="menbership 4"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip5.jpg" alt="menbership 5"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip6.jpg" alt="menbership 6"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip7.jpg" alt="menbership 7"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip_premium.jpg" alt="vip_premium"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip_gold.jpg" alt="vip_gold"></li>
+                                            <li><img src="./img/SpecialOffer/photo/VIP_Membership/vip_black.jpg" alt="vip_black"></li>
+                                        </ul>
                                     </div>
                                     <div class="context">
                                         <h3 class="p_title">VIP 프리빌리지 멤버십</h3>
