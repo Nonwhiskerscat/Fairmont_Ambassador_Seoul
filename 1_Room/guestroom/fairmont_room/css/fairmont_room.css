@@ -85,6 +85,10 @@ li {
   display: none;
 }
 
+.rotate_180 {
+  transform: rotateX(180deg);
+}
+
 .not_scroll {
   position: fixed;
   overflow: hidden;
@@ -1138,12 +1142,10 @@ main .room_gall .gall_main ul {
   display: flex;
   justify-content: space-between;
   width: 200%;
-  transform: translateX(-25%);
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_main ul {
     width: 150%;
-    transform: translateX(-17.5%);
   }
 }
 main .room_gall .gall_main ul li {
@@ -1232,7 +1234,7 @@ main .room_types .room_gnb ul {
 @media screen and (min-width: 1400px) {
   main .room_types .room_gnb ul {
     flex-direction: row;
-    width: 50%;
+    width: 60%;
     justify-content: space-between;
     max-width: 1380px;
     margin: 0 auto;
@@ -1243,8 +1245,10 @@ main .room_types .room_gnb ul li {
   font-size: calc(14px + 0.5vw);
   cursor: pointer;
   font-weight: 200;
+  width: 100%;
   color: #bdbdbd;
-  padding: 10px;
+  padding: 10px 0;
+  text-align: center;
 }
 @media screen and (min-width: 1400px) {
   main .room_types .room_gnb ul li {
@@ -1303,14 +1307,25 @@ main .room_types .types_flex .types_left .type_img {
   overflow: hidden;
   margin: 0 auto;
 }
+@media screen and (min-width: 1400px) {
+  main .room_types .types_flex .types_left .type_img {
+    width: 580px;
+    height: 435px;
+    overflow: hidden;
+  }
+}
 main .room_types .types_flex .types_left .type_img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+main .room_types .types_flex .types_right {
+  position: relative;
+}
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right {
     width: 680px;
+    height: 450px;
   }
 }
 main .room_types .types_flex .types_right h4 {
@@ -1415,6 +1430,7 @@ main .room_types .types_flex .types_right .button {
 @media screen and (min-width: 1400px) {
   main .room_types .types_flex .types_right .button {
     margin-top: 40px;
+    bottom: 0;
   }
 }
 main .room_types .types_flex .types_right .button button {
@@ -1913,7 +1929,7 @@ main .notice .notice_flex > div .title em::after {
   content: "";
   display: block;
   width: 100%;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #bdbdbd;
   margin: 0 0 0 0;
   padding-top: 5px;
 }
