@@ -11,6 +11,21 @@ $(document).ready(function() {
             });
         });
 
+        $('.block').on('click', function(e){
+            e.preventDefault();
+        });
+
+        // $('.mid_menu ul').hide();
+
+        $('.mid_menu').click(function() { 
+
+            if($('.mid_menu ul').parents().next().childNodes().css('display') == 'block') { 
+                $(this).next().slideUp(300); // 클래스 해제, p숨기기
+            } else {
+                $(this).next().slideDown(300); // 클래스 적용, p보이기
+            }
+        });
+
 
         function close_menu() {
             $('.menu_modal').stop().slideUp(1000);
