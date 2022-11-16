@@ -89,13 +89,6 @@ li {
   transform: rotateX(180deg);
 }
 
-.not_scroll {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
 .scale_80 {
   transform: scale(0.8);
   transform-origin: top center;
@@ -104,6 +97,13 @@ li {
 .h3_first {
   opacity: 0.1;
   transform: translateY(150px);
+}
+
+.not_scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .menu_modal {
