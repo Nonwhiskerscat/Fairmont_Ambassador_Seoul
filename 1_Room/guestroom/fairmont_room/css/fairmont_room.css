@@ -85,6 +85,13 @@ li {
   display: none;
 }
 
+.not_scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .scale_80 {
   transform: scale(0.8);
   transform-origin: top center;
@@ -197,6 +204,7 @@ li {
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_lan option:hover {
   background-color: white;
   color: #333333;
+  transition: all 0.5s;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_sns {
   order: 1;
@@ -223,11 +231,23 @@ li {
     margin-left: 10px;
   }
 }
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_sns ul li img:hover {
+  transform: scale(1.25);
+  transition: 1s;
+}
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right {
   display: flex;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login {
   transform: translateX(-20px);
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login:hover img {
+  transform: scale(1.25) rotateY(360deg);
+  transition: 1s;
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login:hover p {
+  color: #ffef5a;
+  transition: 1s;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login a {
   display: flex;
@@ -253,6 +273,14 @@ li {
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close {
   display: flex;
   cursor: pointer;
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close:hover .close_modal {
+  transform: scale(1.25) rotateY(360deg);
+  transition: 1s;
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close:hover p {
+  color: #ffef5a;
+  transition: 1s;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal {
   position: relative;
@@ -602,7 +630,7 @@ li {
 
 header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -646,6 +674,7 @@ header .header_entire .menu {
   align-items: center;
   text-align: right;
   margin-top: 5px;
+  cursor: pointer;
 }
 @media screen and (min-width: 1400px) {
   header .header_entire .menu {
@@ -657,7 +686,6 @@ header .header_entire .menu .menu_bar {
   display: block;
   width: 16px;
   height: 13px;
-  cursor: pointer;
   position: relative;
 }
 header .header_entire .menu .menu_bar span {
@@ -1204,7 +1232,7 @@ main .room_types .room_gnb ul {
 @media screen and (min-width: 1400px) {
   main .room_types .room_gnb ul {
     flex-direction: row;
-    width: 30%;
+    width: 50%;
     justify-content: space-between;
     max-width: 1380px;
     margin: 0 auto;
@@ -1390,6 +1418,7 @@ main .room_types .types_flex .types_right .button {
   }
 }
 main .room_types .types_flex .types_right .button button {
+  cursor: pointer;
   width: 45%;
   height: 40px;
   font-family: "SCoreDream";
@@ -1421,13 +1450,8 @@ main .room_types .types_flex .types_right .button button:last-child:hover {
   background-color: #333;
   color: white;
 }
-main .room_modal {
-  margin-top: 65px;
-}
-@media screen and (min-width: 1400px) {
-  main .room_modal {
-    margin-top: 125px;
-  }
+main .room_modal .closer {
+  cursor: pointer;
 }
 main .room_modal .closer p {
   font-family: "SCoreDream";
@@ -1435,7 +1459,6 @@ main .room_modal .closer p {
   font-weight: 400;
   text-align: center;
   width: 100%;
-  padding: 10px 0;
   border-radius: 5px;
 }
 @media screen and (min-width: 1400px) {
@@ -1878,6 +1901,7 @@ main .notice .notice_flex > div:first-child {
   }
 }
 main .notice .notice_flex > div .title em {
+  cursor: pointer;
   position: relative;
   font-family: "SCoreDream";
   font-size: calc(0.8em + 0.8vw);

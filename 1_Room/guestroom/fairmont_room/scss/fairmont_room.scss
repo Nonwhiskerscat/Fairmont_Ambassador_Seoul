@@ -5,7 +5,14 @@
 
 .no {
     display: none;
-}   
+}
+
+.not_scroll{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
 
 .scale_80 {
     transform: scale(0.8);
@@ -99,6 +106,8 @@
                                 display: inline;
                                 font-size: 1.2em;
                             }
+
+                            
                             
                         }
     
@@ -128,6 +137,7 @@
                             &:hover{
                                 background-color: white;
                                 color: #333333;
+                                transition: all 0.5s;
                             }
                         }
                     }
@@ -152,6 +162,11 @@
                                 @include responsive(pc-screens) {
                                     margin-left: 10px;
                                 }
+
+                                img:hover {
+                                    transform: scale(1.25);
+                                    transition: 1s;
+                                }
                                 
                             }
                         }
@@ -167,6 +182,20 @@
                         @include responsive(pc-screens){
                             // margin-right: calc(10px + 3vw);
                         }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         a{
                             display: flex;
@@ -181,6 +210,8 @@
                                     width: 22px;
                                     height: 22px;
                                 }
+
+                                
     
                             }
     
@@ -197,6 +228,20 @@
                     .menu_close {
                         display: flex;
                         cursor:pointer;
+
+                        &:hover {
+                            .close_modal {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         .close_modal{
                             position: relative;
@@ -461,6 +506,8 @@
                         display: flex;
                         flex-direction: row;
                         flex-wrap: wrap;
+
+                        
     
                         @include responsive(pc-screens) {
                             flex-direction: column;
@@ -523,6 +570,8 @@
                             ul{
                                 padding-top: 10px;
                                 display: none;
+
+                                
     
                                 li{
                                     list-style: '- ' inside;
@@ -577,7 +626,7 @@
 header{
     // display: none;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -622,6 +671,7 @@ header{
             align-items: center;
             text-align: right;
             margin-top: 5px;
+            cursor:pointer;
     
             @include responsive(pc-screens){
                 width: 80px;
@@ -632,7 +682,6 @@ header{
                 display:block;
                 width: 16px;
                 height: 13px;
-                cursor:pointer;
                 position:relative;
 
                 span {
@@ -1198,7 +1247,7 @@ main {
 
                 @include responsive(pc-screens) {
                     flex-direction: row;
-                    width: 30%;
+                    width: 50%;
                     justify-content: space-between;
                     max-width: 1380px;
                     margin: 0 auto;
@@ -1401,6 +1450,7 @@ main {
                     }
 
                     button {
+                        cursor: pointer;
                         width: 45%;
                         height: 40px;
                         @include type_custom(calc(0.5em + 1vw), $common_font);
@@ -1446,20 +1496,21 @@ main {
 
     .room_modal {
 
-        margin-top: $mid_margin_m;
+        // margin-top: $mid_margin_m;
 
-        @include responsive(pc-screens) {
-            margin-top: $mid_margin;
-        }
+        // @include responsive(pc-screens) {
+        //     margin-top: $mid_margin;
+        // }
 
         .closer {
+            cursor: pointer;
 
             p{
                 @include type_custom(calc(1em + 0.5vw),$common_font);
                 font-weight: 400;
                 text-align: center;
                 width: 100%;
-                padding: 10px 0;
+                // padding: 10px 0;
                 border-radius: 5px;
 
                 @include responsive(pc-screens) {
@@ -1838,6 +1889,7 @@ main {
 
                     .title {
                         em {
+                            cursor: pointer;
                             position: relative;
                             @include type_custom(calc(0.8em + 0.8vw), $common_font);
                             font-style: normal;

@@ -3,7 +3,9 @@
 @import "./mixin.scss";
 // @import url(https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage/min.css);
 
-
+.no {
+    display: none;
+}
 
 .menu_modal {
     // display: none;
@@ -91,6 +93,8 @@
                                 display: inline;
                                 font-size: 1.2em;
                             }
+
+                            
                             
                         }
     
@@ -120,6 +124,7 @@
                             &:hover{
                                 background-color: white;
                                 color: #333333;
+                                transition: all 0.5s;
                             }
                         }
                     }
@@ -144,6 +149,11 @@
                                 @include responsive(pc-screens) {
                                     margin-left: 10px;
                                 }
+
+                                img:hover {
+                                    transform: scale(1.25);
+                                    transition: 1s;
+                                }
                                 
                             }
                         }
@@ -159,6 +169,20 @@
                         @include responsive(pc-screens){
                             // margin-right: calc(10px + 3vw);
                         }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         a{
                             display: flex;
@@ -173,6 +197,8 @@
                                     width: 22px;
                                     height: 22px;
                                 }
+
+                                
     
                             }
     
@@ -189,6 +215,20 @@
                     .menu_close {
                         display: flex;
                         cursor:pointer;
+
+                        &:hover {
+                            .close_modal {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         .close_modal{
                             position: relative;
@@ -453,6 +493,8 @@
                         display: flex;
                         flex-direction: row;
                         flex-wrap: wrap;
+
+                        
     
                         @include responsive(pc-screens) {
                             flex-direction: column;
@@ -515,6 +557,8 @@
                             ul{
                                 padding-top: 10px;
                                 display: none;
+
+                                
     
                                 li{
                                     list-style: '- ' inside;
@@ -826,6 +870,7 @@ header{
     }
 
     .contents{
+        position: relative;
         text-align: center;
         padding-top: $big_margin_m;
 
@@ -850,6 +895,7 @@ header{
                 letter-spacing: 2px;
                 font-weight: 400;
                 margin-bottom: calc(0.5em + 0.5vw);
+                display: none;
     
     
                 @include responsive(pc-screens) {
@@ -882,6 +928,7 @@ header{
                 line-height: calc(1em + 1.5vw);
                 font-weight: 300;
                 letter-spacing: 2px;
+                display: none;
                 
                 span {
                     color: #ffef5a;

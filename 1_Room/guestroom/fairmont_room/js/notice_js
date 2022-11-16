@@ -1,0 +1,12 @@
+$(document).ready(function() {
+ //.room_type
+
+    $('.room_modal').hide();
+    $('.types_right .button button:first-child').addClass('no');
+    
+    $('.notice .title').on('click', function(){
+        $('.accord').slideDown(1000);
+    });
+
+    
+});

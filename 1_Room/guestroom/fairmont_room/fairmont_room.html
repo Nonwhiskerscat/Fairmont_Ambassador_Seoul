@@ -12,10 +12,20 @@
     <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+
+    <!--=======================공용 스크립트 부분=======================-->
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script>
-    <!-- <script src="./js/jquery.smoothwheel.js"></script> -->
+
+    <!--=======================룸 전용 스크립트 부분=======================-->
+    <script src="./js/header_scroll.js"></script>
+    <script src="./js/room_btn.js"></script>
+    <script src="./js/room_modal.js"></script>
+    <script src="./js/room_type.js"></script>
+    <script src="./js/notice_js"></script>
+
+    
 </head>
 <body>
     <div class="wrapper">
@@ -68,8 +78,11 @@
                 <div class="menu_main">
                     <div class="menu_main_left">
                         <div class="img">
-                            <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
-                            <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
+                            <a href="./index.html">
+                                <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                                <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
+                            </a>
+                            
                         </div>
                         <div class="contents">
                             <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
@@ -84,7 +97,7 @@
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu">객실
                                         <ul>
-                                            <li><a href="#">페어몬트 룸</a></li>
+                                            <li><a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
                                             <li><a href="#">페어몬트 디럭스</a></li>
                                             <li><a href="#">페어몬트 골드</a></li>
                                         </ul>
@@ -119,7 +132,7 @@
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu"><a href="#">페어몬트 골드 라운지</a></li>
                                     <li class="mid_menu"><a href="#">페어몬트 피트</a></li>
-                                    <li class="mid_menu" onclick="alert('준비중입니다.')"><a href="#">페어몬트 스파(준비중)</a></li>
+                                    <li class="mid_menu block" onclick="alert('준비중입니다.')"><a href="#">페어몬트 스파(준비중)</a></li>
                                 </ul>
                             </li>
 
@@ -305,6 +318,7 @@
                 </div><!--roomgall-->
     
                 <div class="room_types">
+                    <div class="container">
                     <h3>Types</h3>
                     <div class="room_gnb">
                         <ul>
@@ -314,7 +328,6 @@
                         </ul>
                     </div>
                     
-                    <div class="container">
                         <div class="three_types">
                             <div class="king">
                                 <div class="types_flex">
@@ -348,14 +361,13 @@
                                         </ul>
                                         <div class="button">
                                             <button>간략히 보기</button>
-                                            <button class="no">자세히 보기</button>
+                                            <button>자세히 보기</button>
                                             <button>예약하기</button>
                                         </div><!--button-->
                                     </div><!--types_right-->
                                 </div><!--types_flex-->
     
                                 <div class="room_modal">
-                                    <div class="container">
                                         <div class="closer">
                                             <p>접기</p>
                                         </div><!--closer-->
@@ -398,12 +410,10 @@
                                                 </li>
                                             </ul>
                                         </div><!--room_in-->
-                                    </div><!--container-->
             
                 
                                     <div class="room_amenity">
                                         <h4>Amenity</h4>
-                                        <div class="container">
                                             <div class="ame_grp">
                                                 <div class="ame_bed">
                                                     <ul>
@@ -517,19 +527,16 @@
                                                 </div><!--ame_etc-->
                                             </div><!--ame_grp-->
             
-                                        </div><!--container-->
                                     </div><!--room_amenity-->
                 
                                     <div class="room_smoke">
-                                        <div class="container">
-                                            <h4>NO-SMOKING</h4>
-                                            <div class="img">
-                                                <img src="./img/fairmont_room/icon/icon_smoke.png" alt="금연마크">
-                                            </div>
-                                            <p>
-                                                <span>페어몬트 앰배서더 호텔의 객실은 모두 금연 구역</span>입니다, 흡연 적발 시 <span>숙박료 관계 없이 자동 퇴실 조치</span>와 <span></span>호텔 자체 과태료</span>가 부과될 수 있고 심지어 호텔 내 인화물질로 인한 화재 위험으로 이어질 수 있으니 주의하십시오.      
-                                            </p>
-                                        </div><!--container-->  
+                                        <h4>NO-SMOKING</h4>
+                                        <div class="img">
+                                            <img src="./img/fairmont_room/icon/icon_smoke.png" alt="금연마크">
+                                        </div>
+                                        <p>
+                                            <span>페어몬트 앰배서더 호텔의 객실은 모두 금연 구역</span>입니다, 흡연 적발 시 <span>숙박료 관계 없이 자동 퇴실 조치</span>와 <span></span>호텔 자체 과태료</span>가 부과될 수 있고 심지어 호텔 내 인화물질로 인한 화재 위험으로 이어질 수 있으니 주의하십시오.      
+                                        </p>
                                     </div><!--room_smoke-->
             
                                     <div class="container">
@@ -991,8 +998,8 @@
                         </div><!--three_types-->               
                         
     
-                    </div><!--room_types-->
-                </div><!--container-->
+                    </div><!--comtainer-->
+                </div><!--room_types-->
 
                 <div class="container">
                     <div class="notice">

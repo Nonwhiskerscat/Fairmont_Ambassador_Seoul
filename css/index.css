@@ -80,6 +80,10 @@ li {
   list-style: none;
 }
 
+.no {
+  display: none;
+}
+
 .menu_modal {
   position: fixed;
   left: 0;
@@ -187,6 +191,7 @@ li {
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_lan option:hover {
   background-color: white;
   color: #333333;
+  transition: all 0.5s;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_sns {
   order: 1;
@@ -213,11 +218,23 @@ li {
     margin-left: 10px;
   }
 }
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_sns ul li img:hover {
+  transform: scale(1.25);
+  transition: 1s;
+}
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right {
   display: flex;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login {
   transform: translateX(-20px);
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login:hover img {
+  transform: scale(1.25) rotateY(360deg);
+  transition: 1s;
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login:hover p {
+  color: #ffef5a;
+  transition: 1s;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login a {
   display: flex;
@@ -243,6 +260,14 @@ li {
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close {
   display: flex;
   cursor: pointer;
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close:hover .close_modal {
+  transform: scale(1.25) rotateY(360deg);
+  transition: 1s;
+}
+.menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close:hover p {
+  color: #ffef5a;
+  transition: 1s;
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close .close_modal {
   position: relative;
@@ -823,6 +848,7 @@ header .header_entire .menu .menu_type p {
   object-fit: cover;
 }
 .main1 .contents {
+  position: relative;
   text-align: center;
   padding-top: 100px;
 }
@@ -847,6 +873,7 @@ header .header_entire .menu .menu_type p {
   letter-spacing: 2px;
   font-weight: 400;
   margin-bottom: calc(0.5em + 0.5vw);
+  display: none;
 }
 @media screen and (min-width: 1400px) {
   .main1 .contents .semi_container h2 {
@@ -880,6 +907,7 @@ header .header_entire .menu .menu_type p {
   line-height: calc(1em + 1.5vw);
   font-weight: 300;
   letter-spacing: 2px;
+  display: none;
 }
 .main1 .contents .semi_container p span {
   color: #ffef5a;
