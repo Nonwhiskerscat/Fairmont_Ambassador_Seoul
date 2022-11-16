@@ -685,28 +685,33 @@ main {
 main {
   section.intro {
     h2 {
+      margin: 0 auto;
       padding: 350px 0;
       text-align: center;
       font-size: min(6.6667vw, 68px);
-      white-space: nowrap;
+      width: 89.7436vw;
+      max-width: 900px;
       letter-spacing: -0.05em;
+      white-space: normal;
       color: #2a52be;
       font-weight: 700;
 
       @include responsive(pc-screens) {
         padding: 390px 0;
-        font-size: $em80px;
-        white-space: nowrap;
+      }
+
+      span {
+        margin-right: -1.0256vw;
+        color: red;
       }
     }
   } //section.intro
 
   section.infomation {
-    height: 850px;
-    background-color: red;
+    visibility: hidden;
+    opacity: 0;
     width: 100%;
 
-    // opacity: 0;
     h3 {
       font-size: min(6.6667vw, 28px);
       letter-spacing: -0.01em;
@@ -720,13 +725,10 @@ main {
     }
 
     .info-content-box {
-      display: none;
+      // display: none;
       display: flex;
       flex-direction: column-reverse;
       white-space: nowrap;
-      // width: 89.74358974358974%;
-
-      display: none;
 
       @include responsive(pc-screens) {
         width: 1200px;
@@ -794,8 +796,10 @@ main {
         max-height: 500px;
         overflow: hidden;
         background: red;
+        z-index: 1000;
 
         @include responsive(pc-screens) {
+          // height: 500px;
           width: 50%;
           margin: 0;
           max-width: none;
@@ -1611,7 +1615,7 @@ footer {
 //modal
 
 #modal-wrap {
-  // display: none;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1724,6 +1728,9 @@ footer {
       display: flex;
       align-items: center;
 
+      .focuse-img {
+        border: 3px solid #fff;
+      }
       li {
         width: 10.5vw;
         height: 7.5vw;

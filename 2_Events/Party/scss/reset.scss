@@ -16,6 +16,9 @@ html {
   &::-webkit-scrollbar-track {
     border-radius: 8px;
   }
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 * {
