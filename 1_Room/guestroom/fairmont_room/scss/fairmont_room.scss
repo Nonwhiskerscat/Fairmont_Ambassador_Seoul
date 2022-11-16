@@ -23,6 +23,11 @@
     transform-origin: top center;
 }
 
+.h3_first {
+    opacity: 0.1;
+    transform: translateY(150px);
+}
+
 //header
 .menu_modal {
     // display: none;
@@ -630,7 +635,7 @@
 header{
     // display: none;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -1138,8 +1143,8 @@ main {
     } //.room_int
 
     .room_gall {
+        position: relative;
         margin: 0 auto;
-        max-height: 100vh;
         margin-top: $small_margin_m;
 
         @include responsive(pc-screens){
@@ -1152,26 +1157,31 @@ main {
 
         .gall_main {
             width: 100%;
+            max-height: 80vh;
             overflow: hidden;
+
+
+            @include responsive(pc-screens) {
+                max-height: 95vh;
+            }
 
             ul {
                 display: flex;
+                position: relative;
                 justify-content: space-between;
-                width: 200%;
-                // transform: translateX(-25%);
+                width: 300%;
 
                 @include responsive(pc-screens) {
-                    width: 150%;
-                    // transform: translateX(-17.5%);
+                    min-height: 100%;
                 }
     
                 li {
-                    width: 50%;
+                    width: 100%;
                     overflow: hidden;
                     margin: 0 auto;
 
                     @include responsive(pc-screens) {
-                        width: 50%;
+                        width: 60%;
                     }
 
                     img {
@@ -1191,36 +1201,47 @@ main {
         } //gall_main
 
         .gall_navi {
-            width: 30%;
+            position: absolute;
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
             align-items: center;
-            margin-top: $small_margin_m;
+            position: bottom;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
 
             
             @include responsive(pc-screens) {
-                width: 300px;
-                margin-top: $small_margin;
+                // width: 300px;
+                bottom: 20px;
+                
             }
 
             li {
-                img {
-                    width: 50%;
+                span {
+                    cursor: pointer;
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background-color: white;
+                    opacity: 0.5;
+                    margin-right: 10px;
 
                     @include responsive(pc-screens) {
-                        width: 80%;
+                        width: 50px;
+                        height: 3px;
                     }
-                }
 
-                &:nth-child(2) {
-                    display: none;
-                    @include type_custom(calc(1em + 1vw),$common_font);
-                    transform: translateX(-35%);
-                    color: #bdbdbd;
+                    &.longer {
+                        width: 100px;
+                        opacity: 1.0;
+                        transition: all 1s;
 
-                    @include responsive(pc-screens) {
-                        font-size: 3em;
+                        @include responsive(pc-screens) {
+                            width: 150px;
+                            height: 3px;
+                        }
                     }
                 }
             } //li
@@ -1228,6 +1249,7 @@ main {
         }
         
     }//.room_gall
+    
 
     .room_types {
         margin-top: $big_margin_m;

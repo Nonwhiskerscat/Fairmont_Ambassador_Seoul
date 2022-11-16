@@ -21,9 +21,11 @@
     <!--=======================룸 전용 스크립트 부분=======================-->
     <script src="./js/header_scroll.js"></script>
     <script src="./js/room_btn.js"></script>
+    <script src="./js/room_gall.js"></script>
     <script src="./js/room_modal.js"></script>
     <script src="./js/room_type.js"></script>
-    <script src="./js/notice_js"></script>
+    <script src="./js/notice.js"></script>
+    <script src="./js/animations.js"></script>
 
     
 </head>
@@ -304,17 +306,27 @@
                     <h3>Gallery</h3>
                     <div class="gall_main">
                         <ul>
-                            <li><img class = "small_img" src="./img/fairmont_room/photo/gal1.jpg" alt="갤러리1"></li>
-                            <li><img src="./img/fairmont_room/photo/gal2.jpg" alt="갤러리2"></li>
-                            <li><img class = "small_img" src="./img/fairmont_room/photo/gal3.jpg" alt="갤러리3"></li>
+                            <li id="list1">
+                                <img src="./img/fairmont_room/photo/gal1.jpg" alt="갤러리1">
+                            </li>
+                            <li id="list2">
+                                <img src="./img/fairmont_room/photo/gal2.jpg" alt="갤러리2">
+                            </li>
+                            <li id="list3">
+                                <img src="./img/fairmont_room/photo/gal3.jpg" alt="갤러리3">
+                            </li>
                         </ul>
                     </div><!--gall_main-->
                     
-                    <div class="gall_navi">
-                        <li><img src="./img/fairmont_room/icon/nav_l.png" alt="왼쪽화살표"></li>
-                        <li><p>2</p></li>
-                        <li><img src="./img/fairmont_room/icon/nav_r.png" alt="오른쪽화살표"></li>
-                    </div>
+                    <ul class="gall_navi">
+                        <li rel="list1"><span class="longer"></span></li>
+                        <li rel="list2"><span></span></li>
+                        <li rel="list3"><span></span></li>
+                    </ul>
+
+
+
+
                 </div><!--roomgall-->
     
                 <div class="room_types">

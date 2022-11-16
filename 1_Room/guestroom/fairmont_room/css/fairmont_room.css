@@ -101,6 +101,11 @@ li {
   transform-origin: top center;
 }
 
+.h3_first {
+  opacity: 0.1;
+  transform: translateY(150px);
+}
+
 .menu_modal {
   position: fixed;
   left: 0;
@@ -634,7 +639,7 @@ li {
 
 header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -1112,8 +1117,8 @@ main .room_int h3.last span {
   font-weight: 400;
 }
 main .room_gall {
+  position: relative;
   margin: 0 auto;
-  max-height: 100vh;
   margin-top: 25px;
 }
 @media screen and (min-width: 1400px) {
@@ -1136,26 +1141,33 @@ main .room_gall h3 {
 }
 main .room_gall .gall_main {
   width: 100%;
+  max-height: 80vh;
   overflow: hidden;
+}
+@media screen and (min-width: 1400px) {
+  main .room_gall .gall_main {
+    max-height: 95vh;
+  }
 }
 main .room_gall .gall_main ul {
   display: flex;
+  position: relative;
   justify-content: space-between;
-  width: 200%;
+  width: 300%;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_main ul {
-    width: 150%;
+    min-height: 100%;
   }
 }
 main .room_gall .gall_main ul li {
-  width: 50%;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_main ul li {
-    width: 50%;
+    width: 60%;
   }
 }
 main .room_gall .gall_main ul li img {
@@ -1169,37 +1181,45 @@ main .room_gall .gall_main ul li img.small_img {
   opacity: 0.3;
 }
 main .room_gall .gall_navi {
-  width: 30%;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
-  margin-top: 25px;
+  position: bottom;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media screen and (min-width: 1400px) {
   main .room_gall .gall_navi {
-    width: 300px;
-    margin-top: 50px;
+    bottom: 20px;
   }
 }
-main .room_gall .gall_navi li img {
-  width: 50%;
+main .room_gall .gall_navi li span {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  opacity: 0.5;
+  margin-right: 10px;
 }
 @media screen and (min-width: 1400px) {
-  main .room_gall .gall_navi li img {
-    width: 80%;
+  main .room_gall .gall_navi li span {
+    width: 50px;
+    height: 3px;
   }
 }
-main .room_gall .gall_navi li:nth-child(2) {
-  display: none;
-  font-family: "SCoreDream";
-  font-size: calc(1em + 1vw);
-  transform: translateX(-35%);
-  color: #bdbdbd;
+main .room_gall .gall_navi li span.longer {
+  width: 100px;
+  opacity: 1;
+  transition: all 1s;
 }
 @media screen and (min-width: 1400px) {
-  main .room_gall .gall_navi li:nth-child(2) {
-    font-size: 3em;
+  main .room_gall .gall_navi li span.longer {
+    width: 150px;
+    height: 3px;
   }
 }
 main .room_types {
