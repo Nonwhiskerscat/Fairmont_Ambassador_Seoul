@@ -808,6 +808,15 @@ main {
             justify-content: space-between;
             padding-bottom: 320px;
         }
+        
+        .slide_gallery {
+            width: 100%;
+
+            @include responsive(pc-screens) {
+                margin: 0 auto;
+                width: 680px;
+            }
+        }
     }
 
     .m_title {
@@ -839,6 +848,12 @@ main {
     }
 
     .photo {
+        width: 100%;
+
+        @include responsive(pc-screens){
+            width: 680px;
+        }
+
         img {
             width: 100%;
 
@@ -849,6 +864,10 @@ main {
     }
 
     .p_photo {
+        @include responsive(pc-screens){
+            width: 680px;
+        }
+
         img {
             width: 100%;
             display: none;
@@ -861,8 +880,15 @@ main {
     }
 
     .m_photo {
+        width: 100%;
+        
+        @include responsive(pc-screens){
+            width: 680px;
+        }
+
         img {
             width: 100%;
+            display: block;
 
             @include responsive(pc-screens){
                 display: none;

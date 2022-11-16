@@ -794,24 +794,39 @@ main .sec1 .container .flex-box .menu-flex-box .menu a {
     font-size: 18px;
   }
 }
-main .sec1 .container .sec1-img {
+main .sec1 .container .kind_wrap {
   width: 100%;
-  margin-bottom: 25px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 @media screen and (min-width: 1400px) {
-  main .sec1 .container .sec1-img {
+  main .sec1 .container .kind_wrap {
     width: 50%;
-    margin-bottom: 0;
   }
 }
-main .sec1 .container .sec1-img img {
-  width: 100%;
-  display: block;
+main .sec1 .container .kind_wrap > .kind_slider {
+  overflow: hidden;
 }
-@media screen and (min-width: 1400px) {
-  main .sec1 .container .sec1-img img {
-    width: 100%;
-  }
+main .sec1 .container .kind_wrap > .kind_slider .slider {
+  position: relative;
+  transition: 0.5s;
+}
+main .sec1 .container .kind_wrap > .kind_slider .slider li {
+  float: left;
+}
+main .sec1 .container .kind_wrap > .kind_slider img {
+  vertical-align: top;
+}
+main .sec1 .container .kind_wrap .arrow > a.prev {
+  position: absolute;
+  left: 20px;
+  top: 280px;
+}
+main .sec1 .container .kind_wrap .arrow > a.next {
+  position: absolute;
+  right: 20px;
+  top: 280px;
 }
 main .sec2 {
   margin-bottom: 65px;
