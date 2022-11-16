@@ -12,6 +12,29 @@
     <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+
+    <script>
+        var index = 0;   
+        window.onload = function(){
+            slideShow();
+        }
+    
+        function slideShow() {
+            var i;
+            var x = document.getElementsByClassName("slide1");  
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";   
+            }
+            index++;
+            if (index > x.length) {
+                index = 1;  
+            }   
+            x[index-1].style.display = "block";  
+            setTimeout(slideShow, 2000);      
+        }
+
+    </script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -251,8 +274,8 @@
             <section class="sec2">
                 <div class="container">
                     <div class="sec2-img">
-                        <img src="./img/2_Fit/fitness1.jpg" alt="피트니스1">
-                        <!-- <img src="./img/2_Fit/fitness2.jpg" alt="피트니스2"> -->
+                        <img class="slide1" src="./img/2_Fit/fitness1.jpg" alt="피트니스1">
+                        <img class="slide1" src="./img/2_Fit/fitness2.jpg" alt="피트니스2">
                     </div>
 
                     <!-- <div class="sec2-navi">
@@ -330,8 +353,8 @@
             <section class="sec7-1">
                 <div class="container">
                     <div class="sec7-1-img">
-                        <img src="./img/2_Fit/pool1.jpg" alt="수영장">
-                        <!-- <img src="./img/2_Fit/pool2.jpg" alt="수영장"> -->
+                        <img class="slide2" src="./img/2_Fit/pool1.jpg" alt="수영장">
+                        <img class="slide2" src="./img/2_Fit/pool2.jpg" alt="수영장">
                     </div>
                 </div>
             </section>
