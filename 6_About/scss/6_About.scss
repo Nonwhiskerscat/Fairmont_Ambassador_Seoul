@@ -932,6 +932,7 @@ main {
 
     @include responsive(pc-screens) {
         text-align: justify;
+        width: 100%;
     }
 
     h2 {
@@ -1064,7 +1065,7 @@ main {
                 }
     
                 p{
-                    font-size: calc(12px + 0.5vw);
+                    font-size: calc(12px + 0.4vw);
                     margin-top: 10px;
                     margin-bottom: 20px;
                     width: 90%;
@@ -1152,7 +1153,7 @@ main {
         }
         .acordian-menu {
             width: 100%;
-            background-color: #222;
+            // background-color: #222;
 
             @include responsive(pc-screens) {
                 width: 1200px;
@@ -1170,7 +1171,7 @@ main {
                     text-decoration: none;
                     line-height: 40px;
                     padding: 10px 0;
-                    background-color: #666;
+                    // background-color: #666;
                     color: #fff;
                     font-weight: bold;
                     border-top: 1px solid #fff;
@@ -1182,8 +1183,8 @@ main {
                 }
                 .method {
                     padding: 40px;
-                    background-color: #ddd;
-                    color: #333;
+                    // background-color: #ddd;
+                    color: #fff;
                     text-align: justify;
                     display: none;
                 }
