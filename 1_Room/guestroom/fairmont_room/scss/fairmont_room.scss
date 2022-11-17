@@ -634,6 +634,10 @@
     
 }
 
+h3 {
+    position: relative;
+}
+
 header{
     // display: none;
     width: 100%;
@@ -936,6 +940,7 @@ main {
         }
 
         h3.first {
+            position: relative;
             text-align: center;
             @include type_custom(calc(8px + 3vw), $common_font);
             line-height: calc(1em + 3vw);
@@ -1122,6 +1127,7 @@ main {
         } //.room_cont
 
         h3.last {
+            position: relative;
             transform: translateY(-150px);
             text-align: center;
             @include type_custom(calc(8px + 3vw), $common_font);
@@ -1265,6 +1271,7 @@ main {
         }
 
         .room_gnb {
+            position: relative;
             background-color: #f4f4f4;
             text-align: center;
 
@@ -1313,6 +1320,7 @@ main {
         }
 
         .types_flex {
+            position: relative;
             margin-top: $mid_margin_m;
             display: flex;
             flex-direction: column;

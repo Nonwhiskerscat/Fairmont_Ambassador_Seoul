@@ -637,6 +637,10 @@ li {
   }
 }
 
+h3 {
+  position: relative;
+}
+
 header {
   width: 100%;
   position: absolute;
@@ -918,6 +922,7 @@ main .room_int {
   }
 }
 main .room_int h3.first {
+  position: relative;
   text-align: center;
   font-family: "SCoreDream";
   font-size: calc(8px + 3vw);
@@ -1098,6 +1103,7 @@ main .room_int .room_cont .room_sub ul.r_info li p span {
   }
 }
 main .room_int h3.last {
+  position: relative;
   transform: translateY(-150px);
   text-align: center;
   font-family: "SCoreDream";
@@ -1244,6 +1250,7 @@ main .room_types h3 {
   }
 }
 main .room_types .room_gnb {
+  position: relative;
   background-color: #f4f4f4;
   text-align: center;
 }
@@ -1284,6 +1291,7 @@ main .room_types .room_gnb ul li.bold {
   color: #333;
 }
 main .room_types .types_flex {
+  position: relative;
   margin-top: 65px;
   display: flex;
   flex-direction: column;
