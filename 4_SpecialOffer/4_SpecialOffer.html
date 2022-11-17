@@ -16,24 +16,26 @@
     <script src="./js/jquery.bxslider.min.js"></script>
     <script src="./js/tabmenu.js"></script>
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
-
+    
     <!--=================공용으로 사용하는 스크립트====================-->
-    <script src="./js/jquery-3.6.1.min.js"></script>
+    <!-- <script src="./js/jquery-3.6.1.min.js"></script> -->
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
+
+    <script>
+        $(function() {
+            $('.slide_gallery').bxSlider({
+                auto: true,  // 슬라이드 자동 전환
+                autoControls: false,  // 재생/멈춤 버튼 노출
+                stopAutoOnClick: true,  // stop버튼 누르면 정지
+                pager: false,  // 블릿 버튼 노출
+                speed: 500
+            });
+        });
+    </script>
     
 </head>
-<script>
-    $(function() {
-        $('.slide_gallery').bxSlider({
-			auto: true,  // 슬라이드 자동 전환
-			autoControls: false,  // 재생/멈춤 버튼 노출
-			stopAutoOnClick: true,  // stop버튼 누르면 정지
-			pager: false,  // 블릿 버튼 노출
-			speed: 500
-		});
-	});
-</script>
+
 <body>
     <div class="wrapper">
         <div class="menu_modal">
