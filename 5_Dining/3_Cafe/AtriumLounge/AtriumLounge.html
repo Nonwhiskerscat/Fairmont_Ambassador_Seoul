@@ -17,6 +17,27 @@
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
+
+    <script>
+        var index = 0;   
+        window.onload = function(){
+            slideShow();
+        }
+    
+        function slideShow() {
+            var i;
+            var x = document.getElementsByClassName("slide1");  
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";   
+            }
+            index++;
+            if (index > x.length) {
+                index = 1;  
+            }   
+            x[index-1].style.display = "block";  
+            setTimeout(slideShow, 1500);      
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -269,8 +290,8 @@
                     </div><!--flex-box-->
 
                     <div class="sec1-img">
-                        <img src="./img/Atrium/main-1111.png" alt="main1">
-                        <!-- <img src="./img/Atrium/main-2.png" alt="main2"> -->
+                        <img class="slide1" src="./img/Atrium/main-1111.png" alt="main1">
+                        <img class="slide1" src="./img/Atrium/main-1.png" alt="main2">
                     </div>
                 </div><!--container-->
             </section><!--sec1-->
