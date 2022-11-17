@@ -22,177 +22,316 @@
   <!--=================공용으로 사용하는 스크립트====================-->
   <script src="./js/jquery-3.6.1.min.js"></script>
   <script src="./js/gnb_menu.js"></script>
-  <script src="./js/button.js"></script> 
+  <script src="./js/button.js"></script>
+
+  <script>
+    $().ready(() => {
+      //scroll observer
+      let io = new IntersectionObserver(isObserver, {
+        root: null, rootMargin: "0px 0px 0px 0px", threshold: 0.8
+      })
+      let obserTarget = $('main section').not('.s2-instruction', '.s5-notice')
+
+      obserTarget.each((i, target) => io.observe(target))
+
+      function isObserver(obser, ent) {
+        let isFn = (target) => {
+          if (target == "s1-intro") s1Evnt();
+          if (target == "s3-balloon") s3Evnt();
+          if (target == "s4-preview") s4Evnt();
+        }
+
+        //run after reload
+        if (obser.length > 1) {
+          for (let i in obser) {
+            if (obser[i].isIntersecting) isFn(obser[i].target.className)
+          }
+        }
+
+        //run on area
+        if (obser[0].isIntersecting) isFn(obser[0].target.className)
+      }
+
+      //s1 - slide & fade right img 
+      function s1Evnt() {
+        let s1Delay = 700
+
+        $('.s1-img')
+          .animate({ "right": 0, "opacity": 1 }, s1Delay, "swing", () => {
+            $('.s1-content').animate({ "opacity": 1 }, s1Delay + 500, () => {
+              $('.s1-content strong').css("color", "#ffb400")
+            })
+          })
+      }
+
+      //s2 - slide img 
+      let clone = $(".ins").clone(true).appendTo('.hidden-box')
+      $('.ins li:eq(1)').addClass('s2-act')//add default class
+      let multi = 1;
+      let classIdx = 2;
+      let slideInter = setInterval(slide, 2000)
+
+      function slide() {
+        $('.hidden-box li').removeClass('s2-act')
+        let itemWidth = $('.ins li').outerWidth(true)
+        let itemLength = $(".ins:first li").length;
+
+
+        if (classIdx >= itemLength) classIdx = 0;
+        if (multi > itemLength) {
+          multi = 1;
+          $('.ins').css('left', 0)
+        }
+
+        $('.ins').animate({ 'left': `-${itemWidth * multi++}px` }, 500)
+        $(`.ins li:eq(${classIdx++})`).addClass('s2-act')
+        $(clone).children().eq(classIdx - 1).addClass('s2-act')
+      }
+
+      //s3 fade text & move img 
+      //s3-content --> p , .s3-btns --> s3-img
+      function s3Evnt() {
+        let s3Delay = 600
+
+        $('.s3-content')
+          .find('h3').animate({ "opacity": 1 }, s3Delay * 2, () => {
+            $('.s3-img')
+              .animate({ "opacity": "1", "right": "-5.1282%", "top": "30px" }, 1000)
+          })
+          .end().find("p , .s3-btns").delay(s3Delay)
+          .animate({ "opacity": 1 }, s3Delay * 2)
+      }
+
+      //s4 preview 
+      let s4Inter = null
+      function s4Evnt() {
+        $('.bg-line')
+          .animate({ 'width': '100%' }, 1000, "swing", () => {
+
+            clearInterval(s4Inter)
+            s4Inter = setInterval(fadeImg, 3000)
+
+            $('.left-content')
+              .animate({ "left": 0 }, 2400,)
+              .css({ "transform": "rotate(1turn)" })
+              .next().delay(2400).animate({ "opacity": 1 }, 2000)
+
+          })//first animate
+      }//s4Event
+
+      //questack 꽉차서 동작들 밀릴까바 s2에 interval 묶어쓸까 고민중
+      //s4 - fadeImgs
+      $(".s4-img-box > li:gt(0)").hide()
+      let onFadeIdx = 0
+
+      function fadeImg() {
+        $(".s4-img-box > li:first")
+          .delay(200).fadeOut(1500).next().fadeIn(1500)
+          .end().appendTo(".s4-img-box")
+
+        let $li = $(".s4-img-list li")
+        if (onFadeIdx >= $li.length - 1) onFadeIdx = -1;
+
+        $li.css('border-color', '#fff')
+        setTimeout(() => $li.eq(++onFadeIdx).css('border-color', 'blue'), 800)
+      }
+
+
+      let borderY = $('.bg-line')[0].clientHeight / 2 - $(".s2-move-border").height() / 2
+
+
+    }) //load
+  </script>
+
 </head>
 
 <body>
   <div class="wrapper">
     <div class="menu_modal">
       <div class="menu_entire">
-          <div class="menu_header">
-              <h1>Site Map</h1>
-              <div class="menu_header_flex">
-                  <div class="menu_header_left">
-                      <div class="menu_lan">
-                          <label for="alan" class="not_for_m">Lan</label>
-                          <select name="lang" id="alan">
-                              <option value="한국어" selected>언어선택</option>
-                              <option value="한국어">한국어</option>
-                              <option value="영어">ENG</option>
-                              <option value="일본어">日本語</option>
-                              <option value="중국어">中文</option>
-                          </select>
-                      </div><!--language-->
+        <div class="menu_header">
+          <h1>Site Map</h1>
+          <div class="menu_header_flex">
+            <div class="menu_header_left">
+              <div class="menu_lan">
+                <label for="alan" class="not_for_m">Lan</label>
+                <select name="lang" id="alan">
+                  <option value="한국어" selected>언어선택</option>
+                  <option value="한국어">한국어</option>
+                  <option value="영어">ENG</option>
+                  <option value="일본어">日本語</option>
+                  <option value="중국어">中文</option>
+                </select>
+              </div>
+              <!--language-->
 
-                      <div class="menu_sns">
-                          <ul><p class="not_for_m">SNS</p>
-                              <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
-                              <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
-                              <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
-                          </ul>
-                      </div><!--menu_sns-->
-                  </div><!--menu_header_left-->
+              <div class="menu_sns">
+                <ul>
+                  <p class="not_for_m">SNS</p>
+                  <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img
+                        src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                  <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img
+                        src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                  <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img
+                        src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                </ul>
+              </div>
+              <!--menu_sns-->
+            </div>
+            <!--menu_header_left-->
 
-                  <div class="menu_header_right">
-                      <div class="menu_login">
-                          <a href="./9_Etc/Login/Login.html">
-                              <img src="./img/menu/Menu_Profile.png" alt="프로필">
-                              <p>Login</p>
-                          </a>
-                      </div><!--menu_login-->
+            <div class="menu_header_right">
+              <div class="menu_login">
+                <a href="./9_Etc/Login/Login.html">
+                  <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                  <p>Login</p>
+                </a>
+              </div>
+              <!--menu_login-->
 
-                      <div class="menu_close">
-                          <div class="close_modal" href="#">
-                              <span></span>
-                              <span></span>
-                          </div>
-                          <p class="not_for_m">Close</p>
-                      </div><!--menu_close-->
-                  </div><!--menu_header_right-->
-              </div><!--menu_header_flex-->
-              
-          </div><!--menu_header-->
+              <div class="menu_close">
+                <div class="close_modal" href="#">
+                  <span></span>
+                  <span></span>
+                </div>
+                <p class="not_for_m">Close</p>
+              </div>
+              <!--menu_close-->
+            </div>
+            <!--menu_header_right-->
+          </div>
+          <!--menu_header_flex-->
 
-          <div class="menu_main">
-              <div class="menu_main_left">
-                  <div class="img">
-                      <a href="./index.html">
-                          <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
-                          <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
-                      </a>
-                  </div>
-                  <div class="contents">
-                      <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
-                      <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
-                          Fairmont Ambassador Hotel
-                      </p><!--cursive-->
-                  </div><!--contents-->
-              </div><!--menu_main_left-->
-              <div class="menu_main_right">
-                  <ul class="menu_bighead">
-                      <li class="big_menu">Room
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu">객실
-                                  <ul>
-                                      <li><a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
-                                      <li><a href="#">페어몬트 디럭스</a></li>
-                                      <li><a href="#">페어몬트 골드</a></li>
-                                  </ul>
-                              </li>
-                              <li class="mid_menu">스위트 룸
-                                  <ul>
-                                      <li><a href="#">시그니처 스위트</a></li>
-                                      <li><a href="#">프리미어 스위트</a></li>
-                                      <li><a href="#">이그제큐티브 스위트</a></li>
-                                      <li><a href="#">디플로매틱 스위트</a></li>
-                                  </ul>
-                              </li>
+        </div>
+        <!--menu_header-->
 
-                              
-                              <li class="mid_menu">펜트하우스
-                                  <ul>
-                                      <li><a href="#">펜트하우스</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>
+        <div class="menu_main">
+          <div class="menu_main_left">
+            <div class="img">
+              <a href="./index.html">
+                <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
+              </a>
+            </div>
+            <div class="contents">
+              <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
+              <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
+                Fairmont Ambassador Hotel
+              </p>
+              <!--cursive-->
+            </div>
+            <!--contents-->
+          </div>
+          <!--menu_main_left-->
+          <div class="menu_main_right">
+            <ul class="menu_bighead">
+              <li class="big_menu">Room
+                <ul class="menu_semi_head">
+                  <li class="mid_menu">객실
+                    <ul>
+                      <li><a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
+                      <li><a href="#">페어몬트 디럭스</a></li>
+                      <li><a href="#">페어몬트 골드</a></li>
+                    </ul>
+                  </li>
+                  <li class="mid_menu">스위트 룸
+                    <ul>
+                      <li><a href="#">시그니처 스위트</a></li>
+                      <li><a href="#">프리미어 스위트</a></li>
+                      <li><a href="#">이그제큐티브 스위트</a></li>
+                      <li><a href="#">디플로매틱 스위트</a></li>
+                    </ul>
+                  </li>
 
-                      <li class="big_menu">Events
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="#">웨딩</a></li>
-                              <li class="mid_menu"><a href="#">연회</a></li>
-                              <li class="mid_menu"><a href="#">돌잔치 & 가족모임</a></li>
-                          </ul>
-                      </li>
 
-                      <li class="big_menu"><a href="#">Facilities</a>
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="#">페어몬트 골드 라운지</a></li>
-                              <li class="mid_menu"><a href="#">페어몬트 피트</a></li>
-                              <li class="mid_menu block" onclick="alert('준비중입니다.')"><a href="#">페어몬트 스파(준비중)</a></li>
-                          </ul>
-                      </li>
+                  <li class="mid_menu">펜트하우스
+                    <ul>
+                      <li><a href="#">펜트하우스</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-                      <li class="big_menu">Special Offer
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="#">이벤트 서비스</a></li>
-                              <li class="mid_menu"><a href="#">푸드 서비스</a></li>
-                              <li class="mid_menu"><a href="#">VIP 프로모션</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu">Events
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="#">웨딩</a></li>
+                  <li class="mid_menu"><a href="#">연회</a></li>
+                  <li class="mid_menu"><a href="#">돌잔치 & 가족모임</a></li>
+                </ul>
+              </li>
 
-                      <li class="big_menu">Dining
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu">바
-                                  <ul>
-                                      <li><a href="#">M29</a></li>
-                                  </ul>
-                              </li>
-                              <li class="mid_menu"><a href="#">레스토랑</a>
-                                  <ul>
-                                      <li><a href="#">마리포사</a></li>
-                                      <li><a href="#">스펙트럼</a></li>
-                                      <li><a href="#">갤러리세븐</a></li>
-                                  </ul>
-                              </li>
-                              <li class="mid_menu">카페
-                                  <ul>
-                                      <li><a href="#">더 아트리움 라운지</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>
+              <li class="big_menu"><a href="#">Facilities</a>
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="#">페어몬트 골드 라운지</a></li>
+                  <li class="mid_menu"><a href="#">페어몬트 피트</a></li>
+                  <li class="mid_menu block" onclick="alert('준비중입니다.')"><a href="#">페어몬트 스파(준비중)</a></li>
+                </ul>
+              </li>
 
-                      <li class="big_menu"><a href="#">About</a>
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="#">개요</a></li>
-                              <li class="mid_menu"><a href="#">게스트 서비스</a></li>
-                              <li class="mid_menu"><a href="#">오시는 길</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu">Special Offer
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="#">이벤트 서비스</a></li>
+                  <li class="mid_menu"><a href="#">푸드 서비스</a></li>
+                  <li class="mid_menu"><a href="#">VIP 프로모션</a></li>
+                </ul>
+              </li>
 
-                      <li class="big_menu">Customer 
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="#">고객센터</a></li>
-                              <li class="mid_menu"><a href="#">마이페이지</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu">Dining
+                <ul class="menu_semi_head">
+                  <li class="mid_menu">바
+                    <ul>
+                      <li><a href="#">M29</a></li>
+                    </ul>
+                  </li>
+                  <li class="mid_menu"><a href="#">레스토랑</a>
+                    <ul>
+                      <li><a href="#">마리포사</a></li>
+                      <li><a href="#">스펙트럼</a></li>
+                      <li><a href="#">갤러리세븐</a></li>
+                    </ul>
+                  </li>
+                  <li class="mid_menu">카페
+                    <ul>
+                      <li><a href="#">더 아트리움 라운지</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-                      <li class="big_menu">Reservation
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="#">호텔룸 예약</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu"><a href="#">About</a>
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="#">개요</a></li>
+                  <li class="mid_menu"><a href="#">게스트 서비스</a></li>
+                  <li class="mid_menu"><a href="#">오시는 길</a></li>
+                </ul>
+              </li>
 
-                  </ul>
-              </div><!--menu_main_right-->
-          </div><!--menu_main-->
-      </div><!--menu_entire-->
+              <li class="big_menu">Customer
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="#">고객센터</a></li>
+                  <li class="mid_menu"><a href="#">마이페이지</a></li>
+                </ul>
+              </li>
+
+              <li class="big_menu">Reservation
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="#">호텔룸 예약</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <!--menu_main_right-->
+        </div>
+        <!--menu_main-->
+      </div>
+      <!--menu_entire-->
 
       <div class="menu_matte">
-          
+
       </div>
-    </div><!--menu_modal-->
+    </div>
+    <!--menu_modal-->
 
     <header>
       <div class="colormatte"></div>
@@ -280,40 +419,44 @@
           소중한 아이의 첫 생일,<br />
           <strong>특별한 하루를 기념하세요.</strong>
         </h2>
-        <ul class="ins">
-          <li class="s2-act">
-            <div class="img-box"><img src="./img/First_Birthday/photo/s2-1.png" alt="방" /></div>
-            <div class="s2-text-box">
-              <strong>서울 전경이 보이는 공간</strong>
-              <p>
-                아늑하고 세련된 파티공간과<br />
-                품격있는 행사진행, 다양한 서비스까지<br />
-                최고의 만족을 드립니다.<br />
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="img-box"><img src="./img/First_Birthday/photo/s2-2.jpg" alt="돌잔치장면" /></div>
-            <div class="s2-text-box">
-              <strong>감동과 함께 담아내는 추억들</strong>
-              <p>
-                우리아이의 추억을 최고의 <br />
-                전문 포토그레퍼가 담아드립니다 . <br />
-              </p>
-            </div>
-          </li>
-          <li class="s2-act">
-            <div class="img-box"><img src="./img/First_Birthday/photo/s2-3.jpg" alt="돌잔치상" /></div>
-            <div class="s2-text-box">
-              <strong>정성이 담긴 돌잔치 상차림</strong>
-              <p>
-                전문 셰프가 돌잔치의 품위를 더해줄 <br />
-                음식부터 세팅까지 고객 맞춤형 <br />
-                메뉴를 제공합니다.<br />
-              </p>
-            </div>
-          </li>
-        </ul>
+        <div class="slide-box">
+          <div class="hidden-box">
+            <ul class="ins">
+              <li>
+                <div class="img-box"><img src="./img/First_Birthday/photo/s2-1.png" alt="방" /></div>
+                <div class="s2-text-box">
+                  <strong>서울 전경이 보이는 공간</strong>
+                  <p>
+                    아늑하고 세련된 파티공간과<br />
+                    품격있는 행사진행, 다양한 서비스까지<br />
+                    최고의 만족을 드립니다.<br />
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-box"><img src="./img/First_Birthday/photo/s2-2.jpg" alt="돌잔치장면" /></div>
+                <div class="s2-text-box">
+                  <strong>감동과 함께 담아내는 추억들</strong>
+                  <p>
+                    우리아이의 추억을 최고의 <br />
+                    전문 포토그레퍼가 담아드립니다 . <br />
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-box"><img src="./img/First_Birthday/photo/s2-3.jpg" alt="돌잔치상" /></div>
+                <div class="s2-text-box">
+                  <strong>정성이 담긴 돌잔치 상차림</strong>
+                  <p>
+                    전문 셰프가 돌잔치의 품위를 더해줄 <br />
+                    음식부터 세팅까지 고객 맞춤형 <br />
+                    메뉴를 제공합니다.<br />
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <!-- s2-instruction -->
       <section class="s3-balloon">
@@ -341,9 +484,9 @@
                 <a href="#">자세히 보기</a>
                 <a href="#">예약 및 문의</a>
               </div>
-              <div class="s3-img">
-                <img src="./img/First_Birthday/photo/s3-img.png" alt="balloon" />
-              </div>
+            </div>
+            <div class="s3-img">
+              <img src="./img/First_Birthday/photo/s3-img.png" alt="balloon" />
             </div>
           </div>
           <!-- flex -->
@@ -354,15 +497,22 @@
       <!-- s3-balloon -->
       <section class="s4-preview">
         <h2>preview</h2>
-        <div class="bg-line"></div>
+        <div class="bg-line">
+        </div>
         <div class="container">
           <div class="flex">
             <div class="left-content">
-              <div class="img-box"><img src="./img/First_Birthday/photo/preview-main-img.jpg" alt="노란풍선과 아이" /></div>
+              <ul class="s4-img-box">
+                <li><img src="./img/First_Birthday/photo/preview-1.png" alt="아기손" /></li>
+                <li><img src="./img/First_Birthday/photo/preview-main-img.jpg" alt="노란풍선과 아이" /></li>
+                <li><img src="./img/First_Birthday/photo/preview-3.jpg" alt="공들" /></li>
+                <li><img src="./img/First_Birthday/photo/preview-4.png" alt="프라이빗룸" /></li>
+                <li><img src="./img/First_Birthday/photo/preview-5.jpg" alt="돌잔치액자" /></li>
+              </ul>
             </div>
             <div class="right-content">
               <h3>PREVIEW</h3>
-              <ul class="img-list">
+              <ul class="s4-img-list">
                 <li><img src="./img/First_Birthday/photo/preview-1.png" alt="아기손" /></li>
                 <li><img src="./img/First_Birthday/photo/preview-main-img.jpg" alt="노란풍선과 아이" /></li>
                 <li><img src="./img/First_Birthday/photo/preview-3.jpg" alt="공들" /></li>

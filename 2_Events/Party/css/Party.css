@@ -116,7 +116,8 @@ li {
 .menu_modal img {
   display: inline;
 }
-.menu_modal p, .menu_modal li {
+.menu_modal p,
+.menu_modal li {
   color: white;
   font-family: "SCoreDream";
 }
@@ -902,15 +903,15 @@ main {
 }
 
 main section.intro h2 {
+  position: relative;
   margin: 0 auto;
   padding: 350px 0;
-  text-align: center;
   font-size: min(6.6667vw, 68px);
   width: 89.7436vw;
   max-width: 900px;
   letter-spacing: -0.05em;
   white-space: normal;
-  color: #2a52be;
+  color: #efefef;
   font-weight: 700;
 }
 @media screen and (min-width: 1400px) {
@@ -919,8 +920,12 @@ main section.intro h2 {
   }
 }
 main section.intro h2 span {
+  position: absolute;
+}
+main section.intro h2 span:last-of-type {
+  display: inline;
   margin-right: -1.0256vw;
-  color: red;
+  color: #2a52be;
 }
 main section.infomation {
   visibility: hidden;

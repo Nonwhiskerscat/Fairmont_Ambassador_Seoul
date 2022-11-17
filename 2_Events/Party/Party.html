@@ -22,12 +22,54 @@
     <script>
         $().ready(() => {
             // painting text
-            let span = $('<span>')
-            console.log(
-                $('.intro h2').append(span).children()
-            );
+            // let span = $('<span>')
+            // $('.intro h2').prepend(span)
+            // &nbsp
 
-            console.log(span.parent());
+            // let beforeText = $('.intro span:last')[0].innerText
+            // let before = []
+            // let after = []
+
+            // for (let i = 0; i < beforeText.length; i++)
+            //     before.push(beforeText[i]);
+            // setInterval(() => {
+            // if (!before[0] == " ") {
+            // let word = before.shift()
+            // after.push(word)
+            // } else {
+            //     console.log("ff");
+            //     after.push("ㅤ")
+            // }
+            //     $('.intro span:last').text(before.join(""))
+            //     span.text(after.join(""));
+            // }, 300)
+
+            //"use strict";
+
+            //scroll 최적화는 집에서 알아보자 
+            //https://jbee.io/web/optimize-scroll-event/
+            const content = "성공적인 비즈니스가 될 수 있도록 최고의 서비스를 제공합니다."
+            let index = 0;
+
+            function sleep(delay) {
+                const start = new Date().getTime();
+                while (new Date().getTime() < start + delay); //이게뭐징 
+            }
+
+            function typing() {
+                let $befSpan = $('.intro span:last')[0]
+                $befSpan.textContent += content[index++];
+                if (index > content.length) {
+                    $befSpan.textContent = ""
+                    index = 0;
+                    sleep(3000);
+                }
+            }
+
+            // $(window).scroll((e) => console.log("aa"))
+            // setInterval(typing, 200)
+
+
 
 
             // doc - scroll fadein/out
@@ -45,7 +87,7 @@
 
             let io = new IntersectionObserver(cb, {
                 root: null,
-                rootMargin: "350px 0px 100px 0px",
+                rootMargin: "450px 0px 100px 0px",
                 threshold: 0.65
             })
 
@@ -154,7 +196,6 @@
 
 
             let slideInterval = null
-
             //modal - on/off/push modal
 
             let mdBtn = $('.info-btn a , .btns a').map((i, e) => {
@@ -187,14 +228,11 @@
             })
         })//ready
 
-
-
-
     </script>
     <!--=================공용으로 사용하는 스크립트====================-->
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
-    <script src="./js/button.js"></script> 
+    <script src="./js/button.js"></script>
 </head>
 
 <body>
@@ -214,36 +252,48 @@
                                     <option value="일본어">日本語</option>
                                     <option value="중국어">中文</option>
                                 </select>
-                            </div><!--language-->
-    
+                            </div>
+                            <!--language-->
+
                             <div class="menu_sns">
-                                <ul><p class="not_for_m">SNS</p>
-                                    <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
-                                    <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
-                                    <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                                <ul>
+                                    <p class="not_for_m">SNS</p>
+                                    <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img
+                                                src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                                    <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img
+                                                src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                                    <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img
+                                                src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
                                 </ul>
-                            </div><!--menu_sns-->
-                        </div><!--menu_header_left-->
-    
+                            </div>
+                            <!--menu_sns-->
+                        </div>
+                        <!--menu_header_left-->
+
                         <div class="menu_header_right">
                             <div class="menu_login">
                                 <a href="./9_Etc/Login/Login.html">
                                     <img src="./img/menu/Menu_Profile.png" alt="프로필">
                                     <p>Login</p>
                                 </a>
-                            </div><!--menu_login-->
-    
+                            </div>
+                            <!--menu_login-->
+
                             <div class="menu_close">
                                 <div class="close_modal" href="#">
                                     <span></span>
                                     <span></span>
                                 </div>
                                 <p class="not_for_m">Close</p>
-                            </div><!--menu_close-->
-                        </div><!--menu_header_right-->
-                    </div><!--menu_header_flex-->
-                    
-                </div><!--menu_header-->
+                            </div>
+                            <!--menu_close-->
+                        </div>
+                        <!--menu_header_right-->
+                    </div>
+                    <!--menu_header_flex-->
+
+                </div>
+                <!--menu_header-->
 
                 <div class="menu_main">
                     <div class="menu_main_left">
@@ -252,22 +302,27 @@
                                 <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
                                 <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
                             </a>
-                            
+
                         </div>
                         <div class="contents">
-                            <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
+                            <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏
+                                    모시겠습니다.</span></p>
                             <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
                                 Fairmont Ambassador Hotel
-                            </p><!--cursive-->
-                        </div><!--contents-->
-                    </div><!--menu_main_left-->
+                            </p>
+                            <!--cursive-->
+                        </div>
+                        <!--contents-->
+                    </div>
+                    <!--menu_main_left-->
                     <div class="menu_main_right">
                         <ul class="menu_bighead">
                             <li class="big_menu">Room
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu">객실
                                         <ul>
-                                            <li><a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
+                                            <li><a href="./1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a>
+                                            </li>
                                             <li><a href="#">페어몬트 디럭스</a></li>
                                             <li><a href="#">페어몬트 골드</a></li>
                                         </ul>
@@ -281,7 +336,7 @@
                                         </ul>
                                     </li>
 
-                                    
+
                                     <li class="mid_menu">펜트하우스
                                         <ul>
                                             <li><a href="#">펜트하우스</a></li>
@@ -302,7 +357,8 @@
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu"><a href="#">페어몬트 골드 라운지</a></li>
                                     <li class="mid_menu"><a href="#">페어몬트 피트</a></li>
-                                    <li class="mid_menu block" onclick="alert('준비중입니다.')"><a href="#">페어몬트 스파(준비중)</a></li>
+                                    <li class="mid_menu block" onclick="alert('준비중입니다.')"><a href="#">페어몬트 스파(준비중)</a>
+                                    </li>
                                 </ul>
                             </li>
 
@@ -344,7 +400,7 @@
                                 </ul>
                             </li>
 
-                            <li class="big_menu">Customer 
+                            <li class="big_menu">Customer
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu"><a href="#">고객센터</a></li>
                                     <li class="mid_menu"><a href="#">마이페이지</a></li>
@@ -358,14 +414,18 @@
                             </li>
 
                         </ul>
-                    </div><!--menu_main_right-->
-                </div><!--menu_main-->
-            </div><!--menu_entire-->
+                    </div>
+                    <!--menu_main_right-->
+                </div>
+                <!--menu_main-->
+            </div>
+            <!--menu_entire-->
 
             <div class="menu_matte">
-                
+
             </div>
-        </div><!--menu_modal-->
+        </div>
+        <!--menu_modal-->
 
         <header>
             <div class="colormatte"></div>
@@ -428,11 +488,8 @@
             <section class="intro">
                 <div class="container">
                     <h2>
-                        <span>성공적인 비즈니스가 될 수</span>
-                        <span>
-                            있도록
-                            최고의 서비스를 제공합니다 .
-                        </span>
+                        <span>성공적인 비즈니스가 될 수 있도록 최고의 서비스를 제공합니다.</span>
+                        <span></span>
                     </h2>
                 </div>
             </section>
@@ -548,8 +605,7 @@
                     </div>
                     <!-- flex -->
                 </div>
-            </section>
-            <!-- s2-hall -->
+            </section> <!-- s2-hall -->
 
             <section class="s3-hall">
                 <h2>RED UME & PINO</h2>
