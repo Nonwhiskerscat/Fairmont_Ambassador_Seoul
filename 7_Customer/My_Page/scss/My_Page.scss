@@ -7,21 +7,47 @@
 }
 
 //header
+.not_scroll{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
+//header
 .menu_modal {
-    display: none;
-    position: absolute;
+    // display: none;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #333333;
+    height: 100%;
+    z-index: 700;
+    overflow: auto;
+    background-color: rgba($color: #000, $alpha: 0.75);
 
     @include responsive(pc-screens){
-        min-height: 100vh;
+        // min-height: 100vh;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
     }
 
     .menu_entire{
         width: 89.74358974358974%;
         margin: 0 auto;
+        z-index: 800;
         
         @include responsive(pc-screens) {
             width: 93.75%;
@@ -75,6 +101,8 @@
                                 display: inline;
                                 font-size: 1.2em;
                             }
+
+                            
                             
                         }
     
@@ -104,6 +132,7 @@
                             &:hover{
                                 background-color: white;
                                 color: #333333;
+                                transition: all 0.5s;
                             }
                         }
                     }
@@ -128,6 +157,11 @@
                                 @include responsive(pc-screens) {
                                     margin-left: 10px;
                                 }
+
+                                img:hover {
+                                    transform: scale(1.25);
+                                    transition: 1s;
+                                }
                                 
                             }
                         }
@@ -143,6 +177,20 @@
                         @include responsive(pc-screens){
                             // margin-right: calc(10px + 3vw);
                         }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         a{
                             display: flex;
@@ -157,6 +205,8 @@
                                     width: 22px;
                                     height: 22px;
                                 }
+
+                                
     
                             }
     
@@ -172,6 +222,21 @@
     
                     .menu_close {
                         display: flex;
+                        cursor:pointer;
+
+                        &:hover {
+                            .close_modal {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         .close_modal{
                             position: relative;
@@ -229,7 +294,7 @@
             @include responsive(pc-screens) {
                 flex-direction: row;
                 // align-items: center;
-                padding-top: 100px ;
+                padding-top: 50px;
                 
                 margin: 0 auto;
             }
@@ -359,9 +424,10 @@
                     }
             
                     li.big_menu {
-                        @include type_custom(calc(1em + 2vw), $eng_title_font);
-                        letter-spacing: 0.5vw;
+                        @include type_custom(calc(16px + 2vw), $eng_title_font);
+                        letter-spacing: 1px;
                         margin-bottom: 50px;
+                        position: relative;
     
                         @include responsive(pc-screens) {
                             // background-color: deeppink;
@@ -369,6 +435,62 @@
                             letter-spacing: 2px;
                             margin-bottom: 100px;
                             width: 25%;
+                        }
+
+                        &:hover {
+                            transition: all 0.5s;
+                            color: #ffef5a;
+
+                            @include responsive(pc-screens) {
+                                color: #ffef5a;
+                            }
+
+                            &>a {
+                                color: #ffef5a;
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                            }
+
+                            &::before {
+                                @include title_border_2(30px, 3px, #ffef5a, 5px, 5px);
+                                position: absolute;
+                                top: -5px;
+
+                                @include responsive(pc-screens) {
+                                    @include title_border_2(30px, 3px, #ffef5a, 5px, 5px);
+                                }
+                                
+                                
+                            }
+                        }
+
+                        &>a {
+                            @include type_custom(calc(16px + 2vw), $eng_title_font);
+                            margin-bottom: 50px;
+
+                            
+                            &:hover {
+                                color: #ffef5a;
+                                transition: all 0.5s;
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                            }
+    
+                            @include responsive(pc-screens) {
+                                // background-color: deeppink;
+                                font-size: 28px;
+                                letter-spacing: 2px;
+                                margin-bottom: 100px;
+                                width: 25%;
+                            }
+
+                            
                         }
                     }
     
@@ -379,6 +501,8 @@
                         display: flex;
                         flex-direction: row;
                         flex-wrap: wrap;
+
+                        
     
                         @include responsive(pc-screens) {
                             flex-direction: column;
@@ -387,7 +511,7 @@
                         
         
                         li.mid_menu {
-                            @include type_custom(calc(0.5em + 0.5vw), $common_font);
+                            @include type_custom(calc(14px + 0.5vw), $common_font);
                             color: white;
                             width: 50%;
                             font-weight: 300;
@@ -399,19 +523,72 @@
                                 margin-bottom: 20px;
                                 font-weight: 200;
                             }
+
+                            &:hover {
+                                transition: all 0.5s;
+                                color: #ffef5a;
+
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                                ul {
+                                    display: block;
+                                }
+                            }
+
+                            &>a {
+                                @include type_custom(calc(14px + 0.5vw), $common_font);
+                                font-weight: 300;
+
+                                @include responsive(pc-screens) {
+                                    width: 100%;
+                                    font-size: 18px;
+                                    margin-bottom: 20px;
+                                    font-weight: 200;
+                                }
+
+                                &:hover {
+                                    color: $base_color_light;
+                                    color: #ffef5a;
+
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                                    
+                                }
+                            }
     
                             ul{
                                 padding-top: 10px;
                                 display: none;
+
+                                
     
                                 li{
                                     list-style: '- ' inside;
                                     margin-bottom: calc(0.2em + 0.3vw);
                                     margin-bottom: 10px;
-                                    font-weight: 100;
+                                    font-weight: 300;
+                                    @include type_custom(calc(12px + 0.5vw), $common_font);
 
                                     @include responsive(pc-screens) {
                                         font-size: 16px;
+                                    }
+
+                                    
+
+                                    a:hover {
+                                        transition: all 0.5s;
+                                        color: #ffef5a;
+
+
+                                        @include responsive(pc-screens) {
+                                            color: #ffef5a;
+                                        }
                                     }
                                 }
                             }
@@ -421,6 +598,21 @@
                 }
     
             }
+        }
+    }
+
+    .menu_matte {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        z-index: -1;
+
+        @include responsive(pc-screens) {
+            min-height: 100vh;
+            background-color: rgba($color: #000, $alpha: 0.75);
         }
     }
     
@@ -467,6 +659,7 @@ header{
         }
     
         .menu{
+            cursor: pointer;
             width: 70px;
             display: flex;
             justify-content: space-between;
