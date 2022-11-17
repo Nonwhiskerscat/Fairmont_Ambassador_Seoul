@@ -914,6 +914,7 @@ main .bg-video__content {
 @media screen and (min-width: 1400px) {
   main {
     text-align: justify;
+    width: 100%;
   }
 }
 main h2 {
@@ -1043,7 +1044,7 @@ main .section2-flex div.service-icon div img {
   }
 }
 main .section2-flex div.service-icon div p {
-  font-size: calc(12px + 0.5vw);
+  font-size: calc(12px + 0.4vw);
   margin-top: 10px;
   margin-bottom: 20px;
   width: 90%;
@@ -1125,7 +1126,6 @@ main .route {
 }
 main .route .acordian-menu {
   width: 100%;
-  background-color: #222;
 }
 @media screen and (min-width: 1400px) {
   main .route .acordian-menu {
@@ -1143,7 +1143,6 @@ main .route .acordian-menu li a {
   text-decoration: none;
   line-height: 40px;
   padding: 10px 0;
-  background-color: #666;
   color: #fff;
   font-weight: bold;
   border-top: 1px solid #fff;
@@ -1154,8 +1153,7 @@ main .route .acordian-menu li a img {
 }
 main .route .acordian-menu li .method {
   padding: 40px;
-  background-color: #ddd;
-  color: #333;
+  color: #fff;
   text-align: justify;
   display: none;
 }

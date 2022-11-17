@@ -924,28 +924,23 @@ main {
 
     .sec2 {
         .sec2-img {
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // height: 100%;
-            // width: 100%;
-
             img {
                 width: 100%;
             }
-        }
-
-        // .sec2-navi {
-        //     li {
-        //         display: flex;
-        //         flex-direction: column;
-        //     }
-
-        //     img {
-        //         width: 10%;
-        //     }
-        // }
+        }        
     }
+
+    // .sec2 {
+    //     .slide_gallery {
+    //         width: 100%;
+    
+    //         @include responsive(pc-screens) {
+    //             margin: 0 auto;
+    //             width: 680px;
+    //         }
+    //     }
+    // }
+
 
 
 

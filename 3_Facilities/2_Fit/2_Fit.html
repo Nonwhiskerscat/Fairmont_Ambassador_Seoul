@@ -12,13 +12,22 @@
     <link rel="shortcut icon" type="image/icon" href="./img/header/img/page_logo.png" style="width: 100%">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
-
     <!--=================공용으로 사용하는 스크립트====================-->
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
 
     <script>
+        // $(function() {
+        //     $('.slide_gallery').bxSlider({
+        //         auto: true,  // 슬라이드 자동 전환
+        //         autoControls: false,  // 재생/멈춤 버튼 노출
+        //         stopAutoOnClick: true,  // stop버튼 누르면 정지
+        //         pager: false,  // 블릿 버튼 노출
+        //         speed: 500
+        //     });
+        // });
+
         var index = 0;   
         window.onload = function(){
             slideShow();
@@ -35,9 +44,8 @@
                 index = 1;  
             }   
             x[index-1].style.display = "block";  
-            setTimeout(slideShow, 2000);      
+            setTimeout(slideShow, 1000);      
         }
-
     </script>
 
 </head>
@@ -285,13 +293,21 @@
                         <img class="slide1" src="./img/2_Fit/fitness1.jpg" alt="피트니스1">
                         <img class="slide1" src="./img/2_Fit/fitness2.jpg" alt="피트니스2">
                     </div>
-
-                    <!-- <div class="sec2-navi">
-                        <li><img src="./img/2_Fit/nav_l.png" alt="왼쪽화살표"></li>
-                        <li><img src="./img/2_Fit/nav_r.png" alt="오른쪽화살표"></li>
-                    </div> -->
                 </div>
             </section>
+            
+            <!-- <section class="sec2">
+                <div class="container">
+                    <div class="photo">
+                        <ul class="slide_gallery">
+                            <li><img src="./img/2_Fit/fitness1.jpg" alt="fitness1"></li>
+                            <li><img src="./img/2_Fit/fitness2.jpg" alt="fitness2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section> -->
+
+
 
             <section class="sec3">
                 <div class="container">
@@ -361,7 +377,7 @@
             <section class="sec7-1">
                 <div class="container">
                     <div class="sec7-1-img">
-                        <img class="slide2" src="./img/2_Fit/pool1.jpg" alt="수영장">
+                        <!-- <img class="slide2" src="./img/2_Fit/pool1.jpg" alt="수영장"> -->
                         <img class="slide2" src="./img/2_Fit/pool2.jpg" alt="수영장">
                     </div>
                 </div>

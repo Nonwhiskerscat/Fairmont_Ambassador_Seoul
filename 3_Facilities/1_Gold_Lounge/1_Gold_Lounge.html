@@ -13,11 +13,33 @@
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
 
+    
     <!--=================공용으로 사용하는 스크립트====================-->
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
-    <script src="./js/button.js"></script> 
+    <script src="./js/button.js"></script>
 
+    <script>
+        var index = 0;   
+        window.onload = function(){
+            slideShow();
+        }
+    
+        function slideShow() {
+            var i;
+            var x = document.getElementsByClassName("slide1");  
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";   
+            }
+            index++;
+            if (index > x.length) {
+                index = 1;  
+            }   
+            x[index-1].style.display = "block";  
+            setTimeout(slideShow, 1000);      
+        }
+    </script>
+    
 </head>
 <body>
     <div class="wrapper">
@@ -253,22 +275,15 @@
                 </div><!--container-->
             </section>
 
-            <div class="room_gall">
-                <!-- <h3>Gallery</h3> -->
-                <div class="gall_main">
-                    <ul>
-                        <li><img src="./img/goldlounge/main1.png" alt="골드라운지1"></li>
-                        <li><img src="./img/goldlounge/main2.jpg" alt="골드라운지2"></li>
-                        <li><img src="./img/goldlounge/main3.jpg" alt="골드라운지3"></li>
-                    </ul>
-                </div><!--gall_main-->
-                
-                <div class="gall_navi">
-                    <li><img src="./img/goldlounge/nav_l.png" alt="왼쪽화살표"></li>
-                    <li><p>2</p></li>
-                    <li><img src="./img/goldlounge/nav_r.png" alt="오른쪽화살표"></li>
+            <section class="sec2">
+                <div class="container">
+                    <div class="sec2-img">
+                        <img class="slide1" src="./img/goldlounge/main111.png" alt="골드라운지1">
+                        <img class="slide1" src="./img/goldlounge/main2.jpg" alt="골드라운지2">
+                        <img class="slide1" src="./img/goldlounge/main333.png" alt="골드라운지3">
+                    </div>
                 </div>
-            </div><!--roomgall-->
+            </section>
 
             <section class="sec3">
                 <div class="container">
