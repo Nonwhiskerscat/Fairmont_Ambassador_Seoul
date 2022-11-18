@@ -1032,14 +1032,6 @@ main {
               opacity: 0.5;
             }
 
-            &:last-of-type {
-              // margin-right: 5.1282vw;
-
-              // @include responsive(pc-screens) {
-              //   margin-left: 80px;
-              // }
-            }
-
             .img-box {
               position: relative;
               width: 100%;
@@ -1119,11 +1111,16 @@ main {
 
   section.s3-balloon {
     margin-top: 110px;
-    margin-bottom: 240px;
+    margin-bottom: 200px;
     @include responsive(pc-screens) {
       margin-top: 160px;
     }
 
+    & > .container {
+      @include responsive(pc-screens) {
+        overflow: hidden;
+      }
+    }
     & .flex {
       width: fit-content;
       margin: 0 auto;
@@ -1136,6 +1133,7 @@ main {
         @include responsive(pc-screens) {
           margin-left: 100px;
           padding-top: 370px;
+          padding-bottom: 250px;
         }
 
         h3 {
@@ -1146,6 +1144,10 @@ main {
           @include responsive(pc-screens) {
             font-size: $em36px;
             line-height: 46px;
+          }
+
+          strong {
+            // color: #ffb400;
           }
         }
 
@@ -1177,9 +1179,11 @@ main {
         right: -40.1282%;
         z-index: -1;
         width: 340px;
+        transition: all 1s ease;
 
         @include responsive(pc-screens) {
           width: 500px;
+          right: -30vw;
         }
 
         img {
@@ -1189,6 +1193,15 @@ main {
           @include responsive(pc-screens) {
             opacity: 1;
           }
+        }
+      }
+      .s3-actImg {
+        opacity: 1;
+        right: -5.1282%;
+        top: 30px;
+
+        @include responsive(pc-screens) {
+          right: 0;
         }
       }
     } //flex
@@ -1216,6 +1229,7 @@ main {
       margin: 0 auto;
 
       @include responsive(pc-screens) {
+        width: auto;
         margin: 0;
       }
 
@@ -1235,7 +1249,8 @@ main {
           overflow: hidden;
           border: #fff solid min(5.1282vw, 25px);
           border-radius: 50%;
-          box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
+          box-shadow: 0 0 20px rgba($color: #333, $alpha: 0.3);
+          // box-shadow: 0 10px 10px -6px rgba($color: #000000, $alpha: 0.3);
           @include responsive(pc-screens) {
             width: 650px;
             height: 650px;
@@ -1287,22 +1302,27 @@ main {
             width: 100%;
           }
 
-          &::before {
-            content: "";
+          .focuse-border {
+            display: none;
             position: absolute;
-            display: block;
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 6px solid red;
-            box-sizing: border-box;
             background-color: transparent;
-            z-index: 10000;
-            background: yellow;
-            left: 150px;
-            top: -10px;
-            //낼여기부터🤬
-            margin: 0;
+            z-index: 1000;
+            left: 10px;
+
+            i {
+              background: linear-gradient(to right, #ffe016, #ffcdf3, #65d3ff);
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              display: block;
+              font-size: 110px;
+              text-align: center;
+              line-height: 110px;
+            }
+
+            @include responsive(pc-screens) {
+              display: block;
+            }
           }
 
           li {
@@ -1322,7 +1342,7 @@ main {
               height: 110px;
               width: 110px;
               position: relative;
-              border-width: 6px;
+              border-width: 10px;
               bottom: 0px;
               left: 0px;
               margin: 0 10px;

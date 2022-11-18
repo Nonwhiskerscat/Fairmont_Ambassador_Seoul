@@ -35,7 +35,7 @@ body {
 
 .wrapper {
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
   // background-color: rgb(151, 168, 240);
   color: white;
 }
@@ -43,6 +43,7 @@ body {
 .container {
   width: 89.74358974358974%;
   // background: plum;
+  // overflow: hidden;
   @include responsive(pc-screens) {
     width: 100%;
   }

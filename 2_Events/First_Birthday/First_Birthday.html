@@ -25,34 +25,57 @@
   <script src="./js/button.js"></script>
 
   <script>
+    //a02
+    //reset event 
+    //s1 s1-img / s1-content /  s1-content strong
+    //s3 s3-content h3 / s3-content p / s3-btns / s3-img(class)
+    //s4 s4Inter(interver) / bg-line /left-content /right-content
+
     $().ready(() => {
-      //scroll observer
+      //observer
       let io = new IntersectionObserver(isObserver, {
-        root: null, rootMargin: "0px 0px 0px 0px", threshold: 0.8
+        root: null, rootMargin: "400px 0px 100px 0px", threshold: 0.7
       })
       let obserTarget = $('main section').not('.s2-instruction', '.s5-notice')
-
       obserTarget.each((i, target) => io.observe(target))
 
+      let s4Inter = null
+
       function isObserver(obser, ent) {
-        let isFn = (target) => {
+        let currTarget = obser[0].target.className
+        let startFn = (target) => {
           if (target == "s1-intro") s1Evnt();
           if (target == "s3-balloon") s3Evnt();
           if (target == "s4-preview") s4Evnt();
+        }
+        let resetFn = (target) => {
+          if (target == "s1-intro") {
+            $(".s1-img , .s1-content , .s1-content strong").removeAttr("style")
+          };
+          if (target == "s3-balloon") {
+            $(".s3-content h3 , .s3-content p , .s3-btns").removeAttr("style")
+            $(".s3-img").removeClass("s3-actImg")
+          };
+          if (target == "s4-preview") {
+            $(".bg-line , .right-content, .left-content").stop(true, true).removeAttr("style").stop(true, true)
+            clearInterval(s4Inter)
+          };
         }
 
         //run after reload
         if (obser.length > 1) {
           for (let i in obser) {
-            if (obser[i].isIntersecting) isFn(obser[i].target.className)
+            if (obser[i].isIntersecting) startFn(obser[i].target.className)
           }
         }
 
-        //run on area
-        if (obser[0].isIntersecting) isFn(obser[0].target.className)
+        //start reset fn
+        obser[0].isIntersecting ? startFn(currTarget) : resetFn(currTarget)
       }
 
-      //s1 - slide & fade right img 
+
+      //=====================s1=========================
+      //1. fade left text & slide right img 
       function s1Evnt() {
         let s1Delay = 700
 
@@ -64,7 +87,8 @@
           })
       }
 
-      //s2 - slide img 
+      //=====================s2=========================
+      // 1. slide img
       let clone = $(".ins").clone(true).appendTo('.hidden-box')
       $('.ins li:eq(1)').addClass('s2-act')//add default class
       let multi = 1;
@@ -88,57 +112,78 @@
         $(clone).children().eq(classIdx - 1).addClass('s2-act')
       }
 
-      //s3 fade text & move img 
-      //s3-content --> p , .s3-btns --> s3-img
+      //=====================s3=========================
+      // 1. fade text & move img 
+      //s3-content h3 --> p , .s3-btns --> s3-img
       function s3Evnt() {
         let s3Delay = 600
-
         $('.s3-content')
           .find('h3').animate({ "opacity": 1 }, s3Delay * 2, () => {
-            $('.s3-img')
-              .animate({ "opacity": "1", "right": "-5.1282%", "top": "30px" }, 1000)
+            $('.s3-img').addClass('s3-actImg')
           })
           .end().find("p , .s3-btns").delay(s3Delay)
           .animate({ "opacity": 1 }, s3Delay * 2)
       }
 
-      //s4 preview 
-      let s4Inter = null
-      function s4Evnt() {
+      //==================s4 preview=====================
+      // 1. fade in area
+      //bg-line //left-content //right-content
+      function s4Evnt(click) {
         $('.bg-line')
           .animate({ 'width': '100%' }, 1000, "swing", () => {
-
-            clearInterval(s4Inter)
-            s4Inter = setInterval(fadeImg, 3000)
 
             $('.left-content')
               .animate({ "left": 0 }, 2400,)
               .css({ "transform": "rotate(1turn)" })
               .next().delay(2400).animate({ "opacity": 1 }, 2000)
 
-          })//first animate
-      }//s4Event
+            clearInterval(s4Inter)
+            s4Inter = setInterval(fadeImg, 3000) //변수 observer 함수 위에 선언함 
 
-      //questack 꽉차서 동작들 밀릴까바 s2에 interval 묶어쓸까 고민중
-      //s4 - fadeImgs
-      $(".s4-img-box > li:gt(0)").hide()
-      let onFadeIdx = 0
-
-      function fadeImg() {
-        $(".s4-img-box > li:first")
-          .delay(200).fadeOut(1500).next().fadeIn(1500)
-          .end().appendTo(".s4-img-box")
-
-        let $li = $(".s4-img-list li")
-        if (onFadeIdx >= $li.length - 1) onFadeIdx = -1;
-
-        $li.css('border-color', '#fff')
-        setTimeout(() => $li.eq(++onFadeIdx).css('border-color', 'blue'), 800)
+          })//animate
       }
 
+      // 2. fade img, move border Box
+      let onFadeIdx = 0
+      let $li = $(".s4-img-list li")
+      $(".s4-img-box > li:gt(0)").hide()
 
-      let borderY = $('.bg-line')[0].clientHeight / 2 - $(".s2-move-border").height() / 2
+      function fadeImg(click) {
+        let liWidth = $li.outerWidth(true)
+        let dfLeftMargin = (liWidth - $li.outerWidth(false)) / 2
+        //시작지점 marginLeft 10 // 요소의 마진+넓이 130
 
+        if (++onFadeIdx >= $li.length) onFadeIdx = 0;
+
+        //move border
+        $('.focuse-border')
+          .animate({ "left": `${liWidth * onFadeIdx + dfLeftMargin}px` }, 400)
+
+        //fade
+        let $leftContain = $(".s4-img-box")
+        let CloneFirstLi = $li.eq(onFadeIdx).clone().css("display", "none")
+
+        $leftContain
+          .append(CloneFirstLi).find('li:first').fadeOut().next().fadeIn()
+
+        if (!click) {
+          setTimeout(() => $leftContain.find('li:first').remove(), 2000)
+        } else {
+          $leftContain.find('li:first').remove()
+          $leftContain.find('li:last').fadeIn()
+        }
+      }
+
+      // 3. change fade img & Idx 
+      $li.on('click', ChangeFadeImg)
+
+      function ChangeFadeImg() {
+        onFadeIdx = $(this).index() - 1
+
+        clearInterval(s4Inter)
+        s4Inter = setInterval(fadeImg, 3000)
+        fadeImg(true)
+      }
 
     }) //load
   </script>
@@ -504,10 +549,6 @@
             <div class="left-content">
               <ul class="s4-img-box">
                 <li><img src="./img/First_Birthday/photo/preview-1.png" alt="아기손" /></li>
-                <li><img src="./img/First_Birthday/photo/preview-main-img.jpg" alt="노란풍선과 아이" /></li>
-                <li><img src="./img/First_Birthday/photo/preview-3.jpg" alt="공들" /></li>
-                <li><img src="./img/First_Birthday/photo/preview-4.png" alt="프라이빗룸" /></li>
-                <li><img src="./img/First_Birthday/photo/preview-5.jpg" alt="돌잔치액자" /></li>
               </ul>
             </div>
             <div class="right-content">
@@ -518,6 +559,7 @@
                 <li><img src="./img/First_Birthday/photo/preview-3.jpg" alt="공들" /></li>
                 <li><img src="./img/First_Birthday/photo/preview-4.png" alt="프라이빗룸" /></li>
                 <li><img src="./img/First_Birthday/photo/preview-5.jpg" alt="돌잔치액자" /></li>
+                <div class="focuse-border"><i class="fa-regular fa-circle"></i></div>
               </ul>
             </div>
           </div>

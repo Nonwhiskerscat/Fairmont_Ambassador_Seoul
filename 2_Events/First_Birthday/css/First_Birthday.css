@@ -27,6 +27,7 @@ body {
 
 .wrapper {
   width: 100%;
+  overflow: hidden;
   color: white;
 }
 
@@ -1147,11 +1148,16 @@ main section.s2-instruction .slide-box .hidden-box ul.ins li.s2-act::before {
 }
 main section.s3-balloon {
   margin-top: 110px;
-  margin-bottom: 240px;
+  margin-bottom: 200px;
 }
 @media screen and (min-width: 1400px) {
   main section.s3-balloon {
     margin-top: 160px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-balloon > .container {
+    overflow: hidden;
   }
 }
 main section.s3-balloon .flex {
@@ -1170,6 +1176,7 @@ main section.s3-balloon .flex .s3-content {
   main section.s3-balloon .flex .s3-content {
     margin-left: 100px;
     padding-top: 370px;
+    padding-bottom: 250px;
   }
 }
 main section.s3-balloon .flex .s3-content h3 {
@@ -1223,10 +1230,12 @@ main section.s3-balloon .flex .s3-img {
   right: -40.1282%;
   z-index: -1;
   width: 340px;
+  transition: all 1s ease;
 }
 @media screen and (min-width: 1400px) {
   main section.s3-balloon .flex .s3-img {
     width: 500px;
+    right: -30vw;
   }
 }
 main section.s3-balloon .flex .s3-img img {
@@ -1236,6 +1245,16 @@ main section.s3-balloon .flex .s3-img img {
 @media screen and (min-width: 1400px) {
   main section.s3-balloon .flex .s3-img img {
     opacity: 1;
+  }
+}
+main section.s3-balloon .flex .s3-actImg {
+  opacity: 1;
+  right: -5.1282%;
+  top: 30px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s3-balloon .flex .s3-actImg {
+    right: 0;
   }
 }
 main section.s4-preview {
@@ -1261,6 +1280,7 @@ main section.s4-preview .flex {
 }
 @media screen and (min-width: 1400px) {
   main section.s4-preview .flex {
+    width: auto;
     margin: 0;
   }
 }
@@ -1282,7 +1302,7 @@ main section.s4-preview .flex .left-content .s4-img-box {
   overflow: hidden;
   border: #fff solid min(5.1282vw, 25px);
   border-radius: 50%;
-  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(51, 51, 51, 0.3);
 }
 @media screen and (min-width: 1400px) {
   main section.s4-preview .flex .left-content .s4-img-box {
@@ -1334,21 +1354,27 @@ main section.s4-preview .flex .right-content .s4-img-list {
     width: 100%;
   }
 }
-main section.s4-preview .flex .right-content .s4-img-list::before {
-  content: "";
+main section.s4-preview .flex .right-content .s4-img-list .focuse-border {
+  display: none;
   position: absolute;
-  display: block;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 6px solid red;
-  box-sizing: border-box;
   background-color: transparent;
-  z-index: 10000;
-  background: yellow;
-  left: 150px;
-  top: -10px;
-  margin: 0;
+  z-index: 1000;
+  left: 10px;
+}
+main section.s4-preview .flex .right-content .s4-img-list .focuse-border i {
+  background: linear-gradient(to right, #ffe016, #ffcdf3, #65d3ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: block;
+  font-size: 110px;
+  text-align: center;
+  line-height: 110px;
+}
+@media screen and (min-width: 1400px) {
+  main section.s4-preview .flex .right-content .s4-img-list .focuse-border {
+    display: block;
+  }
 }
 main section.s4-preview .flex .right-content .s4-img-list li {
   position: absolute;
@@ -1368,7 +1394,7 @@ main section.s4-preview .flex .right-content .s4-img-list li {
     height: 110px;
     width: 110px;
     position: relative;
-    border-width: 6px;
+    border-width: 10px;
     bottom: 0px;
     left: 0px;
     margin: 0 10px;
