@@ -16,6 +16,15 @@
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script>  
+
+    <!--=======================룸 전용 스크립트 부분=======================-->
+    <script src="./js/header_scroll.js"></script>
+    <script src="./js/room_btn.js"></script>
+    <script src="./js/room_gall.js"></script>
+    <script src="./js/room_modal.js"></script>
+    <script src="./js/notice.js"></script>
+    <script src="./js/animations.js"></script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -293,24 +302,24 @@
                 </div><!--room_int-->
     
                 <div class="room_gall">
-                    <h3>Gallery</h3>
+                    <h3 class="gall">Gallery</h3>
                     <div class="gall_main">
                         <ul>
-                            <li><img class = "small_img" src="./img/fairmont_deluxe/photo/gal1.png" alt="갤러리1"></li>
-                            <li><img src="./img/fairmont_deluxe/photo/gal2.png" alt="갤러리2"></li>
-                            <li><img class = "small_img" src="./img/fairmont_deluxe/photo/gal3.png" alt="갤러리3"></li>
+                            <li id="list1"><img src="./img/fairmont_deluxe/photo/gal1.png" alt="갤러리1"></li>
+                            <li id="list2"><img src="./img/fairmont_deluxe/photo/gal2.png" alt="갤러리2"></li>
+                            <li id="list3"><img src="./img/fairmont_deluxe/photo/gal3.png" alt="갤러리3"></li>
                         </ul>
                     </div><!--gall_main-->
                     
-                    <div class="gall_navi">
-                        <li><img src="./img/fairmont_deluxe/icon/nav_l.png" alt="왼쪽화살표"></li>
-                        <li><p>2</p></li>
-                        <li><img src="./img/fairmont_deluxe/icon/nav_r.png" alt="오른쪽화살표"></li>
-                    </div>
+                    <ul class="gall_navi">
+                        <li rel="list1"><span class="longer"></span></li>
+                        <li rel="list2"><span></span></li>
+                        <li rel="list3"><span></span></li>
+                    </ul>
                 </div><!--roomgall-->
     
                 <div class="room_types">
-                    <h3>Types</h3>
+                    <h3 class="type">Types</h3>
                     
                     <div class="container">
                         <div class="types_flex">
@@ -344,11 +353,12 @@
                                 </ul>
                                 <div class="button">
                                     <button>간략히 보기</button>
-                                    <button class="no">자세히 보기</button>
+                                    <button>자세히 보기</button>
                                     <button>예약하기</button>
                                 </div><!--button-->
                             </div><!--types_right-->
                         </div><!--types_flex-->
+                    </div><!--container-->
 
                         <div class="room_modal">
                             <div class="container">
@@ -535,11 +545,10 @@
                             </div>
                         </div><!--room_modal-->
     
-                    </div><!--container-->
 
                 <div class="container">
                     <div class="notice">
-                        <h3>Notice</h3>
+                        <h3 class="notc">Notice</h3>
                         <div class="notice_flex">
                             <div class="hotel_use">
                                 <div class="title">
@@ -594,10 +603,10 @@
                 </div><!--container-->
 
                 <div class="other_room">
-                    <h3>Other Rooms</h3>
+                    <h3 class="oroom">Other Rooms</h3>
                     <div class="container">
                         <div class="other_ent">
-                            <div class="ohter_fair">
+                            <div class="other_fairs">
                                 <div class="img_box">
                                     <img src="./img/fairmont_deluxe/photo/other_rooms_1.png" alt="페어몬트룸" class="other">
                                     <img src="./img/fairmont_deluxe/photo/other_rooms_1_m.png" alt="페어몬트룸" class="other_m">
@@ -631,7 +640,7 @@
                                 
                             </div><!--other_suit-->
     
-                            <div class="ohter_pent">
+                            <div class="other_pent">
                                 <div class="img_box">
                                     <img src="./img/fairmont_deluxe/photo/other_rooms_3.png" alt="펜트하우스" class="other">
                                     <img src="./img/fairmont_deluxe/photo/other_rooms_3_m.png" alt="펜트하우스" class="other_m">
