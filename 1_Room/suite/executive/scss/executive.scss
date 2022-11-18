@@ -5,29 +5,65 @@
 
 .no {
     display: none;
-}   
+}
+
+.rotate_180 {
+    transform: rotateX(180deg);
+}
+
+
 
 .scale_80 {
     transform: scale(0.8);
     transform-origin: top center;
 }
 
+.h3_first {
+    opacity: 0.1;
+    transform: translateY(150px);
+}
+
+.not_scroll{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
 //header
 .menu_modal {
-    display: none;
-    position: absolute;
+    // display: none;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #333333;
+    height: 100%;
+    z-index: 700;
+    overflow: auto;
+    background-color: rgba($color: #000, $alpha: 0.75);
 
     @include responsive(pc-screens){
-        min-height: 100vh;
+        // min-height: 100vh;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
     }
 
     .menu_entire{
         width: 89.74358974358974%;
         margin: 0 auto;
+        z-index: 800;
         
         @include responsive(pc-screens) {
             width: 93.75%;
@@ -81,6 +117,8 @@
                                 display: inline;
                                 font-size: 1.2em;
                             }
+
+                            
                             
                         }
     
@@ -110,6 +148,7 @@
                             &:hover{
                                 background-color: white;
                                 color: #333333;
+                                transition: all 0.5s;
                             }
                         }
                     }
@@ -134,6 +173,11 @@
                                 @include responsive(pc-screens) {
                                     margin-left: 10px;
                                 }
+
+                                img:hover {
+                                    transform: scale(1.25);
+                                    transition: 1s;
+                                }
                                 
                             }
                         }
@@ -149,6 +193,20 @@
                         @include responsive(pc-screens){
                             // margin-right: calc(10px + 3vw);
                         }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         a{
                             display: flex;
@@ -163,6 +221,8 @@
                                     width: 22px;
                                     height: 22px;
                                 }
+
+                                
     
                             }
     
@@ -178,6 +238,21 @@
     
                     .menu_close {
                         display: flex;
+                        cursor:pointer;
+
+                        &:hover {
+                            .close_modal {
+                                transform: scale(1.25) rotateY(360deg);
+                                transition: 1s;
+                            }
+
+                            p {
+                                color: #ffef5a;
+                                transition: 1s;
+
+                            }
+                            
+                        }
     
                         .close_modal{
                             position: relative;
@@ -235,7 +310,7 @@
             @include responsive(pc-screens) {
                 flex-direction: row;
                 // align-items: center;
-                padding-top: 100px ;
+                padding-top: 50px;
                 
                 margin: 0 auto;
             }
@@ -365,9 +440,10 @@
                     }
             
                     li.big_menu {
-                        @include type_custom(calc(1em + 2vw), $eng_title_font);
-                        letter-spacing: 0.5vw;
+                        @include type_custom(calc(16px + 2vw), $eng_title_font);
+                        letter-spacing: 1px;
                         margin-bottom: 50px;
+                        position: relative;
     
                         @include responsive(pc-screens) {
                             // background-color: deeppink;
@@ -375,6 +451,62 @@
                             letter-spacing: 2px;
                             margin-bottom: 100px;
                             width: 25%;
+                        }
+
+                        &:hover {
+                            transition: all 0.5s;
+                            color: #ffef5a;
+
+                            @include responsive(pc-screens) {
+                                color: #ffef5a;
+                            }
+
+                            &>a {
+                                color: #ffef5a;
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                            }
+
+                            &::before {
+                                @include title_border_2(30px, 3px, #ffef5a, 5px, 5px);
+                                position: absolute;
+                                top: -5px;
+
+                                @include responsive(pc-screens) {
+                                    @include title_border_2(30px, 3px, #ffef5a, 5px, 5px);
+                                }
+                                
+                                
+                            }
+                        }
+
+                        &>a {
+                            @include type_custom(calc(16px + 2vw), $eng_title_font);
+                            margin-bottom: 50px;
+
+                            
+                            &:hover {
+                                color: #ffef5a;
+                                transition: all 0.5s;
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                            }
+    
+                            @include responsive(pc-screens) {
+                                // background-color: deeppink;
+                                font-size: 28px;
+                                letter-spacing: 2px;
+                                margin-bottom: 100px;
+                                width: 25%;
+                            }
+
+                            
                         }
                     }
     
@@ -385,6 +517,8 @@
                         display: flex;
                         flex-direction: row;
                         flex-wrap: wrap;
+
+                        
     
                         @include responsive(pc-screens) {
                             flex-direction: column;
@@ -393,7 +527,7 @@
                         
         
                         li.mid_menu {
-                            @include type_custom(calc(0.5em + 0.5vw), $common_font);
+                            @include type_custom(calc(14px + 0.5vw), $common_font);
                             color: white;
                             width: 50%;
                             font-weight: 300;
@@ -405,19 +539,72 @@
                                 margin-bottom: 20px;
                                 font-weight: 200;
                             }
+
+                            &:hover {
+                                transition: all 0.5s;
+                                color: #ffef5a;
+
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                                ul {
+                                    display: block;
+                                }
+                            }
+
+                            &>a {
+                                @include type_custom(calc(14px + 0.5vw), $common_font);
+                                font-weight: 300;
+
+                                @include responsive(pc-screens) {
+                                    width: 100%;
+                                    font-size: 18px;
+                                    margin-bottom: 20px;
+                                    font-weight: 200;
+                                }
+
+                                &:hover {
+                                    color: $base_color_light;
+                                    color: #ffef5a;
+
+
+                                @include responsive(pc-screens) {
+                                    color: #ffef5a;
+                                }
+
+                                    
+                                }
+                            }
     
                             ul{
                                 padding-top: 10px;
                                 display: none;
+
+                                
     
                                 li{
                                     list-style: '- ' inside;
                                     margin-bottom: calc(0.2em + 0.3vw);
                                     margin-bottom: 10px;
-                                    font-weight: 100;
+                                    font-weight: 300;
+                                    @include type_custom(calc(12px + 0.5vw), $common_font);
 
                                     @include responsive(pc-screens) {
                                         font-size: 16px;
+                                    }
+
+                                    
+
+                                    a:hover {
+                                        transition: all 0.5s;
+                                        color: #ffef5a;
+
+
+                                        @include responsive(pc-screens) {
+                                            color: #ffef5a;
+                                        }
                                     }
                                 }
                             }
@@ -429,7 +616,26 @@
             }
         }
     }
+
+    .menu_matte {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        z-index: -1;
+
+        @include responsive(pc-screens) {
+            min-height: 100vh;
+            background-color: rgba($color: #000, $alpha: 0.75);
+        }
+    }
     
+}
+
+h3 {
+    position: relative;
 }
 
 header{
@@ -480,6 +686,7 @@ header{
             align-items: center;
             text-align: right;
             margin-top: 5px;
+            cursor:pointer;
     
             @include responsive(pc-screens){
                 width: 80px;
@@ -490,7 +697,6 @@ header{
                 display:block;
                 width: 16px;
                 height: 13px;
-                cursor:pointer;
                 position:relative;
 
                 span {
@@ -727,18 +933,19 @@ main {
     color: #333;
     .room_int {
         margin-top: $mid_margin_m;
+        
 
         @include responsive(pc-screens) {
             margin-top: $mid_margin;
         }
 
         h3.first {
+            position: relative;
             text-align: center;
             @include type_custom(calc(8px + 3vw), $common_font);
             line-height: calc(1em + 3vw);
             font-weight: 200;
             margin-bottom: $mid_margin_m;
-            
 
             @include responsive(pc-screens) {
                 font-size: 48px;
@@ -920,6 +1127,7 @@ main {
         } //.room_cont
 
         h3.last {
+            position: relative;
             transform: translateY(-150px);
             text-align: center;
             @include type_custom(calc(8px + 3vw), $common_font);
@@ -943,8 +1151,8 @@ main {
     } //.room_int
 
     .room_gall {
+        position: relative;
         margin: 0 auto;
-        max-height: 100vh;
         margin-top: $small_margin_m;
 
         @include responsive(pc-screens){
@@ -957,26 +1165,31 @@ main {
 
         .gall_main {
             width: 100%;
+            max-height: 80vh;
             overflow: hidden;
+
+
+            @include responsive(pc-screens) {
+                max-height: 95vh;
+            }
 
             ul {
                 display: flex;
+                position: relative;
                 justify-content: space-between;
-                width: 200%;
-                transform: translateX(-25%);
+                width: 300%;
 
                 @include responsive(pc-screens) {
-                    width: 150%;
-                    transform: translateX(-17.5%);
+                    min-height: 100%;
                 }
     
                 li {
-                    width: 50%;
+                    width: 100%;
                     overflow: hidden;
                     margin: 0 auto;
 
                     @include responsive(pc-screens) {
-                        width: 50%;
+                        width: 60%;
                     }
 
                     img {
@@ -996,36 +1209,47 @@ main {
         } //gall_main
 
         .gall_navi {
-            width: 30%;
+            position: absolute;
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
             align-items: center;
-            margin-top: $small_margin_m;
+            position: bottom;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
 
             
             @include responsive(pc-screens) {
-                width: 300px;
-                margin-top: $small_margin;
+                // width: 300px;
+                bottom: 20px;
+                
             }
 
             li {
-                img {
-                    width: 50%;
+                span {
+                    cursor: pointer;
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    background-color: white;
+                    opacity: 0.5;
+                    margin-right: 10px;
 
                     @include responsive(pc-screens) {
-                        width: 80%;
+                        width: 50px;
+                        height: 3px;
                     }
-                }
 
-                &:nth-child(2) {
-                    display: none;
-                    @include type_custom(calc(1em + 1vw),$common_font);
-                    transform: translateX(-35%);
-                    color: #bdbdbd;
+                    &.longer {
+                        width: 100px;
+                        opacity: 1.0;
+                        transition: all 1s;
 
-                    @include responsive(pc-screens) {
-                        font-size: 3em;
+                        @include responsive(pc-screens) {
+                            width: 150px;
+                            height: 3px;
+                        }
                     }
                 }
             } //li
@@ -1033,6 +1257,7 @@ main {
         }
         
     }//.room_gall
+    
 
     .room_types {
         margin-top: $big_margin_m;
@@ -1045,7 +1270,57 @@ main {
             @include sub_h3;
         }
 
+        .room_gnb {
+            position: relative;
+            background-color: #f4f4f4;
+            text-align: center;
+
+            ul {
+
+                display: flex;
+                flex-direction: column;
+
+                @include responsive(pc-screens) {
+                    flex-direction: row;
+                    width: 60%;
+                    justify-content: space-between;
+                    max-width: 1380px;
+                    margin: 0 auto;
+                }
+
+                li {
+                    @include type_custom(calc(14px + 0.5vw), $common_font);
+                    cursor: pointer;
+                    font-weight: 200;
+                    width: 100%;
+                    color: #bdbdbd;
+                    padding: 10px 0;
+                    text-align: center;
+
+                    @include responsive(pc-screens) {
+                        font-size: $semif;
+                        // background-color: #2a52be;
+
+                    }
+
+                    &:hover {
+                        font-weight: 400;
+                        color: #333;
+                    }
+
+                    &.bold {
+                        font-weight: 400;
+                        color: #333;
+                    }
+
+                    
+                    
+                }
+            }
+        }
+
         .types_flex {
+            position: relative;
             margin-top: $mid_margin_m;
             display: flex;
             flex-direction: column;
@@ -1088,7 +1363,9 @@ main {
 
                     @include responsive(pc-screens){
                         
-                        // height: calc(100px + 20vw);
+                        width: 580px;
+                        height: 435px;
+                        overflow: hidden;
                     }
 
                     img{
@@ -1106,9 +1383,11 @@ main {
             } // type_left
 
             .types_right {
+                position: relative;
 
                 @include responsive(pc-screens) {
                     width: 680px;
+                    height: 450px;
                 }
 
                 h4 {
@@ -1205,15 +1484,18 @@ main {
                 }
 
                 .button {
+                    
                     display: flex;
                     justify-content: space-between;
                     margin-top: calc(1em + 2vw);
 
                     @include responsive(pc-screens){
                         margin-top: 40px;
+                        bottom: 0;
                     }
 
                     button {
+                        cursor: pointer;
                         width: 45%;
                         height: 40px;
                         @include type_custom(calc(0.5em + 1vw), $common_font);
@@ -1259,20 +1541,21 @@ main {
 
     .room_modal {
 
-        margin-top: $mid_margin_m;
+        // margin-top: $mid_margin_m;
 
-        @include responsive(pc-screens) {
-            margin-top: $mid_margin;
-        }
+        // @include responsive(pc-screens) {
+        //     margin-top: $mid_margin;
+        // }
 
         .closer {
+            cursor: pointer;
 
             p{
                 @include type_custom(calc(1em + 0.5vw),$common_font);
                 font-weight: 400;
                 text-align: center;
                 width: 100%;
-                padding: 10px 0;
+                // padding: 10px 0;
                 border-radius: 5px;
 
                 @include responsive(pc-screens) {
@@ -1280,7 +1563,7 @@ main {
                 }
 
                 &:hover {
-                    background-color: rgba(0,0,102,0.05);
+                    background-color: rgba($color: #000066, $alpha: 0.1);
                     transition: all 0.5s;
                 }
             }            
@@ -1407,6 +1690,16 @@ main {
                             font-size: $mainf;
                         }
 
+                        span.semi_big {
+                            color: #000066;
+                            @include type_custom(calc(1.5em + 1vw), $common_font);
+                            margin-right: 5px;
+
+                            @include responsive(pc-screens) {
+                                font-size: 2em;
+                            }
+                        }
+
                         span.big {
                             color: #000066;
                             @include type_custom(calc(1.5em + 1vw), $common_font);
@@ -1453,7 +1746,7 @@ main {
 
 
                 .ame_grp {
-                    background-color: rgba(0,0,102,0.05);
+                    background-color: rgba($color: #000066, $alpha: 0.1);
                     padding: 0 20px;
                     padding-top: 30px;
                     display: flex;
@@ -1599,7 +1892,7 @@ main {
                 }
 
                 &:hover {
-                    background-color: rgba(0,0,102,0.05);
+                    background-color: rgba($color: #000066, $alpha: 0.1);
                     transition: all 0.5s;
                 }
             }            
@@ -1607,121 +1900,122 @@ main {
     }//.room_modal
 
     .notice {
-            margin-top: $big_margin_m;
-    
+        margin-top: $big_margin_m;
+
+        @include responsive(pc-screens) {
+            margin-top: $big_margin;
+        }
+
+        h3 {
+            @include sub_h3;
+        } 
+
+        .notice_flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
             @include responsive(pc-screens) {
-                margin-top: $big_margin;
+                flex-direction: row;
             }
-    
-            h3 {
-                @include sub_h3;
-            } 
 
-            .notice_flex {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+            &>div {
+                width: 100%;
+                margin-top: $mid_margin_m;
 
+                &:first-child {
+                    margin-top: 0;
+                }
+                
                 @include responsive(pc-screens) {
-                    flex-direction: row;
+                    width: 640px;
+                    margin-top: 0;
                 }
 
-                &>div {
-                    width: 100%;
-                    margin-top: $mid_margin_m;
+                .title {
+                    em {
+                        cursor: pointer;
+                        position: relative;
+                        @include type_custom(calc(0.8em + 0.8vw), $common_font);
+                        font-style: normal;
+                        font-weight: 400;
+                        margin-left: 10px;
 
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                    
-                    @include responsive(pc-screens) {
-                        width: 640px;
-                        margin-top: 0;
-                    }
-
-                    .title {
-                        em {
-                            position: relative;
-                            @include type_custom(calc(0.8em + 0.8vw), $common_font);
-                            font-style: normal;
-                            font-weight: 400;
-                            margin-left: 10px;
-
-                            &::after {
-                                @include title_border_2(100%, 1px, #333, 0, 0);
-                                padding-top: 5px;
-
-                            }
-                            
-
-                            @include responsive(pc-screens) {
-                                font-size: $semif;
-                            }
+                        &::after {
+                            @include title_border_2(100%, 2px, #bdbdbd, 0, 0);
+                            padding-top: 5px;
 
                         }
-
-                        img {
-                            position: absolute;
-                            right: 0;
-                            top: 10px;
-                            width: 20px;
-
-                            @include responsive(pc-screens) {
-
-                            }
-                        }
-                    }
-
-                    .accord {
-                        padding: 20px;
-                        background-color: rgba(0,0,102,0.05);
+                        
 
                         @include responsive(pc-screens) {
-                            padding: 30px;
+                            font-size: $semif;
                         }
 
-                        ul {
-
-                            p{
-                                @include type_custom(calc(0.5em + 1vw),$common_font);
-                                margin-bottom: calc(0.5em + 0.5vw);
-                                font-weight: 400;
-
-                                @include responsive(pc-screens) {
-                                    font-size: $mainf;
-                                    margin-bottom: 15px;
-                                }
-                            }
-                            
-
-
-                            li {
-                                @include type_custom(calc(0.5em + 1vw),$common_font);
-                                list-style: 'ㆍ' inside;
-                                text-indent: -15px;
-                                margin-bottom: calc(0.5em + 0.5vw);
-                                line-height: calc(1em + 1vw);
-                                text-align: justify;
-
-                                @include responsive(pc-screens) {
-                                    text-indent: -20px;
-                                    font-size: $mainf;
-                                    margin-bottom: 10px;
-                                }
-    
-                                
-                            }
-                        }
-                    
                     }
 
-                    &:nth-child(2) {
-                        li:first-child {
-                            margin-top: calc(0.5em + 0.5vw);
+                    img {
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        width: 20px;
+
+                        @include responsive(pc-screens) {
+
                         }
                     }
                 }
+
+                .accord {
+                    padding: 20px;
+                    background-color: rgba($color: #000066, $alpha: 0.1);
+
+                    @include responsive(pc-screens) {
+                        padding: 30px;
+                    }
+
+                    ul {
+
+                        p{
+                            @include type_custom(calc(0.5em + 1vw),$common_font);
+                            margin-bottom: calc(0.5em + 0.5vw);
+                            font-weight: 400;
+
+                            @include responsive(pc-screens) {
+                                font-size: $mainf;
+                                margin-bottom: 15px;
+                            }
+                        }
+                        
+
+
+                        li {
+                            @include type_custom(calc(0.5em + 1vw),$common_font);
+                            list-style: 'ㆍ' inside;
+                            text-indent: -15px;
+                            margin-bottom: calc(0.5em + 0.5vw);
+                            line-height: calc(1em + 1vw);
+                            text-align: justify;
+
+                            @include responsive(pc-screens) {
+                                text-indent: -20px;
+                                font-size: $mainf;
+                                margin-bottom: 10px;
+                            }
+
+                            
+                        }
+                    }
+                
+                }
+
+                &:nth-child(2) {
+                    li:first-child {
+                        margin-top: calc(0.5em + 0.5vw);
+                    }
+                }
             }
+        }
     } // notice
 
     .other_room {
