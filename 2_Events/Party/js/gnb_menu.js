@@ -14,6 +14,7 @@ $(document).ready(function() {
 
         $('.block').on('click', function(e){
             e.preventDefault();
+            alert('준비중입니다.');
         });
 
 
