@@ -114,7 +114,7 @@ $(document).ready(function() {
 
         }
 
-        if($(this).scrollTop()>h3_otop-$(this).innerHeight()/10) {
+        if($(this).scrollTop()>h3_otop-$(this).innerHeight()/7.5) {
             
             $('h3.oroom').animate({
                 'opacity': 1,
