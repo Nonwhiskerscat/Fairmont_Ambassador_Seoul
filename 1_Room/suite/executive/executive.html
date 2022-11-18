@@ -19,6 +19,14 @@
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
+
+    <!--=======================룸 전용 스크립트 부분=======================-->
+    <script src="./js/header_scroll.js"></script>
+    <script src="./js/room_btn.js"></script>
+    <script src="./js/room_gall.js"></script>
+    <script src="./js/room_modal.js"></script>
+    <script src="./js/notice.js"></script>
+    <script src="./js/animations.js"></script>
     
 </head>
 <body>
@@ -51,7 +59,7 @@
     
                         <div class="menu_header_right">
                             <div class="menu_login">
-                                <a href="./9_Etc/Login/Login.html">
+                                <a href="../../../9_Etc/Login/Login.html">
                                     <img src="./img/menu/Menu_Profile.png" alt="프로필">
                                     <p>Login</p>
                                 </a>
@@ -72,8 +80,11 @@
                 <div class="menu_main">
                     <div class="menu_main_left">
                         <div class="img">
-                            <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
-                            <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
+                            <a href="../../../index.html">
+                                <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                                <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
+                            </a>
+                            
                         </div>
                         <div class="contents">
                             <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
@@ -88,24 +99,24 @@
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu">객실
                                         <ul>
-                                            <li>페어몬트 룸</li>
-                                            <li>페어몬트 디럭스</li>
-                                            <li>페어몬트 골드</li>
+                                            <li><a href="../../../1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
+                                            <li><a href="../../../1_Room/guestroom/fairmont_deluxe/fairmont_deluxe.html">페어몬트 디럭스</a></li>
+                                            <li><a href="../../../1_Room/guestroom/fairmont_gold/fairmont_gold.html">페어몬트 골드</a></li>
                                         </ul>
                                     </li>
                                     <li class="mid_menu">스위트 룸
                                         <ul>
-                                            <li>시그니처 스위트</li>
-                                            <li>프리미어 스위트</li>
-                                            <li>이그제큐티브 스위트</li>
-                                            <li>디플로매틱 스위트</li>
+                                            <li><a href="../../../1_Room/suite/signiture/signiture.html">시그니처 스위트</a></li>
+                                            <li><a href="../../../1_Room/suite/premier/premier.html">프리미어 스위트</a></li>
+                                            <li><a href="../../../1_Room/suite/executive/executive.html">이그제큐티브 스위트</a></li>
+                                            <li><a href="../../../1_Room/suite/diplomatic/diplomatic.html">디플로매틱 스위트</a></li>
                                         </ul>
                                     </li>
 
                                     
                                     <li class="mid_menu">펜트하우스
                                         <ul>
-                                            <li>펜트하우스</li>
+                                            <li><a href="../../../1_Room/penthouse/penthouse/penthouse.html">펜트하우스</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -113,68 +124,68 @@
 
                             <li class="big_menu">Events
                                 <ul class="menu_semi_head">
-                                    <li class="mid_menu">웨딩</li>
-                                    <li class="mid_menu">연회</li>
-                                    <li class="mid_menu">돌잔치 & 가족모임</li>
+                                    <li class="mid_menu"><a href="../../../2_Events/Wedding/Wedding.html">웨딩</a></li>
+                                    <li class="mid_menu"><a href="../../../2_Events/Party/Party.html">연회</a></li>
+                                    <li class="mid_menu"><a href="../../../2_Events/First_Birthday/First_Birthday.html">돌잔치 & 가족모임</a></li>
                                 </ul>
                             </li>
 
-                            <li class="big_menu">Facilities
+                            <li class="big_menu"><a href="../../../3_Facilities/3_Facilities.html">Facilities</a>
                                 <ul class="menu_semi_head">
-                                    <li class="mid_menu">페어몬트 골드 라운지</li>
-                                    <li class="mid_menu">페어몬트 피트</li>
-                                    <li class="mid_menu" onclick="alert('준비중입니다.')">페어몬트 스파(준비중)</li>
+                                    <li class="mid_menu"><a href="../../../3_Facilities/1_Gold_Lounge/1_Gold_Lounge.html">페어몬트 골드 라운지</a></li>
+                                    <li class="mid_menu"><a href="../../../3_Facilities/2_Fit/2_Fit.html">페어몬트 피트</a></li>
+                                    <li class="mid_menu block" onclick="alert('준비중입니다.')"><a href="../../../3_Facilities/3_Spa/3_Spa.html">페어몬트 스파(준비중)</a></li>
                                 </ul>
                             </li>
 
                             <li class="big_menu">Special Offer
                                 <ul class="menu_semi_head">
-                                    <li class="mid_menu">이벤트 서비스</li>
-                                    <li class="mid_menu">푸드 서비스</li>
-                                    <li class="mid_menu">VIP 프로모션</li>
+                                    <li class="mid_menu"><a href="../../../4_SpecialOffer/4_SpecialOffer.html">이벤트 서비스</a></li>
+                                    <li class="mid_menu"><a href="../../../4_SpecialOffer/4_SpecialOffer.html">푸드 서비스</a></li>
+                                    <li class="mid_menu"><a href="../../../4_SpecialOffer/4_SpecialOffer.html">VIP 프로모션</a></li>
                                 </ul>
                             </li>
 
-                            <li class="big_menu">Dining
+                            <li class="big_menu"><a href="../../../5_Dining/5_Dining.html">Dining</a>
                                 <ul class="menu_semi_head">
                                     <li class="mid_menu">바
                                         <ul>
-                                            <li>M29</li>
+                                            <li><a href="../../../5_Dining/1_Bar/M29/M29.html">M29</a></li>
                                         </ul>
                                     </li>
                                     <li class="mid_menu">레스토랑
                                         <ul>
-                                            <li>마리포사</li>
-                                            <li>스펙트럼</li>
-                                            <li>갤러리세븐</li>
+                                            <li><a href="../../../5_Dining/2_Restaurant/Mariposa/Mariposa.html">마리포사</a></li>
+                                            <li><a href="../../../5_Dining/2_Restaurant/Spectrum/Spectrum.html">스펙트럼</a></li>
+                                            <li><a href="../../../5_Dining/2_Restaurant/Gallery/Gallery.html">갤러리 7</a></li>
                                         </ul>
                                     </li>
                                     <li class="mid_menu">카페
                                         <ul>
-                                            <li>더 아트리움 라운지</li>
+                                            <li><a href="../../../5_Dining/3_Cafe/AtriumLounge/AtriumLounge.html">더 아트리움 라운지</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="big_menu">About
+                            <li class="big_menu"><a href="../../../6_About/6_About.html">About</a>
                                 <ul class="menu_semi_head">
-                                    <li class="mid_menu">개요</li>
-                                    <li class="mid_menu">게스트 서비스</li>
-                                    <li class="mid_menu">오시는 길</li>
+                                    <li class="mid_menu"><a href="../../../6_About/6_About.html#sec1">개요</a></li>
+                                    <li class="mid_menu"><a href="../../../6_About/6_About.html#sec2">게스트 서비스</a></li>
+                                    <li class="mid_menu"><a href="../../../6_About/6_About.html#sec3">오시는 길</a></li>
                                 </ul>
                             </li>
 
                             <li class="big_menu">Customer 
                                 <ul class="menu_semi_head">
-                                    <li class="mid_menu">고객센터</li>
-                                    <li class="mid_menu">마이페이지</li>
+                                    <li class="mid_menu"><a href="../../../7_Customer/Cust_Center/Cust_Center.html">고객센터</a></li>
+                                    <li class="mid_menu"><a href="../../../7_Customer/My_Page/My_page.html">마이페이지</a></li>
                                 </ul>
                             </li>
 
                             <li class="big_menu">Reservation
                                 <ul class="menu_semi_head">
-                                    <li class="mid_menu">호텔룸 예약</li>
+                                    <li class="mid_menu"><a href="../../../8_Reservation/8_Reservation.html">호텔룸 예약</a></li>
                                 </ul>
                             </li>
 
@@ -182,6 +193,10 @@
                     </div><!--menu_main_right-->
                 </div><!--menu_main-->
             </div><!--menu_entire-->
+
+            <div class="menu_matte">
+                
+            </div>
         </div><!--menu_modal-->
 
         <header>
@@ -208,7 +223,6 @@
                 </div><!--menu-->
             </div><!--container-->
         </header>
-
 
         <section class="section">
             <div class="main0">
@@ -239,14 +253,6 @@
         </section>
 
         <main>
-            <!-- <div class="room_gnb">
-                <ul>
-                    <li>Signiture Suite</li>
-                    <li>Premier Suite</li>
-                    <li>Executive Suite</li>
-                    <li>Diplomatic Suite</li>
-                </ul>
-            </div> -->
 
             <div class="room_int">
                 <h3 class="first"><span>비스니즈 업무 해결</span>과<br> 호텔에서의 편리한 숙박,<br> <span>두 마리의 토끼</span>를 동시에 붙잡고 싶습니까?</h3>
@@ -293,66 +299,67 @@
             </div><!--room_int-->
 
             <div class="room_gall">
-                <h3>Gallery</h3>
+                <h3 class="gall">Gallery</h3>
                 <div class="gall_main">
                     <ul>
-                        <li><img class = "small_img" src="./img/executive/photo/gal1.jpg" alt="갤러리1"></li>
-                        <li><img src="./img/executive/photo/gal2.jpg" alt="갤러리2"></li>
-                        <li><img class = "small_img" src="./img/executive/photo/gal3.jpg" alt="갤러리3"></li>
+                        <li id="list1"><img src="./img/executive/photo/gal1.jpg" alt="갤러리1"></li>
+                        <li id="list2"><img src="./img/executive/photo/gal2.jpg" alt="갤러리2"></li>
+                        <li id="list3"><img src="./img/executive/photo/gal3.jpg" alt="갤러리3"></li>
                     </ul>
                 </div><!--gall_main-->
                 
-                <div class="gall_navi">
-                    <li><img src="./img/executive/icon/nav_l.png" alt="왼쪽화살표"></li>
-                    <li><p>2</p></li>
-                    <li><img src="./img/executive/icon/nav_r.png" alt="오른쪽화살표"></li>
-                </div>
-            </div><!--roomgall-->
+                <ul class="gall_navi">
+                    <li rel="list1"><span class="longer"></span></li>
+                    <li rel="list2"><span></span></li>
+                    <li rel="list3"><span></span></li>
+                </ul>
+            </div><!--room_gall-->
 
-            <div class="container">
                 <div class="room_types">
-                    <h3>Types</h3>
-                    <div class="types_flex">
-                        <div class="types_left">
-                            <h4 class="mob_title">이그제큐티브 스위트</h4>
-                            <div class="type_img">
-                                <img src="./img/executive/photo/type1.jpg" alt="사진1">                           
-                            </div>
-                        </div><!--types_left-->
-    
-                        <div class="types_right">
-                            <h4 class="pc_title">이그제큐티브 스위트</h4>
-                            <p class="subs">이그제큐티브 스위트는 침실 2개, 넉넉한 크기의 욕실, 작업용 책상, 컴퓨터, 편안한 소파, 라운지 의자가 있는 거실로 구성된 객실입니다.</p>
-                            <ul>
-                                <li>
-                                    <img src="./img/executive/icon/icon_2_1.png" alt="위치">
-                                    <p>11F - 26F</p>
-                                </li>
-                                <li>
-                                    <img src="./img/executive/icon/icon_2_2.png" alt="인원">
-                                    <p>대인 4 <br><span class="plus"> + </span>소인 2 </p>
-                                </li>
-                                <li>
-                                    <img src="./img/executive/icon/icon_2_3.png" alt="침대">
-                                    <p>킹 1 + 싱글 2</p>
-                                </li>
-                                <li>
-                                    <img src="./img/executive/icon/icon_2_4.png" alt="룸 넓이">
-                                    <p>123m<span class="small">2</span></p>
-                                </li>
-                            </ul>
-                            <div class="button">
-                                <button>간략히 보기</button>
-                                <button class="no">자세히 보기</button>
-                                <button>예약하기</button>
-                            </div><!--button-->
-                        </div><!--types_right-->
-                    </div><!--types_flex-->
+                    <h3 class="type">Types</h3>
+                    <div class="container">
+                        <div class="types_flex">
+                            <div class="types_left">
+                                <h4 class="mob_title">이그제큐티브 스위트</h4>
+                                <div class="type_img">
+                                    <img src="./img/executive/photo/type1.jpg" alt="사진1">                           
+                                </div>
+                            </div><!--types_left-->
+        
+                            <div class="types_right">
+                                <h4 class="pc_title">이그제큐티브 스위트</h4>
+                                <p class="subs">이그제큐티브 스위트는 침실 2개, 넉넉한 크기의 욕실, 작업용 책상, 컴퓨터, 편안한 소파, 라운지 의자가 있는 거실로 구성된 객실입니다.</p>
+                                <ul>
+                                    <li>
+                                        <img src="./img/executive/icon/icon_2_1.png" alt="위치">
+                                        <p>11F - 26F</p>
+                                    </li>
+                                    <li>
+                                        <img src="./img/executive/icon/icon_2_2.png" alt="인원">
+                                        <p>대인 4 <br><span class="plus"> + </span>소인 2 </p>
+                                    </li>
+                                    <li>
+                                        <img src="./img/executive/icon/icon_2_3.png" alt="침대">
+                                        <p>킹 1 + 싱글 2</p>
+                                    </li>
+                                    <li>
+                                        <img src="./img/executive/icon/icon_2_4.png" alt="룸 넓이">
+                                        <p>123m<span class="small">2</span></p>
+                                    </li>
+                                </ul>
+                                <div class="button">
+                                    <button>간략히 보기</button>
+                                    <button>자세히 보기</button>
+                                    <button>예약하기</button>
+                                </div><!--button-->
+                            </div><!--types_right-->
+                        </div><!--types_flex-->
+                    </div>
+
                     
                     
 
                 </div><!--room_types-->
-            </div><!--container-->
 
 
                 <div class="room_modal">
@@ -542,7 +549,7 @@
 
             <div class="container">
                 <div class="notice">
-                    <h3>Notice</h3>
+                    <h3 class="notc">Notice</h3>
                     <div class="notice_flex">
                         <div class="hotel_use">
                             <div class="title">
@@ -597,10 +604,10 @@
             </div><!--container-->
 
             <div class="other_room">
-                <h3>Other Rooms</h3>
+                <h3 class="oroom">Other Rooms</h3>
                 <div class="container">
                     <div class="other_ent">
-                        <div class="ohter_fair">
+                        <div class="other_fairs">
                             <div class="img_box">
                                 <img src="./img/executive/photo/other_rooms_1.png" alt="페어몬트룸" class="other">
                                 <img src="./img/executive/photo/other_rooms_1_m.png" alt="페어몬트룸" class="other_m">
@@ -634,7 +641,7 @@
                             
                         </div><!--other_suit-->
 
-                        <div class="ohter_pent">
+                        <div class="other_pent">
                             <div class="img_box">
                                 <img src="./img/executive/photo/other_rooms_3.png" alt="펜트하우스" class="other">
                                 <img src="./img/executive/photo/other_rooms_3_m.png" alt="펜트하우스" class="other_m">
@@ -651,10 +658,11 @@
                 
             </div><!--other_room-->
         </main>
+
         <footer>
             <div class="footer_entire">
                 <div class="footer_logo">
-                    <a href="#">
+                    <a href="../../../index.html">
                         <img class="back" src="./img/footer/img/Footer_logo.png" alt="footer_logo">
                     </a>
                 </div><!--footer_logo-->
@@ -677,7 +685,7 @@
                         <ul class= "flex_nav">
                             <li><a target="_blank" href="https://all.accor.com/loyalty-program/reasonstojoin/index.ko.shtml?otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi1.png" alt="네비게이션1"></span>로열티 프로그램</a></li>
                             <li><a target="_blank" href="https://careers.accor.com/global/"><span><img src="./img/footer/img/Footer_navi2.png" alt="네비게이션2"></span>채용</a></li>
-                            <li><a target="_blank" href="#"><span><img src="./img/footer/img/Footer_navi3.png" alt="네비게이션3"></span>문의하기</a></li>
+                            <li><a target="_blank" href="../../../7_Customer/Cust_Center/Cust_Center.html"><span><img src="./img/footer/img/Footer_navi3.png" alt="네비게이션3"></span>문의하기</a></li>
                             <li><a target="_blank" href="https://www.fairmont.co.kr/affiliate-program/"><span><img src="./img/footer/img/Footer_navi4.png" alt="네비게이션4"></span>제휴 프로그램</a></li>
                             <li><a target="_blank" href="https://all.accor.com/best-price-guarantee/index.ko.shtml?otConsentId=07661e6e-8be2-463f-95e7-1bd43afd5f50&otConsentString=,C0001,&partner_id=fairmont"><span><img src="./img/footer/img/Footer_navi5.png" alt="네비게이션5"></span>최저가 보장</a></li>
                             <li><a target="_blank" href="https://famousagents.frhi.com/"><span><img src="./img/footer/img/Footer_navi6.png" alt="네비게이션6"></span>여행사</a></li>

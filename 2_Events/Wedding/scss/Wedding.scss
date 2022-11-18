@@ -40,6 +40,10 @@
   p, li {
     color: white;
     font-family: $common_font;
+
+    &.not_for_m {
+      font-family: $eng_title_font;
+    }
   }
 
 
