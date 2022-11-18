@@ -62,7 +62,7 @@
           };
         }
 
-        //run after reload
+        //on after page load
         if (obser.length > 1) {
           for (let i in obser) {
             if (obser[i].isIntersecting) startFn(obser[i].target.className)
@@ -81,7 +81,7 @@
 
         $('.s1-img')
           .animate({ "right": 0, "opacity": 1 }, s1Delay, "swing", () => {
-            $('.s1-content').animate({ "opacity": 1 }, s1Delay + 500, () => {
+            $('.s1-content').animate({ "opacity": 1 }, s1Delay + 200, () => {
               $('.s1-content strong').css("color", "#ffb400")
             })
           })
@@ -89,8 +89,8 @@
 
       //=====================s2=========================
       // 1. slide img
-      let clone = $(".ins").clone(true).appendTo('.hidden-box')
       $('.ins li:eq(1)').addClass('s2-act')//add default class
+      let clone = $(".ins").clone(true).appendTo('.hidden-box')
       let multi = 1;
       let classIdx = 2;
       let slideInter = setInterval(slide, 2000)
@@ -194,171 +194,191 @@
   <div class="wrapper">
     <div class="menu_modal">
       <div class="menu_entire">
-          <div class="menu_header">
-              <h1>Site Map</h1>
-              <div class="menu_header_flex">
-                  <div class="menu_header_left">
-                      <div class="menu_lan">
-                          <label for="alan" class="not_for_m">Lan</label>
-                          <select name="lang" id="alan">
-                              <option value="한국어" selected>언어선택</option>
-                              <option value="한국어">한국어</option>
-                              <option value="영어">ENG</option>
-                              <option value="일본어">日本語</option>
-                              <option value="중국어">中文</option>
-                          </select>
-                      </div><!--language-->
+        <div class="menu_header">
+          <h1>Site Map</h1>
+          <div class="menu_header_flex">
+            <div class="menu_header_left">
+              <div class="menu_lan">
+                <label for="alan" class="not_for_m">Lan</label>
+                <select name="lang" id="alan">
+                  <option value="한국어" selected>언어선택</option>
+                  <option value="한국어">한국어</option>
+                  <option value="영어">ENG</option>
+                  <option value="일본어">日本語</option>
+                  <option value="중국어">中文</option>
+                </select>
+              </div>
+              <!--language-->
 
-                      <div class="menu_sns">
-                          <ul><p class="not_for_m">SNS</p>
-                              <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
-                              <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
-                              <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
-                          </ul>
-                      </div><!--menu_sns-->
-                  </div><!--menu_header_left-->
+              <div class="menu_sns">
+                <ul>
+                  <p class="not_for_m">SNS</p>
+                  <li><a href="https://www.youtube.com/c/FairmontAmbassadorSeoul" target="_blank"><img
+                        src="./img/menu/Menu_youtube.png" alt="유튜브"></a></li>
+                  <li><a href="https://www.instagram.com/fairmonthotels/" target="_blank"><img
+                        src="./img/menu/Menu_insta.png" alt="인스타"></a></li>
+                  <li><a href="https://www.facebook.com/fairmonthotels/" target="_blank"><img
+                        src="./img/menu/Menu_facebook.png" alt="페이스북"></a></li>
+                </ul>
+              </div>
+              <!--menu_sns-->
+            </div>
+            <!--menu_header_left-->
 
-                  <div class="menu_header_right">
-                      <div class="menu_login">
-                          <a href="../../9_Etc/Login/Login.html">
-                              <img src="./img/menu/Menu_Profile.png" alt="프로필">
-                              <p>Login</p>
-                          </a>
-                      </div><!--menu_login-->
+            <div class="menu_header_right">
+              <div class="menu_login">
+                <a href="../../9_Etc/Login/Login.html">
+                  <img src="./img/menu/Menu_Profile.png" alt="프로필">
+                  <p>Login</p>
+                </a>
+              </div>
+              <!--menu_login-->
 
-                      <div class="menu_close">
-                          <div class="close_modal" href="#">
-                              <span></span>
-                              <span></span>
-                          </div>
-                          <p class="not_for_m">Close</p>
-                      </div><!--menu_close-->
-                  </div><!--menu_header_right-->
-              </div><!--menu_header_flex-->
-              
-          </div><!--menu_header-->
+              <div class="menu_close">
+                <div class="close_modal" href="#">
+                  <span></span>
+                  <span></span>
+                </div>
+                <p class="not_for_m">Close</p>
+              </div>
+              <!--menu_close-->
+            </div>
+            <!--menu_header_right-->
+          </div>
+          <!--menu_header_flex-->
 
-          <div class="menu_main">
-              <div class="menu_main_left">
-                  <div class="img">
-                      <a href="../../index.html">
-                          <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
-                          <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
-                      </a>
-                      
-                  </div>
-                  <div class="contents">
-                      <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
-                      <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
-                          Fairmont Ambassador Hotel
-                      </p><!--cursive-->
-                  </div><!--contents-->
-              </div><!--menu_main_left-->
-              <div class="menu_main_right">
-                  <ul class="menu_bighead">
-                      <li class="big_menu">Room
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu">객실
-                                  <ul>
-                                      <li><a href="../../1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
-                                      <li><a href="../../1_Room/guestroom/fairmont_deluxe/fairmont_deluxe.html">페어몬트 디럭스</a></li>
-                                      <li><a href="../../1_Room/guestroom/fairmont_gold/fairmont_gold.html">페어몬트 골드</a></li>
-                                  </ul>
-                              </li>
-                              <li class="mid_menu">스위트 룸
-                                  <ul>
-                                      <li><a href="../../1_Room/suite/signiture/signiture.html">시그니처 스위트</a></li>
-                                      <li><a href="../../1_Room/suite/premier/premier.html">프리미어 스위트</a></li>
-                                      <li><a href="../../1_Room/suite/executive/executive.html">이그제큐티브 스위트</a></li>
-                                      <li><a href="../../1_Room/suite/diplomatic/diplomatic.html">디플로매틱 스위트</a></li>
-                                  </ul>
-                              </li>
+        </div>
+        <!--menu_header-->
 
-                              
-                              <li class="mid_menu">펜트하우스
-                                  <ul>
-                                      <li><a href="../../1_Room/penthouse/penthouse/penthouse.html">펜트하우스</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>
+        <div class="menu_main">
+          <div class="menu_main_left">
+            <div class="img">
+              <a href="../../index.html">
+                <img src="./img/menu/Menu_logo.png" class="pm_logo" alt="메뉴로고">
+                <img src="./img/menu/menu_logo_p.png" class="mm_logo" alt="메뉴모바일로고">
+              </a>
 
-                      <li class="big_menu">Events
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="../../2_Events/Wedding/Wedding.html">웨딩</a></li>
-                              <li class="mid_menu"><a href="../../2_Events/Party/Party.html">연회</a></li>
-                              <li class="mid_menu"><a href="../../2_Events/First_Birthday/First_Birthday.html">돌잔치 & 가족모임</a></li>
-                          </ul>
-                      </li>
+            </div>
+            <div class="contents">
+              <p>호텔의 품격을 걸고<br> <span class="pc">고객님들에 친절을 베풀겠습니다!</span> <span class="mob">정성껏 모시겠습니다.</span></p>
+              <p class="cursive" style="font-family: 'Shalimar'; letter-spacing:5px;">
+                Fairmont Ambassador Hotel
+              </p>
+              <!--cursive-->
+            </div>
+            <!--contents-->
+          </div>
+          <!--menu_main_left-->
+          <div class="menu_main_right">
+            <ul class="menu_bighead">
+              <li class="big_menu">Room
+                <ul class="menu_semi_head">
+                  <li class="mid_menu">객실
+                    <ul>
+                      <li><a href="../../1_Room/guestroom/fairmont_room/fairmont_room.html">페어몬트 룸</a></li>
+                      <li><a href="../../1_Room/guestroom/fairmont_deluxe/fairmont_deluxe.html">페어몬트 디럭스</a></li>
+                      <li><a href="../../1_Room/guestroom/fairmont_gold/fairmont_gold.html">페어몬트 골드</a></li>
+                    </ul>
+                  </li>
+                  <li class="mid_menu">스위트 룸
+                    <ul>
+                      <li><a href="../../1_Room/suite/signiture/signiture.html">시그니처 스위트</a></li>
+                      <li><a href="../../1_Room/suite/premier/premier.html">프리미어 스위트</a></li>
+                      <li><a href="../../1_Room/suite/executive/executive.html">이그제큐티브 스위트</a></li>
+                      <li><a href="../../1_Room/suite/diplomatic/diplomatic.html">디플로매틱 스위트</a></li>
+                    </ul>
+                  </li>
 
-                      <li class="big_menu"><a href="../../3_Facilities/3_Facilities.html">Facilities</a>
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="../../3_Facilities/1_Gold_Lounge/1_Gold_Lounge.html">페어몬트 골드 라운지</a></li>
-                              <li class="mid_menu"><a href="../../3_Facilities/2_Fit/2_Fit.html">페어몬트 피트</a></li>
-                              <li class="mid_menu block"><a href="../../3_Facilities/3_Spa/3_Spa.html">페어몬트 스파(준비중)</a></li>
-                          </ul>
-                      </li>
 
-                      <li class="big_menu">Special Offer
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="../../4_SpecialOffer/4_SpecialOffer.html">이벤트 서비스</a></li>
-                              <li class="mid_menu"><a href="../../4_SpecialOffer/4_SpecialOffer.html">푸드 서비스</a></li>
-                              <li class="mid_menu"><a href="../../4_SpecialOffer/4_SpecialOffer.html">VIP 프로모션</a></li>
-                          </ul>
-                      </li>
+                  <li class="mid_menu">펜트하우스
+                    <ul>
+                      <li><a href="../../1_Room/penthouse/penthouse/penthouse.html">펜트하우스</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-                      <li class="big_menu"><a href="../../5_Dining/5_Dining.html">Dining</a>
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu">바
-                                  <ul>
-                                      <li><a href="../../5_Dining/1_Bar/M29/M29.html">M29</a></li>
-                                  </ul>
-                              </li>
-                              <li class="mid_menu">레스토랑
-                                  <ul>
-                                      <li><a href="../../5_Dining/2_Restaurant/Mariposa/Mariposa.html">마리포사</a></li>
-                                      <li><a href="../../5_Dining/2_Restaurant/Spectrum/Spectrum.html">스펙트럼</a></li>
-                                      <li><a href="../../5_Dining/2_Restaurant/Gallery/Gallery.html">갤러리 7</a></li>
-                                  </ul>
-                              </li>
-                              <li class="mid_menu">카페
-                                  <ul>
-                                      <li><a href="../../5_Dining/3_Cafe/AtriumLounge/AtriumLounge.html">더 아트리움 라운지</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>
+              <li class="big_menu">Events
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="../../2_Events/Wedding/Wedding.html">웨딩</a></li>
+                  <li class="mid_menu"><a href="../../2_Events/Party/Party.html">연회</a></li>
+                  <li class="mid_menu"><a href="../../2_Events/First_Birthday/First_Birthday.html">돌잔치 & 가족모임</a></li>
+                </ul>
+              </li>
 
-                      <li class="big_menu"><a href="../../6_About/6_About.html">About</a>
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="../../6_About/6_About.html#sec1">개요</a></li>
-                              <li class="mid_menu"><a href="../../6_About/6_About.html#sec2">게스트 서비스</a></li>
-                              <li class="mid_menu"><a href="../../6_About/6_About.html#sec3">오시는 길</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu"><a href="../../3_Facilities/3_Facilities.html">Facilities</a>
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="../../3_Facilities/1_Gold_Lounge/1_Gold_Lounge.html">페어몬트 골드 라운지</a>
+                  </li>
+                  <li class="mid_menu"><a href="../../3_Facilities/2_Fit/2_Fit.html">페어몬트 피트</a></li>
+                  <li class="mid_menu block"><a href="../../3_Facilities/3_Spa/3_Spa.html">페어몬트 스파(준비중)</a></li>
+                </ul>
+              </li>
 
-                      <li class="big_menu">Customer 
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="../../7_Customer/Cust_Center/Cust_Center.html">고객센터</a></li>
-                              <li class="mid_menu"><a href="../../7_Customer/My_Page/My_page.html">마이페이지</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu">Special Offer
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="../../4_SpecialOffer/4_SpecialOffer.html">이벤트 서비스</a></li>
+                  <li class="mid_menu"><a href="../../4_SpecialOffer/4_SpecialOffer.html">푸드 서비스</a></li>
+                  <li class="mid_menu"><a href="../../4_SpecialOffer/4_SpecialOffer.html">VIP 프로모션</a></li>
+                </ul>
+              </li>
 
-                      <li class="big_menu">Reservation
-                          <ul class="menu_semi_head">
-                              <li class="mid_menu"><a href="../../8_Reservation/8_Reservation.html">호텔룸 예약</a></li>
-                          </ul>
-                      </li>
+              <li class="big_menu"><a href="../../5_Dining/5_Dining.html">Dining</a>
+                <ul class="menu_semi_head">
+                  <li class="mid_menu">바
+                    <ul>
+                      <li><a href="../../5_Dining/1_Bar/M29/M29.html">M29</a></li>
+                    </ul>
+                  </li>
+                  <li class="mid_menu">레스토랑
+                    <ul>
+                      <li><a href="../../5_Dining/2_Restaurant/Mariposa/Mariposa.html">마리포사</a></li>
+                      <li><a href="../../5_Dining/2_Restaurant/Spectrum/Spectrum.html">스펙트럼</a></li>
+                      <li><a href="../../5_Dining/2_Restaurant/Gallery/Gallery.html">갤러리 7</a></li>
+                    </ul>
+                  </li>
+                  <li class="mid_menu">카페
+                    <ul>
+                      <li><a href="../../5_Dining/3_Cafe/AtriumLounge/AtriumLounge.html">더 아트리움 라운지</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-                  </ul>
-              </div><!--menu_main_right-->
-          </div><!--menu_main-->
-      </div><!--menu_entire-->
+              <li class="big_menu"><a href="../../6_About/6_About.html">About</a>
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="../../6_About/6_About.html#sec1">개요</a></li>
+                  <li class="mid_menu"><a href="../../6_About/6_About.html#sec2">게스트 서비스</a></li>
+                  <li class="mid_menu"><a href="../../6_About/6_About.html#sec3">오시는 길</a></li>
+                </ul>
+              </li>
+
+              <li class="big_menu">Customer
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="../../7_Customer/Cust_Center/Cust_Center.html">고객센터</a></li>
+                  <li class="mid_menu"><a href="../../7_Customer/My_Page/My_page.html">마이페이지</a></li>
+                </ul>
+              </li>
+
+              <li class="big_menu">Reservation
+                <ul class="menu_semi_head">
+                  <li class="mid_menu"><a href="../../8_Reservation/8_Reservation.html">호텔룸 예약</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <!--menu_main_right-->
+        </div>
+        <!--menu_main-->
+      </div>
+      <!--menu_entire-->
 
       <div class="menu_matte">
-          
+
       </div>
-    </div><!--menu_modal-->
+    </div>
+    <!--menu_modal-->
 
     <header>
       <div class="colormatte"></div>
@@ -605,8 +625,8 @@
                     src="./img/footer/img/Footer_navi2.png" alt="네비게이션2" /></span>채용</a>
             </li>
             <li>
-              <a target="_blank" href="../../7_Customer/Cust_Center/Cust_Center.html"><span><img src="./img/footer/img/Footer_navi3.png"
-                    alt="네비게이션3" /></span>문의하기</a>
+              <a target="_blank" href="../../7_Customer/Cust_Center/Cust_Center.html"><span><img
+                    src="./img/footer/img/Footer_navi3.png" alt="네비게이션3" /></span>문의하기</a>
             </li>
             <li>
               <a target="_blank" href="https://www.fairmont.co.kr/affiliate-program/"><span><img

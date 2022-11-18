@@ -119,6 +119,9 @@ li {
   color: white;
   font-family: "SCoreDream";
 }
+.menu_modal p.not_for_m, .menu_modal li.not_for_m {
+  font-family: "Lemon/Milk light", sans-serif;
+}
 .menu_modal::-webkit-scrollbar {
   width: 8px;
 }

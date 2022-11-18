@@ -117,6 +117,11 @@ li {
 .menu_modal p {
   font-family: "SCoreDream";
 }
+.menu_modal a.not_for_m,
+.menu_modal li.not_for_m,
+.menu_modal p.not_for_m {
+  font-family: "Lemon/Milk light", sans-serif;
+}
 .menu_modal img {
   display: inline;
 }
@@ -952,7 +957,7 @@ main section.s1-intro .flex .s1-content h3 strong {
   color: transparent;
   font-size: clamp(20px, 5.1282vw, 36px);
   line-height: min(7.1795vw, 50px);
-  transition: 1.5s ease color;
+  transition: 800ms ease color;
 }
 @media screen and (min-width: 1400px) {
   main section.s1-intro .flex .s1-content h3 strong {

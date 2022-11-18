@@ -121,6 +121,10 @@ li {
   color: white;
   font-family: "SCoreDream";
 }
+.menu_modal p.not_for_m,
+.menu_modal li.not_for_m {
+  font-family: "Lemon/Milk light", sans-serif;
+}
 .menu_modal::-webkit-scrollbar {
   width: 8px;
 }
@@ -1580,7 +1584,8 @@ main section.s3-hall .flex .s3-content ul.room-info li strong {
   line-height: 30px;
 }
 main section.s4-preview {
-  margin-top: 120px;
+  padding-top: 120px;
+  padding-bottom: 250px;
 }
 main section.s4-preview h2 {
   font-size: min(6.6667vw, 30px);
@@ -1588,6 +1593,7 @@ main section.s4-preview h2 {
   font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
+  color: #fff;
 }
 @media screen and (min-width: 1400px) {
   main section.s4-preview h2 {
@@ -1651,7 +1657,6 @@ main section.s4-preview .preview-logo img {
 }
 main section.s5-notice {
   padding: 55px 0;
-  margin-top: 250px;
   background-color: #f7f7f7;
 }
 main section.s5-notice .flex {
@@ -2064,16 +2069,6 @@ footer .footer_entire .address p {
   height: 20%;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.5);
-}
-#modal-wrap .modal::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  height: 10%;
-  z-index: 2;
-  background-color: #2a52be;
 }
 #modal-wrap .modal .left-btn,
 #modal-wrap .modal .right-btn {

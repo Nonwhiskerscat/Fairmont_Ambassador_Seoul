@@ -1413,13 +1413,15 @@ main {
   } //section.s3-hall
 
   section.s4-preview {
-    margin-top: 120px;
+    padding-top: 120px;
+    padding-bottom: 250px;
     h2 {
       font-size: min(6.6667vw, 30px);
       letter-spacing: -0.01em;
       font-weight: 700;
       text-align: center;
       margin-bottom: 30px;
+      color: #fff;
 
       @include responsive(pc-screens) {
         font-size: 3em;
@@ -1489,7 +1491,6 @@ main {
 
   section.s5-notice {
     padding: 55px 0;
-    margin-top: 250px;
     background-color: #f7f7f7;
 
     @include responsive(pc-screens) {
@@ -1515,6 +1516,7 @@ main {
           font-size: min(7.1795vw, 36px);
           font-weight: 700;
           white-space: nowrap;
+
           @include responsive(pc-screens) {
             text-align: left;
             font-size: 4em;
@@ -1852,17 +1854,6 @@ footer {
       height: 20%;
       z-index: -1;
       background-color: rgba($color: #000000, $alpha: 0.5);
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      height: 10%;
-      z-index: 2;
-      background-color: #2a52be;
     }
 
     .left-btn,
