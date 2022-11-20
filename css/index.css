@@ -1820,6 +1820,10 @@ header .header_entire .menu .menu_type p {
   animation: image_scale 0.5s reverse;
 }
 
+.main4 .serv_list .contents .sec {
+  cursor: pointer;
+}
+
 .main4 .serv_list .contents .sec::after {
   content: '';
   position: absolute;
