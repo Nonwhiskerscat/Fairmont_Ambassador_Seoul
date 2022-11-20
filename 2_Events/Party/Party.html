@@ -22,8 +22,6 @@
     $().ready(() => {
 
 
-      //scroll 최적화는 집에서 알아보자 
-      //https://jbee.io/web/optimize-scroll-event/
       const content = "성공적인 비즈니스가 될 수 있도록 최고의 서비스를 제공합니다."
       let index = 0;
 
@@ -104,6 +102,9 @@
             if (++idx > lth) idx = 0;
             return idx
           },
+          reset: () => {
+            idx = 0
+          },
         }
       }
       let counter = idxSl()
@@ -120,7 +121,7 @@
       }
 
       //move slide Pos
-      function PosSl(left) {
+      function posSl(left) {
         if (!left) {
           // R
           $('.slide-img').animate({ "left": "-100%" }, function () {
@@ -139,14 +140,14 @@
       $('.left-btn').on('click', () => {
         clearInterval(intervalSl)
         focuseSl(true)
-        SlidePos(true)
-        intervalSl = setInterval(() => { ocuseSl(true); SlidePos(true) }, 3000)
+        posSl(true)
+        intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
       })
       $('.right-btn').on('click', () => {
         clearInterval(intervalSl)
         focuseSl()
-        SlidePos()
-        intervalSl = setInterval(() => { ocuseSl(); SlidePos() }, 3000)
+        posSl()
+        intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
       })
 
 
@@ -196,16 +197,21 @@
       morebtn.each((i, e) => {
         $(e).on('click', (el) => {
           el.preventDefault()
-          intervalSl = setInterval(() => { ocuseSl(); SlidePos() }, 3000)
+          intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
           $('#modal-wrap').show()
+          $('.img-list-box li:first').addClass("focuse-img")
           pushImg(i)
+
         })
       })
 
       //modal - close modal
       $('.close-btn').on('click', () => {
         $('#modal-wrap').hide()
+        counter.reset()
+        $('.img-list-box li').removeClass("focuse-img")
         clearInterval(intervalSl)
+
       })
     })//ready
 
@@ -764,18 +770,19 @@
           <div class="left-btn"><i class="fa-sharp fa-solid fa-less-than"></i></div>
           <div class="right-btn"><i class="fa-sharp fa-solid fa-greater-than"></i></div>
           <ul class="slide-img">
-            <li><img src="./img/Party/photo/s2_modal1.png" alt="슬라이드 이미지1"></li>
-            <li><img src="./img/Party/photo/s3_ modal2.png" alt="슬라이드 이미지2"></li>
-            <li><img src="./img/Party/photo/s2_modal3.png" alt="슬라이드 이미지3"></li>
+            <li><img src="" alt="슬라이드 이미지1"></li>
+            <li><img src="" alt="슬라이드 이미지2"></li>
+            <li><img src="" alt="슬라이드 이미지3"></li>
           </ul>
           <ul class="img-list-box">
-            <li><img src="./img/Party/photo/s2_modal1.png" alt=" 이미지 미리보기1"></li>
-            <li><img src="./img/Party/photo/s2_modal2.png" alt=" 이미지 미리보기2"></li>
-            <li><img src="./img/Party/photo/s2_modal3.png" alt=" 이미지 미리보기3"></li>
+            <li><img src="" alt=" 이미지 미리보기1"></li>
+            <li><img src="" alt=" 이미지 미리보기2"></li>
+            <li><img src="" alt=" 이미지 미리보기3"></li>
           </ul>
         </div>
       </div>
     </div>
+    <!-- modal-wrap -->
   </div>
   <!--wrapper-->
 </body>

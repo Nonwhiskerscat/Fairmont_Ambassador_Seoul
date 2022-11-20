@@ -9,7 +9,7 @@ html {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba($color: #2a52be, $alpha: 0.8);
+    background-color: rgba($color: #fb5c6e, $alpha: 0.8);
     border-radius: 8px;
   }
 
@@ -35,7 +35,7 @@ body {
 
 .wrapper {
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
   // background-color: rgb(151, 168, 240);
   color: #333333;
 }

@@ -26,7 +26,7 @@
 
   <script>
     //a02
-    //reset event 
+    //reset attr
     //s1 s1-img / s1-content /  s1-content strong
     //s3 s3-content h3 / s3-content p / s3-btns / s3-img(class)
     //s4 s4Inter(interver) / bg-line /left-content /right-content
@@ -36,41 +36,66 @@
       let io = new IntersectionObserver(isObserver, {
         root: null, rootMargin: "400px 0px 100px 0px", threshold: 0.7
       })
-      let obserTarget = $('main section').not('.s2-instruction', '.s5-notice')
+      let obserTarget = $('main section').not('.s5-notice')
       obserTarget.each((i, target) => io.observe(target))
 
       let s4Inter = null
+      let slideInter
 
       function isObserver(obser, ent) {
         let currTarget = obser[0].target.className
-        let startFn = (target) => {
-          if (target == "s1-intro") s1Evnt();
-          if (target == "s3-balloon") s3Evnt();
-          if (target == "s4-preview") s4Evnt();
-        }
-        let resetFn = (target) => {
-          if (target == "s1-intro") {
-            $(".s1-img , .s1-content , .s1-content strong").removeAttr("style")
-          };
-          if (target == "s3-balloon") {
-            $(".s3-content h3 , .s3-content p , .s3-btns").removeAttr("style")
-            $(".s3-img").removeClass("s3-actImg")
-          };
-          if (target == "s4-preview") {
-            $(".bg-line , .right-content, .left-content").stop(true, true).removeAttr("style").stop(true, true)
-            clearInterval(s4Inter)
-          };
-        }
 
         //on after page load
         if (obser.length > 1) {
           for (let i in obser) {
-            if (obser[i].isIntersecting) startFn(obser[i].target.className)
+            if (obser[i].isIntersecting) giveStyle(obser[i].target.className)
           }
         }
 
-        //start reset fn
-        obser[0].isIntersecting ? startFn(currTarget) : resetFn(currTarget)
+        //start & reset fn
+        obser[0].isIntersecting ? giveStyle(currTarget) : resetStyle(currTarget)
+
+      } //isObserver
+
+      function giveStyle(target) {
+        if (target == "s1-intro") s1Evnt();
+        if (target == "s2-instruction") {
+          clearInterval(slideInter)
+          slideInter = setInterval(slide, 3000)
+        };
+        if (target == "s3-balloon") s3Evnt();
+        if (target == "s4-preview") s4Evnt();
+      }
+
+      function resetStyle(target) {
+        if (target == "s1-intro") {
+          $(".s1-img , .s1-content , .s1-content strong")
+            .animate({ "opacity": 0 }, 1000, function () {
+              $(this).removeAttr("style")
+            })
+        };
+        if (target == "s2-instruction") clearInterval(slideInter);
+
+        if (target == "s3-balloon") {
+          $(".s3-content h3 , .s3-content p , .s3-btns")
+            .animate({ "opacity": 0 }, 1000, function () {
+              $(this).removeAttr("style")
+            })
+          $(".s3-img").removeClass("s3-actImg")
+        };
+        if (target == "s4-preview") {
+          $(".bg-line , .right-content, .left-content").stop(true, true)
+            .animate({ "opacity": 0 }, 1000, function () {
+              $(this).removeAttr("style")
+            })
+
+          clearInterval(s4Inter)
+        };
+
+        // .stop(true, true)
+        //   .animate({ "opacity": 0 }, 1000, function () {
+        //     $(this).removeAttr("style")
+        //   })
       }
 
 
@@ -80,8 +105,8 @@
         let s1Delay = 700
 
         $('.s1-img')
-          .animate({ "right": 0, "opacity": 1 }, s1Delay, "swing", () => {
-            $('.s1-content').animate({ "opacity": 1 }, s1Delay + 200, () => {
+          .stop(true).animate({ "right": 0, "opacity": 1 }, s1Delay, "swing", () => {
+            $('.s1-content').stop(true).animate({ "opacity": 1 }, s1Delay + 200, () => {
               $('.s1-content strong').css("color", "#ffb400")
             })
           })
@@ -93,7 +118,7 @@
       let clone = $(".ins").clone(true).appendTo('.hidden-box')
       let multi = 1;
       let classIdx = 2;
-      let slideInter = setInterval(slide, 2000)
+      slideInter = setInterval(slide, 3000)
 
       function slide() {
         $('.hidden-box li').removeClass('s2-act')
@@ -118,7 +143,7 @@
       function s3Evnt() {
         let s3Delay = 600
         $('.s3-content')
-          .find('h3').animate({ "opacity": 1 }, s3Delay * 2, () => {
+          .find('h3').stop(true, true).animate({ "opacity": 1 }, s3Delay * 2, () => {
             $('.s3-img').addClass('s3-actImg')
           })
           .end().find("p , .s3-btns").delay(s3Delay)
@@ -175,8 +200,8 @@
       }
 
       // 3. change fade img & Idx 
-      $li.on('click', ChangeFadeImg)
 
+      $li.on('click', ChangeFadeImg)
       function ChangeFadeImg() {
         onFadeIdx = $(this).index() - 1
 
@@ -185,7 +210,121 @@
         fadeImg(true)
       }
 
-    }) //load
+      //===================== modal ======================
+
+      // 1. modal slide & focuse Evnt 
+
+      //count idx
+      function idxSl() {
+        let idx = 0;
+        let lth = $(".slide-img li").length - 1;
+
+        return {
+          left: () => {
+            if (--idx < 0) idx = lth;
+            return idx
+          },
+          right: () => {
+            if (++idx > lth) idx = 0;
+            return idx
+          },
+          reset: () => {
+            idx = 0
+          },
+        }
+      }
+      let counter = idxSl()
+      $('.img-list-box li:first').addClass("focuse-img")//default
+
+      //img focuse & counting num
+      function focuseSl(left) {
+        let drection = !left ? counter.right() : counter.left();
+
+        $('.img-list-box li')
+          .removeClass("focuse-img")
+          .eq(`${drection}`)
+          .addClass("focuse-img")
+      }
+
+      //move slide Pos
+      function posSl(left) {
+        if (!left) {
+          // R
+          $('.slide-img').animate({ "left": "-100%" }, function () {
+            $(this).append($('.slide-img li:first')).css('left', "0")
+          })
+        } else {
+          // L
+          $('.slide-img').prepend($('.slide-img li:last'))
+            .css('left', '-100%')
+            .animate({ "left": 0 })
+        }
+      }
+
+      let intervalSl = null
+
+      $('.left-btn').on('click', () => {
+        clearInterval(intervalSl)
+        focuseSl(true)
+        posSl(true)
+        intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
+      })
+      $('.right-btn').on('click', () => {
+        clearInterval(intervalSl)
+        focuseSl()
+        posSl()
+        intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
+      })
+
+
+
+      //modal - push img & pop up modal 
+      let mdImgs = [
+        [
+          "./img/First_Birthday/photo/preview-3.jpg",
+          "./img/First_Birthday/photo/preview-4.png",
+          "./img/First_Birthday/photo/preview-main-img.jpg",
+        ],
+      ]
+
+
+      //modal - on/off/push modal
+
+      //push img
+      function pushImg(btnIdx) {
+        let imgLength = $(".slide-img li").length
+        for (let i = 0; i < imgLength; i++) {
+          $(`.slide-img img:eq(${i})`).prop("src", mdImgs[btnIdx][i])
+          $(`.img-list-box img:eq(${i})`).prop("src", mdImgs[btnIdx][i])
+        }
+      }
+
+
+      let morebtn = $('.s3-btns a').map((i, e) => {
+        if ($(e).text() === "자세히 보기") return e
+      })
+      console.log(morebtn);
+
+      morebtn.each((i, e) => {
+        $(e).on('click', (el) => {
+          el.preventDefault()
+          intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
+          $('#modal-wrap').show()
+          $('.img-list-box li:first').addClass("focuse-img")
+          pushImg(i)
+
+        })
+      })
+
+      //modal - close modal
+      $('.close-btn').on('click', () => {
+        $('#modal-wrap').hide()
+        counter.reset()
+        $('.img-list-box li').removeClass("focuse-img")
+        clearInterval(intervalSl)
+
+      })
+    }) //ready
   </script>
 
 </head>
@@ -670,6 +809,28 @@
       </div>
       <!--footer_entire-->
     </footer>
+    <div id="modal-wrap">
+      <div class="container">
+        <div class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="modal">
+          <div class="left-btn"><i class="fa-sharp fa-solid fa-less-than"></i></div>
+          <div class="right-btn"><i class="fa-sharp fa-solid fa-greater-than"></i></div>
+          <ul class="slide-img">
+            <li><img src="" alt="슬라이드 이미지1"></li>
+            <li><img src="" alt="슬라이드 이미지2"></li>
+            <li><img src="" alt="슬라이드 이미지3"></li>
+          </ul>
+          <ul class="img-list-box">
+            <li><img src="" alt=" 이미지 미리보기1"></li>
+            <li><img src="" alt=" 이미지 미리보기2"></li>
+            <li><img src="" alt=" 이미지 미리보기3"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- modal-wrap -->
   </div>
   <!--wrapper-->
 </body>

@@ -141,9 +141,15 @@
   border: #ffb400 solid 1px;
   max-height: 54px;
   border-radius: min(1.2821vw, 5px);
+  transition: 300ms ease;
 
   &:first-of-type {
     margin-right: min(2.5641vw, 10px);
+  }
+
+  &:hover {
+    background-color: #ffb400;
+    color: #fff;
   }
 }
 
@@ -161,4 +167,10 @@
   border: #ffb400 solid 1px;
   max-height: 54px;
   border-radius: min(1.2821vw, 5px);
+  transition: 300ms ease;
+
+  &:hover {
+    background-color: #ffb400;
+    color: #fff;
+  }
 }

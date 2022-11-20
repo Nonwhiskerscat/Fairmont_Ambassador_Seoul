@@ -174,9 +174,16 @@
   color: #2a52be;
   border: #2a52be solid 1px;
   max-height: 54px;
+  transition: 300ms ease;
+
 
   &:first-of-type {
     margin-right: min(2.5641vw, 10px);
+  }
+
+  &:hover {
+    background-color: #fb5c6e;
+    color: #fff;
   }
 }
 
@@ -194,4 +201,11 @@
   color: #fb5c6e;
   border: #fb5c6e solid 1px;
   max-height: 54px;
+  transition: 300ms ease;
+
+
+  &:hover {
+    background-color: #fb5c6e;
+    color: #fff;
+  }
 }

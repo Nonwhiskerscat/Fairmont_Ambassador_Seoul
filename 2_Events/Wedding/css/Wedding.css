@@ -5,7 +5,7 @@ html::-webkit-scrollbar {
   width: 8px;
 }
 html::-webkit-scrollbar-thumb {
-  background-color: rgba(42, 82, 190, 0.8);
+  background-color: rgba(251, 92, 110, 0.8);
   border-radius: 8px;
 }
 html::-webkit-scrollbar-track {
@@ -27,6 +27,7 @@ body {
 
 .wrapper {
   width: 100%;
+  overflow: hidden;
   color: #333333;
 }
 
@@ -115,11 +116,13 @@ li {
 .menu_modal img {
   display: inline;
 }
-.menu_modal p, .menu_modal li {
+.menu_modal p,
+.menu_modal li {
   color: white;
   font-family: "SCoreDream";
 }
-.menu_modal p.not_for_m, .menu_modal li.not_for_m {
+.menu_modal p.not_for_m,
+.menu_modal li.not_for_m {
   font-family: "Lemon/Milk light", sans-serif;
 }
 .menu_modal::-webkit-scrollbar {
@@ -928,17 +931,26 @@ main div.wave-bg svg {
     top: 230px;
   }
 }
+main section.card {
+  position: relative;
+  height: 500px;
+  z-index: 1000;
+}
+main section.card .transition {
+  transition: 1000ms ease;
+}
 main section.card .card-contain {
   display: flex;
   position: relative;
-  top: -65px;
+  width: 89.7435897436vw;
   z-index: 2;
   height: 280px;
   margin: 0 auto;
+  top: -50px;
   max-width: 500px;
   overflow: hidden;
   border-radius: 25px;
-  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
   background-color: white;
   align-items: flex-end;
 }
@@ -946,21 +958,26 @@ main section.card .card-contain {
   main section.card .card-contain {
     height: 500px;
     max-width: 880px;
+    width: 100%;
   }
 }
 main section.card .card-contain i {
+  padding: 10px 130px;
   display: block;
   position: absolute;
-  top: 10px;
-  left: calc(50% - 15px);
+  top: 0px;
+  left: calc(50% - 145px);
   font-size: 30px;
   color: rgba(67, 64, 64, 0.5254901961);
   text-align: center;
+  cursor: pointer;
 }
 @media screen and (min-width: 1400px) {
   main section.card .card-contain i {
+    padding: 10px 400px;
     z-index: 1000;
     font-size: 50px;
+    left: calc(50% - 425px);
   }
 }
 main section.card .card-contain .card-content {
@@ -1005,8 +1022,12 @@ main section.card .card-contain .card-content .card-btn a {
   font-size: 0.875em;
   text-align: center;
   line-height: 35px;
-  background-color: #fb5c6e;
-  color: #fff;
+  font-weight: 300;
+  background-color: #fff;
+  color: #fb5c6e;
+  border: 1px solid #fb5c6e;
+  transition: 300ms ease;
+  transition-property: color, background-color;
 }
 @media screen and (min-width: 1400px) {
   main section.card .card-contain .card-content .card-btn a {
@@ -1015,6 +1036,10 @@ main section.card .card-contain .card-content .card-btn a {
     line-height: 55px;
     font-size: 1.375em;
   }
+}
+main section.card .card-contain .card-content .card-btn a:hover {
+  background-color: #fb5c6e;
+  color: #fff;
 }
 main section.card .card-contain .card-img img {
   position: absolute;
@@ -1112,17 +1137,17 @@ main section.s1-instruction {
     margin-top: 300px;
   }
 }
-main section.s1-instruction::before {
+main section.s1-instruction .s1-line {
   content: "";
   display: none;
   position: absolute;
   top: 147.5px;
-  width: 100%;
+  width: 0;
   height: 2px;
   background-color: #fb5c6e;
 }
 @media screen and (min-width: 1400px) {
-  main section.s1-instruction::before {
+  main section.s1-instruction .s1-line {
     display: block;
   }
 }
@@ -1153,6 +1178,7 @@ main section.s1-instruction .flex .right-content {
 }
 main section.s1-instruction .flex .left-content .ins-img,
 main section.s1-instruction .flex .right-content .ins-img {
+  opacity: 0;
   height: calc(89.7435897436vw - 13.5px);
   margin: 0 auto;
   border-radius: 50%;
@@ -1177,6 +1203,7 @@ main section.s1-instruction .flex .right-content .ins-img img {
 }
 main section.s1-instruction .flex .left-content .ins-text,
 main section.s1-instruction .flex .right-content .ins-text {
+  opacity: 0;
   text-align: center;
   margin-top: 50px;
 }
@@ -1222,6 +1249,43 @@ main section.s1-instruction .flex .right-content .ins-text p {
     text-align: left;
   }
 }
+main .s2-content h3,
+main .s2-content p,
+main .s2-btn,
+main .s4-content h3,
+main .s4-content p,
+main .s4-btn {
+  position: relative;
+  left: -70vw;
+}
+@media screen and (min-width: 1400px) {
+  main .s2-content h3,
+main .s2-content p,
+main .s2-btn,
+main .s4-content h3,
+main .s4-content p,
+main .s4-btn {
+    left: -50vw;
+  }
+}
+main .s3-content h3,
+main .s3-content p,
+main .s3-btn {
+  position: relative;
+  right: -70vw;
+}
+@media screen and (min-width: 1400px) {
+  main .s3-content h3,
+main .s3-content p,
+main .s3-btn {
+    right: -50vw;
+  }
+}
+main .s2-img,
+main .s3-img,
+main .s4-img {
+  opacity: 0;
+}
 @media screen and (min-width: 1400px) {
   main section.s2-wedding {
     margin-top: 120px;
@@ -1251,6 +1315,7 @@ main section.s2-wedding .flex .s2-content h3 {
   font-size: min(7.1795vw, 32px);
   font-weight: 700;
   white-space: nowrap;
+  position: relative;
 }
 @media screen and (min-width: 1400px) {
   main section.s2-wedding .flex .s2-content h3 {
@@ -1287,6 +1352,11 @@ main section.s2-wedding .flex .s2-content .s2-btn a {
   color: #fb5c6e;
   border: #fb5c6e solid 1px;
   max-height: 54px;
+  transition: 300ms ease;
+}
+main section.s2-wedding .flex .s2-content .s2-btn a:hover {
+  background-color: #fb5c6e;
+  color: #fff;
 }
 @media screen and (min-width: 1400px) {
   main section.s2-wedding .flex .s2-content .s2-btn a {
@@ -1297,6 +1367,7 @@ main section.s2-wedding .flex .s2-img {
   width: 89.7436vw;
   margin: 0 auto 35px auto;
   max-width: 550px;
+  opacity: 0;
 }
 @media screen and (min-width: 1400px) {
   main section.s2-wedding .flex .s2-img {
@@ -1378,6 +1449,11 @@ main section.s3-flower .flex .s3-content .s3-btn a {
   color: #fb5c6e;
   border: #fb5c6e solid 1px;
   max-height: 54px;
+  transition: 300ms ease;
+}
+main section.s3-flower .flex .s3-content .s3-btn a:hover {
+  background-color: #fb5c6e;
+  color: #fff;
 }
 @media screen and (min-width: 1400px) {
   main section.s3-flower .flex .s3-content .s3-btn a {
@@ -1448,6 +1524,11 @@ main section.s4-various-venue .flex .s4-content .s4-btn a {
   color: #fb5c6e;
   border: #fb5c6e solid 1px;
   max-height: 54px;
+  transition: 300ms ease;
+}
+main section.s4-various-venue .flex .s4-content .s4-btn a:hover {
+  background-color: #fb5c6e;
+  color: #fff;
 }
 @media screen and (min-width: 1400px) {
   main section.s4-various-venue .flex .s4-content .s4-btn a {
@@ -1535,6 +1616,11 @@ main section.s5-notice .flex .notice-content .notice-btn a {
   color: #fb5c6e;
   border: #fb5c6e solid 1px;
   max-height: 54px;
+  transition: 300ms ease;
+}
+main section.s5-notice .flex .notice-content .notice-btn a:hover {
+  background-color: #fb5c6e;
+  color: #fff;
 }
 @media screen and (min-width: 1400px) {
   main section.s5-notice .flex .notice-content .notice-btn a {
@@ -1830,4 +1916,117 @@ footer .footer_entire .address p {
   footer .footer_entire .address p {
     line-height: 24px;
   }
+}
+
+#modal-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+}
+#modal-wrap .close-btn {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  z-index: 100000;
+  color: lightgray;
+  font-size: min(8.9744vw, 50px);
+  transform: translateX(-50%);
+  top: max(-44.8718vw, -385px);
+  width: min(10.2564vw, 60px);
+  height: min(10.2564vw, 60px);
+  text-align: center;
+  line-height: min(9.4872vw, 57px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+#modal-wrap .modal {
+  position: relative;
+  margin: 50vh auto 0 auto;
+  transform: translateY(-50%);
+  max-width: 1000px;
+  border-radius: 25px;
+  height: 60vw;
+  max-height: 600px;
+  background-color: #fff;
+  background-color: blue;
+  overflow: hidden;
+}
+#modal-wrap .modal::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 20%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#modal-wrap .modal .left-btn,
+#modal-wrap .modal .right-btn {
+  position: absolute;
+  z-index: 1000;
+  font-size: min(5.8974vw, 50px);
+  transform: translateY(-50%);
+  top: 50%;
+  color: lightgray;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: min(8.9744vw, 70px);
+  height: min(8.9744vw, 70px);
+  line-height: min(8.4615vw, 67px);
+  border-radius: 50%;
+}
+#modal-wrap .modal .left-btn {
+  left: min(3.8462vw, 50px);
+  padding-right: min(0.8974vw, 6px);
+}
+#modal-wrap .modal .right-btn {
+  right: min(3.8462vw, 50px);
+  padding-left: min(0.8974vw, 6px);
+}
+#modal-wrap .modal .slide-img {
+  position: absolute;
+  display: flex;
+  z-index: -2;
+  left: 0;
+  width: 300%;
+  max-width: 3000px;
+}
+#modal-wrap .modal .slide-img li {
+  max-width: 1000px;
+}
+#modal-wrap .modal .slide-img li img {
+  width: 110%;
+}
+#modal-wrap .modal .img-list-box {
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+#modal-wrap .modal .img-list-box .focuse-img {
+  border: 3px solid #fff;
+}
+#modal-wrap .modal .img-list-box li {
+  width: 10.5vw;
+  height: 7.5vw;
+  max-width: 120px;
+  overflow: hidden;
+  max-height: 80px;
+  background-color: red;
+  margin: min(0.641vw, 10px);
+}
+#modal-wrap .modal .img-list-box li > img {
+  width: 100%;
+  height: 100%;
 }
