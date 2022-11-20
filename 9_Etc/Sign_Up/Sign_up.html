@@ -18,6 +18,14 @@
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
     
+    <!--=================etc, customer 공용 스크립트====================-->
+    <script src="./js/fade_entire.js"></script>
+
+    <!--=================회원가입 전용 스크립트====================-->
+    <script src="./js/sign_up.js"></script>
+
+
+
 </head>
 <body>
     <div class="wrapper">
@@ -269,7 +277,7 @@
                                                     <p><span>ID</span>아이디</p><p class="warning"></p>
                                                 </label>
                                                 <input id="aid" type="text" placeholder="영문, 숫자 조합 7자 이상!" required>
-                                                <div class="aconf_btn" onclick="alert('멋진 아이디네요!')">ID 중복확인</div>
+                                                <div class="aconf_btn">ID 중복확인</div>
                                             </div> 
                                         </li>
 
@@ -310,22 +318,22 @@
                                         </li>
 
                                         <li class="email_email">
-                                            <label for="amail" class="label_img">
+                                            <label for="amail1" class="label_img">
                                                 <img src="./img/Sign_Up/icon/icon_1_5.png" alt="이메일">
                                             </label>
                                             <div class="label_input">
-                                                <label for="amail">
+                                                <label for="amail1">
                                                     <p><span>E-mail</span>이메일</p><p class="warning"></p>
                                                 </label>
                                                 <div class="email_flex">
-                                                    <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
+                                                    <input id="amail1" type="text" placeholder="이메일을 입력하세요!" required>
                                                     <p>@</p>
                                                     <select name="mail" id="mail">
                                                         <option value="gmail.com">gmail.com</option>
                                                         <option value="naver.com">naver.com</option>
                                                         <option value="hanmail.net">hanmail.net</option>
                                                         <option value="nate.com">nate.com</option>
-                                                        <option value="">직접입력</option>
+                                                        <option value="direct">직접입력</option>
                                                     </select>
                                                 </div>
                                                 
@@ -333,15 +341,15 @@
                                         </li>
 
                                         <li class="phone_phone">
-                                            <label for="aphone" class="label_img">
+                                            <label for="aphone1" class="label_img">
                                                 <img src="./img/Sign_Up/icon/icon_1_6.png" alt="휴대폰 번호 아이콘">
                                             </label>
                                             <div class="label_input">
-                                                <label for="aphone">
+                                                <label for="aphone1">
                                                     <p><span>Phone Number</span>휴대폰 번호</p>
                                                 </label>
-                                                <input id="aphone" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
-                                                <div class="aconf_btn" onclick="alert('인증번호가 전송 되었습니다!')">인증번호 받기</div>
+                                                <input id="aphone1" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <div class="aconf_btn">인증번호 받기</div>
                                             </div> 
                                         </li>
 

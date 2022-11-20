@@ -15,7 +15,7 @@ $(document).ready(function() {
             alert('패스워드를 입력해 주세요');
         }
 
-        else if(!idPass.test($('input#aid').val())||!idPass.test($('input#apw').val())) alert('존재하지 않는 회원입니다.')
+        else if(!idPass.test($('input#aid').val())||!pwPass.test($('input#apw').val())) alert('존재하지 않는 회원입니다.')
 
         else {
             alert('환영합니다. 회원님!');
