@@ -1033,6 +1033,7 @@ main .back_slide {
 @media screen and (min-width: 1400px) {
   main .back_slide {
     display: block;
+    height: auto;
   }
 }
 
@@ -1048,6 +1049,12 @@ main .back_slide ul li {
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1400px) {
+  main .back_slide ul li {
+    height: auto;
+  }
 }
 
 main .back_slide ul li img {

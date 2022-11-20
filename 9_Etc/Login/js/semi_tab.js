@@ -8,12 +8,12 @@ $(function() {
     $('.check_box .check_flex').click(function() {
 
 
-        $('.sign_up_box').slideUp(300);
+        $('.sign_up_box').slideUp(500);
 
         if($(this).next().css('display')== 'block') {
-            $(this).next().slideUp(300);
+            $(this).next().slideUp(500);
         } else {
-            $(this).next().slideDown(300);
+            $(this).next().slideDown(500);
         }
     })
 });
