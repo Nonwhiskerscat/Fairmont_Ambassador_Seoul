@@ -4,7 +4,7 @@ $(document).ready(function(){
     let pwPass=/^(?=.*[a-zA-Z])(?=.*[@$%^*-])(?=.*[0-9]).{9,25}$/;
     let pCheck=/^(?=.*[0-9]).{10,25}$/;
     let nCheck=/^(?=.*[0-9]).{6,6}$/;
-    var ePass = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+    let ePass = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
 
 
     let idCheck=false;
@@ -25,7 +25,7 @@ $(document).ready(function(){
     $('.phone_phone .aconf_btn').on('click', function() {
 
         if($('input#aphone1').val().length<1) alert('휴대폰 번호를 입력해 주세요!');
-        else if(!pCheck.test($('input#aid').val())) alert('휴대폰 번호를 똑바로 입력해 주세요!');
+        else if(!pCheck.test($('input#aphone1').val())) alert('휴대폰 번호를 똑바로 입력해 주세요!');
         else {
             alert('인증번호가 전송 되었습니다!');
             phCheck=true;
