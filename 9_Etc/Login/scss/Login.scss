@@ -908,6 +908,7 @@ main {
 
         @include responsive(pc-screens) {
             display: block;
+            height: auto;
         }
 
         ul {
@@ -925,6 +926,7 @@ main {
 
                 @include responsive(pc-screens) {
                     //
+                    height: auto;
                 }
 
                 img {

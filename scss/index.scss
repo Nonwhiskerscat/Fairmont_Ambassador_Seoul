@@ -1713,6 +1713,7 @@ header{
             }
 
             .sec {
+                cursor: pointer;
                 &::after {
                     content: '';
                     position: absolute;
