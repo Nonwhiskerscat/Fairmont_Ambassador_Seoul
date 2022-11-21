@@ -1166,7 +1166,21 @@ main {
                                 background-color: rgba($color: #333333, $alpha: 0.1);
                                 cursor: pointer;
 
+                                &.red {
+                                    background-color: #ead1c8;
+                                }
 
+                                &.navy {
+                                    background-color: #d8d7db;
+                                }
+
+                                &.gold {
+                                    background-color: #eae2c4;
+                                }
+
+                                &:hover {
+                                    background-color: rgba($color: #422d14, $alpha: 0.25);
+                                }
                                 
 
                                 @include responsive(pc-screens) {
@@ -1245,10 +1259,20 @@ main {
                                 li {
                                     width: 30%;
                                     display: block;
-                                    background-color: #f3f2e7;
+                                    background-color: rgba($color: #333333, $alpha: 0.1);
                                     cursor: pointer;
                                     height: 50%;
                                     padding-bottom: calc(10px + 0.5vw);
+
+                                    &.thick {
+                                        background-color: rgba($color: #422d14, $alpha: 0.25);
+                                    }
+                                    
+                                    &:hover {
+                                        background-color: rgba($color: #422d14, $alpha: 0.25);
+                                    }
+
+                                    
     
                                     @include responsive(pc-screens) {
                                         width: 120px;
