@@ -17,10 +17,11 @@
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script>
 
-    <!--=================공용으로 사용하는 스크립트====================-->
-    <script src="./js/jquery-3.6.1.min.js"></script>
-    <script src="./js/gnb_menu.js"></script>
-    <script src="./js/button.js"></script> 
+    <!--=================etc, customer 공용 스크립트====================-->
+    <script src="./js/fade_entire.js"></script>
+
+    <!--=================정보수정 전용 스크립트====================-->
+    <script src="./js/info_modify.js"></script>
 
 
 </head>
@@ -285,20 +286,20 @@
                                                 <label for="aname">
                                                     <p><span>Name</span>이름</p><p class="warning"></p>
                                                 </label>
-                                                <p>김미나</p>
+                                                <p>김서용</p>
                                             </div> 
                                         </li>
 
                                         <li class="email_email">
-                                            <label for="amail" class="label_img">
+                                            <label for="amail1" class="label_img">
                                                 <img src="./img/Info_Modify/icon/icon_1_3.png" alt="이메일">
                                             </label>
                                             <div class="label_input">
-                                                <label for="amail">
+                                                <label for="amail1">
                                                     <p><span>E-mail</span>이메일</p><p class="warning"></p>
                                                 </label>
                                                 <div class="email_flex">
-                                                    <input id="amail" type="text" placeholder="이메일을 입력하세요!" required>
+                                                    <input id="amail1" type="text" placeholder="이메일을 입력하세요!" required>
                                                     <p>@</p>
                                                     <select name="mail" id="mail">
                                                         <option value="gmail.com">gmail.com</option>
@@ -313,15 +314,15 @@
                                         </li>
 
                                         <li class="phone_phone">
-                                            <label for="aphone" class="label_img">
+                                            <label for="aphone1" class="label_img">
                                                 <img src="./img/Info_Modify/icon/icon_1_4.png" alt="휴대폰 번호 아이콘">
                                             </label>
                                             <div class="label_input">
-                                                <label for="aphone">
+                                                <label for="aphone1">
                                                     <p><span>Phone Number</span>휴대폰 번호</p>
                                                 </label>
-                                                <input id="aphone" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
-                                                <div class="aconf_btn" onclick="alert('인증번호가 전송 되었습니다!')">인증번호 받기</div>
+                                                <input id="aphone1" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <div class="aconf_btn">인증번호 받기</div>
                                             </div> 
                                         </li>
 

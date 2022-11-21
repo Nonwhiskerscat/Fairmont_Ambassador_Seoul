@@ -1216,12 +1216,20 @@ main .bighead .contents_area .my_flex .my_left .my_manage ul li {
   width: 30%;
   height: auto;
   display: block;
-  background-color: #f3f2e7;
+  background-color: rgba(66, 45, 20, 0.1);
   cursor: pointer;
 }
+main .bighead .contents_area .my_flex .my_left .my_manage ul li:hover {
+  background-color: rgba(66, 45, 20, 0.35);
+  transition: all 1s;
+}
 main .bighead .contents_area .my_flex .my_left .my_manage ul li:last-child {
-  background-color: #ebd4ca;
+  background-color: rgba(183, 26, 26, 0.15);
   z-index: 30;
+}
+main .bighead .contents_area .my_flex .my_left .my_manage ul li:last-child:hover {
+  background-color: rgba(183, 26, 26, 0.35);
+  transition: all 1s;
 }
 @media screen and (min-width: 1400px) {
   main .bighead .contents_area .my_flex .my_left .my_manage ul li {
@@ -1305,13 +1313,24 @@ main .bighead .contents_area .back_logo {
   }
 }
 main .mypage_modal {
-  position: absolute;
+  position: fixed;
+  overflow: auto;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 31;
   background-color: rgba(0, 0, 0, 0.5);
+}
+main .mypage_modal::-webkit-scrollbar {
+  width: 8px;
+}
+main .mypage_modal::-webkit-scrollbar-thumb {
+  background-color: rgba(138, 113, 75, 0.8);
+  border-radius: 8px;
+}
+main .mypage_modal::-webkit-scrollbar-track {
+  border-radius: 8px;
 }
 main .mypage_modal .login_sec {
   transform: translateY(100px);
@@ -1512,7 +1531,7 @@ main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp {
     margin-top: 20px;
   }
 }
-main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button {
+main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button {
   background-color: #422d13;
   width: 100%;
   border: none;
@@ -1520,36 +1539,36 @@ main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button {
   transition: background-color 0.5s;
   margin-top: 25px;
 }
-main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button:hover {
+main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button:hover {
   background-color: rgb(101, 27, 0);
 }
 @media screen and (min-width: 1400px) {
-  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button {
+  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button {
     padding: 10px 0px;
   }
 }
-main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button .btn_flex {
+main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button .btn_flex {
   align-items: center;
   margin: 0 auto;
 }
 @media screen and (min-width: 1400px) {
-  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button .btn_flex {
+  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button .btn_flex {
     width: 17.5%;
   }
 }
-main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button .btn_flex p {
+main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button .btn_flex p {
   font-family: "SCoreDream";
   font-size: calc(1em + 1vw);
   font-weight: 300;
   color: #fefdf0;
 }
 @media screen and (min-width: 1400px) {
-  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button .btn_flex p {
+  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button .btn_flex p {
     font-size: 18px;
   }
 }
 @media screen and (min-width: 1400px) {
-  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.find button {
+  main .mypage_modal .login_sec .dive_sec .pw_modify .btn_grp.modify button {
     margin-top: 20px;
   }
 }

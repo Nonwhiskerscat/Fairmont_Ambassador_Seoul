@@ -17,6 +17,14 @@
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
+
+    <!--=================etc, customer 공용 스크립트====================-->
+    <script src="./js/fade_entire.js"></script>
+
+    <!--=================마이페이지 전용 스크립트====================-->
+    <script src="./js/my_page.js"></script>
+    <script src="./js/my_pw_modify.js"></script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -296,17 +304,17 @@
                                 <div class="my_manage">
                                     <h4>Manage</h4>
                                     <ul>
-                                        <li>
+                                        <li class="myPw">
                                             <img src="./img/My_Page/icon/icon_2_1.png" alt="비밀번호 변경">
                                             <p>비밀번호 변경</p>
                                         </li>
 
-                                        <li>
+                                        <li class="myInfo">
                                             <img src="./img/My_Page/icon/icon_2_2.png" alt="정보 수정">
                                             <p>정보 수정</p>
                                         </li>
 
-                                        <li>
+                                        <li class="myOut">
                                             <img src="./img/My_Page/icon/icon_2_3.png" alt="회원 탈퇴">
                                             <p>회원 탈퇴</p>
                                         </li>
@@ -335,7 +343,9 @@
                 </div><!--contents_area-->
             </div><!--bighead-->
 
-            <div class="mypage_modal no">
+            
+
+            <div class="mypage_modal">
                 <div class="container">
                     <div class="login_sec">
                         <div class="login_logo">
@@ -346,51 +356,51 @@
 
                         <div class="dive_sec">
                             <div class="pw_modify">
-                                <h4>패스워드 찾기</h4>
+                                <h4>패스워드 변경</h4>
                                 <form action="#">
                                     <ul class="modifying_pw">
-                                        <li class="id_id">
-                                            <label for="aid2" class="label_img">
+                                        <li class="pw_pw">
+                                            <label for="apw" class="label_img">
                                                 <img src="./img/My_Page/icon/icon_3_1.png" alt="패스워드 아이콘">
                                             </label>
                                             <div class="label_input">
-                                                <label for="aid2">
+                                                <label for="apw">
                                                     <p><span>Current Pw</span>현재 비밀번호</p>
                                                 </label>
-                                                <input id="aid2" type="text" placeholder="회원분의 아이디를 입력하세요!" required>
+                                                <input id="apw" type="password" placeholder="회원분의 아이디를 입력하세요!" required>
                                             </div> 
                                         </li>
                                         
-                                        <li class="phone_phone">
-                                            <label for="aphone2" class="label_img">
+                                        <li class="newpw_newpw">
+                                            <label for="npw1" class="label_img">
                                                 <img src="./img/My_Page/icon/icon_3_1.png" alt="새 패스워드 아이콘">
                                             </label>
                                             <div class="label_input">
-                                                <label for="aphone2">
+                                                <label for="npw1">
                                                     <p><span>New Pw</span>새 비밀번호</p>
                                                 </label>
-                                                <input id="aphone2" type="text" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
+                                                <input id="npw1" type="password" placeholder="회원분의 휴대폰 번호를 입력하세요!" required>
                                             </div> 
                                         </li>
 
-                                        <li class="aconf_aconf">
-                                            <label for="aconf2" class="label_img">
+                                        <li class="newpw2_newpw2">
+                                            <label for="npw2" class="label_img">
                                                 <img src="./img/My_Page/icon/icon_3_1.png" alt="새 패스워드 아이콘">
                                             </label>
                                             <div class="label_input">
-                                                <label for="aconf2">
+                                                <label for="npw2">
                                                     <p><span>Confrim New Pw</span>새 비밀번호 확인</p>
                                                 </label>
-                                                <input id="aconf2" type="text" placeholder="SMS로 발송된 인증번호를 입력하세요!" required>
+                                                <input id="npw2" type="password" placeholder="새 비밀번호를 다시 한 번 입력해 주세요!" required>
                                             </div> 
                                         </li>
 
                                     </ul>
 
-                                    <div class="btn_grp find">
+                                    <div class="btn_grp modify">
                                         <button type="submit">
                                             <div class="btn_flex">
-                                                <p>찾기</p>
+                                                <p>변경하기</p>
                                             </div><!--btn_flex--> 
                                         </button>
                                     </div><!--btn_grp-->

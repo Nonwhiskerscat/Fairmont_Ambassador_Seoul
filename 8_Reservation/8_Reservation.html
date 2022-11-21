@@ -17,6 +17,15 @@
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/gnb_menu.js"></script>
     <script src="./js/button.js"></script> 
+
+    <!--=================etc, customer 공용 스크립트====================-->
+    <script src="./js/fade_entire.js"></script>
+
+    <!--=================예약 전용 스크립트====================-->
+    <script src="./js/reservation.js"></script>
+    <script src="./js/check_date.js"></script>
+
+
 </head>
 <body>
     <div class="wrapper">
@@ -267,7 +276,7 @@
                                                     <label for="ain">
                                                         <p><span>checkin</span>체크인</p><p class="warning"></p>
                                                     </label>
-                                                    <input id="ain" type="datetime-local" required>
+                                                    <input id="ain" type="date" required>
                                                 </div> 
                                             </li>
     
@@ -279,7 +288,7 @@
                                                     <label for="aout">
                                                         <p><span>checkout</span>체크아웃</p><p class="warning"></p>
                                                     </label>
-                                                    <input id="aout" type="datetime-local" required>
+                                                    <input id="aout" type="date" required>
                                                 </div> 
                                             </li>
     
@@ -294,7 +303,12 @@
                                                     <img src="./img/8_Reservation/icon/icon_2_1.png" alt="객실 수">
                                                     <p>객실 수</p>
                                                 </label>
-                                                <input type="number" id="rg_room" placeholder="0">
+                                                <div class="dial">
+                                                    <img src="./img/8_Reservation/icon/icon_minus.png" alt="#">
+                                                    <input type="number" id="rg_room" value="0"  readonly>
+                                                    <img src="./img/8_Reservation/icon/icon_plus.png" alt="#">
+                                                </div>
+                                                
                                             </li>
 
                                             <li>
@@ -302,7 +316,11 @@
                                                     <img src="./img/8_Reservation/icon/icon_2_2.png" alt="대인">
                                                     <p>대인</p>
                                                 </label>
-                                                <input type="number" id="rg_adult" placeholder="0">
+                                                <div class="dial">
+                                                    <img src="./img/8_Reservation/icon/icon_minus.png" alt="#">
+                                                    <input type="number" id="rg_adult" value="0"  readonly>
+                                                    <img src="./img/8_Reservation/icon/icon_plus.png" alt="#">
+                                                </div>
                                             </li>
 
                                             <li>
@@ -310,7 +328,11 @@
                                                     <img src="./img/8_Reservation/icon/icon_2_3.png" alt="소인">
                                                     <p>소인</p>
                                                 </label>
-                                                <input type="number" id="rg_infant" placeholder="0">
+                                                <div class="dial">
+                                                    <img src="./img/8_Reservation/icon/icon_minus.png" alt="#">
+                                                    <input type="number" id="rg_child" value="0"  readonly>
+                                                    <img src="./img/8_Reservation/icon/icon_plus.png" alt="#">
+                                                </div>                                           
                                             </li>
                                         </ul>
                                     </div><!--room_guest-->
@@ -318,19 +340,19 @@
                                     <div class="room_type">
                                         <h4>Room Type</h4>
                                         <ul>
-                                            <li>
+                                            <li data-bg="red">
                                                 <img src="./img/8_Reservation/icon/icon_3_1.png" alt="객실">
                                                 <em>Suite Room</em>
                                                 <p>객실</p>
                                             </li>
 
-                                            <li>
+                                            <li data-bg="navy">
                                                 <img src="./img/8_Reservation/icon/icon_3_2.png" alt="스위트룸">
                                                 <em>Suite Room</em>
                                                 <p>스위트 룸</p>
                                             </li>
 
-                                            <li>
+                                            <li data-bg="gold">
                                                 <img src="./img/8_Reservation/icon/icon_3_3.png" alt="펜트하우스">
                                                 <em>Pent House</em>
                                                 <p>펜트하우스</p>
@@ -369,7 +391,7 @@
                                             </ul>
                                         </div><!--paytype-->
 
-                                        <div class="payinfo">
+                                        <div class="payinfo" id="pay1">
                                             <ul>
                                                 <li>
                                                     <label for="c_num">
@@ -405,6 +427,7 @@
                                                 </li>
                                             </ul>
                                         </div><!--payinfo-->
+
 
                                         <div class="book_tos">
                                             <div class="tos_box">
