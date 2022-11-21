@@ -1155,12 +1155,19 @@ main .bighead .contents_area .book_flex .book_left .room_guest ul li {
   width: 30%;
   height: auto;
   display: block;
-  background-color: #f3f2e7;
+  background-color: rgba(51, 51, 51, 0.1);
+  padding-bottom: calc(15px + 0.5vw);
+}
+main .bighead .contents_area .book_flex .book_left .room_guest ul li:hover {
+  background-color: rgba(66, 45, 20, 0.25);
+}
+main .bighead .contents_area .book_flex .book_left .room_guest ul li.thick {
+  background-color: rgba(66, 45, 20, 0.25);
 }
 @media screen and (min-width: 1400px) {
   main .bighead .contents_area .book_flex .book_left .room_guest ul li {
     width: 120px;
-    height: 120px;
+    padding-bottom: 10px;
   }
 }
 main .bighead .contents_area .book_flex .book_left .room_guest ul li img {
@@ -1184,24 +1191,48 @@ main .bighead .contents_area .book_flex .book_left .room_guest ul li p {
     margin-top: 5px;
   }
 }
-main .bighead .contents_area .book_flex .book_left .room_guest ul li input {
+main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: calc(10px + 0.5vw);
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial {
+    margin-top: 12px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial img {
+  display: block;
+  cursor: pointer;
+  width: calc(10px + 0.5vw);
+  margin-top: 0;
+}
+@media screen and (min-width: 1400px) {
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial img {
+    width: 15px;
+  }
+}
+main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial input {
   width: 80%;
+  display: block;
   background: transparent;
   border: none;
   outline: none;
+  height: 20px;
   font-family: "Lemon/Milk light", sans-serif;
   font-size: calc(12px + 0.5vw);
   text-align: center;
-  margin-bottom: 10%;
 }
-main .bighead .contents_area .book_flex .book_left .room_guest ul li input::-webkit-outer-spin-button, main .bighead .contents_area .book_flex .book_left .room_guest ul li input::-webkit-inner-spin-button {
-  --webkit-appearance: none;
+main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial input::-webkit-outer-spin-button, main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
 }
 @media screen and (min-width: 1400px) {
-  main .bighead .contents_area .book_flex .book_left .room_guest ul li input {
-    font-size: 16px;
-    margin-bottom: 0%;
+  main .bighead .contents_area .book_flex .book_left .room_guest ul li .dial input {
+    font-size: 20px;
   }
 }
 main .bighead .contents_area .book_flex .book_left .room_type {
@@ -1228,7 +1259,7 @@ main .bighead .contents_area .book_flex .book_left .room_type ul li {
   width: 30%;
   height: auto;
   display: block;
-  background-color: #f3f2e7;
+  background-color: rgba(51, 51, 51, 0.1);
   cursor: pointer;
 }
 @media screen and (min-width: 1400px) {
