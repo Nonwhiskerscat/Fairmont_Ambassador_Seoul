@@ -1066,6 +1066,12 @@ main .bighead .contents_area .cust_flex .cust_left .qna_icon ul li {
     margin-bottom: 20px;
   }
 }
+main .bighead .contents_area .cust_flex .cust_left .qna_icon ul li.thick {
+  background-color: rgba(66, 45, 20, 0.25);
+}
+main .bighead .contents_area .cust_flex .cust_left .qna_icon ul li:hover {
+  background-color: rgba(66, 45, 20, 0.25);
+}
 main .bighead .contents_area .cust_flex .cust_left .qna_icon ul li img {
   width: 40%;
   margin-top: 10%;
