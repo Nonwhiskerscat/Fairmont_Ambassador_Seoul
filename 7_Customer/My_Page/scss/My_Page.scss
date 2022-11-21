@@ -1205,12 +1205,22 @@ main {
                                 width: 30%;
                                 height: auto;
                                 display: block;
-                                background-color: #f3f2e7;
+                                background-color: rgba($color: #422d14, $alpha: 0.1);
                                 cursor: pointer;
 
+                                &:hover {
+                                    background-color: rgba($color: #422d14, $alpha: 0.35);
+                                    transition: all 1s;
+                                }
+
                                 &:last-child {
-                                    background-color: #ebd4ca;
+                                    background-color: rgba($color: #b71a1a, $alpha: 0.15);
                                     z-index: 30;
+
+                                    &:hover {
+                                        background-color: rgba($color: #b71a1a, $alpha: 0.35);
+                                        transition: all 1s;
+                                    }
                                 }
                                 
 
@@ -1328,7 +1338,9 @@ main {
     } //big.head
 
     .mypage_modal {
-        position: absolute;
+
+        position: fixed;
+        overflow: auto;
         top: 0;
         left: 0;
         width: 100%;
@@ -1336,6 +1348,19 @@ main {
         z-index: 31;
         // transform: translate(-50%, -50%);
         background-color: rgba(0,0,0,0.5);
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($color: #8a714b, $alpha: 0.8);
+            border-radius: 8px;
+        }
+    
+        &::-webkit-scrollbar-track {
+            border-radius: 8px;
+        }
 
         .login_sec {
             transform: translateY(100px);
@@ -1419,7 +1444,7 @@ main {
 
 
         
-                        &.find button {
+                        &.modify button {
                             @include modal_dark_button;
                             margin-top: $small_margin_m;
 

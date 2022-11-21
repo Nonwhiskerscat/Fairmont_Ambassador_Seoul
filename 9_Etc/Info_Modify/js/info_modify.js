@@ -3,7 +3,6 @@ $(document).ready(function() {
     let pCheck=/^(?=.*[0-9]).{10,25}$/;
     let nCheck=/^(?=.*[0-9]).{6,6}$/;
     let ePass = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
-
     let phCheck=false;
 
 
