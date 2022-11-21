@@ -28,8 +28,10 @@
 
 
       let io = new IntersectionObserver(isObserve, {
-        root: null, rootMargin: "200px 0px 0px 0px", threshold: 0.9
+        root: null, rootMargin: "200px 0px 0px 0px", threshold: 0.4
       })
+
+
 
       $('section').each((secI, section) => {
         if (secI > 0 && secI < 7) io.observe(section);
@@ -40,9 +42,10 @@
         let currTarget = obser[0].target.className
         let tgArrivesArea = obser[0].isIntersecting
         let $card = $('.card-contain')
+        console.log(currTarget);
 
 
-        if (obser.length > 1) {
+        if (obser.length > 2) {
 
           for (let i in obser) {
             if (tgArrivesArea) giveStyle(obser[i].target.className)
@@ -61,7 +64,7 @@
 
 
       function giveStyle(target) {
-        if (target == "intro") null
+        if (target == "intro") onIntro()
         if (target == "s1-instruction") visibleEl();
         if (target == "s2-wedding") s234Evnt('s2', "left");
         if (target == "s3-flower") s234Evnt('s3', "right");
@@ -69,7 +72,7 @@
       }
 
       function resetStyle(target) {
-        if (target == "intro") null
+        if (target == "intro") removeIntro()
         if (target == "s1-instruction") hiddenEl();
         if (target == "s2-wedding") removeS234Evnt('s2', "left");
         if (target == "s3-flower") removeS234Evnt('s3', "right");
@@ -132,7 +135,22 @@
           stateCard = true
         }
       }
+      //=========================intro==============================
+      function onIntro() {
+        $('.intro p:first').stop(true, true).animate({ "opacity": 1 }, 1500)
+        $('.hidden-line').delay(700).animate({ "width": 0 }, 1500, () => {
+          $(".s0-bg").animate({ "opacity": 1 }, 300, () => {
+            $('.dot').animate({ "opacity": 1 }, 500)
+          })
+        })
+      }
 
+      function removeIntro() {
+        $(".intro p:first , .hidden-line , .s0-bg , .dot").
+          stop().animate({ "opacity": 0 }, 200, function () {
+            $(this).removeAttr("style")
+          })
+      }
       // ========================s1==============================
       //모바일이면 보통 이벤트로 실행 
       //큐스택 꽉차면 작동안되게 하는 함수 만들기 
@@ -311,6 +329,8 @@
         clearInterval(intervalSl)
         $('.img-list-box li').removeClass("focuse-img")//
       })
+
+
     }) //ready
   </script>
 </head>
@@ -606,8 +626,10 @@
         <div class="container">
           <div class="flex-box">
             <h2>
-              감동,<br />
-              그 이상의 가치를 만듭니다.
+              <p>감동,</p>
+              <p>그 이상의 가치를 만듭니다.</p>
+              <div class="dot"></div>
+              <div class="hidden-line"></div>
             </h2>
             <div class="s0-bg"></div>
           </div>

@@ -46,12 +46,12 @@
 
       // =====================obsever======================
       let io = new IntersectionObserver(isObserve, {
-        root: null, rootMargin: "250px 0px 100px 0px", threshold: 0.7
+        root: null, rootMargin: "200px 0px 100px 0px", threshold: 0.7
       })
 
       //target observe elements
       $('section').each((i, e) => {
-        if (i >= 2 && i <= 6) {
+        if (i >= 1 && i <= 6) {
           io.observe(e)
           $(e).css({ 'visibility': 'hidden', "opacity": 0 })
         }
@@ -59,6 +59,7 @@
 
       function isObserve(obser) {
         let delay = 800
+        console.log(obser[0].isIntersecting);
 
         let loadFn = (idx) => {
           obser[idx].isIntersecting && $(obser[idx].target)
@@ -78,12 +79,33 @@
         }
 
         //on after page load 
-        if (obser.length > 1) for (let i in obser) loadFn(i);
+        if (obser.length > 2) {
+          for (let i in obser) loadFn(i)
+          obser[0].isIntersecting && startIntro()
+        };
         //start reset fn
         obser[0].isIntersecting ? startFn() : resetFn()
+
+
+        if (obser.length == 1 && obser[0].target.className == "intro") {
+          obser[0].isIntersecting ? startIntro() : resetIntro()
+        }
       }
 
+      //======================intro====================
+      function startIntro() {
+        $(".hidden-line1").stop(true, true).animate({ "width": 0 }, 1000, function () {
+          $(this).next().animate({ "width": 0 }, 1000)
+        })
+      }
 
+      function resetIntro() {
+        console.log("onn");
+        $(".hidden-line1 , .hidden-line2")
+          .animate({ "width": 0 }, 500, function () {
+            $(this).removeAttr("style")
+          })
+      }
       //===================== modal ======================
 
       // 1. modal slide & focuse Evnt 
@@ -160,9 +182,9 @@
           "./img/Party/photo/preview-3.png",
         ],
         [
-          "./img/Party/photo/s2_modal1.png",
-          "./img/Party/photo/s2_modal2.png",
-          "./img/Party/photo/s2_modal3.png",
+          "./img/Party/photo/header-banner.png",
+          "./img/Party/photo/infomation_img.png",
+          "./img/Party/photo/preview-1.png",
         ],
         [
           "./img/Party/photo/s3_modal1.png",
@@ -171,9 +193,9 @@
         ],
 
         [
-          "./img/Party/photo/s3_modal1.png",
-          "./img/Party/photo/s3_modal2.png",
-          "./img/Party/photo/s3_modal3.png",
+          "./img/Party/photo/s2_modal1.png",
+          "./img/Party/photo/s2_modal2.png",
+          "./img/Party/photo/s2_modal3.png",
         ]
       ]
 
@@ -489,8 +511,10 @@
       <section class="intro">
         <div class="container">
           <h2>
-            <span>성공적인 비즈니스가 될 수 있도록 최고의 서비스를 제공합니다.</span>
-            <span></span>
+            <span>성공적인 비즈니스가 될 수 있도록</span>
+            <span>최고의 서비스를 제공합니다.</span>
+            <div class="hidden-line1"></div>
+            <div class="hidden-line2"></div>
           </h2>
         </div>
       </section>
