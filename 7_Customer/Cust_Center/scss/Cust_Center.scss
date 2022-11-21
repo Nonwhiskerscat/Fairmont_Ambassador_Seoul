@@ -1166,7 +1166,8 @@ main {
                 } //.cust_left
 
                 .cust_right {
-                    margin-top: $small_margin_m;    
+                    z-index: 500;
+                    margin-top: $big_margin_m;    
                     @include cust_h4;
 
                     @include responsive(pc-screens) {
@@ -1177,6 +1178,7 @@ main {
                     .faq_entire {
 
                         @include cust_margin;
+                        
 
                         form {
                             .faq_title {
@@ -1202,6 +1204,13 @@ main {
     
                                         @include responsive(pc-screens) {
                                             font-size: 16px;
+                                        }
+
+                                        option {
+                                            background-color: #e2decf;
+                                            // text-align: center;
+                                            color: #422d14;
+
                                         }
                                     }
 
@@ -1306,6 +1315,7 @@ main {
             
                     
                                     &.submit button {
+                                        cursor: pointer;
                                         @include cust_dark_button;
                                         margin-top: $small_margin_m;
             
@@ -1316,6 +1326,7 @@ main {
                                     }
             
                                     &.reset button {
+                                        cursor: pointer;
                                         @include cust_light_button;
                                         margin-top: $small_margin_m;
             
