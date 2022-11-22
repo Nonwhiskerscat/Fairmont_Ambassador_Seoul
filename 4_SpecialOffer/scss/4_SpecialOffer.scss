@@ -949,7 +949,7 @@ main {
                 color: #bdbdbd;
 
                 @include responsive(pc-screens) {
-                    border-right: 2px solid black;
+                    border-right: 2px solid #bdbdbd;
                     padding-right: 100px;
                     padding-left: 100px;
                 }
@@ -969,23 +969,50 @@ main {
             text-align: center;
             margin-top: 70px;
             margin-bottom: 85px;
+            //영문제목
+            @include sub_h3;
+
         }
         h3 {
-            font-size: 28px;
+            @include type_custom(calc(18px + 0.5vw), $common_font);
             margin-bottom: 30px;
-            &::before {
-                @include title_border_2(30px, 2px, black, 5px, 5px);
+            font-weight: 400;
 
-                @include responsive(pc-screens) {
-                    @include title_border_2(30px, 2px, black, 5px, 5px);
-                }
+
+
+            &::before {
+                @include title_border_2(30px, 3px, #333, 5px, 5px)
             }
+
+            @include responsive(pc-screens) {
+                @include type_custom($regularf_title, $common_font);
+                    margin-bottom: 30px;
+                    font-weight: 400;
+
+                    &::before {
+                        @include title_border_2(40px, 3px, #333, 10px, 10px)
+                    }
+            }
+
+
         }
         h4 {
-            font-size: 20px;
+            @include type_custom(calc(14px + 1vw),$eng_title_font);
+            letter-spacing: 1px;
+
+            @include responsive(pc-screens) {
+                font-size: $semif;
+            }
         }
         p{
-            font-size: 18px;
+            @include type_custom(calc(0.5em + 1vw), $common_font);
+            line-height: 2em;
+            text-align: justify;
+
+            @include responsive(pc-screens) {
+                font-size: $mainf;
+                line-height: $mains;
+            }
             
             .sub {
                 font-size: 12px;
@@ -1013,23 +1040,37 @@ main {
     }
 
     .m_title {
-        font-size: 28px;
+        @include type_custom(calc(18px + 0.5vw), $common_font);
+        margin-bottom: 30px;
+        font-weight: 400;
 
-        @include responsive(pc-screens){
+        @include responsive(pc-screens) {
             display: none;
+        }
+
+        &::before {
+            @include title_border_2(30px, 3px, #333, 5px, 5px)
         }
     }
 
     .p_title {
+        @include type_custom($regularf_title, $common_font);
+        margin-bottom: 30px;
+        font-weight: 400;
         display: none;
 
-        @include responsive(pc-screens){
+        @include responsive(pc-screens) {
             display: block;
+        }
+
+        &::before {
+            @include title_border_2(40px, 3px, #333, 10px, 10px)
         }
     }
 
     .context{
-
+        background-color: yellow;
+        position: relative;
         @include responsive(pc-screens){
             width: 580px;
         }
@@ -1106,26 +1147,35 @@ main {
 
     button {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        margin-bottom: 60px;
-
-        width: 170px;
-        background-color: #422d13;
+        cursor: pointer;
+        margin: 0 auto;
+        width: 45%;
         height: 40px;
+        @include type_custom(calc(0.5em + 1vw), $common_font);
+        font-weight: 200;
+        background-color: $base_color_dark;
+        border: 1px solid $base_color_dark;
+
         a {
-            color: white;
-            font-size: 1.3em;
+            color: $base_color_light;
         }
 
         @include responsive(pc-screens) {
-            width: 275px;
-            height: 65px;
-            font-size: 1.5em;
-            margin-right: 0px;
+            height: 60px;
+            font-size: $semif;
+            position: absolute;
+            right: 0;
+            margin: 0;
+            bottom: 0;
+
         }
-    }
+        
+        &:hover {
+            transition: all 0.5s;
+            background-color: #333;
+            color: white;
+        }
+    }  
 
     #first {
         div.price {

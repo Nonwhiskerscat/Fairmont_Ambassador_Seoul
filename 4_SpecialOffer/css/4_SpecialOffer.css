@@ -568,7 +568,7 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu > a:hover {
-  color: "#fefdf0";
+  color: #fefdf0;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
@@ -929,7 +929,7 @@ main .gnb li a {
 }
 @media screen and (min-width: 1400px) {
   main .gnb li a {
-    border-right: 2px solid black;
+    border-right: 2px solid #bdbdbd;
     padding-right: 100px;
     padding-left: 100px;
   }
@@ -943,32 +943,67 @@ main section h2 {
   text-align: center;
   margin-top: 70px;
   margin-bottom: 85px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(1em + 5vw);
+  margin-bottom: calc(0.5em + 3vw);
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 1400px) {
+  main section h2 {
+    font-size: 80px;
+    margin-bottom: 125px;
+  }
 }
 main section h3 {
-  font-size: 28px;
+  font-family: "SCoreDream";
+  font-size: calc(18px + 0.5vw);
   margin-bottom: 30px;
+  font-weight: 400;
 }
 main section h3::before {
   content: "";
   display: block;
   width: 30px;
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid #333;
   margin: 0 0 5px 5px;
 }
 @media screen and (min-width: 1400px) {
+  main section h3 {
+    font-family: "SCoreDream";
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
   main section h3::before {
     content: "";
     display: block;
-    width: 30px;
-    border-bottom: 2px solid black;
-    margin: 0 0 5px 5px;
+    width: 40px;
+    border-bottom: 3px solid #333;
+    margin: 0 0 10px 10px;
   }
 }
 main section h4 {
-  font-size: 20px;
+  font-family: "Lemon/Milk light", sans-serif;
+  font-size: calc(14px + 1vw);
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1400px) {
+  main section h4 {
+    font-size: 24px;
+  }
 }
 main section p {
-  font-size: 18px;
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 1vw);
+  line-height: 2em;
+  text-align: justify;
+}
+@media screen and (min-width: 1400px) {
+  main section p {
+    font-size: 18px;
+    line-height: 36px;
+  }
 }
 main section p .sub {
   font-size: 12px;
@@ -993,20 +1028,45 @@ main .flex-content .slide_gallery {
   }
 }
 main .m_title {
-  font-size: 28px;
+  font-family: "SCoreDream";
+  font-size: calc(18px + 0.5vw);
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 @media screen and (min-width: 1400px) {
   main .m_title {
     display: none;
   }
 }
+main .m_title::before {
+  content: "";
+  display: block;
+  width: 30px;
+  border-bottom: 3px solid #333;
+  margin: 0 0 5px 5px;
+}
 main .p_title {
+  font-family: "SCoreDream";
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 400;
   display: none;
 }
 @media screen and (min-width: 1400px) {
   main .p_title {
     display: block;
   }
+}
+main .p_title::before {
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #333;
+  margin: 0 0 10px 10px;
+}
+main .context {
+  background-color: yellow;
+  position: relative;
 }
 @media screen and (min-width: 1400px) {
   main .context {
@@ -1077,25 +1137,33 @@ main .info h4 {
 }
 main button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 60px;
-  width: 170px;
-  background-color: #422d13;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 45%;
   height: 40px;
+  font-family: "SCoreDream";
+  font-size: calc(0.5em + 1vw);
+  font-weight: 200;
+  background-color: #422d13;
+  border: 1px solid #422d13;
 }
 main button a {
-  color: white;
-  font-size: 1.3em;
+  color: #fefdf0;
 }
 @media screen and (min-width: 1400px) {
   main button {
-    width: 275px;
-    height: 65px;
-    font-size: 1.5em;
-    margin-right: 0px;
+    height: 60px;
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    bottom: 0;
   }
+}
+main button:hover {
+  transition: all 0.5s;
+  background-color: #333;
+  color: white;
 }
 main #first div.price {
   display: none;
