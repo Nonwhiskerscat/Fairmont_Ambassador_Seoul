@@ -1332,7 +1332,7 @@ main section.s4-preview .flex .right-content {
 }
 main section.s4-preview .flex .right-content h3 {
   position: absolute;
-  top: max(-7.6923vw, -20px);
+  top: max(-7.6923vw, -35px);
   left: max(-81.5385vw, -600px);
   z-index: 2;
   font-weight: 600;
@@ -1365,7 +1365,7 @@ main section.s4-preview .flex .right-content .s4-img-list {
   }
 }
 main section.s4-preview .flex .right-content .s4-img-list .focuse-border {
-  display: none;
+  display: block;
   position: absolute;
   background-color: transparent;
   z-index: 1000;
@@ -1376,13 +1376,13 @@ main section.s4-preview .flex .right-content .s4-img-list .focuse-border i {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  display: block;
+  display: none;
   font-size: 110px;
   text-align: center;
   line-height: 110px;
 }
 @media screen and (min-width: 1400px) {
-  main section.s4-preview .flex .right-content .s4-img-list .focuse-border {
+  main section.s4-preview .flex .right-content .s4-img-list .focuse-border i {
     display: block;
   }
 }

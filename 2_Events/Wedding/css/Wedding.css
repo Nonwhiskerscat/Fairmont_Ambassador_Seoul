@@ -1302,7 +1302,7 @@ main .s4-img {
 }
 @media screen and (min-width: 1400px) {
   main section.s2-wedding {
-    margin-top: 120px;
+    margin-top: 250px;
   }
 }
 main section.s2-wedding .flex {
@@ -1475,7 +1475,7 @@ main section.s3-flower .flex .s3-content .s3-btn a:hover {
   }
 }
 main section.s4-various-venue {
-  margin-top: 120px;
+  margin-top: 200px;
 }
 main section.s4-various-venue .flex {
   display: flex;
@@ -1566,7 +1566,7 @@ main section.s4-various-venue .flex .s4-img img {
 }
 main section.s5-notice {
   padding: 55px 0;
-  margin-top: 250px;
+  margin-top: 200px;
   background-color: #f7f7f7;
 }
 main section.s5-notice .flex {

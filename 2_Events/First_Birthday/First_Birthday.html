@@ -91,11 +91,6 @@
 
           clearInterval(s4Inter)
         };
-
-        // .stop(true, true)
-        //   .animate({ "opacity": 0 }, 1000, function () {
-        //     $(this).removeAttr("style")
-        //   })
       }
 
 
@@ -197,19 +192,32 @@
           $leftContain.find('li:first').remove()
           $leftContain.find('li:last').fadeIn()
         }
+
+        // listInter()
       }
+
+
 
       // 3. change fade img & Idx 
 
       $li.on('click', ChangeFadeImg)
-      function ChangeFadeImg() {
-        onFadeIdx = $(this).index() - 1
 
+      function ChangeFadeImg() {
+        let viewW = window.innerWidth
+
+        onFadeIdx = $(this).index() - 1
         clearInterval(s4Inter)
         s4Inter = setInterval(fadeImg, 3000)
-        fadeImg(true)
+        viewW > 1400 && fadeImg(true)
       }
 
+      // $(".s4-img-list li:first").appendTo(".s4-img-list")
+      // $(".s4-img-list li:gt(0)").hide()
+      // function listInter() {
+      //   $(".s4-img-list li:first")
+      //     .fadeOut(500).next().fadeIn(500)
+      //     .end().appendTo(".s4-img-list")
+      // }
       //===================== modal ======================
 
       // 1. modal slide & focuse Evnt 
@@ -668,7 +676,7 @@
 
               <div class="s3-btns">
                 <a href="#">자세히 보기</a>
-                <a href="#">예약 및 문의</a>
+                <a href="mailto:Fairmont.seoul@fairmont.com">예약 및 문의</a>
               </div>
             </div>
             <div class="s3-img">
@@ -715,9 +723,9 @@
         <div class="flex">
           <div class="notice-content">
             <h3>NOTICE</h3>
-            <p>평면도 & 수용인원 차트보기</p>
-            <p>시설 정보</p>
-            <div class="notice-btn"><a href="#">MORE</a></div>
+            <p>예약문의 & 시설문의</p>
+            <p>FAQ</p>
+            <div class="notice-btn"><a href="../../7_Customer/Cust_Center/Cust_Center.html">고객센터</a></div>
           </div>
           <img src="./img/First_Birthday/photo/notice.png" alt="notice icon" />
         </div>

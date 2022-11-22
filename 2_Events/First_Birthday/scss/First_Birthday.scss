@@ -1271,7 +1271,7 @@ main {
 
         h3 {
           position: absolute;
-          top: max(-7.6923vw, -20px);
+          top: max(-7.6923vw, -35px);
           left: max(-81.5385vw, -600px);
           z-index: 2;
           font-weight: 600;
@@ -1303,25 +1303,24 @@ main {
           }
 
           .focuse-border {
-            display: none;
+            display: block;
             position: absolute;
             background-color: transparent;
             z-index: 1000;
             left: 10px;
-
             i {
               background: linear-gradient(to right, #ffe016, #ffcdf3, #65d3ff);
               background-clip: text;
               -webkit-background-clip: text;
               color: transparent;
-              display: block;
+              display: none;
               font-size: 110px;
               text-align: center;
               line-height: 110px;
-            }
 
-            @include responsive(pc-screens) {
-              display: block;
+              @include responsive(pc-screens) {
+                display: block;
+              }
             }
           }
 
