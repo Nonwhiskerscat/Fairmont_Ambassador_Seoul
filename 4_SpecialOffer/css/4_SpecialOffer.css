@@ -1065,7 +1065,6 @@ main .p_title::before {
   margin: 0 0 10px 10px;
 }
 main .context {
-  background-color: yellow;
   position: relative;
 }
 @media screen and (min-width: 1400px) {
@@ -1178,7 +1177,7 @@ main #high_tea div.price h4 {
   margin-right: 40px;
 }
 main #spectrum div.info .price h4 {
-  padding-right: 90px;
+  padding-right: 105px;
 }
 main #romantic div.price h4 {
   margin-right: 40px;

@@ -1069,7 +1069,6 @@ main {
     }
 
     .context{
-        background-color: yellow;
         position: relative;
         @include responsive(pc-screens){
             width: 580px;
@@ -1200,7 +1199,7 @@ main {
         div.info {
             .price {
                 h4 {
-                    padding-right: 90px;
+                    padding-right: 105px;
                 }
             }
         }
