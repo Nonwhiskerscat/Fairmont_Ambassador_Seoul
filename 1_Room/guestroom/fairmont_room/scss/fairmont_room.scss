@@ -1692,11 +1692,11 @@ main {
 
                         span.semi_big {
                             color: #b80000;
-                            @include type_custom(calc(1.2em + 1vw), $common_font);
+                            @include type_custom(calc(1.5em + 1vw), $common_font);
                             margin-right: 5px;
 
                             @include responsive(pc-screens) {
-                                font-size: 1.5em;
+                                font-size: 2em;
                             }
                         }
 
