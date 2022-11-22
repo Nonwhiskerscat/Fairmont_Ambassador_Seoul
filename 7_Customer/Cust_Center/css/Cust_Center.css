@@ -1164,7 +1164,8 @@ main .bighead .contents_area .cust_flex .cust_left .qna div ul li .qna_acc p a {
   font-weight: 400;
 }
 main .bighead .contents_area .cust_flex .cust_right {
-  margin-top: 25px;
+  z-index: 500;
+  margin-top: 100px;
 }
 main .bighead .contents_area .cust_flex .cust_right h4 {
   font-family: "Lemon/Milk light", sans-serif;
@@ -1244,6 +1245,10 @@ main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title 
   main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_select select {
     font-size: 16px;
   }
+}
+main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_select select option {
+  background-color: #e2decf;
+  color: #422d14;
 }
 main .bighead .contents_area .cust_flex .cust_right .faq_entire form .faq_title .faq_input {
   width: 70%;
@@ -1338,6 +1343,7 @@ main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire
   }
 }
 main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.submit button {
+  cursor: pointer;
   background-color: #422d13;
   width: 100%;
   border: none;
@@ -1375,6 +1381,7 @@ main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire
   }
 }
 main .bighead .contents_area .cust_flex .cust_right .faq_entire form .btn_entire .btn_grp.reset button {
+  cursor: pointer;
   background-color: transparent;
   width: 100%;
   border: 1px solid #422d13;
