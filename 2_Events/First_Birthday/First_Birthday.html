@@ -166,7 +166,6 @@
       // 2. fade img, move border Box
       let onFadeIdx = 0
       let $li = $(".s4-img-list li")
-      $(".s4-img-box > li:gt(0)").hide()
 
       function fadeImg(click) {
         let liWidth = $li.outerWidth(true)
@@ -193,34 +192,108 @@
           $leftContain.find('li:last').fadeIn()
         }
 
-        // listInter()
+
+        fadeList()
       }
 
 
 
-      // 3. change fade img & Idx 
 
-      $li.on('click', ChangeFadeImg)
+      let stateType = false
 
-      function ChangeFadeImg() {
-        let viewW = window.innerWidth
-
-        onFadeIdx = $(this).index() - 1
-        clearInterval(s4Inter)
-        s4Inter = setInterval(fadeImg, 3000)
-        viewW > 1400 && fadeImg(true)
+      function fadeList() {
+        let ww = window.innerWidth
+        if (stateType) {
+          $(".s4-img-list li:first")
+            .fadeOut(500).next().fadeIn(500)
+            .end().appendTo(".s4-img-list")
+        }
       }
 
-      // $(".s4-img-list li:first").appendTo(".s4-img-list")
-      // $(".s4-img-list li:gt(0)").hide()
-      // function listInter() {
-      //   $(".s4-img-list li:first")
-      //     .fadeOut(500).next().fadeIn(500)
-      //     .end().appendTo(".s4-img-list")
+      let ww = window.innerWidth
+      if (ww < 1400) {
+        $(".s4-img-list li:first").appendTo(".s4-img-list")
+        $(".s4-img-list li:gt(0)").hide()
+        stateType = true
+      }
+
+      $(window).resize(() => {
+        let ww = window.innerWidth
+
+        if (ww > 1400 && stateType) {
+          $(".s4-img-list li").removeAttr("style").show()
+          stateType = false
+        } else if (ww < 1400 && !stateType) {
+          $(".s4-img-list li:first").appendTo(".s4-img-list")
+          $(".s4-img-list li:gt(0)").hide()
+          stateType = true
+        }
+      })
+
+      // $(window).resize(() => {
+
+      // })
+      // let fn = mbListFade()
+      // let test = setInterval(() => , 3000)
+      // function mbListFade() {
+
+
+      //   return () => {
+      //     $(".s4-img-list li:first")
+      //       .fadeOut(500).next().fadeIn(500)
+      //       .end().appendTo(".s4-img-list")
+      //   }
       // }
+
+      // 
+      //   clearInterval(test)
+      // }
+
+
+      // // 3. change fade img & Idx 
+
+      // $li.on('click', ChangeFadeImg)
+
+      // function ChangeFadeImg() {
+      //   let viewW = window.innerWidth
+
+      //   onFadeIdx = $(this).index() - 1
+      //   clearInterval(s4Inter)
+      //   s4Inter = setInterval(fadeImg, 3000)
+      //   viewW > 1400 && fadeImg(true)
+      // }
+
+      //4. mobile img-list fade in out 
+      // ===================================================
+      // $(window).resize(() => {
+      //   let w = window.innerWidth
+      //   if (w > 1400) {
+      //     resetMbListFade()
+      //   }
+      // })
+      // let fn = mbListFade()
+      // let test = setInterval(() => , 3000)
+      // function mbListFade() {
+      //   $(".s4-img-list li:first").appendTo(".s4-img-list")
+      //   $(".s4-img-list li:gt(0)").hide()
+
+      //   return () => {
+      //     $(".s4-img-list li:first")
+      //       .fadeOut(500).next().fadeIn(500)
+      //       .end().appendTo(".s4-img-list")
+      //   }
+      // }
+
+      // function resetMbListFade() {
+      //   $(".s4-img-list li").removeAttr("style").show()
+      //   clearInterval(test)
+      // }
+
+
       //===================== modal ======================
 
       // 1. modal slide & focuse Evnt 
+
 
       //count idx
       function idxSl() {
