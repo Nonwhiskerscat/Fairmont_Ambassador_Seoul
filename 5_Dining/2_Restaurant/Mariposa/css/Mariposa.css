@@ -87,6 +87,10 @@ li {
   height: 100%;
 }
 
+strong {
+  font-weight: 400;
+}
+
 .menu_modal {
   position: fixed;
   left: 0;
@@ -896,7 +900,6 @@ main .sec1 .container .flex-box {
 }
 main .sec1 .container .flex-box .flex-box1 {
   display: flex;
-  justify-content: space-between;
 }
 @media screen and (min-width: 1400px) {
   main .sec1 .container .flex-box .flex-box1 {
@@ -930,7 +933,6 @@ main .sec1 .container .flex-box .flex-box1 .detail {
 main .sec1 .container .flex-box .menu-flex-box {
   display: flex;
   justify-content: center;
-  margin-left: 200px;
 }
 main .sec1 .container .flex-box .menu-flex-box .menu {
   width: 170px;
@@ -938,7 +940,7 @@ main .sec1 .container .flex-box .menu-flex-box .menu {
   line-height: 50px;
   text-align: center;
   letter-spacing: 1px;
-  background-color: #bdbdbd;
+  background-color: rgba(138, 113, 75, 0.8);
 }
 @media screen and (min-width: 1400px) {
   main .sec1 .container .flex-box .menu-flex-box .menu {
@@ -1091,7 +1093,7 @@ main .sec5 .sec5-text {
   font-size: calc(8px + 3vw);
   line-height: calc(1em + 3vw);
   font-weight: 200;
-  margin-bottom: 65px;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 1400px) {
   main .sec5 .sec5-text {

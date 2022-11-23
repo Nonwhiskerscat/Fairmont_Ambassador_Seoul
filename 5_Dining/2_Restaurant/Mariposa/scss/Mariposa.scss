@@ -9,6 +9,10 @@
     height: 100%
 }
 
+strong {
+    font-weight: 400;
+}
+
 //header
 .menu_modal {
     // display: none;
@@ -911,7 +915,7 @@ main {
             
                 .flex-box1 {
                     display: flex;
-                    justify-content: space-between;
+                    // justify-content: space-between;
 
                     @include responsive(pc-screens) {
                         justify-content: space-around;
@@ -945,7 +949,7 @@ main {
                 .menu-flex-box {
                     display: flex;
                     justify-content: center;
-                    margin-left: 200px;
+                    // margin-left: 200px;
 
                     .menu {
                         width: 170px;
@@ -953,7 +957,7 @@ main {
                         line-height: 50px;
                         text-align: center;
                         letter-spacing: 1px;
-                        background-color: #bdbdbd;
+                        background-color: rgba($color: #8a714b, $alpha: 0.8);
 
                         @include responsive (pc-screens) {
                             margin-top: 10px;
@@ -1030,6 +1034,8 @@ main {
                 // width: 100%;
                 line-height: 60px;
                 margin-right: 370px;
+
+                
             }
         }
         
@@ -1115,7 +1121,7 @@ main {
             @include type_custom(calc(8px + 3vw), $common_font);
             line-height: calc(1em + 3vw);
             font-weight: 200;
-            margin-bottom: $mid_margin_m;
+            margin-bottom: $small_margin_m;
 
             @include responsive(pc-screens) {
                 font-size: 38px;

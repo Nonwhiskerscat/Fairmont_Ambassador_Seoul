@@ -913,13 +913,14 @@ main {
             
                 .flex-box1 {
                     display: flex;
-                    justify-content: space-around;
+                    // justify-content: space-around;
 
                     @include type_custom(calc(0.6em + 0.6vw),$common_font);
                         // margin-bottom: calc(0.3em + 0.3vw);
 
                     @include responsive(pc-screens) {
                         font-size: $mainf;
+                        justify-content: space-around;
                     }
 
                     .info {
@@ -944,7 +945,7 @@ main {
     
                 .menu-flex-box {
                     display: flex;
-                    justify-content: right;
+                    justify-content: center;
 
                     .menu {
                         width: 170px;

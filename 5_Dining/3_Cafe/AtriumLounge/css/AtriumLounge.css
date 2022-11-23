@@ -5,7 +5,7 @@ html::-webkit-scrollbar {
   width: 8px;
 }
 html::-webkit-scrollbar-thumb {
-  background-color: rgba(138, 113, 75, 0.8);
+  background-color: #f6d7d7;
   border-radius: 8px;
 }
 html::-webkit-scrollbar-track {
@@ -898,13 +898,13 @@ main .sec1 .container .flex-box {
 }
 main .sec1 .container .flex-box .flex-box1 {
   display: flex;
-  justify-content: space-around;
   font-family: "SCoreDream";
   font-size: calc(0.6em + 0.6vw);
 }
 @media screen and (min-width: 1400px) {
   main .sec1 .container .flex-box .flex-box1 {
     font-size: 18px;
+    justify-content: space-around;
   }
 }
 main .sec1 .container .flex-box .flex-box1 .info {
@@ -928,7 +928,7 @@ main .sec1 .container .flex-box .flex-box1 .detail {
 }
 main .sec1 .container .flex-box .menu-flex-box {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 main .sec1 .container .flex-box .menu-flex-box .menu {
   width: 170px;

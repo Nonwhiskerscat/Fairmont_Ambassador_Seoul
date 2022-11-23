@@ -9,6 +9,10 @@
     height: 100%
 }
 
+strong {
+    font-weight: 400;
+}
+
 //header
 .menu_modal {
     // display: none;
@@ -903,6 +907,7 @@ main {
             .flex-box {
                 width: 100%;
                 margin-bottom: $small_margin_m;
+                background-color: #eeeeee;
 
                 @include responsive(pc-screens) {
                     width: 50%;
@@ -910,8 +915,7 @@ main {
                 }
             
                 .flex-box1 {
-                    display: flex;
-                    justify-content: space-between;
+                    display: flex;                    
 
                     @include responsive(pc-screens) {
                         justify-content: space-around;
@@ -945,8 +949,8 @@ main {
                 .menu-flex-box {
                     display: flex;
                     justify-content: center;
-                    margin-left: 200px;
-
+                    padding-bottom: 20px;
+                    
                     .menu {
                         width: 170px;
                         height: 50px;
@@ -992,7 +996,7 @@ main {
         .sec1-img p {
             @include type_custom(calc(1.5em + 3vw), $eng_title_font);
             color: white;
-            font-weight: bold;
+            font-weight: 400;
             text-align: center;        
             letter-spacing: 2px;
             position: absolute;
@@ -1010,11 +1014,9 @@ main {
     
     .sec2 {
         margin-top: $small_margin_m;
-        // margin-bottom: $mid_margin_m;
-
+    
         @include responsive(pc-screens) {
             margin-top: 0;
-            // margin-bottom: $mid_margin;
         }
 
         .container {
@@ -1025,7 +1027,7 @@ main {
         }
 
         .sec2-flex-box {
-            // background-color: antiquewhite;
+            background-color: #eeeeee;
             width: 100%;
             margin-bottom: $small_margin_m;
 
@@ -1033,7 +1035,7 @@ main {
                 width: 50%;
                 margin-bottom: 0;
                 text-align: left;
-                margin-top: 180px;
+                padding-top: 160px;
                 padding-left: 80px;
             }
         }
@@ -1083,7 +1085,7 @@ main {
         .sec2-img p {
             @include type_custom(calc(1.5em + 3vw), $eng_title_font);
             color: white;
-            font-weight: bold;
+            ;
             text-align: center;        
             letter-spacing: 2px;
             position: absolute;
@@ -1149,7 +1151,7 @@ main {
         .hover-img4 p {
             @include type_custom(calc(1.5em + 3vw), $eng_title_font);
             color: white;
-            font-weight: bold;
+            ;
             text-align: center;
             letter-spacing: 2px;
             position: absolute;

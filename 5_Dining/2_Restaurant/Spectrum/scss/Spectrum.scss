@@ -902,6 +902,8 @@ main {
             }
 
             .flex-box {
+                background-color:rgba($color: #b80000, $alpha: 0.05);
+                padding: 10px;
                 width: 100%;
                 margin-bottom: $small_margin_m;
 
@@ -912,7 +914,7 @@ main {
             
                 .flex-box1 {
                     display: flex;
-                    justify-content: space-between;
+                    // justify-content: space-between;
 
                     @include responsive(pc-screens) {
                         justify-content: space-around;
@@ -946,7 +948,7 @@ main {
                 .menu-flex-box {
                     display: flex;
                     justify-content: center;
-                    margin-left: 200px;
+                    // margin-left: 200px;
 
                     .menu {
                         width: 170px;
@@ -954,7 +956,7 @@ main {
                         line-height: 50px;
                         text-align: center;
                         letter-spacing: 1px;
-                        background-color: #bdbdbd;
+                        background-color: #eeb6b6;
 
                         @include responsive (pc-screens) {
                             margin-top: 10px;
@@ -994,12 +996,15 @@ main {
     
     .sec2 {
         margin-bottom: $mid_margin_m;
+        
 
         @include responsive(pc-screens) {
             margin-bottom: $mid_margin;
         }
 
         .sec2-flex-box {
+            
+
             @include responsive(pc-screens) {
                 display: flex;
                 flex-direction: row-reverse;
@@ -1008,15 +1013,16 @@ main {
 
         .sec2-flex-box ul {
             width: 100%;
+            background-color:rgba($color: #b80000, $alpha: 0.05);
             margin-bottom: $small_margin_m;
-            // background-color: antiquewhite;
 
             @include responsive(pc-screens) {
                 width: 50%;
                 text-align: left;
-                margin-top: 110px;
+                // margin-top: 110px;
                 margin-bottom: 0;
                 padding-left: 80px;
+                padding-top: 110px;
             }
         }
     
@@ -1063,7 +1069,7 @@ main {
         }
 
         .hover-img {
-            position: relative;                
+            position: relative;
         }
 
         .hover-img p {
@@ -1088,13 +1094,14 @@ main {
 
             a {
                 font-family: $eng_title_font;
-                color: white;
+                color: #333333;
+                font-size: 24px;
             }
 
             a:hover {
-                text-decoration: underline 2px black;
-                color: black;
-
+                text-decoration: none;
+                color: #b80000;
+                transition: all 0.5s;
             }
         }
     }
