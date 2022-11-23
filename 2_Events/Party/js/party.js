@@ -46,6 +46,7 @@
         }
       }
 
+      
       //======================intro====================
       function startIntro() {
         $(".hidden-line1").stop(true, true).animate({ "width": 0 }, 1000, function () {
@@ -60,6 +61,8 @@
             $(this).removeAttr("style")
           })
       }
+
+
       //===================== modal ======================
 
       // 1. modal slide & focuse Evnt 
@@ -153,10 +156,7 @@
         ]
       ]
 
-
       //modal - on/off/push modal
-
-
       //push img
       function pushImg(btnIdx) {
         let imgLength = $(".slide-img li").length

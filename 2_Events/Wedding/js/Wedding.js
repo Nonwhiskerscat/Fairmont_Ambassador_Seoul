@@ -46,6 +46,8 @@ function resetStyle(target) {
   if (target == "s3-flower") removeS234Evnt('s3', "right");
   if (target == "s4-various-venue") removeS234Evnt('s4', "left");
 }
+
+
 // ==============================s0 card=============================
 // 1. scroll위치에 따른 card 스타일 변경 
 function fixedCardStyle(card) {
@@ -69,6 +71,7 @@ function defaultCardStyle(card) {
         .find("i").css('visibility', 'hidden')
     })
 }
+
 
 // 2. 카드 클릭 이벤트 
 
@@ -102,6 +105,8 @@ function cardClickEvnt() {
     stateCard = true
   }
 }
+
+
 //=========================intro==============================
 function onIntro() {
   $('.intro p:first')
@@ -122,6 +127,8 @@ function removeIntro() {
       $(this).removeAttr("style")
     })
 }
+
+
 // ========================s1==============================
 //모바일이면 보통 이벤트로 실행 
 //큐스택 꽉차면 작동안되게 하는 함수 만들기 
@@ -150,6 +157,8 @@ function hiddenEl() {
       $(this).removeAttr("style")
     })
 }
+
+
 // ========================s2~4==============================
 //img fade in // text h3 -> p -> btn 순서로 left 이동
 
@@ -241,7 +250,6 @@ $('.right-btn').on('click', () => {
 })
 
 
-
 //modal - push img & pop up modal 
 let mdImgs = [
   [
@@ -262,10 +270,7 @@ let mdImgs = [
   ]
 ]
 
-
 //modal - on/off/push modal
-
-
 //push img
 function pushImg(btnIdx) {
   let imgLength = $(".slide-img li").length

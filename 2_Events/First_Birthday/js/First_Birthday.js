@@ -27,7 +27,6 @@
 
         //뷰포트가 옵저버 대상이 위치한 영역에 도달과 벗어남에 따라 함수를 실행 
         obser[0].isIntersecting ? giveStyle(currTarget) : resetStyle(currTarget)
-
       } //isObserver
 
 
@@ -81,6 +80,7 @@
           })
       }
 
+      
       //=====================s2=========================
       // 1. slide img
       $('.ins li:eq(1)').addClass('s2-act')//add default class
@@ -106,6 +106,7 @@
         $(clone).children().eq(classIdx - 1).addClass('s2-act')
       }//slide
 
+
       //=====================s3=========================
       // 1. fade text & move img 
       //s3-content h3 --> p , .s3-btns --> s3-img
@@ -118,6 +119,7 @@
           .end().find("p , .s3-btns").delay(s3Delay)
           .animate({ "opacity": 1 }, s3Delay * 2)
       }
+
 
       //==================s4 preview=====================
       // 1. fade in area
@@ -133,7 +135,6 @@
 
             clearInterval(s4Inter)
             s4Inter = setInterval(fadeImg, 3000) //변수 observer 함수 위에 선언함 
-
           })//animate
       }
 
@@ -166,12 +167,8 @@
           $leftContain.find('li:first').remove()
           $leftContain.find('li:last').fadeIn()
         }
-
-
         fadeList(onFadeIdx + 1)
       }
-
-
 
       //mb-imgList change index event
       let stateType = false
@@ -196,11 +193,9 @@
       })
 
 
-
       //===================== modal ======================
 
       // 1. modal slide & focuse Evnt 
-
 
       //count idx
       function idxSl() {
@@ -264,8 +259,6 @@
         intervalSl = setInterval(() => { focuseSl(); posSl() }, 3000)
       })
 
-
-
       //modal - push img & pop up modal 
       let mdImgs = [
         [
@@ -274,7 +267,6 @@
           "./img/First_Birthday/photo/s2-3.jpg",
         ],
       ]
-
 
       //modal - on/off/push modal
 
@@ -286,7 +278,6 @@
           $(`.img-list-box img:eq(${i})`).prop("src", mdImgs[btnIdx][i])
         }
       }
-
 
       let morebtn = $('.s3-btns a').map((i, e) => {
         if ($(e).text() === "자세히 보기") return e
@@ -310,5 +301,4 @@
         counter.reset()
         $('.img-list-box li').removeClass("focuse-img")
         clearInterval(intervalSl)
-
       })
