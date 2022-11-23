@@ -1028,15 +1028,6 @@ main {
             justify-content: space-between;
             padding-bottom: 320px;
         }
-        
-        .slide_gallery {
-            width: 100%;
-
-            @include responsive(pc-screens) {
-                margin: 0 auto;
-                width: 680px;
-            }
-        }
     }
 
     .m_title {
