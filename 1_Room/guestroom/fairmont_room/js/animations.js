@@ -146,10 +146,6 @@ $(document).ready(function() {
     });
 
 
-
-
-
-
     // $('h3.first').animate( {
     //     'opacity': '1',
     //     'top' : '0'
