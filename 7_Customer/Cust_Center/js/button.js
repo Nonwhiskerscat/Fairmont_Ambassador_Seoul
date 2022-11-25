@@ -42,7 +42,7 @@ $(document).ready(function() {
             alert('문의 제목을 입력해 주세요!');
         }
 
-        else if($('.faq_input input').val().length<1) {
+        else if($('.faq_input input').val().length<10) {
             alert('제목은 최소 10자 이상으로 입력해 주세요!');
         }
     

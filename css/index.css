@@ -1463,7 +1463,7 @@ header .header_entire .menu .menu_type p {
 }
 @media screen and (min-width: 1400px) {
   .main3 .contents .faci_flex .faci_contents_slide .faci_back .facil .container .faci_flex img.imgp {
-    display: inline-block;
+    display: block;
     width: 50%;
     max-width: none;
     margin-top: 40px;
@@ -1474,7 +1474,6 @@ header .header_entire .menu .menu_type p {
   width: 100%;
   font-family: "SCoreDream";
   font-size: calc(0.6em + 0.6vw);
-  margin-top: 20px;
   text-align: justify;
   letter-spacing: 1px;
   line-height: calc(2em + 1vw);

@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     });
 
-    $('.room_guest .dial img:last-child').on('click', function(){
+    $('.room_guest .dial img:last-child, .room_guest ul li').on('click', function(){
 
         let count = $(this).siblings('input').val();
         count++;
