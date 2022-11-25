@@ -1568,17 +1568,32 @@ header{
                                     }
                                 }
 
-                                img {
-                                    width: calc(40px + 5vw);
-                                    max-width: 80px;
-                                    
+                                img{
                                     margin-top: -5px;
                                     margin-left: 20px;
 
-                                    @include responsive(pc-screens) {
-                                        width: 200px;
-                                        max-width: none;
-                                        margin-top: 40px;
+                                    &.imgm {
+                                        width: calc(40px + 5vw);
+                                        max-width: 80px;
+
+                                        @include responsive(pc-screens) {
+                                            display: none;
+                                        }
+
+                                    }
+
+
+                                    
+
+                                    &.imgp {
+                                        display: none;
+                                        @include responsive(pc-screens) {
+                                            display: inline-block;
+                                            width: 50%;
+                                            max-width: none;
+                                            margin-top: 40px;
+                                        }
+
                                     }
                                 }
 
