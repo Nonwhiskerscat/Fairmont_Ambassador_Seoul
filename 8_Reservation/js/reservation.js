@@ -44,7 +44,7 @@ $(document).ready(function() {
         }
 
         else if($('.room_guest li:nth-child(1) input').val()*6<$('.room_guest li:nth-child(2) input').val()) {
-            alert('객실 한 곳에 투숙할 수 있는 인원이 초과되었습니다.(대인 최대 6명)');
+            alert('한 객실에 투숙할 수 있는 인원이 초과되었습니다.(대인 최대 6명)');
         }
 
         else if($('.room_guest li:nth-child(2) input').val()==0) {

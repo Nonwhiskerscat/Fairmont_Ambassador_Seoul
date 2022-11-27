@@ -87,6 +87,10 @@ li {
   height: 100%;
 }
 
+strong {
+  font-weight: 400;
+}
+
 .menu_modal {
   position: fixed;
   left: 0;
