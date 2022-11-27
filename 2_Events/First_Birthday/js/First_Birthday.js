@@ -170,6 +170,18 @@
         fadeList(onFadeIdx + 1)
       }
 
+      //3. change fade img & Idx 
+      $li.on('click', ChangeFadeImg)
+
+      function ChangeFadeImg() {
+        let viewW = window.innerWidth
+
+        onFadeIdx = $(this).index() - 1
+        clearInterval(s4Inter)
+        s4Inter = setInterval(fadeImg, 3000)
+        viewW > 1400 && fadeImg(true)
+      }
+
       //mb-imgList change index event
       let stateType = false
       if (window.innerWidth < 1400) stateType = true
