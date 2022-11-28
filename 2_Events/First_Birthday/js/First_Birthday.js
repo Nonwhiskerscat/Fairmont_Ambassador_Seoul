@@ -47,6 +47,7 @@
               $(this).removeAttr("style")
             })
         };
+        
         if (target == "s2-instruction") clearInterval(slideInter);
 
         if (target == "s3-balloon") {
@@ -56,6 +57,7 @@
             })
           $(".s3-img").removeClass("s3-actImg")
         };
+
         if (target == "s4-preview") {
           $(".bg-line , .right-content, .left-content").stop(true, true)
             .animate({ "opacity": 0 }, 1000, function () {
@@ -228,6 +230,7 @@
           },
         }
       }
+
       let counter = idxSl()
       $('.img-list-box li:first').addClass("focuse-img")//default
 
