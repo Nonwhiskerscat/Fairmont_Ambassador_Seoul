@@ -1081,7 +1081,7 @@ main {
             left: 50%;
             width: 100%;
             transform: translate(-50%, -50%);
-            @include type_custom(calc(1.5em + 1vw),$common_font); 
+            @include type_custom(calc(1em + 1vw),$common_font); 
 
             @include responsive(pc-screens) {
                 font-size: 2em;
@@ -1163,7 +1163,7 @@ main {
             width: 100%;
             transform: translate(-50%, -50%);
 
-            @include type_custom(calc(1em + 1vw),$common_font);
+            @include type_custom(calc(0.7em + 1vw),$common_font);
     
             @include responsive(pc-screens) {
                 font-size: 2em;

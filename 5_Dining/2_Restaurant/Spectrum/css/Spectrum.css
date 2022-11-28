@@ -1055,7 +1055,7 @@ main .sec2 .hover-img p {
   width: 100%;
   transform: translate(-50%, -50%);
   font-family: "SCoreDream";
-  font-size: calc(1.5em + 1vw);
+  font-size: calc(1em + 1vw);
 }
 @media screen and (min-width: 1400px) {
   main .sec2 .hover-img p {
@@ -1148,7 +1148,7 @@ main .sec4 .hover2 p {
   width: 100%;
   transform: translate(-50%, -50%);
   font-family: "SCoreDream";
-  font-size: calc(1em + 1vw);
+  font-size: calc(0.7em + 1vw);
 }
 @media screen and (min-width: 1400px) {
   main .sec4 .hover1 p,

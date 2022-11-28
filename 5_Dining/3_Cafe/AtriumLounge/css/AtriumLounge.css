@@ -937,6 +937,7 @@ main .sec1 .container .flex-box .menu-flex-box .menu {
   text-align: center;
   letter-spacing: 1px;
   background-color: white;
+  margin-top: 10px;
 }
 @media screen and (min-width: 1400px) {
   main .sec1 .container .flex-box .menu-flex-box .menu {
