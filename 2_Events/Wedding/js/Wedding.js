@@ -15,13 +15,13 @@ function isObserve(obser, aaa) {
   if (obser.length > 2) {
 
     for (let i in obser) {
-      if (tgArrivesArea) giveStyle(obser[i].target.className)
+      if (tgArrivesArea) addStyle(obser[i].target.className)
     }
 
     if (!tgArrivesArea) fixedCardStyle($card)
   }
 
-  tgArrivesArea ? giveStyle(currTarget) : resetStyle(currTarget)
+  tgArrivesArea ? addStyle(currTarget) : resetStyle(currTarget)
 
   if (obser.length == 1 && currTarget == "card" && cardB < 0) {
     tgArrivesArea ? defaultCardStyle($card) : fixedCardStyle($card)
@@ -29,8 +29,7 @@ function isObserve(obser, aaa) {
 
 }//observe
 
-function giveStyle(target) {
-
+function addStyle(target) {
   if (target == "intro") onIntro()
   if (target == "s1-instruction") visibleEl();
   if (target == "s2-wedding") s234Evnt('s2', "left");
@@ -130,8 +129,6 @@ function removeIntro() {
 
 
 // ========================s1==============================
-//모바일이면 보통 이벤트로 실행 
-//큐스택 꽉차면 작동안되게 하는 함수 만들기 
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
 async function visibleEl() {

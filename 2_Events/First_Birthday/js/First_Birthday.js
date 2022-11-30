@@ -47,6 +47,7 @@
               $(this).removeAttr("style")
             })
         };
+        
         if (target == "s2-instruction") clearInterval(slideInter);
 
         if (target == "s3-balloon") {
@@ -56,6 +57,7 @@
             })
           $(".s3-img").removeClass("s3-actImg")
         };
+
         if (target == "s4-preview") {
           $(".bg-line , .right-content, .left-content").stop(true, true)
             .animate({ "opacity": 0 }, 1000, function () {
@@ -170,6 +172,18 @@
         fadeList(onFadeIdx + 1)
       }
 
+      //3. change fade img & Idx 
+      $li.on('click', ChangeFadeImg)
+
+      function ChangeFadeImg() {
+        let viewW = window.innerWidth
+
+        onFadeIdx = $(this).index() - 1
+        clearInterval(s4Inter)
+        s4Inter = setInterval(fadeImg, 3000)
+        viewW > 1400 && fadeImg(true)
+      }
+
       //mb-imgList change index event
       let stateType = false
       if (window.innerWidth < 1400) stateType = true
@@ -216,6 +230,7 @@
           },
         }
       }
+
       let counter = idxSl()
       $('.img-list-box li:first').addClass("focuse-img")//default
 
