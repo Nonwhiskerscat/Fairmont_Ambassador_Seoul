@@ -955,7 +955,7 @@ main .bighead .image_area .titlearea h1 {
 }
 @media screen and (min-width: 1400px) {
   main .bighead .image_area .titlearea h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     transform-origin: center right;
     transform: rotateZ(-90deg);
     margin: 0;

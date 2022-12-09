@@ -969,7 +969,7 @@ main {
                     opacity: 0.8;
 
                     @include responsive(pc-screens) {
-                        font-size: 4em;
+                        font-size: 3.5em;
                         transform-origin: center right;
                         transform: rotateZ(-90deg);
                         margin: 0;
