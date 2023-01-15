@@ -25,7 +25,6 @@ $(document).ready(function() {
         }
 
         $('.menu_close').click(close_menu);
-
     });
 
     
