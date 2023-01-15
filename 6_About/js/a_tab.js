@@ -18,4 +18,10 @@ $(function() {
         }
     });
 
+    $('.service-icon > div > a').click(function(event) {
+        event.preventDefault();
+    });
+
+
+
 });
