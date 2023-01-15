@@ -29,7 +29,6 @@
 }
 
 //====================================서브페이지 통일안====================================//
-
 @mixin font_setting {
   // a나 input 같이 직접적으로 초기화되기 어려운 태그에 사용
   font: {
@@ -65,21 +64,8 @@
   }
 }
 
-@mixin sub_h3 {
-  @include type_custom(2.5em, $eng_title_font);
-  // margin-bottom: 50px;
-  text-align: center;
-  // margin-top: 125px;
-
-  @include responsive(pc-screens) {
-    font-size: 5em;
-    // margin-bottom: 75px;
-    // margin-top: 200px;
-  }
-}
 
 //======================footer 부분(조장 허락 외에 손대지 말 것)=====================//
-
 @mixin footer_h4 {
   h4 {
     font: {
@@ -125,7 +111,11 @@
   }
   color: #ffef5a;
 }
+
+
 // ===========================section 1~3
+// @import "../../../css/style.css";
+
 @mixin df-img {
   //이미지 박스
   width: 100%;
@@ -235,5 +225,18 @@
   &:hover {
     background-color: #2a52be;
     color: #fff;
+  }
+}
+
+@mixin sub_h3 {
+  @include type_custom(2.5em, $eng_title_font);
+  // margin-bottom: 50px;
+  text-align: center;
+  // margin-top: 125px;
+
+  @include responsive(pc-screens) {
+    font-size: 5em;
+    // margin-bottom: 75px;
+    // margin-top: 200px;
   }
 }

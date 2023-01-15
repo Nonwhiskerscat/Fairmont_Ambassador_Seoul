@@ -65,19 +65,6 @@
   }
 }
 
-@mixin sub_h3 {
-  @include type_custom(2.5em, $eng_title_font);
-  // margin-bottom: 50px;
-  text-align: center;
-  // margin-top: 125px;
-
-  @include responsive(pc-screens) {
-    font-size: 5em;
-    // margin-bottom: 75px;
-    // margin-top: 200px;
-  }
-}
-
 //======================footer 부분(조장 허락 외에 손대지 말 것)=====================//
 
 @mixin footer_h4 {
@@ -127,6 +114,8 @@
 }
 
 //===============s1~3=====================
+// @import "../../../css/style.css";
+
 @mixin mb_section_title {
   text-align: center;
   font-size: min(7.1795vw, 32px);
@@ -207,5 +196,18 @@
   &:hover {
     background-color: #fb5c6e;
     color: #fff;
+  }
+}
+
+@mixin sub_h3 {
+  @include type_custom(2.5em, $eng_title_font);
+  // margin-bottom: 50px;
+  text-align: center;
+  // margin-top: 125px;
+
+  @include responsive(pc-screens) {
+    font-size: 5em;
+    // margin-bottom: 75px;
+    // margin-top: 200px;
   }
 }

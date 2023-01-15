@@ -87,20 +87,20 @@ $(document).ready(function() {
             대인: ${$('.room_guest li:nth-child(3) input').val()}`)
 
         if(signOut) {
-            let confirmOut = prompt(`회원님의 비밀번호를 입력해 주세요.`);
+            let confirmOut = prompt(`회원 가입 시 부여 받은 일련번호를 입력해 주세요.`);
 
             if(confirmOut.length<1 || !pwPass.test(confirmOut)) {
-                alert('비밀번호가 올바르지 않습니다!');
+                alert('일련번호가 올바르지 않습니다!');
                 signOut=false;
             } 
 
             else {
 
-                let reOut = prompt(`회원님의 비밀번호를 다시 입력해 주세요.`);
+                let reOut = prompt(`회원님의 일련번호를 다시 입력해 주세요.`);
 
                 if(reOut) {
                     if(confirmOut!=reOut) {
-                        alert('비밀번호가 일치하지 않습니다.');
+                        alert('일련번호가 일치하지 않습니다.');
                         reOut=false;
                     }
     

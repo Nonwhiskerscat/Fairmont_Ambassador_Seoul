@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('.menu').click(function() {
         $('.menu_modal').stop().slideDown(1000);
         $('header').stop().fadeOut(1000);
+        $("html, body").addClass("not_scroll");
         
         $('body').on('scroll touchmove mousewheel', function(e) {
                 e.preventDefault();
@@ -15,22 +16,12 @@ $(document).ready(function() {
             e.preventDefault();
         });
 
-        // $('.mid_menu ul').hide();
-
-        $('.mid_menu').click(function() { 
-
-            if($('.mid_menu ul').parents().next().childNodes().css('display') == 'block') { 
-                $(this).next().slideUp(300); // 클래스 해제, p숨기기
-            } else {
-                $(this).next().slideDown(300); // 클래스 적용, p보이기
-            }
-        });
-
 
         function close_menu() {
             $('.menu_modal').stop().slideUp(1000);
             $('header').stop().fadeIn(1000);
             $('body').off('scroll touchmove mousewheel');
+            $("html, body").removeClass("not_scroll");
         }
 
         $('.menu_close').click(close_menu);

@@ -16,5 +16,6 @@ $(function() {
         } else {
             $(this).addClass(bc).next().slideDown(300);
         }
-    })
+    });
+
 });

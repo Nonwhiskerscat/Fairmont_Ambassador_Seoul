@@ -20,20 +20,20 @@ $(document).ready(function() {
     
         let signOut=confirm('회원 탈퇴 시 예약 내역, 호텔 마일리지 등 회원 정보가 소멸되고, 회원 전용 혜택인 예약 특전 또한 더 이상 받을 수 없습니다. 그래도 탈퇴를 하시겠습니까?');
         if(signOut) {
-            let confirmOut = prompt(`회원님의 비밀번호를 입력해 주세요.`);
+            let confirmOut = prompt(`회원 가입 시 부여 받은 일련번호를 입력해 주세요.`);
 
             if(confirmOut.length<1 || !pwPass.test(confirmOut)) {
-                alert('비밀번호가 올바르지 않습니다!');
+                alert('일련번호가 올바르지 않습니다!');
                 signOut=false;
             } 
 
             else {
 
-                let reOut = prompt(`회원님의 비밀번호를 다시 입력해 주세요.`);
+                let reOut = prompt(`회원님의 일련번호를 다시 입력해 주세요.`);
 
                 if(reOut) {
                     if(confirmOut!=reOut) {
-                        alert('비밀번호가 일치하지 않습니다.');
+                        alert('일련번호가 일치하지 않습니다.');
                         reOut=false;
                     }
     
