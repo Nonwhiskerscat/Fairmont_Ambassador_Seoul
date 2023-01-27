@@ -120,7 +120,7 @@ li {
 .menu_modal a.not_for_m,
 .menu_modal li.not_for_m,
 .menu_modal p.not_for_m {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
 }
 .menu_modal img {
   display: inline;
@@ -180,7 +180,7 @@ li {
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_lan label {
   color: white;
   letter-spacing: 1px;
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: 1em;
 }
 @media screen and (min-width: 1400px) {
@@ -221,7 +221,7 @@ li {
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_left .menu_sns {
   order: 1;
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: 1em;
   letter-spacing: 1px;
 }
@@ -278,7 +278,7 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_login a p {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: 1em;
   color: white;
   letter-spacing: 1px;
@@ -332,7 +332,7 @@ li {
 }
 @media screen and (min-width: 1400px) {
   .menu_modal .menu_entire .menu_header .menu_header_flex .menu_header_right .menu_close p {
-    font-family: "LEMON MILK Light";
+    font-family: "LEMONMILK-Light";
     font-size: 1em;
     color: white;
     letter-spacing: 1px;
@@ -466,7 +466,7 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: calc(16px + 2vw);
   letter-spacing: 1px;
   margin-bottom: 50px;
@@ -501,8 +501,8 @@ li {
   content: "";
   display: block;
   width: 30px;
-  margin: 0 0 5px 5px;
   border-bottom: 3px solid #ffef5a;
+  margin: 0 0 5px 5px;
   position: absolute;
   top: -5px;
 }
@@ -511,12 +511,12 @@ li {
     content: "";
     display: block;
     width: 30px;
-    margin: 0 0 5px 5px;
     border-bottom: 3px solid #ffef5a;
+    margin: 0 0 5px 5px;
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead li.big_menu > a {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: calc(16px + 2vw);
   margin-bottom: 50px;
 }
@@ -591,7 +591,7 @@ li {
   }
 }
 .menu_modal .menu_entire .menu_main .menu_main_right .menu_bighead .menu_semi_head li.mid_menu > a:hover {
-  color: "#fefdf0";
+  color: #fefdf0;
   color: #ffef5a;
 }
 @media screen and (min-width: 1400px) {
@@ -722,7 +722,7 @@ header .header_entire .menu .menu_bar span:nth-child(3) {
   bottom: 0;
 }
 header .header_entire .menu .menu_type p {
-  font-family: "LEMON MILK Light", sans-serif;
+  font-family: "LEMONMILK-Light", sans-serif;
   font-size: 1em;
 }
 @media screen and (min-width: 1400px) {
@@ -740,8 +740,8 @@ section div.main0 .bg_img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 @keyframes img_size {
   from {
@@ -778,7 +778,7 @@ section div.main0 .main0_contents h2 {
   letter-spacing: 2px;
   color: white;
   margin-bottom: calc(0.3em + 0.5vw);
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: calc(1.5em + 3vw);
 }
 @media screen and (min-width: 1400px) {
@@ -791,16 +791,16 @@ section div.main0 .main0_contents h2::before {
   content: "";
   display: block;
   width: 40px;
-  margin: 5px auto;
   border-bottom: 6px solid white;
+  margin: 5px auto;
 }
 @media screen and (min-width: 1400px) {
   section div.main0 .main0_contents h2::before {
     content: "";
     display: block;
     width: 80px;
-    margin: 10px auto;
     border-bottom: 8px solid white;
+    margin: 10px auto;
   }
 }
 section div.main0 .main0_contents button {
@@ -832,8 +832,8 @@ section div.main0 .colormatte {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 section div.main0 .mouse {
   position: absolute;
@@ -877,7 +877,7 @@ section div.main0 .mouse p {
   transform: translateX(-50%);
   letter-spacing: 1px;
   color: white;
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
 }
 section div.main0 .mouse .pc_mouse {
   display: none;
@@ -1551,11 +1551,11 @@ footer .footer_entire .subscribe {
   order: 3;
 }
 footer .footer_entire .subscribe h4 {
+  font-family: "LEMONMILK-Light";
+  font-size: calc(0.8em + 1vw);
   letter-spacing: 3px;
   color: #ffef5a;
   margin-bottom: 2vw;
-  font-family: "LEMON MILK Light";
-  font-size: calc(0.8em + 1vw);
 }
 @media screen and (min-width: 1400px) {
   footer .footer_entire .subscribe h4 {
@@ -1588,10 +1588,10 @@ footer .footer_entire .subscribe form .form_flex .form_email {
   }
 }
 footer .footer_entire .subscribe form label {
+  font-family: "LEMONMILK-Light";
+  font-size: calc(0.5em + 0.5vw);
   letter-spacing: 2px;
   color: #ffef5a;
-  font-family: "LEMON MILK Light";
-  font-size: calc(0.5em + 0.5vw);
 }
 @media screen and (min-width: 1400px) {
   footer .footer_entire .subscribe form label {
@@ -1660,11 +1660,11 @@ footer .footer_entire .navigation {
   order: 2;
 }
 footer .footer_entire .navigation h4 {
+  font-family: "LEMONMILK-Light";
+  font-size: calc(0.8em + 1vw);
   letter-spacing: 3px;
   color: #ffef5a;
   margin-bottom: 2vw;
-  font-family: "LEMON MILK Light";
-  font-size: calc(0.8em + 1vw);
 }
 @media screen and (min-width: 1400px) {
   footer .footer_entire .navigation h4 {
@@ -1725,11 +1725,11 @@ footer .footer_entire .address {
   padding-bottom: 2vw;
 }
 footer .footer_entire .address h4 {
+  font-family: "LEMONMILK-Light";
+  font-size: calc(0.8em + 1vw);
   letter-spacing: 3px;
   color: #ffef5a;
   margin-bottom: 2vw;
-  font-family: "LEMON MILK Light";
-  font-size: calc(0.8em + 1vw);
 }
 @media screen and (min-width: 1400px) {
   footer .footer_entire .address h4 {
@@ -1763,11 +1763,11 @@ footer .footer_entire .address address {
   }
 }
 footer .footer_entire .address .copyright h5 {
+  font-family: "LEMONMILK-Light";
+  font-size: 1em;
   letter-spacing: 3px;
   color: #ffef5a;
   margin-bottom: 1.5vw;
-  font-family: "LEMON MILK Light";
-  font-size: 1em;
 }
 @media screen and (min-width: 1400px) {
   footer .footer_entire .address .copyright h5 {

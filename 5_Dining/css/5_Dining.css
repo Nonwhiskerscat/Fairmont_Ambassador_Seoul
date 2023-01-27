@@ -5,7 +5,6 @@ strong {
 main {
   color: #333;
 }
-
 main nav .gnb {
   display: flex;
   flex-direction: column;
@@ -16,7 +15,6 @@ main nav .gnb {
   padding-bottom: 20px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1400px) {
   main nav .gnb {
     justify-content: center;
@@ -25,29 +23,24 @@ main nav .gnb {
     background-color: transparent;
   }
 }
-
 main nav .gnb li {
   padding-top: 20px;
 }
-
 @media screen and (min-width: 1400px) {
   main nav .gnb li {
     padding: 20px 0;
   }
 }
-
 @media screen and (min-width: 1400px) {
   main nav .gnb li:last-child a {
     border-right: 0;
   }
 }
-
 main nav .gnb li a {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   letter-spacing: 1px;
   color: #bdbdbd;
 }
-
 @media screen and (min-width: 1400px) {
   main nav .gnb li a {
     border-right: 2px solid black;
@@ -55,22 +48,18 @@ main nav .gnb li a {
     padding-left: 100px;
   }
 }
-
 main nav .gnb li a:hover {
   color: black;
   font-weight: bolder;
 }
-
 main section.maintext {
   margin-top: 65px;
 }
-
 @media screen and (min-width: 1400px) {
   main section.maintext {
     margin-top: 125px;
   }
 }
-
 main section.maintext p {
   text-align: center;
   font-family: "SCoreDream";
@@ -79,7 +68,6 @@ main section.maintext p {
   font-weight: 200;
   margin-bottom: 65px;
 }
-
 @media screen and (min-width: 1400px) {
   main section.maintext p {
     font-size: 48px;
@@ -87,13 +75,11 @@ main section.maintext p {
     margin-bottom: 125px;
   }
 }
-
 @media screen and (min-width: 1400px) {
   main .flex-box {
     display: flex;
   }
 }
-
 main .flex-box .mariposa img,
 main .flex-box .spectrum img,
 main .flex-box .gallery img,
@@ -102,7 +88,6 @@ main .flex-box .atrium img {
   width: 100%;
   display: block;
 }
-
 main .flex-box .mariposa,
 main .flex-box .spectrum,
 main .flex-box .m29,
@@ -112,37 +97,32 @@ main .flex-box .atrium {
   margin-bottom: 30px;
   transition: opacity 0.2s;
 }
-
 @media screen and (min-width: 1400px) {
   main .flex-box .mariposa,
-  main .flex-box .spectrum,
-  main .flex-box .m29,
-  main .flex-box .atrium {
+main .flex-box .spectrum,
+main .flex-box .m29,
+main .flex-box .atrium {
     margin-bottom: 200px;
   }
 }
-
 main .flex-box .gallery {
   position: relative;
   width: 100%;
   margin-bottom: 100px;
   transition: opacity 0.2s;
 }
-
 @media screen and (min-width: 1400px) {
   main .flex-box .gallery {
     margin-bottom: 200px;
   }
 }
-
 main .flex-box .mariposa:hover .m-img,
 main .flex-box .spectrum:hover .s-img,
 main .flex-box .gallery:hover .g-img,
 main .flex-box .m29:hover .m29-img,
 main .flex-box .atrium:hover .atrium-img {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
-
 main .flex-box .mariposa:hover .m-img a,
 main .flex-box .spectrum:hover .s-img a,
 main .flex-box .gallery:hover .g-img a,
@@ -152,7 +132,6 @@ main .flex-box .atrium:hover .atrium-img a {
   display: block;
   font-weight: 200;
 }
-
 main .flex-box .m-img,
 main .flex-box .s-img,
 main .flex-box .g-img,
@@ -162,7 +141,6 @@ main .flex-box .atrium-img {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 main .flex-box .mariposa:hover img,
 main .flex-box .spectrum:hover img,
 main .flex-box .gallery:hover img,
@@ -171,7 +149,6 @@ main .flex-box .atrium:hover img {
   opacity: 0.2;
   transition: all 0.3s ease;
 }
-
 main .flex-box .mariposa .ex-text,
 main .flex-box .spectrum .ex-text,
 main .flex-box .gallery .ex-text,
@@ -179,17 +156,15 @@ main .flex-box .m29 .ex-text,
 main .flex-box .atrium .ex-text {
   font-size: 16px;
 }
-
 @media screen and (min-width: 1400px) {
   main .flex-box .mariposa .ex-text,
-  main .flex-box .spectrum .ex-text,
-  main .flex-box .gallery .ex-text,
-  main .flex-box .m29 .ex-text,
-  main .flex-box .atrium .ex-text {
+main .flex-box .spectrum .ex-text,
+main .flex-box .gallery .ex-text,
+main .flex-box .m29 .ex-text,
+main .flex-box .atrium .ex-text {
     font-size: 20px;
   }
 }
-
 main .flex-box .mariposa p,
 main .flex-box .spectrum p,
 main .flex-box .gallery p,
@@ -206,17 +181,15 @@ main .flex-box .atrium p {
   opacity: 0;
   transition: all 0.3s ease;
 }
-
 @media screen and (min-width: 1400px) {
   main .flex-box .mariposa p,
-  main .flex-box .spectrum p,
-  main .flex-box .gallery p,
-  main .flex-box .m29 p,
-  main .flex-box .atrium p {
+main .flex-box .spectrum p,
+main .flex-box .gallery p,
+main .flex-box .m29 p,
+main .flex-box .atrium p {
     font-size: 50px;
   }
 }
-
 main .flex-box .mariposa:hover p,
 main .flex-box .spectrum:hover p,
 main .flex-box .gallery:hover p,
@@ -225,7 +198,6 @@ main .flex-box .atrium:hover p {
   opacity: 1;
   transition: all 0.3s ease;
 }
-
 main .flex-box .mariposa:hover p::before,
 main .flex-box .spectrum:hover p::before,
 main .flex-box .gallery:hover p::before,
@@ -238,6 +210,6 @@ main .flex-box .atrium:hover p::before {
   left: 50%;
   width: 30px;
   height: 5px;
-  background: red;
+  background: rgb(255, 0, 0);
   transform: translateX(-50%);
 }

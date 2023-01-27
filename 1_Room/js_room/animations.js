@@ -34,9 +34,11 @@ $(document).ready(function() {
 
 
     $(window).scroll(function() {
+
+        console.log($('h3.first').innerHeight())
         
 
-        if($(this).scrollTop()>h3_ftop-$(this).innerHeight()/1.5) {
+        if($(this).scrollTop()+this.innerHeight>h3_ftop+$('h3.first').innerHeight()/2) {
             
             $('h3.first').animate({
                 'opacity': 1,
@@ -45,7 +47,7 @@ $(document).ready(function() {
 
         }
 
-        if($(this).scrollTop()>h3_ltop-$(this).innerHeight()/1.5) {
+        if($(this).scrollTop()+this.innerHeight>h3_ltop+$('h3.last').innerHeight()/2) {
             
             $('h3.last').animate({
                 'opacity': 1,
@@ -54,7 +56,7 @@ $(document).ready(function() {
 
         }
 
-        if($(this).scrollTop()>re_top-$(this).innerHeight()/1.5) {
+        if($(this).scrollTop()+this.innerHeight>re_top+$('.room_entire').innerHeight()/2) {
             
             $('.room_entire').animate({'opacity': 1},1000);
 
@@ -68,7 +70,7 @@ $(document).ready(function() {
 
         }
 
-        if($(this).scrollTop()>h3_gtop-$(this).innerHeight()/1.5) {
+        if($(this).scrollTop()+this.innerHeight>h3_gtop+$('h3.gall').innerHeight()/2) {
             
             $('h3.gall').animate({
                 'opacity': 1,
@@ -81,7 +83,7 @@ $(document).ready(function() {
 
         }
 
-        if($(this).scrollTop()>h3_ttop-$(this).innerHeight()/5) {
+        if($(this).scrollTop()+this.innerHeight>h3_ttop+$('h3.type').innerHeight()/2) {
             
             $('h3.type').animate({
                 'opacity': 1,
@@ -101,7 +103,7 @@ $(document).ready(function() {
         }
 
 
-        if($(this).scrollTop()>h3_ntop-$(this).innerHeight()/7.5) {
+        if($(this).scrollTop()+this.innerHeight>h3_ntop+$('h3.notc').innerHeight()/2-$('.room_modal').innerHeight()) {
             
             $('h3.notc').animate({
                 'opacity': 1,
@@ -120,7 +122,7 @@ $(document).ready(function() {
 
         }
 
-        if($(this).scrollTop()>h3_otop-$(this).innerHeight()/7.5) {
+        if($(this).scrollTop()+this.innerHeight>h3_otop+$('h3.oroom').innerHeight()/2-$('.room_modal').innerHeight()-$('.hotel_book .accord').innerHeight()) {
             
             $('h3.oroom').animate({
                 'opacity': 1,

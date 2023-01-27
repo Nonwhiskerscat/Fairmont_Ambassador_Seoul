@@ -1,5 +1,18 @@
-$(document).ready(function() {
+
+    
     $(document).ready(function() {
+
+        let gall_scroll=true;
+
+        $(window).scroll(function() {
+            if(gall_scroll) {
+                if($(this).scrollTop()+this.innerHeight>$('.gall_main').offset().top+$('.gall_main').innerHeight()/2) {
+                    roomSlide();
+                    gall_scroll=false;
+                }
+            }
+        })
+
         function roomSlide() {
     
             let count=1;
@@ -28,10 +41,8 @@ $(document).ready(function() {
             }
             
             let timer=setInterval(auto,5000);
-        
+
             return false;
         }
     
-        roomSlide();
     });
-});

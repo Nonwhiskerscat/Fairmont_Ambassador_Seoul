@@ -1,7 +1,6 @@
 section div.main0 {
   height: 100vh;
 }
-
 section div.main0 .bg_img {
   position: absolute;
   top: 0;
@@ -11,13 +10,11 @@ section div.main0 .bg_img {
   z-index: -1;
   overflow: hidden;
 }
-
 section div.main0 .bg_img__content {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
 @keyframes img_size {
   from {
     transform: scale(1.2);
@@ -27,40 +24,33 @@ section div.main0 .bg_img__content {
     transform: scale(1);
   }
 }
-
 section div.main0 .bg_img img {
   animation: img_size 10s;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img img {
     width: 100vw;
     height: 100vh;
   }
 }
-
 section div.main0 .bg_img .p_bg img {
   width: 100%;
   display: none;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img .p_bg img {
     display: block;
     width: 100%;
   }
 }
-
 section div.main0 .bg_img .m_bg img {
   width: 100%;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .bg_img .m_bg img {
     display: none;
   }
 }
-
 section div.main0 .main0_contents {
   position: absolute;
   text-align: center;
@@ -69,22 +59,19 @@ section div.main0 .main0_contents {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 section div.main0 .main0_contents h2 {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: calc(1.5em + 3vw);
   letter-spacing: 2px;
   color: white;
   margin-bottom: calc(0.3em + 0.5vw);
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .main0_contents h2 {
     font-size: 5em;
     margin-bottom: 40px;
   }
 }
-
 section div.main0 .main0_contents h2::before {
   content: "";
   display: block;
@@ -92,7 +79,6 @@ section div.main0 .main0_contents h2::before {
   border-bottom: 6px solid white;
   margin: 5px auto;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .main0_contents h2::before {
     content: "";
@@ -102,7 +88,6 @@ section div.main0 .main0_contents h2::before {
     margin: 10px auto;
   }
 }
-
 section div.main0 .main0_contents button {
   width: 200px;
   background-color: transparent;
@@ -113,7 +98,6 @@ section div.main0 .main0_contents button {
   color: white;
   font-weight: 200;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .main0_contents button {
     width: 360px;
@@ -121,13 +105,11 @@ section div.main0 .main0_contents button {
     font-size: 2em;
   }
 }
-
 section div.main0 .main0_contents button:hover {
   background-color: #fff;
   transition: all 0.5s;
   color: #333;
 }
-
 section div.main0 .colormatte {
   position: absolute;
   top: 0;
@@ -138,13 +120,11 @@ section div.main0 .colormatte {
   opacity: 0.1;
   z-index: -1;
 }
-
 section div.main0 .mouse {
   position: absolute;
   left: 50%;
   bottom: 20px;
 }
-
 @keyframes move {
   from {
     bottom: 30px;
@@ -156,7 +136,6 @@ section div.main0 .mouse {
     bottom: 60px;
   }
 }
-
 @keyframes move_pc {
   from {
     bottom: 60px;
@@ -168,41 +147,34 @@ section div.main0 .mouse {
     bottom: 30px;
   }
 }
-
 section div.main0 .mouse img {
   position: absolute;
   bottom: 40px;
   animation: move 2s infinite;
   transform: translateX(-50%);
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .mouse img {
     animation: move_pc 2s infinite;
   }
 }
-
 section div.main0 .mouse p {
   transform: translateX(-50%);
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   letter-spacing: 1px;
   color: white;
 }
-
 section div.main0 .mouse .pc_mouse {
   display: none;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .mouse .pc_mouse {
     display: block;
   }
 }
-
 section div.main0 .mouse .mo_mouse img {
   opacity: 0.5;
 }
-
 @media screen and (min-width: 1400px) {
   section div.main0 .mouse .mo_mouse {
     display: none;
@@ -212,7 +184,6 @@ section div.main0 .mouse .mo_mouse img {
 main {
   color: #333;
 }
-
 main .gnb {
   display: flex;
   flex-direction: column;
@@ -223,7 +194,6 @@ main .gnb {
   padding-bottom: 20px;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 1400px) {
   main .gnb {
     width: 48%;
@@ -232,27 +202,22 @@ main .gnb {
     text-align: center;
   }
 }
-
 main .gnb li {
   padding-top: 20px;
 }
-
 @media screen and (min-width: 1400px) {
   main .gnb li {
     padding: 60px 0;
   }
 }
-
 @media screen and (min-width: 1400px) {
   main .gnb li:last-child a {
     border-right: 0;
   }
 }
-
 main .gnb li a {
   color: #bdbdbd;
 }
-
 @media screen and (min-width: 1400px) {
   main .gnb li a {
     border-right: 2px solid #bdbdbd;
@@ -260,38 +225,33 @@ main .gnb li a {
     padding-left: 100px;
   }
 }
-
 main .gnb li a:hover {
   color: black;
   font-weight: bolder;
 }
-
 main section h2 {
   font-size: 40px;
   text-align: center;
   margin-top: 70px;
   margin-bottom: 85px;
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: calc(1em + 5vw);
   margin-bottom: calc(0.5em + 3vw);
   text-align: center;
   letter-spacing: 2px;
 }
-
 @media screen and (min-width: 1400px) {
   main section h2 {
     font-size: 80px;
     margin-bottom: 125px;
   }
 }
-
 main section h3 {
   font-family: "SCoreDream";
   font-size: calc(18px + 0.5vw);
   margin-bottom: 30px;
   font-weight: 400;
 }
-
 main section h3::before {
   content: "";
   display: block;
@@ -299,7 +259,6 @@ main section h3::before {
   border-bottom: 3px solid #333;
   margin: 0 0 5px 5px;
 }
-
 @media screen and (min-width: 1400px) {
   main section h3 {
     font-family: "SCoreDream";
@@ -315,41 +274,34 @@ main section h3::before {
     margin: 0 0 10px 10px;
   }
 }
-
 main section h4 {
-  font-family: "LEMON MILK Light";
+  font-family: "LEMONMILK-Light";
   font-size: calc(14px + 1vw);
   letter-spacing: 1px;
 }
-
 @media screen and (min-width: 1400px) {
   main section h4 {
     font-size: 24px;
   }
 }
-
 main section p {
   font-family: "SCoreDream";
   font-size: calc(0.5em + 1vw);
   line-height: 2em;
   text-align: justify;
 }
-
 @media screen and (min-width: 1400px) {
   main section p {
     font-size: 18px;
     line-height: 36px;
   }
 }
-
 main section p .sub {
   font-size: 12px;
 }
-
 main .flex-content {
   padding-bottom: 150px;
 }
-
 @media screen and (min-width: 1400px) {
   main .flex-content {
     display: flex;
@@ -357,20 +309,17 @@ main .flex-content {
     padding-bottom: 320px;
   }
 }
-
 main .m_title {
   font-family: "SCoreDream";
   font-size: calc(18px + 0.5vw);
   margin-bottom: 30px;
   font-weight: 400;
 }
-
 @media screen and (min-width: 1400px) {
   main .m_title {
     display: none;
   }
 }
-
 main .m_title::before {
   content: "";
   display: block;
@@ -378,7 +327,6 @@ main .m_title::before {
   border-bottom: 3px solid #333;
   margin: 0 0 5px 5px;
 }
-
 main .p_title {
   font-family: "SCoreDream";
   font-size: 32px;
@@ -386,13 +334,11 @@ main .p_title {
   font-weight: 400;
   display: none;
 }
-
 @media screen and (min-width: 1400px) {
   main .p_title {
     display: block;
   }
 }
-
 main .p_title::before {
   content: "";
   display: block;
@@ -400,94 +346,76 @@ main .p_title::before {
   border-bottom: 3px solid #333;
   margin: 0 0 10px 10px;
 }
-
 main .context {
   position: relative;
 }
-
 @media screen and (min-width: 1400px) {
   main .context {
     width: 580px;
   }
 }
-
 main .context .text {
   padding-top: 40px;
   padding-bottom: 45px;
 }
-
 main .photo {
   width: 100%;
 }
-
 @media screen and (min-width: 1400px) {
   main .photo {
     width: 680px;
   }
 }
-
 main .photo img {
   width: 100%;
 }
-
 @media screen and (min-width: 1400px) {
   main .photo img {
     width: 680px;
   }
 }
-
 @media screen and (min-width: 1400px) {
   main .p_photo {
     width: 680px;
   }
 }
-
 main .p_photo img {
   width: 100%;
   display: none;
 }
-
 @media screen and (min-width: 1400px) {
   main .p_photo img {
     display: block;
     width: 680px;
   }
 }
-
 main .m_photo {
   width: 100%;
 }
-
 @media screen and (min-width: 1400px) {
   main .m_photo {
     width: 680px;
   }
 }
-
 main .m_photo img {
   width: 100%;
   display: block;
 }
-
 @media screen and (min-width: 1400px) {
   main .m_photo img {
     display: none;
   }
 }
-
 main .period {
   display: flex;
   margin-bottom: 25px;
 }
-
 main .price {
   display: flex;
 }
-
 main .info h4 {
   margin-right: 25px;
 }
-
 main button {
   display: block;
   cursor: pointer;
@@ -500,11 +428,9 @@ main button {
   background-color: #442d13;
   border: 1px solid #442d13;
 }
-
 main button a {
   color: #fefdf0;
 }
-
 @media screen and (min-width: 1400px) {
   main button {
     height: 60px;
@@ -515,54 +441,45 @@ main button a {
     bottom: 0;
   }
 }
-
 main button:hover {
   transition: all 0.5s;
   background-color: #333;
   color: white;
 }
-
 main #first div.price {
   display: none;
 }
-
 @media screen and (min-width: 1400px) {
   main #first div.price {
     display: block;
     display: flex;
   }
 }
-
 main #high_tea div.price h4 {
   margin-right: 40px;
 }
-
 main #spectrum div.info .price h4 {
   padding-right: 105px;
 }
-
 main #romantic div.price h4 {
   margin-right: 40px;
 }
-
 @media screen and (min-width: 1400px) {
   main .level {
     display: flex;
     justify-content: space-between;
   }
 }
-
 main .level .premium,
 main .level .gold,
 main .level .black {
   display: flex;
   justify-content: space-between;
 }
-
 @media screen and (min-width: 1400px) {
   main .level .premium,
-  main .level .gold,
-  main .level .black {
+main .level .gold,
+main .level .black {
     display: flex;
     flex-direction: column;
   }
