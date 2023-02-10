@@ -265,12 +265,68 @@ $(function() {
       
     }
   });
-
-	
-
 });
 ```
+<div align="center"><b>코드블럭 1.1</b> 메인페이지의 풀페이지 플러그인</div><br>
+ 
+<p align="justify">메인 페이지에서는 풀페이지 플러그인 2.9.7 버전을 활용하여 디바이스 혹은 화면의 크기에 상관 없이 한 페이지의 사이즈를 디바이스의 스크린 크기와 일치시키도록 하였고, 스크롤을 할 때마다 페이지가 넘어가도록 구현하였습니다. 그리고 afterLoad를 사용하여 유저가 해당 페이지에 도달했을 때, 함수가 발생하도록 하는 인터페이스를 추가하였습니다.</p>
+ 
+<hr>
+
+
 ### 텍스트 타이핑 효과
+``` JavaScript
+window.addEventListener('load', function(){
+    var typeText = document.querySelector("h2#type");
+    var textToBeTypedArr = 
+    [
+    "호텔의 품격", 
+    "DIGNITY OF HOTEL", 
+    "ホテルの品格", 
+    "飯店的品格", 
+    "qualité hôtelière", 
+    "calidad hotelera", 
+    "deversorium qualis",
+    "qualità alberghiera",
+    "Hotelqualität",
+    "chất lượng khách sạn",
+    "คุณภาพโรงแรม",
+    "جودة الفندق"
+    ];
+    var index = 0, isAdding = true, textToBeTypedIndex = 0;
+    
+    function goType() {
+    setTimeout(function () {
+        typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index)
+        if (isAdding) {
+        if (index > textToBeTypedArr[textToBeTypedIndex].length) {
+            isAdding = false
+            setTimeout(function () {
+            goType();
+            }, 2000)
+            return
+        } else {
+            index++;
+        }
+        } else {
+            if (index === 0) {
+            isAdding = true
+            textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
+            } else {
+            index--;
+            }
+        }
+        goType();
+        }, isAdding ? 120 : 60)
+    }
+    goType();
+```
+<div align="center"><b>코드블럭 1.2</b> 메인페이지의 타이핑 효과 구현</div><br>
+ 
+<p align="justify">제이쿼리를 남발한 프로젝트이지만 이 부분 만큼은 바닐라 자바스크립트를 활용하였습니다. 호텔의 품격을 17가지 언어로 표현하였고 이를 배열에 저장한 이후 일정 시간이 지나면 차례대로 타이핑 되고 지워지는 효과를 부여하였습니다. <s>글자가 추가되는 시간 0.12초, 지워지는 시간 0.06초, 타이핑이 끝나 머무는 시간 2초</s> </p>
+ 
+<hr>
+
 ### 이미지 슬라이드
 ### 유효성 검사
 
