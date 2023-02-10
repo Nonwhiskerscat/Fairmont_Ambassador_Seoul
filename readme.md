@@ -192,13 +192,84 @@
 </div>
 
 <p align="justify">
-외형적으로 호텔이 지니고 있는 우아함, 고풍스러운 느낌을 그대로 담은 듯한 <b>LEMON MILK</b>를 메인 폰트로 사용하여 디자인 하였고, 본문 혹은 설명 부분을 담당하는 폰트는 최소한 깔끔하고 가독성이 뛰어난 <b>에스코어 드림</b>를 채택했습니다. Lemon Milk와 같은 경우 상업적으로 이용이 자유로운 에스코어 드림과 달리 <b>상업적으로 사용할 수 있는 폰트가 아니기 때문에<b> 상업적인 목적으로 사용 시 재수가 없으면 경찰 삐뽀삐뽀 :oncoming_police_car: 할 수 있으니 이 점 주의 부탁드립니다. 
+외형적으로 호텔이 지니고 있는 우아함, 고풍스러운 느낌을 그대로 담은 듯한 <b>LEMON MILK</b>를 메인 폰트로 사용하여 디자인 하였고, 본문 혹은 설명 부분을 담당하는 폰트는 최소한 깔끔하고 가독성이 뛰어난 <b>에스코어 드림</b>를 채택했습니다. Lemon Milk와 같은 경우 상업적으로 이용이 자유로운 에스코어 드림과 달리 <b>상업적으로 사용할 수 있는 폰트가 아니기 때문에</b> 상업적인 목적으로 사용 시 재수가 없으면 경찰 삐뽀삐뽀 :oncoming_police_car: 할 수 있으니 이 점 주의 부탁드립니다. 
 </p>
+
+<hr>
 
 ### 반응형
 
+<div align="center">
+  <table>
+    <tr align="center">
+      <td width="20%">명칭</td>
+      <th width="30%">모바일</th>
+      <th width="50%">데스크탑</th>
+    </tr>
+    <tr align="center">
+      <td>디바이스</td>
+      <td><img width="70%" src="https://user-images.githubusercontent.com/114633489/218056328-94c6d8e5-7dd6-467b-9ab8-34e000515577.png"></td>
+      <td><img src="https://user-images.githubusercontent.com/114633489/218055603-5aa06397-7706-4c15-a717-6148ba7e7fc9.png"></td>
+    </tr>
+    <tr align="center">
+      <td>약칭</td>
+      <td>mobile-screen</td>
+      <td>pc-screen</td>
+    </tr>
+    <tr align="center">
+      <td>지원 최소 크기</td>
+      <td>390px</td>
+      <td>1400px</td>
+    </tr>
+    <tr align="center">
+      <td>비고</td>
+      <td colspan="2">띄어쓰기 전용 중단점 800px 추가</td>
+    </tr>
+  </table>
+</div>
+
+
+<p align="justify">
+다양한 디바이스에서 이용 및 열람이 가능하도록 반응형 웹으로 구현을 하였고, 1400px 기준으로 디자인을 달리 하였습니다. <s>처음에 중단점 4개 잡다 프로젝트가 엎어진 적이 있었고 처음부터 디자인을 다시하여 중단점을 1개로 수정했다는 것은 안 비밀... 그룹 프로젝트 역대급 흑역사...</s></p>
+
+<hr>
+
 ## 코딩
 ### 풀페이지 플러그인
+``` JavaScript
+$(function() {
+
+  $('#fullpage').fullpage({
+  autoScrolling:true,
+  scrollHorizontally: true,
+      navigation: true,
+      navigationPosition: 'right',
+      afterLoad: function(anchorLink, index) {
+
+      if(index==2) {
+        fadein();
+        fadeup();
+        rollingNumber();
+      }
+      
+      if(index==3) {
+        $('#fp-nav ul li a span').css({
+          'background': '#333',
+          'transition': 'all 0.5s'
+        });				
+      }
+      
+      else {
+        $('#fp-nav ul li a span').css('background', '#fff');
+      }
+      
+    }
+  });
+
+	
+
+});
+```
 ### 텍스트 타이핑 효과
 ### 이미지 슬라이드
 ### 유효성 검사
