@@ -436,7 +436,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
 ### 로고
 ### 메인 페이지
 <div align="center">
-  <table>
+  <table width="100%">
     <tr>
       <th width="10%">구분</th>
       <th width="45%">기존</th>
@@ -444,13 +444,13 @@ $('.phone_phone .aconf_btn').on('click', function() {
     </tr>
     <tr>
       <th>페이지</th>
-      <td><img src=""></td>
-      <td><img src=""></td>      
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258943-06d37f49-79c0-4c84-9cf6-60296aba7bb7.gif"></td>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258946-9a188bd8-6e88-4190-ad3f-65c4a4aee877.gif"></td>      
     </tr>
     <tr> 
       <th>링크</th>
-      <td width="45%"><a href="">바로가기</a></td>
-      <td width="45%"><a href="">바로가기</a></td>      
+      <td><a href="">바로가기</a></td>
+      <td><a href="">바로가기</a></td>      
     </tr>
   </table>
 </div>
