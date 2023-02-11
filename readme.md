@@ -21,6 +21,7 @@
   - [풀페이지 플러그인](#풀페이지-플러그인)
   - [텍스트 타이핑 효과](#텍스트-타이핑-효과)
   - [이미지 슬라이드](#이미지-슬라이드)
+  - [스크롤 바에 따른 뷰포트 이벤트](#스크롤-바에-따른-뷰포트-이벤트)
   - [유효성 검사](#유효성-검사)
 - [최종 결과물](#최종-결과물)
   - [로고](#로고)
@@ -328,7 +329,108 @@ window.addEventListener('load', function(){
 <hr>
 
 ### 이미지 슬라이드
+``` JavaScript
+$('.ins li:eq(1)').addClass('s2-act')//add default class
+let clone = $(".ins").clone(true).appendTo('.hidden-box')
+let multi = 1;
+let classIdx = 2;
+slideInter = setInterval(slide, 3000)
+
+function slide() {
+  $('.hidden-box li').removeClass('s2-act')
+  let itemWidth = $('.ins li').outerWidth(true)
+  let itemLength = $(".ins:first li").length;
+
+
+  if (classIdx >= itemLength) classIdx = 0;
+  if (multi > itemLength) {
+    multi = 1;
+    $('.ins').css('left', 0)
+  }
+
+  $('.ins').animate({ 'left': `-${itemWidth * multi++}px` }, 500)
+  $(`.ins li:eq(${classIdx++})`).addClass('s2-act')
+  $(clone).children().eq(classIdx - 1).addClass('s2-act')
+}
+```
+<div align="center"><b>코드블럭 1.3</b> 돌잔치 페이지의 슬라이더 효과 구현</div><br>
+ 
+<p align="justify"><b>해당 페이지 담당자 曰</b> 이미지들을 감싸고 있는 .ins 요소를 복제해 원본 .ins요소 뒤쪽에 붙여 주는 형식으로 이미지의 너비만큼 슬라이드를 반복하며 원본의 마지막 이미지 요소를 지나 복제한 첫 이미지 요소에 슬라이드가 도달하면 원본 요소를 복제한 요소 위치로 변경해 주는 방법으로 슬라이드를 구현하였습니다.</p>
+ 
+<hr>
+
+### 스크롤 바에 따른 뷰포트 이벤트
+``` JavaScript
+$('.ins li:eq(1)').addClass('s2-act')//add default class
+let clone = $(".ins").clone(true).appendTo('.hidden-box')
+let multi = 1;
+let classIdx = 2;
+slideInter = setInterval(slide, 3000)
+
+function slide() {
+  $('.hidden-box li').removeClass('s2-act')
+  let itemWidth = $('.ins li').outerWidth(true)
+  let itemLength = $(".ins:first li").length;
+
+
+  if (classIdx >= itemLength) classIdx = 0;
+  if (multi > itemLength) {
+    multi = 1;
+    $('.ins').css('left', 0)
+  }
+
+  $('.ins').animate({ 'left': `-${itemWidth * multi++}px` }, 500)
+  $(`.ins li:eq(${classIdx++})`).addClass('s2-act')
+  $(clone).children().eq(classIdx - 1).addClass('s2-act')
+}
+```
+<div align="center"><b>코드블럭 1.4</b> 웨딩 페이지의 뷰포트 이벤트 구현</div><br>
+ 
+<p align="justify"><b>해당 페이지 담당자 曰</b> 스크롤 이벤트 도중 이벤트로 지정한 요소가 뷰포트 내에 도달하면 true를 반환하고 뷰포트 내에 요소에만 스타일을 변경하여 이벤트가 발생하도록 구현하였습니다. 일반적인 1회성 스크롤 이벤트에 비해 뷰포트에 도달하게 되면 애니메이션이 재구현된다는 것이 어찌 보면 또 하나의 매력인 것 같습니다.</p>
+
+<hr>
+
 ### 유효성 검사
+
+``` JavaScript
+let idPass=/^(?=.*[a-zA-Z])(?=.*[0-9]).{7,25}$/;
+let pwPass=/^(?=.*[a-zA-Z])(?=.*[@$%^*-])(?=.*[0-9]).{9,25}$/;
+let pCheck=/^(?=.*[0-9]).{10,25}$/;
+let nCheck=/^(?=.*[0-9]).{6,6}$/;
+let ePass = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+
+let idCheck=false;
+let phCheck=false;
+
+$('.id_id .aconf_btn').on('click', function() {
+
+    if($('input#aid').val().length<1) alert('아이디를 입력해 주세요!');
+    else if(!idPass.test($('input#aid').val())) alert('아이디는 영문 숫자 조합 7자 이상으로 입력해 주세요!');
+    else if($('input#aid').val().match('nonwhiskerscat')) alert('이미 존재하는 아이디입니다!');
+    else {
+        alert('멋진 아이디네요!');
+        idCheck=true;
+    }
+
+});
+
+$('.phone_phone .aconf_btn').on('click', function() {
+
+    if($('input#aphone1').val().length<1) alert('휴대폰 번호를 입력해 주세요!');
+    else if(!pCheck.test($('input#aphone1').val())) alert('휴대폰 번호를 똑바로 입력해 주세요!');
+    else {
+        alert('인증번호가 전송 되었습니다!');
+        phCheck=true;
+    }
+
+});
+```
+<div align="center"><b>코드블럭 1.5</b> 회원가입 페이지의 유효성 검사를 위한 제이쿼리 코딩 일부</div><br>
+ 
+<p align="justify">회원가입 페이지와 같은 경우 일반적인 웹 페이지와 유사하게 작동하도록, 각 요소들에 조건을 붙여 유효성 검사를 진행하도록 하였습니다. 예를 들어, 아이디와 같은 경우 영문, 숫자 조합으로 7자를 입력하도록 <b>/^(?=.*[a-zA-Z])(?=.*[0-9]).{7,25}$/</b>와 같은 조건을 걸었습니다. 그 외에 패스워드, 휴대폰 번호, 이메일 등 유효성 검사에 걸맞는 조건을 갖추지 않을 경우 가입이 되지 않도록 구현하였습니다.</p>
+
+<hr>
 
 ## 최종 결과물
 ### 로고
