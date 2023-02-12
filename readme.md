@@ -5,7 +5,7 @@
 
 </div>
 
-<div style="background-color:#555">
+<div align="justify">
 안녕하십니까, 페어몬트 앰배서더 호텔 서울 리뉴얼 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">수염 없냥</a>입니다. 이번 프로젝트를 통해 페어몬트 앰배서더 호텔 사이트를 새롭게 리뉴얼 할 수 있었고, 중간 중간 사소한 실수로 시행착오가 있었지만 첫 번째 조별 프로젝트이자, 전체 페이지 리뉴얼 프로젝트를 무사히 끝마치게(?) 되었습니다. 지금부터 이 프로젝트를 제작하는 데에 있어 어떠한 과정을 거쳤는지에 대해 보여드리겠습니다. 
 </div>
 
@@ -449,13 +449,40 @@ $('.phone_phone .aconf_btn').on('click', function() {
     </tr>
     <tr> 
       <th>링크</th>
-      <td><a href="">바로가기</a></td>
-      <td><a href="">바로가기</a></td>      
+      <td><a href="https://fairmont-seoul.com/">바로가기</a></td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">바로가기</a></td>      
     </tr>
   </table>
 </div>
 
+<p align="justify">호텔 그 자체의 강점을 보여주지 못하고 Room 정보만 주먹구구식으로 넣은 기존의 홈페이지를, 풀페이지 플러그인을 활용하여 역동적으로 구현하였고 각 섹션마다 호텔의 다양한 개성을 부여하여 기존 호텔의 사이트와 유사하게 다자인하며 설계했습니다.</p>
+
+<hr>
+
 ### 페어몬트 룸 페이지
+<div align="center">
+  <table width="100%">
+    <tr>
+      <th width="10%">구분</th>
+      <th width="45%">기존</th>
+      <th width="45%">변경안</th>     
+    </tr>
+    <tr>
+      <th>페이지</th>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258938-5c5cbe42-6736-451c-976c-cac29d5ec724.gif"></td>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258937-86ad0c45-01a9-4955-b5ac-0447c0e50220.gif"></td>      
+    </tr>
+    <tr> 
+      <th>링크</th>
+      <td><a href="https://fairmont-seoul.com/room/fairmont-room/">바로가기</a></td>
+      <td><a href="https://fairmont-seoul.com/room/fairmont-room/">바로가기</a></td>      
+    </tr>
+  </table>
+</div>
+
+<p align="justify">호텔 그 자체의 강점을 보여주지 못하고 Room 정보만 주먹구구식으로 넣은 기존의 홈페이지를, 풀페이지 플러그인을 활용하여 역동적으로 구현하였고 각 섹션마다 호텔의 다양한 개성을 부여하여 기존 호텔의 사이트와 유사하게 다자인하며 설계했습니다.</p>
+
+<hr>
 ### 웨딩 페이지
 ### 마리포사 페이지
 ### 신설 페이지
