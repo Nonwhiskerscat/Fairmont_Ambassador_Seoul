@@ -30,8 +30,12 @@
   - [웨딩 페이지](#웨딩-페이지)
   - [신설 페이지](#신설-페이지)
 - [프로젝트 후기](#프로젝트-후기)
-- [결론](#결론)
-- [그 외](#그-외)
+  - [Nonwhiskerscat](#nonwhiskerscat)
+  - [a0im](#a0im)
+  - [GONGHYEONMUN](#gonghyeonmun)
+  - [chaerrin](#chaerrin)
+- [디자인 가이드](#디자인-가이드)
+- [마무리 인사](#마무리-)
 
 ## 기본 정보
 
@@ -635,7 +639,177 @@ $('.phone_phone .aconf_btn').on('click', function() {
 </div>
 
 ## 프로젝트 후기
-## 결론
-## 그 외
-### 기획서
-### 디자인 노트
+### Nonwhiskerscat
+
+<div align="center">
+  <table>
+    <tr>
+      <td rowspan="3" width="30%">
+        <a href="https://github.com/Nonwhiskerscat"><img src="https://user-images.githubusercontent.com/114633489/217513739-b6baf543-abcb-4565-a30c-91c5e7f4f1b2.png"></a>
+      </td>
+      <th width="10%">한 마디</th>
+      <td colspan="3">철도 기관사가 비행기 조종간을 잡은 상황!</td>
+    </tr>
+    <tr>
+      <th>소감</th>
+      <td align="justify" colspan="3">3개월 전만 해도 Jquery가 세상에 존재한 줄 몰랐던 제가 이 중요한 프로젝트의 조장을 맡았을 때 많은 부담감과 걱정이 저에게 쓰나미처럼 몰아쳤습니다. 이를 극복하고 옳은 방향으로 조원들을 리드하자는 다짐을 했지만 저의 결정적인 실수로 조원 분들이 피해를 봤던 적이 있었습니다. 그 이후로 무능한 조장 아래서 고생하는 조원 분들을 생각하며 <b>매일 15시간씩 프로젝트에 전념</b>하였고, <b>조원 분들이 난관에 봉착 했을 경우에도 시간을 내서 문제를 해결</b>해 주었는데, 그 의지가 <b>프로젝트를 완성하는 데에 결정적으로 도움을 줬던 것</b> 같습니다. 그리고 저를 적극적으로 따라준 <b>조원 여러분들에게도 감사 인사</b>를 드립니다.</td>
+    </tr>
+    <tr>
+      <th>개선된 점</th>
+      <td>
+        <ul>
+          <li>무엇이든 해낼 수 있다는 자신감이 생겼다.</li>
+          <li>적극적인 의사 표현 능력이 향상되었다.</li>
+          <li>웹 디자인 및 코딩 역량이 대폭개선되었다.</li>
+        </ul>
+      </td>
+      <th width="10%">반성할 점</th>
+      <td>
+        <ul>
+          <li>시간 압박으로 바닐라 자바스크립트를 쓰지 못했다.</li>
+          <li>책임을 다 하지 못했던 것이 아쉽다.</li>
+          <li>사전 정보 없이 돌진하다 조원들에 피해를 줬다.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+### a0im
+
+<div align="center">
+  <table>
+    <tr>
+      <td rowspan="3" width="30%">
+        <a href="https://github.com/a0im"><img src="https://user-images.githubusercontent.com/114633489/217512932-7a78e630-82ed-4147-b833-002fa0f4c785.png"></a>
+      </td>
+      <th width="10%">한 마디</th>
+      <td colspan="3">머릿속으로 큰 그림을 그리자!</td>
+    </tr>
+    <tr>
+      <th>소감</th>
+      <td align="justify" colspan="3">조별 프로젝트 도중에 시안 작업 단계에서 모바일과 데스크탑의 통일성을 고려하지 못해 시안 대부분을 수정해야 하는 일이 있었습니다. 당장 시간적 여유가 부족한 상황이라 문제점을 고치지 않은 체 스크립트 를 작성하게 될 상황이었지만. 부족한 시간을 핑계로 조원들에게 민폐를 끼치고 싶지 않았습니다. 이후에 <b>좋은 결과를 만들고 싶다는 목표 하나로 잠을 줄이며 프로젝트에 몰두했고 그 목표가 첫 조별 프로젝트를 완성하는 데에 도움을 주었던 것</b> 같습니다. 그리고 <b>프로젝트 중간중간 부족한 모습에도 다그치지 않고 묵묵히 기다려주신 조원 여러분들께 감사</b>드립니다.</td>
+    </tr>
+    <tr>
+      <th>개선된 점</th>
+      <td>
+        <ul>
+          <li>무엇이든 해낼 수 있다는 자신감이 생겼다.</li>
+          <li>프로젝트 경험을 쌓을 수 있었다.</li>
+          <li>웹 디자인 및 코딩 역량이 대폭개선되었다.</li>
+        </ul>
+      </td>
+      <th width="10%">반성할 점</th>
+      <td>
+        <ul>
+          <li>의욕만 앞섰고 주어진 시간을 충분히 고려하지 못했다.</li>
+          <li>프로젝트 중간중간 컨디션 관리에 소홀했다.</li>
+          <li>코드의 양을 줄이기에만 급급해 코드 가독성이 나빠졌다.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+### GONGHYEONMUN
+
+<div align="center">
+  <table>
+    <tr>
+      <td rowspan="3" width="30%">
+       <a href="https://github.com/GONGHYEONMUN"><img src="https://user-images.githubusercontent.com/114633489/217512975-6d5fe093-0768-4357-8549-14b4b5f5aafa.png"></a>
+      </td>
+      <th width="10%">한 마디</th>
+      <td colspan="3">매일매일이 긴장과 발전의 연속이었다!</td>
+    </tr>
+    <tr>
+      <th>소감</th>
+      <td align="justify" colspan="3">모든 것을 처음 배운 저에겐 조별 프로젝트는 막막했고 걱정이 앞섰습니다. 조원들에게 피해를 끼치면 안 되는데 나의 능력이 그만큼 안된다고 생각했고 과연 내가 잘 끝낼 수 있을까라는 생각을 했습니다. 역할을 분담하고 일정에 맞춰 해나가는데 <b>저는 더욱 더 많은 시간을 할애하며 따라가고자 노력</b>했습니다. 모르는 것은 조원들에게 물어보기도 하고 공부했던 것을 다시 보며 차근차근 해나가면서 <b>저의 실력도 점차 발전 해 나간다는 것</b>을 느꼈습니다. 어렵고 힘든 점도 있었지만 조에 피해를 끼치지 않고 제가 맡은 역할을 무사히 끝내게 되었습니다. 완성작을 보면서 뿌듯했고 한편으로는 더 잘 해내지 못해 스스로에게 아쉬움이 남는 조별 프로젝트였습니다. <b>많은 도움을 주신 조장님, 그리고 조원들 모두 수고</b>하셨습니다. 감사합니다!</td>
+    </tr>
+    <tr>
+      <th>개선된 점</th>
+      <td>
+        <ul>
+          <li>html, sass, css 능력이 향상되었다.</li>
+          <li>의사소통 능력이 향상되었다.</li>
+          <li>나도 할 수 있구나 라는 자신감이 생겼다.</li>
+        </ul>
+      </td>
+      <th width="10%">반성할 점</th>
+      <td>
+        <ul>
+          <li>jquery를 사용하지 못했다.</li>
+          <li>git을 능숙하게 다루지 못했다.</li>
+          <li>계획했던 것에서 수정을 많이 했다.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+### chaerrin
+
+<div align="center">
+  <table>
+    <tr>
+      <td rowspan="3" width="30%">
+        <a href="https://github.com/chaerrin"><img src="https://user-images.githubusercontent.com/114633489/217512973-0c403a4b-801c-4c7e-bce4-a10dcdc79717.png"></a>
+      </td>
+      <th width="10%">한 마디</th>
+      <td colspan="3">시간을 쪼개 잘 활용하자!</td>
+    </tr>
+    <tr>
+      <th>소감</th>
+      <td align="justify" colspan="3">학교 수업과 학원 수업을 병행하면서 생활을 하여 시간적인 여유가 부족하던 저는 프로젝트를 시작하였을 때 걱정이 많았습니다. 시간적인 여유가 부족함에도 불구하고, 욕심만 많았던 저는 무리하게 할 일을 많이 만들어 조원분들이 열심히 작업을 하실 때 제가 여러 번 빠지게 된 적이 있었습니다. 아무래도 이 프로젝트에 시간 투자를 많이 못 한다고 생각했습니다. 제 욕심 때문에 다른 조원들에게 피해를 끼칠 수 없다고 생각이 들었습니다. 그 이후부터 <b>잉여시간까지 모두 쪼개어 프로젝트에 전념하기 시작</b>했습니다. <b>바쁜 저를 다그치지 않고 기다려주셔서 조원 여러분들께 감사 인사</b>드립니다.</td>
+    </tr>
+    <tr>
+      <th>개선된 점</th>
+      <td>
+        <ul>
+          <li>시간을 효율적으로 분배하는 법을 터득하였다.</li>
+          <li>디자인 및 코딩 역량이 강화되었다.</li>
+          <li>의사 표현 능력이 향상 되었다.</li>
+        </ul>
+      </td>
+      <th width="10%">반성할 점</th>
+      <td>
+        <ul>
+          <li>시간 부족으로 프로젝트에 집중하지 못했다.</li>
+          <li>욕심을 부리다가 할 일을 늘렸다.</li>
+          <li>디자인 기술이 미흡하여 조원분께 도움을 받았다.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
+## 디자인 가이드
+
+<details>
+  <summary>열람을 원하시면 이곳을 클릭하세요</summary>
+   <div align="center">
+    <img width=100% src="https://user-images.githubusercontent.com/114633489/218456039-a6031665-c697-4809-a45b-f6bf3ec265a2.png">
+  </div>
+</details>
+
+
+<br>
+
+## 마무리 인사
+  
+<div align="center">
+  <img width=100% src="https://user-images.githubusercontent.com/114633489/217474872-f4aa3e25-f0b1-46d5-be9b-4ad4dd4b2706.png">
+</div>
+
+<p align="justify">여기 게재된 것들 외에 <b>실제 홈페이지에서는 구경할 수 있는 디자인과 인터페이스들이 많습니다</b>. 시간적인 여유가 있다면 <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">웹 페이지</a>를 직접 방문하여 저희 프로젝트를 구경하셔도 좋습니다. 물론 <b>웹 개발자로서 다들 처음 해보는 프로젝트라 예상치 못한 오류도 많이 직면</b>하게 될 것입니다... 이 점 양해 부탁드립니다. 지금까지 페어몬트 앰배서더 호텔 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">Nonwhiskerscat</a>이었습니다. 여기 까지 읽어 주셔서 대단히 감사드립니다.</p>
+
+
+
