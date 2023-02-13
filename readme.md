@@ -794,7 +794,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
 ## 디자인 가이드
 
 <details>
-  <summary>열람을 원하시면 이곳을 클릭하세요</summary>
+  <summary><h3>열람을 원하시면 이곳을 클릭하세요</h3></summary>
    <div align="center">
     <img width=100% src="https://user-images.githubusercontent.com/114633489/218456039-a6031665-c697-4809-a45b-f6bf3ec265a2.png">
   </div>
