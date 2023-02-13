@@ -35,7 +35,7 @@
   - [GONGHYEONMUN](#gonghyeonmun)
   - [chaerrin](#chaerrin)
 - [디자인 가이드](#디자인-가이드)
-- [마무리 인사](#마무리-)
+- [마무리 인사](#마무리-인사)
 
 ## 기본 정보
 
@@ -809,7 +809,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
   <img width=100% src="https://user-images.githubusercontent.com/114633489/217474872-f4aa3e25-f0b1-46d5-be9b-4ad4dd4b2706.png">
 </div>
 
-<p align="justify">여기 게재된 것들 외에 <b>실제 홈페이지에서는 구경할 수 있는 디자인과 인터페이스들이 많습니다</b>. 시간적인 여유가 있다면 <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">웹 페이지</a>를 직접 방문하여 저희 프로젝트를 구경하셔도 좋습니다. 물론 <b>웹 개발자로서 다들 처음 해보는 프로젝트라 예상치 못한 오류도 많이 직면</b>하게 될 것입니다... 이 점 양해 부탁드립니다. 지금까지 페어몬트 앰배서더 호텔 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">Nonwhiskerscat</a>이었습니다. 여기 까지 읽어 주셔서 대단히 감사드립니다.</p>
+<p align="justify">여기 게재된 것들 외에 <b>실제 홈페이지에서는 구경할 수 있는 디자인과 인터페이스들이 많습니다</b>. 시간적인 여유가 있다면 <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">웹 페이지</a> 혹은 <a href="https://www.canva.com/design/DAFPAGSNCo4/hFKRH6ACwZlv8piXOEe1kg/view?utm_content=DAFPAGSNCo4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">기획서 페이지</a>를 직접 방문하여 저희 프로젝트를 구경하셔도 좋습니다. 물론 <b>웹 개발자로서 다들 처음 해보는 프로젝트라 예상치 못한 오류도 많이 직면</b>하게 될 것입니다... 이 점 양해 부탁드립니다. 지금까지 페어몬트 앰배서더 호텔 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">Nonwhiskerscat</a>이었습니다. 여기 까지 읽어 주셔서 대단히 감사드립니다.</p>
 
 
 
