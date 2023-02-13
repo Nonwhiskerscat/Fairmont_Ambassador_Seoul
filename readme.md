@@ -29,8 +29,8 @@
   - [페어몬트 룸 페이지](#페어몬트-룸-페이지)
   - [웨딩 페이지](#웨딩-페이지)
   - [신설 페이지](#신설-페이지)
-- [시연 영상](#시연-영상)
 - [프로젝트 후기](#프로젝트-후기)
+- [결론](#결론)
 - [그 외](#그-외)
 
 ## 기본 정보
@@ -455,7 +455,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
   </table>
 </div>
 
-<p align="justify">호텔 그 자체의 강점을 보여주지 못하고 Room 정보만 주먹구구식으로 넣은 기존의 홈페이지를, 풀페이지 플러그인을 활용하여 역동적으로 구현하였고 각 섹션마다 호텔의 다양한 개성을 부여하여 기존 호텔의 사이트와 유사하게 다자인하며 설계했습니다.</p>
+<p align="justify">호텔 그 자체의 강점을 보여주지 못하고 Room 정보만 주먹구구식으로 넣은 기존의 홈페이지를, 풀페이지 플러그인을 활용하여 역동적으로 구현하였고 각 섹션마다 호텔의 다양한 개성을 스토리형식으로 구성하였고 여느 호텔에 견줄 만한 인터페이스를 추가하여 리뉴얼했습니다.</p>
 
 <hr>
 
@@ -480,17 +480,108 @@ $('.phone_phone .aconf_btn').on('click', function() {
   </table>
 </div>
 
-<p align="justify">호텔 그 자체의 강점을 보여주지 못하고 Room 정보만 주먹구구식으로 넣은 기존의 홈페이지를, 풀페이지 플러그인을 활용하여 역동적으로 구현하였고 각 섹션마다 호텔의 다양한 개성을 부여하여 기존 호텔의 사이트와 유사하게 다자인하며 설계했습니다.</p>
+<p align="justify">리뉴얼 된 페이지는 각종 웹 사이트에 게재된 리뷰, 블로그 글을 수집 및 분석하여 더 많은 정보를 제공하고 있으며, 애니메이트 혹은 사진 슬라이드를 활용하여 동적 인터페이스를 부여하였습니다. 특히 자세해진 어메니티, 기존 홈페이지에 기재되지 않았던 환불 및 에티켓 안내문, 객실의 위치까지 추가된 것이 이 페이지의 매력이라 할 수 있습니다.</p>
 
 <hr>
+
 ### 웨딩 페이지
+<div align="center">
+  <table width="100%">
+    <tr>
+      <th width="10%">구분</th>
+      <th width="45%">기존</th>
+      <th width="45%">변경안</th>     
+    </tr>
+    <tr>
+      <th>페이지</th>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258940-94d33116-2b4b-40f8-adab-f5c4628dd5d0.gif"></td>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258941-7ccc08ea-9a80-4998-a257-129aaf88a441.gif"></td>      
+    </tr>
+    <tr> 
+      <th>링크</th>
+      <td><a href="https://fairmont-seoul.com/meeting-events/weddings/">바로가기</a></td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/2_Events/Wedding/Wedding.html">바로가기</a></td>
+    </tr>
+  </table>
+</div>
+
+<p align="justify"><b>해당 페이지 담당자 曰</b> 기존 홈페이지과 차별된 디자인과 인터페이스를 사용하여 보는 이의 이목을 끌게 하였고 호텔이 지니고 있는 고급미를 돋보이도록 하였습니다. 그리고 소비자가 두 줄의 짧은 텍스트만 보고 예약이 이루어지게 될 때까지의 담겨있는 정보가 부족하다 생각했습니다. 그래서 웨딩 페이지에 부합한 레이아웃과 색상 구성, 그리 고 이미지 정보와 동적인 요소를 추가하여 웹을 리뉴얼 했습니다.</p>
+
+<hr>
+
 ### 마리포사 페이지
+<div align="center">
+  <table width="100%">
+    <tr>
+      <th width="10%">구분</th>
+      <th width="45%">기존</th>
+      <th width="45%">변경안</th>     
+    </tr>
+    <tr>
+      <th>페이지</th>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258935-cde9c124-e0ee-4ce5-8ba7-7db4883a2a47.gif"></td>
+      <td><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258936-9ad997af-9f5d-41d1-b865-f7a11b2843ed.gif"></td>      
+    </tr>
+    <tr> 
+      <th>링크</th>
+      <td><a href="https://fairmont-seoul.com/dining/mariposa/">바로가기</a></td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/2_Restaurant/Mariposa/Mariposa.html">바로가기</a></td>
+    </tr>
+  </table>
+</div>
+
+<p align="justify"><b>해당 페이지 담당자 曰</b> 기존 사이트의 장황한 텍스트가 가독성을 떨어뜨린다고 생각해 텍스트를 최대한 없애고 이미지를 크게 배치하여 눈에 잘 들어오게 했습니다. 강조되어야 할 텍스트는 기존 폰트 사이즈 보다 더 크게 설정하여 눈에 띄도록 설정하였습니다. 그리고 마우스를 올렸을 때 이미지에 대한 정보가 나오게 함으로써 전체적으로 깔끔하게 디자인하였습니다.</p>
+
+<hr>
+
 ### 신설 페이지
 
-## 시연 영상
+<div align="center">
+  <table>
+    <tr>
+      <td rowspan="3" width="40%"><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258933-879baa98-8813-4c51-9280-5d76114cfd1a.gif">
+</td>
+      <th width="10%">페이지 명</td>
+      <td>About</td>
+    </tr>
+    <tr>
+      <th>상세 설명</td>
+      <td><p align="justify"><b>해당 페이지 담당자 曰</b> 기존에 없었던 About Me 페이지를 새롭게 개설하였고, 페어몬트 엠배서더 호텔의 다양한 정보를 파트 별로 배치하여 전 연령층의 사용자가 호텔에 대한 정보를 한 눈에 확인할 수 있도록 하였습니다. 또한, 호텔까지 오시는 길을 아코디언 방식으로 배치하여 깔끔하게 볼 수 있도록 하였습니다.</p></td>
+    </tr>
+    <tr>
+      <th>링크</td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/6_About/6_About.html">바로가기</a></td>
+    </tr>
+  </table>
+  
+  <br><br>
+  
+</div>
+
+  <table>
+    <tr>
+      <td rowspan="3" width="40%"><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258922-ef394f80-ca93-455c-a48c-e0e962db1523.gif">
+</td>
+      <th width="10%">페이지 명</td>
+      <td>로그인, 회원가입</td>
+    </tr>
+    <tr>
+      <th>상세 설명</td>
+      <td><p align="justify">기존에 없었던 로그인 페이지와 회원가입 페이지를 추가하였습니다. 아이디를 입력하지 않았을 때 혹은 비밀번호를 입력하지 않았을 때 아이디 및 비밀번호가 누락되었다는 오류 메시지를, 형식에 맞지 않는 아이디(영문 숫자 조합 7자 이상), 패스워드(영문 숫자 특수 문자 조합 9자 이상)을 입력했을 때 존재하지 않는 회원이라 오류 메시지가 발생하도록 하였습니다. 그리고 형식에 맞는 아이디 및 패스워드를 입력했을 때 로그인에 성공하고 메인 화면으로 돌아가는 인터페이스를 추가하였습니다.</p></td>
+    </tr>
+    <tr>
+      <th>링크</td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/9_Etc/Login/Login.html">로그인</a>&nbsp|&nbsp<a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/9_Etc/Sign_Up/Sign_up.html">회원가입</a></td>
+    </tr>
+  </table>
+  
+  <br><br>
+  
+</div>
+
 
 ## 프로젝트 후기
-
+## 결론
 ## 그 외
 ### 기획서
 ### 디자인 노트
