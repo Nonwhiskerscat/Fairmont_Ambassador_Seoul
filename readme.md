@@ -546,7 +546,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
     </tr>
     <tr>
       <th>상세 설명</td>
-      <td><p align="justify"><b>해당 페이지 담당자 曰</b> 기존에 없었던 About Me 페이지를 새롭게 개설하였고, 페어몬트 엠배서더 호텔의 다양한 정보를 파트 별로 배치하여 전 연령층의 사용자가 호텔에 대한 정보를 한 눈에 확인할 수 있도록 하였습니다. 또한, 호텔까지 오시는 길을 아코디언 방식으로 배치하여 깔끔하게 볼 수 있도록 하였습니다.</p></td>
+      <td align="justify"><b>해당 페이지 담당자 曰</b> 기존에 없었던 About Me 페이지를 새롭게 개설하였고, 페어몬트 엠배서더 호텔의 다양한 정보를 파트 별로 배치하여 전 연령층의 사용자가 호텔에 대한 정보를 한 눈에 확인할 수 있도록 하였습니다. 또한, 호텔까지 오시는 길을 아코디언 방식으로 배치하여 깔끔하게 볼 수 있도록 하였습니다.</td>
     </tr>
     <tr>
       <th>링크</td>
@@ -554,7 +554,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
     </tr>
   </table>
   
-  <br><br>
+  <br>
   
 </div>
 
@@ -567,7 +567,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
     </tr>
     <tr>
       <th>상세 설명</td>
-      <td><p align="justify">기존에 없었던 로그인 페이지와 회원가입 페이지를 추가하였습니다. 아이디를 입력하지 않았을 때 혹은 비밀번호를 입력하지 않았을 때 아이디 및 비밀번호가 누락되었다는 오류 메시지를, 형식에 맞지 않는 아이디(영문 숫자 조합 7자 이상), 패스워드(영문 숫자 특수 문자 조합 9자 이상)을 입력했을 때 존재하지 않는 회원이라 오류 메시지가 발생하도록 하였습니다. 그리고 형식에 맞는 아이디 및 패스워드를 입력했을 때 로그인에 성공하고 메인 화면으로 돌아가는 인터페이스를 추가하였습니다.</p></td>
+      <td align="justify">기존에 없었던 로그인 페이지와 회원가입 페이지를 추가하였습니다. 아이디를 입력하지 않았을 때 혹은 비밀번호를 입력하지 않았을 때 아이디 및 비밀번호가 누락되었다는 오류 메시지를, 형식에 맞지 않는 아이디(영문 숫자 조합 7자 이상), 패스워드(영문 숫자 특수 문자 조합 9자 이상)을 입력했을 때 존재하지 않는 회원이라 오류 메시지가 발생하도록 하였습니다. 그리고 형식에 맞는 아이디 및 패스워드를 입력했을 때 로그인에 성공하고 메인 화면으로 돌아가는 인터페이스를 추가하였습니다.</td>
     </tr>
     <tr>
       <th>링크</td>
@@ -575,10 +575,64 @@ $('.phone_phone .aconf_btn').on('click', function() {
     </tr>
   </table>
   
-  <br><br>
+  <br>
+  
+  <table>
+    <tr>
+      <td rowspan="3" width="40%"><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258927-aff2fe5b-c3fe-4437-8f39-d9d939d2bcd8.gif">
+</td>
+      <th width="10%">페이지 명</td>
+      <td>호텔룸 예약</td>
+    </tr>
+    <tr>
+      <th>상세 설명</td>
+      <td align="justify">기존에 외부 플랫폼을 활용하였던 예약 페이지를 자체적으로 제작했습니다. 회원가입, 마이페이지, 정보수정, 고객센터 페이지를 포함한 해당 페이지에는 이 홈페이지의 퍼스널 컬러인 <b>#fefdf0</b>을 적절히 활용하였습니다. 특히 여느 호텔 홈페이지와 달리 아이콘을 사용하여 접근성 부분에서도 다른 홈페이지와 차별점을 두었습니다.</td>
+    </tr>
+    <tr>
+      <th>링크</td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/8_Reservation/8_Reservation.html">바로가기</a></td>
+    </tr>
+  </table>
+  
+  <br>
+  
+  <table>
+    <tr>
+      <td rowspan="3" width="40%"><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258931-542c9db0-4cce-4ba2-8d51-0eea4b128178.gif">
+</td>
+      <th width="10%">페이지 명</td>
+      <td>고객센터</td>
+    </tr>
+    <tr>
+      <th>상세 설명</td>
+      <td align="justify">서비스를 중시하는 호텔 사이트에 고객센터 페이지가 없는 것이 어색하다 생각해 해당 페이지를 새롭게 제작했습니다. 본래 홈페이지에 기재된 자료가 미비하였기 때문에 Agoda 혹은 호텔스 컴바인 등을 방문하여 고객의 리뷰 및 평가를 분석하였고 이를 바탕으로 FaQ를 구성하였습니다. 물론 사실을 기반으로 작성되지 않았고 고객을 중점으로 제작되었기 때문에 <b>신빙성은 다소 떨어질 수 있습니다.</b></td>
+    </tr>
+    <tr>
+      <th>링크</td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/7_Customer/Cust_Center/Cust_Center.html">바로가기</a></td>
+    </tr>
+  </table>
+  
+  <br>
+  
+  <table>
+    <tr>
+      <td rowspan="3" width="40%"><img width="100%" src="https://user-images.githubusercontent.com/114633489/218258945-e5ecb0eb-6c3f-4d98-8e56-28c42f50124a.gif">
+</td>
+      <th width="10%">페이지 명</td>
+      <td>마이페이지, 정보수정</td>
+    </tr>
+    <tr>
+      <th>상세 설명</td>
+      <td align="justify">유저의 프로필 혹은, 개인 정보를 관리할 수 있도록 마이페이지&정보수정 페이지도 새롭게 제작하였습니다. 유저들은 마이페이지 섹션에서 프로필 수정, 비밀번호 수정, 회원 탈퇴, 예약 내역 관리 등과 같은 기능을 수행할 수 있고, 정보수정 페이지에서는 유저의 휴대폰 번호와 이메일 주소를 수정할 수 있습니다.</td>
+    </tr>
+    <tr>
+      <th>링크</td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/7_Customer/My_Page/My_page.html">마이페이지</a>&nbsp|&nbsp<a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/9_Etc/Info_Modify/Info_Modify.html">정보수정</a></td>
+    </tr>
+  </table>
   
 </div>
-
 
 ## 프로젝트 후기
 ## 결론
