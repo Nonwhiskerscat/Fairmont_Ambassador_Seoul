@@ -98,31 +98,31 @@
 <div align="center">
   <table>
     <tr>
-      <td>Git ID</td>
+      <th>Git ID</th>
       <th width="23%"><a href="https://github.com/Nonwhiskerscat">Nonwhiskerscat</a></th>
       <th width="23%"><a href="https://github.com/a0im">a0im</a></th>
       <th width="23%"><a href="https://github.com/GONGHYEONMUN">GONGHYEONMUN</a></th>
       <th width="23%"><a href="https://github.com/chaerrin">chaerrin</a></th>
      </tr>
     <tr>
-      <td>Profile</td>
+      <th>Profile</th>
       <td align="center"><a href="https://github.com/Nonwhiskerscat"><img src="https://user-images.githubusercontent.com/114633489/217513739-b6baf543-abcb-4565-a30c-91c5e7f4f1b2.png"></a></td>
       <td align="center"><a href="https://github.com/a0im"><img src="https://user-images.githubusercontent.com/114633489/217512932-7a78e630-82ed-4147-b833-002fa0f4c785.png"></a></td>
       <td align="center"><a href="https://github.com/GONGHYEONMUN"><img src="https://user-images.githubusercontent.com/114633489/217512975-6d5fe093-0768-4357-8549-14b4b5f5aafa.png"></a></td>
       <td align="center"><a href="https://github.com/chaerrin"><img src="https://user-images.githubusercontent.com/114633489/217512973-0c403a4b-801c-4c7e-bce4-a10dcdc79717.png"></a></td>
      </tr>    
     <tr>
-      <td>지위</td>
+      <th>지위</th>
       <td align="center">리더</td>
       <td align="center">멤버</td>
       <td align="center">멤버</td>
       <td align="center">멤버</td>
      </tr>
     <tr>
-      <td>역할</td>
+      <th>역할</th>
       <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">메인</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/1_Room/guestroom/fairmont_room/fairmont_room.html">호텔 룸 전체</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/8_Reservation/8_Reservation.html">예약</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/7_Customer/My_Page/My_page.html">그</a> <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/9_Etc/Login/Login.html">외</a> <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/9_Etc/Sign_Up/Sign_up.html">페이지</a> <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/7_Customer/My_Page/My_page.html">제작</a></td>
       <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/2_Events/Wedding/Wedding.html">웨딩</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/2_Events/Party/Party.html">연회</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/2_Events/First_Birthday/First_Birthday.html">돌잔치</a></td>
-      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/5_Dining.html">다이닝</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/3_Cafe/AtriumLounge/AtriumLounge.html">카페</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/1_Bar/M29/M29.html">바</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/3_Facilities/3_Facilities.html">시설</a></td>
+      <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/5_Dining.html">다이닝</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/3_Cafe/AtriumLounge/AtriumLounge.html">카페</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/5_Dining/1_Bar/M29/M29.html">바</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/3_Facilities/3_Facilities.html">시설</a> </td>
       <td><a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/6_About/6_About.html">호텔 정보</a>, <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/4_SpecialOffer/4_SpecialOffer.html">스페셜 오퍼</a></td>
      </tr>
   </table>
@@ -268,7 +268,7 @@ $(function() {
   });
 });
 ```
-<div align="center"><b>코드블럭 1.1</b> 메인페이지의 풀페이지 플러그인</div><br>
+<div align="center"><b>코드블럭 1</b> 메인페이지의 풀페이지 플러그인</div><br>
  
 <p align="justify">메인 페이지에서는 풀페이지 플러그인 2.9.7 버전을 활용하여 디바이스 혹은 화면의 크기에 상관 없이 한 페이지의 사이즈를 디바이스의 스크린 크기와 일치시키도록 하였고, 스크롤을 할 때마다 페이지가 넘어가도록 구현하였습니다. 그리고 afterLoad를 사용하여 유저가 해당 페이지에 도달했을 때, 함수가 발생하도록 하는 인터페이스를 추가하였습니다.</p>
  
@@ -322,7 +322,7 @@ window.addEventListener('load', function(){
     }
     goType();
 ```
-<div align="center"><b>코드블럭 1.2</b> 메인페이지의 타이핑 효과 구현</div><br>
+<div align="center"><b>코드블럭 2</b> 메인페이지의 타이핑 효과 구현</div><br>
  
 <p align="justify">제이쿼리를 남발한 프로젝트이지만 이 부분 만큼은 바닐라 자바스크립트를 활용하였습니다. 호텔의 품격을 17가지 언어로 표현하였고 이를 배열에 저장한 이후 일정 시간이 지나면 차례대로 타이핑 되고 지워지는 효과를 부여하였습니다. <s>글자가 추가되는 시간 0.12초, 지워지는 시간 0.06초, 타이핑이 끝나 머무는 시간 2초</s> </p>
  
@@ -353,7 +353,7 @@ function slide() {
   $(clone).children().eq(classIdx - 1).addClass('s2-act')
 }
 ```
-<div align="center"><b>코드블럭 1.3</b> 돌잔치 페이지의 슬라이더 효과 구현</div><br>
+<div align="center"><b>코드블럭 3</b> 돌잔치 페이지의 슬라이더 효과 구현</div><br>
  
 <p align="justify"><b>해당 페이지 담당자 曰</b> 이미지들을 감싸고 있는 .ins 요소를 복제해 원본 .ins요소 뒤쪽에 붙여 주는 형식으로 이미지의 너비만큼 슬라이드를 반복하며 원본의 마지막 이미지 요소를 지나 복제한 첫 이미지 요소에 슬라이드가 도달하면 원본 요소를 복제한 요소 위치로 변경해 주는 방법으로 슬라이드를 구현하였습니다.</p>
  
@@ -384,7 +384,7 @@ function slide() {
   $(clone).children().eq(classIdx - 1).addClass('s2-act')
 }
 ```
-<div align="center"><b>코드블럭 1.4</b> 웨딩 페이지의 뷰포트 이벤트 구현</div><br>
+<div align="center"><b>코드블럭 4</b> 웨딩 페이지의 뷰포트 이벤트 구현</div><br>
  
 <p align="justify"><b>해당 페이지 담당자 曰</b> 스크롤 이벤트 도중 이벤트로 지정한 요소가 뷰포트 내에 도달하면 true를 반환하고 뷰포트 내에 요소에만 스타일을 변경하여 이벤트가 발생하도록 구현하였습니다. 일반적인 1회성 스크롤 이벤트에 비해 뷰포트에 도달하게 되면 애니메이션이 재구현된다는 것이 어찌 보면 또 하나의 매력인 것 같습니다.</p>
 
@@ -426,7 +426,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
 
 });
 ```
-<div align="center"><b>코드블럭 1.5</b> 회원가입 페이지의 유효성 검사를 위한 제이쿼리 코딩 일부</div><br>
+<div align="center"><b>코드블럭 5</b> 회원가입 페이지의 유효성 검사를 위한 제이쿼리 코딩 일부</div><br>
  
 <p align="justify">회원가입 페이지와 같은 경우 일반적인 웹 페이지와 유사하게 작동하도록, 각 요소들에 조건을 붙여 유효성 검사를 진행하도록 하였습니다. 예를 들어, 아이디와 같은 경우 영문, 숫자 조합으로 7자를 입력하도록 <b>/^(?=.*[a-zA-Z])(?=.*[0-9]).{7,25}$/</b>와 같은 조건을 걸었습니다. 그 외에 패스워드, 휴대폰 번호, 이메일 등 유효성 검사에 걸맞는 조건을 갖추지 않을 경우 가입이 되지 않도록 구현하였습니다.</p>
 
