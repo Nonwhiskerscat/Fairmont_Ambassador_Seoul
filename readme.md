@@ -1,6 +1,6 @@
 # 페어몬트 앰배서더 호텔 서울 리뉴얼!
 <div align="center">
-<a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/" target="_blank">
+<a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/">
 <img src="https://user-images.githubusercontent.com/114633489/217508084-f8582a5e-d588-4120-a8a9-ba638bcd24b3.png">
 </a>
 </div>
