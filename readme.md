@@ -30,10 +30,6 @@
   - [웨딩 페이지](#웨딩-페이지)
   - [신설 페이지](#신설-페이지)
 - [프로젝트 후기](#프로젝트-후기)
-  - [Nonwhiskerscat](#nonwhiskerscat)
-  - [a0im](#a0im)
-  - [GONGHYEONMUN](#gonghyeonmun)
-  - [chaerrin](#chaerrin)
 - [디자인 가이드](#디자인-가이드)
 - [마무리 인사](#마무리-인사)
 
@@ -41,16 +37,16 @@
 
 ### 개요
 
+> <h3>주제&nbsp&nbsp:bookmark:</h3>
+> <p align="justify">홈페이지 리뉴얼 그룹 </p>
+<br>
+
 > <h3>목표&nbsp&nbsp:clipboard:</h3>
 > <p>디자인 혹은 인터페이스적으로 개선이 필요해 보이는 기존 페어몬트 앰배서더 호텔 사이트 (<a href="https://fairmont-seoul.com/">링크</a>)를 새로운 페이지로 리뉴얼하기!!</p>
 <br>
 
-> <h3>뒷 이야기&nbsp&nbsp:crystal_ball:</h3>
-> <p align="justify">3일차 까지만 해도 대구 그랜드 호텔(<a href="http://www.daegugrand.co.kr/grand/main/index.php">링크</a>) 사이트를 대상으로 리뉴얼 프로젝트를 진행하려 했으나, 인터넷에 떠도는 소스 및 사진 자료가 한강에서 바늘 찾기를 할 정도로 없었다. 그렇다고 소스를 구하기 위해 프로젝트 기간 중간 중간에 대구에 있는 호텔까지 내려가면서 모든 룸 타입의 방을 예약하고 답사까지 할 수 없다. 그래서 페어몬트 앰배서더 호텔로 바꾸었다고 한다. <s>그런데 이 쪽도 자료가 없었다는 것은 안 비밀</s> </p>
-<br>
-
 > <h3>제작 비용&nbsp&nbsp:moneybag:</h3>
-> <p>인건비 + 점심값 + 전기세 + 학원까지 왔다갔다 하는 교통비 + 인터넷 이용료를 제외한 개인적인 비용은 들지 않았습니다. </p>
+> <p align="justify">인건비 + 점심값 + 전기세 + 학원까지 왔다갔다 하는 교통비 + 인터넷 이용료를 제외한 개인적인 비용은 들지 않았습니다. 굳이 말하자면 월 62,000원씩이나 나가는 어도비 구독료?? <s>넘나 비싼것...  </s> :crying_cat_face::crying_cat_face: </p>
 
 <br><br>
 
@@ -807,6 +803,10 @@ $('.phone_phone .aconf_btn').on('click', function() {
 
 <br>
 
+> <h3>뒷 이야기&nbsp&nbsp:crystal_ball:</h3>
+> <p align="justify">3일차 까지만 해도 대구 그랜드 호텔(<a href="http://www.daegugrand.co.kr/grand/main/index.php">링크</a>) 사이트를 대상으로 리뉴얼 프로젝트를 진행하려 했으나, 인터넷에 떠도는 소스 및 사진 자료가 한강에서 바늘 찾기를 할 정도로 없었다. 그렇다고 소스를 구하기 위해 프로젝트 기간 중간 중간에 대구에 있는 호텔까지 내려가면서 모든 룸 타입의 방을 예약하고 답사까지 할 수 없다. 그래서 페어몬트 앰배서더 호텔로 바꾸었다고 한다. <s>그런데 이 쪽도 자료가 없었다는 것은 안 비밀</s> </p>
+<br>
+
 ## 디자인 가이드
 
 <details>
@@ -815,7 +815,6 @@ $('.phone_phone .aconf_btn').on('click', function() {
     <img width=100% src="https://user-images.githubusercontent.com/114633489/218456039-a6031665-c697-4809-a45b-f6bf3ec265a2.png">
   </div>
 </details>
-
 
 <br>
 
