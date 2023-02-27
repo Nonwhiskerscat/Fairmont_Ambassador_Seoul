@@ -107,7 +107,7 @@
      </tr>
     <tr>
       <th>Profile</th>
-      <td align="center"><a href="https://github.com/Nonwhiskerscat"><img src="https://user-images.githubusercontent.com/114633489/217513739-b6baf543-abcb-4565-a30c-91c5e7f4f1b2.png"></a></td>
+      <td align="center"><a href="https://github.com/Nonwhiskerscat"><img src="https://user-images.githubusercontent.com/114633489/221565430-9c3f6880-891f-48c2-b6aa-3d866c36eec6.png"></a></td>
       <td align="center"><a href="https://github.com/a0im"><img src="https://avatars.githubusercontent.com/u/103560570?v=4"></a></td>
       <td align="center"><a href="https://github.com/GONGHYEONMUN"><img src="https://user-images.githubusercontent.com/114633489/217512975-6d5fe093-0768-4357-8549-14b4b5f5aafa.png"></a></td>
       <td align="center"><a href="https://github.com/chaerrin"><img src="https://user-images.githubusercontent.com/114633489/217512973-0c403a4b-801c-4c7e-bce4-a10dcdc79717.png"></a></td>
@@ -658,7 +658,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
   <table>
     <tr>
       <td rowspan="3" width="30%">
-        <a href="https://github.com/Nonwhiskerscat"><img src="https://user-images.githubusercontent.com/114633489/217513739-b6baf543-abcb-4565-a30c-91c5e7f4f1b2.png"></a>
+        <a href="https://github.com/Nonwhiskerscat"><img src="https://user-images.githubusercontent.com/114633489/221565430-9c3f6880-891f-48c2-b6aa-3d866c36eec6.png"></a>
       </td>
       <th width="10%">한 마디</th>
       <td colspan="3">철도 기관사가 비행기 조종간을 잡은 상황!</td>
