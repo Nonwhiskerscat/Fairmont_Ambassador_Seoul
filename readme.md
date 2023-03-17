@@ -7,7 +7,7 @@
 
 <div align="justify">
 <br>
-안녕하십니까, 페어몬트 앰배서더 호텔 서울 리뉴얼 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">수염 없냥</a>입니다. 이번 프로젝트를 통해 페어몬트 앰배서더 호텔 사이트를 새롭게 리뉴얼 할 수 있었고, 중간 중간 사소한 실수로 시행착오가 있었지만 첫 번째 조별 프로젝트이자, 전체 페이지 리뉴얼 프로젝트를 무사히 끝마치게(?) 되었습니다. 지금부터 이 프로젝트를 제작하는 데에 있어 어떠한 과정을 거쳤는지에 대해 보여드리겠습니다. 
+안녕하십니까, 페어몬트 앰배서더 호텔 서울 리뉴얼 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">키드캣</a>입니다. 이번 프로젝트를 통해 페어몬트 앰배서더 호텔 사이트를 새롭게 리뉴얼 할 수 있었고, 중간 중간 사소한 실수로 시행착오가 있었지만 첫 번째 조별 프로젝트이자, 전체 페이지 리뉴얼 프로젝트를 무사히 끝마치게(?) 되었습니다. 지금부터 이 프로젝트를 제작하는 데에 있어 어떠한 과정을 거쳤는지에 대해 보여드리겠습니다. 
 </div>
 
 ## Contents
@@ -825,7 +825,7 @@ $('.phone_phone .aconf_btn').on('click', function() {
   <img width=100% src="https://user-images.githubusercontent.com/114633489/217474872-f4aa3e25-f0b1-46d5-be9b-4ad4dd4b2706.png">
 </div>
 
-<p align="justify">여기 게재된 것들 외에 <b>실제 홈페이지에서는 구경할 수 있는 디자인과 인터페이스들이 많습니다</b>. 시간적인 여유가 있다면 <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">웹 페이지</a> 혹은 <a href="https://www.canva.com/design/DAFPAGSNCo4/hFKRH6ACwZlv8piXOEe1kg/view?utm_content=DAFPAGSNCo4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">기획서 페이지</a>를 직접 방문하여 저희 프로젝트를 구경하셔도 좋습니다. 물론 <b>웹 개발자로서 다들 처음 해보는 프로젝트라 예상치 못한 오류도 많이 직면</b>하게 될 것입니다... 이 점 양해 부탁드립니다. 지금까지 페어몬트 앰배서더 호텔 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat">수염 없냥</a>이었습니다. 여기까지 읽어 주셔서 대단히 감사드립니다.</p>
+<p align="justify">여기 게재된 것들 외에 <b>실제 홈페이지에서는 구경할 수 있는 디자인과 인터페이스들이 많습니다</b>. 시간적인 여유가 있다면 <a href="http://kidcatnyantopia.net/works/pages/fairmontHotel/index.html">웹 페이지</a> 혹은 <a href="https://www.canva.com/design/DAFPAGSNCo4/hFKRH6ACwZlv8piXOEe1kg/view?utm_content=DAFPAGSNCo4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">기획서 페이지</a>를 직접 방문하여 저희 프로젝트를 구경하셔도 좋습니다. 물론 <b>웹 개발자로서 다들 처음 해보는 프로젝트라 예상치 못한 오류도 많이 직면</b>하게 될 것입니다... 이 점 양해 부탁드립니다. 지금까지 페어몬트 앰배서더 호텔 프로젝트의 조장을 맡은 <a href="https://github.com/Nonwhiskerscat"></a>이었습니다. 여기까지 읽어 주셔서 대단히 감사드립니다.</p>
 
 
 
